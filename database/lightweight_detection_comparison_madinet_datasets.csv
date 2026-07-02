@@ -1,0 +1,15 @@
+method,type,source,ssdd_ap50,ssdd_ap50_95,sar_shipdataset_ap50,sar_aircraft10_ap50,hrsid_ap50,params_M,notes
+YOLOv3,YOLO,MaDiNet table,96.2,,88.8,83.9,,,Classic YOLO baseline in MaDiNet.
+YOLOX,YOLO,MaDiNet table,96.2,,,81.0,,,MaDiNet reports SSDD and SAR-AIRcraft1.0.
+YOLOv5n,lightweight YOLO,MaDiNet table,98.0,,89.3,88.2,,,Important lightweight baseline in MaDiNet.
+YOLOv8n,lightweight YOLO,MaDiNet table,98.1,,,88.2,,,Important lightweight baseline in MaDiNet.
+YOLOv5s,lightweight YOLO,MaDiNet table,98.3,,,,,,Stronger small YOLO baseline on SSDD.
+DiffDet4SAR,SAR diffusion detector,MaDiNet table,96.9,,95.1,88.4,,,Strong open-source SAR diffusion baseline.
+MaDiNet,diffusion + Mamba,MaDiNet table,99.0,,97.5,90.5,,,MaDiNet reported SOTA reference.
+YOLO-Lite,lightweight YOLOv5-style,External Remote Sensing 2023,94.36,,92.13,,,7.64,Reports SSDD and SAR ship dataset; split may differ from MaDiNet.
+LH-YOLO,lightweight YOLOv8n-style,External Remote Sensing 2024,,,93.8,,96.6,1.862,Reports SAR-ShipDataset and HRSID.
+SHIP-YOLO,lightweight YOLOv8n-style,External via LH-YOLO table,,,96.6,,,2.500,Quoted in LH-YOLO comparison table.
+YOLOv10n,lightweight YOLO,External LH-YOLO table,,,92.6,,95.7,2.265,Recent nano YOLO reference.
+CPN-YOLO,YOLOv8-based denoising detector,External arXiv 2026,98.9,"73.9 / 66.5*",,,88.9,,Reports SSDD and HRSID; verify final PDF because arXiv HTML exposes two AP50:95 values.
+YOLO-SAATD,lightweight aircraft YOLO,External Visual Informatics 2025,,,,+1~2 over YOLOv8n,,-25% vs YOLOv8n,Reports relative gains on SAR-Airport-1.0 and SAR-AIRcraft1.0.
+Ours IG-DS-SSM PFIM ex27,lightweight Mamba-YOLO,Local measured,98.704,74.022,,,,5.9648,Current best local SSDD result.

@@ -1,0 +1,101 @@
+# Local automation / editor state
+.agents/
+.codex/
+.aider*
+*.bak
+*.bak.*
+*.tmp
+*.swp
+*.swo
+
+# Python caches and build outputs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Datasets and generated training outputs
+datasets/*
+!datasets/
+!datasets/README.md
+output_dir/
+runs/
+wandb/
+mlruns/
+
+# Large recovered evidence / binary-heavy local archives
+archives/
+downloads/
+experiments/
+logs/
+weights/*
+!weights/
+!weights/README.md
+
+# Historical recovered source snapshots are documented under source_code/README.md.
+# Keep them local to avoid nested Git repositories and duplicate source uploads.
+source_code/server_1080ti/
+source_code/server_3090_a/
+source_code/server_3090_b/
+
+# Model artifacts
+*.pt
+*.pth
+*.onnx
+*.engine
+*.torchscript
+*.tflite
+*.pb
+*.mlmodel
+*.npy
+*.npz
+
+# Dataset/media binaries
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.7z
+*.rar
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.gif
+*.tif
+*.tiff
+*.mp4
+*.avi
+*.mov
+
+# Office/rendered research artifacts; keep source Markdown/TeX/CSV in Git.
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+
+# LaTeX temporary files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc

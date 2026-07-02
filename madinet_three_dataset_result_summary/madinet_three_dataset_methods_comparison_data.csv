@@ -1,0 +1,31 @@
+method,ssdd_p,ssdd_r,ssdd_ap50,sar_ship_p,sar_ship_r,sar_ship_ap50,sar_aircraft_map50,params_M,GFLOPs,source
+SAR-ShipNet,95.1,76.3,89.1,94.9,71.3,90.2,,,,MaDiNet table
+DCTC,,,93.9,,,,,,,MaDiNet table
+GEFCSI-Net,93.1,96.9,97.1,90.2,93.0,94.3,,,,MaDiNet table
+SARNas,97.4,94.8,98.5,,,,,,,MaDiNet table
+MGA-Net,94.7,99.0,98.6,,,,,,,MaDiNet table
+OE-YOLO,,,,85.4,81.5,86.0,,,,MaDiNet table
+ShipDetector,,,,,,91.2,,,,MaDiNet table
+Improved FCOS,,,,89.8,95.2,94.1,,,,MaDiNet table
+CMFT,,,,90.1,94.4,94.5,,,,MaDiNet table
+SKG-Net,,,,,,,70.5,,,MaDiNet table
+SA-Net,,,,,,,77.7,,,MaDiNet table
+MLSDNet,,,,,,,82.7,,,MaDiNet table
+Faster R-CNN,87.1,90.4,89.7,82.5,95.1,93.1,75.9,,,MaDiNet table
+Cascade R-CNN,84.1,90.8,90.5,87.6,94.3,92.7,75.4,,,MaDiNet table
+RetinaNet,94.0,93.1,95.0,86.5,94.9,93.4,72.3,,,MaDiNet table
+CenterNet,94.3,93.6,95.1,90.3,93.5,92.1,70.5,,,MaDiNet table
+FCOS,94.6,93.9,95.3,90.4,94.1,92.8,54.8,,,MaDiNet table
+ConsistencyDet,94.5,94.0,95.6,90.3,93.1,94.2,85.1,,,MaDiNet table
+YOLOv4,,,,79.4,73.8,77.9,,,,MaDiNet table
+YOLOv7,,,,83.8,81.9,86.1,,,,MaDiNet table
+YOLOv3,95.5,94.8,96.2,84.5,89.2,88.8,83.9,103.7541,283.3202,MaDiNet + local complexity
+YOLOX,95.0,93.8,96.2,,,,81.0,,,MaDiNet table
+DiffusionDet,95.1,93.9,96.3,92.1,94.9,95.0,86.6,,,MaDiNet table
+YOLOv5n,97.0,95.8,98.0,85.9,90.0,89.3,88.2,2.6548,7.8401,MaDiNet + local complexity
+YOLOv8n,97.3,96.4,98.1,,,,88.2,3.1572,8.8575,MaDiNet + local complexity
+YOLOv5s,97.2,96.4,98.3,,,,,9.1532,24.2129,MaDiNet + local complexity
+RepPoints,,,,,,,72.6,,,MaDiNet table
+DiffDet4SAR,95.3,95.2,96.9,92.1,95.0,95.1,88.4,,,MaDiNet table
+MaDiNet,98.0,97.0,99.0,96.2,95.6,97.5,90.5,223.2648,345.2830,MaDiNet + local complexity core-module-only
+Ours IG-DS-SSM PFIM,97.378,95.219,98.704,,,,,5.9648,13.2079,Local measured

@@ -1,0 +1,63 @@
+IG-DS-SSM / PFIM 当前研究与论文进展汇报
+面向轻量化 SAR 舰船检测的重要性引导去斑状态空间建模 | 2026-06-23
+1. 当前工作定位
+当前研究主线：Importance-Guided De-Speckle State Space Model（IG-DS-SSM）/ PFIM。
+它不是单纯在 YOLO 上叠加注意力或外部去噪模块，而是把 SAR 图像中的斑点噪声抑制、目标重要性估计和状态空间模型的状态更新过程结合起来。
+DS-SSM：构造去斑 token 输入，并通过能量感知机制抑制不可靠状态传播。
+PFIM：估计 token 级目标重要性，并调制 gamma、write_gate 和 delta 三条状态更新路径。
+DG-DS-SSM：作为解耦门控扩展与消融思路，目前不作为主模型。
+2. 目前最重要的实验结果
+当前可用于汇报的核心结果集中在 SSDD 数据集。PFIM ex27 是当前恢复实验中的最佳主线结果。
+解读：我们的 AP50 略低于 MaDiNet 在 SSDD 上报告的 99.0，但参数量和 GFLOPs 处于轻量级检测器范围。汇报中建议强调“近 SOTA 精度 + 显著轻量化 + SAR-aware SSM 动态机制”，不要强调全面超过 MaDiNet。
+3. 与 MaDiNet 三数据集结果的关系
+MaDiNet 论文在 SSDD、SAR-ShipDataset 和 SAR-AIRcraft1.0 三个数据集上报告结果。我们已整理统一对比表并生成 PDF。
+我们目前只完成了 SSDD 的可靠对比；SAR-ShipDataset 和 SAR-AIRcraft1.0 还不能填我们的方法结果。
+MaDiNet 复杂度数字是官方 MambaSAR res4+res5 核心模块的本地测量，不是完整 MaDiNet detector。
+可汇报为：我们在 SSDD 上接近 MaDiNet AP50，并以更轻量的检测链路实现 SAR-aware 状态更新。
+4. 论文目前写成什么样子
+当前论文已经不是空白草稿，而是形成了一个 AAAI 风格的完整初稿骨架。已有文件包括：
+英文 LaTeX：paper_draft/aaai_ds_ssm_paper_en.tex
+英文 PDF 预览：paper_draft/aaai_ds_ssm_paper_en.pdf
+中文同步稿：paper_draft/aaai_ds_ssm_paper_zh.md
+BibTeX：paper_draft/aaai_ds_ssm_refs.bib，但参考文献仍需要清理和补全。
+5. 汇报时建议怎么讲
+先讲问题：SAR 舰船目标小、稀疏，斑点噪声和海杂波会沿 SSM 状态传播，影响检测。
+再讲核心创新：不是外部去噪，而是在 SSM 状态更新内部做去斑输入、状态抑制和重要性引导。
+强调 PFIM：它调制 gamma、write_gate、delta，使模型既抑制噪声，又尽量保留真实舰船响应。
+最后讲结果：SSDD AP50 98.704、AP50:95 74.022，参数 5.9648M、13.2079 GFLOPs。
+和 MaDiNet 对比时讲轻量化和机制差异，不讲全面 SOTA。
+6. 目前不能过度声称的内容
+不能说全面超过 MaDiNet，MaDiNet 的 SSDD AP50 仍是 99.0。
+不能说完整 MaDiNet detector 的参数量和 FLOPs 已经测完，目前只测了官方 MambaSAR 核心模块。
+不能说 PFIM 三个分支贡献已经完全隔离，除非后续补上 gamma/write_gate/delta 分支消融。
+不能说我们方法已在 SAR-ShipDataset 或 SAR-AIRcraft1.0 上验证，目前这些结果为空。
+7. 下一步优先事项
+8. 汇报结尾可用表述
+当前工作已经形成较清晰的论文主线：IG-DS-SSM / PFIM 通过把去斑和重要性引导注入状态空间动态，使轻量 Mamba-YOLO 在 SSDD 上达到 98.704 AP50 和 74.022 AP50:95。与 MaDiNet 相比，我们不主张 AP50 全面领先，而是强调在接近强基线精度的同时显著降低模型规模，并提供更可解释的 SAR-aware 状态更新机制。后续重点是复测主结果、补分支消融和跨数据集验证。
+[TABLE 1]
+一句话结论
+当前最稳妥的汇报主线是：我们提出 IG-DS-SSM / PFIM，将 SAR 去斑先验和 token 重要性注入状态空间更新，在 SSDD 上取得接近 MaDiNet 的 AP50，同时保持约 5.96M 参数和 13.21 GFLOPs 的轻量规模。
+[TABLE 2]
+方法 | 数据集 | P | R | AP50 | AP50:95 | Params(M) | GFLOPs
+IG-DS-SSM / PFIM ex27 | SSDD | 97.378 | 95.219 | 98.704 | 74.022 | 5.9648 | 13.2079
+Mamba-YOLO-T | SSDD | 96.29 | 96.15 | 98.49 | 72.85 | 5.9855 | 13.6116
+DG-DS-SSM ex34 | SSDD | 96.3 | 96.2 | 98.7 | 73.5 | 5.9632 | 13.1554
+[TABLE 3]
+方法 | SSDD AP50 | SAR-ShipDataset AP50 | SAR-AIRcraft1.0 mAP50 | 复杂度口径
+MaDiNet | 99.0 | 97.5 | 90.5 | 原文精度；复杂度仅测得 MambaSAR 核心模块
+IG-DS-SSM / PFIM | 98.704 | -- | -- | 完整轻量检测器，5.9648M / 13.2079 GFLOPs
+[TABLE 4]
+章节 | 当前状态 | 还需要补的内容
+摘要 | 已写明问题、方法、PFIM 三路径调制和 SSDD 结果 | 最终实验确认后微调数值和措辞
+引言 | 已建立 SAR 斑点噪声、SSM 状态传播和轻量化部署动机 | 需要加入更强的文献铺垫和贡献凝练
+相关工作 | 已有 SAR 检测、视觉 SSM、轻量 SAR Mamba 检测器三部分 | 引用需要补全，避免泛泛而谈
+方法 | 已有 DS-SSM、能量抑制、PFIM、三路径调制、DG-DS-SSM 扩展 | 需要配正式框架图和模块图
+实验 | 已有 SSDD 主结果、复杂度表、讨论 | 需要统一命令复测、补分支消融、可选跨数据集实验
+局限与结论 | 已明确 MaDiNet 复杂度口径和缺失实验 | 投稿版可压缩局限，增强主结论
+[TABLE 5]
+优先级 | 任务 | 目的
+P0 | 固定命令复测 PFIM ex27 | 形成投稿可追溯的主结果
+P1 | 做 PFIM 分支消融 | 证明 gamma、write_gate、delta 的贡献
+P1 | 补 SAR-ShipDataset 实验 | 支撑跨数据集泛化或至少同类船检数据集对比
+P2 | 完善框架图、模块图、状态更新调制图 | 让创新点更容易被审稿人理解
+P2 | 清理 BibTeX 与 MaDiNet/AMANet/CPN-YOLO/SURGE 等引用 | 提高论文可信度和规范性

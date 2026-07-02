@@ -1,0 +1,9 @@
+﻿component,input_shape,params,params_M,GFLOPs_thop,latency_ms,device,note,flops_error,latency_error
+MambaVisionMixer-d1024-L1600,1x1600x1024,2179072,2.1791,6.9468,0.6079,cuda:0,official Mamba mixer at res4 token scale,,
+SelfAttention-d1024-L1600,1x1600x1024,4198400,4.1984,13.4218,2.0705,cuda:0,attention branch used in official Block,,
+AgentAttention-d1024-L1600,1x1600x1024,4309776,4.3098,13.4621,1.7834,cuda:0,agent attention candidate in official source comments,,
+Block-Mamba-d1024-L1600,1x1600x1024,10576896,10.5769,33.8166,2.2414,cuda:0,official Block using MambaVisionMixer,,
+Block-Attention-d1024-L1600,1x1600x1024,12596224,12.5962,40.2915,3.6363,cuda:0,official Block using self-attention,,
+PDC-CPDC-256,1x256x80x80,589824,0.5898,0.0,0.4395,cuda:0,official pixel difference convolution candidate,,
+PDC-APDC-256,1x256x80x80,589824,0.5898,0.0,0.3945,cuda:0,official pixel difference convolution candidate,,
+PDC-RPDC-256,1x256x80x80,589824,0.5898,0.0,0.9972,cuda:0,official pixel difference convolution candidate,,

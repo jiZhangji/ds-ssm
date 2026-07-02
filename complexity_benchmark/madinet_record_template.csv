@@ -1,0 +1,5 @@
+method,source,type,input_size,params_M,GFLOPs,latency_ms_per_image,FPS,precision,device,SSDD_P,SSDD_R,SSDD_mAP50,SSDD_mAP50_95,note
+MaDiNet,paper,official_reported,640,,,,,,,,,,,"Fill from paper or official code. Mark if diffusion inference uses multiple steps."
+DS-SSM,this_project,measured,640,,,,,,,,,,,"Fill from complexity_benchmark/results/model_complexity.csv and SSDD results."
+PFIM/IG-DS-SSM,this_project,measured,640,,,,,,,,,,,"Use current best experiment row."
+DG-DS-SSM,this_project,measured,640,,,,,,,,,,,"Extension line, compare efficiency and recall."

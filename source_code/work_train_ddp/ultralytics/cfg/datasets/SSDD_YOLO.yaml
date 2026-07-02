@@ -1,0 +1,8 @@
+path: datasets/SSDD_YOLO
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: ship
+

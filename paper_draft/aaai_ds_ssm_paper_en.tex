@@ -1,0 +1,263 @@
+\documentclass[letterpaper]{article}
+\usepackage{aaai26}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage[hyphens]{url}
+\usepackage{graphicx}
+\urlstyle{rm}
+\def\UrlFont{\rm}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{multirow}
+\usepackage{xcolor}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+\title{Importance-Guided De-Speckle State Space Modeling for Lightweight SAR Ship Detection}
+
+\author{
+Anonymous Submission
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Synthetic aperture radar (SAR) ship detection is challenging because ship responses are often small, sparse, and entangled with speckle noise and sea clutter. Recent state space models provide an efficient alternative to attention for long-range visual modeling, yet directly applying generic visual state space blocks to SAR imagery may propagate noise-dominated tokens through the recurrent state and weaken target localization. This paper proposes an Importance-Guided De-Speckle State Space Model (IG-DS-SSM), a SAR-oriented selective state space module for lightweight ship detection. IG-DS-SSM first constructs de-speckled token representations by subtracting local residual disturbances from the input. It then introduces energy-aware state damping to suppress unreliable background propagation. To avoid suppressing true ship responses together with noise, we further design a Perceptual Feature Importance Module (PFIM) that estimates token-level target importance and injects it into memory retention, state writing, and dynamic transition-step modulation. The proposed module is embedded into a lightweight Mamba-YOLO detector and evaluated on SSDD. Current experiments show that the proposed PFIM-enhanced DS-SSM obtains 98.704 AP$_{50}$ and 74.022 AP$_{50:95}$ with only 5.96M parameters and 13.21 GFLOPs. Compared with strong SAR-oriented Mamba baselines such as MaDiNet, our method emphasizes a substantially lighter detection pathway while retaining competitive accuracy. We also study a decoupled-gated extension, DG-DS-SSM, as an interpretable variant for separating erase, write, and transition controls.
+\end{abstract}
+
+\section{Introduction}
+
+Ship detection in SAR imagery is a fundamental task for maritime surveillance, traffic monitoring, and emergency response. Unlike optical images, SAR images are formed by coherent microwave imaging and therefore exhibit multiplicative speckle, strong background clutter, and large appearance variation under different sea states. Ships can occupy only a small number of pixels, while bright scattering from waves, harbors, and near-shore structures may produce responses similar to targets. These properties make it difficult for a detector to preserve weak ship structures while suppressing noisy background responses.
+
+Modern object detectors have achieved strong performance on natural images, and YOLO-style detectors are particularly attractive for deployment because of their compact computation. However, standard convolutional or transformer-based backbones are not explicitly designed for SAR noise statistics. More recently, visual state space models have become an appealing alternative for efficient long-range modeling. By using selective scan mechanisms, Mamba-like models can capture sequential dependencies with linear complexity. This is attractive for dense visual detection, but it also raises a SAR-specific question: if a token is dominated by speckle or sea clutter, recurrent state propagation may carry this disturbance to subsequent tokens and contaminate the feature stream.
+
+This paper addresses the above problem from the perspective of state-space dynamics. Instead of merely adding an attention block or post-hoc denoising module, we ask how SAR priors can be injected into the state update itself. Our answer is an Importance-Guided De-Speckle State Space Model (IG-DS-SSM). The core idea is to make the state transition aware of both local noise evidence and target importance. Specifically, a local background estimator produces a residual disturbance map, from which we construct a de-biased input. An energy-aware damping mechanism then controls the retention of historical states in unreliable regions. Since high-energy responses may also correspond to true ships, we introduce a Perceptual Feature Importance Module (PFIM) to estimate token-level importance and modulate three components of the state update: memory retention, current-state writing, and transition step size.
+
+We implement IG-DS-SSM within a lightweight Mamba-YOLO detector. Experiments on SSDD show that the proposed PFIM-enhanced DS-SSM line achieves the strongest recovered result in our current experimental archive, reaching 98.704 AP$_{50}$ and 74.022 AP$_{50:95}$. The detector remains compact, with approximately 5.96M parameters and 13.21 GFLOPs at 640 input resolution. This accuracy-efficiency profile is important for SAR ship detection, where practical systems often require lightweight models for onboard or near-real-time processing.
+
+Our contributions are summarized as follows:
+\begin{itemize}
+  \item We propose DS-SSM, a SAR-oriented selective state space module that uses de-speckled input modeling and energy-aware damping to reduce noise propagation in recurrent visual states.
+  \item We introduce PFIM, which estimates perceptual token importance and injects it into memory retention, state writing, and transition-step modulation for target-aware state evolution.
+  \item We instantiate the proposed design in a lightweight Mamba-YOLO detector and provide SSDD experiments showing competitive detection accuracy with a compact computational footprint.
+  \item We further explore DG-DS-SSM, a decoupled-gated extension that separates erase, write, and delta controls, offering interpretable evidence about how state update branches affect SAR detection.
+\end{itemize}
+
+\section{Related Work}
+
+\subsection{SAR Ship Detection}
+
+SAR ship detection has been studied with both generic object detectors and SAR-specialized architectures. Two-stage detectors such as Faster R-CNN and Cascade R-CNN provide strong localization but are often computationally heavy. One-stage detectors, including RetinaNet, FCOS, YOLO variants, and YOLOX, offer more favorable speed-accuracy trade-offs. SAR-specific methods further exploit scattering patterns, multi-scale context, or generative modeling to handle clutter and target sparsity. Recent diffusion- or consistency-based detectors improve representation capacity, but they may introduce additional inference or training complexity. In contrast, this work focuses on improving the internal state update of a lightweight detector so that SAR priors are encoded without sacrificing deployability.
+
+\subsection{State Space Models for Vision}
+
+State space models have recently re-emerged as efficient sequence models. Mamba-style selective state space models use input-dependent parameters and hardware-aware scan operations to model long-range dependencies with linear complexity. Vision variants extend this idea to image tokens and have shown promise in classification, detection, and segmentation. However, visual SSM blocks are usually designed for generic image statistics. When used on SAR imagery, their recurrent state may preserve and propagate speckle-induced disturbances. Our work differs by modifying the state dynamics with SAR-specific de-speckling and importance-guided modulation.
+
+\subsection{Lightweight SAR-Oriented Mamba Detectors}
+
+MaDiNet and related SAR Mamba detectors demonstrate that Mamba-style modeling is beneficial for SAR detection. However, strong SAR-specific detectors can involve large modules or complex detection frameworks. Our goal is complementary: we seek a compact Mamba-YOLO pathway that explicitly controls speckle propagation and maintains low parameter and FLOP counts. This makes the proposed design suitable for scenarios where computational budget is a primary constraint.
+
+\section{Method}
+
+\subsection{Overview}
+
+Given an input SAR image, the detector extracts multi-scale features using a lightweight Mamba-YOLO backbone. For a feature map $\mathbf{F}\in\mathbb{R}^{H\times W\times C}$, we flatten it into a token sequence
+\begin{equation}
+  \mathbf{x}=\mathrm{Flatten}(\mathbf{F})\in\mathbb{R}^{N\times C}, \quad N=HW.
+\end{equation}
+The proposed IG-DS-SSM block transforms $\mathbf{x}$ through de-speckled input modeling, importance estimation, and selective state-space scanning:
+\begin{equation}
+  \mathbf{y}=\mathrm{IG\mbox{-}DS\mbox{-}SSM}(\mathbf{x}, H, W).
+\end{equation}
+The output is reshaped back to two-dimensional features and passed to the detector neck and head. Figure~\ref{fig:framework} will illustrate the overall architecture.
+
+\begin{figure}[t]
+  \centering
+  \fbox{\rule{0pt}{1.25in}\rule{0.92\linewidth}{0pt}}
+  \caption{Placeholder for the overall framework. The final figure should show the Mamba-YOLO detector, the inserted IG-DS-SSM block, local background estimation, PFIM, and the three importance-guided state modulation paths.}
+  \label{fig:framework}
+\end{figure}
+
+\subsection{De-Speckled Input Modeling}
+
+SAR speckle appears as local fluctuations that may be confused with weak ship structures. We estimate a local background representation $\bar{\mathbf{x}}$ using a depth-wise local operator:
+\begin{equation}
+  \bar{\mathbf{x}} = \mathrm{DWConv}(\mathbf{x}; H,W),
+\end{equation}
+where the operator is applied on the two-dimensional feature layout. The local residual is
+\begin{equation}
+  \mathbf{r} = \mathbf{x}-\bar{\mathbf{x}}.
+\end{equation}
+We then construct a de-speckled input
+\begin{equation}
+  \widetilde{\mathbf{x}} = \mathbf{x} - \lambda_s \mathbf{r},
+  \label{eq:debiased}
+\end{equation}
+where $\lambda_s$ controls the strength of residual suppression. This operation does not attempt to remove all high-frequency information. Instead, it produces a state-space input whose local disturbance component is attenuated before recurrent propagation.
+
+\subsection{Energy-Aware State Damping}
+
+The local background energy provides a coarse reliability cue. For token $t$, we compute
+\begin{equation}
+  e_t = \frac{\|\bar{\mathbf{x}}_t\|_2}{\sqrt{C}}.
+\end{equation}
+The energy term is converted into a soft retention gate
+\begin{equation}
+  g^{E}_t = g_{\min} + (1-g_{\min})\sigma(-\alpha e_t),
+\end{equation}
+where $g_{\min}$ prevents complete state erasure and $\alpha$ controls damping strength. High-energy unstable background regions receive stronger damping, reducing the chance that clutter-dominated historical states persist across the scan.
+
+\subsection{Perceptual Feature Importance Module}
+
+Energy alone is insufficient because ship targets may also produce high responses. PFIM estimates a token-level importance score to distinguish target-likely regions from noise-likely regions. Given the de-speckled input, local background, and local statistics, PFIM outputs
+\begin{equation}
+  I_t = \mathrm{PFIM}(\widetilde{\mathbf{x}}_t,\bar{\mathbf{x}}_t,\mathrm{Std}_{local}(\mathbf{x})_t),
+\end{equation}
+where $I_t\in[0,1]$. In practice, PFIM is a lightweight branch using local two-dimensional statistics and point-wise transformations, followed by a sigmoid activation. The centered importance is denoted as
+\begin{equation}
+  \hat{I}_t = I_t - 0.5.
+\end{equation}
+
+\subsection{Importance-Guided State Update}
+
+The selective state-space branch generates the input-dependent transition and projection terms from $\widetilde{\mathbf{x}}$. We use PFIM to modulate three update paths.
+
+\paragraph{Memory retention.}
+The importance-aware retention gate is
+\begin{equation}
+  g_t = g_{\min} + (1-g_{\min})\sigma(-\alpha e_t + \beta \hat{I}_t).
+  \label{eq:gamma}
+\end{equation}
+This gate retains more state information around target-likely tokens and suppresses noise-likely propagation.
+
+\paragraph{State writing.}
+The write gate controls how strongly the current input enters the state:
+\begin{equation}
+  w_t = 1 + \rho \tanh(\hat{I}_t),
+\end{equation}
+\begin{equation}
+  \mathbf{u}^{write}_t = w_t \odot \mathbf{u}_t.
+\end{equation}
+
+\paragraph{Dynamic transition step.}
+PFIM also modulates the transition step:
+\begin{equation}
+  \Delta_t = \mathrm{softplus}(\Delta^{0}_t + \eta I_t),
+\end{equation}
+where $\Delta^{0}_t$ is the original transition logit. This allows the model to adjust state evolution speed according to target importance.
+
+The resulting recurrent update can be written conceptually as
+\begin{equation}
+  \mathbf{h}_t =
+  g_t \odot \bar{\mathbf{A}}_t\mathbf{h}_{t-1}
+  + \bar{\mathbf{B}}_t\mathbf{u}^{write}_t,
+\end{equation}
+\begin{equation}
+  \mathbf{y}_t = \mathbf{C}_t\mathbf{h}_t + \mathbf{D}\widetilde{\mathbf{x}}_t.
+\end{equation}
+The residual $\mathbf{D}\widetilde{\mathbf{x}}_t$ preserves current de-speckled evidence outside the recurrent state.
+
+\begin{algorithm}[t]
+\caption{IG-DS-SSM Forward Pass}
+\begin{algorithmic}[1]
+\REQUIRE Tokens $\mathbf{x}\in\mathbb{R}^{N\times C}$ and spatial size $(H,W)$
+\STATE Estimate local background $\bar{\mathbf{x}}=\mathrm{DWConv}(\mathbf{x};H,W)$
+\STATE Compute residual $\mathbf{r}=\mathbf{x}-\bar{\mathbf{x}}$
+\STATE Build de-speckled input $\widetilde{\mathbf{x}}=\mathbf{x}-\lambda_s\mathbf{r}$
+\STATE Estimate importance $\mathbf{I}=\mathrm{PFIM}(\widetilde{\mathbf{x}},\bar{\mathbf{x}},\mathrm{Std}_{local})$
+\STATE Compute retention gate $g_t$, write gate $w_t$, and transition step $\Delta_t$
+\STATE Run selective scan using gated state retention and gated input writing
+\STATE Return output tokens $\mathbf{y}$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Decoupled-Gated Extension}
+
+We further study DG-DS-SSM as an extension that explicitly separates erase, write, and transition controls. Its retain/erase branch is
+\begin{equation}
+  r_t = r_{\min} + (1-r_{\min})\sigma(-\alpha e_t+\beta_e\hat{I}_t),
+\end{equation}
+the write branch is
+\begin{equation}
+  q_t = 1+s_w\tanh(\rho_w\hat{I}_t),
+\end{equation}
+and the delta branch modulates $\Delta_t$ independently. DG-DS-SSM is useful for analysis because it clarifies whether old-state suppression, current-input writing, or transition adaptation contributes most to SAR detection. In our current results, it is competitive but does not surpass the full PFIM-enhanced DS-SSM line; therefore, we treat it as an interpretable extension rather than the main model.
+
+\section{Experiments}
+
+\subsection{Dataset and Metrics}
+
+We evaluate on SSDD, a widely used SAR ship detection dataset. We report Precision (P), Recall (R), AP$_{50}$, and AP$_{50:95}$. AP$_{50}$ reflects detection reliability under a standard IoU threshold and is commonly used in SAR ship detection comparisons, while AP$_{50:95}$ provides a stricter localization-sensitive measure.
+
+\subsection{Implementation Details}
+
+The proposed model is implemented in a Mamba-YOLO-T style detector. Unless otherwise stated, experiments use 640 input resolution and 300 training epochs. The main recovered PFIM experiment uses batch size 32 and SGD optimization. Complexity is measured on an NVIDIA RTX 3090 with batch size 1 and fp32 precision. DDP is used only as a training acceleration strategy and is not treated as a model contribution.
+
+\subsection{Main Results}
+
+Table~\ref{tab:ssdd-main} summarizes representative SSDD results from the current experiment archive. The PFIM-enhanced IG-DS-SSM line achieves the best recovered result, with 98.704 AP$_{50}$ and 74.022 AP$_{50:95}$.
+
+\begin{table}[t]
+\centering
+\caption{Representative SSDD results from the current experiment archive.}
+\label{tab:ssdd-main}
+\begin{tabular}{lcccc}
+\toprule
+Method & P & R & AP$_{50}$ & AP$_{50:95}$ \\
+\midrule
+Mamba-YOLO-T & 0.9629 & 0.9615 & 0.9849 & 0.7285 \\
+DS-SSM ex7 & 0.9610 & 0.9542 & 0.9823 & 0.7352 \\
+PFIM ex24 & 0.9570 & 0.9524 & 0.9829 & 0.7357 \\
+IG-DS-SSM/PFIM ex27 & \textbf{0.9738} & 0.9522 & \textbf{0.9870} & \textbf{0.7402} \\
+DG-DS-SSM ex34 & 0.9700 & \textbf{0.9560} & 0.9850 & 0.7350 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Efficiency Analysis}
+
+Table~\ref{tab:complexity} reports measured complexity. Our DS-SSM/PFIM detector keeps a compact model size of 5.9648M parameters and 13.2079 GFLOPs. The measured MaDiNet official MambaSAR res4+res5 module alone has 223.2648M parameters and 345.283 GFLOPs; since this is not the full detector, we report it as a core-module reference rather than a direct detector-to-detector measurement.
+
+\begin{table}[t]
+\centering
+\caption{Measured complexity at 640 input resolution, batch size 1, fp32, on RTX 3090.}
+\label{tab:complexity}
+\begin{tabular}{lrrrr}
+\toprule
+Method & Params & GFLOPs & Lat. & FPS \\
+ & (M) & & (ms) & \\
+\midrule
+Mamba-YOLO-T & 5.9855 & 13.6116 & 26.33 & 37.98 \\
+DS-SSM/PFIM & 5.9648 & 13.2079 & 28.75 & 34.78 \\
+DG-DS-SSM & 5.9632 & 13.1554 & 29.07 & 34.40 \\
+MaDiNet core$^\dagger$ & 223.2648 & 345.2830 & 27.29 & -- \\
+\bottomrule
+\end{tabular}
+\vspace{2pt}
+\caption*{\footnotesize $^\dagger$Official MambaSAR res4+res5 core module only, not the full MaDiNet detector.}
+\end{table}
+
+\subsection{Discussion}
+
+The results indicate that PFIM is important for making de-speckle state-space modeling target-aware. Pure energy damping can suppress unreliable regions, but it may also reduce true target responses. PFIM mitigates this issue by increasing retention and writing around target-likely tokens. DG-DS-SSM improves interpretability and obtains competitive recall, but its best current result does not exceed PFIM ex27 in AP$_{50:95}$. Therefore, the current paper positions IG-DS-SSM/PFIM as the main contribution and DG-DS-SSM as a useful extension.
+
+\section{Limitations}
+
+This draft is based on the current recovered experiment archive. Two limitations remain before final submission. First, some PFIM branch ablations should be re-run or verified under a unified code version to isolate the contributions of retention, write, and delta modulation. Second, the complete MaDiNet detector complexity has not yet been measured end-to-end due to Detectron2 environment and configuration constraints; current MaDiNet complexity numbers refer to the official MambaSAR core module. These limitations do not change the main conclusion about the lightweight DS-SSM/PFIM detector, but they should be addressed or clearly stated in the camera-ready experimental section.
+
+\section{Conclusion}
+
+We proposed IG-DS-SSM, an importance-guided de-speckle state space module for lightweight SAR ship detection. By constructing de-speckled inputs, damping unreliable state propagation, and using PFIM to modulate memory retention, state writing, and transition steps, the proposed method injects SAR-specific noise awareness into the selective state-space update. Experiments on SSDD show that the PFIM-enhanced model achieves strong accuracy with a compact computational footprint. The decoupled DG-DS-SSM extension further provides interpretable evidence for the role of state control in SAR detection.
+
+\bibliographystyle{plainnat}
+\bibliography{aaai_ds_ssm_refs}
+
+\end{document}

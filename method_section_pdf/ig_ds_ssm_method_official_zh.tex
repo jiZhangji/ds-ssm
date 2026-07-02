@@ -1,0 +1,134 @@
+\documentclass[UTF8,10pt]{ctexart}
+\usepackage[letterpaper,margin=0.85in]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{2em}
+
+\begin{document}
+
+\section*{IG-DS-SSM 方法说明}
+
+为提升轻量化 SAR 舰船检测模型在斑点噪声、海杂波和弱小目标场景下的表征能力，当前论文采用 Importance-Guided De-Speckle State Space Model（IG-DS-SSM）作为主方法。该方法的核心思想是：不将去噪作为独立的前处理或后处理模块，而是将 SAR 去斑先验和目标重要性估计直接注入状态空间模型的状态更新过程，从而在特征传播阶段抑制噪声主导 token 对后续状态的污染。
+
+\section*{一、总体流程}
+
+给定轻量化 Mamba-YOLO 骨干网络输出的特征图
+\begin{equation}
+  \mathbf{F}\in\mathbb{R}^{H\times W\times C},
+\end{equation}
+首先将其展开为 token 序列：
+\begin{equation}
+  \mathbf{x}=\mathrm{Flatten}(\mathbf{F})\in\mathbb{R}^{N\times C},\quad N=HW.
+\end{equation}
+随后，IG-DS-SSM 对该序列执行去斑输入建模、局部可靠性估计、感知重要性估计以及选择性状态空间扫描：
+\begin{equation}
+  \mathbf{y}=\mathrm{IG\mbox{-}DS\mbox{-}SSM}(\mathbf{x},H,W).
+\end{equation}
+输出 token 再恢复为二维特征，并送入检测器的 neck 与 head 完成目标检测。
+
+\section*{二、去斑输入建模}
+
+SAR 图像中的斑点噪声通常体现为局部不稳定扰动，容易与弱小舰船结构混淆。为降低该扰动进入状态空间循环传播的风险，方法首先利用深度可分离局部算子估计局部背景表示：
+\begin{equation}
+  \bar{\mathbf{x}}=\mathrm{DWConv}(\mathbf{x};H,W).
+\end{equation}
+局部残差定义为：
+\begin{equation}
+  \mathbf{r}=\mathbf{x}-\bar{\mathbf{x}}.
+\end{equation}
+在此基础上构造去斑输入：
+\begin{equation}
+  \widetilde{\mathbf{x}}=\mathbf{x}-\lambda_s\mathbf{r},
+\end{equation}
+其中，$\lambda_s$ 表示残差抑制强度。该步骤并非简单去除全部高频信息，而是在进入状态空间扫描之前削弱局部扰动成分，尽量保留舰船结构相关响应。
+
+\section*{三、能量感知状态抑制}
+
+局部背景能量可作为 token 可靠性的粗粒度线索。对于第 $t$ 个 token，定义背景能量为：
+\begin{equation}
+  e_t=\frac{\|\bar{\mathbf{x}}_t\|_2}{\sqrt{C}}.
+\end{equation}
+进一步将其转化为状态保留门：
+\begin{equation}
+  g_t^E=g_{\min}+(1-g_{\min})\sigma(-\alpha e_t),
+\end{equation}
+其中，$g_{\min}$ 用于避免状态被完全擦除，$\alpha$ 控制抑制强度。对于高能量且不稳定的背景区域，该机制会降低历史状态的持续传播，从而减少海杂波或斑点噪声对后续 token 的影响。
+
+\section*{四、感知特征重要性模块}
+
+仅依赖背景能量并不足够，因为真实舰船目标也可能产生较强响应。为避免将目标响应与噪声一并抑制，方法引入 Perceptual Feature Importance Module（PFIM）估计 token 级重要性。给定去斑输入、局部背景和局部统计信息，PFIM 输出：
+\begin{equation}
+  I_t=\mathrm{PFIM}(\widetilde{\mathbf{x}}_t,\bar{\mathbf{x}}_t,\mathrm{Std}_{local}(\mathbf{x})_t),
+\end{equation}
+其中，$I_t\in[0,1]$ 表示第 $t$ 个 token 的目标相关重要性。为便于调制状态更新，进一步定义中心化重要性：
+\begin{equation}
+  \hat{I}_t=I_t-0.5.
+\end{equation}
+
+\section*{五、重要性引导状态更新}
+
+PFIM 的输出被注入状态空间更新的三个关键路径：记忆保留、状态写入和动态转移步长。
+
+\subsection*{（一）记忆保留调制}
+
+重要性引导后的状态保留门定义为：
+\begin{equation}
+  g_t=g_{\min}+(1-g_{\min})\sigma(-\alpha e_t+\beta\hat{I}_t).
+\end{equation}
+该门控使目标可能区域保留更多历史信息，同时抑制噪声可能区域的状态传播。
+
+\subsection*{（二）状态写入调制}
+
+当前输入写入强度由写入门控制：
+\begin{equation}
+  w_t=1+\rho\tanh(\hat{I}_t),
+\end{equation}
+\begin{equation}
+  \mathbf{u}^{write}_t=w_t\odot\mathbf{u}_t.
+\end{equation}
+当 token 更可能对应目标区域时，模型允许更多当前信息写入状态；当 token 更可能对应噪声区域时，写入强度相应降低。
+
+\subsection*{（三）动态转移步长调制}
+
+PFIM 还用于调制状态转移步长：
+\begin{equation}
+  \Delta_t=\mathrm{softplus}(\Delta_t^0+\eta I_t),
+\end{equation}
+其中，$\Delta_t^0$ 为原始转移 logit，$\eta$ 控制重要性对转移步长的影响。该设计使状态演化速度能够随目标重要性自适应调整。
+
+综合以上三类调制，状态更新可概括为：
+\begin{equation}
+  \mathbf{h}_t
+  =g_t\odot\bar{\mathbf{A}}_t\mathbf{h}_{t-1}
+  +\bar{\mathbf{B}}_t\mathbf{u}^{write}_t,
+\end{equation}
+\begin{equation}
+  \mathbf{y}_t=\mathbf{C}_t\mathbf{h}_t+\mathbf{D}\widetilde{\mathbf{x}}_t.
+\end{equation}
+其中，$\mathbf{D}\widetilde{\mathbf{x}}_t$ 用于保留当前去斑输入证据，避免所有信息完全依赖循环状态传播。
+
+\section*{六、解耦门控扩展}
+
+除主模型 IG-DS-SSM/PFIM 外，当前工作还研究了 DG-DS-SSM 作为可解释扩展。该扩展将 erase、write 和 transition 三类控制进一步解耦。其保留/擦除分支为：
+\begin{equation}
+  r_t=r_{\min}+(1-r_{\min})\sigma(-\alpha e_t+\beta_e\hat{I}_t),
+\end{equation}
+写入分支为：
+\begin{equation}
+  q_t=1+s_w\tanh(\rho_w\hat{I}_t).
+\end{equation}
+转移步长分支则独立调制 $\Delta_t$。该扩展有助于分析旧状态抑制、当前输入写入和状态转移自适应三者对 SAR 检测性能的影响。根据当前实验结果，DG-DS-SSM 具有一定竞争力，但未超过完整 PFIM 增强的 DS-SSM，因此更适合作为消融分析和可解释扩展，而非论文主模型。
+
+\section*{七、方法特点概括}
+
+\begin{enumerate}
+  \item 方法将 SAR 去斑先验直接注入状态空间更新，而不是依赖外部去噪或后处理。
+  \item DS-SSM 通过去斑输入和能量感知状态抑制，降低噪声 token 的状态传播风险。
+  \item PFIM 进一步估计目标重要性，避免真实舰船响应被误抑制。
+  \item PFIM 同时调制记忆保留、状态写入和转移步长，使状态演化具备目标感知能力。
+  \item DG-DS-SSM 可作为后续消融和机理分析模块，用于解释不同状态控制分支的作用。
+\end{enumerate}
+
+\end{document}

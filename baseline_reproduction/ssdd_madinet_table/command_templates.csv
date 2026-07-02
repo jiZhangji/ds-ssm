@@ -1,0 +1,6 @@
+﻿method,command_template,status
+YOLOv8n,yolo detect train model=yolov8n.yaml data=datasets/SSDD_YOLO/ssdd.yaml imgsz=640 epochs=300 batch=32 device=0 project=output_dir/ssdd_baselines name=yolov8n_ssdd_300e,ready after environment confirmation
+YOLOv5n/YOLOv5s,python train.py --data datasets/SSDD_YOLO/ssdd.yaml --weights yolov5n.pt --img 640 --epochs 300 --batch 32 --project output_dir/ssdd_baselines --name yolov5n_ssdd_300e,needs YOLOv5 repo/environment
+YOLOX,python tools/train.py -f exps/ssdd/yolox_s_ssdd.py -d 1 -b 32 --fp16,needs YOLOX repo and SSDD COCO conversion
+MMDetection baselines,python tools/train.py configs/ssdd/{method}_ssdd.py --work-dir work_dirs/ssdd/{method},needs MMDetection environment and SSDD COCO conversion
+DiffusionDet/ConsistencyDet/DiffDet4SAR/MaDiNet,python tools/train_net.py --config-file configs/ssdd/{method}.yaml --num-gpus 1,needs Detectron2-style environment and official config adaptation

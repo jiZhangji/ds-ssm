@@ -1,0 +1,51 @@
+# Mamba-YOLO-T + DS-SSM Backbone for SSDD
+# DS_VSSBlock replaces shallow/mid VSSBlock for SAR speckle-aware feature modeling.
+
+nc: 1
+
+scales:
+  # [depth, width, max_channels]
+  T: [0.33, 0.25, 1024]
+
+backbone:
+  # [from, repeats, module, args]
+
+  # P2 / 4
+  - [-1, 1, SimpleStem, [128, 3]]        # 0-P2/4
+  - [-1, 3, DS_VSSBlock, [128]]          # 1 DS-SSM shallow stage
+
+  # P3 / 8
+  - [-1, 1, VisionClueMerge, [256]]      # 2-P3/8
+  - [-1, 3, VSSBlock, [256]]          # 3 DS-SSM middle stage
+
+  # P4 / 16
+  - [-1, 1, VisionClueMerge, [512]]      # 4-P4/16
+  - [-1, 9, VSSBlock, [512]]             # 5 original VSSBlock
+
+  # P5 / 32
+  - [-1, 1, VisionClueMerge, [1024]]     # 6-P5/32
+  - [-1, 3, VSSBlock, [1024]]            # 7 original VSSBlock
+  - [-1, 1, SPPF, [1024, 5]]             # 8
+
+head:
+  # P5 -> P4
+  - [-1, 1, nn.Upsample, [None, 2, 'nearest']]  # 9
+  - [[-1, 5], 1, Concat, [1]]                   # 10 cat backbone P4
+  - [-1, 3, XSSBlock, [512]]                    # 11
+
+  # P4 -> P3
+  - [-1, 1, nn.Upsample, [None, 2, 'nearest']]  # 12
+  - [[-1, 3], 1, Concat, [1]]                   # 13 cat backbone P3
+  - [-1, 3, XSSBlock, [256]]                    # 14 P3/8-small
+
+  # P3 -> P4
+  - [-1, 1, Conv, [256, 3, 2]]                  # 15
+  - [[-1, 11], 1, Concat, [1]]                  # 16
+  - [-1, 3, XSSBlock, [512]]                    # 17 P4/16-medium
+
+  # P4 -> P5
+  - [-1, 1, Conv, [512, 3, 2]]                  # 18
+  - [[-1, 8], 1, Concat, [1]]                   # 19 cat backbone P5
+  - [-1, 3, XSSBlock, [1024]]                   # 20 P5/32-large
+
+  - [[14, 17, 20], 1, Detect, [nc]]             # 21 Detect(P3, P4, P5)

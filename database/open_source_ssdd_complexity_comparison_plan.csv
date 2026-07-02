@@ -1,0 +1,18 @@
+﻿method,family,AP50_percent_from_MaDiNet,P_percent_from_MaDiNet,R_percent_from_MaDiNet,F1_percent_from_MaDiNet,params_M,GFLOPs,latency_ms,fps,repo_or_impl,status
+Faster R-CNN,two-stage,89.7,87.1,90.4,88.7,TO_MEASURE,TO_MEASURE,TO_MEASURE,TO_MEASURE,MMDetection / Detectron2,open-source; needs COCO-format SSDD and MMDetection/Detectron2 env
+Cascade R-CNN,two-stage,90.5,84.1,90.8,92.4,TO_MEASURE,TO_MEASURE,TO_MEASURE,TO_MEASURE,MMDetection / Detectron2,open-source; needs COCO-format SSDD and MMDetection/Detectron2 env
+RetinaNet,one-stage anchor-based,95.0,94.0,93.1,93.6,TO_MEASURE,TO_MEASURE,TO_MEASURE,TO_MEASURE,MMDetection / Detectron2,open-source; needs COCO-format SSDD and MMDetection/Detectron2 env
+CenterNet,anchor-free,95.1,94.3,93.6,93.9,TO_MEASURE,TO_MEASURE,TO_MEASURE,TO_MEASURE,MMDetection,open-source; needs COCO-format SSDD and MMDetection env
+FCOS,anchor-free,95.3,94.6,93.9,94.2,TO_MEASURE,TO_MEASURE,TO_MEASURE,TO_MEASURE,MMDetection,open-source; needs COCO-format SSDD and MMDetection env
+ConsistencyDet,generative/consistency,95.6,94.5,94.0,94.2,TO_MEASURE,TO_MEASURE,TO_MEASURE,TO_MEASURE,https://github.com/Tankowa/ConsistencyDet,open-source; needs official repo + Detectron2-like env
+YOLOv3,YOLO,96.2,95.5,94.8,95.2,103.7541,283.3202,17.4627,57.2649,Ultralytics / MMYOLO,"measured on server 172.26.151.143 using Ultralytics config, input 640, batch=1, fp32"
+YOLOX,YOLO,96.2,95.0,93.8,94.4,TO_MEASURE,TO_MEASURE,TO_MEASURE,TO_MEASURE,https://github.com/Megvii-BaseDetection/YOLOX,open-source; high priority
+DiffusionDet,generative/diffusion,96.3,95.1,93.9,94.5,TO_MEASURE,TO_MEASURE,TO_MEASURE,TO_MEASURE,https://github.com/ShoufaChen/DiffusionDet,open-source; needs Detectron2 env
+YOLOv5n,YOLO lightweight,98.0,97.0,95.8,96.4,2.6548,7.8401,9.0104,110.983,https://github.com/ultralytics/yolov5,"measured on server 172.26.151.143 using Ultralytics config, input 640, batch=1, fp32"
+YOLOv8n,YOLO lightweight,98.1,97.3,96.4,96.9,3.1572,8.8575,7.9916,125.1318,https://github.com/ultralytics/ultralytics,"measured on server 172.26.151.143 using Ultralytics config, input 640, batch=1, fp32"
+YOLOv5s,YOLO lightweight,98.3,97.2,96.4,97.0,9.1532,24.2129,9.0093,110.9966,https://github.com/ultralytics/yolov5,"measured on server 172.26.151.143 using Ultralytics config, input 640, batch=1, fp32"
+DiffDet4SAR,SAR diffusion,96.9,95.3,95.2,95.2,TO_MEASURE,TO_MEASURE,TO_MEASURE,TO_MEASURE,https://github.com/JoyeZLearning/DiffDet4SAR,open-source; needs official repo + Detectron2 env
+MaDiNet,SAR diffusion + Mamba,99.0,98.0,97.0,97.5,223.2648*,345.283*,27.2921*,TO_MEASURE_FULL_DETECTOR,https://github.com/JoyeZLearning/MaDiNet,open-source; *measured official MambaSAR res4+res5 core module only; full detector still needs Detectron2
+MaDiNet official MambaSAR res4+res5,MaDiNet core module,99.0 reference,98.0 reference,97.0 reference,97.5 reference,223.2648,345.283,27.2921,N/A,official MaDiNet MambaSAR.py,"measured on server; core res4+res5 module only, not full detector"
+Ours: DS-SSM/PFIM,lightweight Mamba-YOLO,98.704,97.378,95.219,96.286,5.9648,13.2079,28.7546,34.777,local Mamba-YOLO-ds-ssm,measured on server 172.26.151.143
+Ours: DG-DS-SSM,lightweight Mamba-YOLO extension,98.7,96.3,96.2,96.25,5.9632,13.1554,29.0699,34.3998,local Mamba-YOLO-ds-ssm,measured on server 172.26.151.143

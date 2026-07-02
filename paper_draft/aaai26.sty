@@ -1,0 +1,16 @@
+% Minimal draft-compatible AAAI style shim.
+% Replace this file with the official AAAI author-kit aaai26.sty before submission.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{aaai26}[2026/06/18 Draft shim for local compilation]
+\RequirePackage[letterpaper,margin=0.75in]{geometry}
+\RequirePackage{titlesec}
+\RequirePackage{authblk}
+\RequirePackage{abstract}
+\RequirePackage{flushend}
+\setlength{\columnsep}{0.25in}
+\renewcommand\Authfont{\normalsize}
+\renewcommand\Affilfont{\normalsize}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{0.5em}{}
+\AtBeginDocument{\twocolumn}
