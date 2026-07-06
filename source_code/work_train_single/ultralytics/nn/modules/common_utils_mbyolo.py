@@ -14,8 +14,10 @@ try:
     import selective_scan_cuda_ndstate
     import selective_scan_cuda_nrow
     import selective_scan_cuda
-except:
-    pass
+except Exception as e:
+    _SELECTIVE_SCAN_IMPORT_ERROR = e
+else:
+    _SELECTIVE_SCAN_IMPORT_ERROR = None
 
 try:
     "sscore acts the same as mamba_ssm"
@@ -24,7 +26,10 @@ except Exception as e:
     print(e, flush=True)
     "you should install mamba_ssm to use this"
     SSMODE = "mamba_ssm"
-    import selective_scan_cuda
+    try:
+        import selective_scan_cuda
+    except Exception:
+        selective_scan_cuda = None
     # from mamba_ssm.ops.selective_scan_interface import selective_scan_fn, selective_scan_ref
 
 
@@ -103,6 +108,11 @@ class SelectiveScanCore(torch.autograd.Function):
     @torch.cuda.amp.custom_fwd
     def forward(ctx, u, delta, A, B, C, D=None, delta_bias=None, delta_softplus=False, nrows=1, backnrows=1,
                 oflex=True):
+        if "selective_scan_cuda_core" not in globals():
+            raise ImportError(
+                "selective_scan_cuda_core is not available. Build it inside the active environment with: "
+                "cd selective_scan && pip install -v --no-build-isolation ."
+            ) from _SELECTIVE_SCAN_IMPORT_ERROR
         # all in float
         if u.stride(-1) != 1:
             u = u.contiguous()

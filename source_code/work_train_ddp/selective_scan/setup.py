@@ -46,13 +46,16 @@ def get_ext():
     print("\n\ntorch.__version__  = {}\n\n".format(torch.__version__))
     print("\n\nCUDA_HOME = {}\n\n".format(CUDA_HOME))
 
-    # Check, if CUDA11 is installed for compute capability 8.0
+    # Check, if CUDA11 is installed for newer compute capabilities.
     multi_threads = True
+    gencode_sm89 = False
     gencode_sm90 = False
     if CUDA_HOME is not None:
         _, bare_metal_version = get_cuda_bare_metal_version(CUDA_HOME)
         print("CUDA version: ", bare_metal_version, flush=True)
         if bare_metal_version >= Version("11.8"):
+            # RTX 4090 / Ada Lovelace.
+            gencode_sm89 = True
             gencode_sm90 = True
         if bare_metal_version < Version("11.6"):
             warnings.warn("CUDA version ealier than 11.6 may leads to performance mismatch.")
@@ -61,6 +64,8 @@ def get_ext():
             
     cc_flag.extend(["-gencode", "arch=compute_61,code=sm_61"])
     cc_flag.extend(["-gencode", "arch=compute_80,code=sm_80"])
+    if gencode_sm89:
+        cc_flag.extend(["-gencode", "arch=compute_89,code=sm_89"])
     if gencode_sm90:
         cc_flag.extend(["-gencode", "arch=compute_90,code=sm_90"])
     if multi_threads:
