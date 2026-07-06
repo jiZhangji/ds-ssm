@@ -1,8 +1,7 @@
-path: /inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset/yolo/SSDD
+path: /inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset/det/SSDD
 train: images/train
 val: images/val
 test: images/test
 
 names:
   0: ship
-
