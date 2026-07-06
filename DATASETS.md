@@ -8,6 +8,8 @@ This repository does not include raw datasets or converted images/labels. Keep t
 |---|---|---|---|
 | SSDD / BBox_SSDD | SAR ship detection | `datasets/SSDD_YOLO` | `ship` |
 | SAR-AIRcraft-1.0 | SAR aircraft detection | `datasets/SAR_AIRcraft_YOLO` | copied from the COCO category list |
+| OGSOD | SAR/remote-sensing object detection | `datasets/yolo/OGSOD` | `ship` by default |
+| ship_dataset_v0 | SAR ship detection | `datasets/yolo/ship_dataset_v0` | `ship` |
 
 ## SSDD
 
@@ -58,3 +60,30 @@ python mbyolo_train_sarair.py --data ultralytics/cfg/datasets/SAR_AIRcraft.yaml
 
 Do not commit raw images, labels, cache files, generated training runs, or checkpoints. If a checkpoint must be shared, use a release asset, object storage, or Git LFS rather than normal Git history.
 
+## Hugging Face ZIP Layouts
+
+For the Hugging Face `shimiandeshu/sar-m` ZIPs, first inspect each extracted directory before training:
+
+```bash
+cd /inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset
+find OGSOD SAR_AIRcraft SSDD ship_dataset_v0 -maxdepth 3 -type f | sed -n '1,80p'
+```
+
+If a dataset is already a flat YOLO folder with image files and same-stem `.txt` labels mixed together, convert it to a standard YOLO train/val/test layout:
+
+```bash
+cd /inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/ds-ssm/source_code/work_train_single
+
+python tools/prepare_flat_yolo_detection.py \
+  --src /inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset/ship_dataset_v0/ship_dataset_v0 \
+  --out /inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset/yolo/ship_dataset_v0 \
+  --name ship_dataset_v0 \
+  --class-name ship
+```
+
+Use these server-side dataset YAMLs after conversion:
+
+- `ultralytics/cfg/datasets/ship_dataset_v0.yaml`
+- `ultralytics/cfg/datasets/OGSOD.yaml`
+- `ultralytics/cfg/datasets/SSDD_HF.yaml`
+- `ultralytics/cfg/datasets/SAR_AIRcraft_HF.yaml`

@@ -1,0 +1,8 @@
+path: /inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset/yolo/ship_dataset_v0
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: ship
+

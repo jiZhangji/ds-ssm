@@ -1,0 +1,14 @@
+path: /inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset/yolo/SAR_AIRcraft
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: A220
+  1: A320/321
+  2: A330
+  3: ARJ21
+  4: Boeing737
+  5: Boeing787
+  6: other
+
