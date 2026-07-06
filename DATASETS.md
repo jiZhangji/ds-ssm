@@ -8,8 +8,8 @@ This repository does not include raw datasets or converted images/labels. Keep t
 |---|---|---|---|
 | SSDD / BBox_SSDD | SAR ship detection | `datasets/SSDD_YOLO` | `ship` |
 | SAR-AIRcraft-1.0 | SAR aircraft detection | `datasets/SAR_AIRcraft_YOLO` | copied from the COCO category list |
-| OGSOD | SAR/remote-sensing object detection | `datasets/det/OGSOD` | `ship` by default |
-| ship_dataset_v0 | SAR ship detection | `datasets/det/ship_dataset_v0` | `ship` |
+| OGSOD | SAR/remote-sensing object detection | `dataset/OGSOD/OGSOD` | `ship` by default |
+| ship_dataset_v0 | SAR ship detection | `dataset/yolo/ship_dataset_v0` | `ship` |
 
 ## SSDD
 
@@ -69,7 +69,16 @@ cd /inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Ge
 find OGSOD SAR_AIRcraft SSDD ship_dataset_v0 -maxdepth 3 -type f | sed -n '1,80p'
 ```
 
-To prepare all four Hugging Face ZIPs into standard YOLO detection folders under `dataset/det/`, run:
+Current server-side detection dataset paths:
+
+```text
+/inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset/yolo/ship_dataset_v0
+/inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset/SSDD/SSDD
+/inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset/SAR_AIRcraft/SAR_AIRcraft
+/inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset/OGSOD/OGSOD
+```
+
+If the raw ZIP folders need to be rebuilt into standard YOLO detection folders under `dataset/det/`, run:
 
 ```bash
 cd /inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/ds-ssm/source_code/work_train_single
