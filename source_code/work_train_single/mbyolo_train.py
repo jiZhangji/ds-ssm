@@ -105,6 +105,7 @@ def parse_opt():
     parser.add_argument('--name', default='mambayolo_ds_ssm', help='save to project/name')
     parser.add_argument('--half', action='store_true', help='use FP16 half-precision inference')
     parser.add_argument('--dnn', action='store_true', help='use OpenCV DNN for ONNX inference')
+    parser.add_argument('--resume', type=str, default=None, help='resume training from a last.pt checkpoint')
     opt = parser.parse_args()
     return opt
 
@@ -296,6 +297,9 @@ if __name__ == '__main__':
         "warmup_epochs": 5.0,
         "warmup_bias_lr": 0.001,
     }
+
+    if opt.resume:
+        args["resume"] = opt.resume
     
     # # 🔴 新增：自动注入 ex9 验证过的 SAR 最佳物理超参数，免去每次在命令行敲打的麻烦
     # sar_specific_args = {
@@ -327,18 +331,19 @@ if __name__ == '__main__':
     # }
     # args.update(sar_specific_args)
 
-    model_conf = ROOT + opt.config
+    model_conf = opt.resume if opt.resume else ROOT + opt.config
     
     # 1. 初始化模型架构
     model = YOLO(model_conf)
     
     # 🔴 关键步骤：加载官方光学预训练权重作为底子
     # 请确保你的工程目录里有这个文件，或者改成你本地对应的预训练权重名
-    try:
-        model.load("yolov8n.pt") # Mamba-YOLO 通常也兼容/基于对应的 YOLOv8 预训练权重体系
-        print("✅ 成功加载预训练权重底子！")
-    except Exception as e:
-        print(f"⚠️ 警告: 未能加载预训练权重，模型将从头训练 ({e})")
+    if not opt.resume:
+        try:
+            model.load("yolov8n.pt") # Mamba-YOLO 通常也兼容/基于对应的 YOLOv8 预训练权重体系
+            print("✅ 成功加载预训练权重底子！")
+        except Exception as e:
+            print(f"⚠️ 警告: 未能加载预训练权重，模型将从头训练 ({e})")
 
     # 2. 执行任务
     if task == "train":
