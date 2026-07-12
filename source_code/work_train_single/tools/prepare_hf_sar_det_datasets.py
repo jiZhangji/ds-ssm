@@ -204,9 +204,21 @@ def prepare_coco(src: Path, out: Path, name: str, fallback_names):
     if not jsons:
         return False
 
-    train_json = next((p for p in jsons if "train" in p.name.lower()), None)
-    val_json = next((p for p in jsons if any(k in p.name.lower() for k in ("val", "valid"))), None)
-    test_json = next((p for p in jsons if "test" in p.name.lower()), None)
+    by_name = {p.name.lower(): p for p in jsons}
+    train_json = by_name.get("train.json") or next(
+        (p for p in jsons if "train" in p.name.lower() and "trainval" not in p.name.lower()), None
+    )
+    val_json = next((by_name.get(n) for n in ("val.json", "valid.json", "validation.json") if by_name.get(n)), None)
+    if val_json is None:
+        val_json = next(
+            (
+                p
+                for p in jsons
+                if any(k in p.name.lower() for k in ("val", "valid")) and "trainval" not in p.name.lower()
+            ),
+            None,
+        )
+    test_json = by_name.get("test.json") or next((p for p in jsons if "test" in p.name.lower()), None)
     split_jsons = {"train": train_json, "val": val_json, "test": test_json}
     if train_json is None:
         return False
@@ -341,4 +353,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
