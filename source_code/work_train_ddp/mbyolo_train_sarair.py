@@ -87,11 +87,13 @@ if __name__ == '__main__':
     model = YOLO(model_conf)
 
     if task == "train":
+        pretrained_weights = False
         weights = opt.weights.strip() if opt.weights else ""
         if model_conf.lower().endswith((".yaml", ".yml")) and weights.lower() not in ("", "none", "null"):
             local_weights = resolve_path(weights)
             weights_path = local_weights if os.path.exists(local_weights) else weights
             model.load(weights_path)
+            pretrained_weights = local_weights if os.path.exists(local_weights) else weights_path
             print(f"Loaded pretrained weights: {weights_path}")
 
         train_args = {
@@ -106,6 +108,7 @@ if __name__ == '__main__':
             "cache": opt.cache,
             "project": project_path,
             "name": opt.name,
+            "pretrained": pretrained_weights,
 
             "lr0": opt.lr0,
             "lrf": opt.lrf,
