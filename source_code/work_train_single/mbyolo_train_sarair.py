@@ -29,6 +29,13 @@ def parse_opt():
         help='model yaml or weight path'
     )
 
+    parser.add_argument(
+        '--weights',
+        type=str,
+        default='yolov8n.pt',
+        help="pretrained weights loaded into YAML models; use 'none' to train from scratch"
+    )
+
     parser.add_argument('--batch_size', type=int, default=16, help='batch size')
     parser.add_argument('--imgsz', '--img', '--img-size', type=int, default=1024, help='image size')
     parser.add_argument('--task', default='train', help='train, val, test')
@@ -80,6 +87,13 @@ if __name__ == '__main__':
     model = YOLO(model_conf)
 
     if task == "train":
+        weights = opt.weights.strip() if opt.weights else ""
+        if model_conf.lower().endswith((".yaml", ".yml")) and weights.lower() not in ("", "none", "null"):
+            local_weights = resolve_path(weights)
+            weights_path = local_weights if os.path.exists(local_weights) else weights
+            model.load(weights_path)
+            print(f"Loaded pretrained weights: {weights_path}")
+
         train_args = {
             "data": data_path,
             "epochs": opt.epochs,
