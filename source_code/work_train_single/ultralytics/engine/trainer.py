@@ -261,7 +261,11 @@ class BaseTrainer:
         self.amp = bool(self.amp)  # as boolean
         self.scaler = torch.cuda.amp.GradScaler(enabled=self.amp)
         if world_size > 1:
-            self.model = nn.parallel.DistributedDataParallel(self.model, device_ids=[RANK])
+            self.model = nn.parallel.DistributedDataParallel(
+                self.model,
+                device_ids=[RANK],
+                find_unused_parameters=int(getattr(self.args, "module_warmup_epochs", 0) or 0) > 0,
+            )
 
         # Check imgsz
         gs = max(int(self.model.stride.max() if hasattr(self.model, "stride") else 32), 32)  # grid size (max stride)
@@ -316,7 +320,8 @@ class BaseTrainer:
         if world_size > 1:
             self._setup_ddp(world_size)
         self._setup_train(world_size)
-        self._setup_module_warmup()
+        self._module_warmup_state = None
+        self._module_warmup_original_requires_grad = None
 
         nb = len(self.train_loader)  # number of batches
         nw = max(round(self.args.warmup_epochs * nb), 100) if self.args.warmup_epochs > 0 else -1  # warmup iterations
@@ -338,7 +343,7 @@ class BaseTrainer:
         self.optimizer.zero_grad()  # zero any resumed gradients to ensure stability on train start
         while True:
             self.epoch = epoch
-            self._update_module_warmup_state()
+            self._update_module_warmup()
             self.run_callbacks("on_train_epoch_start")
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore")  # suppress 'Detected lr_scheduler.step() before optimizer.step()'
@@ -547,10 +552,6 @@ class BaseTrainer:
     def optimizer_step(self):
         """Perform a single step of the training optimizer with gradient clipping and EMA update."""
         self.scaler.unscale_(self.optimizer)  # unscale gradients
-        if getattr(self, "module_warmup_active", False):
-            for parameter in self.model.parameters():
-                if id(parameter) not in self.module_warmup_parameter_ids:
-                    parameter.grad = None
         torch.nn.utils.clip_grad_norm_(self.model.parameters(), max_norm=10.0)  # clip gradients
         self.scaler.step(self.optimizer)
         self.scaler.update()
@@ -558,64 +559,62 @@ class BaseTrainer:
         if self.ema:
             self.ema.update(self.model)
 
-    def _setup_module_warmup(self):
-        """Find DS-SSM/PFIM parameters that may be updated during module warmup."""
-        self.module_warmup_epochs = int(getattr(self.args, "module_warmup_epochs", 0) or 0)
-        self.module_warmup_active = False
-        self.module_warmup_parameter_ids = set()
-        self._module_warmup_last_state = None
-
-        if self.module_warmup_epochs <= 0:
+    def _update_module_warmup(self):
+        """Freeze the base model during DS-SSM/PFIM warmup, including in DDP workers."""
+        warmup_epochs = int(getattr(self.args, "module_warmup_epochs", 0) or 0)
+        if warmup_epochs <= 0:
             return
 
         model = self.model.module if isinstance(self.model, nn.parallel.DistributedDataParallel) else self.model
-        ds_block_names = [name for name, module in model.named_modules() if hasattr(module, "ds_ssm")]
-        if not ds_block_names:
+        named_parameters = list(model.named_parameters())
+        trainable_keywords = (
+            "ds_ssm",
+            "pfim",
+            "lambda_s",
+            "alpha",
+            "beta_i",
+            "rho_i",
+            "eta_i",
+            ".dw.",
+            "gamma1",
+            "norm1",
+        )
+        has_dsssm = any("ds_ssm" in name for name, _ in named_parameters)
+        if not has_dsssm:
             raise ValueError(
-                "module_warmup_epochs requires a model containing DS-SSM blocks; "
+                "module_warmup_epochs requires a model containing DS-SSM/PFIM parameters; "
                 "set module_warmup_epochs=0 for the original Mamba-YOLO baseline"
             )
 
-        trainable_names = []
-        for name, parameter in model.named_parameters():
-            trainable = any(
-                name.startswith(f"{block_name}.ds_ssm.")
-                or name.startswith(f"{block_name}.norm1.")
-                or name == f"{block_name}.gamma1"
-                for block_name in ds_block_names
-            )
-            if trainable:
-                self.module_warmup_parameter_ids.add(id(parameter))
-                trainable_names.append(name)
-
-        if not trainable_names:
-            raise RuntimeError("DS-SSM blocks were found, but no module-warmup parameters matched")
-
-        self.module_warmup_trainable_count = sum(
-            parameter.numel() for parameter in model.parameters() if id(parameter) in self.module_warmup_parameter_ids
-        )
-        self.module_warmup_total_count = sum(parameter.numel() for parameter in model.parameters())
-
-    def _update_module_warmup_state(self):
-        """Switch optimizer masking at the configured module-warmup boundary."""
-        if self.module_warmup_epochs <= 0:
+        warmup_active = self.epoch < warmup_epochs
+        if warmup_active == self._module_warmup_state:
             return
 
-        self.module_warmup_active = self.epoch < self.module_warmup_epochs
-        if self.module_warmup_active == self._module_warmup_last_state:
-            return
-        self._module_warmup_last_state = self.module_warmup_active
+        if self._module_warmup_original_requires_grad is None:
+            self._module_warmup_original_requires_grad = {
+                name: parameter.requires_grad for name, parameter in named_parameters
+            }
 
+        if warmup_active:
+            for name, parameter in named_parameters:
+                parameter.requires_grad = any(keyword in name for keyword in trainable_keywords)
+        else:
+            for name, parameter in named_parameters:
+                parameter.requires_grad = self._module_warmup_original_requires_grad[name]
+
+        self._module_warmup_state = warmup_active
         if RANK in {-1, 0}:
-            if self.module_warmup_active:
+            trainable = sum(parameter.numel() for _, parameter in named_parameters if parameter.requires_grad)
+            total = sum(parameter.numel() for _, parameter in named_parameters)
+            if warmup_active:
                 LOGGER.info(
-                    f"Module warmup epochs 1-{self.module_warmup_epochs}: optimizing only DS-SSM/PFIM parameters "
-                    f"({self.module_warmup_trainable_count / 1e6:.3f}M of "
-                    f"{self.module_warmup_total_count / 1e6:.3f}M parameters)"
+                    f"Module warmup epochs 1-{warmup_epochs}: training only DS-SSM/PFIM parameters "
+                    f"({trainable / 1e6:.3f}M of {total / 1e6:.3f}M parameters)"
                 )
             else:
                 LOGGER.info(
-                    f"Module warmup complete at epoch {self.epoch + 1}: optimizing the full model"
+                    f"Module warmup complete at epoch {self.epoch + 1}: restored "
+                    f"{trainable / 1e6:.3f}M trainable parameters"
                 )
 
     def preprocess_batch(self, batch):
