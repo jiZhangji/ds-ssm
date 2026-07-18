@@ -316,6 +316,7 @@ class BaseTrainer:
         if world_size > 1:
             self._setup_ddp(world_size)
         self._setup_train(world_size)
+        self._setup_module_warmup()
 
         nb = len(self.train_loader)  # number of batches
         nw = max(round(self.args.warmup_epochs * nb), 100) if self.args.warmup_epochs > 0 else -1  # warmup iterations
@@ -337,6 +338,7 @@ class BaseTrainer:
         self.optimizer.zero_grad()  # zero any resumed gradients to ensure stability on train start
         while True:
             self.epoch = epoch
+            self._update_module_warmup_state()
             self.run_callbacks("on_train_epoch_start")
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore")  # suppress 'Detected lr_scheduler.step() before optimizer.step()'
@@ -545,12 +547,76 @@ class BaseTrainer:
     def optimizer_step(self):
         """Perform a single step of the training optimizer with gradient clipping and EMA update."""
         self.scaler.unscale_(self.optimizer)  # unscale gradients
+        if getattr(self, "module_warmup_active", False):
+            for parameter in self.model.parameters():
+                if id(parameter) not in self.module_warmup_parameter_ids:
+                    parameter.grad = None
         torch.nn.utils.clip_grad_norm_(self.model.parameters(), max_norm=10.0)  # clip gradients
         self.scaler.step(self.optimizer)
         self.scaler.update()
         self.optimizer.zero_grad()
         if self.ema:
             self.ema.update(self.model)
+
+    def _setup_module_warmup(self):
+        """Find DS-SSM/PFIM parameters that may be updated during module warmup."""
+        self.module_warmup_epochs = int(getattr(self.args, "module_warmup_epochs", 0) or 0)
+        self.module_warmup_active = False
+        self.module_warmup_parameter_ids = set()
+        self._module_warmup_last_state = None
+
+        if self.module_warmup_epochs <= 0:
+            return
+
+        model = self.model.module if isinstance(self.model, nn.parallel.DistributedDataParallel) else self.model
+        ds_block_names = [name for name, module in model.named_modules() if hasattr(module, "ds_ssm")]
+        if not ds_block_names:
+            raise ValueError(
+                "module_warmup_epochs requires a model containing DS-SSM blocks; "
+                "set module_warmup_epochs=0 for the original Mamba-YOLO baseline"
+            )
+
+        trainable_names = []
+        for name, parameter in model.named_parameters():
+            trainable = any(
+                name.startswith(f"{block_name}.ds_ssm.")
+                or name.startswith(f"{block_name}.norm1.")
+                or name == f"{block_name}.gamma1"
+                for block_name in ds_block_names
+            )
+            if trainable:
+                self.module_warmup_parameter_ids.add(id(parameter))
+                trainable_names.append(name)
+
+        if not trainable_names:
+            raise RuntimeError("DS-SSM blocks were found, but no module-warmup parameters matched")
+
+        self.module_warmup_trainable_count = sum(
+            parameter.numel() for parameter in model.parameters() if id(parameter) in self.module_warmup_parameter_ids
+        )
+        self.module_warmup_total_count = sum(parameter.numel() for parameter in model.parameters())
+
+    def _update_module_warmup_state(self):
+        """Switch optimizer masking at the configured module-warmup boundary."""
+        if self.module_warmup_epochs <= 0:
+            return
+
+        self.module_warmup_active = self.epoch < self.module_warmup_epochs
+        if self.module_warmup_active == self._module_warmup_last_state:
+            return
+        self._module_warmup_last_state = self.module_warmup_active
+
+        if RANK in {-1, 0}:
+            if self.module_warmup_active:
+                LOGGER.info(
+                    f"Module warmup epochs 1-{self.module_warmup_epochs}: optimizing only DS-SSM/PFIM parameters "
+                    f"({self.module_warmup_trainable_count / 1e6:.3f}M of "
+                    f"{self.module_warmup_total_count / 1e6:.3f}M parameters)"
+                )
+            else:
+                LOGGER.info(
+                    f"Module warmup complete at epoch {self.epoch + 1}: optimizing the full model"
+                )
 
     def preprocess_batch(self, batch):
         """Allows custom preprocessing model inputs and ground truths depending on task type."""

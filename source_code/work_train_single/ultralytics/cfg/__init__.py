@@ -137,6 +137,7 @@ CFG_INT_KEYS = {  # integer-only arguments
     "workers",
     "seed",
     "close_mosaic",
+    "module_warmup_epochs",
     "mask_ratio",
     "max_det",
     "vid_stride",

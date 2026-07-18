@@ -48,6 +48,12 @@ def parse_opt():
     parser.add_argument('--lrf', type=float, default=0.01, help='final learning rate ratio')
     parser.add_argument('--weight_decay', type=float, default=0.0005)
     parser.add_argument('--patience', type=int, default=80)
+    parser.add_argument(
+        '--module_warmup_epochs',
+        type=int,
+        default=20,
+        help='optimize only DS-SSM/PFIM module parameters for the first N epochs; use 0 to disable'
+    )
 
     parser.add_argument('--amp', action='store_true', help='open amp')
     parser.add_argument('--cache', action='store_true', help='cache images for faster training')
@@ -114,6 +120,7 @@ if __name__ == '__main__':
             "lrf": opt.lrf,
             "weight_decay": opt.weight_decay,
             "patience": opt.patience,
+            "module_warmup_epochs": opt.module_warmup_epochs,
             "cos_lr": opt.cos_lr,
 
             # SAR 图像一般是灰度/伪灰度，不建议强颜色增强
