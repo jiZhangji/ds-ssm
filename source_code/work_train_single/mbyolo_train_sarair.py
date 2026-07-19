@@ -35,6 +35,12 @@ def parse_opt():
         default='yolov8n.pt',
         help="pretrained weights loaded into YAML models; use 'none' to train from scratch"
     )
+    parser.add_argument(
+        '--resume',
+        type=str,
+        default='',
+        help='resume a training run from a last.pt checkpoint, including optimizer and scheduler state'
+    )
 
     parser.add_argument('--batch_size', type=int, default=16, help='batch size')
     parser.add_argument('--imgsz', '--img', '--img-size', type=int, default=1024, help='image size')
@@ -90,12 +96,18 @@ if __name__ == '__main__':
     model_conf = resolve_path(opt.config)
     project_path = resolve_path(opt.project)
 
-    model = YOLO(model_conf)
+    resume_path = resolve_path(opt.resume) if opt.resume else ''
+    if resume_path:
+        if not os.path.isfile(resume_path):
+            raise FileNotFoundError(f"Resume checkpoint does not exist: {resume_path}")
+        model = YOLO(resume_path)
+    else:
+        model = YOLO(model_conf)
 
     if task == "train":
         pretrained_weights = False
         weights = opt.weights.strip() if opt.weights else ""
-        if model_conf.lower().endswith((".yaml", ".yml")) and weights.lower() not in ("", "none", "null"):
+        if not resume_path and model_conf.lower().endswith((".yaml", ".yml")) and weights.lower() not in ("", "none", "null"):
             local_weights = resolve_path(weights)
             weights_path = local_weights if os.path.exists(local_weights) else weights
             model.load(weights_path)
@@ -115,6 +127,7 @@ if __name__ == '__main__':
             "project": project_path,
             "name": opt.name,
             "pretrained": pretrained_weights,
+            "resume": resume_path or False,
 
             "lr0": opt.lr0,
             "lrf": opt.lrf,
