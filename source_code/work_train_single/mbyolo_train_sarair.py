@@ -41,6 +41,24 @@ def parse_opt():
         default='',
         help='resume a training run from a last.pt checkpoint, including optimizer and scheduler state'
     )
+    parser.add_argument(
+        '--resume_batch_size', '--resume-batch-size',
+        type=int,
+        default=None,
+        help='override the checkpoint global batch size while resuming'
+    )
+    parser.add_argument(
+        '--resume_imgsz', '--resume-imgsz',
+        type=int,
+        default=None,
+        help='override the checkpoint image size while resuming'
+    )
+    parser.add_argument(
+        '--resume_device', '--resume-device',
+        type=str,
+        default=None,
+        help='override the checkpoint device list while resuming, e.g. 0,1'
+    )
 
     parser.add_argument('--batch_size', type=int, default=16, help='batch size')
     parser.add_argument('--imgsz', '--img', '--img-size', type=int, default=1024, help='image size')
@@ -164,6 +182,15 @@ if __name__ == '__main__':
             # Otherwise this wrapper's CLI defaults (1024 / 16 / 0) override those values during resume.
             for key in ("imgsz", "batch", "device"):
                 train_args.pop(key)
+            runtime_overrides = {
+                "imgsz": opt.resume_imgsz,
+                "batch": opt.resume_batch_size,
+                "device": opt.resume_device,
+            }
+            for key, value in runtime_overrides.items():
+                if value is not None:
+                    train_args[key] = value
+                    print(f"Resume runtime override: {key}={value}")
 
         model.train(**train_args)
 
