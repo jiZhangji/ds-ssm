@@ -159,6 +159,12 @@ if __name__ == '__main__':
             "plots": True,
         }
 
+        if resume_path:
+            # Let the checkpoint retain its own image size, global batch size, and device setup.
+            # Otherwise this wrapper's CLI defaults (1024 / 16 / 0) override those values during resume.
+            for key in ("imgsz", "batch", "device"):
+                train_args.pop(key)
+
         model.train(**train_args)
 
     elif task == "val":
