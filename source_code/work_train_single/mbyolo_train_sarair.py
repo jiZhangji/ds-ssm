@@ -66,11 +66,20 @@ def parse_opt():
     parser.add_argument('--device', default='0', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
     parser.add_argument('--workers', type=int, default=8, help='dataloader workers')
     parser.add_argument('--epochs', type=int, default=300)
+    parser.add_argument('--seed', type=int, default=0)
+    parser.add_argument(
+        '--deterministic',
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help='enable deterministic training where supported'
+    )
 
     parser.add_argument('--optimizer', default='AdamW', help='SGD, Adam, AdamW')
     parser.add_argument('--lr0', type=float, default=0.001, help='initial learning rate')
     parser.add_argument('--lrf', type=float, default=0.01, help='final learning rate ratio')
     parser.add_argument('--weight_decay', type=float, default=0.0005)
+    parser.add_argument('--nbs', type=int, default=64, help='nominal batch size for loss accumulation scaling')
+    parser.add_argument('--warmup_epochs', type=float, default=3.0, help='optimizer warmup duration in epochs')
     parser.add_argument('--patience', type=int, default=80)
     parser.add_argument(
         '--module_warmup_epochs',
@@ -146,10 +155,14 @@ if __name__ == '__main__':
             "name": opt.name,
             "pretrained": pretrained_weights,
             "resume": resume_path or False,
+            "seed": opt.seed,
+            "deterministic": opt.deterministic,
 
             "lr0": opt.lr0,
             "lrf": opt.lrf,
             "weight_decay": opt.weight_decay,
+            "nbs": opt.nbs,
+            "warmup_epochs": opt.warmup_epochs,
             "patience": opt.patience,
             "module_warmup_epochs": opt.module_warmup_epochs,
             "cos_lr": opt.cos_lr,

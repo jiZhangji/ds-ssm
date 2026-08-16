@@ -112,7 +112,9 @@ class BaseValidator:
         if self.training:
             self.device = trainer.device
             self.data = trainer.data
-            self.args.half = self.device.type != "cpu"  # force FP16 val during training
+            # Match validation precision to the trainer. Forcing FP16 here makes
+            # FP32-only custom selective-scan models produce invalid predictions.
+            self.args.half = bool(trainer.amp) and self.device.type != "cpu"
             model = trainer.ema.ema or trainer.model
             model = model.half() if self.args.half else model.float()
             # self.model = model

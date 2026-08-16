@@ -8,6 +8,14 @@ __all__ = (
     "PFIM",
     "DeSpeckleSSM",
     "DS_VSSBlock",
+    "DS_VSSBlockSweep",
+    "DS_VSSBlockNoPFIM",
+    "DS_VSSBlockPFIMGamma",
+    "DS_VSSBlockPFIMWrite",
+    "DS_VSSBlockPFIMDelta",
+    "DS_VSSBlockPFIMGammaWrite",
+    "DS_VSSBlockPFIMGlobal",
+    "DS_VSSBlockPFIMNo2DStd",
 )
 
 import torch
@@ -186,6 +194,7 @@ class DeSpeckleSSM(nn.Module):
         min_retain=0.5,
         pfim_hidden_dim=None,
         pfim_use_2d_std=True,
+        pfim_tokenwise=True,
     ):
         super().__init__()
 
@@ -198,6 +207,7 @@ class DeSpeckleSSM(nn.Module):
         self.pfim_on_gamma = pfim_on_gamma
         self.pfim_on_write = pfim_on_write
         self.pfim_on_delta = pfim_on_delta
+        self.pfim_tokenwise = pfim_tokenwise
         self.min_retain = float(min_retain)
 
         self.lambda_s = nn.Parameter(torch.tensor(float(lambda_init)))
@@ -206,6 +216,13 @@ class DeSpeckleSSM(nn.Module):
         self.beta_i = nn.Parameter(torch.tensor(float(beta_init)))
         self.rho_i = nn.Parameter(torch.tensor(float(rho_init)))
         self.eta_i = nn.Parameter(torch.tensor(float(eta_init)))
+
+        if not (use_pfim and pfim_on_gamma):
+            self.beta_i.requires_grad_(False)
+        if not (use_pfim and pfim_on_write):
+            self.rho_i.requires_grad_(False)
+        if not (use_pfim and pfim_on_delta):
+            self.eta_i.requires_grad_(False)
 
         pad = kernel_size // 2
         self.dw = nn.Conv1d(
@@ -252,6 +269,8 @@ class DeSpeckleSSM(nn.Module):
 
         if self.use_pfim:
             importance = self.pfim(x_tilde, x_bar, hw_shape=hw_shape)
+            if not getattr(self, "pfim_tokenwise", True):
+                importance = importance.mean(dim=1, keepdim=True).expand(-1, N, -1)
         else:
             importance = torch.full(
                 (Bsz, N, 1),
@@ -261,6 +280,10 @@ class DeSpeckleSSM(nn.Module):
             )
 
         imp_center = importance - 0.5
+
+        if getattr(self, "capture_importance", False):
+            self.last_importance = importance.detach()
+            self.last_hw_shape = hw_shape
 
         u, z = self.in_proj(x_tilde).chunk(2, dim=-1)
 
@@ -351,10 +374,8 @@ class DeSpeckleSSM(nn.Module):
                 Bt = dt * B_t[:, t, :].unsqueeze(1)
                 Ct = C_t[:, t, :].unsqueeze(1)
 
-                h = (
-                    gamma[:, t, :].unsqueeze(-1) * At * h
-                    + Bt * u_write[:, t, :].unsqueeze(-1)
-                )
+                u_scan_t = gamma[:, t, :] * u_write[:, t, :]
+                h = At * h + Bt * u_scan_t.unsqueeze(-1)
 
                 yt = (
                     (Ct * h).sum(dim=-1)
@@ -399,6 +420,7 @@ class DS_VSSBlock(nn.Module):
         min_retain=0.5,
         pfim_hidden_dim=None,
         pfim_use_2d_std=True,
+        pfim_tokenwise=True,
     ):
         super().__init__()
 
@@ -425,6 +447,7 @@ class DS_VSSBlock(nn.Module):
             min_retain=min_retain,
             pfim_hidden_dim=pfim_hidden_dim,
             pfim_use_2d_std=pfim_use_2d_std,
+            pfim_tokenwise=pfim_tokenwise,
         )
 
         hidden_dim = int(dim * mlp_ratio)
@@ -461,7 +484,90 @@ class DS_VSSBlock(nn.Module):
 
         x = x_tokens.transpose(1, 2).reshape(B, C, H, W).contiguous()
         return x
- 
+
+
+class DS_VSSBlockSweep(DS_VSSBlock):
+    """DS block adapter with an explicit state dimension for placement sweeps.
+
+    The Ultralytics parser supplies input and scaled output channels as the
+    first two positional arguments. The historical ``DS_VSSBlock`` interprets
+    its second positional argument as ``state_dim``. This adapter preserves old
+    checkpoints while allowing new P2/P3/P4/P5 comparisons to hold state size
+    constant.
+    """
+
+    def __init__(self, in_channels, hidden_dim, state_dim=16):
+        if in_channels != hidden_dim:
+            raise ValueError(
+                "DS_VSSBlockSweep requires equal input/output channels, "
+                f"got in_channels={in_channels}, hidden_dim={hidden_dim}"
+            )
+        super().__init__(dim=in_channels, state_dim=state_dim)
+
+
+class DS_VSSBlockNoPFIM(DS_VSSBlock):
+    def __init__(self, dim, state_dim=16):
+        super().__init__(dim=dim, state_dim=state_dim, use_pfim=False)
+
+
+class DS_VSSBlockPFIMGamma(DS_VSSBlock):
+    def __init__(self, dim, state_dim=16):
+        super().__init__(
+            dim=dim,
+            state_dim=state_dim,
+            pfim_on_gamma=True,
+            pfim_on_write=False,
+            pfim_on_delta=False,
+        )
+
+
+class DS_VSSBlockPFIMWrite(DS_VSSBlock):
+    def __init__(self, dim, state_dim=16):
+        super().__init__(
+            dim=dim,
+            state_dim=state_dim,
+            pfim_on_gamma=False,
+            pfim_on_write=True,
+            pfim_on_delta=False,
+        )
+
+
+class DS_VSSBlockPFIMDelta(DS_VSSBlock):
+    def __init__(self, dim, state_dim=16):
+        super().__init__(
+            dim=dim,
+            state_dim=state_dim,
+            pfim_on_gamma=False,
+            pfim_on_write=False,
+            pfim_on_delta=True,
+        )
+
+
+class DS_VSSBlockPFIMGammaWrite(DS_VSSBlock):
+    def __init__(self, dim, state_dim=16):
+        super().__init__(
+            dim=dim,
+            state_dim=state_dim,
+            pfim_on_gamma=True,
+            pfim_on_write=True,
+            pfim_on_delta=False,
+        )
+
+
+class DS_VSSBlockPFIMGlobal(DS_VSSBlock):
+    """Parameter-matched control using one image-level importance value per sample."""
+
+    def __init__(self, dim, state_dim=16):
+        super().__init__(dim=dim, state_dim=state_dim, pfim_tokenwise=False)
+
+
+class DS_VSSBlockPFIMNo2DStd(DS_VSSBlock):
+    """Parameter-matched PFIM control using sequence-only local variation."""
+
+    def __init__(self, dim, state_dim=16):
+        super().__init__(dim=dim, state_dim=state_dim, pfim_use_2d_std=False)
+
+
 ############################################### PFIM
 
 

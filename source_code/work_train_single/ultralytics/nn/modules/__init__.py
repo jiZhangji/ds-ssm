@@ -76,7 +76,22 @@ from .transformer import (
     TransformerLayer,
 )
 
-from .mamba_yolo import SimpleStem, VisionClueMerge, VSSBlock, XSSBlock, DS_VSSBlock, Sem_VSSBlock
+from .mamba_yolo import (
+    DS_VSSBlock,
+    DS_VSSBlockSweep,
+    DS_VSSBlockNoPFIM,
+    DS_VSSBlockPFIMDelta,
+    DS_VSSBlockPFIMGamma,
+    DS_VSSBlockPFIMGlobal,
+    DS_VSSBlockPFIMGammaWrite,
+    DS_VSSBlockPFIMNo2DStd,
+    DS_VSSBlockPFIMWrite,
+    Sem_VSSBlock,
+    SimpleStem,
+    VisionClueMerge,
+    VSSBlock,
+    XSSBlock,
+)
 from .mamba_yolo_ex30_dg_dsssm import DG_DS_VSSBlock
 # from .mamba_yolo import *
 
@@ -139,5 +154,9 @@ __all__ = (
     "CBFuse",
     "CBLinear",
     "Silence",
-    "SimpleStem", "VisionClueMerge", "VSSBlock", "XSSBlock", "DS_VSSBlock", "DG_DS_VSSBlock", "Sem_VSSBlock"
+    "SimpleStem", "VisionClueMerge", "VSSBlock", "XSSBlock", "DS_VSSBlock", "DS_VSSBlockSweep",
+    "DS_VSSBlockNoPFIM", "DS_VSSBlockPFIMGamma", "DS_VSSBlockPFIMWrite",
+    "DS_VSSBlockPFIMDelta", "DS_VSSBlockPFIMGammaWrite", "DS_VSSBlockPFIMGlobal",
+    "DS_VSSBlockPFIMNo2DStd",
+    "DG_DS_VSSBlock", "Sem_VSSBlock"
 )

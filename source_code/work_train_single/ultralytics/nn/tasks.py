@@ -53,6 +53,14 @@ from ultralytics.nn.modules import (
     VSSBlock,
     XSSBlock,
     DS_VSSBlock,
+    DS_VSSBlockSweep,
+    DS_VSSBlockNoPFIM,
+    DS_VSSBlockPFIMGamma,
+    DS_VSSBlockPFIMWrite,
+    DS_VSSBlockPFIMDelta,
+    DS_VSSBlockPFIMGammaWrite,
+    DS_VSSBlockPFIMGlobal,
+    DS_VSSBlockPFIMNo2DStd,
     DG_DS_VSSBlock,
     Sem_VSSBlock
 )
@@ -903,7 +911,11 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
             DWConvTranspose2d,
             C3x,
             RepC3,
-            SimpleStem, VisionClueMerge, VSSBlock, XSSBlock, DS_VSSBlock, DG_DS_VSSBlock, Sem_VSSBlock
+            SimpleStem, VisionClueMerge, VSSBlock, XSSBlock, DS_VSSBlock, DS_VSSBlockSweep,
+            DS_VSSBlockNoPFIM, DS_VSSBlockPFIMGamma, DS_VSSBlockPFIMWrite,
+            DS_VSSBlockPFIMDelta, DS_VSSBlockPFIMGammaWrite, DS_VSSBlockPFIMGlobal,
+            DS_VSSBlockPFIMNo2DStd,
+            DG_DS_VSSBlock, Sem_VSSBlock
         }:
             c1, c2 = ch[f], args[0]
             if c2 != nc:  # if c2 not equal to number of classes (i.e. for Classify() output)
@@ -974,7 +986,9 @@ def yaml_model_load(path):
     unified_path = re.sub(r"(\d+)([nslmx])(.+)?$", r"\1\3", str(path))  # i.e. yolov8x.yaml -> yolov8.yaml
     yaml_file = check_yaml(unified_path, hard=False) or check_yaml(path)
     d = yaml_load(yaml_file)  # model dict
-    d["scale"] = guess_model_scale(path)
+    guessed_scale = guess_model_scale(path)
+    if guessed_scale:
+        d["scale"] = guessed_scale
     d["yaml_file"] = str(path)
     return d
 
