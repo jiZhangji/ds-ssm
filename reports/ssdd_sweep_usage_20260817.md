@@ -42,6 +42,27 @@ The default `core` preset includes:
 
 `P2 state_dim=32` matches the parsed parameter count of the historical ex7 model. The fixed-16 variants are intended for fairer cross-stage placement screening.
 
+## Prepare the server dataset
+
+The server SSDD release uses COCO JSON annotations and has an official
+928-image train set plus a 232-image test set, but no validation split. Prepare
+a non-destructive YOLO copy by splitting only the official train set and
+keeping the official test set untouched:
+
+```bash
+python tools/prepare_ssdd_coco_threeway.py \
+  --root /inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset/SSDD/SSDD \
+  --out /inspire/hdd/global_user/liuxiaotong-253108540242/yanggang/lihao/lh/or/SAR-Generation/dataset/det/SSDD \
+  --val-ratio 0.2 \
+  --seed 42 \
+  --link-mode hardlink
+```
+
+This creates deterministic train/val/test splits, a `split_manifest.json`, and
+separate `SSDD_inshore.yaml` and `SSDD_offshore.yaml` evaluation configs when
+the corresponding official subsets are present. The source dataset is not
+modified. The default `SSDD_HF.yaml` points to this prepared output.
+
 ## Server dry run
 
 ```bash
