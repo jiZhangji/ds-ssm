@@ -159,6 +159,32 @@ Available placements:
 - `p2p3p4`
 - `p2p3p4p5`
 
+For a single 80 GB H100, the following serial sweep keeps global batch 32 and
+applies the historical 20-epoch DS-SSM/PFIM module warmup to every modified
+model. The baseline automatically uses module warmup 0 because it has no
+DS-SSM/PFIM parameters:
+
+```bash
+python tools/run_ssdd_sweep.py \
+  --preset custom \
+  --sweep-id ssdd_1xh100_placement_sd_warmup20_v1 \
+  --devices 0 \
+  --placements baseline p2 p3 p4 p5 p2p3 \
+  --recipes adamw_warmup20 \
+  --state-dims 8 16 32 \
+  --seeds 0 \
+  --imgsz 640 \
+  --epochs 300 \
+  --eval-split val \
+  --eval-batch 64 \
+  --cache \
+  --tta
+```
+
+This expands to 16 runs: one baseline plus five modified placements at three
+state dimensions each. Runs are sequential; each run uses only the selected
+single GPU.
+
 ## Monitoring
 
 ```bash

@@ -348,6 +348,9 @@ def run_logged(command: list[str], cwd: Path, env: dict[str, str], log_path: Pat
 
 def build_train_command(args: argparse.Namespace, spec: dict, config: Path, run_name: str, run_dir: Path, resume: Path | None) -> list[str]:
     recipe = RECIPES[spec["recipe"]]
+    # The original baseline has no DS-SSM/PFIM parameters to warm up. Keeping
+    # module warmup enabled there is both meaningless and rejected by trainer.
+    module_warmup_epochs = 0 if spec["placement"] == "baseline" else recipe.module_warmup_epochs
     command = [
         sys.executable, "-u", str(TRAIN_ENTRY),
         "--task", "train",
@@ -365,7 +368,7 @@ def build_train_command(args: argparse.Namespace, spec: dict, config: Path, run_
         "--weight_decay", str(recipe.weight_decay),
         "--nbs", str(recipe.nbs),
         "--warmup_epochs", str(recipe.warmup_epochs),
-        "--module_warmup_epochs", str(recipe.module_warmup_epochs),
+        "--module_warmup_epochs", str(module_warmup_epochs),
         "--patience", str(args.patience),
         "--mosaic", str(recipe.mosaic),
         "--close_mosaic", str(recipe.close_mosaic),
