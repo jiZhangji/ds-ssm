@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Evaluate one SSDD sweep checkpoint with standard inference or TTA."""
+"""Evaluate one SSDD sweep checkpoint on validation or test data."""
 
 from __future__ import annotations
 
@@ -26,6 +26,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--state-dim", required=True, type=int)
     parser.add_argument("--seed", required=True, type=int)
     parser.add_argument("--mode", choices=("standard", "tta"), required=True)
+    parser.add_argument("--split", choices=("val", "test"), default="val")
     parser.add_argument("--output-json", required=True)
     parser.add_argument("--imgsz", type=int, default=640)
     parser.add_argument("--batch", type=int, default=32)
@@ -68,7 +69,7 @@ def main() -> None:
     use_tta = args.mode == "tta"
     metrics = model.val(
         data=str(data),
-        split="test",
+        split=args.split,
         imgsz=args.imgsz,
         batch=args.batch,
         device=args.device,
@@ -137,7 +138,7 @@ def main() -> None:
         "data": str(data),
         "data_yaml_sha256": sha256(data),
         "evaluator_sha256": sha256(Path(__file__).resolve()),
-        "split": "test",
+        "split": args.split,
         "precision_mode": "fp32",
         "imgsz": args.imgsz,
         "batch": args.batch,
@@ -159,14 +160,14 @@ def main() -> None:
     }
     output_json.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
-    output_csv = output_json.with_name(f"test_{args.mode}_per_class.csv")
+    output_csv = output_json.with_name(f"{args.split}_{args.mode}_per_class.csv")
     if per_class:
         with output_csv.open("w", encoding="utf-8", newline="") as handle:
             writer = csv.DictWriter(handle, fieldnames=per_class[0].keys())
             writer.writeheader()
             writer.writerows(per_class)
 
-    print(f"\n===== SSDD BEST TEST ({args.mode.upper()}) =====")
+    print(f"\n===== SSDD BEST {args.split.upper()} ({args.mode.upper()}) =====")
     print(f"run:       {args.run_name}")
     print(f"placement: {args.placement}")
     print(f"recipe:    {args.recipe}")

@@ -3,8 +3,9 @@
 
 The sweep generates explicit model YAMLs for placement comparisons, keeps the
 state dimension fixed by using DS_VSSBlockSweep, trains each run sequentially,
-and evaluates validation-selected best.pt on TEST with standard inference and
-optional TTA.
+and evaluates validation-selected best.pt on VAL with standard inference and
+optional TTA. TEST evaluation must be explicitly requested after model
+selection.
 
 Examples:
   python tools/run_ssdd_sweep.py --preset core --dry-run
@@ -127,6 +128,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--eval-device", default="0", help="logical evaluation GPU after CUDA masking")
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--eval-batch", type=int, default=32)
+    parser.add_argument(
+        "--eval-split",
+        choices=("val", "test"),
+        default="val",
+        help="Use val for sweep selection; reserve test for the frozen winner",
+    )
     parser.add_argument("--eval-conf", type=float, default=0.001)
     parser.add_argument("--eval-iou", type=float, default=0.6)
     parser.add_argument("--imgsz", type=int, default=640)
@@ -312,13 +319,14 @@ def count_completed_epochs(results_csv: Path) -> int:
     return max(values, default=0)
 
 
-def json_is_current(path: Path, weights: Path, mode: str) -> bool:
+def json_is_current(path: Path, weights: Path, mode: str, split: str) -> bool:
     if not path.exists() or not weights.exists():
         return False
     try:
         payload = json.loads(path.read_text(encoding="utf-8"))
         return (
             payload.get("mode") == mode
+            and payload.get("split") == split
             and payload.get("weights_sha256") == sha256(weights)
         )
     except (OSError, json.JSONDecodeError):
@@ -397,6 +405,7 @@ def build_eval_command(args: argparse.Namespace, spec: dict, run_name: str, weig
         "--state-dim", str(spec["state_dim"]),
         "--seed", str(spec["seed"]),
         "--mode", mode,
+        "--split", args.eval_split,
         "--output-json", str(output_json),
         "--imgsz", str(args.imgsz),
         "--batch", str(args.eval_batch),
@@ -405,7 +414,7 @@ def build_eval_command(args: argparse.Namespace, spec: dict, run_name: str, weig
         "--conf", str(args.eval_conf),
         "--iou", str(args.eval_iou),
         "--project", str(eval_project),
-        "--name", f"{run_name}_{mode}_test",
+        "--name", f"{run_name}_{mode}_{args.eval_split}",
     ]
 
 
@@ -420,7 +429,7 @@ def write_summary(project: Path, sweep_id: str) -> None:
         return
 
     fields = [
-        "run_name", "placement", "recipe", "state_dim", "seed", "mode",
+        "run_name", "placement", "recipe", "state_dim", "seed", "split", "mode",
         "precision", "recall", "f1", "ap50", "ap75", "ap50_95",
         "parameters", "gflops", "result_dir",
     ]
@@ -435,6 +444,7 @@ def write_summary(project: Path, sweep_id: str) -> None:
                 "recipe": item["recipe"],
                 "state_dim": item["state_dim"],
                 "seed": item["seed"],
+                "split": item["split"],
                 "mode": item["mode"],
                 **item["overall"],
                 "parameters": item["model"]["parameters"],
@@ -445,16 +455,16 @@ def write_summary(project: Path, sweep_id: str) -> None:
     lines = [
         f"# SSDD Sweep: {sweep_id}",
         "",
-        "TEST results from validation-selected best.pt checkpoints. Standard and TTA are listed separately.",
+        f"{records[0]['split'].upper()} results from validation-selected best.pt checkpoints. Standard and TTA are listed separately.",
         "",
-        "| Rank | Placement | Recipe | State | Seed | Mode | P | R | F1 | AP50 | AP75 | AP50:95 | Params | GFLOPs |",
-        "|---:|---|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| Rank | Placement | Recipe | State | Seed | Split | Mode | P | R | F1 | AP50 | AP75 | AP50:95 | Params | GFLOPs |",
+        "|---:|---|---|---:|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for rank, item in enumerate(sorted(records, key=lambda row: (-row["overall"]["ap50_95"], row["mode"], row["run_name"])), 1):
         overall = item["overall"]
         lines.append(
             f"| {rank} | {item['placement']} | {item['recipe']} | {item['state_dim']} | "
-            f"{item['seed']} | {item['mode']} | {100*overall['precision']:.3f} | "
+            f"{item['seed']} | {item['split']} | {item['mode']} | {100*overall['precision']:.3f} | "
             f"{100*overall['recall']:.3f} | {100*overall['f1']:.3f} | "
             f"{100*overall['ap50']:.3f} | {100*overall['ap75']:.3f} | "
             f"{100*overall['ap50_95']:.3f} | {item['model']['parameters']} | "
@@ -548,6 +558,7 @@ def main() -> None:
         "patience": args.patience,
         "workers": args.workers,
         "eval_batch": args.eval_batch,
+        "eval_split": args.eval_split,
         "eval_conf": args.eval_conf,
         "eval_iou": args.eval_iou,
         "seeds": args.seeds,
@@ -619,7 +630,7 @@ def main() -> None:
                     run_name,
                     best_pt,
                     mode,
-                    run_dir / f"eval_{mode}.json",
+                    run_dir / f"eval_{args.eval_split}_{mode}.json",
                     eval_project,
                 )
                 run_logged(evaluate, ROOT, env, log_dir / f"{run_name}.eval.log", True)
@@ -656,8 +667,8 @@ def main() -> None:
             continue
 
         for mode in ("standard", "tta") if args.tta else ("standard",):
-            output_json = run_dir / f"eval_{mode}.json"
-            if json_is_current(output_json, best_pt, mode):
+            output_json = run_dir / f"eval_{args.eval_split}_{mode}.json"
+            if json_is_current(output_json, best_pt, mode, args.eval_split):
                 print(f"SKIP EVAL {run_name} {mode}: current JSON exists")
                 continue
             command = build_eval_command(args, spec, run_name, best_pt, mode, output_json, eval_project)

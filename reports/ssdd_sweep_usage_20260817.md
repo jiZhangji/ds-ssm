@@ -8,7 +8,7 @@ The sweep runner:
 2. Keeps `state_dim` explicit through `DS_VSSBlockSweep` instead of letting stage width change it silently.
 3. Trains every selected experiment sequentially.
 4. Resumes incomplete runs from `weights/last.pt`.
-5. Evaluates validation-selected `weights/best.pt` on TEST in FP32.
+5. Evaluates validation-selected `weights/best.pt` on VAL in FP32 during the sweep.
 6. Runs both standard inference and TTA unless `--no-tta` is supplied.
 7. Writes JSON evidence, per-class CSV files, and a ranked CSV/Markdown summary.
 
@@ -116,7 +116,7 @@ nohup python -u tools/run_ssdd_sweep.py \
   > logs/ssdd_core_sweep_v1.queue.log 2>&1 &
 ```
 
-The command can be executed again with the same arguments. Completed runs and current evaluation JSON files are skipped; incomplete training resumes from `last.pt`.
+The command can be executed again with the same arguments. Completed runs and current evaluation JSON files are skipped; incomplete training resumes from `last.pt`. Sweep evaluation defaults to `--eval-split val`; do not use TEST to rank all candidates.
 
 ## Custom sweep
 
@@ -191,8 +191,8 @@ Important files:
 
 ```text
 output_dir/ssdd_sweep/<run-name>/weights/best.pt
-output_dir/ssdd_sweep/<run-name>/eval_standard.json
-output_dir/ssdd_sweep/<run-name>/eval_tta.json
+output_dir/ssdd_sweep/<run-name>/eval_val_standard.json
+output_dir/ssdd_sweep/<run-name>/eval_val_tta.json
 output_dir/ssdd_sweep/<sweep-id>_summary.csv
 output_dir/ssdd_sweep/<sweep-id>_summary.md
 output_dir/ssdd_sweep/<sweep-id>-manifest/sweep_manifest.json
@@ -202,4 +202,4 @@ The Markdown summary contains the standard/TTA ranking and the TTA delta relativ
 
 ## Publication rule
 
-Use validation metrics to select the placement and recipe. Do not repeatedly use TEST to choose among all sweep variants. For publication-quality reporting, rerun the selected baseline/current-P2/winner configurations with seeds 0/1/2 under a new frozen sweep ID, then evaluate their validation-selected `best.pt` once on TEST.
+Use validation metrics to select the placement and recipe. Do not repeatedly use TEST to choose among all sweep variants. For publication-quality reporting, rerun the selected baseline/current-P2/winner configurations with seeds 0/1/2 under a new frozen sweep ID, then evaluate their validation-selected `best.pt` once on TEST by passing `--eval-split test`.
