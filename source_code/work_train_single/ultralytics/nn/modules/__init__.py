@@ -79,6 +79,9 @@ from .transformer import (
 from .mamba_yolo import (
     DS_VSSBlock,
     DS_VSSBlockSweep,
+    DS_VSSBlockSweepNoPFIM,
+    DS_VSSBlockSweepPFIMGlobal,
+    DS_VSSBlockSweepPFIMOnly,
     DS_VSSBlockNoPFIM,
     DS_VSSBlockPFIMDelta,
     DS_VSSBlockPFIMGamma,
@@ -155,6 +158,7 @@ __all__ = (
     "CBLinear",
     "Silence",
     "SimpleStem", "VisionClueMerge", "VSSBlock", "XSSBlock", "DS_VSSBlock", "DS_VSSBlockSweep",
+    "DS_VSSBlockSweepNoPFIM", "DS_VSSBlockSweepPFIMOnly", "DS_VSSBlockSweepPFIMGlobal",
     "DS_VSSBlockNoPFIM", "DS_VSSBlockPFIMGamma", "DS_VSSBlockPFIMWrite",
     "DS_VSSBlockPFIMDelta", "DS_VSSBlockPFIMGammaWrite", "DS_VSSBlockPFIMGlobal",
     "DS_VSSBlockPFIMNo2DStd",

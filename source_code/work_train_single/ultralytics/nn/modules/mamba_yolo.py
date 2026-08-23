@@ -505,9 +505,29 @@ class DS_VSSBlockSweep(DS_VSSBlock):
         super().__init__(dim=in_channels, state_dim=state_dim)
 
 
+def _check_sweep_channels(in_channels, hidden_dim):
+    if in_channels != hidden_dim:
+        raise ValueError(
+            "DS sweep blocks require equal input/output channels, "
+            f"got in_channels={in_channels}, hidden_dim={hidden_dim}"
+        )
+
+
 class DS_VSSBlockNoPFIM(DS_VSSBlock):
     def __init__(self, dim, state_dim=16):
         super().__init__(dim=dim, state_dim=state_dim, use_pfim=False)
+
+
+class DS_VSSBlockPFIMOnly(DS_VSSBlock):
+    """PFIM control without residual correction or energy-driven damping."""
+
+    def __init__(self, dim, state_dim=16):
+        super().__init__(dim=dim, state_dim=state_dim)
+        with torch.no_grad():
+            self.ds_ssm.lambda_s.zero_()
+            self.ds_ssm.alpha.zero_()
+        self.ds_ssm.lambda_s.requires_grad_(False)
+        self.ds_ssm.alpha.requires_grad_(False)
 
 
 class DS_VSSBlockPFIMGamma(DS_VSSBlock):
@@ -566,6 +586,30 @@ class DS_VSSBlockPFIMNo2DStd(DS_VSSBlock):
 
     def __init__(self, dim, state_dim=16):
         super().__init__(dim=dim, state_dim=state_dim, pfim_use_2d_std=False)
+
+
+class DS_VSSBlockSweepNoPFIM(DS_VSSBlockNoPFIM):
+    """Placement-sweep adapter for the DS-only control."""
+
+    def __init__(self, in_channels, hidden_dim, state_dim=16):
+        _check_sweep_channels(in_channels, hidden_dim)
+        super().__init__(dim=in_channels, state_dim=state_dim)
+
+
+class DS_VSSBlockSweepPFIMOnly(DS_VSSBlockPFIMOnly):
+    """Placement-sweep adapter for the PFIM-only control."""
+
+    def __init__(self, in_channels, hidden_dim, state_dim=16):
+        _check_sweep_channels(in_channels, hidden_dim)
+        super().__init__(dim=in_channels, state_dim=state_dim)
+
+
+class DS_VSSBlockSweepPFIMGlobal(DS_VSSBlockPFIMGlobal):
+    """Placement-sweep adapter for the parameter-matched global control."""
+
+    def __init__(self, in_channels, hidden_dim, state_dim=16):
+        _check_sweep_channels(in_channels, hidden_dim)
+        super().__init__(dim=in_channels, state_dim=state_dim)
 
 
 ############################################### PFIM
