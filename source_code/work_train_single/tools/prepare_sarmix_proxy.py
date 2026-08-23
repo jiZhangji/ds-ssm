@@ -282,7 +282,7 @@ def main() -> None:
                         "source": source,
                         "split": split,
                         "source_split": item.source_split,
-                        "source_image": str(item.image),
+                        "source_image": f"{source}/{item.source_split}/{item.image.name}",
                         "output_image": str(image_out.relative_to(out)),
                         "objects": objects,
                         "image_sha256": sha256(image_out),
