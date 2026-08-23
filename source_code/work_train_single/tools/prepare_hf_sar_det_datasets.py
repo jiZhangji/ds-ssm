@@ -311,7 +311,9 @@ def prepare_one(dataset_root: Path, det_root: Path, name: str, force: bool, trai
     safe_reset_dir(out, force)
 
     fallback_names = ["ship"]
-    if name == "SAR_AIRcraft":
+    if name == "OGSOD":
+        fallback_names = ["ship", "bridge", "harbor", "tank"]
+    elif name == "SAR_AIRcraft":
         fallback_names = ["A220", "A320/321", "A330", "ARJ21", "Boeing737", "Boeing787", "other"]
 
     handlers = (
