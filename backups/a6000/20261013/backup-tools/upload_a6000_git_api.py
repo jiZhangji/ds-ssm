@@ -109,13 +109,64 @@ def main(task):
         batch.append({'path': oid, 'mode': '100644', 'type': 'blob', 'content': txt})
         batch_bytes += size
     flush()
-    final_tree = api('POST', '/git/trees', {'tree': tree})
-    if final_tree['sha'] != git('rev-parse', head + '^{tree}').decode().strip():
-        raise ValueError('Final Git tree mismatch')
+    # Bound each directory construction; a single 20k-path request timed out.
+    object_info = git('cat-file', '--batch-check=%(objectname) %(objecttype)', '--batch-all-objects').decode()
+    tree_ids = [line.split()[0] for line in object_info.splitlines() if line.endswith(' tree')]
+    tree_raw = git('cat-file', '--batch', data=('\n'.join(tree_ids) + '\n').encode())
+    trees, cursor = {}, 0
+    for expected in tree_ids:
+        end = tree_raw.index(b'\n', cursor)
+        oid, kind, size = tree_raw[cursor:end].decode().split()
+        cursor = end + 1
+        content = tree_raw[cursor:cursor + int(size)]
+        cursor += int(size) + 1
+        entries, at = [], 0
+        while at < len(content):
+            space, zero = content.index(b' ', at), content.index(b'\0', at)
+            mode = content[at:space].decode()
+            name = content[space + 1:zero].decode('utf-8')
+            sha = content[zero + 1:zero + 21].hex()
+            at = zero + 21
+            entries.append({'mode': '040000' if mode == '40000' else mode,
+                            'type': 'tree' if mode == '40000' else 'blob', 'path': name, 'sha': sha})
+        trees[oid] = entries
+    counts = {}
+    def file_count(oid):
+        if oid not in counts:
+            counts[oid] = sum(file_count(e['sha']) if e['type'] == 'tree' else 1 for e in trees[oid])
+        return counts[oid]
+    def flattened(oid, prefix=''):
+        rows = []
+        for e in trees[oid]:
+            if e['type'] == 'tree':
+                rows.extend(flattened(e['sha'], prefix + e['path'] + '/'))
+            else:
+                rows.append(dict(e, path=prefix + e['path']))
+        return rows
+    state.setdefault('trees', {})
+    def build_tree(oid):
+        if oid in state['trees']:
+            return oid
+        if file_count(oid) <= 900:
+            entries = flattened(oid)
+        else:
+            entries = trees[oid]
+            for e in entries:
+                if e['type'] == 'tree':
+                    build_tree(e['sha'])
+        result = api('POST', '/git/trees', {'tree': entries})
+        if result['sha'] != oid:
+            raise ValueError('Subdirectory Git tree SHA mismatch')
+        state['trees'][oid] = oid
+        state_file.write_text(json.dumps(state), encoding='utf-8')
+        print('Verified directory trees: ' + str(len(state['trees'])), flush=True)
+        return oid
+    snapshot_tree = git('rev-parse', head + '^{tree}').decode().strip()
+    final_tree = {'sha': build_tree(snapshot_tree)}
     public_tree = api('POST', '/git/trees', {'base_tree': parent_commit['tree']['sha'], 'tree': [
         {'path': PREFIX, 'mode': '040000', 'type': 'tree', 'sha': final_tree['sha']} ]})
     baseline_entries = api('GET', '/git/trees/' + parent_commit['tree']['sha'])['tree']
-    published_entries = {e['path']: e for e in public_tree['tree'] if '/' not in e['path']}
+    published_entries = {e['path']: e for e in api('GET', '/git/trees/' + public_tree['sha'])['tree']}
     for e in baseline_entries:
         if e['path'] != PREFIX.split('/')[0] and published_entries[e['path']]['sha'] != e['sha']:
             raise ValueError('Existing project root entry changed')

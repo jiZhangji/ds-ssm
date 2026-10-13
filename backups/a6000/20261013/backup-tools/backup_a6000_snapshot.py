@@ -1,7 +1,7 @@
 """Read-only experiment snapshot collector. Run on a registered server with Python 3.
 
 Copies allowlisted code, protocol manifests, logs, metrics and research figures.
-Dataset payloads, model binaries, credentials, environments and unrelated projects
+Dataset images, model binaries, credentials, environments and unrelated projects
 are never read. Original files and running jobs are not modified.
 """
 import argparse

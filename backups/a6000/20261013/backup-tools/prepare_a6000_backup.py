@@ -129,12 +129,12 @@ def prepare(task, project):
     (task / 'VERIFICATION.json').write_text(json.dumps({'status': 'PASS', 'method': 'archive and every payload SHA256 verified', 'hosts': summary, 'local_notes_files': len(local_records), 'local_notes_excluded': excluded}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     (repo / 'VERIFICATION.json').write_bytes((task / 'VERIFICATION.json').read_bytes())
     (repo / 'backup-tools').mkdir(exist_ok=True)
-    for name in ('backup_a6000_snapshot.py', 'prepare_a6000_backup.py', 'finalize_a6000_backup.py'):
+    for name in ('backup_a6000_snapshot.py', 'prepare_a6000_backup.py', 'finalize_a6000_backup.py', 'upload_a6000_git_api.py'):
         shutil.copyfile(HERE / name, repo / 'backup-tools' / name)
     rows = '\n'.join('| {host} | {files_verified} | {browsable_files} | {archive_mb:.1f} | {started_at} |'.format(archive_mb=r['archive_bytes'] / 1e6, **r) for r in summary)
     readme = '''# A6000 Mamba / IG-DS-SSM 实验备份
 
-私有仓库；2026-10-13 按用户要求保存 A/B/C/D/F 的当前实验代码、记录和结果。
+按用户明确选择，上传至现有公开仓库的独立备份分支；2026-10-13 保存 A/B/C/D/F 的当前实验代码、记录和结果。
 
 ## 查找文件
 
@@ -143,7 +143,7 @@ def prepare(task, project):
 - `servers/<主机>/payload/experiments/`：历史跨任务结果及负结果。
 - `project-notes/`：本地项目报告、结果表、论文源码和正式记忆的本次只读副本。
 - `RESULTS_INDEX.csv`：训练/评估结果、完成记录和逐轮账本的路径索引；不把存在某文件等同实验验收。
-- [本次 Release](https://github.com/jiZhangji/ds-ssm-a6000-backup/releases/tag/a6000-snapshot-20261013-v1)：完整代码/记录快照、图表/PDF、长日志及大型数据审计记录。
+- [本次 Release](https://github.com/jiZhangji/ds-ssm/releases/tag/a6000-snapshot-20261013-v1)：完整代码/记录快照、图表/PDF、长日志及大型数据审计记录。
 
 | 主机 | 快照文件（逐项核 SHA） | 可浏览文件 | 压缩包 MB | 开始时刻 +08:00 |
 |---|---:|---:|---:|---|
