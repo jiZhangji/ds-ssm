@@ -1,0 +1,33 @@
+{
+  "dataset": "Farmland",
+  "task": "change_detection",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "initialization": "scratch",
+  "protocol": "dense-spatial-macroblocks",
+  "split_sizes": {
+    "train": 112,
+    "val": 16,
+    "test": 16
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "epochs_requested": 150,
+  "best_epoch": 54,
+  "threshold": 0.5500000000000002,
+  "metric": {
+    "precision": 0.8772440562833576,
+    "recall": 0.15296108291032148,
+    "f1": 0.2604999639795404,
+    "iou": 0.149755653110246,
+    "oa": 0.9303860134548612,
+    "kappa": 0.2424679909365926
+  },
+  "params": 2346329,
+  "gflops": 1.177137648,
+  "latency_ms": 459.8804934338356,
+  "fps": 2.174477966075926,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd32_20260827/farmland/baseline/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Farmland/manifest.json"
+}

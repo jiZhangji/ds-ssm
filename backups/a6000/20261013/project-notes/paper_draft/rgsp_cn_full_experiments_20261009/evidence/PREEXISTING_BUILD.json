@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-10-09",
+  "timezone": "Asia/Shanghai",
+  "source_thread_id": "01a11ebd-72fd-7411-a94c-e563d4180aba",
+  "source_thread_title": "astra-论文修改2-2",
+  "scope": "Evidence summary for the unchanged PDF inherited by the final delivery; not a fresh compilation receipt.",
+  "pdf_sha256": "6ee5f38a6fb1af0d1f98d23ca35fb14c011db23cbe0290f77817f17f39871cfb",
+  "pages": 14,
+  "page_dimensions_pt": [
+    612,
+    792
+  ],
+  "prior_build": {
+    "engine": "XeLaTeX",
+    "passes": 2,
+    "recorded_command_status": "completed",
+    "recorded_document_validation": "PASS",
+    "source": "Completed commands and validation in the linked source thread, corroborated by the existing PDF and main.log."
+  },
+  "current_handoff": {
+    "main_tex_sha256": "b6dd4049cb72236156731c99af25e86e377fc3dbb7be5f672c924d1da000ce1c",
+    "compile_input_files": 13,
+    "tex_sections_class_and_figures_edited": false,
+    "pdf_recompiled": false,
+    "reason": "Project-server inventory found no existing TeX environment; no local fallback or installation was authorized."
+  },
+  "visual_review": {
+    "render_set": "tmp/pdfs/rgsp_full_experiments_resume_20261009/final-01.png through final-14.png",
+    "all_pages_reviewed": true,
+    "blocking_layout_defects": 0
+  },
+  "limitations": [
+    "This handoff performs static file/content review and ZIP-file consistency checks only. The updated runtime verifier and roundtrip TeX compilation are NOT_RUN because server connections failed and no local fallback was authorized.",
+    "Existing font-substitution and underfull bibliography warnings are retained; no overfull, missing-character or unresolved-reference warning was found in the existing final log.",
+    "Research-model runs, current experiment completion and external-literature table values are outside this delivery verification."
+  ]
+}

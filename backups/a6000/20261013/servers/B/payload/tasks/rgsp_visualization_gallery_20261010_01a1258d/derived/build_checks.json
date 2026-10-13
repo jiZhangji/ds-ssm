@@ -1,0 +1,286 @@
+{
+  "input_files_verified": 65,
+  "input_hash_failures": [],
+  "snapshot": "2026-10-10 10:07:54-10:07:57 Asia/Shanghai",
+  "input_bindings": {
+    "inputs/source_manifest.json": "4013658531193d773d33d475530123889fa39c211ea278e309f186385c297f89",
+    "inputs/latest_seed0.json": "61fb0ab3c75d1b8b51a1c8328d82a29ebcaa9c8df4184cb67caac089ecf20f1a",
+    "inputs/ssdd_legacy_individual.csv": "4632e57fdc9ff5e1a3abb771471d05bef82504d4e0c6e5a183e64c5735975036",
+    "inputs/ssdd_legacy_summary.csv": "64d4b908455dba4b5fe3f17279cd11c032e10b5586f9361122816ad418b223b3",
+    "inputs/ssdd_legacy_protocol.md": "b82e24a51cbe230b016783197bdce731da6b12e06462cf5b885834365890bcb8",
+    "inputs/sadd_3seed.csv": "33e118f5e4f321c8b38726cc0a68b41abc68e9a03494dc5d55a29a4d63729ea7",
+    "inputs/seed0_review.md": "6129b5556e3cf75b4597def0c17c6a7961ad06a28c4ec9c1e1720582ae54c6e2",
+    "inputs/project_state_snapshot.md": "e52bddbad36c7e781e0c5b3164a06413bf61437317b095135c4a63ac9f591839",
+    "inputs/historical_maps_summary.csv": "098499630ed4980d50de96ff502db32a88dab021a62f5553973fb573404d634b",
+    "inputs/historical_maps_manifest.json": "9d99fa4ccb2c47552f6575d60d515b19a7c26532e2602a08b017b44ac4f11bf1",
+    "inputs/historical_capture_source.py": "dbb9a5f7faa40dabfa9d9bf59bf63d6e3066f0fa815ab246e55cb637682a857b",
+    "inputs/frozen_mamba_yolo.py": "05d1900840474e068aec65bc30ca81501fce55a464ca0dc3fbe60054885aade3",
+    "inputs/frozen_campaign_manifest.py": "ff1f6708e735d5bd91d9c341edfcfdcc714829c5ab5ee0c6110df263d5b6fed7",
+    "inputs/method_manuscript_snapshot.tex": "b6dd4049cb72236156731c99af25e86e377fc3dbb7be5f672c924d1da000ce1c",
+    "inputs/ablation_manuscript_snapshot.tex": "f2b821cddca6af8e45524c64d323817bffd47051eb0499517169b8b0f71cf403",
+    "inputs/historical_training.csv": "ddb218073bc79567df8224d6012484b57c0008250c9e7dad314ef83695e52d08",
+    "inputs/historical_training_args.yaml": "ddeaf739a34f98151e26b596c5238634dfa935e2e20fcdcbeab75e2d403e1c33",
+    "inputs/arrays/000099/raw_importance.npy": "b4e7b014133dbf3e84347884fbfb92808fbbe1d7c803075cb36b83f8a5155acc",
+    "inputs/arrays/000099/raw_input_energy.npy": "d0d3c1ac746f7160b228ff4c7adbaf18b80228c090be2e5d412918dd4b91784c",
+    "inputs/arrays/000099/raw_corrected_energy.npy": "082dbc3e433325a858cb49f429f6494b3cff3a15e02602256a680c04e373bf4b",
+    "inputs/arrays/000099/raw_residual.npy": "5b316270efa8700b9b12548bef34317568dd4052cf02b8d8f697e3ebc7f17777",
+    "inputs/arrays/000099/raw_correction.npy": "06c086708e3268fcbd28ddb50b15c3f0926f535a4567003d8c5e275c0e581929",
+    "inputs/arrays/000099/raw_drive_gate.npy": "8f983af320fda9e660848ae8ea7a4fdcb0d41f1486e9f8f56336489b4fe6e082",
+    "inputs/arrays/000099/raw_delta_bias.npy": "602c74d136d90999983a167d5502273ec4bb31b61483941b4987d2893000d02c",
+    "inputs/arrays/000531/raw_importance.npy": "9780e2510531aa22bb66cb25ef720dc0194df4d1c1d1b87e8aab07e0b398bc7a",
+    "inputs/arrays/000531/raw_input_energy.npy": "3ec0712765ce227efb6368c81aa1f69e8df39a507c9749dc058aa6ec849bbd6e",
+    "inputs/arrays/000531/raw_corrected_energy.npy": "5cd1b112b349bb44b0a38ecf63fbeb185f2712657c4fdeabf0848d6de4a73e73",
+    "inputs/arrays/000531/raw_residual.npy": "da9e14423c6736f4697aa4752fdf4efae46fea7916950e793a3e001506f691cb",
+    "inputs/arrays/000531/raw_correction.npy": "a037ff5997caafc5eb220fe4a8f969635a50fa7efbe9f507f85e477288b21f00",
+    "inputs/arrays/000531/raw_drive_gate.npy": "35c113fc4da4e86a1c2590c31bbb12ce07d83a26973da1129f526a1eb9119de3",
+    "inputs/arrays/000531/raw_delta_bias.npy": "d8842aa530f358f7745c5a843381899118bb7ed46633391f1372660710e9b129",
+    "inputs/arrays/000929/raw_importance.npy": "320a35dc6871ac6b69d876aefe86a7dbd8041c351d4ba708951d19ba0df97e11",
+    "inputs/arrays/000929/raw_input_energy.npy": "17cb7aa76d812ae0cd411fb8e34a7bf2fc296559ddf5830e345d11da1306346d",
+    "inputs/arrays/000929/raw_corrected_energy.npy": "015e7fdab50712648045e704af71f9d859f460cdd594e6410757d299965d0184",
+    "inputs/arrays/000929/raw_residual.npy": "6f3fda97f621ae64e4da2d9f4b5da8b58fdbca0e02cc3078b5c053a84f483e78",
+    "inputs/arrays/000929/raw_correction.npy": "08025d24da1a468e19318699593dd466471995b4f868cec1d0ac13d7e5d91642",
+    "inputs/arrays/000929/raw_drive_gate.npy": "a0014f006a15849a25e2e302c78d643909ef857e549d120585f5bba49d5ad50b",
+    "inputs/arrays/000929/raw_delta_bias.npy": "49c3f37e5a8228c7112e5ed9d8ad6d39c4d2a1d18962c2348d1910f4084282e3",
+    "inputs/arrays/001081/raw_importance.npy": "8fb179665eabb1b8cb90837b825e73a9207b35bfce8eacdfcf3198597ee6c983",
+    "inputs/arrays/001081/raw_input_energy.npy": "8e6fd4830a8a70555190dee21a070cd73f4bf563dd5504e6c184865b07879433",
+    "inputs/arrays/001081/raw_corrected_energy.npy": "25a188fc35c11a6b638dc9b690cd65ae52076d4ab9066c9ed96b7037e77de0c8",
+    "inputs/arrays/001081/raw_residual.npy": "0b32621c613fa7ed93e01b8d4d027a2d6ce9936533cd2ef56a311123b8e2090a",
+    "inputs/arrays/001081/raw_correction.npy": "2a2533a30955ece7739ae5784d971b30b9795939856d0bb2913fd643353b97be",
+    "inputs/arrays/001081/raw_drive_gate.npy": "952950a2032a515387481b578045949caaebdec7463b6ab472d9f2cb1acb8511",
+    "inputs/arrays/001081/raw_delta_bias.npy": "4c6387ffdcb68b04a0f5a429dbefcf58d0147f17ea9586623e9f1d24633a6cb3",
+    "inputs/arrays/001131/raw_importance.npy": "34bf162642ca34b979c3f71c5b3fdbce6b67a4c11579c391f96274bf2eeedcfd",
+    "inputs/arrays/001131/raw_input_energy.npy": "166f5811a51b453d0fae4c37f8402a2c415c487b19e5cf309d82df012da19953",
+    "inputs/arrays/001131/raw_corrected_energy.npy": "798094ec6a970d07a0af97953cf09597049e2bc24a1688dd1069d16aed6143f8",
+    "inputs/arrays/001131/raw_residual.npy": "879303134ea538db066b29bad4affde542d411114f7e949727369c941e0686ef",
+    "inputs/arrays/001131/raw_correction.npy": "f2008ec5ca493ce147b4c236780cbf84a6f3a939da70f59b4c5fd6f71e54a011",
+    "inputs/arrays/001131/raw_drive_gate.npy": "1291e739f59ed19c45e93a7c32baf949887357c489edb861cd2a45217d4b6507",
+    "inputs/arrays/001131/raw_delta_bias.npy": "c6029a9e319c29ddf395089fa610d98b037ec22be0f84c9f207004a1d05749a5",
+    "inputs/arrays/001111/raw_importance.npy": "166eac037b804445de2c46a470c517bb2b18caedae2b5efbf0f36eeb480f4f7a",
+    "inputs/arrays/001111/raw_input_energy.npy": "c92a7e00fe8452388058a6c0f027edad7470c493062a4559079bd06049b1b05c",
+    "inputs/arrays/001111/raw_corrected_energy.npy": "9c615bde5f0e6c518c4b8fd55b4911ae6caf8075cf0f2893d203b7f676e617b9",
+    "inputs/arrays/001111/raw_residual.npy": "0b68f7a67dbfc9770ba25b2639dc76a4bb6f60bd05c8802292777bd915f5ef23",
+    "inputs/arrays/001111/raw_correction.npy": "ca5f0c706ee0805a4d1827a9542b36715a92638768f7d818ef1bf86fc1412829",
+    "inputs/arrays/001111/raw_drive_gate.npy": "ae402c3c3bf50f179e8d8d4d56c733e08b67ee10a2914224e6b30823efe4a756",
+    "inputs/arrays/001111/raw_delta_bias.npy": "81af481ff4e5f3a35fa30e22496e5d418b5e6ae5218f9a75f54994e5797b37f3",
+    "inputs/images/000099.jpg": "94dea1bfb9ff265d3874d26ed0496bcefa7828c1afb8ea8a1c4faa00b9fc8c8b",
+    "inputs/images/000531.jpg": "43f18920a8ac6b92791182ed0a37dc2496eb74877c60d2a9529f2b28184b8c9a",
+    "inputs/images/000929.jpg": "72a5f13049d9ba48abee2ad7167254f1539f1fb48bf65494ad32f6bab048dc25",
+    "inputs/images/001081.jpg": "68090f86990afb3d1b6e41ab69bfd7c0889706951ed3de9383074534cef2dbd5",
+    "inputs/images/001131.jpg": "b4aa358d6fec34ed3f1ba41ca4f3ed0b6a5a855a2e84a8120aae832051da80fb",
+    "inputs/images/001111.jpg": "79b41940970c9ea12c7a966f995b27fd28db8545b69f40da9824c51eeecf2383",
+    "inputs/ssdd_test_coco.json": "021d52858ffa3fda9a2d28ee21f1ca114800554edf08007704f6d06a412d50bf"
+  },
+  "figure_count": 50,
+  "format_files": 150,
+  "ids_unique": true,
+  "expected_ids_match": true,
+  "layout_nominal_canvas_scan": [
+    {
+      "id": "C01",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C02",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C03",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C04",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C05",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C06",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C07",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C08",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C09",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C10",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C11",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C12",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C13",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C14",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C15",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C16",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H01",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H02",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H03",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H04",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H05",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H06",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H07",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H08",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H09",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H10",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H11",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H12",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q01",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q02",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q03",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q04",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q05",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q06",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q07",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q08",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q09",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q10",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q11",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q12",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "M01",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "M02",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "M03",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "M04",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "M05",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "M06",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "P01",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "P02",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "P03",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "P04",
+      "outside_nominal_canvas_text": []
+    }
+  ],
+  "python": "3.10.16",
+  "matplotlib": "3.10.9",
+  "numpy": "1.26.4",
+  "host": "powerleader-a6000-b",
+  "cuda_visible_devices": "",
+  "research_validation": false,
+  "note": "Artifact/data-integrity checks only, not new model/experiment validation."
+}

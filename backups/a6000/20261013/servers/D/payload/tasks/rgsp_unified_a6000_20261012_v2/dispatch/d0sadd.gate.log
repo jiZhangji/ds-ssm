@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/queue_after_lane.py", line 85, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/queue_after_lane.py", line 60, in main
+    return controller(args.lane, args.predecessor)
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/queue_after_lane.py", line 23, in controller
+    state = worker.read_json(state_path)
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/worker.py", line 124, in read_json
+    with Path(path).open('r', encoding='utf-8-sig') as handle:
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/state.json'

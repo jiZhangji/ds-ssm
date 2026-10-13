@@ -1,0 +1,141 @@
+{
+  "best_epoch": 145,
+  "checkpoint": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-yolov8s/run0/weights/best.pt",
+    "sha256": "3777854dad04ff1960466697f45258a948ab42cc54b1632eef01943a89bc5fe5"
+  },
+  "checkpoint_controls": [],
+  "checkpoint_fp32_verified": true,
+  "code_sha256": "8fd9862b7b7cc37c8219c85ea61e545cee1c02a471a9ea41894da01f07f48aad",
+  "complexity": {
+    "batch": 1,
+    "coverage": {
+      "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+      "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+      "exhaustive": false,
+      "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+      "not_included": [
+        "Scan exponentials and softplus special functions; symbolic counts are separate.",
+        "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+        "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+        "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+      ],
+      "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+      "scope": "Full unfused detector including dense head; eval, batch=1, FP32, no TF32, no NMS.",
+      "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+      "version": "rgsp-covered-operations-v1"
+    },
+    "covered_flops_g": 28.6469632,
+    "cross_merge_add_flops": 0,
+    "cross_merge_calls": [],
+    "dense_output_shape": [
+      1,
+      5,
+      8400
+    ],
+    "device": "cuda:0",
+    "einsum_calls": [],
+    "finite_forward": true,
+    "functional_einsum_mac2_flops": 0,
+    "fused": false,
+    "input_shapes": [
+      [
+        1,
+        3,
+        640,
+        640
+      ]
+    ],
+    "nms_included": false,
+    "output_shape": [
+      1,
+      5,
+      8400
+    ],
+    "output_shapes": [
+      [
+        1,
+        5,
+        8400
+      ]
+    ],
+    "parameters": 11135987,
+    "precision": "FP32",
+    "scan_basic_arithmetic_flops": 0,
+    "scan_calls": [],
+    "ssm_module_calls": [],
+    "status": "PASS",
+    "thop_legacy_x2_flops": 28646963200.0,
+    "thop_version": "2.0.16",
+    "torch_version": "1.13.1+cu117",
+    "trainable_parameters": 11135971,
+    "unregistered_leaf_module_types": [
+      "torch.nn.modules.activation.SiLU",
+      "ultralytics.nn.modules.conv.Concat"
+    ],
+    "unsupported": [
+      "Scan exponentials and softplus special functions; symbolic counts are separate.",
+      "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+      "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+      "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing.",
+      "Unregistered THOP leaf: torch.nn.modules.activation.SiLU",
+      "Unregistered THOP leaf: ultralytics.nn.modules.conv.Concat"
+    ]
+  },
+  "covered_flops_g": 28.6469632,
+  "data_sha256": "9b042b53f21331f28d68e997aa3d5916c412c3287314fab6d70300903a44ba99",
+  "dataset_id": "sadd",
+  "dataset_manifest_sha256": "3440521e8920f8043e13fe43b4f31b5fb12310ed854497ee9756f086d5a81b09",
+  "elapsed_seconds": 4516.124626257981,
+  "epochs_completed": 150,
+  "final_gpu_pids": [
+    399788
+  ],
+  "finished_utc": "2026-10-12T17:09:42.878774+00:00",
+  "gpu_identity": {
+    "cuda": "11.7",
+    "gpu_index": 0,
+    "gpu_name": "NVIDIA RTX A6000",
+    "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+    "hostname": "a6000-d",
+    "installation_modified": false,
+    "torch": "1.13.1+cu117",
+    "uuid_count_compatibility_applied": true
+  },
+  "method": "YOLOv8s",
+  "metric_unit": "fraction_0_to_1",
+  "metrics": {
+    "AP50": 0.9885423822933403,
+    "AP50_95": 0.5706316013230638,
+    "AP75": 0.6121654205938418,
+    "P": 0.9719529410943419,
+    "R": 0.9604870465380194
+  },
+  "metrics_percent": {
+    "AP50": 98.85423822933403,
+    "AP50_95": 57.06316013230638,
+    "AP75": 61.21654205938418,
+    "P": 97.1952941094342,
+    "R": 96.04870465380195
+  },
+  "optimizer_updates": 5700,
+  "paper_eligible": true,
+  "parameters": 11135987,
+  "peak_allocated_gib": 6.320709705352783,
+  "protocol_is_new_not_historical_reuse": true,
+  "protocol_sha256": "2732ddc4569770051d9bfa132831763811c3bbd42aef4c3dd7a5a5c38a0803b4",
+  "schema": "rgsp-unified-detection-20261012-v1",
+  "seed": 0,
+  "selection_split": "val",
+  "source_sha256": "19ae98a884ec902cf3e61dbe66b3f66e63243bc93b14233a781e8cb89d65ad4c",
+  "status": "TRAINING_COMPLETE",
+  "stop_reason": "max_epochs150",
+  "test_evaluated": true,
+  "test_speed_ms": {
+    "inference": 3.0412265918398864,
+    "loss": 0.3394456517776387,
+    "postprocess": 0.11587462969274329,
+    "preprocess": 0.08789884964091665
+  },
+  "test_split": "test"
+}

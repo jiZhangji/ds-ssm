@@ -1,0 +1,251 @@
+{
+  "formal_result": false,
+  "lane": "b",
+  "lane_completion": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/lanes/b/lane_complete.json",
+    "sha256": "8b4bdddfa9aed649866979687de361c1aa7cb90942981497c7abe675afdf776a"
+  },
+  "plan_sha256": "6328e555e42d10869e756d5058fb914c4ba6b35712a4d9206b1f5f8e4f160971",
+  "source_snapshot": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/preformal_smoke_b_source.tar.gz",
+    "sha256": "85e181eb1ea9ea5b4e2891061860ea6c6a511e5c0c73cbfcbfe4a17a95201032"
+  },
+  "status": "verified",
+  "trials": [
+    {
+      "epochs": 2,
+      "losses": [
+        [
+          3.6580257415771484,
+          2.5951602458953857,
+          3.3661539554595947
+        ],
+        [
+          3.263249635696411,
+          2.0564041137695312,
+          2.831617593765259
+        ]
+      ],
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/provenance.json",
+            "sha256": "3a4ebfa768bebda02b6b0779af8a408dab398fdc1d99f98dfba1888e682a6852"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/train_complete.json",
+            "sha256": "7429fe1b7d44fa1cdcdc4104448f4aa4cc15fb03d0e508af9f82b12183d61ada"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/eval_test.json",
+            "sha256": "b2df7bb7f777d3c2c7a03a019d45c47551432c87b5ab777b2e8812d3d978b12e"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/evaluation_complete.json",
+            "sha256": "ffc94f352413b36cf4e7b0f4c8f89154e1c5680e827af7a82a25807a6d578371"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/weights/best.pt",
+            "sha256": "06f2239036b9ec946db0df0aae6fe6969435168a40a8410446ffdd5ad97f6d0a"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/weights/raw_fp32_last.pt",
+            "sha256": "13cee14d8431a443a0a9b8366ee231cbd5d480d6a8a369832e185fb50a1d7981"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/controls_by_epoch.jsonl",
+            "sha256": "440cfe514f97973453bd42550a7713eb0d531a3c98ecd923e6cf4393f90b1bf5"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/trial_complete.json",
+            "sha256": "fcf1295d9e3a47278e5a957335241bbf7683c91187b4d27462650bf08d1321d1"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.0,
+            "ap50_95": 0.0,
+            "ap75": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "resumed": false,
+          "smoke_only": true
+        },
+        "finished_utc": "2026-10-09T02:57:40.398443+00:00",
+        "plan_sha256": "6328e555e42d10869e756d5058fb914c4ba6b35712a4d9206b1f5f8e4f160971",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_full_no_lrc_seed0",
+        "trial_sha256": "feefe29f35258a07ca5665ae22fae6657bdec2effd8b600f6dce98cd080701a6"
+      },
+      "test_overall": {
+        "ap50": 0.0,
+        "ap50_95": 0.0,
+        "ap75": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "trial_id": "ssdd_full_no_lrc_seed0"
+    },
+    {
+      "epochs": 2,
+      "losses": [
+        [
+          3.676482915878296,
+          2.597801446914673,
+          3.3587019443511963
+        ],
+        [
+          3.30869722366333,
+          2.069072723388672,
+          2.834641456604004
+        ]
+      ],
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_const_guidance_seed0/provenance.json",
+            "sha256": "37526010e0124886d323d98fba94ac2f59d944d88bcdd9f13e3d6900709b0d2d"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_const_guidance_seed0/train_complete.json",
+            "sha256": "3f95f13740ad7e5c86f84eecff6185017cbbe1fc0f05c90a0b26e83ff61bd022"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_const_guidance_seed0/eval_test.json",
+            "sha256": "1b7011f30014db68fcff5d9ced965c1fa581455f9d99dc35904a998efa9823a3"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_const_guidance_seed0/evaluation_complete.json",
+            "sha256": "4090f7cd6b9eed665e27a8a974c50b5f55df846e84f0ad911820c6ae4d1981eb"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_const_guidance_seed0/weights/best.pt",
+            "sha256": "5dd0655efe5ae56f1fb7aad484bf1809b4536d3f068bf47be3aa755eea10294f"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_const_guidance_seed0/weights/raw_fp32_last.pt",
+            "sha256": "219aed37fcb947cae77a8ed68b5c258b76da6177df011eaabd1a735d50a30570"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_const_guidance_seed0/controls_by_epoch.jsonl",
+            "sha256": "801a59fdcb12c3f892225040bb613fa94c451f6cef71da7051ffa0cec2df834b"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_const_guidance_seed0/trial_complete.json",
+            "sha256": "e0f15be82f6a01a37b4290b08b27ce35e4337822d05d391849651675aa781ea6"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.0,
+            "ap50_95": 0.0,
+            "ap75": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "resumed": false,
+          "smoke_only": true
+        },
+        "finished_utc": "2026-10-09T02:59:10.189830+00:00",
+        "plan_sha256": "6328e555e42d10869e756d5058fb914c4ba6b35712a4d9206b1f5f8e4f160971",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_const_guidance_seed0",
+        "trial_sha256": "2b4b2edfe416261fd8e381c1e9032e6ea3d56aa3d295dbd5962956f9c6ef9943"
+      },
+      "test_overall": {
+        "ap50": 0.0,
+        "ap50_95": 0.0,
+        "ap75": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "trial_id": "ssdd_const_guidance_seed0"
+    },
+    {
+      "epochs": 2,
+      "losses": [
+        [
+          3.6437556743621826,
+          2.5914924144744873,
+          3.3540103435516357
+        ],
+        [
+          3.24275541305542,
+          2.0371735095977783,
+          2.8142173290252686
+        ]
+      ],
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/provenance.json",
+            "sha256": "dc5542f4910cac30e6cde5818f224edd81722012ca72928c206f5cd04122ae61"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/train_complete.json",
+            "sha256": "0ed330e1ae71c3f237e3b6367e20c8329ced2de0b10b66132ddc5e3400b68902"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/eval_test.json",
+            "sha256": "d6a050e1d0aaf3abe55ed1ac68bc5b0b523dc2de488f4ec822366f4ba515698a"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/evaluation_complete.json",
+            "sha256": "cc449357a909396e5f0d0154167597596845135c693308f664977e6716289b57"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/weights/best.pt",
+            "sha256": "c60adc4b05878e8e78f89e2fdc28102f2c460413bda7f7f6ccf837b9deb4a7a1"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/weights/raw_fp32_last.pt",
+            "sha256": "cbc6589c52617de8162dbec13e9938444edab000d69d2588efdb8803de618209"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/controls_by_epoch.jsonl",
+            "sha256": "33332dd4064f620d7047447b74622917aaddab909e40963e3425b58eaed398b5"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/trial_complete.json",
+            "sha256": "5a0081ada374044041b6e12e2f4b5c3bfba101c7006280c7a1c1751c457e9c99"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.0,
+            "ap50_95": 0.0,
+            "ap75": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "resumed": false,
+          "smoke_only": true
+        },
+        "finished_utc": "2026-10-09T03:00:40.887678+00:00",
+        "plan_sha256": "6328e555e42d10869e756d5058fb914c4ba6b35712a4d9206b1f5f8e4f160971",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_post_gate_seed0",
+        "trial_sha256": "dee49a7218d15e805e2a40fcbed325555246a7719ec3ee08579e4a3b6dcf6fee"
+      },
+      "test_overall": {
+        "ap50": 0.0,
+        "ap50_95": 0.0,
+        "ap75": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "trial_id": "ssdd_post_gate_seed0"
+    }
+  ],
+  "verified_utc": "2026-10-09T03:18:19.891163+00:00"
+}

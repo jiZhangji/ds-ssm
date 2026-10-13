@@ -1,0 +1,31 @@
+{
+  "actual_records_sha256": "9b9207954510e1c4ef4f1899e2fc03821662665e775c806ec4e362ce43dc9b09",
+  "cache_location": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/external_detection/qa_data_01/data",
+  "counts_verified": {
+    "train": 730
+  },
+  "data_yaml": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/ssdd/data.yaml",
+    "sha256": "55784492a13eec556af419b736b7005a3f308dba96b1f4df2b02883199af34ec"
+  },
+  "dataset_id": "ssdd",
+  "expected_counts": {
+    "test": 232,
+    "train": 730,
+    "val": 186
+  },
+  "files_verified": 1460,
+  "heldout_image_or_label_files_opened": false,
+  "input_manifest": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/ssdd/data_content.json",
+    "sha256": "cd2f5314ecc8139f8e51a8c283d309f522c12abd58320003ea86bacbaac853de"
+  },
+  "location_records_sha256": "885693fe8dfa407538d971fcff925d581fb51fd752144e81cce5b632d2f664cb",
+  "names": [
+    "ship"
+  ],
+  "probe_only": true,
+  "source_data_protocol": null,
+  "source_images_repaired": false,
+  "source_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/ssdd/data"
+}

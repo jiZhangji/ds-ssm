@@ -1,0 +1,19 @@
+{
+  "experiment_id": "corrected_v2_sadd_sd16_b32_seed0",
+  "records": [
+    {
+      "dataset": "SADD",
+      "experiment": "corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3",
+      "variant": "full",
+      "placement": "p3",
+      "state_dim": 16,
+      "precision": 0.9360535954013771,
+      "recall": 0.9607843137254902,
+      "ap50": 0.9775979535920714,
+      "ap75": 0.5698482451805351,
+      "ap50_95": 0.545973301809999,
+      "inference_ms": 8.94463604146784,
+      "weights": "/home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/best.pt"
+    }
+  ]
+}

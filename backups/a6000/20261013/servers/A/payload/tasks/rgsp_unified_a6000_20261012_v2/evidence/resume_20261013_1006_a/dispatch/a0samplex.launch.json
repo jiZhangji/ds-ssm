@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/after_preflight.py",
+    "--lane",
+    "a0samplex",
+    "--foreground"
+  ],
+  "lane": "a0samplex",
+  "pid": 611654,
+  "start_ticks": "41338773"
+}

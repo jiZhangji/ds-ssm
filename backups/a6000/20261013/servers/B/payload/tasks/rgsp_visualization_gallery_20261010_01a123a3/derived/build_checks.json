@@ -1,0 +1,218 @@
+{
+  "input_files_verified": 65,
+  "input_hash_failures": [],
+  "snapshot": "2026-10-10 10:07:54-10:07:57 Asia/Shanghai",
+  "figure_count": 50,
+  "format_files": 150,
+  "ids_unique": true,
+  "expected_ids_match": true,
+  "layout_nominal_canvas_scan": [
+    {
+      "id": "C01",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C02",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C03",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C04",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C05",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C06",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C07",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C08",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C09",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C10",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C11",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C12",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C13",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C14",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C15",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "C16",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H01",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H02",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H03",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H04",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H05",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H06",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H07",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H08",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H09",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H10",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H11",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "H12",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q01",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q02",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q03",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q04",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q05",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q06",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q07",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q08",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q09",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q10",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q11",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "Q12",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "M01",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "M02",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "M03",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "M04",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "M05",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "M06",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "P01",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "P02",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "P03",
+      "outside_nominal_canvas_text": []
+    },
+    {
+      "id": "P04",
+      "outside_nominal_canvas_text": []
+    }
+  ],
+  "python": "3.10.16",
+  "matplotlib": "3.10.9",
+  "numpy": "1.26.4",
+  "host": "powerleader-a6000-b",
+  "cuda_visible_devices": "",
+  "research_validation": false,
+  "note": "Artifact/data-integrity checks only, not new model/experiment validation."
+}

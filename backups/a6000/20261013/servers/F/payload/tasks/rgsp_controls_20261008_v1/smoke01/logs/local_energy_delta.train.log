@@ -1,0 +1,65 @@
+
+2026-10-08T04:20:38.768360+00:00
+['/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python', '-u', '/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/code/tools/train_rgsp_control.py', '--config', '/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/manifest/configs/local_energy_delta.yaml', '--data', '/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/manifest/data.yaml', '--project', '/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/runs', '--variant', 'local_energy_delta', '--seed', '0', '--smoke']
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+New https://pypi.org/project/ultralytics/8.4.174 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+WARNING ⚠️ Upgrade to torch>=2.0.0 for deterministic training.
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/manifest/configs/local_energy_delta.yaml, data=/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/manifest/data.yaml, epochs=2, time=None, patience=30, batch=16, imgsz=640, save=True, save_period=-1, cache=False, device=0, workers=4, project=/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/runs, name=local_energy_delta, exist_ok=True, pretrained=False, optimizer=AdamW, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, lr_schedule=auto, lr_milestones=[], lr_gamma=0.1, close_mosaic=0, resume=False, amp=False, fraction=1.0, profile=False, freeze=None, module_warmup_epochs=0, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=False, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=None, workspace=4, nms=False, lr0=0.0002, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, label_smoothing=0.0, nbs=64, hsv_h=0.0, hsv_s=0.0, hsv_v=0.1, degrees=180.0, translate=0.1, scale=0.3, shear=0.0, perspective=0.0, flipud=0.5, fliplr=0.5, bgr=0.0, mosaic=0.3, mixup=0.0, copy_paste=0.0, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/runs/local_energy_delta
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1      5136  ultralytics.nn.modules.mamba_yolo.SimpleStem [3, 32, 3]                    
+  1                  -1  1     33692  ultralytics.nn.modules.mamba_yolo.VSSBlock   [32, 32]                      
+  2                  -1  1      8384  ultralytics.nn.modules.mamba_yolo.VisionClueMerge[32, 64]                      
+  3                  -1  1     39076  ultralytics.nn.modules.mamba_yolo.DS_VSSBlockSweep[64, 64, 16, 'local_energy_delta']
+  4                  -1  1     33152  ultralytics.nn.modules.mamba_yolo.VisionClueMerge[64, 128]                     
+  5                  -1  3   1067892  ultralytics.nn.modules.mamba_yolo.VSSBlock   [128, 128]                    
+  6                  -1  1    131840  ultralytics.nn.modules.mamba_yolo.VisionClueMerge[128, 256]                    
+  7                  -1  1   1301496  ultralytics.nn.modules.mamba_yolo.VSSBlock   [256, 256]                    
+  8                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]                 
+  9                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 10             [-1, 5]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 11                  -1  1    388604  ultralytics.nn.modules.mamba_yolo.XSSBlock   [384, 128, 1]                 
+ 12                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 13             [-1, 3]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 14                  -1  1    112312  ultralytics.nn.modules.mamba_yolo.XSSBlock   [192, 64, 1]                  
+ 15                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 16            [-1, 11]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 17                  -1  1    364028  ultralytics.nn.modules.mamba_yolo.XSSBlock   [192, 128, 1]                 
+ 18                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 19             [-1, 8]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 20                  -1  1   1334008  ultralytics.nn.modules.mamba_yolo.XSSBlock   [384, 256, 1]                 
+ 21        [14, 17, 20]  1    751507  ultralytics.nn.modules.head.Detect           [1, [64, 128, 256]]           
+local_energy_delta summary: 396 layers, 5920439 parameters, 5920423 gradients, 13.1 GFLOPs
+
+Freezing layer 'model.21.dfl.conv.weight'
+[34m[1mtrain: [0mScanning /home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/data/labels/train.cache... 32 images, 0 backgrounds, 0 corrupt: 100%|██████████| 32/32 [00:00<?, ?it/s][34m[1mtrain: [0mScanning /home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/data/labels/train.cache... 32 images, 0 backgrounds, 0 corrupt: 100%|██████████| 32/32 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/data/labels/val.cache... 16 images, 0 backgrounds, 0 corrupt: 100%|██████████| 16/16 [00:00<?, ?it/s][34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/data/labels/val.cache... 16 images, 0 backgrounds, 0 corrupt: 100%|██████████| 16/16 [00:00<?, ?it/s]
+[34m[1moptimizer:[0m AdamW(lr=0.0002, momentum=0.937) with parameter groups 69 weight(decay=0.0), 171 weight(decay=0.0005), 160 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 4 dataloader workers
+Logging results to [1m/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/runs/local_energy_delta[0m
+Starting training for 2 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+  0%|          | 0/2 [00:00<?, ?it/s]        1/2      14.6G      3.185       4.97      4.678         25        640:   0%|          | 0/2 [00:01<?, ?it/s]        1/2      14.6G      3.185       4.97      4.678         25        640:  50%|█████     | 1/2 [00:01<00:01,  1.45s/it]        1/2      14.7G      3.295      4.849       4.62         22        640:  50%|█████     | 1/2 [00:01<00:01,  1.45s/it]        1/2      14.7G      3.295      4.849       4.62         22        640: 100%|██████████| 2/2 [00:01<00:00,  1.10it/s]        1/2      14.7G      3.295      4.849       4.62         22        640: 100%|██████████| 2/2 [00:01<00:00,  1.01it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:00<00:00,  7.90it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:00<00:00,  7.89it/s]
+                   all         16         18          0          0          0          0
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+  0%|          | 0/2 [00:00<?, ?it/s]        2/2      14.7G      3.728      4.191      4.399         20        640:   0%|          | 0/2 [00:00<?, ?it/s]        2/2      14.7G      3.728      4.191      4.399         20        640:  50%|█████     | 1/2 [00:00<00:00,  1.79it/s]        2/2      14.7G      3.339      3.954       4.25         30        640:  50%|█████     | 1/2 [00:01<00:00,  1.79it/s]        2/2      14.7G      3.339      3.954       4.25         30        640: 100%|██████████| 2/2 [00:01<00:00,  1.86it/s]        2/2      14.7G      3.339      3.954       4.25         30        640: 100%|██████████| 2/2 [00:01<00:00,  1.85it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:00<00:00,  8.11it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:00<00:00,  8.10it/s]
+                   all         16         18          0          0          0          0
+
+2 epochs completed in 0.001 hours.
+Optimizer stripped from /home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/runs/local_energy_delta/weights/last.pt, 12.1MB
+Optimizer stripped from /home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/runs/local_energy_delta/weights/best.pt, 12.1MB
+
+Validating /home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/smoke01/runs/local_energy_delta/weights/best.pt...
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+local_energy_delta summary: 380 layers, 5919095 parameters, 0 gradients, 13.1 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:00<00:00,  8.48it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:00<00:00,  8.47it/s]
+                   all         16         18          0          0          0          0
+Speed: 0.1ms preprocess, 6.4ms inference, 0.0ms loss, 0.3ms postprocess per image

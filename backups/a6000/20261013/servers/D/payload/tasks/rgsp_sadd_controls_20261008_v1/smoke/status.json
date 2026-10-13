@@ -1,0 +1,18 @@
+{
+  "host": "a6000-d",
+  "pid": 2216874,
+  "seed": 2,
+  "cuda_visible_devices": "0",
+  "started_utc": "2026-10-08T06:08:17.993198+00:00",
+  "state": "complete",
+  "completed": [
+    "original",
+    "matched_scale075",
+    "local_energy",
+    "full"
+  ],
+  "smoke_only": true,
+  "current": "full",
+  "stage": "finished",
+  "updated_utc": "2026-10-08T06:09:29.536458+00:00"
+}

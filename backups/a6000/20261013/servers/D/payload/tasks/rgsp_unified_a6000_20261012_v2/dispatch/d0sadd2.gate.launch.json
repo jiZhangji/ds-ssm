@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/queue_after_lane.py",
+    "--lane",
+    "d0sadd2",
+    "--predecessor",
+    "d0r3",
+    "--foreground"
+  ],
+  "lane": "d0sadd2",
+  "pid": 387692,
+  "predecessor": "d0r3",
+  "start_ticks": "36965028"
+}

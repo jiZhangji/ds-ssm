@@ -1,0 +1,2 @@
+dataset,experiment,variant,placement,state_dim,precision,recall,ap50,ap75,ap50_95,inference_ms,weights
+SSDD,ssdd_exact_p3_noamp_diag8_v1_ssdd_full_p3,full,p3,16,0.001238415606730736,0.01098901098901099,0.0011375862016166308,1.1847932045424569e-05,0.0004565085946993296,7.101772160365663,/home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/ssdd_exact_p3_noamp_diag8_v1_ssdd_full_p3/weights/best.pt

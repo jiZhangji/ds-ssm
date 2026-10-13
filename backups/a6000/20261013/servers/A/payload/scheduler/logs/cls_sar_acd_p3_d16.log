@@ -1,0 +1,132 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+SAR-ACD ours epoch=1/200 loss=1.50904 score=0.08400
+SAR-ACD ours epoch=2/200 loss=1.29428 score=0.25354
+SAR-ACD ours epoch=3/200 loss=1.22765 score=0.40220
+SAR-ACD ours epoch=4/200 loss=1.19473 score=0.50878
+SAR-ACD ours epoch=5/200 loss=1.16234 score=0.44011
+SAR-ACD ours epoch=6/200 loss=1.10940 score=0.43329
+SAR-ACD ours epoch=7/200 loss=1.09462 score=0.58293
+SAR-ACD ours epoch=8/200 loss=1.08706 score=0.46563
+SAR-ACD ours epoch=9/200 loss=1.05882 score=0.48323
+SAR-ACD ours epoch=10/200 loss=1.03539 score=0.61581
+SAR-ACD ours epoch=11/200 loss=1.00618 score=0.50900
+SAR-ACD ours epoch=12/200 loss=0.99707 score=0.59158
+SAR-ACD ours epoch=13/200 loss=0.97657 score=0.58052
+SAR-ACD ours epoch=14/200 loss=0.96701 score=0.55349
+SAR-ACD ours epoch=15/200 loss=0.92894 score=0.52036
+SAR-ACD ours epoch=16/200 loss=0.92920 score=0.54061
+SAR-ACD ours epoch=17/200 loss=0.90893 score=0.61921
+SAR-ACD ours epoch=18/200 loss=0.87195 score=0.57671
+SAR-ACD ours epoch=19/200 loss=0.87933 score=0.55550
+SAR-ACD ours epoch=20/200 loss=0.89652 score=0.55737
+SAR-ACD ours epoch=21/200 loss=0.85537 score=0.70254
+SAR-ACD ours epoch=22/200 loss=0.81968 score=0.51507
+SAR-ACD ours epoch=23/200 loss=0.80537 score=0.69863
+SAR-ACD ours epoch=24/200 loss=0.81348 score=0.70798
+SAR-ACD ours epoch=25/200 loss=0.77783 score=0.60966
+SAR-ACD ours epoch=26/200 loss=0.77037 score=0.48601
+SAR-ACD ours epoch=27/200 loss=0.76247 score=0.49283
+SAR-ACD ours epoch=28/200 loss=0.74584 score=0.53837
+SAR-ACD ours epoch=29/200 loss=0.74043 score=0.74414
+SAR-ACD ours epoch=30/200 loss=0.72990 score=0.66505
+SAR-ACD ours epoch=31/200 loss=0.71524 score=0.75772
+SAR-ACD ours epoch=32/200 loss=0.70212 score=0.68745
+SAR-ACD ours epoch=33/200 loss=0.68282 score=0.76591
+SAR-ACD ours epoch=34/200 loss=0.68071 score=0.62709
+SAR-ACD ours epoch=35/200 loss=0.66949 score=0.55617
+SAR-ACD ours epoch=36/200 loss=0.66598 score=0.68422
+SAR-ACD ours epoch=37/200 loss=0.65356 score=0.66029
+SAR-ACD ours epoch=38/200 loss=0.65114 score=0.62774
+SAR-ACD ours epoch=39/200 loss=0.64997 score=0.77767
+SAR-ACD ours epoch=40/200 loss=0.64916 score=0.75788
+SAR-ACD ours epoch=41/200 loss=0.63084 score=0.67443
+SAR-ACD ours epoch=42/200 loss=0.61757 score=0.50356
+SAR-ACD ours epoch=43/200 loss=0.59807 score=0.60707
+SAR-ACD ours epoch=44/200 loss=0.59007 score=0.78745
+SAR-ACD ours epoch=45/200 loss=0.58381 score=0.80570
+SAR-ACD ours epoch=46/200 loss=0.58032 score=0.58831
+SAR-ACD ours epoch=47/200 loss=0.58136 score=0.77848
+SAR-ACD ours epoch=48/200 loss=0.57655 score=0.72125
+SAR-ACD ours epoch=49/200 loss=0.56505 score=0.88746
+SAR-ACD ours epoch=50/200 loss=0.57786 score=0.78570
+SAR-ACD ours epoch=51/200 loss=0.56058 score=0.74459
+SAR-ACD ours epoch=52/200 loss=0.53501 score=0.88317
+SAR-ACD ours epoch=53/200 loss=0.54619 score=0.83947
+SAR-ACD ours epoch=54/200 loss=0.54920 score=0.72787
+SAR-ACD ours epoch=55/200 loss=0.54540 score=0.81759
+SAR-ACD ours epoch=56/200 loss=0.53396 score=0.69247
+SAR-ACD ours epoch=57/200 loss=0.55205 score=0.76529
+SAR-ACD ours epoch=58/200 loss=0.52028 score=0.84964
+SAR-ACD ours epoch=59/200 loss=0.53248 score=0.83930
+SAR-ACD ours epoch=60/200 loss=0.51803 score=0.87731
+SAR-ACD ours epoch=61/200 loss=0.52769 score=0.62547
+SAR-ACD ours epoch=62/200 loss=0.52850 score=0.92369
+SAR-ACD ours epoch=63/200 loss=0.49903 score=0.84901
+SAR-ACD ours epoch=64/200 loss=0.51109 score=0.88882
+SAR-ACD ours epoch=65/200 loss=0.50035 score=0.85603
+SAR-ACD ours epoch=66/200 loss=0.50859 score=0.85997
+SAR-ACD ours epoch=67/200 loss=0.49468 score=0.88172
+SAR-ACD ours epoch=68/200 loss=0.49739 score=0.51168
+SAR-ACD ours epoch=69/200 loss=0.49142 score=0.81585
+SAR-ACD ours epoch=70/200 loss=0.49010 score=0.85572
+SAR-ACD ours epoch=71/200 loss=0.49933 score=0.74124
+SAR-ACD ours epoch=72/200 loss=0.49095 score=0.86737
+SAR-ACD ours epoch=73/200 loss=0.47840 score=0.85301
+SAR-ACD ours epoch=74/200 loss=0.47947 score=0.89301
+SAR-ACD ours epoch=75/200 loss=0.48673 score=0.89447
+SAR-ACD ours epoch=76/200 loss=0.48010 score=0.86466
+SAR-ACD ours epoch=77/200 loss=0.48845 score=0.86467
+SAR-ACD ours epoch=78/200 loss=0.48878 score=0.87162
+SAR-ACD ours epoch=79/200 loss=0.47445 score=0.90252
+SAR-ACD ours epoch=80/200 loss=0.47259 score=0.87954
+SAR-ACD ours epoch=81/200 loss=0.47724 score=0.77793
+SAR-ACD ours epoch=82/200 loss=0.47388 score=0.84876
+SAR-ACD ours epoch=83/200 loss=0.46912 score=0.80234
+SAR-ACD ours epoch=84/200 loss=0.46785 score=0.85300
+SAR-ACD ours epoch=85/200 loss=0.46794 score=0.87887
+SAR-ACD ours epoch=86/200 loss=0.45822 score=0.86467
+SAR-ACD ours epoch=87/200 loss=0.46483 score=0.87812
+SAR-ACD ours epoch=88/200 loss=0.46077 score=0.90939
+SAR-ACD ours epoch=89/200 loss=0.46348 score=0.89417
+SAR-ACD ours epoch=90/200 loss=0.45951 score=0.91647
+SAR-ACD ours epoch=91/200 loss=0.45508 score=0.87707
+SAR-ACD ours epoch=92/200 loss=0.45794 score=0.89607
+SAR-ACD ours epoch=93/200 loss=0.45955 score=0.91932
+SAR-ACD ours epoch=94/200 loss=0.45746 score=0.87760
+SAR-ACD ours epoch=95/200 loss=0.45385 score=0.89622
+SAR-ACD ours epoch=96/200 loss=0.45345 score=0.90419
+SAR-ACD ours epoch=97/200 loss=0.45261 score=0.88371
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "initialization": "scratch",
+  "protocol": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 64,
+  "epochs_requested": 200,
+  "best_epoch": 62,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.8937007874015748,
+    "macro_precision": 0.8929147145210976,
+    "macro_recall": 0.8922628249026813,
+    "macro_f1": 0.8918104404594516
+  },
+  "params": 1767463,
+  "gflops": 0.24504121,
+  "latency_ms": 300.90587113324244,
+  "fps": 3.323298399708511,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/sar-acd/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}

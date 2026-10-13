@@ -1,0 +1,33 @@
+{
+  "experiment": "preflight_val_io_workers0",
+  "placement": "p3",
+  "variant": "full",
+  "state_dim": 16,
+  "seed": 0,
+  "subset": "SSDD_SMOKE",
+  "weights": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v2/smoke/runs/full/weights/best.pt",
+  "weights_sha256": "d8f80339ab49c9d18dfb152887d72c79216f36d893b06b4d460399a9b1774c1a",
+  "data": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v2/smoke/manifest/data.yaml",
+  "data_yaml_sha256": "792a2818b10e5020c44833ff4d7d11778430668b057620bf29b2f1d37fda97ba",
+  "split": "val",
+  "imgsz": 640,
+  "batch": 16,
+  "conf": 0.001,
+  "iou": 0.6,
+  "precision_mode": "fp32",
+  "result_dir": "../preflight/evaluation_workers0/io",
+  "speed_ms": {
+    "preprocess": 0.14421343803405762,
+    "inference": 8.282691240310669,
+    "loss": 0.00035762786865234375,
+    "postprocess": 0.26898086071014404
+  },
+  "overall": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "ap50": 0.0,
+    "ap75": 0.0,
+    "ap50_95": 0.0
+  },
+  "per_class": []
+}

@@ -1,0 +1,84 @@
+{
+  "event_date": "2026-10-09",
+  "artifact": "RGSP motivation redraw",
+  "source_archive": "D:\\BaiduNetdiskDownload\\SAR-Data\\SARATR-X\\detection\\dataset\\SSDD.zip",
+  "image_member": "SSDD/images/train/000012.jpg",
+  "image_sha256": "af641585bb18362e78ce7d2eca79179527baef6593b92d16ef27f6f867a6a1a3",
+  "annotations_member": "SSDD/annotations/train.json",
+  "annotations_sha256": "4565548ce05136dba8072a4b1c1fb668f3d415e3c980ebfe05b5a8998dec1ac5",
+  "annotation": {
+    "area": 1567.4169304827228,
+    "iscrowd": 0,
+    "image_id": 12,
+    "bbox": [
+      137.91205211726384,
+      96.81528662420382,
+      25.0814332247557,
+      87.8980891719745
+    ],
+    "category_id": 0,
+    "id": 11,
+    "ignore": 0,
+    "segmentation": [
+      [
+        137.91205211726384,
+        106.18892508143321,
+        142.05732484076432,
+        96.81528662420382,
+        155.11464968152865,
+        100.95541401273886,
+        159.0846905537459,
+        118.24104234527687,
+        159.0846905537459,
+        133.22475570032572,
+        162.99348534201954,
+        150.1628664495114,
+        162.01628664495112,
+        169.05537459283386,
+        158.61783439490446,
+        184.71337579617833,
+        149.63843648208467,
+        179.4788273615635,
+        138.88925081433223,
+        148.5342019543974,
+        138.88925081433223,
+        125.4071661237785
+      ]
+    ]
+  },
+  "image_size": [
+    462,
+    308
+  ],
+  "display_crop_xyxy": {
+    "1": [
+      96,
+      86,
+      204,
+      194
+    ],
+    "2": [
+      256,
+      97,
+      364,
+      205
+    ]
+  },
+  "region2_xywh": [
+    268,
+    106,
+    84,
+    94
+  ],
+  "grayscale": "native 8-bit grayscale 0..255, same mapping for image and both crops",
+  "region_semantics": {
+    "1": "official labeled ship",
+    "2": "manually selected bright area; semantic identity unverified"
+  },
+  "diagram": "conceptual state recurrence; no inference, learned heatmap, effect size, or empirical noise-suppression claim",
+  "abstraction": "Both panels retain content-dependent parameter generation. LSGM conditions scan input and Delta, not B. C/readout omitted from the recurrence schematic.",
+  "width_mm": 180,
+  "height_mm": 108,
+  "pdf_fonts": "embedded Microsoft YaHei regular/bold and Times New Roman italic",
+  "svg": "editable text and embedded lossless crops; needs a compatible CJK font"
+}

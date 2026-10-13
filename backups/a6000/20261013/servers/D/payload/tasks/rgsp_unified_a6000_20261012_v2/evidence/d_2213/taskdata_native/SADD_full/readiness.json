@@ -1,0 +1,47 @@
+{
+  "audit": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata_native/SADD_full/audit.json",
+  "audit_sha256": "b4142ecd4a3a12ee88f779c9e55f4fc64507a57a66fdca4d2918d131bfcd291d",
+  "content_identity_sha256": "0bca7e1bf58f0abd8abfc537df559cfc85ef45e313381f2da86c04e6d3ca0fe6",
+  "counts": {
+    "test": 298,
+    "train": 2372,
+    "val": 296
+  },
+  "data_yaml": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata_native/SADD_full/SADD.yaml",
+  "data_yaml_sha256": "058288d1222086aa528ffd41184f6525f17466f43baee9e45f6643f810b9ae46",
+  "dataset": "SADD",
+  "files": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata_native/SADD_full/files.json",
+  "files_sha256": "55332cce4fa5d39274c2f3aac17af93e37982d41ea0e309c25fdd10ce974bc2e",
+  "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata_native/SADD_full/manifest.json",
+  "manifest_sha256": "3440521e8920f8043e13fe43b4f31b5fb12310ed854497ee9756f086d5a81b09",
+  "official_split": false,
+  "protocol": "sadd-full2966-posneg-stratified-80-10-10-rgbgroup-v1",
+  "published_at": "2026-10-12T13:20:23.136716+00:00",
+  "ready": true,
+  "root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata_native/SADD_full",
+  "scene_disjoint": false,
+  "schema": "rgsp-unified-data-v1",
+  "source_inventory_sha256": "20d44dd72a1b110b7eca4cc86d03e63901aff788c2a4106367d066f3baf4a5c3",
+  "source_root": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/_raw_sadd/SAR-aircraft",
+  "split_seed": 20261012,
+  "status": "verified",
+  "stratified_counts": {
+    "negative": {
+      "test": 209,
+      "train": 1666,
+      "val": 208
+    },
+    "positive": {
+      "test": 89,
+      "train": 706,
+      "val": 88
+    }
+  },
+  "task": "detection",
+  "total_counts": {
+    "boxes": 7835,
+    "images": 2966,
+    "negative": 2083,
+    "positive": 883
+  }
+}

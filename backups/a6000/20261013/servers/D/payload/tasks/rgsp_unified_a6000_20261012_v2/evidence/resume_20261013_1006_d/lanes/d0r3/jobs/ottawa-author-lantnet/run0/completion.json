@@ -1,0 +1,23 @@
+{
+  "status": "TRAINING_COMPLETE",
+  "method": "lantnet",
+  "result_sha256": "f3782cf67eab6dd0247a69797ecce01b1ecb8e3feec776eca47f999c29d81593",
+  "protocol_sha256": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe",
+  "source_manifest": {
+    "author_models.py": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+    "run_cd_author.py": "e75db7e9e7a1f04ec5e1bff1f66860c702a873401ea83cb601a9d242033bc41d",
+    "source_registry.json": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a"
+  },
+  "outputs": {
+    "protocol.json": "eb200567313e158a1997613daf14c6f7b655e695fa5b64ed9cae4f575cf83622",
+    "model_source_audit.json": "d747d4f57b984e71d0278d1a2422e366f136282af2d5f611c046e8fd9be98d28",
+    "image_only_protocol_arrays.npz": "743078099c4fabbedbafdf7741bc12f2a09674012b23e0d299059d162be19ad8",
+    "epochs.jsonl": "beb1aae91c70343a51e4d9284e8202a6fceca93d6bbeec6af8f14b37f1f56be0",
+    "best.pt": "0c86c22f601fb0c9cdabb707a2c2dd2c39957ce48115ad523dafa81218790b70",
+    "last.pt": "74e7aa63a4b52d08a9f119bc6cd2db60da322d95de675f67b55d24ddffe16e8d",
+    "prediction.png": "ce65ee04d6cbd1784e491e8c599d5138ebd9fb28dfea57f72d84654c95e57002",
+    "prediction_before_postprocess.png": "1e7c0a28dd5cafa45e108468f799b9e61fd23d92fafff2e37e129a8fdb37c0cf",
+    "result.json": "f3782cf67eab6dd0247a69797ecce01b1ecb8e3feec776eca47f999c29d81593"
+  },
+  "completed_at": "2026-10-12T13:57:16.363835+00:00"
+}

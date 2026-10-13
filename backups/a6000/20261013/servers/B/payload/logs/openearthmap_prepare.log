@@ -1,0 +1,56 @@
+Generating train split:   0%|          | 0/4333 [00:00<?, ? examples/s]Generating train split:   2%|▏         | 100/4333 [00:00<00:13, 319.44 examples/s]Generating train split:   5%|▍         | 200/4333 [00:00<00:08, 489.19 examples/s]Generating train split:   7%|▋         | 300/4333 [00:00<00:06, 594.24 examples/s]Generating train split:   9%|▉         | 400/4333 [00:00<00:05, 657.83 examples/s]Generating train split:  12%|█▏        | 500/4333 [00:00<00:05, 688.84 examples/s]Generating train split:  17%|█▋        | 719/4333 [00:01<00:05, 667.21 examples/s]Generating train split:  19%|█▉        | 819/4333 [00:01<00:05, 693.42 examples/s]Generating train split:  21%|██        | 919/4333 [00:01<00:04, 714.90 examples/s]Generating train split:  24%|██▎       | 1019/4333 [00:01<00:04, 732.67 examples/s]Generating train split:  26%|██▌       | 1119/4333 [00:01<00:04, 736.73 examples/s]Generating train split:  31%|███       | 1338/4333 [00:02<00:04, 707.85 examples/s]Generating train split:  33%|███▎      | 1438/4333 [00:02<00:03, 727.90 examples/s]Generating train split:  35%|███▌      | 1538/4333 [00:02<00:03, 738.68 examples/s]Generating train split:  38%|███▊      | 1638/4333 [00:02<00:03, 752.41 examples/s]Generating train split:  40%|████      | 1738/4333 [00:02<00:03, 763.86 examples/s]Generating train split:  45%|████▌     | 1957/4333 [00:02<00:03, 719.83 examples/s]Generating train split:  47%|████▋     | 2057/4333 [00:02<00:03, 734.29 examples/s]Generating train split:  50%|████▉     | 2157/4333 [00:03<00:02, 758.91 examples/s]Generating train split:  52%|█████▏    | 2257/4333 [00:03<00:02, 762.77 examples/s]Generating train split:  54%|█████▍    | 2357/4333 [00:03<00:02, 774.14 examples/s]Generating train split:  59%|█████▉    | 2576/4333 [00:03<00:02, 736.97 examples/s]Generating train split:  62%|██████▏   | 2676/4333 [00:03<00:02, 759.56 examples/s]Generating train split:  64%|██████▍   | 2776/4333 [00:03<00:02, 757.42 examples/s]Generating train split:  66%|██████▋   | 2876/4333 [00:04<00:01, 761.93 examples/s]Generating train split:  69%|██████▊   | 2976/4333 [00:04<00:01, 774.73 examples/s]Generating train split:  74%|███████▎  | 3195/4333 [00:04<00:01, 723.92 examples/s]Generating train split:  76%|███████▌  | 3295/4333 [00:04<00:01, 741.07 examples/s]Generating train split:  78%|███████▊  | 3395/4333 [00:04<00:01, 758.75 examples/s]Generating train split:  81%|████████  | 3495/4333 [00:04<00:01, 766.52 examples/s]Generating train split:  83%|████████▎ | 3595/4333 [00:04<00:00, 786.82 examples/s]Generating train split:  88%|████████▊ | 3814/4333 [00:05<00:00, 730.79 examples/s]Generating train split:  90%|█████████ | 3914/4333 [00:05<00:00, 745.14 examples/s]Generating train split:  93%|█████████▎| 4014/4333 [00:05<00:00, 764.93 examples/s]Generating train split:  95%|█████████▍| 4114/4333 [00:05<00:00, 780.10 examples/s]Generating train split:  97%|█████████▋| 4214/4333 [00:05<00:00, 796.92 examples/s]Generating train split: 100%|██████████| 4333/4333 [00:05<00:00, 743.60 examples/s]
+Generating validation split:   0%|          | 0/210 [00:00<?, ? examples/s]Generating validation split:  48%|████▊     | 100/210 [00:00<00:00, 379.39 examples/s]Generating validation split: 100%|██████████| 210/210 [00:00<00:00, 696.13 examples/s]
+Generating test split:   0%|          | 0/490 [00:00<?, ? examples/s]Generating test split:  20%|██        | 100/490 [00:00<00:01, 376.18 examples/s]Generating test split:  41%|████      | 200/490 [00:00<00:00, 544.72 examples/s]Generating test split:  61%|██████    | 300/490 [00:00<00:00, 642.60 examples/s]Generating test split:  82%|████████▏ | 400/490 [00:00<00:00, 741.47 examples/s]Generating test split: 100%|██████████| 490/490 [00:00<00:00, 748.12 examples/s]
+train: 100/4333
+train: 200/4333
+train: 300/4333
+train: 400/4333
+train: 500/4333
+train: 600/4333
+train: 700/4333
+train: 800/4333
+train: 900/4333
+train: 1000/4333
+train: 1100/4333
+train: 1200/4333
+train: 1300/4333
+train: 1400/4333
+train: 1500/4333
+train: 1600/4333
+train: 1700/4333
+train: 1800/4333
+train: 1900/4333
+train: 2000/4333
+train: 2100/4333
+train: 2200/4333
+train: 2300/4333
+train: 2400/4333
+train: 2500/4333
+train: 2600/4333
+train: 2700/4333
+train: 2800/4333
+train: 2900/4333
+train: 3000/4333
+train: 3100/4333
+train: 3200/4333
+train: 3300/4333
+train: 3400/4333
+train: 3500/4333
+train: 3600/4333
+train: 3700/4333
+train: 3800/4333
+train: 3900/4333
+train: 4000/4333
+train: 4100/4333
+train: 4200/4333
+train: 4300/4333
+train: 4333/4333
+val: 100/210
+val: 200/210
+val: 210/210
+test: 100/490
+test: 200/490
+test: 300/490
+test: 400/490
+test: 490/490
+manifest=/home/powerleader/ig-ds-ssm/data/openearthmap_sar/sar_only_p/manifest.json

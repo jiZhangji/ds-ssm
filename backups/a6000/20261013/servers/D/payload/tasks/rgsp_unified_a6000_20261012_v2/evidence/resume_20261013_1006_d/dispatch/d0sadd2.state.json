@@ -1,0 +1,15 @@
+{
+  "admitted": [
+    "sadd-yolov8n",
+    "sadd-yolov8s",
+    "sadd-original",
+    "sadd-matched075",
+    "sadd-full"
+  ],
+  "blocked": [],
+  "lane": "d0sadd2",
+  "preflight_state_sha256": "0f1cfa4bc2d65ad11e949456dc0e458f7799d1378e10ac60826ca3cde109c19d",
+  "production_sha256": "7fc70519ededa6cab32a692165bed17afe0a234abd7e64a76c4d6d8a0a75218d",
+  "state": "QUEUED",
+  "time": 1791817499.596853
+}

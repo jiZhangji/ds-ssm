@@ -1,0 +1,21 @@
+{
+  "method": "FEPS-Net-reconstruction",
+  "params": 37538241,
+  "flops_g": 485.4883232,
+  "unsupported": {
+    "aten::max_pool2d": 1,
+    "aten::add_": 16,
+    "aten::mean": 4,
+    "aten::sigmoid": 8,
+    "aten::mul": 8,
+    "aten::add": 6
+  },
+  "classes": 1,
+  "input": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "status": "author neck plus reconstructed detector config and DCN dependency; not confirmed original model"
+}

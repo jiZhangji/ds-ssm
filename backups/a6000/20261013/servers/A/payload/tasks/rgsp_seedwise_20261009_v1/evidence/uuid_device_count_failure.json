@@ -1,0 +1,19 @@
+{
+  "stage": "expanded validator device metadata, before any model validation",
+  "date": "2026-10-09",
+  "hostname": "powerleader-PT6620W",
+  "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "torch": "1.13.1+cu117",
+  "cuda_available": true,
+  "torch_cuda_device_count": 0,
+  "native_cuda_device_count": 1,
+  "failure": "torch.cuda.get_device_name(torch.device('cuda', 0)): AssertionError: Invalid device id",
+  "validator_sha256": "05c81f0b51f4f6730abab4b99138eafacd70c28ec1137d0f661a705b36afc650",
+  "source_sha256": "05d1900840474e068aec65bc30ca81501fce55a464ca0dc3fbe60054885aade3",
+  "source": "Direct SSH command outputs and a separate native-vs-Python CUDA device-count diagnostic",
+  "evidence_status": "CONFIRMED",
+  "training_started": false,
+  "model_validation_started": false,
+  "torch_installation_modified": false,
+  "resolution": "New process-local compatibility launcher preserves exact UUID mask and uses native CUDA runtime count only for this confirmed PyTorch 1.13 mismatch."
+}

@@ -1,0 +1,46 @@
+{
+  "experiment_id": "formal_mstar_p3_d16_v1",
+  "selection_policy": "fixed-last-epoch; test evaluated once after training",
+  "state_dim": 16,
+  "seed": 0,
+  "protocols": {
+    "MSTAR-SOC": {
+      "key": "MSTAR-SOC",
+      "task_dir": "classification",
+      "folder": "MSTAR_SOC",
+      "imgsz": 88,
+      "batch": 100,
+      "epochs": 100,
+      "patience": 100,
+      "optimizer": "SGD",
+      "lr": 0.001,
+      "weight_decay": 0.004,
+      "momentum": 0.9,
+      "scheduler": "multistep",
+      "lr_milestones": [
+        50
+      ],
+      "lr_gamma": 0.1,
+      "label_smoothing": 0.0,
+      "evidence": "A-ConvNet SOC public implementation: official 17/15 split, 88 crop, batch 100, SGD 100e, lr 1e-3, milestone 50, momentum .9, weight decay .004"
+    },
+    "FUSAR-Map": {
+      "key": "FUSAR-Map",
+      "task_dir": "segmentation",
+      "folder": "FUSAR_Map_Paper_Code",
+      "imgsz": 256,
+      "batch": 10,
+      "epochs": 150,
+      "patience": 150,
+      "optimizer": "Adam",
+      "lr": 0.0001,
+      "weight_decay": 0.0,
+      "momentum": 0.9,
+      "scheduler": "fixed",
+      "lr_milestones": [],
+      "lr_gamma": 0.1,
+      "label_smoothing": 0.0,
+      "evidence": "FUSAR-Map released U-Net/SegNet code: 4 classes, black merged into vegetation, 256 patches, batch 10, Adam 1e-4, 150e; fixed-last replaces released test-selected checkpoint"
+    }
+  }
+}

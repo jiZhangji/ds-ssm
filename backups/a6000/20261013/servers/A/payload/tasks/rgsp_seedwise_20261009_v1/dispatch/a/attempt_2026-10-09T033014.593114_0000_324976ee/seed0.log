@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py", line 198, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py", line 176, in main
+    execute(command, cwd, out / "logs" / (tid + ".log"), env)
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py", line 82, in execute
+    raise RuntimeError(f"Trial failed with exit {result.returncode}; stopped lane; see {log}")
+RuntimeError: Trial failed with exit 1; stopped lane; see /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/lanes/a_seed0/logs/sar_acd_original_seed0.log

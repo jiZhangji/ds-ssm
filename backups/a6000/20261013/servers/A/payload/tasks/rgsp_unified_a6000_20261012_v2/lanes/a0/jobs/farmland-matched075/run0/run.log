@@ -1,0 +1,51 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+{"epoch": 1, "updates": 2, "loss": 2.177356379372733, "val_score": 0.1201427842937277, "best_epoch": 1}
+{"epoch": 2, "updates": 4, "loss": 2.0629862206322804, "val_score": 0.2435612082670906, "best_epoch": 2}
+{"epoch": 3, "updates": 6, "loss": 1.786141378538949, "val_score": 0.6109215017064847, "best_epoch": 3}
+{"epoch": 4, "updates": 8, "loss": 1.658939276422773, "val_score": 0.8452285485164394, "best_epoch": 4}
+{"epoch": 5, "updates": 10, "loss": 1.6463812589645386, "val_score": 0.8008658008658008, "best_epoch": 4}
+{"epoch": 6, "updates": 12, "loss": 1.578613383429391, "val_score": 0.7174721189591077, "best_epoch": 4}
+{"epoch": 7, "updates": 14, "loss": 1.4822660343987601, "val_score": 0.6594900849858356, "best_epoch": 4}
+{"epoch": 8, "updates": 16, "loss": 1.489783695765904, "val_score": 0.7683997299122215, "best_epoch": 4}
+{"epoch": 9, "updates": 18, "loss": 1.4612132140568324, "val_score": 0.8368462138953942, "best_epoch": 4}
+{"epoch": 10, "updates": 20, "loss": 1.4431815658296858, "val_score": 0.8418674698795181, "best_epoch": 4}
+{"epoch": 11, "updates": 22, "loss": 1.3261763198035104, "val_score": 0.8226037195994278, "best_epoch": 4}
+{"epoch": 12, "updates": 24, "loss": 1.2831976924623762, "val_score": 0.8317552804078662, "best_epoch": 4}
+{"epoch": 13, "updates": 26, "loss": 1.2784724065235682, "val_score": 0.8442804428044282, "best_epoch": 4}
+{"epoch": 14, "updates": 28, "loss": 1.2956783260617937, "val_score": 0.8654434250764526, "best_epoch": 14}
+{"epoch": 15, "updates": 30, "loss": 1.2681967530931746, "val_score": 0.8987654320987654, "best_epoch": 15}
+{"epoch": 16, "updates": 32, "loss": 1.237151367323739, "val_score": 0.88125, "best_epoch": 15}
+{"epoch": 17, "updates": 34, "loss": 1.278449365070888, "val_score": 0.8531157270029673, "best_epoch": 15}
+{"epoch": 18, "updates": 36, "loss": 1.2473351614815849, "val_score": 0.8379562043795621, "best_epoch": 15}
+{"epoch": 19, "updates": 38, "loss": 1.1837136234555925, "val_score": 0.8109243697478993, "best_epoch": 15}
+{"epoch": 20, "updates": 40, "loss": 1.2001289810453142, "val_score": 0.8446745562130178, "best_epoch": 15}
+{"epoch": 21, "updates": 42, "loss": 1.1714634554726737, "val_score": 0.8578016910069177, "best_epoch": 15}
+{"epoch": 22, "updates": 44, "loss": 1.2504394224711828, "val_score": 0.8639508070714835, "best_epoch": 15}
+{"epoch": 23, "updates": 46, "loss": 1.1290665694645472, "val_score": 0.867953667953668, "best_epoch": 15}
+{"epoch": 24, "updates": 48, "loss": 1.1351182290485926, "val_score": 0.865488086087625, "best_epoch": 15}
+{"epoch": 25, "updates": 50, "loss": 1.2333220413752966, "val_score": 0.8516605166051661, "best_epoch": 15}
+{"epoch": 26, "updates": 52, "loss": 1.147649143423353, "val_score": 0.8504053058216655, "best_epoch": 15}
+{"epoch": 27, "updates": 54, "loss": 1.1654838834490096, "val_score": 0.8520446096654275, "best_epoch": 15}
+{"epoch": 28, "updates": 56, "loss": 1.106934198311397, "val_score": 0.8599545798637397, "best_epoch": 15}
+{"epoch": 29, "updates": 58, "loss": 1.1137918063572474, "val_score": 0.8667687595712097, "best_epoch": 15}
+{"epoch": 30, "updates": 60, "loss": 1.0999597481318883, "val_score": 0.8750969743987588, "best_epoch": 15}
+{"epoch": 31, "updates": 62, "loss": 1.1784125055585588, "val_score": 0.8756674294431732, "best_epoch": 15}
+{"epoch": 32, "updates": 64, "loss": 1.1327658210481917, "val_score": 0.8756674294431732, "best_epoch": 15}
+{"epoch": 33, "updates": 66, "loss": 1.0968640191214425, "val_score": 0.8712121212121212, "best_epoch": 15}
+{"epoch": 34, "updates": 68, "loss": 1.0785963450159346, "val_score": 0.8612153038259563, "best_epoch": 15}
+{"epoch": 35, "updates": 70, "loss": 1.1705331121172224, "val_score": 0.8454212454212455, "best_epoch": 15}
+{"epoch": 36, "updates": 72, "loss": 1.0822999732834953, "val_score": 0.8533333333333334, "best_epoch": 15}
+{"epoch": 37, "updates": 74, "loss": 1.132688079561506, "val_score": 0.8590604026845637, "best_epoch": 15}
+{"epoch": 38, "updates": 76, "loss": 1.0781859500067574, "val_score": 0.8762490392006149, "best_epoch": 15}
+{"epoch": 39, "updates": 78, "loss": 1.071596086025238, "val_score": 0.8837209302325582, "best_epoch": 15}
+{"epoch": 40, "updates": 80, "loss": 1.0774620515959603, "val_score": 0.8835403726708075, "best_epoch": 15}
+{"epoch": 41, "updates": 82, "loss": 1.059536337852478, "val_score": 0.8830364058869093, "best_epoch": 15}
+{"epoch": 42, "updates": 84, "loss": 1.048819593020848, "val_score": 0.8823529411764706, "best_epoch": 15}
+{"epoch": 43, "updates": 86, "loss": 1.1197632891791207, "val_score": 0.8833976833976833, "best_epoch": 15}
+{"epoch": 44, "updates": 88, "loss": 1.0418093289647783, "val_score": 0.8902723735408561, "best_epoch": 15}
+{"epoch": 45, "updates": 90, "loss": 1.0600938967296056, "val_score": 0.881588999236058, "best_epoch": 15}
+{"status": "TRAINING_COMPLETE", "result": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-matched075/run0/result.json"}

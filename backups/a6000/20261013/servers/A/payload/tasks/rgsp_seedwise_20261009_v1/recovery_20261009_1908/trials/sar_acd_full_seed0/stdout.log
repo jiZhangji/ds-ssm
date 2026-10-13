@@ -1,0 +1,269 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_shared_sar_tasks_v2.py:565: UserWarning: _bincount_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  return torch.bincount(index, minlength=classes * classes).reshape(classes, classes).cpu()
+SAR-ACD full seed0 epoch=1/200 loss=1.545354 val=0.077659
+SAR-ACD full seed0 epoch=2/200 loss=1.362564 val=0.367037
+SAR-ACD full seed0 epoch=3/200 loss=1.281249 val=0.456801
+SAR-ACD full seed0 epoch=4/200 loss=1.235931 val=0.485355
+SAR-ACD full seed0 epoch=5/200 loss=1.198361 val=0.468786
+SAR-ACD full seed0 epoch=6/200 loss=1.174199 val=0.463803
+SAR-ACD full seed0 epoch=7/200 loss=1.140082 val=0.477197
+SAR-ACD full seed0 epoch=8/200 loss=1.091347 val=0.522615
+SAR-ACD full seed0 epoch=9/200 loss=1.069789 val=0.535894
+SAR-ACD full seed0 epoch=10/200 loss=1.045847 val=0.566656
+SAR-ACD full seed0 epoch=11/200 loss=1.020336 val=0.649112
+SAR-ACD full seed0 epoch=12/200 loss=1.003283 val=0.600391
+SAR-ACD full seed0 epoch=13/200 loss=0.951152 val=0.519071
+SAR-ACD full seed0 epoch=14/200 loss=0.951297 val=0.635028
+SAR-ACD full seed0 epoch=15/200 loss=0.910274 val=0.696861
+SAR-ACD full seed0 epoch=16/200 loss=0.893996 val=0.659621
+SAR-ACD full seed0 epoch=17/200 loss=0.885459 val=0.521600
+SAR-ACD full seed0 epoch=18/200 loss=0.853447 val=0.674472
+SAR-ACD full seed0 epoch=19/200 loss=0.826318 val=0.639297
+SAR-ACD full seed0 epoch=20/200 loss=0.812288 val=0.369198
+SAR-ACD full seed0 epoch=21/200 loss=0.806507 val=0.725427
+SAR-ACD full seed0 epoch=22/200 loss=0.771096 val=0.705873
+SAR-ACD full seed0 epoch=23/200 loss=0.771706 val=0.601578
+SAR-ACD full seed0 epoch=24/200 loss=0.732218 val=0.797052
+SAR-ACD full seed0 epoch=25/200 loss=0.720508 val=0.710816
+SAR-ACD full seed0 epoch=26/200 loss=0.698510 val=0.653958
+SAR-ACD full seed0 epoch=27/200 loss=0.696737 val=0.774485
+SAR-ACD full seed0 epoch=28/200 loss=0.703524 val=0.663048
+SAR-ACD full seed0 epoch=29/200 loss=0.674778 val=0.813104
+SAR-ACD full seed0 epoch=30/200 loss=0.675759 val=0.826703
+SAR-ACD full seed0 epoch=31/200 loss=0.670662 val=0.810893
+SAR-ACD full seed0 epoch=32/200 loss=0.642473 val=0.799786
+SAR-ACD full seed0 epoch=33/200 loss=0.626055 val=0.826346
+SAR-ACD full seed0 epoch=34/200 loss=0.627963 val=0.306622
+SAR-ACD full seed0 epoch=35/200 loss=0.620107 val=0.873336
+SAR-ACD full seed0 epoch=36/200 loss=0.603059 val=0.628569
+SAR-ACD full seed0 epoch=37/200 loss=0.609200 val=0.832114
+SAR-ACD full seed0 epoch=38/200 loss=0.614152 val=0.768559
+SAR-ACD full seed0 epoch=39/200 loss=0.580232 val=0.694630
+SAR-ACD full seed0 epoch=40/200 loss=0.587478 val=0.798542
+SAR-ACD full seed0 epoch=41/200 loss=0.579997 val=0.896119
+SAR-ACD full seed0 epoch=42/200 loss=0.555902 val=0.859567
+SAR-ACD full seed0 epoch=43/200 loss=0.554615 val=0.802031
+SAR-ACD full seed0 epoch=44/200 loss=0.561330 val=0.825171
+SAR-ACD full seed0 epoch=45/200 loss=0.570802 val=0.851403
+SAR-ACD full seed0 epoch=46/200 loss=0.553473 val=0.851264
+SAR-ACD full seed0 epoch=47/200 loss=0.559998 val=0.890428
+SAR-ACD full seed0 epoch=48/200 loss=0.539018 val=0.788863
+SAR-ACD full seed0 epoch=49/200 loss=0.534763 val=0.789118
+SAR-ACD full seed0 epoch=50/200 loss=0.527164 val=0.885994
+SAR-ACD full seed0 epoch=51/200 loss=0.531542 val=0.785893
+SAR-ACD full seed0 epoch=52/200 loss=0.517840 val=0.879056
+SAR-ACD full seed0 epoch=53/200 loss=0.520006 val=0.860435
+SAR-ACD full seed0 epoch=54/200 loss=0.516162 val=0.903377
+SAR-ACD full seed0 epoch=55/200 loss=0.513568 val=0.836977
+SAR-ACD full seed0 epoch=56/200 loss=0.511420 val=0.875079
+SAR-ACD full seed0 epoch=57/200 loss=0.497399 val=0.894970
+SAR-ACD full seed0 epoch=58/200 loss=0.509659 val=0.810581
+SAR-ACD full seed0 epoch=59/200 loss=0.505506 val=0.893037
+SAR-ACD full seed0 epoch=60/200 loss=0.503431 val=0.892072
+SAR-ACD full seed0 epoch=61/200 loss=0.495698 val=0.881016
+SAR-ACD full seed0 epoch=62/200 loss=0.506436 val=0.900034
+SAR-ACD full seed0 epoch=63/200 loss=0.480145 val=0.899557
+SAR-ACD full seed0 epoch=64/200 loss=0.497436 val=0.873310
+SAR-ACD full seed0 epoch=65/200 loss=0.484792 val=0.933419
+SAR-ACD full seed0 epoch=66/200 loss=0.481613 val=0.916026
+SAR-ACD full seed0 epoch=67/200 loss=0.480620 val=0.942248
+SAR-ACD full seed0 epoch=68/200 loss=0.484592 val=0.931206
+SAR-ACD full seed0 epoch=69/200 loss=0.472441 val=0.852058
+SAR-ACD full seed0 epoch=70/200 loss=0.484724 val=0.918555
+SAR-ACD full seed0 epoch=71/200 loss=0.480918 val=0.883021
+SAR-ACD full seed0 epoch=72/200 loss=0.469052 val=0.929992
+SAR-ACD full seed0 epoch=73/200 loss=0.461048 val=0.927126
+SAR-ACD full seed0 epoch=74/200 loss=0.462873 val=0.938453
+SAR-ACD full seed0 epoch=75/200 loss=0.459355 val=0.923244
+SAR-ACD full seed0 epoch=76/200 loss=0.476455 val=0.914469
+SAR-ACD full seed0 epoch=77/200 loss=0.469981 val=0.919941
+SAR-ACD full seed0 epoch=78/200 loss=0.464801 val=0.908495
+SAR-ACD full seed0 epoch=79/200 loss=0.465331 val=0.919419
+SAR-ACD full seed0 epoch=80/200 loss=0.465541 val=0.919664
+SAR-ACD full seed0 epoch=81/200 loss=0.460895 val=0.905023
+SAR-ACD full seed0 epoch=82/200 loss=0.465472 val=0.899549
+SAR-ACD full seed0 epoch=83/200 loss=0.454721 val=0.927204
+SAR-ACD full seed0 epoch=84/200 loss=0.456020 val=0.931277
+SAR-ACD full seed0 epoch=85/200 loss=0.453642 val=0.946961
+SAR-ACD full seed0 epoch=86/200 loss=0.460444 val=0.951854
+SAR-ACD full seed0 epoch=87/200 loss=0.459211 val=0.931538
+SAR-ACD full seed0 epoch=88/200 loss=0.453568 val=0.947837
+SAR-ACD full seed0 epoch=89/200 loss=0.446939 val=0.857728
+SAR-ACD full seed0 epoch=90/200 loss=0.452787 val=0.911067
+SAR-ACD full seed0 epoch=91/200 loss=0.444401 val=0.919283
+SAR-ACD full seed0 epoch=92/200 loss=0.444850 val=0.912394
+SAR-ACD full seed0 epoch=93/200 loss=0.458682 val=0.924608
+SAR-ACD full seed0 epoch=94/200 loss=0.450837 val=0.935574
+SAR-ACD full seed0 epoch=95/200 loss=0.446279 val=0.935537
+SAR-ACD full seed0 epoch=96/200 loss=0.440850 val=0.936359
+SAR-ACD full seed0 epoch=97/200 loss=0.448360 val=0.914666
+SAR-ACD full seed0 epoch=98/200 loss=0.442511 val=0.951477
+SAR-ACD full seed0 epoch=99/200 loss=0.454781 val=0.939630
+SAR-ACD full seed0 epoch=100/200 loss=0.449796 val=0.939775
+SAR-ACD full seed0 epoch=101/200 loss=0.443943 val=0.919987
+SAR-ACD full seed0 epoch=102/200 loss=0.440699 val=0.884550
+SAR-ACD full seed0 epoch=103/200 loss=0.445824 val=0.924320
+SAR-ACD full seed0 epoch=104/200 loss=0.439444 val=0.932497
+SAR-ACD full seed0 epoch=105/200 loss=0.436449 val=0.939333
+SAR-ACD full seed0 epoch=106/200 loss=0.435113 val=0.935482
+SAR-ACD full seed0 epoch=107/200 loss=0.444590 val=0.900813
+SAR-ACD full seed0 epoch=108/200 loss=0.440999 val=0.928027
+SAR-ACD full seed0 epoch=109/200 loss=0.445888 val=0.919932
+SAR-ACD full seed0 epoch=110/200 loss=0.428874 val=0.940161
+SAR-ACD full seed0 epoch=111/200 loss=0.427475 val=0.935218
+SAR-ACD full seed0 epoch=112/200 loss=0.430900 val=0.927616
+SAR-ACD full seed0 epoch=113/200 loss=0.437668 val=0.913338
+SAR-ACD full seed0 epoch=114/200 loss=0.434845 val=0.939433
+SAR-ACD full seed0 epoch=115/200 loss=0.426777 val=0.947288
+SAR-ACD full seed0 epoch=116/200 loss=0.430940 val=0.922642
+SAR-ACD full seed0 epoch=117/200 loss=0.431431 val=0.939333
+SAR-ACD full seed0 epoch=118/200 loss=0.423915 val=0.916198
+SAR-ACD full seed0 epoch=119/200 loss=0.433388 val=0.912008
+SAR-ACD full seed0 epoch=120/200 loss=0.427402 val=0.935785
+SAR-ACD full seed0 epoch=121/200 loss=0.427504 val=0.935599
+SAR-ACD full seed0 epoch=122/200 loss=0.422289 val=0.951403
+SAR-ACD full seed0 epoch=123/200 loss=0.425438 val=0.951606
+SAR-ACD full seed0 epoch=124/200 loss=0.420984 val=0.940086
+SAR-ACD full seed0 epoch=125/200 loss=0.422848 val=0.939376
+SAR-ACD full seed0 epoch=126/200 loss=0.421563 val=0.912328
+{
+  "schema": "rgsp-cross-trial-v1",
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "full",
+  "seed": 0,
+  "protocol": {
+    "schema": "rgsp-cross-trial-v1",
+    "dataset": "SAR-ACD",
+    "task": "classification",
+    "logical_data_sha256": "d93e468ba4ae5172cc74a9689a276ddafd2d3a2f9ad0e67d91ec83b942aacb8c",
+    "split_counts": {
+      "test": 254,
+      "train": 2003,
+      "val": 251
+    },
+    "annotation_policy": "preserve-heldout-exclude-ambiguous-training",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "epochs": 200,
+    "patience": 40,
+    "imgsz": 224,
+    "batch": 64,
+    "eval_batch": 64,
+    "optimizer": "AdamW",
+    "lr": 0.0002,
+    "weight_decay": 0.0005,
+    "scheduler": "cosine to 1% initial lr",
+    "module_warmup_epochs": 0,
+    "precision": "FP32 (AMP/TF32 off)",
+    "gradient_clip_l2": 5.0,
+    "grad_accum": 1,
+    "classification_label_smoothing": 0.1,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "selection_metric": "macro_f1",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "historical_results_comparable": false
+  },
+  "protocol_sha256": "b36c263075758abc1ee3ad0ad6954b28e5ce2dc368e7371a9fd944909bb18f6d",
+  "data": {
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/SAR_ACD/manifest.json",
+    "manifest_sha256": "16259205a8c8e0677631e37e23bba036311ea87cef8cf6f833b0f626a303c259",
+    "logical_manifest_sha256": "d93e468ba4ae5172cc74a9689a276ddafd2d3a2f9ad0e67d91ec83b942aacb8c",
+    "counts": {
+      "test": 254,
+      "train": 2003,
+      "val": 251
+    },
+    "audit_sha256": "5fcd4daa8afdfedd6f519de4d4c2e7ec797f90f6904fa2a61af964f111205b93",
+    "files_sha256": "567b09e122db10024e281b047e79417ba142a8ddf90bae2754bc640959dd6db4",
+    "annotation_policy": "preserve-heldout-exclude-ambiguous-training"
+  },
+  "initialization_common_tensor_sha256": "293e570309a7490d451201a68a58a6afbc8f233dca743f683d8adced7855ec83",
+  "checkpoint": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_full_seed0/best.pt",
+  "best_sha256": "3c73a8c0b741e95349490813f9ce3d923c708fcf83f78e93d187500f469820b9",
+  "best_epoch": 86,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.9291338582677166,
+    "macro_precision": 0.9359184412574242,
+    "macro_recall": 0.9305286058468102,
+    "macro_f1": 0.9294812118967932,
+    "per_class_recall": [
+      0.9574468085106383,
+      0.9803921568627451,
+      0.8846153846153846,
+      0.8301886792452831,
+      1.0
+    ],
+    "confusion_matrix": [
+      [
+        45,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0,
+        1
+      ],
+      [
+        6,
+        0,
+        46,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        1,
+        44,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        51
+      ]
+    ]
+  },
+  "reloaded_controls": {
+    "variant": "full",
+    "controlled_blocks": 1,
+    "placement": "internal P3/8, 64 channels",
+    "scalars": {
+      "lambda_s": 0.496133953332901,
+      "alpha": 0.48876193165779114,
+      "beta_i": 1.008074164390564,
+      "rho_i": 1.007952332496643,
+      "eta_i": 0.10677842795848846
+    },
+    "buffer_scalars": [],
+    "min_retain": 0.5,
+    "use_pfim": true
+  },
+  "parameters": 2787075,
+  "trainable_parameters": 2787075,
+  "buffers": 4465,
+  "efficiency_status": "Params only here; matched-hardware latency and scan-aware FLOPs require the separate efficiency lane. No undercounted THOP GFLOPs claimed.",
+  "historical_negative_results_preserved": true,
+  "finished_utc": "2026-10-09T12:37:25.463220+00:00"
+}
+{"compatibility_launcher": "PASS", "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/sar_acd_full_seed0/cuda_compatibility.json"}

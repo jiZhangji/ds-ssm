@@ -1,0 +1,19 @@
+{
+  "checkpoint_sha256": "1273ca84d21023fc4c8744cdd4426151b74396134f1a8ca0ab5f5c4c37255b96",
+  "metrics": {
+    "evaluated_native_unique_pixels": 9216,
+    "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+    "f1": 0.7406143344709897,
+    "fn": 148,
+    "fp": 4,
+    "iou": 0.5880758807588076,
+    "kappa": 0.7326271757424634,
+    "oa": 0.9835069444444444,
+    "precision": 0.9819004524886877,
+    "recall": 0.5945205479452055,
+    "tn": 8847,
+    "tp": 217
+  },
+  "test_evaluated_once": true,
+  "threshold": 0.75
+}

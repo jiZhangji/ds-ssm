@@ -1,0 +1,13 @@
+{
+  "dataset": "SAMPLE",
+  "task": "classification",
+  "variant": "ours",
+  "state_dim": 16,
+  "metric": {
+    "accuracy": 1.0
+  },
+  "latency_ms": 2.352077463739619,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/classification/SAMPLE/ours/best.pt",
+  "epochs": 100,
+  "params": 1768236
+}

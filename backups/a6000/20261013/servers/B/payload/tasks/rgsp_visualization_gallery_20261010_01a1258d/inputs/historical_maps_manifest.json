@@ -1,0 +1,40 @@
+{
+  "tool": "visualize_dsssm_motivation.py",
+  "tool_sha256": "dbb9a5f7faa40dabfa9d9bf59bf63d6e3066f0fa815ab246e55cb637682a857b",
+  "baseline_weights": "/home/zhangji/Mamba-YOLO/output_dir/ssdd/mambayolo_t_ssdd_300e_16bs/weights/best.pt",
+  "baseline_weights_sha256": "c70f6a023adc51dbeaa892976fdcfba542a4b0c867a1bcb9a7ba3c726210d52e",
+  "pfim_weights": "/home/zhangji/Mamba-YOLO/codex_visualization_20260823/weights/pfim_ex27_best.pt",
+  "pfim_weights_sha256": "1cebf8735311e5f0461b079d4e50b8b5d957dd6f171532e832821857b240aa09",
+  "imgsz": 640,
+  "device": "0",
+  "conf": 0.25,
+  "iou": 0.7,
+  "block_index": 0,
+  "precision": "fp32",
+  "images": [
+    {
+      "path": "/home/zhangji/Mamba-YOLO/datasets/SSDD_YOLO/images/val/000099.jpg",
+      "sha256": "94dea1bfb9ff265d3874d26ed0496bcefa7828c1afb8ea8a1c4faa00b9fc8c8b"
+    },
+    {
+      "path": "/home/zhangji/Mamba-YOLO/datasets/SSDD_YOLO/images/val/000531.jpg",
+      "sha256": "43f18920a8ac6b92791182ed0a37dc2496eb74877c60d2a9529f2b28184b8c9a"
+    },
+    {
+      "path": "/home/zhangji/Mamba-YOLO/datasets/SSDD_YOLO/images/val/000929.jpg",
+      "sha256": "72a5f13049d9ba48abee2ad7167254f1539f1fb48bf65494ad32f6bab048dc25"
+    },
+    {
+      "path": "/home/zhangji/Mamba-YOLO/datasets/SSDD_YOLO/images/val/001081.jpg",
+      "sha256": "68090f86990afb3d1b6e41ab69bfd7c0889706951ed3de9383074534cef2dbd5"
+    },
+    {
+      "path": "/home/zhangji/Mamba-YOLO/datasets/SSDD_YOLO/images/val/001131.jpg",
+      "sha256": "b4aa358d6fec34ed3f1ba41ca4f3ed0b6a5a855a2e84a8120aae832051da80fb"
+    },
+    {
+      "path": "/home/zhangji/Mamba-YOLO/datasets/SSDD_YOLO/images/val/001111.jpg",
+      "sha256": "79b41940970c9ea12c7a966f995b27fd28db8545b69f40da9824c51eeecf2383"
+    }
+  ]
+}

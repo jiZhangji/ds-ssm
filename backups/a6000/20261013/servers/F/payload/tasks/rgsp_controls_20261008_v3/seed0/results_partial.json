@@ -1,0 +1,24 @@
+[
+  {
+    "variant": "original",
+    "seed": 0,
+    "precision": 0.9299375697662661,
+    "recall": 0.7765567765567766,
+    "ap50": 0.8608423679429338,
+    "ap75": 0.3819614681597156,
+    "ap50_95": 0.4381124085462885,
+    "weights_sha256": "9cdeb017197f755471eb38f191a2cb02704ecc414f4c72754c5edf0471bbe3b1",
+    "evidence": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/eval_test.json"
+  },
+  {
+    "variant": "matched_identity",
+    "seed": 0,
+    "precision": 0.8980150759210106,
+    "recall": 0.7902265354206068,
+    "ap50": 0.8566719468579562,
+    "ap75": 0.29514895976486777,
+    "ap50_95": 0.4071742064238097,
+    "weights_sha256": "e39aa2e33704f95772a1a15b21f7afa9442f832204dbb099150690deda5ace03",
+    "evidence": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity/eval_test.json"
+  }
+]

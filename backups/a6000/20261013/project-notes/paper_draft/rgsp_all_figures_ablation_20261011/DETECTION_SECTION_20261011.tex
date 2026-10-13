@@ -1,0 +1,421 @@
+% Replacement fragment: replace only \subsubsection{目标检测} through its ending \FloatBarrier.
+% This is not a standalone document. Required packages are already in the existing main.tex:
+% amsmath, booktabs, multirow, cite, placeins.
+% Add the new bibliography keys and replace the 3 updated entries using DETECTION_REFERENCES_20261011.tex.
+% In the model-selection paragraph, change the historical-300-epoch table reference
+% from tab:ssdd_detection_comparison to tab:ssdd_historical_detection.
+
+\subsubsection{目标检测}
+\label{sec:detection_results}
+
+本节在 SSDD、SADD 和 SAR-ShipDataset 上
+比较 RGSP 与代表性检测方法。
+比较对象包括通用检测器、SAR 专用检测网络
+以及 SAR 表征预训练方法。
+各表的 Method 后给出方法原始文献，
+Venue 和 Year 分别表示所列版本的发表出处与年份；
+仅有预印本或软件发布的工作则标注 arXiv 或 Software。
+方法出处与性能数值的来源分别记录，
+后者在每个结果分组中注明。
+年份不表示本地实验的执行时间。
+
+本地直接基线为 Mamba-YOLO-T (Original)~\cite{mambayolo2024}，
+保留原始四向 SS2D 状态空间块；
+YOLOv8n~\cite{yolov82023} 为 YOLOv8 的 nano 规模模型，
+作为相同数据协议和最大训练预算下的轻量 CNN 参照。
+RGSP (Ours) 始终表示本文预先定义的 Full 配置：
+在 Mamba-YOLO-T 的 P3/8 阶段替换一个状态空间块，
+不依据测试结果改用其他消融变体。
+因此，Original 与 RGSP 的直接比较评价整块替换效果，
+组件级作用另由结构匹配消融分析。
+
+指标均以百分数表示，
+P、R 分别表示 Precision 和 Recall，
+$\uparrow$表示数值越大越好，
+``--''表示无适用发表年份或来源未报告该指标。
+三种子结果以均值$\pm$样本标准差列示，
+单种子结果单独分组；
+加粗仅用于各本地同协议组内的最优值，
+不跨文献协议、历史记录和不同统计口径排名。
+
+\textbf{SSDD。}
+表~\ref{tab:ssdd_detection_comparison}
+列出文献报告及本地对照结果。
+文献组包括通用检测器 ViTDet，
+SAR 舰船检测方法 FEPS-Net、FGBG-Net 和 PEGNet，
+以及 ViTDet4SAR、SARATR-X、SUMMIT 和 SARDet-MIM
+等预训练方法。
+方法原始出处见行内引文，
+本表数值统一转引自 SARDet-MIM 的 Table 1~\cite{sardetmim2026}，
+不将其视为本文在统一协议下的复现结果。
+本地结果区分历史 $742/186/232$ 划分的三种子比较，
+以及清理后 $730/186/232$ 固定划分的单种子比较。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{SSDD 上的目标检测结果（\%）。
+文献报告与本地对照按来源和协议分组；
+加粗仅表示各本地同协议组内的最优结果。}
+\label{tab:ssdd_detection_comparison}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccrrrrr}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{Publication}
+& \multicolumn{5}{c}{Detection metrics ($\uparrow$)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-8}
+& Venue & Year & P & R
+& AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+\multicolumn{8}{l}{\textit{文献报告：数值转引自 SARDet-MIM~\cite{sardetmim2026}，Table 1}} \\
+ViTDet~\cite{vitdet2022}
+& ECCV & 2022
+& -- & -- & 97.9 & 82.5 & 67.6 \\
+FEPS-Net~\cite{feps2023}
+& JSTARS & 2023
+& -- & -- & 96.0 & 67.5 & 59.9 \\
+FGBG-Net~\cite{fgbg2025}
+& TGRS & 2025
+& -- & -- & 95.5 & 80.1 & 66.9 \\
+PEGNet~\cite{pegnet2025}
+& GRSL & 2025
+& -- & -- & 97.3 & 87.0 & 71.1 \\
+ViTDet4SAR~\cite{vitdet4sar2025}
+& IGARSS & 2025
+& -- & -- & 91.4 & 81.2 & 66.2 \\
+SARATR-X~\cite{saratrx2025}
+& TIP & 2025
+& -- & -- & 97.3 & 83.1 & 67.4 \\
+SUMMIT~\cite{summit2025}
+& IJAEOG & 2025
+& -- & -- & 96.7 & 86.3 & 70.4 \\
+SARDet-MIM~\cite{sardetmim2026}
+& Remote Sens. & 2026
+& -- & -- & 98.2 & 87.5 & 72.1 \\
+\midrule
+\multicolumn{8}{l}{\textit{本地对照：历史 $742/186/232$ 划分，3 seeds，scratch}} \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}
+& AAAI & 2025
+& $89.55\pm1.83$ & $79.24\pm1.70$ & $86.52\pm2.56$ & $34.05\pm5.25$ & $42.03\pm3.47$ \\
+RGSP (Ours)
+& This work & --
+& $\mathbf{91.91\pm1.49}$ & $\mathbf{79.85\pm1.02}$ & $\mathbf{87.97\pm0.11}$ & $\mathbf{34.10\pm3.12}$ & $\mathbf{42.91\pm1.13}$ \\
+\midrule
+\multicolumn{8}{l}{\textit{本地对照：清理后 $730/186/232$ 划分，seed 0，scratch}} \\
+YOLOv8n~\cite{yolov82023}
+& Software & 2023
+& 89.77 & \textbf{81.87} & 87.24 & 35.01 & 42.46 \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}$^{\dagger}$
+& AAAI & 2025
+& 92.99 & 77.66 & 86.08 & \textbf{38.20} & \textbf{43.81} \\
+RGSP (Ours)
+& This work & --
+& \textbf{93.91} & 78.57 & \textbf{87.74} & 32.74 & 42.69 \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+Publication 为方法出处，不表示该行数值直接取自相应原论文。
+文献组沿用 SARDet-MIM 的比较记录，
+FEPS-Net、FGBG-Net 和 PEGNet
+分别对应其表中的 FEPS、FGBG 和 PEG。
+本地三种子结果为均值$\pm$样本标准差；
+清理后单种子结果不与历史三种子合并统计。
+$^{\dagger}$表示复用清理后协议的既有 Original 结果。
+P、R 为评估器的最优 F1 工作点结果。
+\end{minipage}
+\end{table*}
+
+在历史三种子从头训练实验中，
+RGSP 的 AP$_{50}$ 从 $86.52\%$ 提高至 $87.97\%$，
+AP$_{50:95}$ 从 $42.03\%$ 提高至 $42.91\%$，
+分别增加 $1.45$ 和 $0.88$ 个百分点；
+AP$_{75}$ 仅提高 $0.05$ 个百分点。
+主要指标的逐种子配对差分别为
+$-0.35$、$+5.93$ 和 $-2.94$ 个百分点，
+平均为 $+0.88\pm4.57$ 个百分点。
+三次比较中仅一次为正，
+均值改善尚未体现为跨种子一致的增益。
+
+在清理后固定划分的单种子实验中，
+RGSP 的 AP$_{50:95}$ 为 $42.69\%$，
+比 YOLOv8n 高 $0.23$ 个百分点，
+但比 Original 低 $1.12$ 个百分点。
+RGSP 的 AP$_{50}$ 高于两个参考模型，
+AP$_{75}$ 则低于两者，
+说明宽松匹配与较严格定位指标的变化并不一致。
+这些结果说明，整块替换的性能变化
+需要结合对应训练和评估条件解释。
+
+\textbf{SSDD 历史结果补充。}
+历史检查点复评、300轮配置和验证集记录
+单独列于表~\ref{tab:ssdd_historical_detection}，
+避免将不同的评估口径合并比较。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{SSDD 历史检查点复评与选模记录（\%）。
+本表保留历史评估口径，不纳入主表的同协议比较。}
+\label{tab:ssdd_historical_detection}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrr}
+\toprule
+Method & Evaluation & P & R
+& AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+\multicolumn{7}{l}{\textit{历史检查点：官方测试集固定复评}} \\
+Mamba-YOLO-T~\cite{mambayolo2024}
+& TEST & 96.738 & 96.154 & 98.605 & 83.613 & 70.348 \\
+IG-DS-SSM/PFIM ex27
+& TEST & 97.759 & 95.857 & 98.688 & 84.005 & 71.445 \\
+\midrule
+\multicolumn{7}{l}{\textit{历史选模记录：不作为独立测试性能}} \\
+IG-DS-SSM/PFIM P3$^{\dagger}$
+& TEST-as-VAL & 97.302 & 95.421 & 98.549 & 85.552 & 72.261 \\
+IG-DS-SSM/PFIM ex27$^{\ddagger}$
+& VAL & -- & -- & 98.704 & -- & 74.022 \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+所有数值来自本地历史记录；IG-DS-SSM/PFIM 为历史内部配置名称，
+不另赋予公开发表年份。
+前两行使用同一评估器、官方232张测试图像、
+$640\times640$输入、batch size 32和FP32复评，
+但训练初始化、预算和代码版本未完全匹配。
+$^{\dagger}$历史P3配置使用部分迁移初始化、300轮训练和20轮模块预热，
+将官方测试集同时用于验证选模，故标记为 TEST-as-VAL。
+$^{\ddagger}$74.022是历史验证集成绩，
+同一ex27检查点的官方测试集复评为71.445，二者不是两次独立测试。
+\end{minipage}
+\end{table*}
+
+历史检查点复评中，
+IG-DS-SSM/PFIM ex27 的 AP$_{50}$、
+AP$_{75}$ 和 AP$_{50:95}$
+分别为 $98.688\%$、$84.005\%$ 和 $71.445\%$。
+相对历史 Mamba-YOLO-T 检查点，
+三项指标分别提高 $0.083$、$0.393$
+和 $1.098$ 个百分点。
+这一比较确认了两个检查点在同一评估器下的数值差异，
+但训练条件尚未完全匹配，
+不能将差值全部归因于模块设计。
+
+历史 P3 配置记录的 AP$_{50:95}$ 为 $72.261\%$，
+历史 ex27 的验证集成绩为 $74.022\%$。
+这些结果高于当前从头训练实验的数值，
+但同时涉及初始化、训练预算、网络版本
+和选模协议的变化。
+其中，300轮配置将官方测试集同时用于验证选模，
+74.022则属于验证集记录；
+因此两项结果保留其原始口径，
+不用于替代当前独立测试对照。
+
+\textbf{SADD。}
+表~\ref{tab:sadd_detection_comparison}
+比较通用 YOLO 检测器、SAR 飞机专用的 YOLO-SAD，
+以及 ViTDet 和 SAR 表征预训练方法。
+YOLO 系列数值转引自 YOLO-SAD 的 Table 9~\cite{yolosad2024}，
+其余文献数值转引自 SARDet-MIM 的 Table 2~\cite{sardetmim2026}。
+YOLO-SAD 文献在去重后的701张图像上
+按60:40划分训练与验证集；
+SARDet-MIM 文献在2966张图像上
+按5:1随机划分训练与测试集。
+本文采用单类阳性子集的固定 $795/44/44$ 划分，
+与两组外部协议不同，因此分别列示而不统一排名。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{SADD 上的目标检测结果（\%）。
+不同文献协议与本地阳性子集结果分组列示；
+加粗仅表示各本地同协议组内的最优结果。}
+\label{tab:sadd_detection_comparison}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccrrrrr}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{Publication}
+& \multicolumn{5}{c}{Detection metrics ($\uparrow$)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-8}
+& Venue & Year & P & R
+& AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+\multicolumn{8}{l}{\textit{文献报告：数值转引自 YOLO-SAD~\cite{yolosad2024}，Table 9}} \\
+YOLOv4~\cite{yolov42020}
+& arXiv & 2020
+& -- & -- & 87.8 & -- & 54.0 \\
+YOLOv7~\cite{yolov72023}
+& CVPR & 2023
+& -- & -- & 89.8 & -- & 55.2 \\
+YOLO-SAD~\cite{yolosad2024}
+& Appl. Sci. & 2024
+& -- & -- & 91.9 & -- & 57.1 \\
+\midrule
+\multicolumn{8}{l}{\textit{文献报告：数值转引自 SARDet-MIM~\cite{sardetmim2026}，Table 2}} \\
+ViTDet~\cite{vitdet2022}
+& ECCV & 2022
+& -- & -- & 93.0 & 51.0 & 50.2 \\
+ViTDet4SAR~\cite{vitdet4sar2025}
+& IGARSS & 2025
+& -- & -- & 94.6 & 47.5 & 50.3 \\
+SARATR-X~\cite{saratrx2025}
+& TIP & 2025
+& -- & -- & 94.3 & 50.7 & 50.4 \\
+SARDet-MIM~\cite{sardetmim2026}
+& Remote Sens. & 2026
+& -- & -- & 95.9 & 59.6 & 55.3 \\
+\midrule
+\multicolumn{8}{l}{\textit{本地对照：固定阳性 $795/44/44$ 划分，3 seeds，scratch}} \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}
+& AAAI & 2025
+& $93.57\pm0.44$ & $\mathbf{94.23\pm2.23}$ & $97.32\pm0.91$ & $\mathbf{52.82\pm4.44}$ & $\mathbf{53.35\pm0.88}$ \\
+RGSP (Ours)
+& This work & --
+& $\mathbf{94.11\pm1.60}$ & $93.97\pm1.82$ & $\mathbf{97.73\pm0.55}$ & $49.11\pm5.49$ & $51.98\pm2.59$ \\
+\midrule
+\multicolumn{8}{l}{\textit{本地对照：固定阳性 $795/44/44$ 划分，seed 0，scratch}} \\
+YOLOv8n~\cite{yolov82023}
+& Software & 2023
+& 93.70 & 94.77 & 97.03 & 50.74 & 52.73 \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}
+& AAAI & 2025
+& \textbf{94.52} & \textbf{97.19} & \textbf{98.53} & \textbf{53.77} & \textbf{54.09} \\
+RGSP (Ours)$^{\dagger}$
+& This work & --
+& 92.59 & 91.94 & 97.09 & 43.56 & 49.00 \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+本地三种子结果为均值$\pm$样本标准差，
+三个训练种子共享同一划分。
+三种子 Original 包含历史断点恢复记录，
+相应限制沿用该组实验说明。
+$^{\dagger}$表示复用三种子实验中的 RGSP seed 0，
+不构成额外独立重复；单种子组的 Original 为新增运行。
+外部两组与本地阳性子集采用不同划分，不据此统一排名。
+\end{minipage}
+\end{table*}
+
+在本地三种子实验中，
+RGSP 的 AP$_{50}$ 均值为 $97.73\%$，
+比 Original 高 $0.41$ 个百分点；
+但 AP$_{75}$ 从 $52.82\%$ 降至 $49.11\%$，
+AP$_{50:95}$ 从 $53.35\%$ 降至 $51.98\%$。
+主要指标的逐种子配对差分别为
+$-4.71$、$-0.78$ 和 $+1.39$ 个百分点，
+平均为 $-1.37\pm3.09$ 个百分点。
+因此，宽松 IoU 条件下的改善
+没有转化为较严格定位指标上的提高。
+
+单种子对照也呈现相同的主要指标变化方向：
+RGSP 的 AP$_{50:95}$ 为 $49.00\%$，
+低于 Original 的 $54.09\%$
+和 YOLOv8n 的 $52.73\%$。
+完整配置在当前设置下仍存在定位性能下降的问题。
+由于测试集仅包含 44 张阳性图像，
+这些结果描述有目标场景下的检测表现，
+纯背景图像上的误检表现仍需另行评估。
+
+\textbf{SAR-ShipDataset。}
+表~\ref{tab:sarship_detection_comparison}
+给出 SAR-ShipDataset 上的结果。
+文献方法包括 SAR 舰船检测的 Improved FCOS、
+跨模态特征迁移方法 CMFT、
+通用扩散式检测器 DiffusionDet，
+以及 DiffDet4SAR 和 MaDiNet。
+方法出处采用各自正式版本，
+本表性能数值则统一取自 MaDiNet 的2024年作者稿
+（arXiv:2411.07500v1，Table 4）~\cite{madinet_preprint}。
+两者不混用为同一版本的报告。
+
+本地结果沿用历史 Mamba-YOLO-T 基线
+以及 IG-DS-SSM/PFIM 的 T、S 规模配置。
+IG-DS-SSM/PFIM 是内部历史方法名称，
+不等同于当前完整 RGSP 配置在统一协议下的独立重复。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{SAR-ShipDataset 上的目标检测结果（\%）。
+方法出处与数值来源分别标注；本地历史配置的训练条件未完全匹配，
+不标注统一最优结果。}
+\label{tab:sarship_detection_comparison}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccrr}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{Publication}
+& \multicolumn{2}{c}{Detection metrics ($\uparrow$)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+& Venue & Year & AP$_{50}$ & AP$_{50:95}$ \\
+\midrule
+\multicolumn{5}{l}{\textit{文献报告：数值转引自 MaDiNet 作者稿~\cite{madinet_preprint}，Table 4}} \\
+Improved FCOS~\cite{improvedfcos2022}
+& JSTARS & 2022
+& 94.1 & -- \\
+CMFT~\cite{cmft2023}
+& TGRS & 2023
+& 94.5 & -- \\
+DiffusionDet~\cite{diffusiondet2023}
+& ICCV & 2023
+& 95.0 & -- \\
+DiffDet4SAR~\cite{diffdet4sar2024}
+& GRSL & 2024
+& 95.1 & -- \\
+MaDiNet~\cite{madinet2025}
+& TCSVT & 2025
+& 97.5 & -- \\
+\midrule
+\multicolumn{5}{l}{\textit{本地历史记录：不同训练配置，未使用测试时增强}} \\
+Mamba-YOLO-T~\cite{mambayolo2024}
+& AAAI & 2025
+& 94.62 & 49.57 \\
+IG-DS-SSM/PFIM-T
+& Internal & --
+& 94.84 & 57.82 \\
+IG-DS-SSM/PFIM-S
+& Internal & --
+& 95.61 & 53.18 \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+文献组全部数值取自 arXiv:2411.07500v1（2024）的 Table 4；
+MaDiNet 行列出的是正式期刊版本的出处（TCSVT，2025），
+不表示本表数值来自该正式版本的表格。
+Improved FCOS 为所引文献中的SAR舰船改进模型，
+不等同于通用FCOS；
+CMFT 为跨模态特征迁移方法。
+Internal 表示仅按本地实验记录列示的历史配置，
+T、S 为其模型规模标记。
+本地基线与方法的批大小调度等条件不同，
+初始化、模型规模和训练预算尚未全部统一，
+不将差值解释为严格组件增益。
+\end{minipage}
+\end{table*}
+
+历史 IG-DS-SSM/PFIM-T 的 AP$_{50}$ 为 $94.84\%$，
+相对 Mamba-YOLO-T 提高 $0.23$ 个百分点；
+AP$_{50:95}$ 从 $49.57\%$ 提高至 $57.82\%$，
+增加 $8.25$ 个百分点。
+历史 S 规模方法的 AP$_{50}$ 为 $95.61\%$，
+高于 T 规模方法，但 AP$_{50:95}$ 为 $53.18\%$，
+低于 T 规模方法。
+这些结果体现不同配置在宽松匹配和综合定位指标上的差异；
+由于历史实验条件尚未全部统一，
+其性能变化仍需在固定协议下进一步验证。
+
+\FloatBarrier
+

@@ -1,0 +1,35 @@
+{
+  "amp": false,
+  "batch": 8,
+  "code": {
+    "mbyolo_train_sarair.py": "04545da98645b92985bf08af03d772fc1e1e3cdd947c71a7db101a9b8f5788d4",
+    "tools/evaluate_sarmix.py": "b618852403eeda8737cadd847ac5193848325141eb6666dac10fa8185d67c50d",
+    "tools/run_sar4_full_suite.py": "9720ab7d48ee3ae6cc47e6515b7bad3fe32131e1b9e0f8bd56748db51d762e86",
+    "ultralytics/nn/modules/mamba_yolo.py": "6abc3a657f7925c076e84f890500e56d4fe00106f4e02edbfea4cf7dea93819d"
+  },
+  "configs": {
+    "SADD:baseline": "74dcda6fcbd55daea5dbb87026787d41886d0104c58b2bf5c805dca0077d5f44",
+    "SADD:full_p3": "ca2d5d36a337a8e7ce236e8cf2877a3d12e4ffc8a06b7fa4adf82e38ef920616"
+  },
+  "datasets": {
+    "SADD": {
+      "path": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SADD/SADD.yaml",
+      "sha256": "72b9e1657ad6d6824dd8b13ebfe8053409ec1b597eb0809454e07608589dc9a8"
+    }
+  },
+  "epochs": 150,
+  "eval_batch": 8,
+  "experiment_id": "ig_dsssm_p3_remaining_detection_seed0",
+  "imgsz": 640,
+  "lr0": 0.0002,
+  "lrf": 0.01,
+  "module_warmup_epochs": 0,
+  "nbs": 64,
+  "optimizer": "AdamW",
+  "optimizer_warmup_epochs": 3.0,
+  "patience": 30,
+  "seed": 0,
+  "state_dim": 32,
+  "weight_decay": 0.0005,
+  "weights": "none"
+}

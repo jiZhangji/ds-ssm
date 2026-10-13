@@ -1,0 +1,1485 @@
+{
+  "schema_version": "rgsp.classification.source_registry.v1",
+  "campaign_id": "rgsp_unified_a6000_20261012_v1",
+  "audited_on": "2026-10-12",
+  "scope": "Classification factory and bounded public-source audit only; no model execution, tests, SSH writes, installations or formal memory edits by this agent.",
+  "adapter_interface": "create_model(method: str, num_classes: int, input_size: int) -> nn.Module",
+  "factory_file": "factory.py",
+  "factory_sha256": "d07c45bfc05d89f996fa990beacb71f96dbb2f5bdae2c900575d3813bfa95f60",
+  "readiness_semantics": {
+    "SOURCE_READY_SERVER_VALIDATION_PENDING": "Implementation is present and statically source-checked. It is not yet asserted here to pass server forward/backward/reload tests.",
+    "BLOCKED": "Retained candidate, excluded from runnable factory. Missing source/variant/protocol must not be replaced with a guessed model.",
+    "null": "Unknown or not yet verified, not an implicit false or permission."
+  },
+  "training_contract": {
+    "input_channels": 3,
+    "input_size": 224,
+    "grayscale_handling": "Replicate/conversion in shared runner; no hidden adapter transform.",
+    "initialization": "scratch",
+    "downloads_allowed_by_factory": false,
+    "loss": "shared cross_entropy",
+    "physical_batch_size": 16,
+    "gradient_accumulation_steps": 4,
+    "effective_batch_size": 64,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0005,
+    "max_epochs": 150,
+    "patience": 30,
+    "lr_schedule": "linear",
+    "warmup_epochs": 3,
+    "precision": "FP32",
+    "dataset_and_selection_protocol": "Owned and frozen by the parent runner, not inferred from literature.",
+    "use_target_during_training_or_selection": false
+  },
+  "evidence_boundary": {
+    "literature_values_not_copied_into_new_results": true,
+    "target_access_definition": "Includes fitting, statistics/normalization fitting, hyperparameter choice and model selection; final holdout evaluation alone is separate.",
+    "installed_library_hashes_required": "The official tag/source hashes below do not prove an installed server library is byte-identical; the runner must capture installed versions and source hashes.",
+    "static_review": "Independent source-level review found no blocking issue for 3x224 eager FP32 on torchvision0.14.x. No local runtime validation performed.",
+    "search_limitations": [
+      "GitHub anonymous REST rate limit observed; no credentials sought.",
+      "Google returned a JavaScript challenge and was not counted as usable search evidence.",
+      "Public GitHub repository HTML, raw source and read-only git refs were used.",
+      "Not found means unconfirmed within this bounded audit, not a universal absence claim."
+    ]
+  },
+  "sources": {
+    "torchvision_0_14_1": {
+      "kind": "official_framework_source",
+      "repository": "https://github.com/pytorch/vision",
+      "tag": "v0.14.1",
+      "commit": "5e8e2f125f140d1e908cf424a6a85cacad758125",
+      "commit_evidence": "Public git ls-remote refs/tags/v0.14.1",
+      "license": "BSD-3-Clause",
+      "license_url": "https://github.com/pytorch/vision/blob/5e8e2f125f140d1e908cf424a6a85cacad758125/LICENSE",
+      "files": [
+        {
+          "path": "torchvision/models/alexnet.py",
+          "sha256_utf8": "659ac6676cf36a060b80c4d90f81bc9de45d227e61f416f49463d5bf7da80fc0",
+          "url": "https://raw.githubusercontent.com/pytorch/vision/5e8e2f125f140d1e908cf424a6a85cacad758125/torchvision/models/alexnet.py"
+        },
+        {
+          "path": "torchvision/models/vgg.py",
+          "sha256_utf8": "d5f0e4bb1dd81448b4b85367792523b3f963c1455e289a47992de760578a8b7b",
+          "url": "https://raw.githubusercontent.com/pytorch/vision/5e8e2f125f140d1e908cf424a6a85cacad758125/torchvision/models/vgg.py"
+        },
+        {
+          "path": "torchvision/models/googlenet.py",
+          "sha256_utf8": "5b425314c18950ddc42fd06c0245e5a09355826e5fb7e09d54d7f586af70d45f",
+          "url": "https://raw.githubusercontent.com/pytorch/vision/5e8e2f125f140d1e908cf424a6a85cacad758125/torchvision/models/googlenet.py"
+        },
+        {
+          "path": "torchvision/models/resnet.py",
+          "sha256_utf8": "4a0cac87612d5ff12d1535a43936af1f656ba2bb97d9a31094a689e7f3093ddf",
+          "url": "https://raw.githubusercontent.com/pytorch/vision/5e8e2f125f140d1e908cf424a6a85cacad758125/torchvision/models/resnet.py"
+        },
+        {
+          "path": "torchvision/models/vision_transformer.py",
+          "sha256_utf8": "47bd825fe673cc17dfd06e2871d6a24db6c652c0bc78a14d4ef0d35e19ba6d5b",
+          "url": "https://raw.githubusercontent.com/pytorch/vision/5e8e2f125f140d1e908cf424a6a85cacad758125/torchvision/models/vision_transformer.py"
+        },
+        {
+          "path": "torchvision/models/swin_transformer.py",
+          "sha256_utf8": "c167518dda24c9fd7001aaed38c3d2dc54ca956f6ba2fe6fe992b404c16b54d1",
+          "url": "https://raw.githubusercontent.com/pytorch/vision/5e8e2f125f140d1e908cf424a6a85cacad758125/torchvision/models/swin_transformer.py"
+        }
+      ],
+      "storage": "Read in memory for audit; no TorchVision code vendored."
+    },
+    "local_table": {
+      "kind": "existing_project_literature_table",
+      "path": "experiments/paper_table_fill_20261012_v1/input/main.tex",
+      "relevant_sections": [
+        "SAR-ACD classification table",
+        "SAMPLE classification table"
+      ],
+      "role": "Candidate names and table-row coverage, not authority for unverified model internals."
+    },
+    "busip_2025": {
+      "title": "Bottom-Up Scattering Information Perception Network for SAR Target Recognition",
+      "paper_url": "https://arxiv.org/abs/2504.04780v1",
+      "full_text_url": "https://arxiv.org/html/2504.04780v1",
+      "table_url": "https://arxiv.org/html/2504.04780v1#S4.T7",
+      "doi": "10.48550/arXiv.2504.04780",
+      "official_code_repository": null,
+      "commit": null,
+      "code_status": "Not verified in paper or bounded searches.",
+      "evidence_grade": "paper_full_text_verified",
+      "queries": [
+        "BU-SIP SAR",
+        "\"Bottom-Up Scattering\"",
+        "BU-SIP SAR in:readme"
+      ]
+    },
+    "light_reskan_2026": {
+      "title": "Light-ResKAN: A Parameter-Sharing Lightweight KAN with Gram Polynomials for Efficient SAR Image Recognition",
+      "paper_url": "https://arxiv.org/abs/2604.01903v2",
+      "doi": "10.1109/JSTARS.2026.3678852",
+      "publication": "IEEE JSTARS 19 (2026), 12445-12460",
+      "official_code_repository": null,
+      "commit": null,
+      "code_status": "No verified author training repository.",
+      "evidence_grade": "paper_and_publication_metadata_verified",
+      "excluded_candidate": {
+        "repository": "https://github.com/qingfeng123-www/light-reskan-web",
+        "reason": "Static ONNX web demo; author relationship and full training implementation unverified."
+      }
+    },
+    "mdbdpl_2027": {
+      "title": "MDB-DPL: Multi-scale deep block-diagonal dictionary pair learning with feature adaptation for SAR target recognition",
+      "doi": "10.1016/j.sigpro.2026.110777",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0165168426002902",
+      "publication": "Signal Processing 250, 110777 (2027 volume; 2026 online)",
+      "official_code_repository": null,
+      "commit": null,
+      "evidence_grade": "bibliographic_identity_verified_full_text_not_obtained",
+      "queries": [
+        "MDBDPL in:name",
+        "MDB-DPL in:name",
+        "\"MDB-DPL\" in:readme",
+        "\"110777\" \"sigpro\" in:readme"
+      ]
+    },
+    "lm_bn_cnn_candidate": {
+      "doi": "10.1109/TGRS.2018.2849967",
+      "publication": "IEEE TGRS 56(12), 7282-7293 (2018)",
+      "official_code_repository": null,
+      "commit": null,
+      "evidence_grade": "strong_same_name_paper_match_but_table_citation_chain_unclosed"
+    },
+    "aconvnet_author_caffe": {
+      "paper_doi": "10.1109/TGRS.2016.2551720",
+      "repository": "https://github.com/fudanxu/MSTAR-AConvNet",
+      "commit": "c61d4dc2c89957aad6dc0542dfbe9ce131e103e0",
+      "authorship_status": "author_associated_high_confidence; README cites Chen2016 and Feng Xu, with Fudan author identity corroboration; no institutional direct backlink established",
+      "readme_url": "https://raw.githubusercontent.com/fudanxu/MSTAR-AConvNet/c61d4dc2c89957aad6dc0542dfbe9ce131e103e0/README.md",
+      "architecture_url": "https://raw.githubusercontent.com/fudanxu/MSTAR-AConvNet/c61d4dc2c89957aad6dc0542dfbe9ce131e103e0/MSTAR_conv_train_test.prototxt",
+      "architecture_bytes": 3428,
+      "architecture_sha256": "8384b9a91a139bb4848c2bd4779fed60eae6439c32a825765991f96adcf94926",
+      "license": null,
+      "license_status": "No repository LICENSE/explicit grant verified; clarify redistribution terms.",
+      "storage": "Read in memory; no source or pretrained weights downloaded to the campaign.",
+      "excluded_non_equivalent_port": {
+        "repository": "https://github.com/jangsoopark/AConvNet-pytorch",
+        "commit": "c60740d40407f68c9df71a8c0b871601d5ba849d",
+        "differences": [
+          "conv3 k6 versus author k5",
+          "conv4 k5 versus author k6",
+          "last stride1 versus author stride3",
+          "Kaiming versus author Gaussian initializer"
+        ]
+      },
+      "pooling_reference": {
+        "repository": "https://github.com/BVLC/caffe",
+        "commit": "9b891540183ddc834a02b2bd81b31afae71b2153",
+        "path": "src/caffe/proto/caffe.proto",
+        "default": "CEIL, global_pooling=false",
+        "limitation": "The original A-ConvNet repository did not pin this Caffe version."
+      }
+    },
+    "mlda_2025": {
+      "title": "Single-Domain Generalization via Multilevel Data Augmentation for SAR Target Recognition Training on Fully Simulated Data",
+      "doi": "10.3390/rs17172966",
+      "paper_url": "https://www.mdpi.com/2072-4292/17/17/2966",
+      "full_text_url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-17-02966/article_deploy/remotesensing-17-02966.xml",
+      "full_text_sha256_utf8": "fc0fae9cf57b6c77ae17c3b923b5bae6a0e8886c5fa18d619cc1db7e086cbbd8",
+      "official_code_repository": null,
+      "commit": null,
+      "evidence_grade": "official_full_text_xml_verified",
+      "code_status": "Only dataset link established; no verified author implementation.",
+      "conflict": "ResNet50/ResNet18 accuracy-to-backbone association conflicts between Table4 and text/Table6."
+    },
+    "inkawhich_author": {
+      "title": "Bridging a Gap in SAR-ATR: Training on Fully Synthetic and Testing on Measured Data",
+      "doi": "10.1109/JSTARS.2021.3059991",
+      "repository": "https://github.com/inkawhich/synthetic-to-measured-sar",
+      "commit": null,
+      "commit_status": "Public git ls-remote query ended with connection reset; no commit invented.",
+      "readme_url": "https://raw.githubusercontent.com/inkawhich/synthetic-to-measured-sar/HEAD/README.md",
+      "readme_sha256_utf8": "978d5e3b60c5b6cd7e7c53fe1f4d7c05c5d515f941452fff470b2388266339e5",
+      "evidence_grade": "author_repository_readme_verified_network_and_training_source_not_yet_audited",
+      "license": null,
+      "storage": "README read only; no code/weights vendored."
+    },
+    "hdanet_author": {
+      "title": "Hierarchical Disentanglement-Alignment Network for Robust SAR Vehicle Recognition",
+      "doi": "10.1109/JSTARS.2023.3324182",
+      "paper_url": "https://arxiv.org/abs/2304.03550",
+      "repository": "https://github.com/waterdisappear/SAR-ATR-HDANet",
+      "commit": "3349ff9975eb38c3ffa55fbdf0276acf63028eb6",
+      "readme_url": "https://raw.githubusercontent.com/waterdisappear/SAR-ATR-HDANet/3349ff9975eb38c3ffa55fbdf0276acf63028eb6/README.md",
+      "readme_sha256_utf8": "7ce93fada4249b056d6447c7c0bcca162e27fa90a4b2949067f58924d0056e07",
+      "license": "CC-BY-NC-4.0 (README statement; full legal file not independently read)",
+      "evidence_grade": "author_repository_readme_and_commit_verified",
+      "storage": "Read only; no code/weights vendored."
+    },
+    "ssr_2024": {
+      "title": "Soft Segmented Randomization: Enhancing Domain Generalization in SAR ATR for Synthetic-to-Measured",
+      "doi": "10.1109/ACCESS.2024.3504574",
+      "publication": "IEEE Access 12 (2024), 175801-175816",
+      "official_code_repository": null,
+      "commit": null,
+      "evidence_grade": "paper_identity_and_method_summary_from_MLDA_verified_author_code_unverified",
+      "queries": [
+        "\"Soft Segmented Randomization\"",
+        "SSR SAR"
+      ]
+    },
+    "irasnet_2025": {
+      "doi": "10.1109/TAES.2025.3589337",
+      "publication": "IEEE TAES 61(6) (2025), 15395-15411",
+      "official_code_repository": null,
+      "commit": null,
+      "evidence_grade": "author_manuscript_and_publication_metadata_checked",
+      "code_status": "No code link established from checked manuscript versions; exact-name GitHub repository search returned no candidate.",
+      "version_caution": "Author manuscript v1 and v3 differ; final architecture/protocol needs fixed-version binding."
+    }
+  },
+  "candidate_coverage": {
+    "factory_ids": [
+      "alexnet",
+      "vgg16",
+      "googlenet",
+      "resnet50",
+      "vit_b_16",
+      "swin_t",
+      "swin_b",
+      "erm_resnet50"
+    ],
+    "blocked_ids": [
+      "vggnet",
+      "resnet",
+      "vit",
+      "a_convnet",
+      "bu_sip",
+      "light_reskan",
+      "mdbdpl",
+      "lm_bn_cnn",
+      "cbam_net",
+      "vib_net",
+      "coral",
+      "dann",
+      "inkawhich",
+      "vrex",
+      "hdanet",
+      "ssr",
+      "irasnet",
+      "mlda",
+      "erm"
+    ],
+    "total_unique_ids": 27,
+    "original_table_row_occurrences": 26,
+    "new_explicit_variant_ids": [
+      "vgg16",
+      "vit_b_16",
+      "erm_resnet50"
+    ],
+    "unambiguous_new_baselines_must_not_backfill_ambiguous_literature_labels": true
+  },
+  "methods": [
+    {
+      "method_id": "alexnet",
+      "display_name": "AlexNet (TorchVision)",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "SOURCE_READY_SERVER_VALIDATION_PENDING",
+      "factory_supported": true,
+      "source_ids": [
+        "torchvision_0_14_1"
+      ],
+      "implementation_origin": "official_torchvision_library",
+      "source_file": "alexnet.py",
+      "exact_variant": {
+        "builder": "torchvision.models.alexnet",
+        "conv_channels": [
+          64,
+          192,
+          384,
+          256,
+          256
+        ],
+        "classifier_hidden": [
+          4096,
+          4096
+        ],
+        "dropout": 0.5,
+        "adaptive_pool": [
+          6,
+          6
+        ]
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "AlexNet"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "New unified source-only training contract; final target evaluation is separate."
+      },
+      "custom_training_required": false,
+      "notes": [
+        "Official TorchVision implementation, not a claim of byte-identical original 2012 author code or BU-SIP training.",
+        "All parameters including the class head are randomly initialized."
+      ]
+    },
+    {
+      "method_id": "vgg16",
+      "display_name": "VGG16 (non-BN; new explicit variant)",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "SOURCE_READY_SERVER_VALIDATION_PENDING",
+      "factory_supported": true,
+      "source_ids": [
+        "torchvision_0_14_1"
+      ],
+      "implementation_origin": "official_torchvision_library",
+      "source_file": "vgg.py",
+      "exact_variant": {
+        "builder": "torchvision.models.vgg16",
+        "configuration": "D",
+        "batch_norm": false,
+        "classifier_hidden": [
+          4096,
+          4096
+        ],
+        "dropout": 0.5,
+        "adaptive_pool": [
+          7,
+          7
+        ]
+      },
+      "paper_rows": [],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "New unified source-only training contract; final target evaluation is separate."
+      },
+      "custom_training_required": false,
+      "notes": [
+        "New explicit unified baseline. The paper's VGGNet row does not identify depth or BatchNorm; it remains separately blocked under vggnet.",
+        "Do not attach old VGGNet scores or Params to this variant by assumption."
+      ]
+    },
+    {
+      "method_id": "googlenet",
+      "display_name": "GoogLeNet (TorchVision; no auxiliary heads)",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "SOURCE_READY_SERVER_VALIDATION_PENDING",
+      "factory_supported": true,
+      "source_ids": [
+        "torchvision_0_14_1"
+      ],
+      "implementation_origin": "official_torchvision_library",
+      "source_file": "googlenet.py",
+      "exact_variant": {
+        "builder": "torchvision.models.googlenet",
+        "aux_logits": false,
+        "transform_input": false,
+        "init_weights": true,
+        "dropout": 0.2,
+        "output_mode": "single logits tensor in eager execution"
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "GoogLeNet"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "New unified source-only training contract; final target evaluation is separate."
+      },
+      "custom_training_required": false,
+      "notes": [
+        "Auxiliary classifiers/losses are deliberately disabled for the shared CE runner; this is a disclosed protocol adaptation.",
+        "TorchScript has a different return convention and is outside the validated interface."
+      ]
+    },
+    {
+      "method_id": "resnet50",
+      "display_name": "ResNet-50 v1.5 (TorchVision)",
+      "datasets": [
+        "SAR-ACD",
+        "SAMPLE"
+      ],
+      "readiness": "SOURCE_READY_SERVER_VALIDATION_PENDING",
+      "factory_supported": true,
+      "source_ids": [
+        "torchvision_0_14_1"
+      ],
+      "implementation_origin": "official_torchvision_library",
+      "source_file": "resnet.py",
+      "exact_variant": {
+        "builder": "torchvision.models.resnet50",
+        "blocks": [
+          3,
+          4,
+          6,
+          3
+        ],
+        "block": "Bottleneck",
+        "bottleneck_downsampling_stride_location": "3x3 conv2 (v1.5)",
+        "groups": 1,
+        "width_per_group": 64
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "ResNet-50"
+        },
+        {
+          "dataset": "SAMPLE",
+          "label": "ResNet-50"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "New unified source-only training contract; final target evaluation is separate."
+      },
+      "custom_training_required": false,
+      "notes": [
+        "TorchVision uses v1.5 stride placement, unlike the original paper's first-1x1 stride variant.",
+        "Not an alias for the separate unspecified ResNet literature row.",
+        "The new scratch/224/AdamW run is not a reproduction of either literature training recipe."
+      ]
+    },
+    {
+      "method_id": "vit_b_16",
+      "display_name": "ViT-B/16 (new explicit variant)",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "SOURCE_READY_SERVER_VALIDATION_PENDING",
+      "factory_supported": true,
+      "source_ids": [
+        "torchvision_0_14_1"
+      ],
+      "implementation_origin": "official_torchvision_library",
+      "source_file": "vision_transformer.py",
+      "exact_variant": {
+        "builder": "torchvision.models.vit_b_16",
+        "patch_size": 16,
+        "num_layers": 12,
+        "num_heads": 12,
+        "hidden_dim": 768,
+        "mlp_dim": 3072,
+        "image_size": "input_size (224 in campaign)",
+        "representation_size": null
+      },
+      "paper_rows": [],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "New unified source-only training contract; final target evaluation is separate."
+      },
+      "custom_training_required": false,
+      "notes": [
+        "New explicit unified baseline; the original bare ViT row does not independently establish this exact size.",
+        "Random positional embeddings; no pretrained checkpoint interpolation."
+      ]
+    },
+    {
+      "method_id": "swin_t",
+      "display_name": "Swin-T (V1, TorchVision)",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "SOURCE_READY_SERVER_VALIDATION_PENDING",
+      "factory_supported": true,
+      "source_ids": [
+        "torchvision_0_14_1"
+      ],
+      "implementation_origin": "official_torchvision_library",
+      "source_file": "swin_transformer.py",
+      "exact_variant": {
+        "builder": "torchvision.models.swin_t",
+        "version": "V1",
+        "patch_size": [
+          4,
+          4
+        ],
+        "window_size": [
+          7,
+          7
+        ],
+        "embed_dim": 96,
+        "depths": [
+          2,
+          2,
+          6,
+          2
+        ],
+        "num_heads": [
+          3,
+          6,
+          12,
+          24
+        ],
+        "stochastic_depth_prob": 0.2
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "Swin-T"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "New unified source-only training contract; final target evaluation is separate."
+      },
+      "custom_training_required": false,
+      "notes": [
+        "Explicit V1 tiny, not Swin-V2; no pretrained weights."
+      ]
+    },
+    {
+      "method_id": "swin_b",
+      "display_name": "Swin-B (V1, TorchVision)",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "SOURCE_READY_SERVER_VALIDATION_PENDING",
+      "factory_supported": true,
+      "source_ids": [
+        "torchvision_0_14_1"
+      ],
+      "implementation_origin": "official_torchvision_library",
+      "source_file": "swin_transformer.py",
+      "exact_variant": {
+        "builder": "torchvision.models.swin_b",
+        "version": "V1",
+        "patch_size": [
+          4,
+          4
+        ],
+        "window_size": [
+          7,
+          7
+        ],
+        "embed_dim": 128,
+        "depths": [
+          2,
+          2,
+          18,
+          2
+        ],
+        "num_heads": [
+          4,
+          8,
+          16,
+          32
+        ],
+        "stochastic_depth_prob": 0.5
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "Swin-B"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "New unified source-only training contract; final target evaluation is separate."
+      },
+      "custom_training_required": false,
+      "notes": [
+        "Explicit V1 base, not Swin-V2; no pretrained weights."
+      ]
+    },
+    {
+      "method_id": "erm_resnet50",
+      "display_name": "ERM / ResNet-50 (new uniform-CE baseline)",
+      "datasets": [
+        "SAMPLE"
+      ],
+      "readiness": "SOURCE_READY_SERVER_VALIDATION_PENDING",
+      "factory_supported": true,
+      "source_ids": [
+        "torchvision_0_14_1"
+      ],
+      "implementation_origin": "official_torchvision_library",
+      "source_file": "resnet.py",
+      "exact_variant": {
+        "builder": "torchvision.models.resnet50",
+        "blocks": [
+          3,
+          4,
+          6,
+          3
+        ],
+        "bottleneck_downsampling_stride_location": "3x3 conv2 (v1.5)",
+        "training": "parent uniform cross-entropy contract"
+      },
+      "paper_rows": [],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "New unified source-only training contract; final target evaluation is separate."
+      },
+      "custom_training_required": false,
+      "notes": [
+        "New explicit ID requested for this campaign; it does not overwrite the literature ERM row.",
+        "Architecture equals resnet50; run separately only if the parent protocol creates a genuinely different training condition."
+      ]
+    },
+    {
+      "method_id": "vggnet",
+      "display_name": "VGGNet (unresolved original table label)",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "BLOCKED_EXACT_VARIANT_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "busip_2025"
+      ],
+      "exact_variant": null,
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "VGGNet"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": null,
+        "target_labels_during_training": null,
+        "target_for_model_or_hyperparameter_selection": null,
+        "evidence": "Not confirmed for the exact literature implementation; null means unknown, not permission."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Bind depth/configuration, BatchNorm, classifier and upstream initialization from the actual comparison implementation."
+      ],
+      "notes": [
+        "BU-SIP Table 7 uses VGGNet without enough architecture detail. vgg16 is provided only as a separately named new variant."
+      ]
+    },
+    {
+      "method_id": "resnet",
+      "display_name": "ResNet (unresolved original table label)",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "BLOCKED_EXACT_VARIANT_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "busip_2025"
+      ],
+      "exact_variant": null,
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "ResNet"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": null,
+        "target_labels_during_training": null,
+        "target_for_model_or_hyperparameter_selection": null,
+        "evidence": "Not confirmed for the exact literature implementation; null means unknown, not permission."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Bind depth, block type and exact implementation from the actual comparison."
+      ],
+      "notes": [
+        "Do not reuse the separate ResNet-50 row or its weights/complexity as the unspecified ResNet baseline."
+      ]
+    },
+    {
+      "method_id": "vit",
+      "display_name": "ViT (unresolved original table label)",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "BLOCKED_EXACT_VARIANT_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "local_table"
+      ],
+      "exact_variant": null,
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "ViT"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": null,
+        "target_labels_during_training": null,
+        "target_for_model_or_hyperparameter_selection": null,
+        "evidence": "Not confirmed for the exact literature implementation; null means unknown, not permission."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Bind variant size, patch size, backbone implementation and original comparison source."
+      ],
+      "notes": [
+        "vit_b_16 is constructible as a separately named unified baseline, not an inferred paper-row mapping."
+      ]
+    },
+    {
+      "method_id": "a_convnet",
+      "display_name": "A-ConvNet",
+      "datasets": [
+        "SAR-ACD",
+        "SAMPLE"
+      ],
+      "readiness": "BLOCKED_ARCHITECTURE_INPUT_ADAPTER_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "aconvnet_author_caffe",
+        "busip_2025",
+        "mlda_2025"
+      ],
+      "exact_variant": {
+        "framework": "Caffe",
+        "conv_channels": [
+          16,
+          32,
+          64,
+          128,
+          10
+        ],
+        "kernels": [
+          5,
+          5,
+          5,
+          6,
+          3
+        ],
+        "conv_strides": [
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "max_pool_after": [
+          1,
+          2,
+          3
+        ],
+        "max_pool_kernel": 2,
+        "max_pool_stride": 2,
+        "padding": 0,
+        "relu_after": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "dropout_after_conv4": 0.5,
+        "global_average_pool": false,
+        "initialization": "Gaussian std=0.01; bias=0.1 except last bias=0",
+        "declared_input_channels": null,
+        "declared_input_size": null
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "A-ConvNet"
+        },
+        {
+          "dataset": "SAMPLE",
+          "label": "A-ConvNet"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "The located MSTAR model is supervised and has no extra domain-alignment branch. The SAR-ACD and SAMPLE paper-row implementation/selection recipe is not closed."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Resolve input/channel/preprocessing from the author LMDB and bind the exact table-row implementation.",
+        "Audit a faithful PyTorch port including Caffe ceil-pooling semantics and output-to-logits behavior.",
+        "Clarify upstream reuse license before distributing copied implementation."
+      ],
+      "notes": [
+        "Author-associated source is pinned, but it is not proof of the BU-SIP or MLDA baseline implementation.",
+        "The prototxt has no input size/channel or crop declaration. Do not claim the author explicitly specified 1x88.",
+        "Static shape derivation with Caffe's default ceil pooling gives a 6x6 final spatial map at 224, not one class vector. No invented GAP is added.",
+        "The commonly found jangsoopark PyTorch port changes conv3/conv4 kernels, last stride and initialization and was excluded as non-equivalent."
+      ]
+    },
+    {
+      "method_id": "bu_sip",
+      "display_name": "BU-SIP",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "BLOCKED_MISSING_VERIFIED_AUTHOR_CODE",
+      "factory_supported": false,
+      "source_ids": [
+        "busip_2025"
+      ],
+      "exact_variant": {
+        "components": [
+          "learnable Morlet local scattering perception without downsampling",
+          "ViT-based scattering perception/reasoning",
+          "cross-attention part aggregation"
+        ],
+        "sar_acd_parts": 5,
+        "losses": [
+          "classification CE",
+          "IPC",
+          "MPB",
+          "GDC",
+          "PSO"
+        ],
+        "backbone_depth_width": null
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "BU-SIP"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "Paper describes supervised SAR images/class labels, not extra target-domain training access."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Verified author code and complete layer/width definitions.",
+        "Exact multi-objective losses/weights and part construction.",
+        "Resolve VGG variant and initialization; do not download undisclosed pretrained weights."
+      ],
+      "notes": [
+        "Paper protocol uses six classes, 200 training images per class (1200 train / 1832 test). It differs from the new uniform experiment.",
+        "No author repository was verified from the paper or the bounded public searches."
+      ]
+    },
+    {
+      "method_id": "light_reskan",
+      "display_name": "Light-ResKAN",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "BLOCKED_MISSING_VERIFIED_AUTHOR_CODE",
+      "factory_supported": false,
+      "source_ids": [
+        "light_reskan_2026"
+      ],
+      "exact_variant": {
+        "backbone": "parameter-sharing Gram-KAN Bottleneck ResKAGN",
+        "stage_depths": [
+          3,
+          4,
+          6,
+          3
+        ],
+        "gram_degree": 3,
+        "basis_functions": 4,
+        "components": [
+          "tanh",
+          "learnable beta",
+          "SiLU",
+          "learnable 1x1 polynomial projection",
+          "fixed all-one depthwise NxN aggregation"
+        ],
+        "channel_widths": null
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "Light-ResKAN"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "Paper uses independent supervised training for each dataset; no extra target-domain data described."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Verified author training code and channel widths.",
+        "Bind split/seed, complete loss and optimizer/scheduler behavior."
+      ],
+      "notes": [
+        "Current paper version is accepted/published JSTARS 2026; the local arXiv-only citation is older and was not edited by this agent.",
+        "Reported protocol: 2124/908 images; resize128 then center112; AdamW 5e-4, batch16, dropout0.1, 200 epochs.",
+        "The same-name light-reskan-web candidate was a static ONNX demo with unverified authorship, not a verified training implementation.",
+        "Reported 0.05G is per batch, not admissible as per-image FLOPs."
+      ]
+    },
+    {
+      "method_id": "mdbdpl",
+      "display_name": "MDB-DPL",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "BLOCKED_OFFICIAL_IMPLEMENTATION_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "mdbdpl_2027"
+      ],
+      "exact_variant": {
+        "expanded_name": "Multi-scale deep block-diagonal dictionary pair learning with feature adaptation",
+        "framework": null
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "MDBDPL"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": null,
+        "target_labels_during_training": null,
+        "target_for_model_or_hyperparameter_selection": null,
+        "evidence": "Not confirmed for the exact literature implementation; null means unknown, not permission."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Obtain and verify full author method/code, exact feature extractor, dictionary objective and train/test protocol."
+      ],
+      "notes": [
+        "Bibliographic identity confirmed; full text and official code not obtained in this audit.",
+        "Multi-scale is not multi-domain. Feature adaptation alone does not prove target-domain/UDA access.",
+        "Six-class 8:2 and existing literature scores are retained only as prior table claims, not freshly full-text verified facts.",
+        "Online 2026, formal Signal Processing volume 250 (2027)."
+      ]
+    },
+    {
+      "method_id": "lm_bn_cnn",
+      "display_name": "Lm-BN-CNN",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "BLOCKED_OFFICIAL_IMPLEMENTATION_AND_VARIANT_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "lm_bn_cnn_candidate",
+        "busip_2025"
+      ],
+      "exact_variant": {
+        "candidate_components": [
+          "morphological target segmentation",
+          "batch normalization",
+          "large-margin softmax"
+        ],
+        "exact_sar_acd_variant": null
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "Lm-BN-CNN"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": null,
+        "target_labels_during_training": null,
+        "target_for_model_or_hyperparameter_selection": null,
+        "evidence": "Not confirmed for the exact literature implementation; null means unknown, not permission."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Close the citation/identity chain from BU-SIP Table 7 to the original method.",
+        "Verify author code, segmentation preprocessing and large-margin loss."
+      ],
+      "notes": [
+        "The 2018 TGRS paper is a strong same-name match, not a confirmed citation link for this table row.",
+        "Do not replace it with an ordinary BN CNN and CE."
+      ]
+    },
+    {
+      "method_id": "cbam_net",
+      "display_name": "CBAM Net",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "BLOCKED_METHOD_IDENTITY_AND_VARIANT_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "busip_2025"
+      ],
+      "exact_variant": null,
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "CBAM Net"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": null,
+        "target_labels_during_training": null,
+        "target_for_model_or_hyperparameter_selection": null,
+        "evidence": "Not confirmed for the exact literature implementation; null means unknown, not permission."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Identify the exact method paper, backbone/depth, attention insertions and author code."
+      ],
+      "notes": [
+        "Only the Table 7 name/score was confirmed. A generic CBAM implementation is not sufficient provenance for this row."
+      ]
+    },
+    {
+      "method_id": "vib_net",
+      "display_name": "VIB Net",
+      "datasets": [
+        "SAR-ACD"
+      ],
+      "readiness": "BLOCKED_METHOD_IDENTITY_AND_VARIANT_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "busip_2025"
+      ],
+      "exact_variant": null,
+      "paper_rows": [
+        {
+          "dataset": "SAR-ACD",
+          "label": "VIB Net"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": null,
+        "target_labels_during_training": null,
+        "target_for_model_or_hyperparameter_selection": null,
+        "evidence": "Not confirmed for the exact literature implementation; null means unknown, not permission."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Identify the full acronym/method paper, backbone, latent dimensions, loss and author code."
+      ],
+      "notes": [
+        "Only the Table 7 name/score was confirmed. Do not bind generic Deep VIB or unrelated SAR-optical fusion code."
+      ]
+    },
+    {
+      "method_id": "coral",
+      "display_name": "CORAL (MLDA comparison variant)",
+      "datasets": [
+        "SAMPLE"
+      ],
+      "readiness": "BLOCKED_AUTHOR_COMPARISON_IMPLEMENTATION_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "mlda_2025"
+      ],
+      "exact_variant": {
+        "backbone": "ResNet50 (exact library version unverified)",
+        "augmentation": "MLDA comparison Gaussian-noise augmentation",
+        "objective": "source-domain second-order correlation alignment"
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAMPLE",
+          "label": "CORAL"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "MLDA sections 4.1-4.2 describe synthetic-only training and entirely measured-data testing; the exact implementation and source-domain grouping remain unverified."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Exact author comparison code.",
+        "Define augmented-source domains/batching and CORAL coefficient.",
+        "Implement and audit covariance alignment objective rather than plain CE."
+      ],
+      "notes": [
+        "Primary algorithm reference: Sun and Saenko, Deep CORAL, ECCV Workshops 2016, arXiv:1607.01719.",
+        "The paper describes this as source-only DG. An original UDA CORAL loop using measured target data is not the same protocol."
+      ]
+    },
+    {
+      "method_id": "dann",
+      "display_name": "DANN (MLDA comparison variant)",
+      "datasets": [
+        "SAMPLE"
+      ],
+      "readiness": "BLOCKED_AUTHOR_COMPARISON_IMPLEMENTATION_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "mlda_2025"
+      ],
+      "exact_variant": {
+        "backbone": "ResNet50 (exact library version unverified)",
+        "augmentation": "MLDA comparison Gaussian-noise augmentation",
+        "objective": "domain-adversarial learning with generated source domains"
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAMPLE",
+          "label": "DANN"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "MLDA sections 4.1-4.2 describe synthetic-only training and entirely measured-data testing; the exact implementation and source-domain grouping remain unverified."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Exact author comparison code.",
+        "Define source-domain grouping, discriminator, GRL schedule and domain-loss coefficient.",
+        "Implement and audit the adversarial objective."
+      ],
+      "notes": [
+        "Do not import an ordinary target-access UDA recipe or label a bare ResNet50+CE model as DANN."
+      ]
+    },
+    {
+      "method_id": "inkawhich",
+      "display_name": "Inkawhich et al.",
+      "datasets": [
+        "SAMPLE"
+      ],
+      "readiness": "BLOCKED_AUTHOR_PROTOCOL_ADAPTATION_REQUIRED",
+      "factory_supported": false,
+      "source_ids": [
+        "inkawhich_author",
+        "mlda_2025"
+      ],
+      "exact_variant": {
+        "architecture": "exact paper comparison variant not yet bound",
+        "paper_method": "synthetic data augmentation plus generalization/ensemble training strategies",
+        "author_entry": "main_experiment41_tester.py",
+        "author_protocol_parameter": "K (must bind K=0 for fully synthetic training)"
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAMPLE",
+          "label": "Inkawhich et al."
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "The author repository explicitly concerns fully synthetic training and measured testing; its parameter K permits other settings, which must not be selected implicitly."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Pin the exact author commit (read-only git query failed), inspect training/network source and license.",
+        "Bind K=0, member/ensemble choice, augmentation and model-selection behavior.",
+        "Port only audited required behavior to the current runtime without reducing the method to CE."
+      ],
+      "notes": [
+        "Author README and its SHA were verified; no source code was vendored or executed.",
+        "Repository cites the original paper and SAMPLE Experiment 4.1; documented environment is Python3.6 / PyTorch1.3.1 / NumPy1.16.4.",
+        "MLDA's reported row is not proved identical to running this repository unchanged."
+      ]
+    },
+    {
+      "method_id": "vrex",
+      "display_name": "VREx (MLDA comparison variant)",
+      "datasets": [
+        "SAMPLE"
+      ],
+      "readiness": "BLOCKED_AUTHOR_COMPARISON_IMPLEMENTATION_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "mlda_2025"
+      ],
+      "exact_variant": {
+        "backbone": "ResNet50 (exact library version unverified)",
+        "augmentation": "MLDA comparison Gaussian-noise augmentation",
+        "objective": "empirical risk plus cross-source-domain risk-variance penalty"
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAMPLE",
+          "label": "VREx"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "MLDA sections 4.1-4.2 describe synthetic-only training and entirely measured-data testing; the exact implementation and source-domain grouping remain unverified."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Exact author comparison code.",
+        "Bind pseudo-domain partition, penalty coefficient and annealing.",
+        "Implement multi-domain risk-variance objective."
+      ],
+      "notes": [
+        "Primary method: Krueger et al., Out-of-Distribution Generalization via Risk Extrapolation (REx), ICML2021.",
+        "A general library implementation would not establish the MLDA comparison's exact variant."
+      ]
+    },
+    {
+      "method_id": "hdanet",
+      "display_name": "HDANet",
+      "datasets": [
+        "SAMPLE"
+      ],
+      "readiness": "BLOCKED_AUTHOR_PROTOCOL_ADAPTATION_REQUIRED",
+      "factory_supported": false,
+      "source_ids": [
+        "hdanet_author",
+        "mlda_2025"
+      ],
+      "exact_variant": {
+        "framework": "PyTorch",
+        "components": [
+          "domain data generation",
+          "multi-task-assisted mask disentanglement",
+          "contrastive alignment of target features"
+        ],
+        "author_dataset": "MSTAR SOC/EOC"
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAMPLE",
+          "label": "HDANet"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "MLDA sections 4.1-4.2 describe synthetic-only training and entirely measured-data testing; the exact implementation and source-domain grouping remain unverified."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Bind MLDA's SAMPLE adaptation to the pinned author MSTAR implementation.",
+        "Audit pseudo-mask generation (Captum), auxiliary tasks, domain augmentations and contrastive objective.",
+        "Resolve compatible dependencies and source-only model-selection behavior without installing implicitly."
+      ],
+      "notes": [
+        "Author repository and fixed commit were verified. This is source discovery, not a runnable SAMPLE adapter.",
+        "Author README demo uses NAdam and ExponentialLR, unlike the new uniform protocol; no author commands were run.",
+        "README states CC BY-NC 4.0; distribution must retain applicable terms."
+      ]
+    },
+    {
+      "method_id": "ssr",
+      "display_name": "SSR",
+      "datasets": [
+        "SAMPLE"
+      ],
+      "readiness": "BLOCKED_MISSING_VERIFIED_AUTHOR_CODE",
+      "factory_supported": false,
+      "source_ids": [
+        "ssr_2024",
+        "mlda_2025"
+      ],
+      "exact_variant": {
+        "expanded_name": "Soft Segmented Randomization",
+        "components": [
+          "Gaussian mixture-model soft segmentation",
+          "target/clutter separation",
+          "selective clutter randomization"
+        ],
+        "backbone": null
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAMPLE",
+          "label": "SSR"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "MLDA sections 4.1-4.2 describe synthetic-only training and entirely measured-data testing; the exact implementation and source-domain grouping remain unverified."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Verify author code, segmentation/randomization parameters and exact backbone.",
+        "Audit offline/online preprocessing and source-only selection."
+      ],
+      "notes": [
+        "Do not substitute unsegmented Gaussian noise and call it SSR.",
+        "Bounded exact-title/acronym repository searches did not establish author source; this is not a claim that no source exists."
+      ]
+    },
+    {
+      "method_id": "irasnet",
+      "display_name": "IRASNet",
+      "datasets": [
+        "SAMPLE"
+      ],
+      "readiness": "BLOCKED_OFFICIAL_IMPLEMENTATION_AND_VARIANT_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "irasnet_2025"
+      ],
+      "exact_variant": {
+        "backbone": "custom two-level Conv-BN-MaxPool-ReLU plus two CRM modules",
+        "components": [
+          "clutter-reduction masks and supervision",
+          "label/domain heads",
+          "gradient reversal",
+          "source randomization"
+        ],
+        "source_randomization_factor": 10,
+        "full_channels_heads": null
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAMPLE",
+          "label": "IRASNet"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "Author manuscript scenario uses randomized synthetic training only, with no measured images or labels used for training."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Locate verified author code and pin manuscript/release version.",
+        "Bind all channels/heads, CRM mask generation, GRL and auxiliary losses.",
+        "Audit source randomization and Scenario 1 split/selection rather than generic CE."
+      ],
+      "notes": [
+        "Formal publication DOI was confirmed; author manuscript versions differ.",
+        "No author code link was established from the audited manuscript versions or exact-name repository search.",
+        "Do not substitute a ResNet-based DANN or plain CE CNN."
+      ]
+    },
+    {
+      "method_id": "mlda",
+      "display_name": "MLDA",
+      "datasets": [
+        "SAMPLE"
+      ],
+      "readiness": "BLOCKED_MISSING_AUTHOR_CODE_AND_VARIANT_CONFLICT",
+      "factory_supported": false,
+      "source_ids": [
+        "mlda_2025"
+      ],
+      "exact_variant": {
+        "described_backbone": "ResNet50",
+        "feature_mixstyle_after_blocks": [
+          1,
+          2,
+          3
+        ],
+        "components": [
+          "Gaussian/noise pixel augmentation",
+          "frequency-domain augmentation",
+          "MixStyle",
+          "domain discriminator",
+          "gradient reversal"
+        ],
+        "reported_architecture_conflict": "Text and Table6 associate ResNet50 with 96.76; Table4 associates 96.76 with ResNet18 and 95.41 with ResNet50."
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAMPLE",
+          "label": "MLDA"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "MLDA sections 4.1-4.2 describe synthetic-only training and entirely measured-data testing; the exact implementation and source-domain grouping remain unverified."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Verified author implementation and exact backbone resolution.",
+        "Bind pixel/frequency augmentation and style mixing.",
+        "Implement and audit domain discriminator/GRL objective and source-domain batching."
+      ],
+      "notes": [
+        "Official full-text XML was read and hashed; it links the SAMPLE dataset but no verified author implementation was found.",
+        "Paper protocol: 806 synthetic train / 539 measured test; batch36; SGD momentum0.9, weight_decay0.0005, lr0.001 cosine, 20x500=10000 updates.",
+        "A uniform 150-epoch AdamW run would be a new adapted protocol, not paper reproduction."
+      ]
+    },
+    {
+      "method_id": "erm",
+      "display_name": "ERM (MLDA literature row)",
+      "datasets": [
+        "SAMPLE"
+      ],
+      "readiness": "BLOCKED_AUTHOR_AUGMENTATION_AND_PROTOCOL_UNVERIFIED",
+      "factory_supported": false,
+      "source_ids": [
+        "mlda_2025"
+      ],
+      "exact_variant": {
+        "backbone": "ResNet50",
+        "augmentation": "Gaussian-noise augmentation shared with general DG comparison methods",
+        "objective": "empirical risk minimization",
+        "exact_library_and_augmentation": null
+      },
+      "paper_rows": [
+        {
+          "dataset": "SAMPLE",
+          "label": "ERM"
+        }
+      ],
+      "literal_literature_result_reproduction": false,
+      "target_domain_access": {
+        "target_images_during_training": false,
+        "target_labels_during_training": false,
+        "target_for_model_or_hyperparameter_selection": false,
+        "evidence": "MLDA sections 4.1-4.2 describe synthetic-only training and entirely measured-data testing; the exact implementation and source-domain grouping remain unverified."
+      },
+      "custom_training_required": true,
+      "missing_requirements": [
+        "Bind exact Gaussian augmentation, sampling, source protocol and author implementation.",
+        "Resolve the source's ERM citation to Mixup without inferring unreported behavior."
+      ],
+      "notes": [
+        "The literature ERM row is not the paper's bare ResNet50 row and is not the new erm_resnet50 uniform-CE baseline.",
+        "Shared inference architecture does not establish equivalent training."
+      ]
+    }
+  ]
+}

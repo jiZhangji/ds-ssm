@@ -1,0 +1,56 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_original_seed0/provenance.json",
+      "sha256": "d2bedf87d95c63f999e66c04fe1f6682e3c502a7a2c0f135944155b96794cbb8"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_original_seed0/train_complete.json",
+      "sha256": "07ae8a4c35d7ef47d46eeb46d83b1536efbf395ad1c98db1c2ec47ff808823cb"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_original_seed0/eval_test.json",
+      "sha256": "ed9ffb47c560f4783b6721bd1bcee5c1b85abdaa0398ea39ab1dea8bb3b7418c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_original_seed0/evaluation_complete.json",
+      "sha256": "23850f2541623670457b87cc6d82459a10f28c2bcb044265a98160b6fde92739"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_original_seed0/weights/best.pt",
+      "sha256": "e5f42999c3c2dfd0ca27febe2e1246545b74bbf4ec4e8906566210bac6ad019f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_original_seed0/weights/raw_fp32_last.pt",
+      "sha256": "b486ae54a9b375f0d192449430bdeba0ec16b7dfcc46569b35c7455f0ccef88b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_original_seed0/controls_by_epoch.jsonl",
+      "sha256": "5db5802d1f604e82e333346a052f1e28d3eb7e1e0e0923d62bc632b6ffcf7469"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_original_seed0/trial_complete.json",
+      "sha256": "313157d39eaaec660807567497e9d79e8e7aa90cd61d36e9c949f7c232edf382"
+    }
+  ],
+  "details": {
+    "kind": "command",
+    "overall": {
+      "ap50": 0.9544108740023634,
+      "ap50_95": 0.519042077767667,
+      "ap75": 0.4937717494908893,
+      "precision": 0.9239741240505112,
+      "recall": 0.9038554909401746
+    },
+    "resumed": false,
+    "runner_kind": "deferred_detection",
+    "smoke_only": false
+  },
+  "finished_utc": "2026-10-11T13:31:48.048531+00:00",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "sar_shipdataset_original_seed0",
+  "trial_sha256": "c2b29ac256ce87ea4987d51f6ee95aaafde079c5e9d4da1f24bf1cbaf7da7e7b"
+}

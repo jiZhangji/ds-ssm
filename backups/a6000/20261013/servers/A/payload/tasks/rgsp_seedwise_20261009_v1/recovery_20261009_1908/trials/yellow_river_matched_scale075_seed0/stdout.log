@@ -1,0 +1,177 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py:197: UserWarning: upsample_bilinear2d_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py:197: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Yellow_River matched_scale075 seed0 epoch=1/150 loss=1.715775 val=0.636141
+Yellow_River matched_scale075 seed0 epoch=2/150 loss=1.463445 val=0.576477
+Yellow_River matched_scale075 seed0 epoch=3/150 loss=1.267310 val=0.891531
+Yellow_River matched_scale075 seed0 epoch=4/150 loss=1.106923 val=0.898247
+Yellow_River matched_scale075 seed0 epoch=5/150 loss=1.060359 val=0.902878
+Yellow_River matched_scale075 seed0 epoch=6/150 loss=0.937977 val=0.916090
+Yellow_River matched_scale075 seed0 epoch=7/150 loss=1.002554 val=0.931308
+Yellow_River matched_scale075 seed0 epoch=8/150 loss=0.920372 val=0.936040
+Yellow_River matched_scale075 seed0 epoch=9/150 loss=0.855877 val=0.936131
+Yellow_River matched_scale075 seed0 epoch=10/150 loss=0.820859 val=0.939139
+Yellow_River matched_scale075 seed0 epoch=11/150 loss=0.794348 val=0.933178
+Yellow_River matched_scale075 seed0 epoch=12/150 loss=0.840548 val=0.940051
+Yellow_River matched_scale075 seed0 epoch=13/150 loss=0.808822 val=0.932141
+Yellow_River matched_scale075 seed0 epoch=14/150 loss=0.862112 val=0.941855
+Yellow_River matched_scale075 seed0 epoch=15/150 loss=0.828023 val=0.940219
+Yellow_River matched_scale075 seed0 epoch=16/150 loss=0.697706 val=0.938987
+Yellow_River matched_scale075 seed0 epoch=17/150 loss=0.665746 val=0.937751
+Yellow_River matched_scale075 seed0 epoch=18/150 loss=0.804696 val=0.939855
+Yellow_River matched_scale075 seed0 epoch=19/150 loss=0.653650 val=0.941121
+Yellow_River matched_scale075 seed0 epoch=20/150 loss=0.661058 val=0.938919
+Yellow_River matched_scale075 seed0 epoch=21/150 loss=0.673826 val=0.940955
+Yellow_River matched_scale075 seed0 epoch=22/150 loss=0.709566 val=0.943396
+Yellow_River matched_scale075 seed0 epoch=23/150 loss=0.653710 val=0.943616
+Yellow_River matched_scale075 seed0 epoch=24/150 loss=0.624090 val=0.946954
+Yellow_River matched_scale075 seed0 epoch=25/150 loss=0.584492 val=0.947196
+Yellow_River matched_scale075 seed0 epoch=26/150 loss=0.666533 val=0.944677
+Yellow_River matched_scale075 seed0 epoch=27/150 loss=0.592932 val=0.942179
+Yellow_River matched_scale075 seed0 epoch=28/150 loss=0.545950 val=0.946317
+Yellow_River matched_scale075 seed0 epoch=29/150 loss=0.590311 val=0.937337
+Yellow_River matched_scale075 seed0 epoch=30/150 loss=0.531731 val=0.933425
+Yellow_River matched_scale075 seed0 epoch=31/150 loss=0.554166 val=0.928855
+Yellow_River matched_scale075 seed0 epoch=32/150 loss=0.579361 val=0.943539
+Yellow_River matched_scale075 seed0 epoch=33/150 loss=0.543115 val=0.941914
+Yellow_River matched_scale075 seed0 epoch=34/150 loss=0.664361 val=0.938123
+Yellow_River matched_scale075 seed0 epoch=35/150 loss=0.480293 val=0.940771
+Yellow_River matched_scale075 seed0 epoch=36/150 loss=0.596650 val=0.940573
+Yellow_River matched_scale075 seed0 epoch=37/150 loss=0.537766 val=0.949341
+Yellow_River matched_scale075 seed0 epoch=38/150 loss=0.512924 val=0.940348
+Yellow_River matched_scale075 seed0 epoch=39/150 loss=0.528205 val=0.941587
+Yellow_River matched_scale075 seed0 epoch=40/150 loss=0.450053 val=0.943721
+Yellow_River matched_scale075 seed0 epoch=41/150 loss=0.421955 val=0.941641
+Yellow_River matched_scale075 seed0 epoch=42/150 loss=0.420927 val=0.938747
+Yellow_River matched_scale075 seed0 epoch=43/150 loss=0.462734 val=0.935771
+Yellow_River matched_scale075 seed0 epoch=44/150 loss=0.450130 val=0.936190
+Yellow_River matched_scale075 seed0 epoch=45/150 loss=0.510113 val=0.939691
+Yellow_River matched_scale075 seed0 epoch=46/150 loss=0.423363 val=0.934636
+Yellow_River matched_scale075 seed0 epoch=47/150 loss=0.701137 val=0.920991
+Yellow_River matched_scale075 seed0 epoch=48/150 loss=0.444678 val=0.925823
+Yellow_River matched_scale075 seed0 epoch=49/150 loss=0.468712 val=0.938135
+Yellow_River matched_scale075 seed0 epoch=50/150 loss=0.419173 val=0.914775
+Yellow_River matched_scale075 seed0 epoch=51/150 loss=0.470978 val=0.941887
+Yellow_River matched_scale075 seed0 epoch=52/150 loss=0.514002 val=0.932836
+Yellow_River matched_scale075 seed0 epoch=53/150 loss=0.496806 val=0.942583
+Yellow_River matched_scale075 seed0 epoch=54/150 loss=0.454667 val=0.932379
+Yellow_River matched_scale075 seed0 epoch=55/150 loss=0.428622 val=0.945205
+Yellow_River matched_scale075 seed0 epoch=56/150 loss=0.473411 val=0.936857
+Yellow_River matched_scale075 seed0 epoch=57/150 loss=0.398655 val=0.942897
+Yellow_River matched_scale075 seed0 epoch=58/150 loss=0.364907 val=0.940958
+Yellow_River matched_scale075 seed0 epoch=59/150 loss=0.418387 val=0.925762
+Yellow_River matched_scale075 seed0 epoch=60/150 loss=0.393048 val=0.946651
+Yellow_River matched_scale075 seed0 epoch=61/150 loss=0.334765 val=0.932991
+Yellow_River matched_scale075 seed0 epoch=62/150 loss=0.579814 val=0.942294
+{
+  "schema": "rgsp-cross-trial-v1",
+  "dataset": "Yellow_River",
+  "task": "change_detection",
+  "variant": "matched_scale075",
+  "seed": 0,
+  "protocol": {
+    "schema": "rgsp-cross-trial-v1",
+    "dataset": "Yellow_River",
+    "task": "change_detection",
+    "logical_data_sha256": "06671e955b4c1fecfd0ffb7c56c661231d5e4a6832e288b2527811b4d8ea2241",
+    "split_counts": {
+      "test": 16,
+      "train": 100,
+      "val": 16
+    },
+    "annotation_policy": "fail",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "epochs": 150,
+    "patience": 25,
+    "imgsz": 192,
+    "batch": 16,
+    "eval_batch": 16,
+    "optimizer": "AdamW",
+    "lr": 0.0002,
+    "weight_decay": 0.0005,
+    "scheduler": "cosine to 1% initial lr",
+    "module_warmup_epochs": 0,
+    "precision": "FP32 (AMP/TF32 off)",
+    "gradient_clip_l2": 5.0,
+    "grad_accum": 1,
+    "classification_label_smoothing": 0.1,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "selection_metric": "f1",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "historical_results_comparable": false
+  },
+  "protocol_sha256": "7e20b559cfe9b6364bd0aeeceb9d024ed8f4d0a0f648bc4da3fd416e74620c0f",
+  "data": {
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/Yellow_River/manifest.json",
+    "manifest_sha256": "a7aa8b3d0e78ff7a8364545409cf73732e264d2946ff2e9fcfee98bdce77d224",
+    "logical_manifest_sha256": "06671e955b4c1fecfd0ffb7c56c661231d5e4a6832e288b2527811b4d8ea2241",
+    "counts": {
+      "test": 16,
+      "train": 100,
+      "val": 16
+    },
+    "audit_sha256": "e9d4f235c47f3f2c3add54ff364dded861f780eb2b1f76df4e02935d8bc37679",
+    "files_sha256": "44ddd56e277fa71e0795de6a6cf9ed9c220798aad27ab770e967211c241eec2a",
+    "annotation_policy": "fail"
+  },
+  "initialization_common_tensor_sha256": "d258a21c11bddf3824e3377acf6401654d52d5ccbadee72d7ec597e3fa046067",
+  "checkpoint": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_matched_scale075_seed0/best.pt",
+  "best_sha256": "649f1e46dc1e4473bbe7339f8e962a65d8c947be5f784abb5ba3b551a0a5f687",
+  "best_epoch": 37,
+  "threshold": 0.6,
+  "metric": {
+    "precision": 0.9957507082152974,
+    "recall": 0.5301659125188537,
+    "f1": 0.6919291338582677,
+    "iou": 0.5289691497366441,
+    "oa": 0.9320746527777778,
+    "kappa": 0.657706738813143,
+    "tp": 703,
+    "fp": 3,
+    "fn": 623,
+    "tn": 7887,
+    "evaluated_native_unique_pixels": 9216,
+    "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities"
+  },
+  "reloaded_controls": {
+    "variant": "matched_scale075",
+    "controlled_blocks": 1,
+    "placement": "internal P3/8, 64 channels",
+    "scalars": {
+      "lambda_s": 0.0,
+      "alpha": 0.0,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612
+    },
+    "buffer_scalars": [
+      "lambda_s",
+      "alpha",
+      "beta_i",
+      "rho_i",
+      "eta_i"
+    ],
+    "min_retain": 0.5,
+    "use_pfim": false
+  },
+  "parameters": 3715097,
+  "trainable_parameters": 3715097,
+  "buffers": 7964,
+  "efficiency_status": "Params only here; matched-hardware latency and scan-aware FLOPs require the separate efficiency lane. No undercounted THOP GFLOPs claimed.",
+  "historical_negative_results_preserved": true,
+  "finished_utc": "2026-10-09T13:26:46.192697+00:00"
+}
+{"compatibility_launcher": "PASS", "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/yellow_river_matched_scale075_seed0/cuda_compatibility.json"}

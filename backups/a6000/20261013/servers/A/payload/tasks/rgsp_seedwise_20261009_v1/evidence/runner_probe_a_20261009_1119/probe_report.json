@@ -1,0 +1,371 @@
+{
+  "ast_and_control_imports": {
+    "helper_sha256": {
+      "campaign_dispatch.py": "9def6f9d37cd8f38faf51a7812d9e3612495bc333415c46375fa28b09dc67477",
+      "deferred_data.py": "dbfd4cadcdbe6a7533bfb679ed540d2739c8ee6b961b4558bd5e66e6e05a7fb1",
+      "manifest.py": "ff1f6708e735d5bd91d9c341edfcfdcc714829c5ab5ee0c6110df263d5b6fed7",
+      "train_trial.py": "0985a2e171d8f7a7097d5e33267c5cc980d6892f565f158c3bcfa6a0b5c5d4a3",
+      "verify_receipts.py": "af866b84823b8d623f08bdfa6513bc987384f745ac42ac5647ffb17210d2d86d"
+    },
+    "status": "PASS",
+    "torch_not_imported": true
+  },
+  "cuda": "11.7",
+  "cuda_identity": {
+    "compatibility_applied": true,
+    "cuda_runtime_count": 1,
+    "cuda_visible_devices": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+    "gpu_mask_changed": false,
+    "hostname": "powerleader-PT6620W",
+    "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+    "physical_gpu_index": 0,
+    "physical_gpu_name": "NVIDIA RTX A6000",
+    "physical_gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+    "reported_count_after": 1,
+    "reported_count_before": 0,
+    "torch": "1.13.1+cu117",
+    "torch_installation_modified": false
+  },
+  "dead_finalizer_fail_closed": {
+    "case": "dead F finalizer without completion",
+    "elapsed_seconds": 0.00032272899989038706,
+    "rejected": "RuntimeError: Reviewed finalizer exited without required completion evidence: ['/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/control_fixture/missing_complete.json']",
+    "status": "PASS"
+  },
+  "deferred_contracts": {
+    "no_cuda_import_or_training": true,
+    "positive_full_hash_verification": {
+      "counts": {
+        "test": 1,
+        "train": 1,
+        "val": 1
+      },
+      "manifest_sha256": "3cad2563bcdde552cfdcb9e7c760312428f85915d7df55e53a7038fa34f144d7",
+      "verified_utc": "2026-10-09T03:23:47.709692+00:00"
+    },
+    "rejections": [
+      {
+        "case": "missing readiness bounded without CUDA",
+        "elapsed_seconds": 0.0001724659960018471,
+        "rejected": "RuntimeError: Seven-day finite deferred-data wait expired; no data guessed and no CUDA trial started",
+        "status": "PASS"
+      },
+      {
+        "case": "bad ready dataset_identity",
+        "elapsed_seconds": 0.0005274259892757982,
+        "rejected": "RuntimeError: Deferred data binding differs: /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/synthetic_contract_fixture_not_training_data/rejected_cases/dataset_identity.json, dataset_identity='SAR-AIRcraft1.0'; expected 'SAR-ShipDataset'",
+        "status": "PASS"
+      },
+      {
+        "case": "bad ready nc",
+        "elapsed_seconds": 0.0005457430088426918,
+        "rejected": "RuntimeError: Deferred data binding differs: /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/synthetic_contract_fixture_not_training_data/rejected_cases/nc.json, nc=7; expected 1",
+        "status": "PASS"
+      },
+      {
+        "case": "bad ready descriptor_sha256",
+        "elapsed_seconds": 0.0005599339929176494,
+        "rejected": "RuntimeError: Deferred data binding differs: /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/synthetic_contract_fixture_not_training_data/rejected_cases/descriptor_sha256.json, descriptor_sha256='0000000000000000000000000000000000000000000000000000000000000000'; expected '3dc309ab3fab0dc3a49dcdb4cc2711b7f3683e2690d880f4ddbfe67dc9f5216d'",
+        "status": "PASS"
+      },
+      {
+        "case": "bad ready source_audit_sha256",
+        "elapsed_seconds": 0.0005754250014433637,
+        "rejected": "RuntimeError: Deferred data binding differs: /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/synthetic_contract_fixture_not_training_data/rejected_cases/source_audit_sha256.json, source_audit_sha256='1111111111111111111111111111111111111111111111111111111111111111'; expected '8a94f4418e1d697f55766ecfbf785a7a825603e8f88d872e4a24fe8e7b939482'",
+        "status": "PASS"
+      },
+      {
+        "case": "bad ready manifest_sha256",
+        "elapsed_seconds": 0.0006673279858659953,
+        "rejected": "RuntimeError: Deferred data binding differs: /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/synthetic_contract_fixture_not_training_data/rejected_cases/manifest_sha256.json, manifest_sha256='2222222222222222222222222222222222222222222222222222222222222222'; expected '3cad2563bcdde552cfdcb9e7c760312428f85915d7df55e53a7038fa34f144d7'",
+        "status": "PASS"
+      },
+      {
+        "case": "bad ready status",
+        "elapsed_seconds": 0.00046293900231830776,
+        "rejected": "RuntimeError: Deferred data producer reported failed: /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/synthetic_contract_fixture_not_training_data/rejected_cases/status.json",
+        "status": "PASS"
+      },
+      {
+        "case": "noncontiguous class mapping",
+        "elapsed_seconds": 1.2737000361084938e-05,
+        "rejected": "RuntimeError: Deferred class mapping must cover exactly zero through nc-1",
+        "status": "PASS"
+      },
+      {
+        "case": "duplicate normalized class index",
+        "elapsed_seconds": 6.543996278196573e-06,
+        "rejected": "RuntimeError: Deferred class mapping has duplicate normalized indices",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS",
+    "synthetic_fixture_only": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/synthetic_contract_fixture_not_training_data"
+  },
+  "finished_utc": "2026-10-09T03:24:09.528931+00:00",
+  "gpu_before": {
+    "checked_utc": "2026-10-09T03:24:03.188513+00:00",
+    "compute_processes": [],
+    "memory_total_mib": 49140,
+    "memory_used_mib": 530,
+    "name": "NVIDIA RTX A6000",
+    "utilization_percent": 0,
+    "uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964"
+  },
+  "gpu_cases": [
+    {
+      "actual_head_nc": 7,
+      "class6_classifier_gradient_abs": 3.5138492584228516,
+      "class_names": {
+        "0": "Boeing737",
+        "1": "Boeing787",
+        "2": "A330",
+        "3": "A220",
+        "4": "A320/321",
+        "5": "ARJ21",
+        "6": "other"
+      },
+      "constructor_nc": 1,
+      "control": "original",
+      "controls": [],
+      "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+      "gradient_tensors": 404,
+      "loss": 17.587207794189453,
+      "loss_components": [
+        3.650606393814087,
+        2.9967570304870605,
+        2.146240711212158
+      ],
+      "no_optimizer_step_no_fit_loop": true,
+      "runtime_nc": 7,
+      "seconds": 2.5810753269906854,
+      "status": "PASS",
+      "synthetic_image_shape": [
+        2,
+        3,
+        128,
+        128
+      ],
+      "synthetic_target_class_ids": [
+        0,
+        6
+      ],
+      "training_feature_shapes": [
+        [
+          2,
+          71,
+          16,
+          16
+        ],
+        [
+          2,
+          71,
+          8,
+          8
+        ],
+        [
+          2,
+          71,
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "actual_head_nc": 7,
+      "class6_classifier_gradient_abs": 2.781202793121338,
+      "class_names": {
+        "0": "Boeing737",
+        "1": "Boeing787",
+        "2": "A330",
+        "3": "A220",
+        "4": "A320/321",
+        "5": "ARJ21",
+        "6": "other"
+      },
+      "constructor_nc": 1,
+      "control": "full",
+      "controls": [
+        {
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "buffer_scalars": [],
+          "control": "full",
+          "delta_path": true,
+          "descriptor_mode": "trend_std",
+          "eta_i": 0.10000000149011612,
+          "fixed_importance": null,
+          "importance_factor_location": "scan_input",
+          "input_path": true,
+          "lambda_s": 0.5,
+          "lrc_enabled": true,
+          "min_retain": 0.5,
+          "name": "model.3",
+          "options": {
+            "stats_kernel_size": 3,
+            "trend_kernel_size": 3
+          },
+          "parameter_scalars": [
+            "lambda_s",
+            "alpha",
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "predictor_input_features": 128,
+          "predictor_parameters_active": true,
+          "requires_grad": {
+            "alpha": true,
+            "beta_i": true,
+            "eta_i": true,
+            "lambda_s": true,
+            "rho_i": true
+          },
+          "rho_i": 1.0,
+          "trend_parameters_active": true
+        }
+      ],
+      "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+      "gradient_tensors": 401,
+      "loss": 14.968584060668945,
+      "loss_components": [
+        3.0232019424438477,
+        2.6028220653533936,
+        1.8582683801651
+      ],
+      "no_optimizer_step_no_fit_loop": true,
+      "runtime_nc": 7,
+      "seconds": 1.335827065006015,
+      "status": "PASS",
+      "synthetic_image_shape": [
+        2,
+        3,
+        128,
+        128
+      ],
+      "synthetic_target_class_ids": [
+        0,
+        6
+      ],
+      "training_feature_shapes": [
+        [
+          2,
+          71,
+          16,
+          16
+        ],
+        [
+          2,
+          71,
+          8,
+          8
+        ],
+        [
+          2,
+          71,
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "actual_head_nc": 7,
+      "class6_classifier_gradient_abs": 4.577140808105469,
+      "class_names": {
+        "0": "Boeing737",
+        "1": "Boeing787",
+        "2": "A330",
+        "3": "A220",
+        "4": "A320/321",
+        "5": "ARJ21",
+        "6": "other"
+      },
+      "constructor_nc": 1,
+      "control": "cnn_yolov8n",
+      "controls": [],
+      "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+      "gradient_tensors": 183,
+      "loss": 16.906185150146484,
+      "loss_components": [
+        3.481109380722046,
+        2.8666930198669434,
+        2.1052896976470947
+      ],
+      "no_optimizer_step_no_fit_loop": true,
+      "runtime_nc": 7,
+      "seconds": 0.13943300899700262,
+      "status": "PASS",
+      "synthetic_image_shape": [
+        2,
+        3,
+        128,
+        128
+      ],
+      "synthetic_target_class_ids": [
+        0,
+        6
+      ],
+      "training_feature_shapes": [
+        [
+          2,
+          71,
+          16,
+          16
+        ],
+        [
+          2,
+          71,
+          8,
+          8
+        ],
+        [
+          2,
+          71,
+          4,
+          4
+        ]
+      ]
+    }
+  ],
+  "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "hostname": "powerleader-PT6620W",
+  "output_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119",
+  "pid": 121518,
+  "preserved_default_configs": {
+    "controls": [
+      "original",
+      "full"
+    ],
+    "old_manifest_sha256": "987da6404df9811e2227a721ac250fcc6a67c35bbd12c66928c589f5a9bada1f",
+    "status": "PASS"
+  },
+  "probe_sha256": "ff71d2f404c7bb0c1672fc868a77189a41e2b74dae1aff0e45c7a1e2996db696",
+  "python": "3.10.16",
+  "receipt_artifact_contract": {
+    "ordered_artifact_names": [
+      "provenance.json",
+      "train_complete.json",
+      "eval_test.json",
+      "evaluation_complete.json",
+      "weights/best.pt",
+      "weights/raw_fp32_last.pt",
+      "controls_by_epoch.jsonl",
+      "trial_complete.json"
+    ],
+    "status": "PASS"
+  },
+  "schema": "rgsp-runner-probe-v1",
+  "scope": "synthetic control contracts and exactly three one-batch GPU forward/backward probes; no formal experiments",
+  "source_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+  "source_sha256": {
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/validate_rgsp_expanded.py": "9a812c5380f5ccc29368f819ec4bf61a9820f63e94b521950e3ed87a6d1c1bcf",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/detect/train.py": "f1496ad523cd2eb90ea978f462de73351d5cfd797f4273a396509da811d431db",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo.py": "05d1900840474e068aec65bc30ca81501fce55a464ca0dc3fbe60054885aade3",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/tasks.py": "f236b06c5533bf86ba2e5dbeac6e8271f13ba80dd256768179ab7a7bfaaced01",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cuda_uuid_compat.py": "3faa16696535c447d50a405799040e17ef7780bb9444c3f5b0c9d5310061b04d",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py": "1ddbc5fa547e5f6a168305476921d1c85f6692706f35861323f9e85e2118398f"
+  },
+  "started_utc": "2026-10-09T03:23:47.613989+00:00",
+  "status": "PASS",
+  "torch": "1.13.1+cu117"
+}

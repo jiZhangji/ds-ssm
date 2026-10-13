@@ -1,0 +1,19 @@
+{
+  "status": "TRAINING",
+  "epoch": 56,
+  "optimizer_updates": 7000,
+  "training_examples": 8000,
+  "train_loss": 0.0033088932966938954,
+  "pseudo_validation": {
+    "loss": 0.013851156948707284,
+    "accuracy": 0.999,
+    "count": 2000
+  },
+  "best_epoch": 26,
+  "best_pseudo_val_loss": 0.010110378978773952,
+  "lr_after_epoch": 0.0001286122448979592,
+  "epoch_seconds": 3.9929295299807563,
+  "projected_max_epoch_hours": 0.1663720637491982,
+  "ground_truth_read": false,
+  "timestamp": "2026-10-12T13:31:45.881596+00:00"
+}

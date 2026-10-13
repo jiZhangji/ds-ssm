@@ -1,0 +1,41 @@
+{
+  "batch": 16,
+  "conf": 0.001,
+  "data": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sadd/data.yaml",
+  "data_manifest_sha256": "23077fb38483e161a3b7675b1d0629b19cbe334482588a0bdebf7eba88372e10",
+  "data_yaml_sha256": "de31fa526be538df8b36d1019e4a72edb99198fb1b67c69f4a61faed4f1d4122",
+  "imgsz": 640,
+  "iou": 0.6,
+  "overall": {
+    "ap50": 0.9703386463392649,
+    "ap50_95": 0.5273038909649512,
+    "ap75": 0.50737686846808,
+    "precision": 0.9369929915828464,
+    "recall": 0.9476790606872947
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "precision_mode": "fp32",
+  "result_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_cnn_yolov8n_seed0/evaluation/test",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "smoke_only": false,
+  "spec": {
+    "control": "cnn_yolov8n",
+    "placement": "baseline",
+    "state_dim": 0,
+    "stats_kernel_size": 3,
+    "trend_kernel_size": 3
+  },
+  "speed_ms": {
+    "inference": 1.0606700723821465,
+    "loss": 0.000384720889004794,
+    "postprocess": 0.20681186155839398,
+    "preprocess": 0.08780306035822087
+  },
+  "split": "test",
+  "subset": "sadd",
+  "trial_id": "sadd_cnn_yolov8n_seed0",
+  "trial_sha256": "2e846c38a76da504621f2c981e1978487f4977d34f552e100cdfd0b97a906a00",
+  "weights": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_cnn_yolov8n_seed0/weights/best.pt",
+  "weights_sha256": "1a05fa7df9d3befea0c8819146a66b8183537549356a3327fe805fb88fa1bcd4"
+}

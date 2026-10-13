@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "test": 1,
+    "train": 1,
+    "val": 1
+  },
+  "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/stdlib_c_01/fixtures/test_deferred_candidate_without_live_publication/inventory.json",
+  "manifest_sha256": "6a9742c9d6ed0012bbc89ffcb0dd792be09f461e5aa1628b042babf03f8c295e",
+  "names": [
+    "ship"
+  ],
+  "nc": 1,
+  "protocol": "ssdd",
+  "root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/stdlib_c_01/fixtures/test_deferred_candidate_without_live_publication/synthetic_data",
+  "yaml": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/stdlib_c_01/fixtures/test_deferred_candidate_without_live_publication/fixture.yaml",
+  "yaml_sha256": "7dfede650a6e9562f79f03e46c37d75135d1de791855daecb5e9254952831bec"
+}

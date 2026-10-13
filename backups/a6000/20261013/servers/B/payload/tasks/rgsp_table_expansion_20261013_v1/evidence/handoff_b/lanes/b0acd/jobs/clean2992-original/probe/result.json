@@ -1,0 +1,21 @@
+{
+  "dataset": "SAR-ACD-clean2992",
+  "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+  "estimated_full_seconds": 861.2659031443037,
+  "method": "Original",
+  "params": 2852438,
+  "peak_gpu_allocated_bytes": 1238641664,
+  "protocol_sha256": "736164780d6932591e369fc749a508b07ec1c97fd8bb79cb0d2dd22e3fa9e07d",
+  "seed": 0,
+  "status": "PROBE_PASS",
+  "task": "classification",
+  "test_evaluated": false,
+  "timed_update_seconds": [
+    0.32606288499664515,
+    0.3234529619803652,
+    0.3221848590183072,
+    0.32327449100557715
+  ],
+  "updates_per_epoch": 15,
+  "validation_evaluated": false
+}

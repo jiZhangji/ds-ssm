@@ -1,0 +1,17 @@
+{
+  "started_utc": "2026-10-09T02:48:54.042070+00:00",
+  "hostname": "powerleader-PT6620W",
+  "python": "3.10.16",
+  "torch": "1.13.1+cu117",
+  "cuda": "11.7",
+  "gpu": "NVIDIA RTX A6000",
+  "cuda_device": 0,
+  "backend": "ultralytics.nn.modules.mamba_yolo",
+  "source_sha256": "05d1900840474e068aec65bc30ca81501fce55a464ca0dc3fbe60054885aade3",
+  "validator_sha256": "05c81f0b51f4f6730abab4b99138eafacd70c28ec1137d0f661a705b36afc650",
+  "control_cases": 22,
+  "controls": [],
+  "status": "FAIL",
+  "error": "AssertionError: Legacy None: input gradient",
+  "finished_utc": "2026-10-09T02:48:55.210506+00:00"
+}

@@ -1,0 +1,9 @@
+{
+  "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/smoke_full_b4_v2/data",
+  "train": "images/train",
+  "val": "images/val",
+  "test": "images/val",
+  "names": {
+    "0": "ship"
+  }
+}

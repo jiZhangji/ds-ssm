@@ -1,0 +1,135 @@
+{
+  "best_epoch": 86,
+  "best_sha256": "3c73a8c0b741e95349490813f9ce3d923c708fcf83f78e93d187500f469820b9",
+  "buffers": 4465,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_full_seed0/best.pt",
+  "data": {
+    "annotation_policy": "preserve-heldout-exclude-ambiguous-training",
+    "audit_sha256": "5fcd4daa8afdfedd6f519de4d4c2e7ec797f90f6904fa2a61af964f111205b93",
+    "counts": {
+      "test": 254,
+      "train": 2003,
+      "val": 251
+    },
+    "files_sha256": "567b09e122db10024e281b047e79417ba142a8ddf90bae2754bc640959dd6db4",
+    "logical_manifest_sha256": "d93e468ba4ae5172cc74a9689a276ddafd2d3a2f9ad0e67d91ec83b942aacb8c",
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/SAR_ACD/manifest.json",
+    "manifest_sha256": "16259205a8c8e0677631e37e23bba036311ea87cef8cf6f833b0f626a303c259"
+  },
+  "dataset": "SAR-ACD",
+  "efficiency_status": "Params only here; matched-hardware latency and scan-aware FLOPs require the separate efficiency lane. No undercounted THOP GFLOPs claimed.",
+  "finished_utc": "2026-10-09T12:37:25.463220+00:00",
+  "historical_negative_results_preserved": true,
+  "initialization_common_tensor_sha256": "293e570309a7490d451201a68a58a6afbc8f233dca743f683d8adced7855ec83",
+  "metric": {
+    "accuracy": 0.9291338582677166,
+    "confusion_matrix": [
+      [
+        45,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0,
+        1
+      ],
+      [
+        6,
+        0,
+        46,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        1,
+        44,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        51
+      ]
+    ],
+    "macro_f1": 0.9294812118967932,
+    "macro_precision": 0.9359184412574242,
+    "macro_recall": 0.9305286058468102,
+    "per_class_recall": [
+      0.9574468085106383,
+      0.9803921568627451,
+      0.8846153846153846,
+      0.8301886792452831,
+      1.0
+    ]
+  },
+  "parameters": 2787075,
+  "protocol": {
+    "annotation_policy": "preserve-heldout-exclude-ambiguous-training",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "batch": 64,
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "classification_label_smoothing": 0.1,
+    "dataset": "SAR-ACD",
+    "epochs": 200,
+    "eval_batch": 64,
+    "grad_accum": 1,
+    "gradient_clip_l2": 5.0,
+    "historical_results_comparable": false,
+    "imgsz": 224,
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "logical_data_sha256": "d93e468ba4ae5172cc74a9689a276ddafd2d3a2f9ad0e67d91ec83b942aacb8c",
+    "lr": 0.0002,
+    "module_warmup_epochs": 0,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "optimizer": "AdamW",
+    "patience": 40,
+    "precision": "FP32 (AMP/TF32 off)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "scheduler": "cosine to 1% initial lr",
+    "schema": "rgsp-cross-trial-v1",
+    "selection_metric": "macro_f1",
+    "split_counts": {
+      "test": 254,
+      "train": 2003,
+      "val": 251
+    },
+    "task": "classification",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "weight_decay": 0.0005
+  },
+  "protocol_sha256": "b36c263075758abc1ee3ad0ad6954b28e5ce2dc368e7371a9fd944909bb18f6d",
+  "reloaded_controls": {
+    "buffer_scalars": [],
+    "controlled_blocks": 1,
+    "min_retain": 0.5,
+    "placement": "internal P3/8, 64 channels",
+    "scalars": {
+      "alpha": 0.48876193165779114,
+      "beta_i": 1.008074164390564,
+      "eta_i": 0.10677842795848846,
+      "lambda_s": 0.496133953332901,
+      "rho_i": 1.007952332496643
+    },
+    "use_pfim": true,
+    "variant": "full"
+  },
+  "schema": "rgsp-cross-trial-v1",
+  "seed": 0,
+  "task": "classification",
+  "threshold": null,
+  "trainable_parameters": 2787075,
+  "variant": "full"
+}

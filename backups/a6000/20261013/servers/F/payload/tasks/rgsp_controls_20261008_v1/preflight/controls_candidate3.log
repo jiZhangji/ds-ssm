@@ -1,0 +1,26 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/code/tools/validate_rgsp_controls.py", line 162, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/code/tools/validate_rgsp_controls.py", line 141, in main
+    detector = YOLO(str(cfg)).model
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/code/ultralytics/models/yolo/model.py", line 23, in __init__
+    super().__init__(model=model, task=task, verbose=verbose)
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/code/ultralytics/engine/model.py", line 150, in __init__
+    self._new(model, task=task, verbose=verbose)
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/code/ultralytics/engine/model.py", line 219, in _new
+    self.model = (model or self._smart_load("model"))(cfg_dict, verbose=verbose and RANK == -1)  # build model
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/code/ultralytics/nn/tasks.py", line 306, in __init__
+    self.model, self.save = parse_model(deepcopy(self.yaml), ch=ch, verbose=verbose)  # model, savelist
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/code/ultralytics/nn/tasks.py", line 888, in parse_model
+    args[j] = locals()[a] if a in locals() else ast.literal_eval(a)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/ast.py", line 64, in literal_eval
+    node_or_string = parse(node_or_string.lstrip(" \t"), mode='eval')
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+  File "<unknown>", line 1
+    global
+    ^^^^^^
+SyntaxError: invalid syntax

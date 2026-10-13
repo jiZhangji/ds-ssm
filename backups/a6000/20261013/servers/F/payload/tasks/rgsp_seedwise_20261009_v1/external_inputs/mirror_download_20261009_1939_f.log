@@ -1,0 +1,14 @@
+{"expected_bytes": 426990175, "expected_sha256": "6a185fbf2f51408d19ca941745581a8e1aabbacd33db6494985621086495481e", "hostname": "powerleader-a6000-f", "status": "starting", "target": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/raw_archives/ship_dataset_v0.zip.mirror_20261009_1939_f"}
+{"bytes": 33554432, "elapsed_seconds": 12.906101625005249, "status": "downloading"}
+{"bytes": 67108864, "elapsed_seconds": 21.752561022003647, "status": "downloading"}
+{"bytes": 100663296, "elapsed_seconds": 29.931921558003523, "status": "downloading"}
+{"bytes": 134217728, "elapsed_seconds": 38.883529619008186, "status": "downloading"}
+{"bytes": 167772160, "elapsed_seconds": 47.025773840010515, "status": "downloading"}
+{"bytes": 201326592, "elapsed_seconds": 54.86450085400429, "status": "downloading"}
+{"bytes": 234881024, "elapsed_seconds": 63.47561804999714, "status": "downloading"}
+{"bytes": 268435456, "elapsed_seconds": 71.14473401100258, "status": "downloading"}
+{"bytes": 301989888, "elapsed_seconds": 79.84432138000557, "status": "downloading"}
+{"bytes": 335544320, "elapsed_seconds": 88.88874509300513, "status": "downloading"}
+{"bytes": 369098752, "elapsed_seconds": 97.98928656900534, "status": "downloading"}
+{"bytes": 402653184, "elapsed_seconds": 106.92458400400938, "status": "downloading"}
+{"bytes": 426990175, "completed_utc": "2026-10-09T11:41:53.696883+00:00", "elapsed_seconds": 113.34450651200314, "hostname": "powerleader-a6000-f", "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/raw_archives/ship_dataset_v0.zip.mirror_20261009_1939_f", "readiness_published": false, "sha256": "6a185fbf2f51408d19ca941745581a8e1aabbacd33db6494985621086495481e", "source": "https://hf-mirror.com/datasets/shimiandeshu/sar-m/resolve/main/ship_dataset_v0.zip", "status": "verified_download"}

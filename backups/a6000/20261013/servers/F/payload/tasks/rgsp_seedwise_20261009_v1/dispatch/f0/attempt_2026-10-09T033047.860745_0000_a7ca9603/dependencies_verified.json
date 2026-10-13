@@ -1,0 +1,34 @@
+{
+  "verified": [
+    {
+      "finalizer": {
+        "argv": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_legacy_pidfd_r3.py",
+          "finalize",
+          "--spec",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_spec_f_20261009_r2.json",
+          "--lane",
+          "f0",
+          "--confirm-evaluate-and-retire",
+          "--wait-seconds",
+          "172800"
+        ],
+        "pid": 126682,
+        "start_ticks": 7189074
+      },
+      "finalizer_exited": true,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f0.r3.finalizer_launch.json",
+      "sha256": "66b09b4f841bbbd151b221c827ab2038e7284202ea9841573f221abaf7d18440"
+    },
+    {
+      "equals": {
+        "status": "adopted_and_scheduler_retired"
+      },
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f0.complete.json",
+      "sha256": "f0ab41496ada918d54783a77bf528060517d7bbeb0de529e7f63e22b6110b85e"
+    }
+  ]
+}

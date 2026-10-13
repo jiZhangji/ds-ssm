@@ -1,0 +1,3 @@
+dataset,experiment,variant,placement,state_dim,precision,recall,ap50,ap75,ap50_95,inference_ms,weights
+SSDD,sar4_scratch_p3_sd16_v1_ssdd_baseline,baseline,baseline,0,0.895757950659555,0.755434638921903,0.8343893948377458,0.19393339082888345,0.3523868412628624,6.64401362682211,/home/powerleader/ig-ds-ssm/experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/best.pt
+SSDD,sar4_scratch_p3_sd16_v1_ssdd_full_p3,full,p3,16,0.8823129969101465,0.8351648351648352,0.8813737328833343,0.3375635932507802,0.4299130318067193,6.1700785982197734,/home/powerleader/ig-ds-ssm/experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/best.pt

@@ -1,0 +1,42 @@
+{
+  "actual_argv": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_legacy_pidfd_r3.py",
+    "finalize",
+    "--spec",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_spec_f_20261009_r2.json",
+    "--lane",
+    "f0",
+    "--confirm-evaluate-and-retire",
+    "--wait-seconds",
+    "172800"
+  ],
+  "argv": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_legacy_pidfd_r3.py",
+    "finalize",
+    "--spec",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_spec_f_20261009_r2.json",
+    "--lane",
+    "f0",
+    "--confirm-evaluate-and-retire",
+    "--wait-seconds",
+    "172800"
+  ],
+  "detached_session": true,
+  "lane": "f0",
+  "launched_utc": "2026-10-09T02:59:33.240001+00:00",
+  "log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f0.r3.finalizer.log",
+  "pid": 126682,
+  "poll_returncode": null,
+  "scope": "existing child completion -> copied independent test -> parent-only retirement; no new training",
+  "script_sha256": "c1e4b59aa43cf71e0a6b387927663b7931be40d58eecbdeb871c7f6bbe372b9c",
+  "session": 126682,
+  "spec_sha256": "d1f589aa41f341171ea6e15378565a2c594af5281eb96974f343d78e3c45c1ca",
+  "start_ticks": 7189074,
+  "state": "S"
+}

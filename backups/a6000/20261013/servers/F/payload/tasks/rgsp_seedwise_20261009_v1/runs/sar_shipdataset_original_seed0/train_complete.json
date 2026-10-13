@@ -1,0 +1,23 @@
+{
+  "best_sha256": "e5f42999c3c2dfd0ca27febe2e1246545b74bbf4ec4e8906566210bac6ad019f",
+  "finished_utc": "2026-10-11T13:31:03.100284+00:00",
+  "last_epoch_observed": 150,
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "raw_fp32_last_sha256": "b486ae54a9b375f0d192449430bdeba0ec16b7dfcc46569b35c7455f0ccef88b",
+  "reloaded_class_audit": {
+    "class_names": {
+      "0": "ship"
+    },
+    "observed_counts": {
+      "head_nc": 1,
+      "model_nc": 1,
+      "model_yaml_nc": 1
+    },
+    "verified_nc": 1
+  },
+  "reloaded_controls": [],
+  "resumed": false,
+  "schema": "rgsp-seedwise-v1",
+  "smoke_only": false,
+  "trial_sha256": "c2b29ac256ce87ea4987d51f6ee95aaafde079c5e9d4da1f24bf1cbaf7da7e7b"
+}

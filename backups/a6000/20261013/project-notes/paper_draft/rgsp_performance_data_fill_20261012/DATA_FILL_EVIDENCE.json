@@ -1,0 +1,3465 @@
+{
+  "source_attachment_sha256": "CC50BFE9A849A38EE90C2D73C7A62C6CB4C10B05F0DCE0CBF16D11950BC6FD73",
+  "source_attachment": "C:/Users/13207/.codex/attachments/5fdfa05d-ed20-49ad-90f8-a73cbf2ee373/已粘贴的文本.txt",
+  "snapshot_times": [
+    {
+      "host": "powerleader-PT6620W",
+      "time": "2026-10-12 23:25:07 +0800"
+    },
+    {
+      "host": "a6000-c",
+      "time": "2026-10-12 23:25:10 +0800"
+    },
+    {
+      "host": "a6000-d",
+      "time": "2026-10-12 23:25:10 +0800"
+    },
+    {
+      "host": "powerleader-a6000-f",
+      "time": "2026-10-12 23:25:11 +0800"
+    }
+  ],
+  "user_scope": "Append new-protocol result groups; retain original prose and all old data.",
+  "validation": {
+    "planned_inverse_recovery_exact": true,
+    "unrelated_tables_unchanged": true
+  },
+  "rows": [
+    {
+      "table": "tab:ssdd_detection_comparison",
+      "job": "ssdd-yolov8n",
+      "seeds": [
+        0
+      ],
+      "cells": [
+        "89.84",
+        "75.46",
+        "83.23",
+        "30.30",
+        "39.18"
+      ],
+      "source": {
+        "lane": "f0",
+        "job": "ssdd-yolov8n",
+        "dataset": "ssdd",
+        "method": "YOLOv8n",
+        "seed": 0,
+        "metrics": {
+          "AP50": 0.8323355847064412,
+          "AP50_95": 0.39175859260113394,
+          "AP75": 0.3029887994757052,
+          "P": 0.8983610562607071,
+          "R": 0.7545787545787546
+        },
+        "unit": "fraction_0_to_1",
+        "epochs": 127,
+        "protocol": "1f1e38a6606f2b7000848fe2c8c0eb477a176965ee9ca8f7664b20d57415f13e"
+      }
+    },
+    {
+      "table": "tab:ssdd_detection_comparison",
+      "job": "ssdd-original",
+      "seeds": [
+        0
+      ],
+      "cells": [
+        "91.08",
+        "\\textbf{76.56}",
+        "\\textbf{87.28}",
+        "\\textbf{39.83}",
+        "\\textbf{43.71}"
+      ],
+      "source": {
+        "lane": "f0",
+        "job": "ssdd-original",
+        "dataset": "ssdd",
+        "method": "Original",
+        "seed": 0,
+        "metrics": {
+          "AP50": 0.8727905115239611,
+          "AP50_95": 0.4371379259532346,
+          "AP75": 0.3982832986633547,
+          "P": 0.9107657570324837,
+          "R": 0.7655677655677655
+        },
+        "unit": "fraction_0_to_1",
+        "epochs": 150,
+        "protocol": "7ab36f41d7f04949eb4307ab7952b2f44a4ea71383b20a0d28783bbe26d042c1"
+      }
+    },
+    {
+      "table": "tab:ssdd_detection_comparison",
+      "job": "ssdd-matched075",
+      "seeds": [
+        0
+      ],
+      "cells": [
+        "\\textbf{92.12}",
+        "74.18",
+        "86.76",
+        "35.13",
+        "43.40"
+      ],
+      "source": {
+        "lane": "f1",
+        "job": "ssdd-matched075",
+        "dataset": "ssdd",
+        "method": "Matched075",
+        "seed": 0,
+        "metrics": {
+          "AP50": 0.8675713667563578,
+          "AP50_95": 0.433977405179366,
+          "AP75": 0.3513125086031944,
+          "P": 0.9211955102063182,
+          "R": 0.7417582417582418
+        },
+        "unit": "fraction_0_to_1",
+        "epochs": 150,
+        "protocol": "7b653c6ed595d5d218c01a35e78a0a56b014ec9759e8fd3e559224f79803cca6"
+      }
+    },
+    {
+      "table": "tab:sample_performance",
+      "job": "sample-resnet50",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "cells": [
+        "$\\mathbf{4.70\\pm2.56}$",
+        "$\\mathbf{5.76\\pm3.28}$"
+      ],
+      "stats": {
+        "accuracy": {
+          "n": 3,
+          "mean": 4.700061842918985,
+          "sd": 2.559579726230658,
+          "tex": "$4.70\\pm2.56$"
+        },
+        "macro_f1": {
+          "n": 3,
+          "mean": 5.759020399254867,
+          "sd": 3.2810390551059894,
+          "tex": "$5.76\\pm3.28$"
+        }
+      }
+    },
+    {
+      "table": "tab:sample_performance",
+      "job": "sample-original",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "cells": [
+        "$3.96\\pm2.70$",
+        "$2.40\\pm2.14$"
+      ],
+      "stats": {
+        "accuracy": {
+          "n": 3,
+          "mean": 3.9579468150896724,
+          "sd": 2.7034623369690034,
+          "tex": "$3.96\\pm2.70$"
+        },
+        "macro_f1": {
+          "n": 3,
+          "mean": 2.398043316549924,
+          "sd": 2.139922685571047,
+          "tex": "$2.40\\pm2.14$"
+        }
+      }
+    },
+    {
+      "table": "tab:sample_performance",
+      "job": "sample-matched075",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "cells": [
+        "$3.59\\pm3.19$",
+        "$1.89\\pm0.97$"
+      ],
+      "stats": {
+        "accuracy": {
+          "n": 3,
+          "mean": 3.5868893011750154,
+          "sd": 3.1937541950959445,
+          "tex": "$3.59\\pm3.19$"
+        },
+        "macro_f1": {
+          "n": 3,
+          "mean": 1.8851421498256014,
+          "sd": 0.9717430176870273,
+          "tex": "$1.89\\pm0.97$"
+        }
+      }
+    },
+    {
+      "table": "tab:sample_performance",
+      "job": "sample-full",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "cells": [
+        "$4.33\\pm6.38$",
+        "$1.52\\pm2.12$"
+      ],
+      "stats": {
+        "accuracy": {
+          "n": 3,
+          "mean": 4.329004329004329,
+          "sd": 6.3794200893025845,
+          "tex": "$4.33\\pm6.38$"
+        },
+        "macro_f1": {
+          "n": 3,
+          "mean": 1.5151277515531503,
+          "sd": 2.122210716593724,
+          "tex": "$1.52\\pm2.12$"
+        }
+      }
+    },
+    {
+      "table": "tab:ottawa_performance",
+      "job": "ottawa-author-ddnet",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "cells": [
+        "$95.98\\pm0.42$",
+        "$\\mathbf{92.82\\pm1.23}$",
+        "$94.37\\pm0.47$",
+        "$89.34\\pm0.85$",
+        "$98.25\\pm0.13$"
+      ],
+      "stats": {
+        "precision": {
+          "n": 3,
+          "mean": 95.98180403584283,
+          "sd": 0.42293247236508696,
+          "tex": "$95.98\\pm0.42$"
+        },
+        "recall": {
+          "n": 3,
+          "mean": 92.81575176023429,
+          "sd": 1.2348698217941794,
+          "tex": "$92.82\\pm1.23$"
+        },
+        "f1": {
+          "n": 3,
+          "mean": 94.36753513427925,
+          "sd": 0.4748371352378322,
+          "tex": "$94.37\\pm0.47$"
+        },
+        "iou": {
+          "n": 3,
+          "mean": 89.33828169600172,
+          "sd": 0.8509967110379211,
+          "tex": "$89.34\\pm0.85$"
+        },
+        "overall_accuracy": {
+          "n": 3,
+          "mean": 98.24893267651889,
+          "sd": 0.13353418991615287,
+          "tex": "$98.25\\pm0.13$"
+        }
+      }
+    },
+    {
+      "table": "tab:ottawa_performance",
+      "job": "ottawa-author-lantnet",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "cells": [
+        "$96.35\\pm0.43$",
+        "$92.69\\pm0.59$",
+        "$\\mathbf{94.48\\pm0.17}$",
+        "$\\mathbf{89.54\\pm0.31}$",
+        "$\\mathbf{98.29\\pm0.05}$"
+      ],
+      "stats": {
+        "precision": {
+          "n": 3,
+          "mean": 96.34997586718086,
+          "sd": 0.432417835389609,
+          "tex": "$96.35\\pm0.43$"
+        },
+        "recall": {
+          "n": 3,
+          "mean": 92.6911334039504,
+          "sd": 0.5887805222252622,
+          "tex": "$92.69\\pm0.59$"
+        },
+        "f1": {
+          "n": 3,
+          "mean": 94.48343991683944,
+          "sd": 0.17424818896787364,
+          "tex": "$94.48\\pm0.17$"
+        },
+        "iou": {
+          "n": 3,
+          "mean": 89.54405238930669,
+          "sd": 0.3132802572845116,
+          "tex": "$89.54\\pm0.31$"
+        },
+        "overall_accuracy": {
+          "n": 3,
+          "mean": 98.28866995073892,
+          "sd": 0.04948716593054123,
+          "tex": "$98.29\\pm0.05$"
+        }
+      }
+    },
+    {
+      "table": "tab:ottawa_performance",
+      "job": "ottawa-author-camixer",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "cells": [
+        "$96.37\\pm0.69$",
+        "$92.51\\pm1.13$",
+        "$94.39\\pm0.26$",
+        "$89.38\\pm0.47$",
+        "$98.26\\pm0.07$"
+      ],
+      "stats": {
+        "precision": {
+          "n": 3,
+          "mean": 96.3656403573951,
+          "sd": 0.6878840041658274,
+          "tex": "$96.37\\pm0.69$"
+        },
+        "recall": {
+          "n": 3,
+          "mean": 92.50628284212931,
+          "sd": 1.1320624872840737,
+          "tex": "$92.51\\pm1.13$"
+        },
+        "f1": {
+          "n": 3,
+          "mean": 94.39061954228079,
+          "sd": 0.26450302687612176,
+          "tex": "$94.39\\pm0.26$"
+        },
+        "iou": {
+          "n": 3,
+          "mean": 89.37790784329476,
+          "sd": 0.47364135552471687,
+          "tex": "$89.38\\pm0.47$"
+        },
+        "overall_accuracy": {
+          "n": 3,
+          "mean": 98.26206896551724,
+          "sd": 0.0651141345491976,
+          "tex": "$98.26\\pm0.07$"
+        }
+      }
+    },
+    {
+      "table": "tab:ottawa_performance",
+      "job": "ottawa-author-wbanet",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "cells": [
+        "$\\mathbf{96.37\\pm0.22}$",
+        "$91.52\\pm0.48$",
+        "$93.88\\pm0.28$",
+        "$88.47\\pm0.51$",
+        "$98.11\\pm0.08$"
+      ],
+      "stats": {
+        "precision": {
+          "n": 3,
+          "mean": 96.37195550626015,
+          "sd": 0.221135188266502,
+          "tex": "$96.37\\pm0.22$"
+        },
+        "recall": {
+          "n": 3,
+          "mean": 91.52179782748667,
+          "sd": 0.47942988574395634,
+          "tex": "$91.52\\pm0.48$"
+        },
+        "f1": {
+          "n": 3,
+          "mean": 93.88381064367675,
+          "sd": 0.28414931373954566,
+          "tex": "$93.88\\pm0.28$"
+        },
+        "iou": {
+          "n": 3,
+          "mean": 88.47355755600023,
+          "sd": 0.5053099250219104,
+          "tex": "$88.47\\pm0.51$"
+        },
+        "overall_accuracy": {
+          "n": 3,
+          "mean": 98.11461412151067,
+          "sd": 0.08432906690166407,
+          "tex": "$98.11\\pm0.08$"
+        }
+      }
+    },
+    {
+      "table": "tab:ottawa_performance",
+      "job": "ottawa-author-wasnet",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "cells": [
+        "$95.77\\pm0.29$",
+        "$92.17\\pm0.81$",
+        "$93.93\\pm0.28$",
+        "$88.56\\pm0.51$",
+        "$98.12\\pm0.08$"
+      ],
+      "stats": {
+        "precision": {
+          "n": 3,
+          "mean": 95.77013096716938,
+          "sd": 0.286915822408217,
+          "tex": "$95.77\\pm0.29$"
+        },
+        "recall": {
+          "n": 3,
+          "mean": 92.16565933495339,
+          "sd": 0.8138526447564808,
+          "tex": "$92.17\\pm0.81$"
+        },
+        "f1": {
+          "n": 3,
+          "mean": 93.93114044822134,
+          "sd": 0.28495477669161984,
+          "tex": "$93.93\\pm0.28$"
+        },
+        "iou": {
+          "n": 3,
+          "mean": 88.55766236355689,
+          "sd": 0.5064317510605237,
+          "tex": "$88.56\\pm0.51$"
+        },
+        "overall_accuracy": {
+          "n": 3,
+          "mean": 98.11724137931034,
+          "sd": 0.07745747393498198,
+          "tex": "$98.12\\pm0.08$"
+        }
+      }
+    },
+    {
+      "table": "tab:ottawa_performance",
+      "job": "ottawa-original",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "cells": [
+        "$\\mathbf{95.36\\pm1.66}$",
+        "$96.34\\pm0.90$",
+        "$\\mathbf{95.84\\pm0.42}$",
+        "$\\mathbf{92.01\\pm0.78}$",
+        "$\\mathbf{98.73\\pm0.15}$"
+      ],
+      "stats": {
+        "precision": {
+          "n": 3,
+          "mean": 95.35687901282249,
+          "sd": 1.6639493747080778,
+          "tex": "$95.36\\pm1.66$"
+        },
+        "recall": {
+          "n": 3,
+          "mean": 96.34146341463415,
+          "sd": 0.9024207765716776,
+          "tex": "$96.34\\pm0.90$"
+        },
+        "f1": {
+          "n": 3,
+          "mean": 95.83525545858716,
+          "sd": 0.424347519318403,
+          "tex": "$95.84\\pm0.42$"
+        },
+        "iou": {
+          "n": 3,
+          "mean": 92.0056652004781,
+          "sd": 0.7814348200154815,
+          "tex": "$92.01\\pm0.78$"
+        },
+        "oa": {
+          "n": 3,
+          "mean": 98.73227719907408,
+          "sd": 0.14621621115955766,
+          "tex": "$98.73\\pm0.15$"
+        }
+      }
+    },
+    {
+      "table": "tab:ottawa_performance",
+      "job": "ottawa-matched075",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "cells": [
+        "$94.84\\pm0.68$",
+        "$\\mathbf{96.63\\pm0.60}$",
+        "$95.72\\pm0.30$",
+        "$91.80\\pm0.55$",
+        "$98.69\\pm0.09$"
+      ],
+      "stats": {
+        "precision": {
+          "n": 3,
+          "mean": 94.84183408978419,
+          "sd": 0.6846204498514964,
+          "tex": "$94.84\\pm0.68$"
+        },
+        "recall": {
+          "n": 3,
+          "mean": 96.62840746054519,
+          "sd": 0.5991138123561721,
+          "tex": "$96.63\\pm0.60$"
+        },
+        "f1": {
+          "n": 3,
+          "mean": 95.72450608003919,
+          "sd": 0.29760222928122265,
+          "tex": "$95.72\\pm0.30$"
+        },
+        "iou": {
+          "n": 3,
+          "mean": 91.80066020667684,
+          "sd": 0.5472608688073208,
+          "tex": "$91.80\\pm0.55$"
+        },
+        "oa": {
+          "n": 3,
+          "mean": 98.6942997685185,
+          "sd": 0.0930780471097946,
+          "tex": "$98.69\\pm0.09$"
+        }
+      }
+    },
+    {
+      "table": "tab:ottawa_performance",
+      "job": "ottawa-full",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "cells": [
+        "$93.79\\pm0.45$",
+        "$96.46\\pm0.68$",
+        "$95.11\\pm0.51$",
+        "$90.67\\pm0.93$",
+        "$98.50\\pm0.15$"
+      ],
+      "stats": {
+        "precision": {
+          "n": 3,
+          "mean": 93.79227318170584,
+          "sd": 0.452211500838014,
+          "tex": "$93.79\\pm0.45$"
+        },
+        "recall": {
+          "n": 3,
+          "mean": 96.46102343376376,
+          "sd": 0.6846311957063805,
+          "tex": "$96.46\\pm0.68$"
+        },
+        "f1": {
+          "n": 3,
+          "mean": 95.10743497346513,
+          "sd": 0.5098958852629355,
+          "tex": "$95.11\\pm0.51$"
+        },
+        "iou": {
+          "n": 3,
+          "mean": 90.67428663829006,
+          "sd": 0.9266930875019899,
+          "tex": "$90.67\\pm0.93$"
+        },
+        "oa": {
+          "n": 3,
+          "mean": 98.4989872685185,
+          "sd": 0.15482056369953864,
+          "tex": "$98.50\\pm0.15$"
+        }
+      }
+    }
+  ],
+  "verified_results": [
+    {
+      "lane": "a0",
+      "job": "farmland-full",
+      "dataset": "Farmland",
+      "method": "Full",
+      "seed": 0,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.22384428223844285,
+        "fn": 319,
+        "fp": 0,
+        "iou": 0.12602739726027398,
+        "kappa": 0.21690183464049329,
+        "oa": 0.9653862847222222,
+        "precision": 1,
+        "recall": 0.12602739726027398,
+        "tn": 8851,
+        "tp": 46
+      },
+      "unit": null,
+      "epochs": 122,
+      "protocol": "24f609da2f3144dad63d546acc98cb9621042d84476e7915daedd0a754fabe76"
+    },
+    {
+      "lane": "a0",
+      "job": "farmland-full",
+      "dataset": "Farmland",
+      "method": "Full",
+      "seed": 1,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.18223234624145787,
+        "fn": 325,
+        "fp": 34,
+        "iou": 0.10025062656641603,
+        "kappa": 0.17116571855732338,
+        "oa": 0.9610460069444444,
+        "precision": 0.5405405405405406,
+        "recall": 0.1095890410958904,
+        "tn": 8817,
+        "tp": 40
+      },
+      "unit": null,
+      "epochs": 150,
+      "protocol": "24f609da2f3144dad63d546acc98cb9621042d84476e7915daedd0a754fabe76"
+    },
+    {
+      "lane": "a0",
+      "job": "farmland-full",
+      "dataset": "Farmland",
+      "method": "Full",
+      "seed": 2,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.6810035842293907,
+        "fn": 175,
+        "fp": 3,
+        "iou": 0.5163043478260869,
+        "kappa": 0.672017846953337,
+        "oa": 0.9806857638888888,
+        "precision": 0.9844559585492227,
+        "recall": 0.5205479452054794,
+        "tn": 8848,
+        "tp": 190
+      },
+      "unit": null,
+      "epochs": 115,
+      "protocol": "24f609da2f3144dad63d546acc98cb9621042d84476e7915daedd0a754fabe76"
+    },
+    {
+      "lane": "a0",
+      "job": "farmland-matched075",
+      "dataset": "Farmland",
+      "method": "Matched075",
+      "seed": 0,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.5049701789264415,
+        "fn": 238,
+        "fp": 11,
+        "iou": 0.3377659574468085,
+        "kappa": 0.49397341688078433,
+        "oa": 0.9729817708333334,
+        "precision": 0.9202898550724637,
+        "recall": 0.34794520547945207,
+        "tn": 8840,
+        "tp": 127
+      },
+      "unit": null,
+      "epochs": 45,
+      "protocol": "cbf852242e1fde515c9516c90476f294d0c035d926f2aa1a94f413cea0bdb943"
+    },
+    {
+      "lane": "a0",
+      "job": "farmland-matched075",
+      "dataset": "Farmland",
+      "method": "Matched075",
+      "seed": 1,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.12037037037037036,
+        "fn": 339,
+        "fp": 41,
+        "iou": 0.06403940886699508,
+        "kappa": 0.1094298090581799,
+        "oa": 0.9587673611111112,
+        "precision": 0.3880597014925373,
+        "recall": 0.07123287671232877,
+        "tn": 8810,
+        "tp": 26
+      },
+      "unit": null,
+      "epochs": 107,
+      "protocol": "cbf852242e1fde515c9516c90476f294d0c035d926f2aa1a94f413cea0bdb943"
+    },
+    {
+      "lane": "a0",
+      "job": "farmland-matched075",
+      "dataset": "Farmland",
+      "method": "Matched075",
+      "seed": 2,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.7031802120141342,
+        "fn": 166,
+        "fp": 2,
+        "iou": 0.5422343324250681,
+        "kappa": 0.6945891982800767,
+        "oa": 0.9817708333333334,
+        "precision": 0.9900497512437811,
+        "recall": 0.5452054794520548,
+        "tn": 8849,
+        "tp": 199
+      },
+      "unit": null,
+      "epochs": 150,
+      "protocol": "cbf852242e1fde515c9516c90476f294d0c035d926f2aa1a94f413cea0bdb943"
+    },
+    {
+      "lane": "a0",
+      "job": "farmland-original",
+      "dataset": "Farmland",
+      "method": "Original",
+      "seed": 0,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0,
+        "fn": 365,
+        "fp": 0,
+        "iou": 0,
+        "kappa": 0,
+        "oa": 0.9603949652777778,
+        "precision": 0,
+        "recall": 0,
+        "tn": 8851,
+        "tp": 0
+      },
+      "unit": null,
+      "epochs": 150,
+      "protocol": "fe7c0e6fd22c6290ba64efaf81b39666ab3e184cda8c18007bb782634a0a6ff9"
+    },
+    {
+      "lane": "a0",
+      "job": "farmland-original",
+      "dataset": "Farmland",
+      "method": "Original",
+      "seed": 1,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.683076923076923,
+        "fn": 143,
+        "fp": 63,
+        "iou": 0.5186915887850467,
+        "kappa": 0.6716739733845234,
+        "oa": 0.9776475694444444,
+        "precision": 0.7789473684210526,
+        "recall": 0.6082191780821918,
+        "tn": 8788,
+        "tp": 222
+      },
+      "unit": null,
+      "epochs": 46,
+      "protocol": "fe7c0e6fd22c6290ba64efaf81b39666ab3e184cda8c18007bb782634a0a6ff9"
+    },
+    {
+      "lane": "a0",
+      "job": "farmland-original",
+      "dataset": "Farmland",
+      "method": "Original",
+      "seed": 2,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.7406143344709897,
+        "fn": 148,
+        "fp": 4,
+        "iou": 0.5880758807588076,
+        "kappa": 0.7326271757424634,
+        "oa": 0.9835069444444444,
+        "precision": 0.9819004524886877,
+        "recall": 0.5945205479452055,
+        "tn": 8847,
+        "tp": 217
+      },
+      "unit": null,
+      "epochs": 99,
+      "protocol": "fe7c0e6fd22c6290ba64efaf81b39666ab3e184cda8c18007bb782634a0a6ff9"
+    },
+    {
+      "lane": "a0",
+      "job": "ottawa-full",
+      "dataset": "Ottawa",
+      "method": "Full",
+      "seed": 0,
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9512324880297925,
+        "fn": 106,
+        "fp": 169,
+        "iou": 0.9070003381805885,
+        "kappa": 0.942426740162228,
+        "oa": 0.9850802951388888,
+        "precision": 0.9407225534900036,
+        "recall": 0.9619799139167863,
+        "tn": 15475,
+        "tp": 2682
+      },
+      "unit": null,
+      "epochs": 126,
+      "protocol": "452e0080095250efe91102edef48c209300632ce6d3b5841fef15302103b8b7d"
+    },
+    {
+      "lane": "a0",
+      "job": "ottawa-full",
+      "dataset": "Ottawa",
+      "method": "Full",
+      "seed": 1,
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9560923999294657,
+        "fn": 77,
+        "fp": 172,
+        "iou": 0.9158783783783784,
+        "kappa": 0.9481124869794174,
+        "oa": 0.9864908854166666,
+        "precision": 0.9403399236906,
+        "recall": 0.9723816355810617,
+        "tn": 15472,
+        "tp": 2711
+      },
+      "unit": null,
+      "epochs": 134,
+      "protocol": "452e0080095250efe91102edef48c209300632ce6d3b5841fef15302103b8b7d"
+    },
+    {
+      "lane": "a0",
+      "job": "ottawa-full",
+      "dataset": "Ottawa",
+      "method": "Full",
+      "seed": 2,
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9458981612446958,
+        "fn": 113,
+        "fp": 193,
+        "iou": 0.897349882589735,
+        "kappa": 0.9360953001460784,
+        "oa": 0.9833984375,
+        "precision": 0.9327057182705718,
+        "recall": 0.9594691535150646,
+        "tn": 15451,
+        "tp": 2675
+      },
+      "unit": null,
+      "epochs": 128,
+      "protocol": "452e0080095250efe91102edef48c209300632ce6d3b5841fef15302103b8b7d"
+    },
+    {
+      "lane": "a0",
+      "job": "ottawa-matched075",
+      "dataset": "Ottawa",
+      "method": "Matched075",
+      "seed": 0,
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9541836193171769,
+        "fn": 91,
+        "fp": 168,
+        "iou": 0.9123815967523681,
+        "kappa": 0.9458870813949027,
+        "oa": 0.9859483506944444,
+        "precision": 0.9413612565445026,
+        "recall": 0.9673601147776184,
+        "tn": 15476,
+        "tp": 2697
+      },
+      "unit": null,
+      "epochs": 148,
+      "protocol": "644f937ddc823a638532bd170457596054546b8a0dc26b8e9331d4dc15578cbc"
+    },
+    {
+      "lane": "a0",
+      "job": "ottawa-matched075",
+      "dataset": "Ottawa",
+      "method": "Matched075",
+      "seed": 1,
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9601275917065392,
+        "fn": 79,
+        "fp": 146,
+        "iou": 0.9233128834355828,
+        "kappa": 0.9529221034266152,
+        "oa": 0.98779296875,
+        "precision": 0.9488616462346761,
+        "recall": 0.9716642754662841,
+        "tn": 15498,
+        "tp": 2709
+      },
+      "unit": null,
+      "epochs": 150,
+      "protocol": "644f937ddc823a638532bd170457596054546b8a0dc26b8e9331d4dc15578cbc"
+    },
+    {
+      "lane": "a0",
+      "job": "ottawa-matched075",
+      "dataset": "Ottawa",
+      "method": "Matched075",
+      "seed": 2,
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9574239713774597,
+        "fn": 112,
+        "fp": 126,
+        "iou": 0.9183253260123542,
+        "kappa": 0.9498138722426104,
+        "oa": 0.9870876736111112,
+        "precision": 0.9550321199143469,
+        "recall": 0.9598278335724534,
+        "tn": 15518,
+        "tp": 2676
+      },
+      "unit": null,
+      "epochs": 150,
+      "protocol": "644f937ddc823a638532bd170457596054546b8a0dc26b8e9331d4dc15578cbc"
+    },
+    {
+      "lane": "a0",
+      "job": "ottawa-original",
+      "dataset": "Ottawa",
+      "method": "Original",
+      "seed": 0,
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9590517241379309,
+        "fn": 118,
+        "fp": 110,
+        "iou": 0.9213250517598344,
+        "kappa": 0.9517664657793051,
+        "oa": 0.9876302083333334,
+        "precision": 0.960431654676259,
+        "recall": 0.9576757532281205,
+        "tn": 15534,
+        "tp": 2670
+      },
+      "unit": null,
+      "epochs": 150,
+      "protocol": "7810f673af85c974e78e5c340a956cb6958f516ffa467e29f04ba091eb8d775f"
+    },
+    {
+      "lane": "a0",
+      "job": "ottawa-original",
+      "dataset": "Ottawa",
+      "method": "Original",
+      "seed": 1,
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9622030237580993,
+        "fn": 115,
+        "fp": 95,
+        "iou": 0.927159209157128,
+        "kappa": 0.9554955753124068,
+        "oa": 0.9886067708333334,
+        "precision": 0.965679190751445,
+        "recall": 0.9587517934002869,
+        "tn": 15549,
+        "tp": 2673
+      },
+      "unit": null,
+      "epochs": 127,
+      "protocol": "7810f673af85c974e78e5c340a956cb6958f516ffa467e29f04ba091eb8d775f"
+    },
+    {
+      "lane": "a0",
+      "job": "ottawa-original",
+      "dataset": "Ottawa",
+      "method": "Original",
+      "seed": 2,
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9538029158615844,
+        "fn": 73,
+        "fp": 190,
+        "iou": 0.9116856950973808,
+        "kappa": 0.9453698004676753,
+        "oa": 0.9857313368055556,
+        "precision": 0.9345955249569707,
+        "recall": 0.973816355810617,
+        "tn": 15454,
+        "tp": 2715
+      },
+      "unit": null,
+      "epochs": 150,
+      "protocol": "7810f673af85c974e78e5c340a956cb6958f516ffa467e29f04ba091eb8d775f"
+    },
+    {
+      "lane": "a0",
+      "job": "yellow_river-full",
+      "dataset": "Yellow_River",
+      "method": "Full",
+      "seed": 0,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.8713889988128215,
+        "fn": 225,
+        "fp": 100,
+        "iou": 0.7720897615708275,
+        "kappa": 0.8510130930601112,
+        "oa": 0.9647352430555556,
+        "precision": 0.9167360532889259,
+        "recall": 0.830316742081448,
+        "tn": 7790,
+        "tp": 1101
+      },
+      "unit": null,
+      "epochs": 108,
+      "protocol": "1abdd0511054b5364e6a0c98d87f83e1dafe3e5cbd251175498ed129eb07d038"
+    },
+    {
+      "lane": "a0",
+      "job": "yellow_river-full",
+      "dataset": "Yellow_River",
+      "method": "Full",
+      "seed": 1,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.7005321722302853,
+        "fn": 602,
+        "fp": 17,
+        "iou": 0.5390915860014892,
+        "kappa": 0.6660857838230798,
+        "oa": 0.9328342013888888,
+        "precision": 0.9770580296896086,
+        "recall": 0.5460030165912518,
+        "tn": 7873,
+        "tp": 724
+      },
+      "unit": null,
+      "epochs": 76,
+      "protocol": "1abdd0511054b5364e6a0c98d87f83e1dafe3e5cbd251175498ed129eb07d038"
+    },
+    {
+      "lane": "a0",
+      "job": "yellow_river-full",
+      "dataset": "Yellow_River",
+      "method": "Full",
+      "seed": 2,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.8632686084142395,
+        "fn": 259,
+        "fp": 79,
+        "iou": 0.7594306049822064,
+        "kappa": 0.8422202366842326,
+        "oa": 0.9633246527777778,
+        "precision": 0.931064572425829,
+        "recall": 0.8046757164404224,
+        "tn": 7811,
+        "tp": 1067
+      },
+      "unit": null,
+      "epochs": 60,
+      "protocol": "1abdd0511054b5364e6a0c98d87f83e1dafe3e5cbd251175498ed129eb07d038"
+    },
+    {
+      "lane": "a0",
+      "job": "yellow_river-matched075",
+      "dataset": "Yellow_River",
+      "method": "Matched075",
+      "seed": 0,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.8574840764331211,
+        "fn": 249,
+        "fp": 109,
+        "iou": 0.7505226480836237,
+        "kappa": 0.8350774693931412,
+        "oa": 0.9611545138888888,
+        "precision": 0.9080944350758853,
+        "recall": 0.8122171945701357,
+        "tn": 7781,
+        "tp": 1077
+      },
+      "unit": null,
+      "epochs": 98,
+      "protocol": "7acdbd746951f86dfb53f615ed5c36957e2a47f029fafa1ea08e28bb0c9d84d8"
+    },
+    {
+      "lane": "a0",
+      "job": "yellow_river-matched075",
+      "dataset": "Yellow_River",
+      "method": "Matched075",
+      "seed": 1,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.6111400312337324,
+        "fn": 739,
+        "fp": 8,
+        "iou": 0.44002998500749624,
+        "kappa": 0.5730898110107431,
+        "oa": 0.9189453125,
+        "precision": 0.9865546218487395,
+        "recall": 0.44268476621417796,
+        "tn": 7882,
+        "tp": 587
+      },
+      "unit": null,
+      "epochs": 71,
+      "protocol": "7acdbd746951f86dfb53f615ed5c36957e2a47f029fafa1ea08e28bb0c9d84d8"
+    },
+    {
+      "lane": "a0",
+      "job": "yellow_river-matched075",
+      "dataset": "Yellow_River",
+      "method": "Matched075",
+      "seed": 2,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.8777656873413131,
+        "fn": 116,
+        "fp": 221,
+        "iou": 0.7821590174531351,
+        "kappa": 0.8563031438684156,
+        "oa": 0.9634331597222222,
+        "precision": 0.8455625436757512,
+        "recall": 0.9125188536953243,
+        "tn": 7669,
+        "tp": 1210
+      },
+      "unit": null,
+      "epochs": 65,
+      "protocol": "7acdbd746951f86dfb53f615ed5c36957e2a47f029fafa1ea08e28bb0c9d84d8"
+    },
+    {
+      "lane": "a0",
+      "job": "yellow_river-original",
+      "dataset": "Yellow_River",
+      "method": "Original",
+      "seed": 0,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.8248394004282655,
+        "fn": 363,
+        "fp": 46,
+        "iou": 0.7018950437317785,
+        "kappa": 0.7999657388343944,
+        "oa": 0.9556206597222222,
+        "precision": 0.9544103072348861,
+        "recall": 0.7262443438914027,
+        "tn": 7844,
+        "tp": 963
+      },
+      "unit": null,
+      "epochs": 80,
+      "protocol": "8781cae2f9aa0e24f4179dee8a0e059ba082a9728e251f632b51d2d26ca7b1b0"
+    },
+    {
+      "lane": "a0",
+      "job": "yellow_river-original",
+      "dataset": "Yellow_River",
+      "method": "Original",
+      "seed": 1,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.4253554502369668,
+        "fn": 967,
+        "fp": 3,
+        "iou": 0.27012791572610984,
+        "kappa": 0.38756081559904687,
+        "oa": 0.8947482638888888,
+        "precision": 0.9917127071823204,
+        "recall": 0.2707390648567119,
+        "tn": 7887,
+        "tp": 359
+      },
+      "unit": null,
+      "epochs": 117,
+      "protocol": "8781cae2f9aa0e24f4179dee8a0e059ba082a9728e251f632b51d2d26ca7b1b0"
+    },
+    {
+      "lane": "a0",
+      "job": "yellow_river-original",
+      "dataset": "Yellow_River",
+      "method": "Original",
+      "seed": 2,
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.8082673702726473,
+        "fn": 407,
+        "fp": 29,
+        "iou": 0.6782287822878229,
+        "kappa": 0.7821310617831461,
+        "oa": 0.9526909722222222,
+        "precision": 0.9694092827004219,
+        "recall": 0.6930618401206636,
+        "tn": 7861,
+        "tp": 919
+      },
+      "unit": null,
+      "epochs": 70,
+      "protocol": "8781cae2f9aa0e24f4179dee8a0e059ba082a9728e251f632b51d2d26ca7b1b0"
+    },
+    {
+      "lane": "c0",
+      "job": "sample-full",
+      "dataset": "SAMPLE",
+      "method": "Full",
+      "seed": 0,
+      "metrics": {
+        "accuracy": 0.0037105751391465678,
+        "confusion_matrix": [
+          [
+            0,
+            14,
+            22,
+            0,
+            0,
+            0,
+            22,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            49,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            36,
+            10,
+            0,
+            0,
+            0,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            16,
+            0,
+            0,
+            0,
+            0,
+            37,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            16,
+            37,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            23,
+            29,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            18,
+            40,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            40,
+            1,
+            0,
+            0,
+            0,
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            17,
+            31,
+            0,
+            0,
+            10,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.0017279343161037506,
+        "macro_precision": 0.0011174579392577333,
+        "macro_recall": 0.0038098693759071114,
+        "per_class_recall": [
+          0,
+          0.019230769230769232,
+          0,
+          0,
+          0,
+          0,
+          0.018867924528301886,
+          0,
+          0,
+          0
+        ]
+      },
+      "unit": null,
+      "epochs": 139,
+      "protocol": "0f7b5dfa1b351da94ebe7bb49fb8f2ea00174e1ed69047f45fd8dac3a92c1c4e"
+    },
+    {
+      "lane": "c0",
+      "job": "sample-full",
+      "dataset": "SAMPLE",
+      "method": "Full",
+      "seed": 1,
+      "metrics": {
+        "accuracy": 0.00927643784786642,
+        "confusion_matrix": [
+          [
+            0,
+            36,
+            3,
+            0,
+            0,
+            0,
+            19,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            48,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            47,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            48,
+            1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            22,
+            0,
+            0,
+            0,
+            0,
+            31,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            36,
+            17,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            27,
+            26,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            59,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            46,
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            56,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.0041079997890629116,
+        "macro_precision": 0.003234846177276881,
+        "macro_recall": 0.009733124018838305,
+        "per_class_recall": [
+          0,
+          0.07692307692307693,
+          0.02040816326530612,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "unit": null,
+      "epochs": 115,
+      "protocol": "0f7b5dfa1b351da94ebe7bb49fb8f2ea00174e1ed69047f45fd8dac3a92c1c4e"
+    },
+    {
+      "lane": "c0",
+      "job": "sample-full",
+      "dataset": "SAMPLE",
+      "method": "Full",
+      "seed": 2,
+      "metrics": {
+        "accuracy": 0.11688311688311688,
+        "confusion_matrix": [
+          [
+            0,
+            58,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            50,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            32,
+            13,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            39,
+            12,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            53,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            46,
+            7,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            21,
+            32,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            31,
+            29,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            52,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            11,
+            0,
+            0,
+            15,
+            24,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.039617898441427844,
+        "macro_precision": 0.02532051282051282,
+        "macro_recall": 0.12268445839874412,
+        "per_class_recall": [
+          0,
+          0.9615384615384616,
+          0.2653061224489796,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "unit": null,
+      "epochs": 112,
+      "protocol": "0f7b5dfa1b351da94ebe7bb49fb8f2ea00174e1ed69047f45fd8dac3a92c1c4e"
+    },
+    {
+      "lane": "c0",
+      "job": "sample-matched075",
+      "dataset": "SAMPLE",
+      "method": "Matched075",
+      "seed": 0,
+      "metrics": {
+        "accuracy": 0.012987012987012988,
+        "confusion_matrix": [
+          [
+            0,
+            31,
+            1,
+            0,
+            0,
+            0,
+            26,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            49,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            34,
+            10,
+            0,
+            0,
+            0,
+            7,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            13,
+            0,
+            0,
+            0,
+            0,
+            40,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            38,
+            14,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            14,
+            34,
+            0,
+            0,
+            0,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            38,
+            20,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            28,
+            3,
+            0,
+            0,
+            0,
+            21,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            27,
+            8,
+            0,
+            0,
+            20,
+            2,
+            0,
+            0,
+            1
+          ]
+        ],
+        "macro_f1": 0.008020718189633996,
+        "macro_precision": 0.1029094827586207,
+        "macro_recall": 0.013081177118262349,
+        "per_class_recall": [
+          0,
+          0.019230769230769232,
+          0,
+          0,
+          0,
+          0,
+          0.09433962264150944,
+          0,
+          0,
+          0.017241379310344827
+        ]
+      },
+      "unit": null,
+      "epochs": 80,
+      "protocol": "ffa83416d4e819aaa920047e524485fdab1f7138d54489b1a2e331803fdfb1f2"
+    },
+    {
+      "lane": "c0",
+      "job": "sample-matched075",
+      "dataset": "SAMPLE",
+      "method": "Matched075",
+      "seed": 1,
+      "metrics": {
+        "accuracy": 0.022263450834879406,
+        "confusion_matrix": [
+          [
+            0,
+            29,
+            13,
+            6,
+            0,
+            0,
+            10,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            48,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            47,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            47,
+            3,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            22,
+            0,
+            0,
+            0,
+            0,
+            31,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            13,
+            40,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            17,
+            36,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            46,
+            14,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            49,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            31,
+            7,
+            0,
+            0,
+            12,
+            0,
+            0,
+            0,
+            8
+          ]
+        ],
+        "macro_f1": 0.026806526806526804,
+        "macro_precision": 0.10153846153846154,
+        "macro_recall": 0.021485411140583555,
+        "per_class_recall": [
+          0,
+          0.07692307692307693,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.13793103448275862
+        ]
+      },
+      "unit": null,
+      "epochs": 80,
+      "protocol": "ffa83416d4e819aaa920047e524485fdab1f7138d54489b1a2e331803fdfb1f2"
+    },
+    {
+      "lane": "c0",
+      "job": "sample-matched075",
+      "dataset": "SAMPLE",
+      "method": "Matched075",
+      "seed": 2,
+      "metrics": {
+        "accuracy": 0.07235621521335807,
+        "confusion_matrix": [
+          [
+            0,
+            56,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            39,
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            21,
+            0,
+            0,
+            0,
+            0,
+            28,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            38,
+            11,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            45,
+            6,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            28,
+            25,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            49,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            24,
+            36,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            52,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            15,
+            0,
+            0,
+            11,
+            32,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.021727019498607242,
+        "macro_precision": 0.012703583061889252,
+        "macro_recall": 0.075,
+        "per_class_recall": [
+          0,
+          0.75,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "unit": null,
+      "epochs": 100,
+      "protocol": "ffa83416d4e819aaa920047e524485fdab1f7138d54489b1a2e331803fdfb1f2"
+    },
+    {
+      "lane": "c0",
+      "job": "sample-original",
+      "dataset": "SAMPLE",
+      "method": "Original",
+      "seed": 0,
+      "metrics": {
+        "accuracy": 0.00927643784786642,
+        "confusion_matrix": [
+          [
+            0,
+            29,
+            0,
+            2,
+            0,
+            0,
+            27,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            49,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            43,
+            0,
+            1,
+            0,
+            0,
+            7,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            9,
+            0,
+            4,
+            0,
+            0,
+            40,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            33,
+            19,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            20,
+            25,
+            5,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            51,
+            8,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            23,
+            1,
+            2,
+            0,
+            0,
+            26,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            57,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.006031435289881977,
+        "macro_precision": 0.008982211626627544,
+        "macro_recall": 0.00954423859529298,
+        "per_class_recall": [
+          0,
+          0.019230769230769232,
+          0,
+          0.0196078431372549,
+          0,
+          0,
+          0.05660377358490566,
+          0,
+          0,
+          0
+        ]
+      },
+      "unit": null,
+      "epochs": 107,
+      "protocol": "d6d808b96afcaa8ecabf8b978e30b1c68b6c8e51c5a20209974fbc435368f603"
+    },
+    {
+      "lane": "c0",
+      "job": "sample-original",
+      "dataset": "SAMPLE",
+      "method": "Original",
+      "seed": 1,
+      "metrics": {
+        "accuracy": 0.04823747680890538,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            56,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            12,
+            0,
+            0,
+            0,
+            40,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            9,
+            0,
+            0,
+            0,
+            40,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            45,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            35,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            51,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            53,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            54,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            7,
+            45,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            33,
+            0,
+            0,
+            3,
+            2,
+            0,
+            0,
+            17
+          ]
+        ],
+        "macro_f1": 0.047662141779788836,
+        "macro_precision": 0.08729007633587786,
+        "macro_recall": 0.04767769176636172,
+        "per_class_recall": [
+          0,
+          0,
+          0.1836734693877551,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.29310344827586204
+        ]
+      },
+      "unit": null,
+      "epochs": 80,
+      "protocol": "d6d808b96afcaa8ecabf8b978e30b1c68b6c8e51c5a20209974fbc435368f603"
+    },
+    {
+      "lane": "c0",
+      "job": "sample-original",
+      "dataset": "SAMPLE",
+      "method": "Original",
+      "seed": 2,
+      "metrics": {
+        "accuracy": 0.061224489795918366,
+        "confusion_matrix": [
+          [
+            0,
+            54,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            30,
+            2,
+            0,
+            0,
+            0,
+            20,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            13,
+            3,
+            0,
+            0,
+            0,
+            33,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            45,
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            50,
+            1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            38,
+            15,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            29,
+            24,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            54,
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            52,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            52,
+            0,
+            0,
+            0,
+            2,
+            4,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.0182477224268269,
+        "macro_precision": 0.012112277391201793,
+        "macro_recall": 0.06381475667189952,
+        "per_class_recall": [
+          0,
+          0.5769230769230769,
+          0.061224489795918366,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "unit": null,
+      "epochs": 116,
+      "protocol": "d6d808b96afcaa8ecabf8b978e30b1c68b6c8e51c5a20209974fbc435368f603"
+    },
+    {
+      "lane": "c0",
+      "job": "sample-resnet50",
+      "dataset": "SAMPLE",
+      "method": "resnet50",
+      "seed": 0,
+      "metrics": {
+        "accuracy": 0.03710575139146568,
+        "confusion_matrix": [
+          [
+            0,
+            27,
+            14,
+            0,
+            0,
+            0,
+            17,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            7,
+            0,
+            0,
+            0,
+            41,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            46,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            50,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            3,
+            0,
+            0,
+            0,
+            25,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            46,
+            5,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            17,
+            34,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            31,
+            29,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            42,
+            9,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            47,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            9
+          ]
+        ],
+        "macro_f1": 0.04250594534658088,
+        "macro_precision": 0.20571803112272424,
+        "macro_recall": 0.036879167862530635,
+        "per_class_recall": [
+          0,
+          0.07692307692307693,
+          0.061224489795918366,
+          0,
+          0,
+          0.03773584905660377,
+          0.03773584905660377,
+          0,
+          0,
+          0.15517241379310345
+        ]
+      },
+      "unit": null,
+      "epochs": 89,
+      "protocol": "bb565dc8da68067b2dff89a3aa29aa489789a6b99a7db6ed65bd7110edc527be"
+    },
+    {
+      "lane": "c0",
+      "job": "sample-resnet50",
+      "dataset": "SAMPLE",
+      "method": "resnet50",
+      "seed": 1,
+      "metrics": {
+        "accuracy": 0.027829313543599257,
+        "confusion_matrix": [
+          [
+            0,
+            33,
+            0,
+            0,
+            0,
+            0,
+            25,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            48,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            47,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            16,
+            0,
+            0,
+            0,
+            0,
+            37,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            51,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            38,
+            12,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            48,
+            12,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            44,
+            0,
+            0,
+            0,
+            0,
+            8,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            46,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            11
+          ]
+        ],
+        "macro_f1": 0.035034649286038874,
+        "macro_precision": 0.10201223776223775,
+        "macro_recall": 0.026548971522946795,
+        "per_class_recall": [
+          0,
+          0.019230769230769232,
+          0,
+          0,
+          0,
+          0,
+          0.05660377358490566,
+          0,
+          0,
+          0.1896551724137931
+        ]
+      },
+      "unit": null,
+      "epochs": 79,
+      "protocol": "bb565dc8da68067b2dff89a3aa29aa489789a6b99a7db6ed65bd7110edc527be"
+    },
+    {
+      "lane": "c0",
+      "job": "sample-resnet50",
+      "dataset": "SAMPLE",
+      "method": "resnet50",
+      "seed": 2,
+      "metrics": {
+        "accuracy": 0.07606679035250463,
+        "confusion_matrix": [
+          [
+            0,
+            16,
+            20,
+            1,
+            0,
+            0,
+            19,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            13,
+            37,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            11,
+            37,
+            0,
+            0
+          ],
+          [
+            0,
+            43,
+            0,
+            5,
+            0,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            18,
+            0,
+            3,
+            0,
+            0,
+            28,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            11,
+            36,
+            0,
+            0,
+            3,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            13,
+            38,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            42,
+            15,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            38,
+            7,
+            2,
+            0,
+            0,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            29,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            29
+          ]
+        ],
+        "macro_f1": 0.09523001734502626,
+        "macro_precision": 0.23328372760366137,
+        "macro_recall": 0.07320177708238593,
+        "per_class_recall": [
+          0,
+          0.019230769230769232,
+          0.02040816326530612,
+          0.09803921568627451,
+          0,
+          0.05660377358490566,
+          0.03773584905660377,
+          0,
+          0,
+          0.5
+        ]
+      },
+      "unit": null,
+      "epochs": 118,
+      "protocol": "bb565dc8da68067b2dff89a3aa29aa489789a6b99a7db6ed65bd7110edc527be"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-camixer",
+      "dataset": "Ottawa",
+      "method": "camixer",
+      "seed": 0,
+      "metrics": {
+        "TP": 14963,
+        "FP": 634,
+        "FN": 1086,
+        "TN": 84817,
+        "pixels": 101500,
+        "precision": 0.9593511572738347,
+        "recall": 0.9323322325378528,
+        "f1": 0.9456487391771472,
+        "iou": 0.8969010369837559,
+        "overall_accuracy": 0.9830541871921182,
+        "kappa": 0.9356134652659875,
+        "percent_error": 1.6945812807881773
+      },
+      "unit": null,
+      "epochs": 46,
+      "protocol": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-camixer",
+      "dataset": "Ottawa",
+      "method": "camixer",
+      "seed": 1,
+      "metrics": {
+        "TP": 14637,
+        "FP": 428,
+        "FN": 1412,
+        "TN": 85023,
+        "pixels": 101500,
+        "precision": 0.9715897776302689,
+        "recall": 0.9120194404635803,
+        "f1": 0.9408626341839686,
+        "iou": 0.8883291861382533,
+        "overall_accuracy": 0.981871921182266,
+        "kappa": 0.9301705072370456,
+        "percent_error": 1.812807881773399
+      },
+      "unit": null,
+      "epochs": 51,
+      "protocol": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-camixer",
+      "dataset": "Ottawa",
+      "method": "camixer",
+      "seed": 2,
+      "metrics": {
+        "TP": 14939,
+        "FP": 622,
+        "FN": 1110,
+        "TN": 84829,
+        "pixels": 101500,
+        "precision": 0.9600282758177495,
+        "recall": 0.9308368122624463,
+        "f1": 0.9452072129073078,
+        "iou": 0.896107012176834,
+        "overall_accuracy": 0.982935960591133,
+        "kappa": 0.9351044584363694,
+        "percent_error": 1.7064039408866996
+      },
+      "unit": null,
+      "epochs": 57,
+      "protocol": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-ddnet",
+      "dataset": "Ottawa",
+      "method": "ddnet",
+      "seed": 0,
+      "metrics": {
+        "TP": 14948,
+        "FP": 680,
+        "FN": 1101,
+        "TN": 84771,
+        "pixels": 101500,
+        "precision": 0.9564883542359867,
+        "recall": 0.9313975948657237,
+        "f1": 0.9437762414370048,
+        "iou": 0.8935381672544683,
+        "overall_accuracy": 0.9824532019704434,
+        "kappa": 0.9333828484902077,
+        "percent_error": 1.7546798029556652
+      },
+      "unit": null,
+      "epochs": 56,
+      "protocol": "777013c652ed47960bd1877c4f33e910088a6941e15c08ac69172ee141e5344e"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-ddnet",
+      "dataset": "Ottawa",
+      "method": "ddnet",
+      "seed": 1,
+      "metrics": {
+        "TP": 14677,
+        "FP": 539,
+        "FN": 1372,
+        "TN": 84912,
+        "pixels": 101500,
+        "precision": 0.9645767613038907,
+        "recall": 0.9145118075892579,
+        "f1": 0.9388773388773389,
+        "iou": 0.8847962382445141,
+        "overall_accuracy": 0.9811724137931035,
+        "kappa": 0.9277590653774238,
+        "percent_error": 1.8827586206896552
+      },
+      "unit": null,
+      "epochs": 50,
+      "protocol": "777013c652ed47960bd1877c4f33e910088a6941e15c08ac69172ee141e5344e"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-ddnet",
+      "dataset": "Ottawa",
+      "method": "ddnet",
+      "seed": 2,
+      "metrics": {
+        "TP": 15063,
+        "FP": 654,
+        "FN": 986,
+        "TN": 84797,
+        "pixels": 101500,
+        "precision": 0.9583890055354075,
+        "recall": 0.9385631503520468,
+        "f1": 0.9483724737140339,
+        "iou": 0.9018140453810692,
+        "overall_accuracy": 0.9838423645320197,
+        "kappa": 0.9387961767725457,
+        "percent_error": 1.6157635467980298
+      },
+      "unit": null,
+      "epochs": 68,
+      "protocol": "777013c652ed47960bd1877c4f33e910088a6941e15c08ac69172ee141e5344e"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-lantnet",
+      "dataset": "Ottawa",
+      "method": "lantnet",
+      "seed": 0,
+      "metrics": {
+        "TP": 14769,
+        "FP": 486,
+        "FN": 1280,
+        "TN": 84965,
+        "pixels": 101500,
+        "precision": 0.968141592920354,
+        "recall": 0.9202442519783164,
+        "f1": 0.9435854842831587,
+        "iou": 0.8931962503779861,
+        "overall_accuracy": 0.9826009852216748,
+        "kappa": 0.9333076858872779,
+        "percent_error": 1.7399014778325124
+      },
+      "unit": null,
+      "epochs": 66,
+      "protocol": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-lantnet",
+      "dataset": "Ottawa",
+      "method": "lantnet",
+      "seed": 1,
+      "metrics": {
+        "TP": 14911,
+        "FP": 628,
+        "FN": 1138,
+        "TN": 84823,
+        "pixels": 101500,
+        "precision": 0.9595855589162752,
+        "recall": 0.929092155274472,
+        "f1": 0.944092693427884,
+        "iou": 0.8941056544942136,
+        "overall_accuracy": 0.9826009852216748,
+        "kappa": 0.9337932112209073,
+        "percent_error": 1.7399014778325124
+      },
+      "unit": null,
+      "epochs": 75,
+      "protocol": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-lantnet",
+      "dataset": "Ottawa",
+      "method": "lantnet",
+      "seed": 2,
+      "metrics": {
+        "TP": 14948,
+        "FP": 578,
+        "FN": 1101,
+        "TN": 84873,
+        "pixels": 101500,
+        "precision": 0.9627721241787969,
+        "recall": 0.9313975948657237,
+        "f1": 0.9468250197941409,
+        "iou": 0.8990196668070006,
+        "overall_accuracy": 0.9834581280788177,
+        "kappa": 0.9370338310264713,
+        "percent_error": 1.6541871921182265
+      },
+      "unit": null,
+      "epochs": 100,
+      "protocol": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-wasnet",
+      "dataset": "Ottawa",
+      "method": "wasnet",
+      "seed": 0,
+      "metrics": {
+        "TP": 14919,
+        "FP": 705,
+        "FN": 1130,
+        "TN": 84746,
+        "pixels": 101500,
+        "precision": 0.9548771121351767,
+        "recall": 0.9295906286996074,
+        "f1": 0.9420642187352003,
+        "iou": 0.8904739166766146,
+        "overall_accuracy": 0.9819211822660099,
+        "kappa": 0.9313559909808004,
+        "percent_error": 1.8078817733990147
+      },
+      "unit": null,
+      "epochs": 150,
+      "protocol": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-wasnet",
+      "dataset": "Ottawa",
+      "method": "wasnet",
+      "seed": 1,
+      "metrics": {
+        "TP": 14658,
+        "FP": 601,
+        "FN": 1391,
+        "TN": 84850,
+        "pixels": 101500,
+        "precision": 0.9606134084802411,
+        "recall": 0.9133279332045611,
+        "f1": 0.9363740896895362,
+        "iou": 0.8803603603603604,
+        "overall_accuracy": 0.9803743842364532,
+        "kappa": 0.9247806516591865,
+        "percent_error": 1.9625615763546798
+      },
+      "unit": null,
+      "epochs": 150,
+      "protocol": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-wasnet",
+      "dataset": "Ottawa",
+      "method": "wasnet",
+      "seed": 2,
+      "metrics": {
+        "TP": 14798,
+        "FP": 655,
+        "FN": 1251,
+        "TN": 84796,
+        "pixels": 101500,
+        "precision": 0.9576134083996635,
+        "recall": 0.9220512181444327,
+        "f1": 0.9394959050219034,
+        "iou": 0.8858955938697318,
+        "overall_accuracy": 0.9812216748768473,
+        "kappa": 0.9283867813551469,
+        "percent_error": 1.8778325123152708
+      },
+      "unit": null,
+      "epochs": 150,
+      "protocol": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-wbanet",
+      "dataset": "Ottawa",
+      "method": "wbanet",
+      "seed": 0,
+      "metrics": {
+        "TP": 14776,
+        "FP": 545,
+        "FN": 1273,
+        "TN": 84906,
+        "pixels": 101500,
+        "precision": 0.9644279094053912,
+        "recall": 0.9206804162253099,
+        "f1": 0.9420465412814791,
+        "iou": 0.8904423285524888,
+        "overall_accuracy": 0.982088669950739,
+        "kappa": 0.9314607342800705,
+        "percent_error": 1.7911330049261085
+      },
+      "unit": null,
+      "epochs": 56,
+      "protocol": "4d1bb67e58ffcd025240c1b13e2e472d7fde90cd16f5f2e7e73258b29bc68b89"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-wbanet",
+      "dataset": "Ottawa",
+      "method": "wbanet",
+      "seed": 1,
+      "metrics": {
+        "TP": 14657,
+        "FP": 591,
+        "FN": 1392,
+        "TN": 84860,
+        "pixels": 101500,
+        "precision": 0.9612408184679958,
+        "recall": 0.9132656240264191,
+        "f1": 0.9366392945010704,
+        "iou": 0.8808293269230769,
+        "overall_accuracy": 0.9804630541871922,
+        "kappa": 0.9250992252873522,
+        "percent_error": 1.9536945812807884
+      },
+      "unit": null,
+      "epochs": 92,
+      "protocol": "4d1bb67e58ffcd025240c1b13e2e472d7fde90cd16f5f2e7e73258b29bc68b89"
+    },
+    {
+      "lane": "d0r3",
+      "job": "ottawa-author-wbanet",
+      "dataset": "Ottawa",
+      "method": "wbanet",
+      "seed": 2,
+      "metrics": {
+        "TP": 14632,
+        "FP": 523,
+        "FN": 1417,
+        "TN": 84928,
+        "pixels": 101500,
+        "precision": 0.9654899373144177,
+        "recall": 0.9117078945728706,
+        "f1": 0.9378284835277528,
+        "iou": 0.8829350712044413,
+        "overall_accuracy": 0.9808866995073892,
+        "kappa": 0.9265469715666278,
+        "percent_error": 1.9113300492610836
+      },
+      "unit": null,
+      "epochs": 82,
+      "protocol": "4d1bb67e58ffcd025240c1b13e2e472d7fde90cd16f5f2e7e73258b29bc68b89"
+    },
+    {
+      "lane": "f0",
+      "job": "ssdd-original",
+      "dataset": "ssdd",
+      "method": "Original",
+      "seed": 0,
+      "metrics": {
+        "AP50": 0.8727905115239611,
+        "AP50_95": 0.4371379259532346,
+        "AP75": 0.3982832986633547,
+        "P": 0.9107657570324837,
+        "R": 0.7655677655677655
+      },
+      "unit": "fraction_0_to_1",
+      "epochs": 150,
+      "protocol": "7ab36f41d7f04949eb4307ab7952b2f44a4ea71383b20a0d28783bbe26d042c1"
+    },
+    {
+      "lane": "f0",
+      "job": "ssdd-yolov8n",
+      "dataset": "ssdd",
+      "method": "YOLOv8n",
+      "seed": 0,
+      "metrics": {
+        "AP50": 0.8323355847064412,
+        "AP50_95": 0.39175859260113394,
+        "AP75": 0.3029887994757052,
+        "P": 0.8983610562607071,
+        "R": 0.7545787545787546
+      },
+      "unit": "fraction_0_to_1",
+      "epochs": 127,
+      "protocol": "1f1e38a6606f2b7000848fe2c8c0eb477a176965ee9ca8f7664b20d57415f13e"
+    },
+    {
+      "lane": "f0",
+      "job": "ssdd-yolov8n",
+      "dataset": "ssdd",
+      "method": "YOLOv8n",
+      "seed": 1,
+      "metrics": {
+        "AP50": 0.8425011890924525,
+        "AP50_95": 0.3809893781260671,
+        "AP75": 0.28766815317047023,
+        "P": 0.8753303709411243,
+        "R": 0.7802197802197802
+      },
+      "unit": "fraction_0_to_1",
+      "epochs": 150,
+      "protocol": "1f1e38a6606f2b7000848fe2c8c0eb477a176965ee9ca8f7664b20d57415f13e"
+    },
+    {
+      "lane": "f1",
+      "job": "ssdd-matched075",
+      "dataset": "ssdd",
+      "method": "Matched075",
+      "seed": 0,
+      "metrics": {
+        "AP50": 0.8675713667563578,
+        "AP50_95": 0.433977405179366,
+        "AP75": 0.3513125086031944,
+        "P": 0.9211955102063182,
+        "R": 0.7417582417582418
+      },
+      "unit": "fraction_0_to_1",
+      "epochs": 150,
+      "protocol": "7b653c6ed595d5d218c01a35e78a0a56b014ec9759e8fd3e559224f79803cca6"
+    }
+  ]
+}

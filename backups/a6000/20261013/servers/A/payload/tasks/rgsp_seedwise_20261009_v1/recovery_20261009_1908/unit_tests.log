@@ -1,0 +1,18 @@
+test_best_corruption_rejected (__main__.RecoveryTests) ... ok
+test_duplicate_epoch_rejected (__main__.RecoveryTests) ... ok
+test_exact_full_argument_forwarding (__main__.RecoveryTests) ... ok
+test_frozen_batch_change_rejected (__main__.RecoveryTests) ... ok
+test_metadata_only_allowed (__main__.RecoveryTests) ... ok
+test_missing_recursive_artifact_rejected (__main__.RecoveryTests) ... ok
+test_nonfinite_loss_rejected_even_with_matching_hash (__main__.RecoveryTests) ... ok
+test_nonfinite_metric_rejected_even_with_matching_hash (__main__.RecoveryTests) ... ok
+test_partial_training_rejected (__main__.RecoveryTests) ... ok
+test_symlink_rejected (__main__.RecoveryTests) ... ok
+test_unknown_nested_output_rejected (__main__.RecoveryTests) ... ok
+test_valid_deep_ledger (__main__.RecoveryTests) ... ok
+test_wrong_seed_rejected (__main__.RecoveryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.012s
+
+OK

@@ -1,0 +1,43 @@
+{
+  "experiment": "formal_air_p3_d16_v1_air_sarship_20_full_p3",
+  "placement": "p3",
+  "variant": "full",
+  "state_dim": 16,
+  "seed": 0,
+  "subset": "AIR-SARShip-2.0",
+  "weights": "/home/powerleader/ig-ds-ssm/experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/last.pt",
+  "weights_sha256": "dee061affd09917200a05958632ac41c4bfa09348304ccd674a6e13ec0a84722",
+  "data": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/AIR_SARShip_2_Paper/AIR_SARShip_2_Paper.yaml",
+  "data_yaml_sha256": "4c654e1e00eb9e2f0af7b4ba4ab9552d936fb7d45e5440d67b1c696215dd4ee4",
+  "split": "test",
+  "imgsz": 416,
+  "batch": 24,
+  "conf": 0.001,
+  "iou": 0.6,
+  "precision_mode": "fp32",
+  "result_dir": "/home/powerleader/ig-ds-ssm/experiments/paper_aligned_detection_20260830/evaluations/formal_air_p3_d16_v1_air_sarship_20_full_p3_paper_test",
+  "speed_ms": {
+    "preprocess": 0.040525860256618924,
+    "inference": 3.6259392161428194,
+    "loss": 0.0002787436968014564,
+    "postprocess": 0.33618079291449654
+  },
+  "overall": {
+    "precision": 0.67157956131835,
+    "recall": 0.31384615384615383,
+    "ap50": 0.3642327153735417,
+    "ap75": 0.15283659388191798,
+    "ap50_95": 0.18172140161785483
+  },
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "ship",
+      "precision": 0.67157956131835,
+      "recall": 0.31384615384615383,
+      "ap50": 0.3642327153735417,
+      "ap75": 0.15283659388191798,
+      "ap50_95": 0.18172140161785483
+    }
+  ]
+}

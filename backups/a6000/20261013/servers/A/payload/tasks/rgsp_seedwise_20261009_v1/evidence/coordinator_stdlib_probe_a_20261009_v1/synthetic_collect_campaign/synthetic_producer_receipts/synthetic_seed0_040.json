@@ -1,0 +1,18 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_runs/synthetic_seed0_040/synthetic_result.json",
+      "sha256": "8f67c4f24b6e83d0049700049eb194aa75af360ade66b5edf556b1daffb54a74"
+    }
+  ],
+  "details": {
+    "synthetic_fixture_only": true
+  },
+  "finished_utc": "2026-10-09T00:00:00+00:00",
+  "plan_sha256": "266f8526b7c8589c21fc715f62df84a7eeb60f94255d1ef32fa6a64d60ceed34",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "synthetic_seed0_040",
+  "trial_sha256": "b64826afa1731e582a7326a860a9fb587dee647b20b6126993c0ebbeca9ac23f"
+}

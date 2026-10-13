@@ -1,0 +1,33 @@
+{
+  "schema": "rgsp-independent-capture-launch-v1",
+  "mode": "validate",
+  "pid": 3628490,
+  "hostname": "a6000-c",
+  "gate_argv": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/ship_gate_v2.py",
+    "--validate-only",
+    "--expected-hostname",
+    "a6000-c",
+    "--audit",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1949_c/archive_audit.json",
+    "--reviewed-audit-sha256",
+    "a4b42255677feac2173652ec870130a89c647c57e677eb98613551c11c4794ac"
+  ],
+  "capture_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/v2_validate_c_01_capture",
+  "launched_utc": "2026-10-09T12:08:08.091391+00:00",
+  "resources": {
+    "hostname": "a6000-c",
+    "utc": "2026-10-09T12:08:07.977225+00:00",
+    "cpus": 32,
+    "load": [
+      0.06,
+      0.13,
+      0.15
+    ],
+    "disk_free_bytes": 845292077056,
+    "gpus": "0, GPU-e5f8a5d2-306d-582e-c926-f795df943b1b, 1308, 0",
+    "compute": ""
+  }
+}

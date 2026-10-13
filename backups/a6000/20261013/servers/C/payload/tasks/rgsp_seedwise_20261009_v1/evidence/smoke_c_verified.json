@@ -1,0 +1,251 @@
+{
+  "formal_result": false,
+  "lane": "c",
+  "lane_completion": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/lanes/c/lane_complete.json",
+    "sha256": "004775ad827f9273d047e139c4fd09218049dfbb5baacf005bbf7fee1a939c63"
+  },
+  "plan_sha256": "f5db470e4535f092e01fe64668ffcf423130d712149e89137ff17185910009ab",
+  "source_snapshot": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/preformal_smoke_c_source.tar.gz",
+    "sha256": "c302ba6135fa63963671fff18284fd0327f6f84334cfb66aa924432702995332"
+  },
+  "status": "verified",
+  "trials": [
+    {
+      "epochs": 2,
+      "losses": [
+        [
+          3.6541011333465576,
+          2.782750368118286,
+          3.3980844020843506
+        ],
+        [
+          3.3938913345336914,
+          2.0349984169006348,
+          2.8265488147735596
+        ]
+      ],
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_p4_seed0/provenance.json",
+            "sha256": "7a35bc8193867d33ad517b31903670c02eefb67b8ce50a7a07488c0d50d4b1f8"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_p4_seed0/train_complete.json",
+            "sha256": "3dc65473384f06d8146a70701b3a5adcb38b15b423d6627b89fce77559121eb2"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_p4_seed0/eval_test.json",
+            "sha256": "d08f666510ed79e656b26ab0ad6fee9dbbe6ab9c31a8546ea5ab029780673122"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_p4_seed0/evaluation_complete.json",
+            "sha256": "406ffbeaba1d10a6c45ec5cf3fcbdb6fa08f7d318f7a8b521daa15ee0f3c71ff"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_p4_seed0/weights/best.pt",
+            "sha256": "9c6ab059fb2e78c8c0e7b13e4bb0cfded1d177017475398f04c51b2461372dda"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_p4_seed0/weights/raw_fp32_last.pt",
+            "sha256": "fc644e2cfe73a261bddc274781d0a7379851356ca41e1bede792b446c4cef389"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_p4_seed0/controls_by_epoch.jsonl",
+            "sha256": "0d0d8c60995cdb0a685628e730f7d0145cfabfe6bb1ce203bbce2f26d6df63fc"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_p4_seed0/trial_complete.json",
+            "sha256": "6b99d1f7e425379a185e39c23d2b90d253e70485441115c89e4ec053b0ba9203"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.0,
+            "ap50_95": 0.0,
+            "ap75": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "resumed": false,
+          "smoke_only": true
+        },
+        "finished_utc": "2026-10-09T02:57:43.647742+00:00",
+        "plan_sha256": "f5db470e4535f092e01fe64668ffcf423130d712149e89137ff17185910009ab",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_p4_seed0",
+        "trial_sha256": "18b7ae5b9a997e4b877a8ad64711e3d91a98d5bdc723044dfb563d0768c695c8"
+      },
+      "test_overall": {
+        "ap50": 0.0,
+        "ap50_95": 0.0,
+        "ap75": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "trial_id": "ssdd_p4_seed0"
+    },
+    {
+      "epochs": 2,
+      "losses": [
+        [
+          3.6545634269714355,
+          2.674872636795044,
+          3.3686397075653076
+        ],
+        [
+          3.331334352493286,
+          2.039748191833496,
+          2.8228492736816406
+        ]
+      ],
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_d8_seed0/provenance.json",
+            "sha256": "a7dbec1dc54e6748982c051b58dda489c80988b2f4d06e66da012d6a3ec6448c"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_d8_seed0/train_complete.json",
+            "sha256": "b6d0e13323037a623bfa85b5d96ea0f74b46dd7b6c301c45f29cc5b570a08863"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_d8_seed0/eval_test.json",
+            "sha256": "a0e36f233d134d635229f8114c5fc795bad35e57877a363cf64ef36b3c8307f8"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_d8_seed0/evaluation_complete.json",
+            "sha256": "8f140eb5b802064604f6fe3cab2ea7ac9cd3f5ad3cc00d207cd981d2eefda92d"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_d8_seed0/weights/best.pt",
+            "sha256": "9344f17ce78bc470c6320bc891aa3b35f672ad417175df0521d85828cfdededf"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_d8_seed0/weights/raw_fp32_last.pt",
+            "sha256": "945318400392d6a42d04d692afbc1d787838c2d42186573fc5ad81df2817df6a"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_d8_seed0/controls_by_epoch.jsonl",
+            "sha256": "93ad10199bb2147ec178f8177c16a45d298a23cfae756e7de8bcf1896513de5d"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_d8_seed0/trial_complete.json",
+            "sha256": "daf5bb9a1c93ec49eceea673de35256c5b653152bc8339c73dc751c98f636fa1"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.0,
+            "ap50_95": 0.0,
+            "ap75": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "resumed": false,
+          "smoke_only": true
+        },
+        "finished_utc": "2026-10-09T02:59:13.817155+00:00",
+        "plan_sha256": "f5db470e4535f092e01fe64668ffcf423130d712149e89137ff17185910009ab",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_d8_seed0",
+        "trial_sha256": "99a63c1a49484765c5684746fe648b0ef4f6ac87891b05104f6429541d80c7b3"
+      },
+      "test_overall": {
+        "ap50": 0.0,
+        "ap50_95": 0.0,
+        "ap75": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "trial_id": "ssdd_d8_seed0"
+    },
+    {
+      "epochs": 2,
+      "losses": [
+        [
+          3.671332836151123,
+          3.2559423446655273,
+          3.47953462600708
+        ],
+        [
+          3.4738261699676514,
+          2.204479694366455,
+          2.7743027210235596
+        ]
+      ],
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/provenance.json",
+            "sha256": "a679e4e1aad789bb254a9edbf9ea7098661b5ba231f7759fe4609ce6fc8737d6"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/train_complete.json",
+            "sha256": "be7efc474289cb03410e264856e4cc577375af2217afa918b8e35c7955a21855"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/eval_test.json",
+            "sha256": "e620efbbaaac4046adfd73d07b795c20e66f41c7106d51aeac05b3f0a5f5138d"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/evaluation_complete.json",
+            "sha256": "28a7d5266db6b258fef3bc5f16856fd690d3ef38b5c2840e439cf8594925c73b"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/weights/best.pt",
+            "sha256": "ab8efdee3fee1828140c15c15c593396e160fc179573e1edc834f2d995bbc4c3"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/weights/raw_fp32_last.pt",
+            "sha256": "a78529723f97950623575913ad59494bd745c0f209bcc8bd786b046832ef9d69"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/controls_by_epoch.jsonl",
+            "sha256": "e3a8ed47aa9faa6c0aa1468834c11fe113ab469ee999d8445adbeaf6b0f3fbbf"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/trial_complete.json",
+            "sha256": "49516d91d7f857906fa4b6a96e522ca35753c2e930ab69fb047093c104baa77e"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.0,
+            "ap50_95": 0.0,
+            "ap75": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "resumed": false,
+          "smoke_only": true
+        },
+        "finished_utc": "2026-10-09T02:59:56.903448+00:00",
+        "plan_sha256": "f5db470e4535f092e01fe64668ffcf423130d712149e89137ff17185910009ab",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_cnn_yolov8n_seed0",
+        "trial_sha256": "ad3974abf780bc8e1516774302c9e207a0190cfabb024eb8eba02f7d3b2b2ccc"
+      },
+      "test_overall": {
+        "ap50": 0.0,
+        "ap50_95": 0.0,
+        "ap75": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "trial_id": "ssdd_cnn_yolov8n_seed0"
+    }
+  ],
+  "verified_utc": "2026-10-09T03:17:15.994906+00:00"
+}

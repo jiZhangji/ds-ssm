@@ -1,0 +1,23 @@
+{
+  "started_utc": "2026-10-09T11:31:48.824460+00:00",
+  "script": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_trial.py",
+  "script_sha256": "e348f28b38c41a271fed5776510e2b44b241c20f8399eb86ee8aca5fad7d5e5f",
+  "helper_sha256": "3faa16696535c447d50a405799040e17ef7780bb9444c3f5b0c9d5310061b04d",
+  "cuda_identity": {
+    "hostname": "powerleader-PT6620W",
+    "torch": "1.13.1+cu117",
+    "cuda_visible_devices": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+    "physical_gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+    "physical_gpu_index": 0,
+    "physical_gpu_name": "NVIDIA RTX A6000",
+    "reported_count_before": 0,
+    "cuda_runtime_count": 1,
+    "reported_count_after": 1,
+    "compatibility_applied": true,
+    "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+    "torch_installation_modified": false,
+    "gpu_mask_changed": false
+  },
+  "status": "PASS",
+  "finished_utc": "2026-10-09T11:31:52.667208+00:00"
+}

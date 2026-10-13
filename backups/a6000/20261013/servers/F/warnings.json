@@ -1,0 +1,27 @@
+[
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1945_f/audited_rows.json",
+    "reason": "larger_than_20MiB",
+    "bytes": 43737169
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/lanes/f0_seed0/logs/sar_shipdataset_original_seed0.log",
+    "reason": "larger_than_20MiB",
+    "bytes": 89845671
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/lanes/f1_seed0/logs/sar_shipdataset_matched_scale075_seed0.log",
+    "reason": "larger_than_20MiB",
+    "bytes": 89846436
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/sar_ship-original/run0/verified_data_records.json",
+    "reason": "larger_than_20MiB",
+    "bytes": 23590413
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/f1/jobs/sar_ship-matched075/run0/verified_data_records.json",
+    "reason": "larger_than_20MiB",
+    "bytes": 23590413
+  }
+]

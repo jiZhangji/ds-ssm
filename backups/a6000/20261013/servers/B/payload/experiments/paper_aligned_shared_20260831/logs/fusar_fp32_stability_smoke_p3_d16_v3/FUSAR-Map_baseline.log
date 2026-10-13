@@ -1,0 +1,100 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+FUSAR-Map baseline epoch=1/30 loss=0.91521 score=0.58909
+FUSAR-Map baseline epoch=2/30 loss=0.86589 score=0.52138
+FUSAR-Map baseline epoch=3/30 loss=0.84629 score=0.58116
+FUSAR-Map baseline epoch=4/30 loss=0.83378 score=0.61385
+FUSAR-Map baseline epoch=5/30 loss=0.82377 score=0.57690
+FUSAR-Map baseline epoch=6/30 loss=0.81808 score=0.60752
+FUSAR-Map baseline epoch=7/30 loss=0.80767 score=0.59004
+FUSAR-Map baseline epoch=8/30 loss=0.80219 score=0.60238
+FUSAR-Map baseline epoch=9/30 loss=0.79264 score=0.59290
+FUSAR-Map baseline epoch=10/30 loss=0.78947 score=0.60602
+FUSAR-Map baseline epoch=11/30 loss=0.78203 score=0.54488
+FUSAR-Map baseline epoch=12/30 loss=0.77526 score=0.59490
+FUSAR-Map baseline epoch=13/30 loss=0.77102 score=0.56961
+FUSAR-Map baseline epoch=14/30 loss=0.76688 score=0.62410
+FUSAR-Map baseline epoch=15/30 loss=0.75961 score=0.60205
+FUSAR-Map baseline epoch=16/30 loss=0.75923 score=0.59868
+FUSAR-Map baseline epoch=17/30 loss=0.75338 score=0.48259
+FUSAR-Map baseline epoch=18/30 loss=0.75287 score=0.62907
+FUSAR-Map baseline epoch=19/30 loss=0.74545 score=0.63489
+FUSAR-Map baseline epoch=20/30 loss=0.74411 score=0.61028
+FUSAR-Map baseline epoch=21/30 loss=0.74115 score=0.56535
+FUSAR-Map baseline epoch=22/30 loss=0.73511 score=0.62514
+FUSAR-Map baseline epoch=23/30 loss=0.73325 score=0.60407
+FUSAR-Map baseline epoch=24/30 loss=0.72886 score=0.61131
+FUSAR-Map baseline epoch=25/30 loss=0.72633 score=0.59703
+FUSAR-Map baseline epoch=26/30 loss=0.72464 score=0.62963
+FUSAR-Map baseline epoch=27/30 loss=0.72347 score=0.60865
+FUSAR-Map baseline epoch=28/30 loss=0.71850 score=0.63410
+FUSAR-Map baseline epoch=29/30 loss=0.71559 score=0.63707
+FUSAR-Map baseline epoch=30/30 loss=0.71289 score=0.61369
+{
+  "dataset": "FUSAR-Map",
+  "task": "segmentation",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "initialization": "scratch",
+  "protocol": "fusar-map-paper-disclosed-17560-train-4390-val-wuhan-1280-test",
+  "selection_policy": "best-validation-fwiou-test-once",
+  "class_names": [
+    "building",
+    "vegetation",
+    "water",
+    "road"
+  ],
+  "split_sizes": {
+    "train": 17560,
+    "val": 4390,
+    "test": 1280
+  },
+  "imgsz": 256,
+  "batch": 10,
+  "epochs_requested": 30,
+  "optimizer": "Adam",
+  "scheduler": "step",
+  "lr": 0.001,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.93,
+  "momentum": 0.9,
+  "weight_decay": 0.0,
+  "label_smoothing": 0.0,
+  "best_epoch": 29,
+  "threshold": null,
+  "metric": {
+    "miou_all": 0.44144135199535983,
+    "miou_foreground": 0.5480916953937797,
+    "mpa": 0.5167852388883004,
+    "dice": 0.5204211645088352,
+    "oa": 0.7803450703620911,
+    "fwiou": 0.6601271656828936,
+    "per_class_iou": [
+      0.12149032180010069,
+      0.7278974199482449,
+      0.867296954413893,
+      0.04908071181920089
+    ],
+    "per_class_pa": [
+      0.18575350660727066,
+      0.8808585243961755,
+      0.9391759781919643,
+      0.06135294635779089
+    ],
+    "per_class_dice": [
+      0.21665870750466565,
+      0.8425238808100626,
+      0.9289330787626332,
+      0.09356899095797976
+    ]
+  },
+  "params": 2346620,
+  "gflops": 1.737421696,
+  "latency_ms": 3.392479366933306,
+  "fps": 294.7696630809485,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/paper_aligned_shared_20260831/fusar_fp32_stability_smoke_p3_d16_v3/FUSAR_Map/baseline/seed_0/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/segmentation/FUSAR_Map_Paper_Code/manifest.json"
+}

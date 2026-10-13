@@ -1,0 +1,44 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/adoption.json",
+      "sha256": "ee167bc992bcd945d9af5c3818ebc1446a1becbb48e4297946de6e1c6f7e7670"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/train_complete.json",
+      "sha256": "afd77238a6113b8bf50180d7de98ac8df254b125eefb0aa7da91e9436306eaab"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/eval_test.json",
+      "sha256": "1ceb872c9335a38a11f84e15cae5f76fd8f06edc23ec78c4f28211bf300c7506"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/weights/best.pt",
+      "sha256": "ac60ad4c7bcbdf99c59db2596671a8db5ce591e1437575d114eccc72a915af29"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/completion.json",
+      "sha256": "94d9b3046f2e2ed5f273ee0565f3b66f0fd14ab9c83a2778f4b846229a398706"
+    }
+  ],
+  "details": {
+    "argv": [
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopt_receipt.py",
+      "--plan",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+      "--trial",
+      "ssdd_local_energy_seed0",
+      "--legacy-completion",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f0.complete.json"
+    ],
+    "kind": "command"
+  },
+  "finished_utc": "2026-10-09T03:31:08.703848+00:00",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "ssdd_local_energy_seed0",
+  "trial_sha256": "67798b00fec728b408b4f893dc00a36a17160cc0a74e1f7518c291afe0e0734f"
+}

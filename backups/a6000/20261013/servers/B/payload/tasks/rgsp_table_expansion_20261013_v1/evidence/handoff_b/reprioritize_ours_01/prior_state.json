@@ -1,0 +1,388 @@
+{
+  "gpu_uuid": "GPU-09b018e1-7140-296a-73d4-9e010ee209a2",
+  "jobs": {
+    "clean2992-full": {
+      "estimated_seconds": 3600.0,
+      "probe": {
+        "status": "PENDING"
+      },
+      "protocol_sha256": null,
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": null,
+      "status": "PENDING"
+    },
+    "clean2992-matched075": {
+      "estimated_seconds": 788.1402053089552,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/taskdata/acd_pair_v1/clean2992/manifest.json",
+          "--dataset",
+          "SAR-ACD-clean2992",
+          "--method",
+          "Matched075",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/clean2992-matched075/probe",
+          "--gpu-uuid",
+          "GPU-09b018e1-7140-296a-73d4-9e010ee209a2",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.033577231981326,
+        "ended_at": 1791859301.4445133,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/clean2992-matched075/probe",
+        "payload": {
+          "dataset": "SAR-ACD-clean2992",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 788.1402053089552,
+          "method": "Matched075",
+          "params": 2784798,
+          "peak_gpu_allocated_bytes": 1087144960,
+          "protocol_sha256": "5f6de97290e9fda096e992274ef7d51c700615e2d84e315613970d3cc5c149d6",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "classification",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.2924466489930637,
+            0.29189714801032096,
+            0.29213839099975303,
+            0.3003100630012341
+          ],
+          "updates_per_epoch": 15,
+          "validation_evaluated": false
+        },
+        "pid": 391649,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791859291.38431,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "5f6de97290e9fda096e992274ef7d51c700615e2d84e315613970d3cc5c149d6",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "clean2992-original": {
+      "estimated_seconds": 861.2659031443037,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/taskdata/acd_pair_v1/clean2992/manifest.json",
+          "--dataset",
+          "SAR-ACD-clean2992",
+          "--method",
+          "Original",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/clean2992-original/probe",
+          "--gpu-uuid",
+          "GPU-09b018e1-7140-296a-73d4-9e010ee209a2",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.055651040980592,
+        "ended_at": 1791859158.4703915,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/clean2992-original/probe",
+        "payload": {
+          "dataset": "SAR-ACD-clean2992",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 861.2659031443037,
+          "method": "Original",
+          "params": 2852438,
+          "peak_gpu_allocated_bytes": 1238641664,
+          "protocol_sha256": "736164780d6932591e369fc749a508b07ec1c97fd8bb79cb0d2dd22e3fa9e07d",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "classification",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.32606288499664515,
+            0.3234529619803652,
+            0.3221848590183072,
+            0.32327449100557715
+          ],
+          "updates_per_epoch": 15,
+          "validation_evaluated": false
+        },
+        "pid": 391102,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791859148.372211,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "736164780d6932591e369fc749a508b07ec1c97fd8bb79cb0d2dd22e3fa9e07d",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "clean2992-resnet50": {
+      "estimated_seconds": 3600.0,
+      "probe": {
+        "status": "PENDING"
+      },
+      "protocol_sha256": null,
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": null,
+      "status": "PENDING"
+    },
+    "full3032-full": {
+      "estimated_seconds": 3600.0,
+      "probe": {
+        "status": "PENDING"
+      },
+      "protocol_sha256": null,
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": null,
+      "status": "PENDING"
+    },
+    "full3032-matched075": {
+      "estimated_seconds": 837.5004401016981,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/taskdata/acd_pair_v1/full3032/manifest.json",
+          "--dataset",
+          "SAR-ACD-full3032",
+          "--method",
+          "Matched075",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/full3032-matched075/probe",
+          "--gpu-uuid",
+          "GPU-09b018e1-7140-296a-73d4-9e010ee209a2",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.034074896015227,
+        "ended_at": 1791859229.8764024,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/full3032-matched075/probe",
+        "payload": {
+          "dataset": "SAR-ACD-full3032",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 837.5004401016981,
+          "method": "Matched075",
+          "params": 2784798,
+          "peak_gpu_allocated_bytes": 1087144960,
+          "protocol_sha256": "b464757de83d8aeb99584faa4a1a4a9b5be0e21e3917a67525f760d8bc133e18",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "classification",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.2986427930300124,
+            0.29782813997007906,
+            0.29124528996180743,
+            0.29461412999080494
+          ],
+          "updates_per_epoch": 16,
+          "validation_evaluated": false
+        },
+        "pid": 391365,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791859219.8161643,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "b464757de83d8aeb99584faa4a1a4a9b5be0e21e3917a67525f760d8bc133e18",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "full3032-original": {
+      "estimated_seconds": 922.8046395817772,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/taskdata/acd_pair_v1/full3032/manifest.json",
+          "--dataset",
+          "SAR-ACD-full3032",
+          "--method",
+          "Original",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/full3032-original/probe",
+          "--gpu-uuid",
+          "GPU-09b018e1-7140-296a-73d4-9e010ee209a2",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.051521782996133,
+        "ended_at": 1791859086.8856912,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/full3032-original/probe",
+        "payload": {
+          "dataset": "SAR-ACD-full3032",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 922.8046395817772,
+          "method": "Original",
+          "params": 2852438,
+          "peak_gpu_allocated_bytes": 1238641664,
+          "protocol_sha256": "56f26a00ff08f3a34c9c55b49338125b58ff9ab2ebe5e7f2bf61406fb2abbc0b",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "classification",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.3243302580085583,
+            0.32709038601024076,
+            0.3366793589666486,
+            0.3239508479600772
+          ],
+          "updates_per_epoch": 16,
+          "validation_evaluated": false
+        },
+        "pid": 390781,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791859076.7958374,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "56f26a00ff08f3a34c9c55b49338125b58ff9ab2ebe5e7f2bf61406fb2abbc0b",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "full3032-resnet50": {
+      "estimated_seconds": 3600.0,
+      "probe": {
+        "status": "PENDING"
+      },
+      "protocol_sha256": null,
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": null,
+      "status": "PENDING"
+    }
+  },
+  "lane": "b0acd",
+  "plan_sha256": "8dd3747e64c0c8b5c0090c7ef78469567fde79cc636f9eaab0fe3f307a31a06e",
+  "revision": 27,
+  "root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1",
+  "status": "STOPPED",
+  "updated_at": 1791859362.8353112,
+  "version": 1
+}

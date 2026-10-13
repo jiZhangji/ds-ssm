@@ -1,0 +1,7 @@
+record,epoch,split,precision,recall,map50,map50_95,precision_mode,status
+old_best_recheck,,val,0.841366,0.785869,0.831061,0.583770,FP32,recovered
+epoch30_recheck,30,val,0.871043,0.810369,0.853149,0.629767,FP32,recovered
+epoch136_last_recheck,136,val,0.898546,0.823537,0.888438,0.705877,FP32,recovered
+epoch136_last_half,136,val,0.000000,0.000000,0.000000,0.000000,FP16,invalid_numeric_path
+latest,234,val,0.919670,0.824410,0.890540,0.715840,FP32,interim
+best,232,val,0.920740,0.822640,0.890570,0.716230,FP32,interim_best

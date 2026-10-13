@@ -1,0 +1,45 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/train_complete.json",
+      "sha256": "6d2e129c255b385f412ed508ed66d936f57d24683fe14f01206b5a994907b0f9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/eval_test.json",
+      "sha256": "75f11b851fb46602481df46d3e416354a3d8a69597cc3a4caa6cac67983243ac"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/reuse/ssdd_original_seed0/evaluation_complete.json",
+      "sha256": "03a2258c323ce884f19b64f7d72ae68ec7c65295995589537b27076d223ff5b6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/weights/best.pt",
+      "sha256": "9cdeb017197f755471eb38f191a2cb02704ecc414f4c72754c5edf0471bbe3b1"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/manifest/protocol.json",
+      "sha256": "f527dc1084569e85bc2f4e16c8b5843a272f453515a0f53665a9bcc863db3e0c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/reuse/ssdd_original_seed0/audit.json",
+      "sha256": "931908cb1d8475d8328672e955362dbe483c10276a777cfdce23676475f50076"
+    }
+  ],
+  "details": {
+    "limitations": [
+      "Historical continuous seeded-scratch trial, not rerun under the new launcher.",
+      "Same-shape RGSP controls share initialized tensors; different architecture/state/position do not guarantee tensor-matched initialization.",
+      "Dataset remains exact-content-cleaned image split, not a verified unseen-scene split.",
+      "Legacy EMA/FP16 checkpoint storage and test metric protocol retained."
+    ],
+    "origin": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original",
+    "reused": true
+  },
+  "finished_utc": "2026-10-09T03:30:48.062590+00:00",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "ssdd_original_seed0",
+  "trial_sha256": "f37eb2f13548e0e4069eca41b202d3391cfd76187de0eb5b92da643af2bc60d6"
+}

@@ -1,0 +1,17 @@
+{
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "ours",
+  "state_dim": 16,
+  "metric": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "iou": 0.0,
+    "oa": 0.8364257812499872
+  },
+  "latency_ms": 138.500100991223,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/change_detection/Ottawa/ours/best.pt",
+  "epochs": 100,
+  "params": 1839523
+}

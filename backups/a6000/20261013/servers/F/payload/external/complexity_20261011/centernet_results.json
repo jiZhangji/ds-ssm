@@ -1,0 +1,30 @@
+[
+  {
+    "method": "CenterNet-HG52",
+    "params": 104783243,
+    "flops_g": 927.9533056,
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "pooling_counted": false,
+    "decode_counted": false
+  },
+  {
+    "method": "CenterNet-HG104",
+    "params": 209941142,
+    "flops_g": 1302.50752,
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "pooling_counted": false,
+    "decode_counted": false
+  }
+]

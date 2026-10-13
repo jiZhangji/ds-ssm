@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-09",
+  "scope": "document revision, no model execution",
+  "inputs": [
+    {
+      "path": "C:\\Users\\13207\\Downloads\\rgsp_cn_revision_20261006_ieee2col_body_preview_bundle.zip",
+      "sha256": "efe51649f3d8cec20f6b2696ffc78877a78efda008387f5f9dae709827cf7e6b",
+      "bytes": 6762347
+    },
+    {
+      "path": "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\paper_draft\\rgsp_ieee2col_motivation_20261008\\main.tex",
+      "sha256": "fd7b1028e79570c40895e93f4867eb21ceef06578df435fb25dca4ee63a0ba77",
+      "bytes": 73374
+    },
+    {
+      "path": "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\paper_draft\\rgsp_ieee2col_motivation_20261008\\paper_motivation_updated.pdf",
+      "sha256": "0d162fc0a5e0fb6ddf6cea1ef7fd2b997e7a2a8a3a6a3444d225a83b2956a4ee",
+      "bytes": 2474288
+    },
+    {
+      "path": "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\output\\pdf\\rgsp_motivation_20261008\\rgsp_motivation_editable_bundle.zip",
+      "sha256": "3c934ec07aa4c250f604db96efef1396562ab6df2a2ad64a0a9511e1567ac34f",
+      "bytes": 1059658
+    },
+    {
+      "path": "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\output\\pdf\\rgsp_architecture_20261008\\rgsp_architecture_editable_bundle.zip",
+      "sha256": "8659bfbce8725b9968e0e7698481e774243e17343d3594eea9e6340e7261e722",
+      "bytes": 461052
+    },
+    {
+      "path": "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\experiments\\rgsp_controls_20261008_v3\\code_frozen.tar.gz",
+      "sha256": "9e814008b4beb072aabf3cd1e71afd617e612f6fd8cebbf560e686391099985b",
+      "bytes": 555800
+    },
+    {
+      "path": "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\experiments\\rgsp_sadd_controls_20261008_v1\\code_frozen.tar.gz",
+      "sha256": "a957bf2cfd2be3adeef4b8f692cbe74f0bfd49ea76d23b9ea7fdc789b61fe388",
+      "bytes": 557283
+    },
+    {
+      "path": "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\reports\\SADD_RESULTS_SSDD_RESTART_20261009.md",
+      "sha256": "b4d3c9c0a38d22987916376fb50b487947ce3c85c0f446c7637adbc9418338da",
+      "bytes": 3146
+    },
+    {
+      "path": "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\paper_draft\\RGSP_EXPERIMENTS_SUPPLEMENT_20261008.md",
+      "sha256": "46a53cd7b1ffe8b83986e35ff15c1ae4843833a59f0c955fa1a6207402e94f0c",
+      "bytes": 23328
+    }
+  ],
+  "numeric_verification": {
+    "legacy_tables": [
+      {
+        "table": "tab:sar_acd_comparison",
+        "numeric_tokens": 25,
+        "preserved": true
+      },
+      {
+        "table": "tab:sample_comparison",
+        "numeric_tokens": 43,
+        "preserved": true
+      },
+      {
+        "table": "tab:ssdd_comparison",
+        "numeric_tokens": 52,
+        "preserved": true
+      },
+      {
+        "table": "tab:sar_ship_comparison",
+        "numeric_tokens": 34,
+        "preserved": true
+      },
+      {
+        "table": "tab:sadd_comparison",
+        "numeric_tokens": 35,
+        "preserved": true
+      },
+      {
+        "table": "tab:air_sarship_comparison",
+        "numeric_tokens": 27,
+        "preserved": true
+      },
+      {
+        "table": "tab:openearthmap_sar_comparison",
+        "numeric_tokens": 22,
+        "preserved": true
+      },
+      {
+        "table": "tab:ottawa_comparison",
+        "numeric_tokens": 85,
+        "preserved": true
+      },
+      {
+        "table": "tab:yellow_river_comparison",
+        "numeric_tokens": 85,
+        "preserved": true
+      }
+    ],
+    "sadd_rows": 12,
+    "sadd_statistics": {
+      "original": {
+        "ap50": {
+          "mean": 97.31818586657793,
+          "sd": 0.9128757603673199
+        },
+        "ap75": {
+          "mean": 52.81918301230561,
+          "sd": 4.435444105935839
+        },
+        "ap50_95": {
+          "mean": 53.34669366215235,
+          "sd": 0.8753054554615226
+        }
+      },
+      "matched_scale075": {
+        "ap50": {
+          "mean": 97.37306943224667,
+          "sd": 1.264562634482906
+        },
+        "ap75": {
+          "mean": 50.67232419694077,
+          "sd": 1.012620733073961
+        },
+        "ap50_95": {
+          "mean": 52.177325730818644,
+          "sd": 0.8790724321811412
+        }
+      },
+      "local_energy": {
+        "ap50": {
+          "mean": 97.57360708384125,
+          "sd": 0.9135921953362874
+        },
+        "ap75": {
+          "mean": 48.754134115760884,
+          "sd": 1.774089931283388
+        },
+        "ap50_95": {
+          "mean": 52.36764102461109,
+          "sd": 0.42693121720531924
+        }
+      },
+      "full": {
+        "ap50": {
+          "mean": 97.72941528980255,
+          "sd": 0.5509946355446118
+        },
+        "ap75": {
+          "mean": 49.105923885833754,
+          "sd": 5.491331845128422
+        },
+        "ap50_95": {
+          "mean": 51.97930075108584,
+          "sd": 2.5915317704465965
+        }
+      }
+    },
+    "model_execution": false
+  }
+}

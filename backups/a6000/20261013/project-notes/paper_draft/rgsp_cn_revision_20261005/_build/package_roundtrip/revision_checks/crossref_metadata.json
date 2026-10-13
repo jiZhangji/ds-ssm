@@ -1,0 +1,1282 @@
+[
+  {
+    "doi": "10.1109/TGRS.2024.3425540",
+    "url": "https://api.crossref.org/works/10.1109%2FTGRS.2024.3425540",
+    "status": "metadata-retrieved",
+    "metadata_source": "https://api.crossref.org/v1/works/10.1109%2FTGRS.2024.3425540/transform",
+    "title": "RS-Mamba for Large Remote Sensing Image Dense Prediction",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0004-4007-743X",
+        "authenticated-orcid": false,
+        "given": "Sijie",
+        "family": "Zhao",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Jiangsu Provincial Key Laboratory of Geographic Information Science and Technology, Key Laboratory for Land Satellite Remote Sensing Applications of Ministry of Natural Resources, School of Geography and Ocean Science, Nanjing University, Nanjing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6418-3761",
+        "authenticated-orcid": false,
+        "given": "Hao",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-6188-0257",
+        "authenticated-orcid": false,
+        "given": "Xueliang",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Jiangsu Provincial Key Laboratory of Geographic Information Science and Technology, Key Laboratory for Land Satellite Remote Sensing Applications of Ministry of Natural Resources, School of Geography and Ocean Science, Nanjing University, Nanjing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2739-3302",
+        "authenticated-orcid": false,
+        "given": "Pengfeng",
+        "family": "Xiao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Jiangsu Provincial Key Laboratory of Geographic Information Science and Technology, Key Laboratory for Land Satellite Remote Sensing Applications of Ministry of Natural Resources, School of Geography and Ocean Science, Nanjing University, Nanjing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lei",
+        "family": "Bai",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wanli",
+        "family": "Ouyang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "journal": "IEEE Transactions on Geoscience and Remote Sensing",
+    "volume": "62",
+    "pages": "1-14",
+    "published": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/TGRS.2025.3540573",
+    "url": "https://api.crossref.org/works/10.1109%2FTGRS.2025.3540573",
+    "checked_on": "2026-10-05",
+    "title": [
+      "Learning Cross-Task Features With Mamba for Remote Sensing Image Multitask Prediction"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-2942-6422",
+        "authenticated-orcid": false,
+        "given": "Yu",
+        "family": "Shen",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "College of Information Science and Technology &#x0026; Artificial Intelligence, Nanjing Forestry University, Nanjing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0178-9384",
+        "authenticated-orcid": false,
+        "given": "Liang",
+        "family": "Xiao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Engineering, Nanjing University of Science and Technology, Nanjing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-2354-0240",
+        "authenticated-orcid": false,
+        "given": "Jianyu",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory of Satellite Ocean Environment Dynamics, Second Institute of Oceanography, Ministry of Natural Resources, Hangzhou, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8354-7500",
+        "authenticated-orcid": false,
+        "given": "Qian",
+        "family": "Du",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Computer Engineering, Mississippi State University, Starkville, MS, USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8793-8610",
+        "authenticated-orcid": false,
+        "given": "Qiaolin",
+        "family": "Ye",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Information Science and Technology &#x0026; Artificial Intelligence, State Key Laboratory of Tree Genetics and Breeding, Co-Innovation Center for Sustainable Forestry in Southern China, Nanjing Forestry University, Nanjing, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "journal": [
+      "IEEE Transactions on Geoscience and Remote Sensing"
+    ],
+    "volume": "63",
+    "pages": "1-16",
+    "published": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/36/10807682/10879310.pdf?arnumber=10879310",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "metadata-retrieved"
+  },
+  {
+    "doi": "10.1109/TCSVT.2025.3574657",
+    "url": "https://api.crossref.org/works/10.1109%2FTCSVT.2025.3574657",
+    "checked_on": "2026-10-05",
+    "title": [
+      "MaDiNet: Mamba Diffusion Network for SAR Target Detection"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0004-3384-0556",
+        "authenticated-orcid": false,
+        "given": "Jie",
+        "family": "Zhou",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "College of Electronic Science and Technology, National University of Defense Technology (NUDT), Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0682-8365",
+        "authenticated-orcid": false,
+        "given": "Yongxiang",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Electronic Science and Technology, National University of Defense Technology (NUDT), Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6793-5025",
+        "authenticated-orcid": false,
+        "given": "Bowen",
+        "family": "Peng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Electronic Science and Technology, National University of Defense Technology (NUDT), Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-2011-2873",
+        "authenticated-orcid": false,
+        "given": "Li",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Electronic Science and Technology, National University of Defense Technology (NUDT), Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4383-6505",
+        "authenticated-orcid": false,
+        "given": "Xiang",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Electronic Science and Technology, National University of Defense Technology (NUDT), Changsha, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "journal": [
+      "IEEE Transactions on Circuits and Systems for Video Technology"
+    ],
+    "volume": "35",
+    "issue": "11",
+    "pages": "10787-10800",
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/76/11223720/11016924.pdf?arnumber=11016924",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "metadata-retrieved"
+  },
+  {
+    "doi": "10.1109/TIP.2021.3089936",
+    "url": "https://api.crossref.org/works/10.1109%2FTIP.2021.3089936",
+    "status": "metadata-retrieved",
+    "metadata_source": "https://api.crossref.org/v1/works/10.1109%2FTIP.2021.3089936/transform",
+    "title": "Speckle-Free SAR Image Ship Detection",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-8713-7664",
+        "authenticated-orcid": false,
+        "given": "Si-Wei",
+        "family": "Chen",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1103-0702",
+        "authenticated-orcid": false,
+        "given": "Xing-Chao",
+        "family": "Cui",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xue-Song",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Shun-Ping",
+        "family": "Xiao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "journal": "IEEE Transactions on Image Processing",
+    "volume": "30",
+    "pages": "5969-5983",
+    "published": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.3390/rs13183690",
+    "url": "https://api.crossref.org/works/10.3390%2Frs13183690",
+    "checked_on": "2026-10-05",
+    "title": [
+      "SAR Ship Detection Dataset (SSDD): Official Release and Comprehensive Data Analysis"
+    ],
+    "author": [
+      {
+        "given": "Tianwen",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Information and Communication Engineering, University of Electronic Science and Technology of China, Chengdu 611731, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xiaoling",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information and Communication Engineering, University of Electronic Science and Technology of China, Chengdu 611731, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jianwei",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electronic and Information Engineering, Naval Aeronautical University, Yantai 264000, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xiaowo",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information and Communication Engineering, University of Electronic Science and Technology of China, Chengdu 611731, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Baoyou",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information and Communication Engineering, University of Electronic Science and Technology of China, Chengdu 611731, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2816-9791",
+        "authenticated-orcid": false,
+        "given": "Xu",
+        "family": "Zhan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information and Communication Engineering, University of Electronic Science and Technology of China, Chengdu 611731, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yanqin",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information and Communication Engineering, University of Electronic Science and Technology of China, Chengdu 611731, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5895-2766",
+        "authenticated-orcid": false,
+        "given": "Xiao",
+        "family": "Ke",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information and Communication Engineering, University of Electronic Science and Technology of China, Chengdu 611731, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tianjiao",
+        "family": "Zeng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electrical and Electronic Engineering, University of Hong Kong, Hong Kong 999077, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hao",
+        "family": "Su",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Dahua Technology, Hangzhou 310000, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8710-1100",
+        "authenticated-orcid": false,
+        "given": "Israr",
+        "family": "Ahmad",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "The State Key Laboratory of Information Engineering in Surveying, Mapping, and Remote Sensing, Wuhan University, Wuhan 430074, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0006-2757-521X",
+        "authenticated-orcid": false,
+        "given": "Dece",
+        "family": "Pan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Aerospace Information Research Institute, Chinese Academy of Sciences, Beijing 100194, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chang",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Information Science and Technology, Dalian Maritime University, Dalian 116026, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-3080-6721",
+        "authenticated-orcid": false,
+        "given": "Yue",
+        "family": "Zhou",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Electronic Information and Electrical Engineering, Shanghai Jiao Tong University, Shanghai 200240, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jun",
+        "family": "Shi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information and Communication Engineering, University of Electronic Science and Technology of China, Chengdu 611731, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Shunjun",
+        "family": "Wei",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information and Communication Engineering, University of Electronic Science and Technology of China, Chengdu 611731, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "journal": [
+      "Remote Sensing"
+    ],
+    "volume": "13",
+    "issue": "18",
+    "pages": "3690",
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          9,
+          15
+        ]
+      ]
+    },
+    "abstract": "<jats:p>SAR Ship Detection Dataset (SSDD) is the first open dataset that is widely used to research state-of-the-art technology of ship detection from Synthetic Aperture Radar (SAR) imagery based on deep learning (DL). According to our investigation, up to 46.59% of the total 161 public reports confidently select SSDD to study DL-based SAR ship detection. Undoubtedly, this situation reveals the popularity and great influence of SSDD in the SAR remote sensing community. Nevertheless, the coarse annotations and ambiguous standards of use of its initial version both hinder fair methodological comparisons and effective academic exchanges. Additionally, its single-function horizontal-vertical rectangle bounding box (BBox) labels can no longer satisfy the current research needs of the rotatable bounding box (RBox) task and the pixel-level polygon segmentation task. Therefore, to address the above two dilemmas, in this review, advocated by the publisher of SSDD, we will make an official release of SSDD based on its initial version. SSDD’s official release version will cover three types: (1) a bounding box SSDD (BBox-SSDD), (2) a rotatable bounding box SSDD (RBox-SSDD), and (3) a polygon segmentation SSDD (PSeg-SSDD). We relabel ships in SSDD more carefully and finely, and then explicitly formulate some strict using standards, e.g., (1) the training-test division determination, (2) the inshore-offshore protocol, (3) the ship-size reasonable definition, (4) the determination of the densely distributed small ship samples, and (5) the determination of the densely parallel berthing at ports ship samples. These using standards are all formulated objectively based on the using differences of existing 75 (161 × 46.59%) public reports. They will be beneficial for fair method comparison and effective academic exchanges in the future. Most notably, we conduct a comprehensive data analysis on BBox-SSDD, RBox-SSDD, and PSeg-SSDD. Our analysis results can provide some valuable suggestions for possible future scholars to further elaborately design DL-based SAR ship detectors with higher accuracy and stronger robustness when using SSDD.</jats:p>",
+    "link": [
+      {
+        "URL": "https://www.mdpi.com/2072-4292/13/18/3690/pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "metadata-retrieved"
+  },
+  {
+    "doi": "10.3390/rs11070765",
+    "url": "https://api.crossref.org/works/10.3390%2Frs11070765",
+    "checked_on": "2026-10-05",
+    "title": [
+      "A SAR Dataset of Ship Detection for Deep Learning under Complex Backgrounds"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-7700-7284",
+        "authenticated-orcid": false,
+        "given": "Yuanyuan",
+        "family": "Wang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of Digital Earth Science, Institute of Remote Sensing and Digital Earth, Chinese Academy of Sciences, Beijing 100094, China"
+          },
+          {
+            "name": "University of Chinese Academy of Sciences, Beijing 100049, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4887-923X",
+        "authenticated-orcid": false,
+        "given": "Chao",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of Digital Earth Science, Institute of Remote Sensing and Digital Earth, Chinese Academy of Sciences, Beijing 100094, China"
+          },
+          {
+            "name": "University of Chinese Academy of Sciences, Beijing 100049, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0088-8148",
+        "authenticated-orcid": false,
+        "given": "Hong",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of Digital Earth Science, Institute of Remote Sensing and Digital Earth, Chinese Academy of Sciences, Beijing 100094, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yingbo",
+        "family": "Dong",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of Digital Earth Science, Institute of Remote Sensing and Digital Earth, Chinese Academy of Sciences, Beijing 100094, China"
+          },
+          {
+            "name": "University of Chinese Academy of Sciences, Beijing 100049, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sisi",
+        "family": "Wei",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of Digital Earth Science, Institute of Remote Sensing and Digital Earth, Chinese Academy of Sciences, Beijing 100094, China"
+          },
+          {
+            "name": "University of Chinese Academy of Sciences, Beijing 100049, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "journal": [
+      "Remote Sensing"
+    ],
+    "volume": "11",
+    "issue": "7",
+    "pages": "765",
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          3,
+          29
+        ]
+      ]
+    },
+    "abstract": "<jats:p>With the launch of space-borne satellites, more synthetic aperture radar (SAR) images are available than ever before, thus making dynamic ship monitoring possible. Object detectors in deep learning achieve top performance, benefitting from a free public dataset. Unfortunately, due to the lack of a large volume of labeled datasets, object detectors for SAR ship detection have developed slowly. To boost the development of object detectors in SAR images, a SAR dataset is constructed. This dataset labeled by SAR experts was created using 102 Chinese Gaofen-3 images and 108 Sentinel-1 images. It consists of 43,819 ship chips of 256 pixels in both range and azimuth. These ships mainly have distinct scales and backgrounds. Moreover, modified state-of-the-art object detectors from natural images are trained and can be used as baselines. Experimental results reveal that object detectors achieve higher mean average precision (mAP) on the test dataset and have high generalization performance on new SAR imagery without land-ocean segmentation, demonstrating the benefits of the dataset we constructed.</jats:p>",
+    "link": [
+      {
+        "URL": "https://www.mdpi.com/2072-4292/11/7/765/pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "metadata-retrieved"
+  },
+  {
+    "doi": "10.12000/JR23043",
+    "url": "https://api.crossref.org/works/10.12000%2FJR23043",
+    "status": "metadata-retrieved",
+    "metadata_source": "http://122.115.55.36:8000/doi/10.12000%2FJR23043",
+    "title": "SAR-AIRcraft-1.0：高分辨率SAR飞机检测识别数据集",
+    "author": [
+      {
+        "given": "WANG Zhirui"
+      }
+    ],
+    "journal": "雷达学报",
+    "volume": "12",
+    "issue": "4",
+    "pages": "906",
+    "published": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "abstract": "针对合成孔径雷达(SAR)图像中飞机散射点离散以及背景强干扰造成虚警的问题，该文提出了一种结合散射感知的SAR飞机检测识别方法。一方面，通过上下文引导的特征金字塔模块来增强全局信息，减弱复杂场景中强干扰的影响，提高检测识别的准确率。另一方面，利用散射关键点对目标进行定位，设计散射感知检测模块实现对回归框的细化校正，增强目标的定位精度。为了验证方法有效性、同时促进SAR飞机检测识别领域的研究发展，该文制作并公开了一个高分辨率SAR-AIRcraft-1.0数据集。该数据集图像来自高分三号卫星，包含4,368张图片和16,463个飞机目标实例，涵盖A220, A320/321, A330, ARJ21, Boeing737, Boeing787和other共7个类别。该文将提出的方法和常见深度学习算法在构建的数据集上进行实验，实验结果证明了散射感知方法的优异性能，并且形成了该数据集在SAR飞机检测、细粒度识别、检测识别一体化等不同任务中性能指标的基准。"
+  },
+  {
+    "doi": "10.1109/JSTARS.2021.3063797",
+    "url": "https://api.crossref.org/works/10.1109%2FJSTARS.2021.3063797",
+    "checked_on": "2026-10-05",
+    "title": [
+      "Object-Level Semantic Segmentation on the High-Resolution Gaofen-3 FUSAR-Map Dataset"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-8872-2387",
+        "authenticated-orcid": false,
+        "given": "Xianzheng",
+        "family": "Shi",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Shilei",
+        "family": "Fu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jin",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-2378-9126",
+        "authenticated-orcid": false,
+        "given": "Feng",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-7015-1467",
+        "authenticated-orcid": false,
+        "given": "Feng",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "journal": [
+      "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing"
+    ],
+    "volume": "14",
+    "pages": "3107-3119",
+    "published": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/4609443/9314330/09369836.pdf?arnumber=9369836",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "metadata-retrieved"
+  },
+  {
+    "doi": "10.1016/j.isprsjprs.2026.01.004",
+    "url": "https://api.crossref.org/works/10.1016%2Fj.isprsjprs.2026.01.004",
+    "status": "metadata-retrieved",
+    "metadata_source": "https://api.crossref.org/v1/works/10.1016%2Fj.isprsjprs.2026.01.004/transform",
+    "title": "Mamba-CNN hybrid Multi-scale ship detection Network driven by a Dual-perception feature of Doppler and Scattering",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-4596-5829",
+        "authenticated-orcid": false,
+        "given": "Gui",
+        "family": "Gao",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0008-1641-3500",
+        "authenticated-orcid": false,
+        "given": "Caiyi",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xi",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bingxiu",
+        "family": "Yao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0008-3290-9346",
+        "authenticated-orcid": false,
+        "given": "Zhen",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "journal": "ISPRS Journal of Photogrammetry and Remote Sensing",
+    "volume": "232",
+    "pages": "656-674",
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          2
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/JSTARS.2026.3702550",
+    "url": "https://api.crossref.org/works/10.1109%2FJSTARS.2026.3702550",
+    "status": "metadata-retrieved",
+    "metadata_source": "https://api.crossref.org/v1/works/10.1109%2FJSTARS.2026.3702550/transform",
+    "title": "MambaDIP: Mamba-Based Deep Image Prior Framework for Despeckling and Enhancement of SAR Images",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0000-1432-1989",
+        "authenticated-orcid": false,
+        "given": "Chinchu",
+        "family": "A",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Electronics and Communication Engineering, National Institute of Technology Karnataka, Surathkal, India"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0559-267X",
+        "authenticated-orcid": false,
+        "given": "A. A.",
+        "family": "Bini",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Electronics and Communication Engineering, National Institute of Technology Karnataka, Surathkal, India"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9448-1906",
+        "authenticated-orcid": false,
+        "given": "P.",
+        "family": "Jidesh",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Mathematical and Computational Sciences, National Institute of Technology Karnataka, Surathkal, India"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "journal": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+    "volume": "19",
+    "pages": "21255-21271",
+    "published": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/JSTARS.2025.3647971",
+    "url": "https://api.crossref.org/works/10.1109%2FJSTARS.2025.3647971",
+    "checked_on": "2026-10-05",
+    "title": [
+      "RSS-Net: A Mamba-Based Network for SAR Image Denoizing"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-6152-7912",
+        "authenticated-orcid": false,
+        "given": "Min",
+        "family": "Huang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Information Science and Engineering, Hebei University of Science and Technology, Shijiazhuang, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yunzhao",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information Science and Engineering, Hebei University of Science and Technology, Shijiazhuang, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0009-6602-3284",
+        "authenticated-orcid": false,
+        "given": "Qiuhong",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information Science and Engineering, Hebei University of Science and Technology, Shijiazhuang, China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "journal": [
+      "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing"
+    ],
+    "volume": "19",
+    "pages": "3539-3551",
+    "published": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/4609443/11278119/11314710.pdf?arnumber=11314710",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "metadata-retrieved"
+  },
+  {
+    "doi": "10.1109/TPAMI.1980.4766994",
+    "url": "https://api.crossref.org/works/10.1109%2FTPAMI.1980.4766994",
+    "checked_on": "2026-10-05",
+    "title": [
+      "Digital Image Enhancement and Noise Filtering by Use of Local Statistics"
+    ],
+    "author": [
+      {
+        "given": "Jong-Sen",
+        "family": "Lee",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "journal": [
+      "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+    ],
+    "volume": "PAMI-2",
+    "issue": "2",
+    "pages": "165-168",
+    "published": {
+      "date-parts": [
+        [
+          1980,
+          3
+        ]
+      ]
+    },
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx5/34/4766983/04766994.pdf?arnumber=4766994",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "metadata-retrieved"
+  }
+]

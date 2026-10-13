@@ -1,0 +1,9 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/code/tools/validate_rgsp_controls.py", line 161, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v1/code/tools/validate_rgsp_controls.py", line 86, in main
+    assert torch.equal(value, template[key]), (variant, key, "RNG confound")
+AssertionError: ('matched_scale075', 'gamma1', 'RNG confound')

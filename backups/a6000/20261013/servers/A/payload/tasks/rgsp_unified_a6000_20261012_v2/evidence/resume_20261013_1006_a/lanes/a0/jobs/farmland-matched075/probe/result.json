@@ -1,0 +1,21 @@
+{
+  "dataset": "Farmland",
+  "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+  "estimated_full_seconds": 197.2370985383168,
+  "method": "Matched075",
+  "params": 3715097,
+  "peak_gpu_allocated_bytes": 1881516544,
+  "protocol_sha256": "cbf852242e1fde515c9516c90476f294d0c035d926f2aa1a94f413cea0bdb943",
+  "seed": 0,
+  "status": "PROBE_PASS",
+  "task": "change_detection",
+  "test_evaluated": false,
+  "timed_update_seconds": [
+    0.4938749219872989,
+    0.3736299009760842,
+    0.4921758190030232,
+    0.371237717976328
+  ],
+  "updates_per_epoch": 2,
+  "validation_evaluated": false
+}

@@ -1,0 +1,39 @@
+{
+  "method": "wasnet",
+  "repository": "https://github.com/Mohamed-DL/WASNet",
+  "commit": "d586acb41ab52a0c6a28168964687c3e34379b88",
+  "definitions": [
+    {
+      "source": "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb",
+      "source_sha256": "a896f8b7bb97026346040124da555ba6033a5ebb35901e8941c70fe1f22df45c",
+      "cell_source_sha256": {
+        "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell5": "de82a787925fd7d4d4c3684ab20af8d05b183e832a9502f8acf565abcf026c13",
+        "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell8": "111e013d0dcb14bb863ea00fa4fb752c387085a8d31a2efe6953f5798e506992",
+        "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell12": "7352a82c857f1bae4591b4df720fc8675e82d0faa14f3bda36a214ea22eb4bdb",
+        "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell13": "80f2b5dc6d9024ce5d15e784af49b5dae6561e0874ea1af8caf881fa12bb4cb3",
+        "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell14": "c10b461291fdf6154255ee53b23490308630d4fe3bfb1709eb040ee3459d58b8"
+      },
+      "definitions": [
+        "BiAttn",
+        "ConcactFeature",
+        "DWT_2D",
+        "DWT_Function",
+        "IDWT_2D",
+        "IDWT_Function",
+        "MHSA",
+        "SEBlock",
+        "WASNet",
+        "WSM",
+        "WaveAttention",
+        "pair"
+      ],
+      "transformed_ast_sha256": "e193ddaf2d14864e8123f7bb9e3452c0c34b4b693dfca26e076aef0b1731a033",
+      "precision_cast_rewrites": 1,
+      "hook_once_rewrites": 0
+    }
+  ],
+  "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+  "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+  "author_source_unmodified": true,
+  "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+}

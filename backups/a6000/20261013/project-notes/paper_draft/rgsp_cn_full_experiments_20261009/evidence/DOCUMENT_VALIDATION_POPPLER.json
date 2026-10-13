@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "legacy_tables": {
+    "sar_acd": {
+      "identical_numeric_sequence": true,
+      "numeric_tokens": 25
+    },
+    "sample": {
+      "identical_numeric_sequence": true,
+      "numeric_tokens": 43
+    },
+    "ssdd": {
+      "identical_numeric_sequence": true,
+      "numeric_tokens": 50
+    },
+    "sar_ship": {
+      "identical_numeric_sequence": true,
+      "numeric_tokens": 33
+    },
+    "sadd": {
+      "identical_numeric_sequence": true,
+      "numeric_tokens": 36
+    },
+    "air_sarship": {
+      "identical_numeric_sequence": true,
+      "numeric_tokens": 31
+    },
+    "openearthmap_sar": {
+      "identical_numeric_sequence": true,
+      "numeric_tokens": 18
+    },
+    "ottawa": {
+      "identical_numeric_sequence": true,
+      "numeric_tokens": 85
+    },
+    "yellow_river": {
+      "identical_numeric_sequence": true,
+      "numeric_tokens": 85
+    }
+  },
+  "archive": {
+    "checked": true,
+    "entries": 27,
+    "all_bytes_identical": true,
+    "zip_sha256": "d8458610b2329c279e372b920a13e11bc3706d74e5284ae460121aac44a94699"
+  },
+  "ssdd_runs": 15,
+  "sadd_runs": 12,
+  "metric_cells_present": 135,
+  "table_count": 18,
+  "figure_count": 2,
+  "pdf_pages": 14,
+  "page_dimensions": [
+    612,
+    792
+  ],
+  "pdf_engine": "poppler",
+  "pdf_sha256": "3ae0914cbd50e779cd1cd53569c16152d780fefe926eb09fec66bd08a81a00bd",
+  "compile_inputs": {
+    "figures/fig1_motivation_20261009.pdf": "41596b6cff2e3aabfdcba24f685691d38d09560d4e471a554b806c46f02a608f",
+    "figures/fig2_architecture_20261009.pdf": "f62a2704abd07707b1b7974cdcc25aa80c81829ce42ba9800491de720be4a3d7",
+    "IEEEtran.cls": "da751920a317ed318b7b5cd7fa585a6cc7d28502d457856382e9be24b10a3bd7",
+    "main.tex": "b6dd4049cb72236156731c99af25e86e377fc3dbb7be5f672c924d1da000ce1c",
+    "sections/ablation.tex": "f2b821cddca6af8e45524c64d323817bffd47051eb0499517169b8b0f71cf403",
+    "sections/experimental_settings.tex": "f713c88b26a26af69915d446ccc47db6d34f3eb9efc51d2e3d28945adea76841",
+    "sections/limitations.tex": "d00045872dd8c8fdcedd8a2c9b1f6d744a7945971a907be5d91dbabbc5d1e152",
+    "sections/sadd_individual.tex": "7d5fda4baeff0ae21f36cf3c0100ff58f52e0cd80e0521434806420599e7c10f",
+    "sections/sadd_paired.tex": "075509c64a0169fefa250520a7374845954ada9d73ddb8e0457f00f32586c132",
+    "sections/sadd_summary.tex": "ca7a1ef88031396097a665faf1ff945d4e7331bba5c829d0a26ad79f831cc0d4",
+    "sections/ssdd_individual.tex": "da75888f80eb83cb7c0f18e313ad122a2c1dc09bed92102e5dc7e452b38d6ec7",
+    "sections/ssdd_paired.tex": "180cef9aeb6f9c1d963011565515073852f9922535cebf771a6da341c755513d",
+    "sections/ssdd_summary.tex": "29b0b92ac8c6742b80e9579679e5cc51f71bd722615253aeef93af0b2c7235f6"
+  },
+  "text_sha256": "34331413475d1d0cac7a5c83b5c27fd3a1a0eebaef77c93bec21cd7cb80993a7",
+  "pages_text_sha256": [
+    "30b3f171532cf11a25dceaba0f52e79e21f66436a858a192973c2d4fb50b6a28",
+    "6dfe40a7c04a83c653478f9d939f159aee31aede33ee77907be69e20dd8dbdf5",
+    "3b23192a2ae41be30e70a311851a91a7423c72f304f3a562303bd7a08ccfde85",
+    "0a74c64f7a76be2583aefb18d83a49cd59153bfd76e760cbe7cb5d87bb5f75cc",
+    "e19f25304a5e1d4529326b70631dd2561f3b19cb538a4fec48c7cc1d546a1d69",
+    "e2cffb80985a2c1d9c9afb0ec298bcf17d5fd0bc69e1d8ad8273513d6b8bdade",
+    "75711b461ebb635f2eba4fbfe600c442a2b7a8a089ad5420c7a3bcc43dae72c0",
+    "dae3699a0ea408201419e118da420877d6e0958bc676533f8fdec67a1c4c311a",
+    "124e7f385924dd46357782ba0294c4034c3f6e5a176e8c7e1ecb5690d4c40db5",
+    "6ded4244bf99c4f30656b429bb0fb37e80174f5f00e5001347cef4c9eca2c403",
+    "02220cd9533854d3f6fe7f0c1acb5b3426ddc928fba0acd668d7cd28f0c172c5",
+    "4ff6c234afb8590e6c87052d70f403fbaeb63baf7ce6c227ed68e2cc5737d84d",
+    "62affdb5fb695efb9e4d88cb7a260b7bea9ba2bf74e4b9c837589214b1a47e85",
+    "3481b502ae8924408afa01cf7d891f993be1d3855dc0306fede319862530452e"
+  ],
+  "note": "File/statistical checks, not research model tests. Printed values are checked for membership; row/column attribution and visual QA require separate review."
+}

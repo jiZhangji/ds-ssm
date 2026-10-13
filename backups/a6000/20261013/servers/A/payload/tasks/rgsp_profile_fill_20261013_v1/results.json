@@ -1,0 +1,614 @@
+{
+  "status": "PASS",
+  "host": "powerleader-PT6620W",
+  "gpu_identity": {
+    "hostname": "powerleader-PT6620W",
+    "torch": "1.13.1+cu117",
+    "cuda_visible_devices": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+    "physical_gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+    "physical_gpu_index": 0,
+    "physical_gpu_name": "NVIDIA RTX A6000",
+    "reported_count_before": 0,
+    "cuda_runtime_count": 1,
+    "reported_count_after": 1,
+    "compatibility_applied": true,
+    "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+    "torch_installation_modified": false,
+    "gpu_mask_changed": false
+  },
+  "created_at": "2026-10-13 09:29:18 +0800",
+  "script_sha256": "f9a13db0401d772400d756b2ee84c9d3be17b31d95caf11cf67c8b9af19dcae8",
+  "source_hashes": {
+    "external/cd/author_models.py": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+    "external/cd/source_registry.json": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+    "detection/covered_flops.py": "ec373b03b3915cd1553e667cdb993e518645f12cda2d39dd1e1d7279a5e55b48"
+  },
+  "dependency_hashes": {
+    "pywt/_multidim.py": "1f1c59bc0dc7efb9c11a8776bddc5436d9c40f2ef1743fde751e3b7b8328eef4",
+    "pywt/_functions.py": "5def0c10a6138eaede6ad050aaf71e3db4fd1d903f4bfe144fad412ceaafcec2",
+    "pywt/_multilevel.py": "5b93f71e9dcaac4c4c5c89cc899c37a11903423940f8c670b7dd27eaf2285594",
+    "pywt/_cwt.py": "8f5e6f12d93083798995d3cef7c5a56fde818191e384dcc0b929af723f773b1e",
+    "pywt/_doc_utils.py": "e3c445e1f717900aec7e9b6e096fd3e2e885a099216189755d09b764c4d26bd0",
+    "pywt/__init__.py": "0d374c81924e123d4cf804087476b98c2eca3a327cabedcd3875448299a714d9",
+    "pywt/_pytesttester.py": "05de23e8839959091dc3d9ed5cfff49950acb92b6358c63c8e1d8a3befe88c16",
+    "pywt/_utils.py": "de25d0cf0bf025657cf9742d7bba93e747b4b4f00d7cd30b0e25f4e5b7fcf56d",
+    "pywt/_thresholding.py": "28dbe0a107406041db938f33d9d6a25a7f173744ffd0dd0ec6141af27cd3fb4d",
+    "pywt/_c99_config.py": "5e228dfabea9b678bbba7e3559e1af9780947702dffd4e214d26f878f590842e",
+    "pywt/_swt.py": "9b60798e2b2f598ee76ccf560fc4fa6b75c5f7d4666e7d912611c44fea69a8c7",
+    "pywt/_pytest.py": "c7fcdaebfedbf36d77be5a1fece5190d1a8b293c90ca7a49ec8a9afe8dde1209",
+    "pywt/_dwt.py": "fc92382c97e89e47c4d662e4a5c3974a869b06f6a9e84743a46995541c2cfd93",
+    "pywt/_mra.py": "0f6dbcd04ea5b74703942f4eb8ebd9f059abea567a71f91b21956c33063883ac",
+    "pywt/_wavelet_packets.py": "fe78627a2414dce7ff8758b48ed8f33adb90207eee4baa4da27f76125ff605ba",
+    "pywt/conftest.py": "71f7494fbb9c0d5af513fd99725db07633500be772416d8817a2f6d4209c3741",
+    "pywt/version.py": "2aad7f82bc59f9c9109f93b6445ce8679955f45ea7f8ffcb540310e6c1d4e12c",
+    "pywt/data/_wavelab_signals.py": "884e9d805c0d155395e188943b54cdd0445b07e4bfc0f2f21582e50e5aa2eb58",
+    "pywt/data/create_dat.py": "4e0b95593ba86a2f01c0b42fb408daf1c5a0507830ddaa97cb8bcd7dae7c718c",
+    "pywt/data/camera.npz": "2be8195e9680ccb3c804fee19ca0b69a097eae9c9b2ab97474c7f1438171f074",
+    "pywt/data/ecg.npz": "ea720476139341eabecf3e44cc602cd75576aff1e4156b1c069f7b33e86a9e6b",
+    "pywt/data/__init__.py": "1e4f6b18806c6ece05431ee23b87c39cc2e5ccc84bc3de7b1c7ef42f3321afa0",
+    "pywt/data/aero.npz": "df862635798bac94226b8928f224da8cef8b0d00492c1fdf48fac6dfaf97a94b",
+    "pywt/data/sst_nino3.npz": "d1ef70af12824d8c08cef96c5e1684a22d819d89adcd9ab3cf92d12a5d9d8367",
+    "pywt/data/_readers.py": "aae448b26bb9a8eb3645d3a3d2498910abd8dc3ab19311d52adaa06858cc4ec3",
+    "pywt/data/ascent.npz": "a6d56bc8e96571d6124f34cedeba49f1d3599507f6c890ad9ba538544454e8f7",
+    "pywt/_extensions/_pywt.cpython-310-x86_64-linux-gnu.so": "8a08281ed051c52be8cb341cb3847459915363499aad708a22a7915b676bde54",
+    "pywt/_extensions/_cwt.cpython-310-x86_64-linux-gnu.so": "71ff8aac1c0e21df330733c447aa864db4102d2bd89a87860e7c302345ff67ca",
+    "pywt/_extensions/_swt.cpython-310-x86_64-linux-gnu.so": "807aebc0cfcf730277823f81dffe41b0fa509fd545f937ef8d105aaafff30cf9",
+    "pywt/_extensions/_dwt.cpython-310-x86_64-linux-gnu.so": "f4fcdcb4b4286016faf62b472dd52dcb8654fff4e8a11e94cec048206af83418"
+  },
+  "results": [
+    {
+      "status": "PASS",
+      "parameters": 6712,
+      "trainable_parameters": 6712,
+      "covered_flops_g": 0.0002352,
+      "coverage": {
+        "version": "rgsp-covered-operations-v1",
+        "scope": "Full unfused registered model; eval, batch=1, FP32, no TF32, no task postprocessing/NMS.",
+        "exhaustive": false,
+        "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+        "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+        "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+        "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+        "not_included": [
+          "Scan exponentials and softplus special functions; symbolic counts are separate.",
+          "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+          "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+          "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+        ],
+        "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+        "parameter_sharing": "Registered shared parameters counted once; repeated module forwards counted per actual execution."
+      },
+      "unsupported": [
+        "Scan exponentials and softplus special functions; symbolic counts are separate.",
+        "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+        "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+        "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+      ],
+      "thop_legacy_x2_flops": 235200.0,
+      "scan_basic_arithmetic_flops": 0,
+      "functional_einsum_mac2_flops": 0,
+      "cross_merge_add_flops": 0,
+      "scan_calls": [],
+      "einsum_calls": [],
+      "cross_merge_calls": [],
+      "ssm_module_calls": [],
+      "unregistered_leaf_module_types": [],
+      "finite_forward": true,
+      "input_shapes": [
+        [
+          1,
+          3,
+          7,
+          7
+        ]
+      ],
+      "device": "cuda:0",
+      "torch_version": "1.13.1+cu117",
+      "batch": 1,
+      "precision": "FP32",
+      "fused": false,
+      "nms_included": false,
+      "thop_version": "2.0.16",
+      "output_shapes": [
+        [
+          1,
+          2
+        ]
+      ],
+      "output_shape": [
+        1,
+        2
+      ],
+      "method": "ddnet",
+      "model_source_audit": {
+        "method": "ddnet",
+        "repository": "https://github.com/summitgao/SAR_CD_DDNet",
+        "commit": "30c77afd08aa7f09790096470add465ec771a9c7",
+        "definitions": [
+          {
+            "source": "vendor/ddnet/DDNet_github.ipynb",
+            "source_sha256": "c1a463690b8d357396c92d56d1fa51d0b3cb5121ab137d89e1bfe26761189ab5",
+            "cell_source_sha256": {
+              "vendor/ddnet/DDNet_github.ipynb:cell5": "c6fb95227d1d75658ff020627ce6d083fc64a1b5f7c493859fc1ba3912ae95e2",
+              "vendor/ddnet/DDNet_github.ipynb:cell6": "7330db0717e37fff857e1924e7701a91f78ac680ba9ad135472cc5e16fbbc69a"
+            },
+            "definitions": [
+              "DCT",
+              "DDNet",
+              "MRC"
+            ],
+            "transformed_ast_sha256": "0cdd8a2d0dcf9fd9da359d5c63c8a6813daf48987c5bd24832fe901ef6bf6c65",
+            "precision_cast_rewrites": 0,
+            "hook_once_rewrites": 0
+          }
+        ],
+        "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+        "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+        "author_source_unmodified": true,
+        "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+      },
+      "checkpoint_loaded": false,
+      "initialization": "random seed0, exact frozen author adapter",
+      "scope_limit": "One native center patch; not image-total FLOPs. Functional OpenCV DCT, wavelet convolutions, attention matmul, activations, pooling/statistics and image preprocessing/postprocessing are not exhaustively counted."
+    },
+    {
+      "status": "PASS",
+      "parameters": 24956,
+      "trainable_parameters": 24956,
+      "covered_flops_g": 0.00228784,
+      "coverage": {
+        "version": "rgsp-covered-operations-v1",
+        "scope": "Full unfused registered model; eval, batch=1, FP32, no TF32, no task postprocessing/NMS.",
+        "exhaustive": false,
+        "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+        "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+        "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+        "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+        "not_included": [
+          "Scan exponentials and softplus special functions; symbolic counts are separate.",
+          "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+          "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+          "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+        ],
+        "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+        "parameter_sharing": "Registered shared parameters counted once; repeated module forwards counted per actual execution."
+      },
+      "unsupported": [
+        "Scan exponentials and softplus special functions; symbolic counts are separate.",
+        "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+        "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+        "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+      ],
+      "thop_legacy_x2_flops": 2287840.0,
+      "scan_basic_arithmetic_flops": 0,
+      "functional_einsum_mac2_flops": 0,
+      "cross_merge_add_flops": 0,
+      "scan_calls": [],
+      "einsum_calls": [],
+      "cross_merge_calls": [],
+      "ssm_module_calls": [],
+      "unregistered_leaf_module_types": [],
+      "finite_forward": true,
+      "input_shapes": [
+        [
+          1,
+          3,
+          7,
+          7
+        ]
+      ],
+      "device": "cuda:0",
+      "torch_version": "1.13.1+cu117",
+      "batch": 1,
+      "precision": "FP32",
+      "fused": false,
+      "nms_included": false,
+      "thop_version": "2.0.16",
+      "output_shapes": [
+        [
+          1,
+          2
+        ]
+      ],
+      "output_shape": [
+        1,
+        2
+      ],
+      "method": "lantnet",
+      "model_source_audit": {
+        "method": "lantnet",
+        "repository": "https://github.com/summitgao/LANTNet",
+        "commit": "3d22af4a989f96a6b07b4f15e86c73cffd1841a2",
+        "definitions": [
+          {
+            "source": "vendor/lantnet/LANTNet.ipynb",
+            "source_sha256": "0533acc070502570556ecf68f94d835f92b72ec6ca8d7bbd543a4713e51bf5e9",
+            "cell_source_sha256": {
+              "vendor/lantnet/LANTNet.ipynb:cell5": "8ddd8f2c9bd552073d539beb92b6cb727e05b2ee5e61e94313cbbf341d60019e",
+              "vendor/lantnet/LANTNet.ipynb:cell7": "843d02f3114b413956586baec8101b6c4f8406f6cb5210f341217842a1c9c936"
+            },
+            "definitions": [
+              "LANTNet",
+              "LayerAttention"
+            ],
+            "transformed_ast_sha256": "05624c253cb6d386a8a7c415e46b0c78923024758715564b462557524096632a",
+            "precision_cast_rewrites": 0,
+            "hook_once_rewrites": 1
+          }
+        ],
+        "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+        "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+        "author_source_unmodified": true,
+        "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+      },
+      "checkpoint_loaded": false,
+      "initialization": "random seed0, exact frozen author adapter",
+      "scope_limit": "One native center patch; not image-total FLOPs. Functional OpenCV DCT, wavelet convolutions, attention matmul, activations, pooling/statistics and image preprocessing/postprocessing are not exhaustively counted."
+    },
+    {
+      "status": "PASS",
+      "parameters": 34214,
+      "trainable_parameters": 34214,
+      "covered_flops_g": 0.000577862,
+      "coverage": {
+        "version": "rgsp-covered-operations-v1",
+        "scope": "Full unfused registered model; eval, batch=1, FP32, no TF32, no task postprocessing/NMS.",
+        "exhaustive": false,
+        "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+        "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+        "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+        "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+        "not_included": [
+          "Scan exponentials and softplus special functions; symbolic counts are separate.",
+          "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+          "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+          "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+        ],
+        "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+        "parameter_sharing": "Registered shared parameters counted once; repeated module forwards counted per actual execution."
+      },
+      "unsupported": [
+        "Scan exponentials and softplus special functions; symbolic counts are separate.",
+        "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+        "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+        "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing.",
+        "Unregistered THOP leaf: einops.layers.torch.Rearrange"
+      ],
+      "thop_legacy_x2_flops": 577862.0,
+      "scan_basic_arithmetic_flops": 0,
+      "functional_einsum_mac2_flops": 0,
+      "cross_merge_add_flops": 0,
+      "scan_calls": [],
+      "einsum_calls": [],
+      "cross_merge_calls": [],
+      "ssm_module_calls": [],
+      "unregistered_leaf_module_types": [
+        "einops.layers.torch.Rearrange"
+      ],
+      "finite_forward": true,
+      "input_shapes": [
+        [
+          1,
+          3,
+          9,
+          9
+        ]
+      ],
+      "device": "cuda:0",
+      "torch_version": "1.13.1+cu117",
+      "batch": 1,
+      "precision": "FP32",
+      "fused": false,
+      "nms_included": false,
+      "thop_version": "2.0.16",
+      "output_shapes": [
+        [
+          1,
+          243
+        ],
+        [
+          1,
+          1,
+          243
+        ],
+        [
+          1,
+          1,
+          243
+        ],
+        [
+          1,
+          1,
+          486
+        ],
+        [
+          1,
+          1,
+          243
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "method": "camixer",
+      "model_source_audit": {
+        "method": "camixer",
+        "repository": "https://github.com/summitgao/CAMixer",
+        "commit": "10d0ce340a64075da929b9867cd9e45dc51d5e04",
+        "definitions": [
+          {
+            "source": "vendor/camixer/CAMixer.ipynb",
+            "source_sha256": "49e326c1262352c399e08cbb206f85fe01619014cfd7455174963bd6565b881b",
+            "cell_source_sha256": {
+              "vendor/camixer/CAMixer.ipynb:cell7": "53de8f3b1b68612257ff4a1e1eaf9b97147de32e8bc8981f2e3b0c29586a0375",
+              "vendor/camixer/CAMixer.ipynb:cell8": "936431357e5dc4510682983de8bc1bd291402cbe20f958638c5db4e0f45fadc2"
+            },
+            "definitions": [
+              "Attention",
+              "CAMixer",
+              "CSC",
+              "SGU",
+              "ViT",
+              "pair",
+              "shift"
+            ],
+            "transformed_ast_sha256": "861b998266c9f3e4f9abbd5dae284f9e33ed97bfe860344a7fa57e18186793cd",
+            "precision_cast_rewrites": 0,
+            "hook_once_rewrites": 0
+          }
+        ],
+        "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+        "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+        "author_source_unmodified": true,
+        "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+      },
+      "checkpoint_loaded": false,
+      "initialization": "random seed0, exact frozen author adapter",
+      "scope_limit": "One native center patch; not image-total FLOPs. Functional OpenCV DCT, wavelet convolutions, attention matmul, activations, pooling/statistics and image preprocessing/postprocessing are not exhaustively counted."
+    },
+    {
+      "status": "PASS",
+      "parameters": 7159,
+      "trainable_parameters": 7159,
+      "covered_flops_g": 4.518e-05,
+      "coverage": {
+        "version": "rgsp-covered-operations-v1",
+        "scope": "Full unfused registered model; eval, batch=1, FP32, no TF32, no task postprocessing/NMS.",
+        "exhaustive": false,
+        "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+        "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+        "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+        "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+        "not_included": [
+          "Scan exponentials and softplus special functions; symbolic counts are separate.",
+          "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+          "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+          "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+        ],
+        "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+        "parameter_sharing": "Registered shared parameters counted once; repeated module forwards counted per actual execution."
+      },
+      "unsupported": [
+        "Scan exponentials and softplus special functions; symbolic counts are separate.",
+        "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+        "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+        "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing.",
+        "Unregistered THOP leaf: cd_author_wbanet.DWT_2D",
+        "Unregistered THOP leaf: cd_author_wbanet.IDWT_2D",
+        "Unregistered THOP leaf: einops.layers.torch.Rearrange",
+        "Unregistered THOP leaf: torch.nn.modules.activation.GELU",
+        "Unregistered THOP leaf: torch.nn.modules.activation.Sigmoid"
+      ],
+      "thop_legacy_x2_flops": 45180.0,
+      "scan_basic_arithmetic_flops": 0,
+      "functional_einsum_mac2_flops": 0,
+      "cross_merge_add_flops": 0,
+      "scan_calls": [],
+      "einsum_calls": [],
+      "cross_merge_calls": [],
+      "ssm_module_calls": [],
+      "unregistered_leaf_module_types": [
+        "cd_author_wbanet.DWT_2D",
+        "cd_author_wbanet.IDWT_2D",
+        "einops.layers.torch.Rearrange",
+        "torch.nn.modules.activation.GELU",
+        "torch.nn.modules.activation.Sigmoid"
+      ],
+      "finite_forward": true,
+      "input_shapes": [
+        [
+          1,
+          3,
+          8,
+          8
+        ]
+      ],
+      "device": "cuda:0",
+      "torch_version": "1.13.1+cu117",
+      "batch": 1,
+      "precision": "FP32",
+      "fused": false,
+      "nms_included": false,
+      "thop_version": "2.0.16",
+      "output_shapes": [
+        [
+          1,
+          2
+        ]
+      ],
+      "output_shape": [
+        1,
+        2
+      ],
+      "method": "wbanet",
+      "model_source_audit": {
+        "method": "wbanet",
+        "repository": "https://github.com/summitgao/WBANet",
+        "commit": "4a6e6a44a750ded84ac951eb995debf8428df7a5",
+        "definitions": [
+          {
+            "source": "vendor/wbanet/torch_wavelets.py",
+            "source_sha256": "98e0398c6ea6d1442abf11c66b1a15e37071965b95e260e62a1b26f11297f836",
+            "cell_source_sha256": {
+              "vendor/wbanet/torch_wavelets.py": "9d14e0717d2ad9e4fac39c11e8d4248c41511c49701a37f2e17256a04f010c1e"
+            },
+            "definitions": [
+              "DWT_2D",
+              "DWT_Function",
+              "IDWT_2D",
+              "IDWT_Function"
+            ],
+            "transformed_ast_sha256": "ade883d647c76c795480d82d8568efe683385bfd7dfaa02e8fedbfe1168ca147",
+            "precision_cast_rewrites": 5,
+            "hook_once_rewrites": 0
+          },
+          {
+            "source": "vendor/wbanet/wbanet.ipynb",
+            "source_sha256": "52173bdc1aee943ec3949623a4cc177bf935c5d377245b2b2c84bc69a798bfcc",
+            "cell_source_sha256": {
+              "vendor/wbanet/wbanet.ipynb:cell3": "703c4776bcb649a6084f8b3acfe5b6a90790f5f77c3fa007b279608715edffb4",
+              "vendor/wbanet/wbanet.ipynb:cell6": "55b57254ed1c8efaf96bd35cdfcecac46dc181361dfc37b77a95a6f03046eb8f",
+              "vendor/wbanet/wbanet.ipynb:cell7": "b5e3d7464950a5404c19a3d0658da178f8faa02e88cbf8b73d15f0278e69c218",
+              "vendor/wbanet/wbanet.ipynb:cell8": "755eda6388584b042a915318c031caa422099a8d15ea18a26ebb4dc4d8a93fb7"
+            },
+            "definitions": [
+              "BiAttn",
+              "ConcactFeature",
+              "WBANet",
+              "WSM",
+              "WaveAttention",
+              "pair"
+            ],
+            "transformed_ast_sha256": "f56d2de0c87db4c84821ed9b523bcd00684c66861d73987aa14b18b4e9fb7591",
+            "precision_cast_rewrites": 2,
+            "hook_once_rewrites": 0
+          }
+        ],
+        "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+        "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+        "author_source_unmodified": true,
+        "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+      },
+      "checkpoint_loaded": false,
+      "initialization": "random seed0, exact frozen author adapter",
+      "scope_limit": "One native center patch; not image-total FLOPs. Functional OpenCV DCT, wavelet convolutions, attention matmul, activations, pooling/statistics and image preprocessing/postprocessing are not exhaustively counted."
+    },
+    {
+      "status": "PASS",
+      "parameters": 7360,
+      "trainable_parameters": 7360,
+      "covered_flops_g": 5.2608e-05,
+      "coverage": {
+        "version": "rgsp-covered-operations-v1",
+        "scope": "Full unfused registered model; eval, batch=1, FP32, no TF32, no task postprocessing/NMS.",
+        "exhaustive": false,
+        "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+        "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+        "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+        "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+        "not_included": [
+          "Scan exponentials and softplus special functions; symbolic counts are separate.",
+          "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+          "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+          "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+        ],
+        "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+        "parameter_sharing": "Registered shared parameters counted once; repeated module forwards counted per actual execution."
+      },
+      "unsupported": [
+        "Scan exponentials and softplus special functions; symbolic counts are separate.",
+        "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+        "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+        "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing.",
+        "Unregistered THOP leaf: cd_author_wasnet.DWT_2D",
+        "Unregistered THOP leaf: cd_author_wasnet.IDWT_2D",
+        "Unregistered THOP leaf: einops.layers.torch.Rearrange",
+        "Unregistered THOP leaf: torch.nn.modules.activation.Sigmoid"
+      ],
+      "thop_legacy_x2_flops": 52608.0,
+      "scan_basic_arithmetic_flops": 0,
+      "functional_einsum_mac2_flops": 0,
+      "cross_merge_add_flops": 0,
+      "scan_calls": [],
+      "einsum_calls": [],
+      "cross_merge_calls": [],
+      "ssm_module_calls": [],
+      "unregistered_leaf_module_types": [
+        "cd_author_wasnet.DWT_2D",
+        "cd_author_wasnet.IDWT_2D",
+        "einops.layers.torch.Rearrange",
+        "torch.nn.modules.activation.Sigmoid"
+      ],
+      "finite_forward": true,
+      "input_shapes": [
+        [
+          1,
+          3,
+          8,
+          8
+        ]
+      ],
+      "device": "cuda:0",
+      "torch_version": "1.13.1+cu117",
+      "batch": 1,
+      "precision": "FP32",
+      "fused": false,
+      "nms_included": false,
+      "thop_version": "2.0.16",
+      "output_shapes": [
+        [
+          1,
+          2
+        ]
+      ],
+      "output_shape": [
+        1,
+        2
+      ],
+      "method": "wasnet",
+      "model_source_audit": {
+        "method": "wasnet",
+        "repository": "https://github.com/Mohamed-DL/WASNet",
+        "commit": "d586acb41ab52a0c6a28168964687c3e34379b88",
+        "definitions": [
+          {
+            "source": "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb",
+            "source_sha256": "a896f8b7bb97026346040124da555ba6033a5ebb35901e8941c70fe1f22df45c",
+            "cell_source_sha256": {
+              "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell5": "de82a787925fd7d4d4c3684ab20af8d05b183e832a9502f8acf565abcf026c13",
+              "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell8": "111e013d0dcb14bb863ea00fa4fb752c387085a8d31a2efe6953f5798e506992",
+              "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell12": "7352a82c857f1bae4591b4df720fc8675e82d0faa14f3bda36a214ea22eb4bdb",
+              "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell13": "80f2b5dc6d9024ce5d15e784af49b5dae6561e0874ea1af8caf881fa12bb4cb3",
+              "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell14": "c10b461291fdf6154255ee53b23490308630d4fe3bfb1709eb040ee3459d58b8"
+            },
+            "definitions": [
+              "BiAttn",
+              "ConcactFeature",
+              "DWT_2D",
+              "DWT_Function",
+              "IDWT_2D",
+              "IDWT_Function",
+              "MHSA",
+              "SEBlock",
+              "WASNet",
+              "WSM",
+              "WaveAttention",
+              "pair"
+            ],
+            "transformed_ast_sha256": "e193ddaf2d14864e8123f7bb9e3452c0c34b4b693dfca26e076aef0b1731a033",
+            "precision_cast_rewrites": 1,
+            "hook_once_rewrites": 0
+          }
+        ],
+        "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+        "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+        "author_source_unmodified": true,
+        "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+      },
+      "checkpoint_loaded": false,
+      "initialization": "random seed0, exact frozen author adapter",
+      "scope_limit": "One native center patch; not image-total FLOPs. Functional OpenCV DCT, wavelet convolutions, attention matmul, activations, pooling/statistics and image preprocessing/postprocessing are not exhaustively counted."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "protocol": {
+    "augmentation": "paired h/v flips + right-angle rotations; classification random crop after resize1.12x",
+    "classes": [
+      "A220",
+      "A320/321",
+      "A330",
+      "ARJ21",
+      "Boeing737",
+      "Boeing787"
+    ],
+    "counts": {
+      "test": 1792,
+      "train": 1000,
+      "val": 240
+    },
+    "data_protocol": "common-clean-val-test-conflicting40-train-only-full3032",
+    "data_sha256": "3ad8605dfc38a8e38c7384c50e8a19949ad31e2d516786fa37ec685993638bda",
+    "dataset": "SAR-ACD-full3032",
+    "hyperparameters": {
+      "batch_norm": "physical microbatch statistics, not physical batch64",
+      "betas": [
+        0.937,
+        0.999
+      ],
+      "ema": {
+        "decay": 0.9999,
+        "tau_updates": 2000
+      },
+      "epochs": 150,
+      "epsilon": 1e-08,
+      "gradient_accumulation": 4,
+      "gradient_clip_l2": 10.0,
+      "initialization": "scratch",
+      "lr0": 0.0002,
+      "lr_schedule": "linear warmup 3 actual epochs; linear decay to lr0*0.01 at planned epoch150",
+      "module_warmup_epochs": 0,
+      "nominal_effective_batch": 64,
+      "normalization": "fixed (RGB/255 - 0.5)/0.5, no test statistics",
+      "optimizer": "AdamW",
+      "patience": 30,
+      "physical_batch": 16,
+      "precision": "FP32; AMP/TF32 disabled",
+      "tail_policy": "flush every epoch, normalize accumulated gradients by actual sample count",
+      "test_policy": "one final evaluation of earliest best validation EMA checkpoint",
+      "weight_decay": {
+        "bias_and_norm": 0.0,
+        "weights": 0.0005
+      },
+      "workers": 0
+    },
+    "input_size": 224,
+    "literature_performance_reuse": false,
+    "loss": "cross_entropy label_smoothing=0.1",
+    "method": "Full",
+    "schema": "rgsp-unified-cross-20261012-v1",
+    "selection": "validation macro_f1",
+    "source_reused": "frozen networks, transforms and metric functions only; old campaign training never invoked",
+    "source_sha256": "594d81e363dd5b214caeb1d8fa7724d06e7d7372e8ccb747f710063cbe9f4bb9",
+    "supervision": "ground-truth supervised; not comparable with transductive unsupervised CD literature",
+    "task": "classification",
+    "updates_per_epoch": 16
+  },
+  "protocol_sha256": "72752ef694f3190232a8828f8a8e366cbff5d4a18155cc6bf4b51b512007abcd"
+}

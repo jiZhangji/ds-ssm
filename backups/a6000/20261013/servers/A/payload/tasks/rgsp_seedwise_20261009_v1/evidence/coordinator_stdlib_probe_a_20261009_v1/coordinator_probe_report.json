@@ -1,0 +1,240 @@
+{
+  "accepted_fixture": {
+    "barrier_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_accept_campaign/synthetic_seed0_barrier.json",
+    "barrier_sha256": "e096f0066a5ca78b91d4fe0c3a263ce44012f99edf17c18fef825f114a5911a4",
+    "candidate": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_accept_campaign/synthetic_candidate.json",
+      "sha256": "e096f0066a5ca78b91d4fe0c3a263ce44012f99edf17c18fef825f114a5911a4"
+    },
+    "mode": "accept_barrier",
+    "payload_sha256": "b1ea34b282e79f25ea3ab5fc45453d3c3e9708a2ae467bcd330b609c3e3a250e",
+    "plan_sha256": "d29c008c1183027fc7c4363b87b6fde8318276ab8cf279d4f420bddf218ea9c8",
+    "remote_artifacts_rechecked_here": false,
+    "schema": "rgsp-trusted-global-collection-v1",
+    "seed0_count": 57,
+    "status": "accepted",
+    "trust_model": "Trusted coordinator accepting producing-host verification snapshots; remote artifact files are not independently rechecked here; hashes are not host authentication or a signature"
+  },
+  "actual_campaign_plan_or_barrier_touched": false,
+  "cases": [
+    {
+      "case": "complete 57 validate-only CLI with zero writes",
+      "status": "PASS"
+    },
+    {
+      "case": "missing fifth snapshot",
+      "error": "RuntimeError: Exactly five complete producing-host snapshots are required",
+      "status": "PASS"
+    },
+    {
+      "case": "duplicate producing host",
+      "error": "RuntimeError: Missing, unknown or duplicate producing host_key: 'a'",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong independent plan pin",
+      "error": "RuntimeError: RuntimeError: The explicit expected immutable plan hash differs",
+      "status": "PASS"
+    },
+    {
+      "case": "snapshot different plan",
+      "error": "RuntimeError: Snapshot belongs to another immutable plan: /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/invalid_snapshot_inputs/wrong_plan.json",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong producing hostname",
+      "error": "RuntimeError: Snapshot producing hostname differs: a",
+      "status": "PASS"
+    },
+    {
+      "case": "incomplete lane",
+      "error": "RuntimeError: Snapshot still has incomplete requested trials: a",
+      "status": "PASS"
+    },
+    {
+      "case": "unverified row",
+      "error": "RuntimeError: Snapshot row is not verified: synthetic_seed0_000",
+      "status": "PASS"
+    },
+    {
+      "case": "duplicate row",
+      "error": "RuntimeError: Unknown or duplicate snapshot row: a, 'synthetic_seed0_000'",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong ordered eight detection artifacts",
+      "error": "RuntimeError: Receipt does not have the exact ordered detection/command/reuse artifacts: synthetic_seed0_000",
+      "status": "PASS"
+    },
+    {
+      "case": "explicit not_ready seed0",
+      "error": "RuntimeError: Planned seed0 remains not_ready: synthetic_seed0_056",
+      "status": "PASS"
+    },
+    {
+      "case": "smaller 56-trial matrix",
+      "error": "RuntimeError: This coordinator requires all 57 distinct planned seed0 trials",
+      "status": "PASS"
+    },
+    {
+      "case": "complete collection, unchanged issue_barrier, exact receipt preservation and idempotency",
+      "status": "PASS"
+    },
+    {
+      "case": "candidate CLI validate-only, accepted via frozen, existing verify_barrier, idempotency",
+      "status": "PASS"
+    },
+    {
+      "case": "different valid candidate cannot overwrite",
+      "error": "RuntimeError: Frozen artifact differs: /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_accept_campaign/synthetic_seed0_barrier.json; use a new plan/output",
+      "status": "PASS"
+    },
+    {
+      "case": "partial candidate receipt coverage",
+      "error": "RuntimeError: Candidate barrier omitted or added seed0 receipts",
+      "status": "PASS"
+    }
+  ],
+  "coordinator_sha256": "bcfa1f09ba8813c0ce1e93b34573df2824093eb495afe3a9b327655493d730e3",
+  "finished_utc": "2026-10-09T03:38:57.220082+00:00",
+  "hostname": "powerleader-PT6620W",
+  "no_gpu_import": true,
+  "probe_sha256": "6ec186fab755d0e5e2cbcc54a3724d19ebd8b3309fcb963b2d78524c408fff91",
+  "publication": {
+    "barrier_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_seed0_barrier.json",
+    "barrier_sha256": "72b919e574a227ed8ab999a8d819a2b018f5a3cedc0238d25d80d99f1a84d8e1",
+    "collected_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/evidence/collected_valid",
+    "host_keys": [
+      "a",
+      "b",
+      "c",
+      "f0",
+      "f1"
+    ],
+    "mode": "collect_snapshots",
+    "payload_sha256": "349bcf23485b65c1c6c3c67df79e7088a648aeeb47081a8914e816a069bd2821",
+    "plan_sha256": "266f8526b7c8589c21fc715f62df84a7eeb60f94255d1ef32fa6a64d60ceed34",
+    "published_utc": "2026-10-09T03:38:56.546476+00:00",
+    "remote_artifacts_rechecked_here": false,
+    "schema": "rgsp-trusted-global-collection-v1",
+    "seed0_count": 57,
+    "source_snapshots": [
+      {
+        "checked_utc": "2026-10-09T03:38:55.875986+00:00",
+        "host_key": "a",
+        "hostname": "powerleader-PT6620W",
+        "lane": "a_seed0",
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_snapshots/a.json",
+        "producing_host_receipt_sha256": {
+          "synthetic_seed0_000": "c21193af85b4f0dd2739fc1ed09fa1bf23d6ec7a51ff742bfd8542d27ff70d13",
+          "synthetic_seed0_005": "337118d4820b7c6f5410869ad3eb8ab418ab888332cb2d6d3e9fb4aefec89a29",
+          "synthetic_seed0_010": "474dfd4f29c0c27c8e40c9c99c724bf1e9b144c3f5c14a1b3b38baa9b3fe2c8a",
+          "synthetic_seed0_015": "ffde5810c70926ab59f9025799bde3283d448a82bb4cda1c63105002aaee1d0b",
+          "synthetic_seed0_020": "6f8a6cb5f9d11ae71fb03517bb75d5d68afbd7c64707aa7cfab817a8d351d47a",
+          "synthetic_seed0_025": "b372630cc71b1481ff79963626b8bc1a322070b3fac4710766fb21c659797fe6",
+          "synthetic_seed0_030": "7ebba5a3a2becf1e7d21f9e303ee73667fda07ae08aaa7daa0ac99d10139d9bc",
+          "synthetic_seed0_035": "7cf32a00e04f4fbf311df84a3f8a1a60f47d1e6937e7f0eb3f6d005cdf6eb910",
+          "synthetic_seed0_040": "b76b55b06002d10d11c40b9e7c895b0b0118a0d0cd13f5bf17f28a37babddeef",
+          "synthetic_seed0_045": "2d8c4ea7af14b9cf70c152cd1b2f11236491f8b9f47b9d132fcd81f852b9ab77",
+          "synthetic_seed0_050": "09e5320afc97943b028e8695e5235c4a1b1c30e722992692708d41b555e61336",
+          "synthetic_seed0_055": "fc4eede0b5700a4f11a011211799e5140ee58ab5ba3dca3093d96b50fcaebfcf"
+        },
+        "sha256": "726a73eb5668c74a7b8f4022f3ace69a88cb180239ec44307c6cf0ae6b0984e5"
+      },
+      {
+        "checked_utc": "2026-10-09T03:38:55.883235+00:00",
+        "host_key": "b",
+        "hostname": "synthetic-host-b",
+        "lane": "b_seed0",
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_snapshots/b.json",
+        "producing_host_receipt_sha256": {
+          "synthetic_seed0_001": "a5a221c52adb88e50e9ff4233545f25376d9d57359931c0b34bb808c9ba700d7",
+          "synthetic_seed0_006": "a512bab2a354b6a75eb2dff390abac9d2062c7397dc69e0fafe2c8335a2483f4",
+          "synthetic_seed0_011": "5c467b83e73f0886ac52147ca74d612e6a32e8b2049f9933bb6a26ebf402e196",
+          "synthetic_seed0_016": "60b56f1bc01d17ad73aa5e83920cf372f9dd4e7b3e925ac638248ba70ed8b9e6",
+          "synthetic_seed0_021": "c65f55e0290f33b72e73b7d95cb8ba72626f975bd83d0be6e1c43b94c7558dbc",
+          "synthetic_seed0_026": "67a9bcbac6da54895bb4a1e13ecebbeac254e8642c11714823722fc492f1d096",
+          "synthetic_seed0_031": "4bcdef6724b5dc171ef5a284f1ab917f0ac7427e03d5748f721574e35f812ac7",
+          "synthetic_seed0_036": "08551ce30542201e80a5576eb99d8675c5e34419f8c2a9ba123f8c3bdb4af0d1",
+          "synthetic_seed0_041": "4eca6f68c75f77a505b1cbf035f7fbff6615f139a22ee99da91c7eb52fc7e624",
+          "synthetic_seed0_046": "0aced7c6b9ca27cb5eb86e31d346506e620201d74b8a2dcdc617d47641952eae",
+          "synthetic_seed0_051": "b6e63c0063eff9dc179a10589d950d47183b9840d14cb8cc75ff1cf5a60e778a",
+          "synthetic_seed0_056": "2d945f6aab1fd096ac7a0e519f40b0a3a6722647fddb927d3f3cbecab43a4425"
+        },
+        "sha256": "36db1ea1ec2d6181f19d540abcbd571f560022cc42e423915062a6fedd57da8b"
+      },
+      {
+        "checked_utc": "2026-10-09T03:38:55.890606+00:00",
+        "host_key": "c",
+        "hostname": "synthetic-host-c",
+        "lane": "c_seed0",
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_snapshots/c.json",
+        "producing_host_receipt_sha256": {
+          "synthetic_seed0_002": "069e32586c5722a3704f63befb38fcb713e66e8928f2c82a8f9cd130f137b965",
+          "synthetic_seed0_007": "aa58fae2519d5a325b7dbe9747ae340b9639bf950077f101af8b65d350abded5",
+          "synthetic_seed0_012": "eebea7ce5a4138ee8364c55c508e49d950c9b27d93e0327a550660c1851fd934",
+          "synthetic_seed0_017": "ce9700d979b963c779ddc24e555d874896890d216cf9bf0fb5390874b0fc5572",
+          "synthetic_seed0_022": "0d5518a05a6eb385e22332e4b6699777ca8c51db1574314050b5264cb05dad6a",
+          "synthetic_seed0_027": "3463aad8ff9cd7c6a49e7b03b9bcbf8655f35ecb840a880c1e63c21cf88c185d",
+          "synthetic_seed0_032": "339f77d5f44b2934654cb6ffbd6f72c2d8e8e0a60e0b67263f7f5d51b56eca73",
+          "synthetic_seed0_037": "8de65581be159b3073a323fd0dff9c325866438e8294396a23a2f5e051400a5f",
+          "synthetic_seed0_042": "c4e8a5c5516b20fca234113bebb50fdec4c5fd99a30d02f581340bae90534df3",
+          "synthetic_seed0_047": "0bf4404f272e00097164e92dde23d8207a8309a98610668e2fef16c678aa667c",
+          "synthetic_seed0_052": "4c2e3587175a611c0d9682ce7f650ce04747a030e204c2316b50a1d4c2512f2a"
+        },
+        "sha256": "bad0ed584131d4ce47410c240711dd4982cc632a69e14812991d498b48e706a5"
+      },
+      {
+        "checked_utc": "2026-10-09T03:38:55.897728+00:00",
+        "host_key": "f0",
+        "hostname": "synthetic-host-f",
+        "lane": "f0_seed0",
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_snapshots/f0.json",
+        "producing_host_receipt_sha256": {
+          "synthetic_seed0_003": "9110ff85d848c65a53febc4d678a34be94e0eebd064be6081bdfedeea3c719d0",
+          "synthetic_seed0_008": "a72f928f1883daf38bf50d1febe67efd48646d78a964b2c5c804c7eda87984b6",
+          "synthetic_seed0_013": "8b70f683f811c25bdbf22f70599b57eea5efe411462101a81f8ae7064bc2e373",
+          "synthetic_seed0_018": "e29d697f7a60d00397ff74ca00db80ba5073b3f950b505782410f5d64528ea59",
+          "synthetic_seed0_023": "42b51252e30d898eef10aad1db363e51501d2aa45d3837f0ec2eb5aff8af00c2",
+          "synthetic_seed0_028": "6c9cc69d41c9c08271e0fc49df215029d43ac1620b9cb1eb04d234dc3f1a00a3",
+          "synthetic_seed0_033": "0a0f2342adfaf60a49332e50faaf2615feaa8e4c37778f5d94a09b512376b05b",
+          "synthetic_seed0_038": "39a2e223ca57811f2cf813e6ac501aafe27e20b5dbd4ff008746096fb0a2e12c",
+          "synthetic_seed0_043": "b695de0a55b2ef2aac9c2194d9623d37da93ec8adef1ce2b81e4f576a8e92d4c",
+          "synthetic_seed0_048": "e8e76e4d19aaf1fe2c7b469455e8bc494241ba636b00f7db76c01903041f1836",
+          "synthetic_seed0_053": "6aabbfd2d1018ffa7c21121b03dacfe4dea5d6489bd6ab220b8b6d2b3ee7cb50"
+        },
+        "sha256": "ecc7e0010224b0cc658963e1b4583b3016f4d7198d54501b1dd47167dad1f1ac"
+      },
+      {
+        "checked_utc": "2026-10-09T03:38:55.904758+00:00",
+        "host_key": "f1",
+        "hostname": "synthetic-host-f",
+        "lane": "f1_seed0",
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_snapshots/f1.json",
+        "producing_host_receipt_sha256": {
+          "synthetic_seed0_004": "59b590f51b19e9bbf02d6112cc1f9f708eb889d32d8133ab3679b708b42b61db",
+          "synthetic_seed0_009": "54ab858efa9c2e9312c966510c1cf0c174248d88ae96f0da10703c28787779d7",
+          "synthetic_seed0_014": "6f1dc7fdcf750a3ce2db9069a5051c499c1fa6b9b6566ad17e92a5d4a134e70e",
+          "synthetic_seed0_019": "2ca9febd98ecf8fcfa1aa6c7e3181cf4551f089283591f3419b91653e0b98e58",
+          "synthetic_seed0_024": "f85e1826906ec3bba916cfd75561e7f8fac43fde3b5ae6fb0586cb075f77d478",
+          "synthetic_seed0_029": "82e4604f4a25b24f234dc9eec29b510e9e91c25bb7d4fa1364f919b269dd59bc",
+          "synthetic_seed0_034": "cf54cd98092d696cc8c8bffbfbc68ab9b1f9e31eab8019317d8115faf3b2cd7b",
+          "synthetic_seed0_039": "bfce252928858f9b9735ecf913f61285e7a580143059e36258f11f07b7828c67",
+          "synthetic_seed0_044": "907a545ec6dfd77e14cd022fe19260f1c5360a3f273b3c4d0c2b7ca0b166dcea",
+          "synthetic_seed0_049": "f03d784d63c54fcfab1e0620928a8d1bff537b198e7ab5485e44a1c3eebde566",
+          "synthetic_seed0_054": "fc8b4b7833653262d851b995b7d2b23478011b0bd36fbbda67c1c524fcd3b18b"
+        },
+        "sha256": "5915713633f9a27c1ef9adfa6f0b5129a9bf037ec48af7070b4f9688b483e4af"
+      }
+    ],
+    "status": "published",
+    "trust_model": "Trusted coordinator accepting producing-host verification snapshots; remote artifact files are not independently rechecked here; hashes are not host authentication or a signature"
+  },
+  "python": "3.10.16",
+  "runtime_manifest_sha256": "ff1f6708e735d5bd91d9c341edfcfdcc714829c5ab5ee0c6110df263d5b6fed7",
+  "runtime_verifier_sha256": "af866b84823b8d623f08bdfa6513bc987384f745ac42ac5647ffb17210d2d86d",
+  "schema": "rgsp-coordinator-probe-v1",
+  "scope": "57 synthetic receipts in each isolated fixture; no remote artifact verification, real plan/barrier or GPU",
+  "started_utc": "2026-10-09T03:38:55.472437+00:00",
+  "status": "PASS"
+}

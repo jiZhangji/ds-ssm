@@ -1,0 +1,655 @@
+{
+  "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "jobs": {
+    "sample-alexnet": {
+      "estimated_seconds": 267.8484996651342,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_rebalance_20261013_v1/taskdata/SAMPLE/manifest.json",
+          "--dataset",
+          "SAMPLE",
+          "--method",
+          "alexnet",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-alexnet/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.034593294025399,
+        "ended_at": 1791856941.1643462,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-alexnet/probe",
+        "payload": {
+          "dataset": "SAMPLE",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 267.8484996651342,
+          "method": "alexnet",
+          "params": 57044810,
+          "peak_gpu_allocated_bytes": 1456673792,
+          "protocol_sha256": "2a0a5fd59c842ad82abf1cc9f8333e10230607cb373fb146c0d441e3eed97514",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "classification",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.11406469799112529,
+            0.11397726001450792,
+            0.11439082503784448,
+            0.11570010700961575
+          ],
+          "updates_per_epoch": 11,
+          "validation_evaluated": false
+        },
+        "pid": 613210,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791856931.1031191,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "2a0a5fd59c842ad82abf1cc9f8333e10230607cb373fb146c0d441e3eed97514",
+      "reason": null,
+      "runs": {
+        "0": {
+          "command": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+            "--campaign-root",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+            "--source-root",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+            "--manifest",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_rebalance_20261013_v1/taskdata/SAMPLE/manifest.json",
+            "--dataset",
+            "SAMPLE",
+            "--method",
+            "alexnet",
+            "--seed",
+            "0",
+            "--output",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-alexnet/run0",
+            "--gpu-uuid",
+            "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+            "--mode",
+            "train"
+          ],
+          "elapsed_seconds": 145.14523459703196,
+          "ended_at": 1791857510.4606934,
+          "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-alexnet/run0",
+          "pid": 615030,
+          "recovered": false,
+          "returncode": 0,
+          "started_at": 1791857365.288334,
+          "status": "COMPLETE",
+          "verification": {
+            "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-alexnet/run0/best.pt",
+            "checkpoint_sha256": "b2c37685af83b4a556c1b81706ec0becb1fcef6dd2b10a492d6214397e293b7e",
+            "completion_sha256": "7aac175430b57fb312d55ffc9583116e68f170e747cdd9c97b59d7fc1ea9b300",
+            "metrics": {
+              "accuracy": 0.09461966604823747,
+              "confusion_matrix": [
+                [
+                  0,
+                  47,
+                  11,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  51,
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  49,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  7,
+                  5,
+                  39,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  43,
+                  10,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  47,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  4,
+                  0
+                ],
+                [
+                  2,
+                  5,
+                  45,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  7,
+                  0,
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  23,
+                  29,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  2,
+                  15,
+                  20,
+                  0,
+                  0,
+                  0,
+                  10,
+                  0,
+                  11,
+                  0
+                ]
+              ],
+              "macro_f1": 0.03505154639175258,
+              "macro_precision": 0.021338912133891212,
+              "macro_recall": 0.09807692307692308,
+              "per_class_recall": [
+                0.0,
+                0.9807692307692307,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "protocol_sha256": "2a0a5fd59c842ad82abf1cc9f8333e10230607cb373fb146c0d441e3eed97514",
+            "result_sha256": "a5cbe878cf44662a114f205727f5af38d7746dba15e1d1174c591f8c8c6c4624"
+          }
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "sample-googlenet": {
+      "estimated_seconds": 425.497573740002,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_rebalance_20261013_v1/taskdata/SAMPLE/manifest.json",
+          "--dataset",
+          "SAMPLE",
+          "--method",
+          "googlenet",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-googlenet/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.036362583981827,
+        "ended_at": 1791857012.5705283,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-googlenet/probe",
+        "payload": {
+          "dataset": "SAMPLE",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 425.497573740002,
+          "method": "googlenet",
+          "params": 5610154,
+          "peak_gpu_allocated_bytes": 906443776,
+          "protocol_sha256": "e5e4da634c9cb573244e57937f07290c709a41e2e86656752e2f3cff2d0ee0ea",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "classification",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.19596576603362337,
+            0.20482012402499095,
+            0.19813591096317396,
+            0.20669604098657146
+          ],
+          "updates_per_epoch": 11,
+          "validation_evaluated": false
+        },
+        "pid": 613600,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791857002.5087845,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "e5e4da634c9cb573244e57937f07290c709a41e2e86656752e2f3cff2d0ee0ea",
+      "reason": null,
+      "runs": {
+        "0": {
+          "command": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+            "--campaign-root",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+            "--source-root",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+            "--manifest",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_rebalance_20261013_v1/taskdata/SAMPLE/manifest.json",
+            "--dataset",
+            "SAMPLE",
+            "--method",
+            "googlenet",
+            "--seed",
+            "0",
+            "--output",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-googlenet/run0",
+            "--gpu-uuid",
+            "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+            "--mode",
+            "train"
+          ],
+          "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-googlenet/run0",
+          "pid": 615954,
+          "started_at": 1791857572.151771,
+          "status": "RUNNING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "sample-swin_b": {
+      "estimated_seconds": 1375.4534906516146,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_rebalance_20261013_v1/taskdata/SAMPLE/manifest.json",
+          "--dataset",
+          "SAMPLE",
+          "--method",
+          "swin_b",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-swin_b/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 15.03858642996056,
+        "ended_at": 1791857303.8925283,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-swin_b/probe",
+        "payload": {
+          "dataset": "SAMPLE",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 1375.4534906516146,
+          "method": "swin_b",
+          "params": 86753474,
+          "peak_gpu_allocated_bytes": 5433560064,
+          "protocol_sha256": "50204a440b86429702f19853d7aa1f1af89c4d40d90ee0d1d14408f696b25602",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "classification",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.7243625770206563,
+            0.7242408110178076,
+            0.7249017589492723,
+            0.7259745720075443
+          ],
+          "updates_per_epoch": 11,
+          "validation_evaluated": false
+        },
+        "pid": 614759,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791857288.8269353,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "50204a440b86429702f19853d7aa1f1af89c4d40d90ee0d1d14408f696b25602",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "sample-swin_t": {
+      "estimated_seconds": 676.3032477851984,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_rebalance_20261013_v1/taskdata/SAMPLE/manifest.json",
+          "--dataset",
+          "SAMPLE",
+          "--method",
+          "swin_t",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-swin_t/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.035616480978206,
+        "ended_at": 1791857084.1199574,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-swin_t/probe",
+        "payload": {
+          "dataset": "SAMPLE",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 676.3032477851984,
+          "method": "swin_t",
+          "params": 27527044,
+          "peak_gpu_allocated_bytes": 2296323584,
+          "protocol_sha256": "dda4d7adcbe5fda0ae2341cbc1a9e9fa0c0da0cb8ff02caa8348873720472c5d",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "classification",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.3386637279763818,
+            0.339176663022954,
+            0.33961313002509996,
+            0.3409820150118321
+          ],
+          "updates_per_epoch": 11,
+          "validation_evaluated": false
+        },
+        "pid": 613975,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791857074.0563788,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "dda4d7adcbe5fda0ae2341cbc1a9e9fa0c0da0cb8ff02caa8348873720472c5d",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "sample-vgg16": {
+      "estimated_seconds": 962.2857193936361,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_rebalance_20261013_v1/taskdata/SAMPLE/manifest.json",
+          "--dataset",
+          "SAMPLE",
+          "--method",
+          "vgg16",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-vgg16/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.03263175295433,
+        "ended_at": 1791857155.685938,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-vgg16/probe",
+        "payload": {
+          "dataset": "SAMPLE",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 962.2857193936361,
+          "method": "vgg16",
+          "params": 134301514,
+          "peak_gpu_allocated_bytes": 4284545024,
+          "protocol_sha256": "69c5eb401667c589685637cef8f428de85543b674cd412efef2c9e2f708d6e99",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "classification",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.49630657996749505,
+            0.495937601022888,
+            0.4980323609779589,
+            0.49851223902078345
+          ],
+          "updates_per_epoch": 11,
+          "validation_evaluated": false
+        },
+        "pid": 614351,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791857145.625294,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "69c5eb401667c589685637cef8f428de85543b674cd412efef2c9e2f708d6e99",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "sample-vit_b_16": {
+      "estimated_seconds": 1061.3448550807898,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_rebalance_20261013_v1/taskdata/SAMPLE/manifest.json",
+          "--dataset",
+          "SAMPLE",
+          "--method",
+          "vit_b_16",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-vit_b_16/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.033935918996576,
+        "ended_at": 1791857227.308137,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-vit_b_16/probe",
+        "payload": {
+          "dataset": "SAMPLE",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 1061.3448550807898,
+          "method": "vit_b_16",
+          "params": 85806346,
+          "peak_gpu_allocated_bytes": 4044663296,
+          "protocol_sha256": "60eaf4603ff88ab77f6e600e7db93e4637fef0ee444e74b9fca98ab3ea8fbfc4",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "classification",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.5511117319692858,
+            0.5503331189975142,
+            0.5518181649968028,
+            0.5538686839863658
+          ],
+          "updates_per_epoch": 11,
+          "validation_evaluated": false
+        },
+        "pid": 614616,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791857217.246262,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "60eaf4603ff88ab77f6e600e7db93e4637fef0ee444e74b9fca98ab3ea8fbfc4",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    }
+  },
+  "lane": "a0samplex",
+  "plan_sha256": "ea92c093cf22b3b0032e97ea706361d16fb626a72866e0f9a67f8120836952b6",
+  "revision": 47,
+  "root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2",
+  "status": "RUNNING",
+  "updated_at": 1791857572.181229,
+  "version": 1
+}

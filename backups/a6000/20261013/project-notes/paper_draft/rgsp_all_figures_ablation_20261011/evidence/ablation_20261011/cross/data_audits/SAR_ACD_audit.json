@@ -1,0 +1,485 @@
+{
+  "all_referenced_files_exist_and_decode": true,
+  "annotation_policy": "preserve-heldout-exclude-ambiguous-training",
+  "conflicting_content_groups": [
+    {
+      "pixel_sha256": "730950b9a6bcd99fd9a99a16af114fff1dedf94a7b263b0242a1e82d2c1518a2",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/119.jpg",
+          "source_record_index": 517,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/068.jpg",
+          "source_record_index": 2076,
+          "split": "train"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "03a646552cf54ebbad33fb61e31c98d7839c768e7ae712816fc92e91e8b652c7",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/197.jpg",
+          "source_record_index": 544,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/336.jpg",
+          "source_record_index": 2034,
+          "split": "train"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "4b4f256b29baa6fd873cf7bad6b8c15473429c5f8d189a67c1a424dd973f8885",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/005.jpg",
+          "source_record_index": 614,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/075.jpg",
+          "source_record_index": 2347,
+          "split": "train"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "cabfad4f47406374dece99c933c0d3ce56f8b68e963764891ba157202c75ed48",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/186.jpg",
+          "source_record_index": 653,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/021.jpg",
+          "source_record_index": 2516,
+          "split": "test"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "323674a8143137dd715dfcc34efb0c6c803024a6265a4bf0b7b00d56d8aa99fe",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/218.jpg",
+          "source_record_index": 770,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/295.jpg",
+          "source_record_index": 2405,
+          "split": "train"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "c07c31afe47686bba84e4715c38a92330d2f9c6382176c2341a3b660c0b218d1",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/400.jpg",
+          "source_record_index": 784,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/313.jpg",
+          "source_record_index": 2470,
+          "split": "val"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "e9fd26a552322ea5d1d3288f33d06b075f327a7341631c7bc965abbfd8a1794b",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/359.jpg",
+          "source_record_index": 841,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/311.jpg",
+          "source_record_index": 2336,
+          "split": "train"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "87b6d69e0c80474a5f060bb45ecb8c1f5c982b423f6d7e9e6f85bfd728e27ab6",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/021.jpg",
+          "source_record_index": 971,
+          "split": "test"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/322.jpg",
+          "source_record_index": 2108,
+          "split": "train"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "test": 254,
+    "train": 2003,
+    "val": 251
+  },
+  "dataset": "SAR-ACD",
+  "duplicate_content_groups": [
+    {
+      "pixel_sha256": "730950b9a6bcd99fd9a99a16af114fff1dedf94a7b263b0242a1e82d2c1518a2",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/119.jpg",
+          "source_record_index": 517,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/068.jpg",
+          "source_record_index": 2076,
+          "split": "train"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "03a646552cf54ebbad33fb61e31c98d7839c768e7ae712816fc92e91e8b652c7",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/197.jpg",
+          "source_record_index": 544,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/336.jpg",
+          "source_record_index": 2034,
+          "split": "train"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "4b4f256b29baa6fd873cf7bad6b8c15473429c5f8d189a67c1a424dd973f8885",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/005.jpg",
+          "source_record_index": 614,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/075.jpg",
+          "source_record_index": 2347,
+          "split": "train"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "cabfad4f47406374dece99c933c0d3ce56f8b68e963764891ba157202c75ed48",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/186.jpg",
+          "source_record_index": 653,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/021.jpg",
+          "source_record_index": 2516,
+          "split": "test"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "b2646a74dfa58d619508b373e5e8484b3eaec8a7be6c7c51bb98b65ea0f4cbb8",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/086.jpg",
+          "source_record_index": 699,
+          "split": "train"
+        },
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/427.jpg",
+          "source_record_index": 766,
+          "split": "train"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "c71728bcd60c8b0e258612c2ddb8101ca3195a738b4ad78cd862f604885308cb",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/508.jpg",
+          "source_record_index": 757,
+          "split": "train"
+        },
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/413.jpg",
+          "source_record_index": 914,
+          "split": "val"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "323674a8143137dd715dfcc34efb0c6c803024a6265a4bf0b7b00d56d8aa99fe",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/218.jpg",
+          "source_record_index": 770,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/295.jpg",
+          "source_record_index": 2405,
+          "split": "train"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "c07c31afe47686bba84e4715c38a92330d2f9c6382176c2341a3b660c0b218d1",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/400.jpg",
+          "source_record_index": 784,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/313.jpg",
+          "source_record_index": 2470,
+          "split": "val"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "e9fd26a552322ea5d1d3288f33d06b075f327a7341631c7bc965abbfd8a1794b",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/359.jpg",
+          "source_record_index": 841,
+          "split": "train"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/311.jpg",
+          "source_record_index": 2336,
+          "split": "train"
+        }
+      ]
+    },
+    {
+      "pixel_sha256": "87b6d69e0c80474a5f060bb45ecb8c1f5c982b423f6d7e9e6f85bfd728e27ab6",
+      "rows": [
+        {
+          "class_name": "A330",
+          "path_source": "_raw/SAR_ACD/images/A330/021.jpg",
+          "source_record_index": 971,
+          "split": "test"
+        },
+        {
+          "class_name": "Boeing787",
+          "path_source": "_raw/SAR_ACD/images/Boeing787/322.jpg",
+          "source_record_index": 2108,
+          "split": "train"
+        }
+      ]
+    }
+  ],
+  "excluded_records": [
+    {
+      "class_name": "A330",
+      "label": 1,
+      "path": "files/b6/b6dde36770d09384ec349a42b0de2f3c65546b215c9274ff363592254de9f18c.jpg",
+      "path_source": "_raw/SAR_ACD/images/A330/119.jpg",
+      "reason": "Contradictory class labels for identical content; exclude all ambiguous training copies without relabeling.",
+      "source_record_index": 517,
+      "split": "train"
+    },
+    {
+      "class_name": "Boeing787",
+      "label": 4,
+      "path": "files/b6/b6dde36770d09384ec349a42b0de2f3c65546b215c9274ff363592254de9f18c.jpg",
+      "path_source": "_raw/SAR_ACD/images/Boeing787/068.jpg",
+      "reason": "Contradictory class labels for identical content; exclude all ambiguous training copies without relabeling.",
+      "source_record_index": 2076,
+      "split": "train"
+    },
+    {
+      "class_name": "A330",
+      "label": 1,
+      "path": "files/8e/8e14577f4a7136439da38bfca80491012e4983d3f3957c125e7666501a6d45c1.jpg",
+      "path_source": "_raw/SAR_ACD/images/A330/197.jpg",
+      "reason": "Contradictory class labels for identical content; exclude all ambiguous training copies without relabeling.",
+      "source_record_index": 544,
+      "split": "train"
+    },
+    {
+      "class_name": "Boeing787",
+      "label": 4,
+      "path": "files/8e/8e14577f4a7136439da38bfca80491012e4983d3f3957c125e7666501a6d45c1.jpg",
+      "path_source": "_raw/SAR_ACD/images/Boeing787/336.jpg",
+      "reason": "Contradictory class labels for identical content; exclude all ambiguous training copies without relabeling.",
+      "source_record_index": 2034,
+      "split": "train"
+    },
+    {
+      "class_name": "A330",
+      "label": 1,
+      "path": "files/6d/6dbcb43ca1ed1bb0b0ff92da4079c93e9c2a101aba7c75892d4f88b965905742.jpg",
+      "path_source": "_raw/SAR_ACD/images/A330/005.jpg",
+      "reason": "Contradictory class labels for identical content; exclude all ambiguous training copies without relabeling.",
+      "source_record_index": 614,
+      "split": "train"
+    },
+    {
+      "class_name": "Boeing787",
+      "label": 4,
+      "path": "files/6d/6dbcb43ca1ed1bb0b0ff92da4079c93e9c2a101aba7c75892d4f88b965905742.jpg",
+      "path_source": "_raw/SAR_ACD/images/Boeing787/075.jpg",
+      "reason": "Contradictory class labels for identical content; exclude all ambiguous training copies without relabeling.",
+      "source_record_index": 2347,
+      "split": "train"
+    },
+    {
+      "class_name": "A330",
+      "label": 1,
+      "path": "files/ee/eecf0584cbff0ba0b1ed6ab76b2bb4a169827dec00aa55fe77ca2821e6dc3ce0.jpg",
+      "path_source": "_raw/SAR_ACD/images/A330/186.jpg",
+      "reason": "Identical decoded content exists in higher-priority heldout split (test > val > train).",
+      "source_record_index": 653,
+      "split": "train"
+    },
+    {
+      "class_name": "A330",
+      "label": 1,
+      "path": "files/50/5029eb151b278eb083d3dde308aa102c2d6af2d4879d0f3dc25b7b7b451ee5a3.jpg",
+      "path_source": "_raw/SAR_ACD/images/A330/508.jpg",
+      "reason": "Identical decoded content exists in higher-priority heldout split (test > val > train).",
+      "source_record_index": 757,
+      "split": "train"
+    },
+    {
+      "class_name": "A330",
+      "label": 1,
+      "path": "files/90/9059221a9d7e73c801b9040c036e8a17bb2524ea068d83ea846bfc7598ea2623.jpg",
+      "path_source": "_raw/SAR_ACD/images/A330/218.jpg",
+      "reason": "Contradictory class labels for identical content; exclude all ambiguous training copies without relabeling.",
+      "source_record_index": 770,
+      "split": "train"
+    },
+    {
+      "class_name": "Boeing787",
+      "label": 4,
+      "path": "files/90/9059221a9d7e73c801b9040c036e8a17bb2524ea068d83ea846bfc7598ea2623.jpg",
+      "path_source": "_raw/SAR_ACD/images/Boeing787/295.jpg",
+      "reason": "Contradictory class labels for identical content; exclude all ambiguous training copies without relabeling.",
+      "source_record_index": 2405,
+      "split": "train"
+    },
+    {
+      "class_name": "A330",
+      "label": 1,
+      "path": "files/94/94dd685c613dd8b6b4ca3c429090b5287b103edf5fbe90658487801dc9dd434f.jpg",
+      "path_source": "_raw/SAR_ACD/images/A330/400.jpg",
+      "reason": "Identical decoded content exists in higher-priority heldout split (test > val > train).",
+      "source_record_index": 784,
+      "split": "train"
+    },
+    {
+      "class_name": "A330",
+      "label": 1,
+      "path": "files/21/218477ab3e06ca5f4d5b149b5d6746cd99b8187fcf5cf50af4f3d982f63affac.jpg",
+      "path_source": "_raw/SAR_ACD/images/A330/359.jpg",
+      "reason": "Contradictory class labels for identical content; exclude all ambiguous training copies without relabeling.",
+      "source_record_index": 841,
+      "split": "train"
+    },
+    {
+      "class_name": "Boeing787",
+      "label": 4,
+      "path": "files/21/218477ab3e06ca5f4d5b149b5d6746cd99b8187fcf5cf50af4f3d982f63affac.jpg",
+      "path_source": "_raw/SAR_ACD/images/Boeing787/311.jpg",
+      "reason": "Contradictory class labels for identical content; exclude all ambiguous training copies without relabeling.",
+      "source_record_index": 2336,
+      "split": "train"
+    },
+    {
+      "class_name": "Boeing787",
+      "label": 4,
+      "path": "files/dc/dcf97f666ac95f6bb4b8512ee12e854fb8cbf69a99037481fff73390950d69a3.jpg",
+      "path_source": "_raw/SAR_ACD/images/Boeing787/322.jpg",
+      "reason": "Identical decoded content exists in higher-priority heldout split (test > val > train).",
+      "source_record_index": 2108,
+      "split": "train"
+    }
+  ],
+  "instance_or_scene_disjoint": false,
+  "limitation": "Decoded-exact-content isolation only, not a near-duplicate, multi-view, instance or scene independence guarantee.",
+  "ready": true,
+  "retained_annotation_conflict_records": [
+    {
+      "class_name": "Boeing787",
+      "path_source": "_raw/SAR_ACD/images/Boeing787/021.jpg",
+      "source_record_index": 2516,
+      "split": "test"
+    },
+    {
+      "class_name": "Boeing787",
+      "path_source": "_raw/SAR_ACD/images/Boeing787/313.jpg",
+      "source_record_index": 2470,
+      "split": "val"
+    },
+    {
+      "class_name": "A330",
+      "path_source": "_raw/SAR_ACD/images/A330/021.jpg",
+      "source_record_index": 971,
+      "split": "test"
+    }
+  ],
+  "sample_serial_split_membership": {},
+  "schema": "rgsp-cross-data-v1",
+  "source_counts": {
+    "test": 254,
+    "train": 2017,
+    "val": 251
+  },
+  "source_files_modified": false,
+  "source_manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json",
+  "source_manifest_sha256": "796a2ff4d728fb0b9b3f7f242a20454c938dce75db6701dd8b21c5ffae5b1d93",
+  "source_records": 2522,
+  "task": "classification",
+  "test_policy": "Preserve original test rows/labels; val has priority over train; retain ambiguous heldout annotations and disclose them.",
+  "unique_staged_files": 2512
+}

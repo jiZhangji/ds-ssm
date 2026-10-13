@@ -1,0 +1,52 @@
+{
+  "amp": false,
+  "augmentation": {
+    "close_mosaic": 10,
+    "degrees": 0.0,
+    "fliplr": 0.5,
+    "flipud": 0.0,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "mosaic": 1.0,
+    "scale": 0.5,
+    "translate": 0.1
+  },
+  "batch": 32,
+  "code": {
+    "mbyolo_train_sarair.py": "f72b958563074a3a1664020f864e06f7447b2f0804fc6504f3567041633689be",
+    "tools/evaluate_sarmix.py": "b618852403eeda8737cadd847ac5193848325141eb6666dac10fa8185d67c50d",
+    "tools/run_sar4_full_suite.py": "0ec13b6c25ba2d153992f7a293732e600caf0dab232245aa68bfb0cf32a709a7",
+    "ultralytics/nn/modules/mamba_yolo.py": "6abc3a657f7925c076e84f890500e56d4fe00106f4e02edbfea4cf7dea93819d"
+  },
+  "configs": {
+    "SADD:baseline": "74dcda6fcbd55daea5dbb87026787d41886d0104c58b2bf5c805dca0077d5f44",
+    "SADD:full_p3": "ec287ccce00023599bda0a916fcad804e20e07a12e0b4b5aec57d2bfbc4ebc79"
+  },
+  "cos_lr": false,
+  "datasets": {
+    "SADD": {
+      "path": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SADD/SADD.yaml",
+      "sha256": "d01ec5b9dc9b1f33a50947c8169dfe5be95515a9432333f47662aa07a9dda78e"
+    }
+  },
+  "epochs": 300,
+  "eval_batch": 64,
+  "eval_device": "0",
+  "experiment_id": "det_histcfg_p3_d16_fp32_remaining_v1",
+  "imgsz": 640,
+  "lr0": 0.001,
+  "lrf": 0.01,
+  "module_warmup_epochs": 20,
+  "nbs": 64,
+  "optimizer": "AdamW",
+  "optimizer_warmup_epochs": 5.0,
+  "patience": 100,
+  "seed": 0,
+  "ssdd_full_train": false,
+  "state_dim": 16,
+  "train_device": "0",
+  "warmup_bias_lr": 0.001,
+  "weight_decay": 0.0005,
+  "weights": "/home/powerleader/ig-ds-ssm/yolov8n.pt"
+}

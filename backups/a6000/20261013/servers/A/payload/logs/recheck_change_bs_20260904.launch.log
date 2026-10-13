@@ -1,0 +1,732 @@
+[2026-09-04 23:14:17] waiting for A OpenEarthMap queue PID 103681
+[2026-09-05 06:51:17] starting change-detection BS sweep
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Ottawa baseline finetune 1/150 loss=1.60797 score=0.32594
+Ottawa baseline finetune 2/150 loss=1.08188 score=0.81443
+Ottawa baseline finetune 3/150 loss=0.82131 score=0.94081
+Ottawa baseline finetune 4/150 loss=0.76950 score=0.94664
+Ottawa baseline finetune 5/150 loss=0.73155 score=0.95223
+Ottawa baseline finetune 6/150 loss=0.71971 score=0.95681
+Ottawa baseline finetune 7/150 loss=0.67530 score=0.95895
+Ottawa baseline finetune 8/150 loss=0.65872 score=0.95944
+Ottawa baseline finetune 9/150 loss=0.64440 score=0.96013
+Ottawa baseline finetune 10/150 loss=0.66735 score=0.96140
+Ottawa baseline finetune 11/150 loss=0.61732 score=0.96058
+Ottawa baseline finetune 12/150 loss=0.63363 score=0.96236
+Ottawa baseline finetune 13/150 loss=0.60012 score=0.96207
+Ottawa baseline finetune 14/150 loss=0.59119 score=0.96180
+Ottawa baseline finetune 15/150 loss=0.57496 score=0.96199
+Ottawa baseline finetune 16/150 loss=0.55591 score=0.96262
+Ottawa baseline finetune 17/150 loss=0.55576 score=0.96278
+Ottawa baseline finetune 18/150 loss=0.53538 score=0.96319
+Ottawa baseline finetune 19/150 loss=0.53704 score=0.96279
+Ottawa baseline finetune 20/150 loss=0.53897 score=0.96262
+Ottawa baseline finetune 21/150 loss=0.50307 score=0.96328
+Ottawa baseline finetune 22/150 loss=0.49938 score=0.96460
+Ottawa baseline finetune 23/150 loss=0.48741 score=0.96438
+Ottawa baseline finetune 24/150 loss=0.47047 score=0.96456
+Ottawa baseline finetune 25/150 loss=0.46521 score=0.96381
+Ottawa baseline finetune 26/150 loss=0.49363 score=0.96435
+Ottawa baseline finetune 27/150 loss=0.45834 score=0.96552
+Ottawa baseline finetune 28/150 loss=0.46476 score=0.96587
+Ottawa baseline finetune 29/150 loss=0.46461 score=0.95997
+Ottawa baseline finetune 30/150 loss=0.46583 score=0.96266
+Ottawa baseline finetune 31/150 loss=0.46378 score=0.96418
+Ottawa baseline finetune 32/150 loss=0.44172 score=0.96436
+Ottawa baseline finetune 33/150 loss=0.42574 score=0.96508
+Ottawa baseline finetune 34/150 loss=0.41947 score=0.96461
+Ottawa baseline finetune 35/150 loss=0.41209 score=0.96451
+Ottawa baseline finetune 36/150 loss=0.41913 score=0.96538
+Ottawa baseline finetune 37/150 loss=0.38998 score=0.96578
+Ottawa baseline finetune 38/150 loss=0.49392 score=0.96503
+Ottawa baseline finetune 39/150 loss=0.42241 score=0.96571
+Ottawa baseline finetune 40/150 loss=0.39046 score=0.96628
+Ottawa baseline finetune 41/150 loss=0.41279 score=0.96581
+Ottawa baseline finetune 42/150 loss=0.36311 score=0.96582
+Ottawa baseline finetune 43/150 loss=0.38887 score=0.96564
+Ottawa baseline finetune 44/150 loss=0.43633 score=0.96599
+Ottawa baseline finetune 45/150 loss=0.36555 score=0.96610
+Ottawa baseline finetune 46/150 loss=0.35596 score=0.96654
+Ottawa baseline finetune 47/150 loss=0.35811 score=0.96654
+Ottawa baseline finetune 48/150 loss=0.38039 score=0.96676
+Ottawa baseline finetune 49/150 loss=0.37210 score=0.96609
+Ottawa baseline finetune 50/150 loss=0.34754 score=0.96533
+Ottawa baseline finetune 51/150 loss=0.35865 score=0.96622
+Ottawa baseline finetune 52/150 loss=0.33323 score=0.96727
+Ottawa baseline finetune 53/150 loss=0.34174 score=0.96612
+Ottawa baseline finetune 54/150 loss=0.33374 score=0.96587
+Ottawa baseline finetune 55/150 loss=0.32819 score=0.96679
+Ottawa baseline finetune 56/150 loss=0.37641 score=0.96685
+Ottawa baseline finetune 57/150 loss=0.31733 score=0.96660
+Ottawa baseline finetune 58/150 loss=0.33733 score=0.96680
+Ottawa baseline finetune 59/150 loss=0.33877 score=0.96699
+Ottawa baseline finetune 60/150 loss=0.30604 score=0.96751
+Ottawa baseline finetune 61/150 loss=0.31151 score=0.96708
+Ottawa baseline finetune 62/150 loss=0.33340 score=0.96651
+Ottawa baseline finetune 63/150 loss=0.30359 score=0.96798
+Ottawa baseline finetune 64/150 loss=0.33904 score=0.96754
+Ottawa baseline finetune 65/150 loss=0.30817 score=0.96735
+Ottawa baseline finetune 66/150 loss=0.30874 score=0.96715
+Ottawa baseline finetune 67/150 loss=0.31342 score=0.96798
+Ottawa baseline finetune 68/150 loss=0.31530 score=0.96772
+Ottawa baseline finetune 69/150 loss=0.29861 score=0.96735
+Ottawa baseline finetune 70/150 loss=0.28062 score=0.96744
+Ottawa baseline finetune 71/150 loss=0.28816 score=0.96797
+Ottawa baseline finetune 72/150 loss=0.30387 score=0.96756
+Ottawa baseline finetune 73/150 loss=0.29441 score=0.96734
+Ottawa baseline finetune 74/150 loss=0.28108 score=0.96725
+Ottawa baseline finetune 75/150 loss=0.30375 score=0.96714
+Ottawa baseline finetune 76/150 loss=0.28278 score=0.96786
+Ottawa baseline finetune 77/150 loss=0.28554 score=0.96787
+Ottawa baseline finetune 78/150 loss=0.26809 score=0.96770
+Ottawa baseline finetune 79/150 loss=0.25984 score=0.96799
+Ottawa baseline finetune 80/150 loss=0.26404 score=0.96814
+Ottawa baseline finetune 81/150 loss=0.26119 score=0.96781
+Ottawa baseline finetune 82/150 loss=0.33515 score=0.96741
+Ottawa baseline finetune 83/150 loss=0.26781 score=0.96778
+Ottawa baseline finetune 84/150 loss=0.28911 score=0.96750
+Ottawa baseline finetune 85/150 loss=0.28622 score=0.96739
+Ottawa baseline finetune 86/150 loss=0.26267 score=0.96753
+Ottawa baseline finetune 87/150 loss=0.28513 score=0.96749
+Ottawa baseline finetune 88/150 loss=0.25631 score=0.96742
+Ottawa baseline finetune 89/150 loss=0.24319 score=0.96784
+Ottawa baseline finetune 90/150 loss=0.27287 score=0.96794
+Ottawa baseline finetune 91/150 loss=0.25099 score=0.96802
+Ottawa baseline finetune 92/150 loss=0.25794 score=0.96810
+Ottawa baseline finetune 93/150 loss=0.25938 score=0.96805
+Ottawa baseline finetune 94/150 loss=0.26145 score=0.96796
+Ottawa baseline finetune 95/150 loss=0.27288 score=0.96805
+Ottawa baseline finetune 96/150 loss=0.24337 score=0.96798
+Ottawa baseline finetune 97/150 loss=0.24106 score=0.96781
+Ottawa baseline finetune 98/150 loss=0.24491 score=0.96803
+Ottawa baseline finetune 99/150 loss=0.25990 score=0.96818
+Ottawa baseline finetune 100/150 loss=0.25758 score=0.96788
+Ottawa baseline finetune 101/150 loss=0.24890 score=0.96743
+Ottawa baseline finetune 102/150 loss=0.25268 score=0.96777
+Ottawa baseline finetune 103/150 loss=0.23628 score=0.96794
+Ottawa baseline finetune 104/150 loss=0.24568 score=0.96772
+Ottawa baseline finetune 105/150 loss=0.22979 score=0.96770
+Ottawa baseline finetune 106/150 loss=0.23412 score=0.96793
+Ottawa baseline finetune 107/150 loss=0.29376 score=0.96779
+Ottawa baseline finetune 108/150 loss=0.24231 score=0.96768
+Ottawa baseline finetune 109/150 loss=0.23324 score=0.96775
+Ottawa baseline finetune 110/150 loss=0.27297 score=0.96784
+Ottawa baseline finetune 111/150 loss=0.22958 score=0.96825
+Ottawa baseline finetune 112/150 loss=0.22611 score=0.96805
+Ottawa baseline finetune 113/150 loss=0.24058 score=0.96804
+Ottawa baseline finetune 114/150 loss=0.23716 score=0.96811
+Ottawa baseline finetune 115/150 loss=0.22185 score=0.96808
+Ottawa baseline finetune 116/150 loss=0.25815 score=0.96787
+Ottawa baseline finetune 117/150 loss=0.23643 score=0.96782
+Ottawa baseline finetune 118/150 loss=0.22398 score=0.96777
+Ottawa baseline finetune 119/150 loss=0.22389 score=0.96784
+Ottawa baseline finetune 120/150 loss=0.25314 score=0.96800
+Ottawa baseline finetune 121/150 loss=0.24040 score=0.96787
+Ottawa baseline finetune 122/150 loss=0.24601 score=0.96779
+Ottawa baseline finetune 123/150 loss=0.23703 score=0.96796
+Ottawa baseline finetune 124/150 loss=0.22425 score=0.96803
+Ottawa baseline finetune 125/150 loss=0.23872 score=0.96802
+Ottawa baseline finetune 126/150 loss=0.23690 score=0.96792
+Ottawa baseline finetune 127/150 loss=0.25678 score=0.96782
+Ottawa baseline finetune 128/150 loss=0.22909 score=0.96788
+Ottawa baseline finetune 129/150 loss=0.23370 score=0.96796
+Ottawa baseline finetune 130/150 loss=0.22258 score=0.96796
+Ottawa baseline finetune 131/150 loss=0.24224 score=0.96814
+Ottawa baseline finetune 132/150 loss=0.23964 score=0.96821
+Ottawa baseline finetune 133/150 loss=0.22853 score=0.96818
+Ottawa baseline finetune 134/150 loss=0.22018 score=0.96824
+Ottawa baseline finetune 135/150 loss=0.24067 score=0.96819
+Ottawa baseline finetune 136/150 loss=0.24034 score=0.96824
+EARLY STOP: 25 stale epochs
+{
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "backbone_layout": "legacy",
+  "decoder": "multiscale",
+  "initialization": "scratch",
+  "pretrained": {
+    "path": null,
+    "loaded_tensors": 0,
+    "model_tensors": 209,
+    "coverage": 0.0
+  },
+  "protocol": "dense-spatial-macroblocks",
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 112,
+    "val": 24,
+    "test": 32
+  },
+  "imgsz": 192,
+  "batch": 32,
+  "eval_imgsz": 192,
+  "eval_batch": 32,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 150,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 111,
+  "threshold": 0.6000000000000002,
+  "metric": {
+    "precision": 0.8731886538417654,
+    "recall": 0.9525358470525757,
+    "f1": 0.9111380097231868,
+    "iou": 0.8367800675010753,
+    "oa": 0.9810189141167535,
+    "kappa": 0.9005351348307434
+  },
+  "params": 2346329,
+  "gflops": 1.177137648,
+  "latency_ms": 6.620107766745302,
+  "fps": 151.0549427946304,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_change_bs_20260904/ottawa/baseline_bs32/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Ottawa/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Ottawa ours finetune 1/150 loss=1.68031 score=0.32594
+Ottawa ours finetune 2/150 loss=1.18974 score=0.88589
+Ottawa ours finetune 3/150 loss=0.94336 score=0.92563
+Ottawa ours finetune 4/150 loss=0.95198 score=0.93825
+Ottawa ours finetune 5/150 loss=0.82901 score=0.94808
+Ottawa ours finetune 6/150 loss=0.80032 score=0.94830
+Ottawa ours finetune 7/150 loss=0.76483 score=0.95060
+Ottawa ours finetune 8/150 loss=0.75650 score=0.95445
+Ottawa ours finetune 9/150 loss=0.73745 score=0.95893
+Ottawa ours finetune 10/150 loss=0.72582 score=0.96006
+Ottawa ours finetune 11/150 loss=0.71381 score=0.96019
+Ottawa ours finetune 12/150 loss=0.71466 score=0.96130
+Ottawa ours finetune 13/150 loss=0.67889 score=0.96179
+Ottawa ours finetune 14/150 loss=0.69109 score=0.96215
+Ottawa ours finetune 15/150 loss=0.67388 score=0.96237
+Ottawa ours finetune 16/150 loss=0.64087 score=0.96340
+Ottawa ours finetune 17/150 loss=0.68623 score=0.96375
+Ottawa ours finetune 18/150 loss=0.61955 score=0.96424
+Ottawa ours finetune 19/150 loss=0.61121 score=0.96312
+Ottawa ours finetune 20/150 loss=0.62488 score=0.96407
+Ottawa ours finetune 21/150 loss=0.62927 score=0.96416
+Ottawa ours finetune 22/150 loss=0.62030 score=0.96509
+Ottawa ours finetune 23/150 loss=0.60496 score=0.96494
+Ottawa ours finetune 24/150 loss=0.63231 score=0.96506
+Ottawa ours finetune 25/150 loss=0.56874 score=0.96556
+Ottawa ours finetune 26/150 loss=0.55089 score=0.96535
+Ottawa ours finetune 27/150 loss=0.55157 score=0.96510
+Ottawa ours finetune 28/150 loss=0.54337 score=0.96549
+Ottawa ours finetune 29/150 loss=0.54804 score=0.96600
+Ottawa ours finetune 30/150 loss=0.61025 score=0.96634
+Ottawa ours finetune 31/150 loss=0.51813 score=0.96546
+Ottawa ours finetune 32/150 loss=0.55117 score=0.96597
+Ottawa ours finetune 33/150 loss=0.49583 score=0.96613
+Ottawa ours finetune 34/150 loss=0.50289 score=0.96636
+Ottawa ours finetune 35/150 loss=0.52943 score=0.96599
+Ottawa ours finetune 36/150 loss=0.49003 score=0.96683
+Ottawa ours finetune 37/150 loss=0.48639 score=0.96627
+Ottawa ours finetune 38/150 loss=0.49536 score=0.96643
+Ottawa ours finetune 39/150 loss=0.45951 score=0.96587
+Ottawa ours finetune 40/150 loss=0.46694 score=0.96654
+Ottawa ours finetune 41/150 loss=0.44876 score=0.96632
+Ottawa ours finetune 42/150 loss=0.45057 score=0.96591
+Ottawa ours finetune 43/150 loss=0.44477 score=0.96646
+Ottawa ours finetune 44/150 loss=0.45546 score=0.96638
+Ottawa ours finetune 45/150 loss=0.42850 score=0.96696
+Ottawa ours finetune 46/150 loss=0.43160 score=0.96676
+Ottawa ours finetune 47/150 loss=0.44572 score=0.96691
+Ottawa ours finetune 48/150 loss=0.47976 score=0.96595
+Ottawa ours finetune 49/150 loss=0.41767 score=0.96650
+Ottawa ours finetune 50/150 loss=0.40248 score=0.96673
+Ottawa ours finetune 51/150 loss=0.40814 score=0.96634
+Ottawa ours finetune 52/150 loss=0.47530 score=0.96627
+Ottawa ours finetune 53/150 loss=0.42986 score=0.96647
+Ottawa ours finetune 54/150 loss=0.39281 score=0.96688
+Ottawa ours finetune 55/150 loss=0.40920 score=0.96620
+Ottawa ours finetune 56/150 loss=0.39197 score=0.96549
+Ottawa ours finetune 57/150 loss=0.39885 score=0.96670
+Ottawa ours finetune 58/150 loss=0.43674 score=0.96687
+Ottawa ours finetune 59/150 loss=0.38157 score=0.96599
+Ottawa ours finetune 60/150 loss=0.40524 score=0.96586
+Ottawa ours finetune 61/150 loss=0.36506 score=0.96644
+Ottawa ours finetune 62/150 loss=0.42854 score=0.96650
+Ottawa ours finetune 63/150 loss=0.37269 score=0.96687
+Ottawa ours finetune 64/150 loss=0.36462 score=0.96671
+Ottawa ours finetune 65/150 loss=0.44157 score=0.96657
+Ottawa ours finetune 66/150 loss=0.38244 score=0.96673
+Ottawa ours finetune 67/150 loss=0.38401 score=0.96679
+Ottawa ours finetune 68/150 loss=0.35388 score=0.96689
+Ottawa ours finetune 69/150 loss=0.35494 score=0.96649
+Ottawa ours finetune 70/150 loss=0.42546 score=0.96562
+EARLY STOP: 25 stale epochs
+{
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "legacy",
+  "decoder": "multiscale",
+  "initialization": "scratch",
+  "pretrained": {
+    "path": null,
+    "loaded_tensors": 0,
+    "model_tensors": 200,
+    "coverage": 0.0
+  },
+  "protocol": "dense-spatial-macroblocks",
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 112,
+    "val": 24,
+    "test": 32
+  },
+  "imgsz": 192,
+  "batch": 32,
+  "eval_imgsz": 192,
+  "eval_batch": 32,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 150,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 45,
+  "threshold": 0.7500000000000002,
+  "metric": {
+    "precision": 0.8881780962128967,
+    "recall": 0.950469662772172,
+    "f1": 0.9182686911767064,
+    "iou": 0.848887966620471,
+    "oa": 0.9827151828342013,
+    "kappa": 0.9086167621824868
+  },
+  "params": 2138147,
+  "gflops": 1.136191824,
+  "latency_ms": 6.7120298005950945,
+  "fps": 148.98622767010647,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_change_bs_20260904/ottawa/ours_bs32/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Ottawa/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Ottawa baseline finetune 1/150 loss=1.77369 score=0.32594
+Ottawa baseline finetune 2/150 loss=1.36982 score=0.32594
+Ottawa baseline finetune 3/150 loss=1.07146 score=0.48488
+Ottawa baseline finetune 4/150 loss=0.93249 score=0.83339
+Ottawa baseline finetune 5/150 loss=0.84473 score=0.94402
+Ottawa baseline finetune 6/150 loss=0.78461 score=0.93636
+Ottawa baseline finetune 7/150 loss=0.74714 score=0.94392
+Ottawa baseline finetune 8/150 loss=0.72711 score=0.94686
+Ottawa baseline finetune 9/150 loss=0.71379 score=0.94997
+Ottawa baseline finetune 10/150 loss=0.69460 score=0.95260
+Ottawa baseline finetune 11/150 loss=0.69988 score=0.95523
+Ottawa baseline finetune 12/150 loss=0.68655 score=0.95576
+Ottawa baseline finetune 13/150 loss=0.67494 score=0.95768
+Ottawa baseline finetune 14/150 loss=0.66252 score=0.95876
+Ottawa baseline finetune 15/150 loss=0.64560 score=0.95945
+Ottawa baseline finetune 16/150 loss=0.63932 score=0.95932
+Ottawa baseline finetune 17/150 loss=0.63269 score=0.96030
+Ottawa baseline finetune 18/150 loss=0.61813 score=0.96100
+Ottawa baseline finetune 19/150 loss=0.61253 score=0.96126
+Ottawa baseline finetune 20/150 loss=0.63326 score=0.96136
+Ottawa baseline finetune 21/150 loss=0.59996 score=0.96179
+Ottawa baseline finetune 22/150 loss=0.59542 score=0.96200
+Ottawa baseline finetune 23/150 loss=0.59020 score=0.96206
+Ottawa baseline finetune 24/150 loss=0.58111 score=0.96192
+Ottawa baseline finetune 25/150 loss=0.57728 score=0.96180
+Ottawa baseline finetune 26/150 loss=0.59593 score=0.96199
+Ottawa baseline finetune 27/150 loss=0.56169 score=0.96219
+Ottawa baseline finetune 28/150 loss=0.55628 score=0.96265
+Ottawa baseline finetune 29/150 loss=0.57043 score=0.96267
+Ottawa baseline finetune 30/150 loss=0.54629 score=0.96280
+Ottawa baseline finetune 31/150 loss=0.54869 score=0.96291
+Ottawa baseline finetune 32/150 loss=0.54538 score=0.96298
+Ottawa baseline finetune 33/150 loss=0.53340 score=0.96314
+Ottawa baseline finetune 34/150 loss=0.52783 score=0.96322
+Ottawa baseline finetune 35/150 loss=0.52225 score=0.96295
+Ottawa baseline finetune 36/150 loss=0.53861 score=0.96290
+Ottawa baseline finetune 37/150 loss=0.50986 score=0.96303
+Ottawa baseline finetune 38/150 loss=0.54888 score=0.96304
+Ottawa baseline finetune 39/150 loss=0.51891 score=0.96311
+Ottawa baseline finetune 40/150 loss=0.51232 score=0.96301
+Ottawa baseline finetune 41/150 loss=0.49939 score=0.96304
+Ottawa baseline finetune 42/150 loss=0.48691 score=0.96318
+Ottawa baseline finetune 43/150 loss=0.49866 score=0.96311
+Ottawa baseline finetune 44/150 loss=0.49315 score=0.96310
+Ottawa baseline finetune 45/150 loss=0.47931 score=0.96269
+Ottawa baseline finetune 46/150 loss=0.47881 score=0.96273
+Ottawa baseline finetune 47/150 loss=0.48017 score=0.96269
+Ottawa baseline finetune 48/150 loss=0.50018 score=0.96318
+Ottawa baseline finetune 49/150 loss=0.48024 score=0.96339
+Ottawa baseline finetune 50/150 loss=0.46414 score=0.96301
+Ottawa baseline finetune 51/150 loss=0.47664 score=0.96231
+Ottawa baseline finetune 52/150 loss=0.46113 score=0.96254
+Ottawa baseline finetune 53/150 loss=0.46379 score=0.96266
+Ottawa baseline finetune 54/150 loss=0.46252 score=0.96269
+Ottawa baseline finetune 55/150 loss=0.45393 score=0.96325
+Ottawa baseline finetune 56/150 loss=0.46873 score=0.96346
+Ottawa baseline finetune 57/150 loss=0.44064 score=0.96350
+Ottawa baseline finetune 58/150 loss=0.45890 score=0.96384
+Ottawa baseline finetune 59/150 loss=0.47213 score=0.96308
+Ottawa baseline finetune 60/150 loss=0.44026 score=0.96246
+Ottawa baseline finetune 61/150 loss=0.43900 score=0.96280
+Ottawa baseline finetune 62/150 loss=0.44017 score=0.96307
+Ottawa baseline finetune 63/150 loss=0.42828 score=0.96348
+Ottawa baseline finetune 64/150 loss=0.46264 score=0.96363
+Ottawa baseline finetune 65/150 loss=0.43283 score=0.96365
+Ottawa baseline finetune 66/150 loss=0.42253 score=0.96314
+Ottawa baseline finetune 67/150 loss=0.41431 score=0.96312
+Ottawa baseline finetune 68/150 loss=0.42980 score=0.96310
+Ottawa baseline finetune 69/150 loss=0.41850 score=0.96322
+Ottawa baseline finetune 70/150 loss=0.41057 score=0.96354
+Ottawa baseline finetune 71/150 loss=0.40851 score=0.96397
+Ottawa baseline finetune 72/150 loss=0.41649 score=0.96370
+Ottawa baseline finetune 73/150 loss=0.41640 score=0.96338
+Ottawa baseline finetune 74/150 loss=0.41391 score=0.96340
+Ottawa baseline finetune 75/150 loss=0.42342 score=0.96348
+Ottawa baseline finetune 76/150 loss=0.40055 score=0.96379
+Ottawa baseline finetune 77/150 loss=0.39813 score=0.96390
+Ottawa baseline finetune 78/150 loss=0.40403 score=0.96379
+Ottawa baseline finetune 79/150 loss=0.39946 score=0.96379
+Ottawa baseline finetune 80/150 loss=0.39821 score=0.96363
+Ottawa baseline finetune 81/150 loss=0.39141 score=0.96373
+Ottawa baseline finetune 82/150 loss=0.41822 score=0.96377
+Ottawa baseline finetune 83/150 loss=0.39029 score=0.96411
+Ottawa baseline finetune 84/150 loss=0.41919 score=0.96396
+Ottawa baseline finetune 85/150 loss=0.39263 score=0.96420
+Ottawa baseline finetune 86/150 loss=0.38551 score=0.96414
+Ottawa baseline finetune 87/150 loss=0.40320 score=0.96395
+Ottawa baseline finetune 88/150 loss=0.38964 score=0.96422
+Ottawa baseline finetune 89/150 loss=0.38395 score=0.96430
+Ottawa baseline finetune 90/150 loss=0.38761 score=0.96418
+Ottawa baseline finetune 91/150 loss=0.38052 score=0.96435
+Ottawa baseline finetune 92/150 loss=0.38200 score=0.96457
+Ottawa baseline finetune 93/150 loss=0.38357 score=0.96499
+Ottawa baseline finetune 94/150 loss=0.40832 score=0.96499
+Ottawa baseline finetune 95/150 loss=0.42265 score=0.96467
+Ottawa baseline finetune 96/150 loss=0.37820 score=0.96447
+Ottawa baseline finetune 97/150 loss=0.38354 score=0.96469
+Ottawa baseline finetune 98/150 loss=0.38489 score=0.96429
+Ottawa baseline finetune 99/150 loss=0.40352 score=0.96464
+Ottawa baseline finetune 100/150 loss=0.40690 score=0.96448
+Ottawa baseline finetune 101/150 loss=0.37054 score=0.96447
+Ottawa baseline finetune 102/150 loss=0.37741 score=0.96453
+Ottawa baseline finetune 103/150 loss=0.36864 score=0.96468
+Ottawa baseline finetune 104/150 loss=0.36833 score=0.96476
+Ottawa baseline finetune 105/150 loss=0.37131 score=0.96471
+Ottawa baseline finetune 106/150 loss=0.36751 score=0.96480
+Ottawa baseline finetune 107/150 loss=0.39557 score=0.96489
+Ottawa baseline finetune 108/150 loss=0.36344 score=0.96474
+Ottawa baseline finetune 109/150 loss=0.36419 score=0.96449
+Ottawa baseline finetune 110/150 loss=0.39506 score=0.96434
+Ottawa baseline finetune 111/150 loss=0.36698 score=0.96430
+Ottawa baseline finetune 112/150 loss=0.36407 score=0.96425
+Ottawa baseline finetune 113/150 loss=0.36243 score=0.96427
+Ottawa baseline finetune 114/150 loss=0.36501 score=0.96443
+Ottawa baseline finetune 115/150 loss=0.36579 score=0.96447
+Ottawa baseline finetune 116/150 loss=0.37544 score=0.96455
+Ottawa baseline finetune 117/150 loss=0.36916 score=0.96455
+Ottawa baseline finetune 118/150 loss=0.36607 score=0.96449
+Ottawa baseline finetune 119/150 loss=0.36476 score=0.96453
+EARLY STOP: 25 stale epochs
+{
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "backbone_layout": "legacy",
+  "decoder": "multiscale",
+  "initialization": "scratch",
+  "pretrained": {
+    "path": null,
+    "loaded_tensors": 0,
+    "model_tensors": 209,
+    "coverage": 0.0
+  },
+  "protocol": "dense-spatial-macroblocks",
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 112,
+    "val": 24,
+    "test": 32
+  },
+  "imgsz": 192,
+  "batch": 64,
+  "eval_imgsz": 192,
+  "eval_batch": 64,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 150,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 94,
+  "threshold": 0.7000000000000002,
+  "metric": {
+    "precision": 0.8732338611449452,
+    "recall": 0.9518388210302708,
+    "f1": 0.9108436030999874,
+    "iou": 0.8362835729491703,
+    "oa": 0.9809638129340278,
+    "kappa": 0.9002100635955381
+  },
+  "params": 2346329,
+  "gflops": 1.177137648,
+  "latency_ms": 6.647456499437491,
+  "fps": 150.4334778399257,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_change_bs_20260904/ottawa/baseline_bs64/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Ottawa/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Ottawa ours finetune 1/150 loss=1.82807 score=0.32594
+Ottawa ours finetune 2/150 loss=1.50769 score=0.32594
+Ottawa ours finetune 3/150 loss=1.24162 score=0.75948
+Ottawa ours finetune 4/150 loss=1.06596 score=0.89712
+Ottawa ours finetune 5/150 loss=0.96853 score=0.91010
+Ottawa ours finetune 6/150 loss=0.89789 score=0.92624
+Ottawa ours finetune 7/150 loss=0.85703 score=0.93419
+Ottawa ours finetune 8/150 loss=0.83803 score=0.94024
+Ottawa ours finetune 9/150 loss=0.80815 score=0.94483
+Ottawa ours finetune 10/150 loss=0.80084 score=0.94749
+Ottawa ours finetune 11/150 loss=0.79400 score=0.94922
+Ottawa ours finetune 12/150 loss=0.78369 score=0.95049
+Ottawa ours finetune 13/150 loss=0.76827 score=0.95125
+Ottawa ours finetune 14/150 loss=0.75584 score=0.95278
+Ottawa ours finetune 15/150 loss=0.76013 score=0.95478
+Ottawa ours finetune 16/150 loss=0.74005 score=0.95742
+Ottawa ours finetune 17/150 loss=0.73686 score=0.95966
+Ottawa ours finetune 18/150 loss=0.71488 score=0.96110
+Ottawa ours finetune 19/150 loss=0.70622 score=0.96150
+Ottawa ours finetune 20/150 loss=0.70191 score=0.96141
+Ottawa ours finetune 21/150 loss=0.72741 score=0.96189
+Ottawa ours finetune 22/150 loss=0.69911 score=0.96155
+Ottawa ours finetune 23/150 loss=0.68064 score=0.96135
+Ottawa ours finetune 24/150 loss=0.69642 score=0.96108
+Ottawa ours finetune 25/150 loss=0.67264 score=0.96127
+Ottawa ours finetune 26/150 loss=0.66412 score=0.96164
+Ottawa ours finetune 27/150 loss=0.65530 score=0.96189
+Ottawa ours finetune 28/150 loss=0.64885 score=0.96215
+Ottawa ours finetune 29/150 loss=0.65111 score=0.96207
+Ottawa ours finetune 30/150 loss=0.63896 score=0.96228
+Ottawa ours finetune 31/150 loss=0.63589 score=0.96213
+Ottawa ours finetune 32/150 loss=0.62992 score=0.96226
+Ottawa ours finetune 33/150 loss=0.62459 score=0.96244
+Ottawa ours finetune 34/150 loss=0.62128 score=0.96251
+Ottawa ours finetune 35/150 loss=0.64373 score=0.96238
+Ottawa ours finetune 36/150 loss=0.60614 score=0.96250
+Ottawa ours finetune 37/150 loss=0.60338 score=0.96291
+Ottawa ours finetune 38/150 loss=0.62296 score=0.96299
+Ottawa ours finetune 39/150 loss=0.59662 score=0.96305
+Ottawa ours finetune 40/150 loss=0.60620 score=0.96306
+Ottawa ours finetune 41/150 loss=0.58440 score=0.96313
+Ottawa ours finetune 42/150 loss=0.59614 score=0.96296
+Ottawa ours finetune 43/150 loss=0.57861 score=0.96366
+Ottawa ours finetune 44/150 loss=0.57578 score=0.96346
+Ottawa ours finetune 45/150 loss=0.57149 score=0.96324
+Ottawa ours finetune 46/150 loss=0.56845 score=0.96291
+Ottawa ours finetune 47/150 loss=0.56366 score=0.96314
+Ottawa ours finetune 48/150 loss=0.56485 score=0.96349
+Ottawa ours finetune 49/150 loss=0.55789 score=0.96393
+Ottawa ours finetune 50/150 loss=0.55656 score=0.96413
+Ottawa ours finetune 51/150 loss=0.55203 score=0.96415
+Ottawa ours finetune 52/150 loss=0.55512 score=0.96441
+Ottawa ours finetune 53/150 loss=0.56005 score=0.96437
+Ottawa ours finetune 54/150 loss=0.54274 score=0.96442
+Ottawa ours finetune 55/150 loss=0.55182 score=0.96397
+Ottawa ours finetune 56/150 loss=0.54360 score=0.96396
+Ottawa ours finetune 57/150 loss=0.53800 score=0.96387
+Ottawa ours finetune 58/150 loss=0.52785 score=0.96418
+Ottawa ours finetune 59/150 loss=0.52984 score=0.96384
+Ottawa ours finetune 60/150 loss=0.53674 score=0.96395
+Ottawa ours finetune 61/150 loss=0.52459 score=0.96417
+Ottawa ours finetune 62/150 loss=0.54748 score=0.96402
+Ottawa ours finetune 63/150 loss=0.51925 score=0.96416
+Ottawa ours finetune 64/150 loss=0.51237 score=0.96389
+Ottawa ours finetune 65/150 loss=0.57956 score=0.96429
+Ottawa ours finetune 66/150 loss=0.52558 score=0.96441
+Ottawa ours finetune 67/150 loss=0.53351 score=0.96450
+Ottawa ours finetune 68/150 loss=0.50198 score=0.96444
+Ottawa ours finetune 69/150 loss=0.49954 score=0.96424
+Ottawa ours finetune 70/150 loss=0.50606 score=0.96406
+Ottawa ours finetune 71/150 loss=0.49700 score=0.96432
+Ottawa ours finetune 72/150 loss=0.50278 score=0.96455
+Ottawa ours finetune 73/150 loss=0.52033 score=0.96397
+Ottawa ours finetune 74/150 loss=0.49557 score=0.96376
+Ottawa ours finetune 75/150 loss=0.58549 score=0.96366
+Ottawa ours finetune 76/150 loss=0.49164 score=0.96312
+Ottawa ours finetune 77/150 loss=0.48318 score=0.96353
+Ottawa ours finetune 78/150 loss=0.48834 score=0.96397
+Ottawa ours finetune 79/150 loss=0.48754 score=0.96442
+Ottawa ours finetune 80/150 loss=0.47749 score=0.96449
+Ottawa ours finetune 81/150 loss=0.47738 score=0.96470
+Ottawa ours finetune 82/150 loss=0.47326 score=0.96450
+Ottawa ours finetune 83/150 loss=0.47166 score=0.96438
+Ottawa ours finetune 84/150 loss=0.47240 score=0.96430
+Ottawa ours finetune 85/150 loss=0.47534 score=0.96410
+Ottawa ours finetune 86/150 loss=0.46984 score=0.96405
+Ottawa ours finetune 87/150 loss=0.47908 score=0.96417
+Ottawa ours finetune 88/150 loss=0.47616 score=0.96426
+Ottawa ours finetune 89/150 loss=0.46682 score=0.96457
+Ottawa ours finetune 90/150 loss=0.46715 score=0.96476
+Ottawa ours finetune 91/150 loss=0.46831 score=0.96493
+Ottawa ours finetune 92/150 loss=0.46749 score=0.96464
+Ottawa ours finetune 93/150 loss=0.48545 score=0.96449
+Ottawa ours finetune 94/150 loss=0.46528 score=0.96445
+Ottawa ours finetune 95/150 loss=0.46873 score=0.96463
+Ottawa ours finetune 96/150 loss=0.45973 score=0.96494
+Ottawa ours finetune 97/150 loss=0.46669 score=0.96481
+Ottawa ours finetune 98/150 loss=0.47260 score=0.96474
+Ottawa ours finetune 99/150 loss=0.45281 score=0.96470
+Ottawa ours finetune 100/150 loss=0.52570 score=0.96451
+Ottawa ours finetune 101/150 loss=0.45199 score=0.96446
+Ottawa ours finetune 102/150 loss=0.45733 score=0.96446
+Ottawa ours finetune 103/150 loss=0.46826 score=0.96461
+Ottawa ours finetune 104/150 loss=0.46283 score=0.96467
+Ottawa ours finetune 105/150 loss=0.46433 score=0.96472
+Ottawa ours finetune 106/150 loss=0.47568 score=0.96496
+Ottawa ours finetune 107/150 loss=0.45661 score=0.96515
+Ottawa ours finetune 108/150 loss=0.44809 score=0.96489
+Ottawa ours finetune 109/150 loss=0.48992 score=0.96478
+Ottawa ours finetune 110/150 loss=0.44459 score=0.96460
+Ottawa ours finetune 111/150 loss=0.46110 score=0.96442
+Ottawa ours finetune 112/150 loss=0.47271 score=0.96460
+Ottawa ours finetune 113/150 loss=0.47339 score=0.96456
+Ottawa ours finetune 114/150 loss=0.44185 score=0.96452
+Ottawa ours finetune 115/150 loss=0.44462 score=0.96458
+Ottawa ours finetune 116/150 loss=0.45200 score=0.96470
+Ottawa ours finetune 117/150 loss=0.44229 score=0.96485
+Ottawa ours finetune 118/150 loss=0.46133 score=0.96473
+Ottawa ours finetune 119/150 loss=0.44311 score=0.96481
+Ottawa ours finetune 120/150 loss=0.44135 score=0.96481
+Ottawa ours finetune 121/150 loss=0.45088 score=0.96478
+Ottawa ours finetune 122/150 loss=0.46676 score=0.96487
+Ottawa ours finetune 123/150 loss=0.47847 score=0.96500
+Ottawa ours finetune 124/150 loss=0.44250 score=0.96474
+Ottawa ours finetune 125/150 loss=0.45095 score=0.96459
+Ottawa ours finetune 126/150 loss=0.45514 score=0.96461
+Ottawa ours finetune 127/150 loss=0.44115 score=0.96458
+Ottawa ours finetune 128/150 loss=0.43978 score=0.96454
+Ottawa ours finetune 129/150 loss=0.44070 score=0.96468
+Ottawa ours finetune 130/150 loss=0.43811 score=0.96471
+Ottawa ours finetune 131/150 loss=0.45027 score=0.96486
+Ottawa ours finetune 132/150 loss=0.43946 score=0.96474
+EARLY STOP: 25 stale epochs
+{
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "legacy",
+  "decoder": "multiscale",
+  "initialization": "scratch",
+  "pretrained": {
+    "path": null,
+    "loaded_tensors": 0,
+    "model_tensors": 200,
+    "coverage": 0.0
+  },
+  "protocol": "dense-spatial-macroblocks",
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 112,
+    "val": 24,
+    "test": 32
+  },
+  "imgsz": 192,
+  "batch": 64,
+  "eval_imgsz": 192,
+  "eval_batch": 64,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 150,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 107,
+  "threshold": 0.8000000000000002,
+  "metric": {
+    "precision": 0.8976353699374486,
+    "recall": 0.9431011019649496,
+    "f1": 0.919806739827134,
+    "iou": 0.851520532242476,
+    "oa": 0.9832000732421875,
+    "kappa": 0.9104303569690071
+  },
+  "params": 2138147,
+  "gflops": 1.136191824,
+  "latency_ms": 6.628784566419199,
+  "fps": 150.85721823966134,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_change_bs_20260904/ottawa/ours_bs64/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Ottawa/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 1128, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 1124, in main
+    run(parser.parse_args())
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 829, in run
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/River Yellow_River/manifest.json'

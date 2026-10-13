@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py", line 590, in <module>
+    execute(parse_args())
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py", line 286, in execute
+    identity = initialize_assigned_gpu(args)
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py", line 66, in initialize_assigned_gpu
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cuda_uuid_compat.py'

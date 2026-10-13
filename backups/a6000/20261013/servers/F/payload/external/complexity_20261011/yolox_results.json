@@ -1,0 +1,74 @@
+[
+  {
+    "method": "yolox-nano",
+    "params": 896754,
+    "flops_g": 2.5486336,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "classes": 1
+  },
+  {
+    "method": "yolox-tiny",
+    "params": 5032866,
+    "flops_g": 15.2311296,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "classes": 1
+  },
+  {
+    "method": "yolox-s",
+    "params": 8937682,
+    "flops_g": 26.7569152,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "classes": 1
+  },
+  {
+    "method": "yolox-m",
+    "params": 25280754,
+    "flops_g": 73.7258496,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "classes": 1
+  },
+  {
+    "method": "yolox-l",
+    "params": 54147986,
+    "flops_g": 155.6713472,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "classes": 1
+  },
+  {
+    "method": "yolox-x",
+    "params": 98995378,
+    "flops_g": 282.030592,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "classes": 1
+  }
+]

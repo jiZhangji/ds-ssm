@@ -1,0 +1,31 @@
+{
+  "pid": 192197,
+  "hostname": "powerleader-a6000-f",
+  "argv": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/train_ssdd_v2.py",
+    "--source-root",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/frozen_code",
+    "--dataset-root",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/data/SSDD",
+    "--output",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/ssdd_full_seed0",
+    "--gpu-uuid",
+    "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40",
+    "--legacy-gpu-lock",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/locks/GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40.lock",
+    "--variant",
+    "full",
+    "--batch",
+    "4"
+  ],
+  "gpu_uuid": "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40",
+  "status_at_launch": "started",
+  "exit_code_at_launch": null,
+  "proc_start_ticks": "33044304",
+  "script_sha256": "89543c9855575c59a707ea1d4d119ed3e367a6b0ae4ab87c29f2cb66aabf8f63",
+  "log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/ssdd_full_seed0.log",
+  "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/ssdd_full_seed0",
+  "time_unix": 1791773324.7878969
+}

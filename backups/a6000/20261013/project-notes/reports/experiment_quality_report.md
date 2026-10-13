@@ -1,0 +1,163 @@
+# Experiment Quality Report
+
+- Total indexed metadata experiments: `172`.
+- Valuable complete experiments: `104`.
+- Interrupted/partial experiments: `68`.
+
+## Interrupted Experiments
+
+| Rank | Server | Experiment | Score | Complete | Dup group |
+|---:|---|---|---:|---|---:|
+| 36 | `server_3090_b` | `sar_aircraft` | `0.69926` | `False` | `1` |
+| 62 | `server_1080ti` | `ssdd` | `0.68208` | `False` | `1` |
+| 63 | `server_3090_a` | `ssdd` | `0.68208` | `False` | `1` |
+| 67 | `server_1080ti` | `ssdd_eval` | `0.67075` | `False` | `6` |
+| 68 | `server_3090_a` | `ssdd_eval` | `0.67075` | `False` | `6` |
+| 69 | `server_3090_b` | `ssdd_eval` | `0.67075` | `False` | `6` |
+| 95 | `server_1080ti` | `debug` | `0.12284` | `False` | `3` |
+| 96 | `server_3090_a` | `debug` | `0.12284` | `False` | `3` |
+| 97 | `server_3090_b` | `debug` | `0.12284` | `False` | `3` |
+| 104 | `server_1080ti` | `sar_aircraft` | `0.00304` | `False` | `1` |
+| 110 | `server_3090_a` | `sar_aircraft` | `5e-05` | `False` | `1` |
+| 114 | `server_3090_b` | `ssdd` | `2e-05` | `False` | `1` |
+| 117 | `server_1080ti` | `debug/test_ds_ssm_backbone` | `` | `False` | `3` |
+| 118 | `server_1080ti` | `debug/test_ds_ssm_backbone_cuda` | `` | `False` | `3` |
+| 119 | `server_1080ti` | `sar_aircraft/mambayolo_t_sar_aircraft_backbone_ds-ssm_300e_16bs_1024_ex7ssdd_ex1` | `` | `False` | `1` |
+| 120 | `server_1080ti` | `sar_aircraft/mambayolo_t_sar_aircraft_backbone_ds-ssm_300e_32bs_1024_ex7ssdd_ex1_2026:17:12` | `` | `False` | `1` |
+| 121 | `server_1080ti` | `ssdd/ddp_mambayolo_s_ssdd_backbone_ds-ssm_300e_16bsx2-ex11-ex23-gemini-20260602:15:402` | `` | `False` | `1` |
+| 122 | `server_1080ti` | `ssdd/ddp_mambayolo_s_ssdd_backbone_ds-ssm_300e_4bsx1-ex11-ex23-gemini-20260602:15:40` | `` | `False` | `1` |
+| 123 | `server_1080ti` | `ssdd/ddp_mambayolo_s_ssdd_backbone_ds-ssm_300e_4bsx1-ex11-ex23-gemini-20260602:15:402` | `` | `False` | `1` |
+| 124 | `server_1080ti` | `ssdd/ddp_mambayolo_s_ssdd_backbone_ds-ssm_300e_8bsx2-ex11-ex23-gemini-20260602:15:40` | `` | `False` | `1` |
+| 125 | `server_1080ti` | `ssdd/ddp_PFIM_mambayolo_s_ssdd_backbone_ds-ssm_300e_12bsx2-ex24-gemini-20260603:00:25` | `` | `False` | `1` |
+| 126 | `server_1080ti` | `ssdd/ddp_PFIM_mambayolo_s_ssdd_backbone_ds-ssm_300e_16bsx2-ex24-gemini-20260603:00:25` | `` | `False` | `1` |
+| 127 | `server_1080ti` | `ssdd/ddp_PFIM_mambayolo_s_ssdd_backbone_ds-ssm_300e_16bsx2-ex24-gemini-20260603:00:252` | `` | `False` | `1` |
+| 128 | `server_1080ti` | `ssdd/ddp_PFIM_mambayolo_s_ssdd_backbone_ds-ssm_300e_4bsx2-ex24-gemini-20260603:00:25` | `` | `False` | `1` |
+| 129 | `server_1080ti` | `ssdd/ddp_PFIM_mambayolo_s_ssdd_backbone_ds-ssm_300e_8bsx2-ex24-gemini-20260603:00:25` | `` | `False` | `1` |
+| 130 | `server_1080ti` | `ssdd/ddp_PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_32bsx2-ex25-gemini-20260603:10:35` | `` | `False` | `1` |
+| 131 | `server_1080ti` | `ssdd/ddp_PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_32bsx2-ex25-gemini-20260603:10:352` | `` | `False` | `1` |
+| 132 | `server_1080ti` | `ssdd/ddp_PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_32bsx2-ex25-gemini-20260603:10:353` | `` | `False` | `1` |
+| 133 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_16bsx2-ex11-ex23-gemini-20260602:11:10` | `` | `False` | `1` |
+| 134 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_16bsx2-ex11-ex23-gemini-20260602:11:102` | `` | `False` | `1` |
+| 135 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_4bsx1-ex11-ex23-gemini-20260602:11:40` | `` | `False` | `1` |
+| 136 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_4bsx1-ex11-ex23-gemini-20260602:11:402` | `` | `False` | `1` |
+| 137 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_4bsx1-ex11-ex23-gemini-20260602:11:403` | `` | `False` | `1` |
+| 138 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_4bsx2-ex11-ex23-gemini-20260602:11:40` | `` | `False` | `1` |
+| 139 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_6bsx1-ex11-ex23-gemini-20260602:11:40` | `` | `False` | `1` |
+| 140 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_6bsx2-ex11-ex23-gemini-20260602:11:40` | `` | `False` | `1` |
+| 141 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_6bsx2-ex11-ex23-gemini-20260602:11:402` | `` | `False` | `1` |
+| 142 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_6bsx2-ex11-ex23-gemini-20260602:11:403` | `` | `False` | `1` |
+| 143 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_6bsx2-ex23_fast` | `` | `False` | `1` |
+| 144 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_8bsx2-ex11-ex23-gemini-20260602:11:40` | `` | `False` | `1` |
+| 145 | `server_1080ti` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_8bsx2-ex11-ex23-gemini-20260602:11:402` | `` | `False` | `1` |
+| 146 | `server_1080ti` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex8-gemini-20260521:10:12` | `` | `False` | `3` |
+| 147 | `server_1080ti` | `ssdd/PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_48bs-ex29-gemini-20260604:11:25` | `` | `False` | `1` |
+| 148 | `server_1080ti` | `ssdd_test` | `` | `False` | `6` |
+| 149 | `server_1080ti` | `ssdd_test/mambayolo_t_ssdd_backbone_ds-ssm_300e_16bs` | `` | `False` | `6` |
+| 150 | `server_3090_a` | `debug/test_ds_ssm_backbone` | `` | `False` | `3` |
+| 151 | `server_3090_a` | `debug/test_ds_ssm_backbone_cuda` | `` | `False` | `3` |
+| 152 | `server_3090_a` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_32bs-ex23-gemini-20260529:17:51` | `` | `False` | `2` |
+| 153 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex17-gemini-20260528:18:21` | `` | `False` | `2` |
+| 154 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex18-gemini-20260528:22:00` | `` | `False` | `2` |
+| 155 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex18-gemini-20260528:22:002` | `` | `False` | `2` |
+| 156 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex8-gemini-20260521:10:12` | `` | `False` | `3` |
+| 157 | `server_3090_a` | `ssdd_test` | `` | `False` | `6` |
+| 158 | `server_3090_a` | `ssdd_test/mambayolo_t_ssdd_backbone_ds-ssm_300e_16bs` | `` | `False` | `6` |
+| 159 | `server_3090_b` | `debug/test_ds_ssm_backbone` | `` | `False` | `3` |
+| 160 | `server_3090_b` | `debug/test_ds_ssm_backbone_cuda` | `` | `False` | `3` |
+| 161 | `server_3090_b` | `ssdd/mambayolo_s_ssdd_backbone_ds-ssm_300e_32bs-ex23-gemini-20260529:17:51` | `` | `False` | `2` |
+| 162 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex17-gemini-20260528:18:21` | `` | `False` | `2` |
+| 163 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex18-gemini-20260528:22:00` | `` | `False` | `2` |
+| 164 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex18-gemini-20260528:22:002` | `` | `False` | `2` |
+| 165 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex8-gemini-20260521:10:12` | `` | `False` | `3` |
+| 166 | `server_3090_b` | `ssdd/PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_24bs-ex24-gemini-20260603:00:15` | `` | `False` | `1` |
+| 167 | `server_3090_b` | `ssdd/PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_28bs-ex24-gemini-20260603:00:15` | `` | `False` | `1` |
+| 168 | `server_3090_b` | `ssdd/PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex24-gemini-20260603:00:15` | `` | `False` | `1` |
+| 169 | `server_3090_b` | `ssdd/PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex24-gemini-20260603:10:15` | `` | `False` | `1` |
+| 170 | `server_3090_b` | `ssdd/PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_48bs-ex29-gemini-20260604:11:252` | `` | `False` | `1` |
+| 171 | `server_3090_b` | `ssdd_test` | `` | `False` | `6` |
+| 172 | `server_3090_b` | `ssdd_test/mambayolo_t_ssdd_backbone_ds-ssm_300e_16bs` | `` | `False` | `6` |
+
+## Recommended Retain Experiments
+
+| Rank | Server | Experiment | Score | Complete | Dup group |
+|---:|---|---|---:|---|---:|
+| 1 | `server_1080ti` | `ssdd/ddp_mambayolo_s_ssdd_backbone_ds-ssm_300e_16bsx2-ex11-ex23-gemini-20260602:15:40` | `0.71534` | `True` | `1` |
+| 2 | `server_1080ti` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex2-gemini-20260520:0:18` | `0.71214` | `True` | `3` |
+| 3 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex2-gemini-20260520:0:18` | `0.71214` | `True` | `3` |
+| 4 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex2-gemini-20260520:0:18` | `0.71214` | `True` | `3` |
+| 5 | `server_1080ti` | `ssdd/mambayolo_t_ssdd_300e_16bs` | `0.71082` | `True` | `3` |
+| 6 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_300e_16bs` | `0.71082` | `True` | `3` |
+| 7 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_300e_16bs` | `0.71082` | `True` | `3` |
+| 8 | `server_1080ti` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex8-gemini-20260521:10:122` | `0.7097` | `True` | `3` |
+| 9 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex8-gemini-20260521:10:122` | `0.7097` | `True` | `3` |
+| 10 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex8-gemini-20260521:10:122` | `0.7097` | `True` | `3` |
+| 11 | `server_3090_b` | `ssdd/PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex27-gemini-20260603:17:45` | `0.70964` | `True` | `1` |
+| 12 | `server_3090_b` | `ssdd/PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex24-gemini-20260603:11:15` | `0.70904` | `True` | `1` |
+| 13 | `server_3090_b` | `ssdd/PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_36bs-ex29-gemini-20260604:14:55` | `0.70893` | `True` | `1` |
+| 14 | `server_3090_a` | `sar_aircraft/mambayolo_t_sar_aircraft_backbone_ds-ssm_300e_16bs_1024_ex11ssdd_ex2_202606012307` | `0.70824` | `True` | `2` |
+| 15 | `server_1080ti` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex7-gemini-20260521:00:07` | `0.7068` | `True` | `3` |
+| 16 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex7-gemini-20260521:00:07` | `0.7068` | `True` | `3` |
+| 17 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex7-gemini-20260521:00:07` | `0.7068` | `True` | `3` |
+| 18 | `server_1080ti` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex4-gemini-20260520:14:42` | `0.70556` | `True` | `3` |
+| 19 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex4-gemini-20260520:14:42` | `0.70556` | `True` | `3` |
+| 20 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex4-gemini-20260520:14:42` | `0.70556` | `True` | `3` |
+| 21 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex11-gemini-20260526:14:13` | `0.70509` | `True` | `2` |
+| 22 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex11-gemini-20260526:14:13` | `0.70509` | `True` | `2` |
+| 23 | `server_1080ti` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex3-gemini-20260520:11:12` | `0.70229` | `True` | `3` |
+| 24 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex3-gemini-20260520:11:12` | `0.70229` | `True` | `3` |
+| 25 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex3-gemini-20260520:11:12` | `0.70229` | `True` | `3` |
+| 26 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex21-gemini-20260529:12:30` | `0.70213` | `True` | `2` |
+| 27 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex21-gemini-20260529:12:30` | `0.70213` | `True` | `2` |
+| 28 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex23-gemini-20260529:18:13` | `0.70109` | `True` | `2` |
+| 29 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex23-gemini-20260529:18:13` | `0.70109` | `True` | `2` |
+| 30 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex19-gemini-20260529:10:052` | `0.70083` | `True` | `2` |
+| 31 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex19-gemini-20260529:10:052` | `0.70083` | `True` | `2` |
+| 32 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex22-gemini-20260529:15:05` | `0.69944` | `True` | `2` |
+| 33 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex22-gemini-20260529:15:05` | `0.69944` | `True` | `2` |
+| 34 | `server_3090_a` | `sar_aircraft/mambayolo_t_sar_aircraft_backbone_ds-ssm_300e_8bs_1024_ex7ssdd_ex1_202605231649` | `0.69926` | `True` | `2` |
+| 35 | `server_3090_b` | `sar_aircraft/mambayolo_t_sar_aircraft_backbone_ds-ssm_300e_8bs_1024_ex7ssdd_ex1_202605231649` | `0.69926` | `True` | `2` |
+| 37 | `server_1080ti` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex6-gemini-20260520:21:42` | `0.69858` | `True` | `3` |
+| 38 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex6-gemini-20260520:21:42` | `0.69858` | `True` | `3` |
+| 39 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex6-gemini-20260520:21:42` | `0.69858` | `True` | `3` |
+| 40 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex16-gemini-20260528:16:14` | `0.69803` | `True` | `2` |
+| 41 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex16-gemini-20260528:16:14` | `0.69803` | `True` | `2` |
+| 42 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex12-gemini-20260526:16:04` | `0.69791` | `True` | `2` |
+| 43 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex12-gemini-20260526:16:04` | `0.69791` | `True` | `2` |
+| 44 | `server_1080ti` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex5-gemini-20260520:17:58` | `0.69766` | `True` | `3` |
+| 45 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex5-gemini-20260520:17:58` | `0.69766` | `True` | `3` |
+| 46 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex5-gemini-20260520:17:58` | `0.69766` | `True` | `3` |
+| 47 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex15-gemini-20260528:13:52` | `0.69718` | `True` | `2` |
+| 48 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex15-gemini-20260528:13:52` | `0.69718` | `True` | `2` |
+| 49 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex14-gemini-20260528:11:24` | `0.6964` | `True` | `2` |
+| 50 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex14-gemini-20260528:11:24` | `0.6964` | `True` | `2` |
+| 51 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex18-gemini-20260528:22:003` | `0.69517` | `True` | `2` |
+| 52 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex18-gemini-20260528:22:003` | `0.69517` | `True` | `2` |
+| 53 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex19-gemini-20260529:00:29` | `0.69355` | `True` | `2` |
+| 54 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex19-gemini-20260529:00:29` | `0.69355` | `True` | `2` |
+| 55 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex17-gemini-20260528:18:212` | `0.68706` | `True` | `2` |
+| 56 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex17-gemini-20260528:18:212` | `0.68706` | `True` | `2` |
+| 57 | `server_1080ti` | `ssdd/ddp_PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_32bsx2-ex26-gemini-20260603:11:20` | `0.6865` | `True` | `1` |
+| 58 | `server_1080ti` | `ssdd/ddp_PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_32bsx2-ex28-gemini-20260603:17:50` | `0.68367` | `True` | `1` |
+| 59 | `server_1080ti` | `ssdd/mambayolo_t_ssdd` | `0.68208` | `True` | `3` |
+| 60 | `server_3090_a` | `ssdd/mambayolo_t_ssdd` | `0.68208` | `True` | `3` |
+| 61 | `server_3090_b` | `ssdd/mambayolo_t_ssdd` | `0.68208` | `True` | `3` |
+| 64 | `server_1080ti` | `ssdd_eval/mambayolo_t_ssdd_best` | `0.67075` | `True` | `6` |
+| 65 | `server_3090_a` | `ssdd_eval/mambayolo_t_ssdd_best` | `0.67075` | `True` | `6` |
+| 66 | `server_3090_b` | `ssdd_eval/mambayolo_t_ssdd_best` | `0.67075` | `True` | `6` |
+| 70 | `server_3090_b` | `sar_aircraft/mambayolo_t_sar_aircraft_backbone_ds-ssm_300e_16bs_1024_ex11ssdd_ex2_202606012307` | `0.66911` | `True` | `2` |
+| 71 | `server_1080ti` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex9-gemini-20260521:13:39` | `0.64739` | `True` | `3` |
+| 72 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex9-gemini-20260521:13:39` | `0.64739` | `True` | `3` |
+| 73 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex9-gemini-20260521:13:39` | `0.64739` | `True` | `3` |
+| 74 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex13-gemini-20260527:23:11` | `0.63183` | `True` | `2` |
+| 75 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex13-gemini-20260527:23:11` | `0.63183` | `True` | `2` |
+| 76 | `server_3090_b` | `ssdd/PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_42bs-ex29-gemini-20260604:14:55` | `0.61909` | `True` | `1` |
+| 77 | `server_3090_b` | `ssdd/PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_40bs-ex29-gemini-20260604:14:55` | `0.60665` | `True` | `1` |
+| 78 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex10-gemini-20260526:10:25` | `0.56801` | `True` | `2` |
+| 79 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_32bs-ex10-gemini-20260526:10:25` | `0.56801` | `True` | `2` |
+| 80 | `server_3090_b` | `ssdd/PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_44bs-ex29-gemini-20260604:11:25` | `0.54875` | `True` | `1` |
+| 81 | `server_1080ti` | `ssdd/mambayolo_t_ssdd_300e_16bs_tttt` | `0.5129` | `True` | `3` |
+| 82 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_300e_16bs_tttt` | `0.5129` | `True` | `3` |
+| 83 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_300e_16bs_tttt` | `0.5129` | `True` | `3` |
+| 84 | `server_1080ti` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_16bs-ex1` | `0.47346` | `True` | `3` |
+| 85 | `server_3090_a` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_16bs-ex1` | `0.47346` | `True` | `3` |
+| 86 | `server_3090_b` | `ssdd/mambayolo_t_ssdd_backbone_ds-ssm_300e_16bs-ex1` | `0.47346` | `True` | `3` |

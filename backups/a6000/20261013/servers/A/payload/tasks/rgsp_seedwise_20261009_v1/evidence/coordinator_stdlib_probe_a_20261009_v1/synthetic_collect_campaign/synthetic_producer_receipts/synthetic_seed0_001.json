@@ -1,0 +1,22 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_runs/synthetic_seed0_001/synthetic_result.json",
+      "sha256": "4003e9454fd55a7b4bce43ec549ad61455e099b535e2c1120cedd131eeaa7f81"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_runs/synthetic_seed0_001/synthetic_second_result.json",
+      "sha256": "6f50d8009282ac3999c0ff48b37c738965d531d432587533a04914310b3cbbe9"
+    }
+  ],
+  "details": {
+    "synthetic_fixture_only": true
+  },
+  "finished_utc": "2026-10-09T00:00:00+00:00",
+  "plan_sha256": "266f8526b7c8589c21fc715f62df84a7eeb60f94255d1ef32fa6a64d60ceed34",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "synthetic_seed0_001",
+  "trial_sha256": "3a48f816b279663d5eb1df653e461440d0109eb5dd831c522a85167a41b9262b"
+}

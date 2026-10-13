@@ -1,0 +1,259 @@
+{
+  "time": "2026-10-13 10:23:30 +0800",
+  "commit": "537639c406d5d37e52ba75fa433de52db7d1d483",
+  "classes": {
+    "A220": 464,
+    "A320321": 510,
+    "A330": 512,
+    "ARJ21": 514,
+    "Boeing737": 528,
+    "Boeing787": 504
+  },
+  "total": 3032,
+  "decode_errors": [],
+  "cross_class_groups": 20,
+  "conflict_images": 40,
+  "conflicts": [
+    [
+      {
+        "path": "images/A220/083.jpg",
+        "class": "A220",
+        "file_sha256": "a33eff5e17bc247c5dc257a2160622bfcf63a6c63a7377d91b44b1fad5bdb0e6"
+      },
+      {
+        "path": "images/A320321/410.jpg",
+        "class": "A320321",
+        "file_sha256": "a33eff5e17bc247c5dc257a2160622bfcf63a6c63a7377d91b44b1fad5bdb0e6"
+      }
+    ],
+    [
+      {
+        "path": "images/A220/249.jpg",
+        "class": "A220",
+        "file_sha256": "a7712f6179f4f9f6e6fcfcbaf155d861f77fb90baef993aed8441c51fe67bfac"
+      },
+      {
+        "path": "images/A320321/143.jpg",
+        "class": "A320321",
+        "file_sha256": "a7712f6179f4f9f6e6fcfcbaf155d861f77fb90baef993aed8441c51fe67bfac"
+      }
+    ],
+    [
+      {
+        "path": "images/A220/357.jpg",
+        "class": "A220",
+        "file_sha256": "125da6dbfd86088893400a05cf625cd4e50a61c4f780f41abae98af602da9925"
+      },
+      {
+        "path": "images/A320321/176.jpg",
+        "class": "A320321",
+        "file_sha256": "125da6dbfd86088893400a05cf625cd4e50a61c4f780f41abae98af602da9925"
+      }
+    ],
+    [
+      {
+        "path": "images/A220/426.jpg",
+        "class": "A220",
+        "file_sha256": "e3ce11b6bbefe40d3a379de5ac566487d85c1f75265f943315c4fae9c680e295"
+      },
+      {
+        "path": "images/A320321/316.jpg",
+        "class": "A320321",
+        "file_sha256": "e3ce11b6bbefe40d3a379de5ac566487d85c1f75265f943315c4fae9c680e295"
+      }
+    ],
+    [
+      {
+        "path": "images/A320321/014.jpg",
+        "class": "A320321",
+        "file_sha256": "fda930b96c47610e4cddf6d7ada95715790dba4179d0dde04a33a5326042e5a5"
+      },
+      {
+        "path": "images/ARJ21/165.jpg",
+        "class": "ARJ21",
+        "file_sha256": "fda930b96c47610e4cddf6d7ada95715790dba4179d0dde04a33a5326042e5a5"
+      }
+    ],
+    [
+      {
+        "path": "images/A320321/135.jpg",
+        "class": "A320321",
+        "file_sha256": "5a00c4954b822a4c09003b980566756b894fd34bf42a21cf853ecc737e0eb3c3"
+      },
+      {
+        "path": "images/Boeing787/473.jpg",
+        "class": "Boeing787",
+        "file_sha256": "5a00c4954b822a4c09003b980566756b894fd34bf42a21cf853ecc737e0eb3c3"
+      }
+    ],
+    [
+      {
+        "path": "images/A320321/326.jpg",
+        "class": "A320321",
+        "file_sha256": "af638791d71937478a848f40899e12ac86ee925e1e6c449796b2d0d14acb4050"
+      },
+      {
+        "path": "images/Boeing787/379.jpg",
+        "class": "Boeing787",
+        "file_sha256": "af638791d71937478a848f40899e12ac86ee925e1e6c449796b2d0d14acb4050"
+      }
+    ],
+    [
+      {
+        "path": "images/A320321/354.jpg",
+        "class": "A320321",
+        "file_sha256": "c67e3ba32e7614083c0f22e343908796df6bc9bfd713f572643bed37447bc57f"
+      },
+      {
+        "path": "images/Boeing787/272.jpg",
+        "class": "Boeing787",
+        "file_sha256": "c67e3ba32e7614083c0f22e343908796df6bc9bfd713f572643bed37447bc57f"
+      }
+    ],
+    [
+      {
+        "path": "images/A320321/373.jpg",
+        "class": "A320321",
+        "file_sha256": "a8f5af39e2914a4103196af7c443f9fc2de8246eea444560de7c905fbd9150a3"
+      },
+      {
+        "path": "images/Boeing787/485.jpg",
+        "class": "Boeing787",
+        "file_sha256": "a8f5af39e2914a4103196af7c443f9fc2de8246eea444560de7c905fbd9150a3"
+      }
+    ],
+    [
+      {
+        "path": "images/A320321/375.jpg",
+        "class": "A320321",
+        "file_sha256": "50a388ce85fc188dd0c4cf3a77bb2a3bc73f28407f5c809dc2499c71a677df67"
+      },
+      {
+        "path": "images/Boeing787/455.jpg",
+        "class": "Boeing787",
+        "file_sha256": "50a388ce85fc188dd0c4cf3a77bb2a3bc73f28407f5c809dc2499c71a677df67"
+      }
+    ],
+    [
+      {
+        "path": "images/A320321/391.jpg",
+        "class": "A320321",
+        "file_sha256": "9d72f19b500d919c6892f3674fc9a16bd5ab808fb5e9c70d1641af818d7c5bc7"
+      },
+      {
+        "path": "images/A330/245.jpg",
+        "class": "A330",
+        "file_sha256": "9d72f19b500d919c6892f3674fc9a16bd5ab808fb5e9c70d1641af818d7c5bc7"
+      }
+    ],
+    [
+      {
+        "path": "images/A320321/396.jpg",
+        "class": "A320321",
+        "file_sha256": "dbea40d9c8016f6face7f53ad815e8f9c16fe5f0565e83d1f66ab94be4c682ae"
+      },
+      {
+        "path": "images/Boeing787/079.jpg",
+        "class": "Boeing787",
+        "file_sha256": "dbea40d9c8016f6face7f53ad815e8f9c16fe5f0565e83d1f66ab94be4c682ae"
+      }
+    ],
+    [
+      {
+        "path": "images/A330/005.jpg",
+        "class": "A330",
+        "file_sha256": "6dbcb43ca1ed1bb0b0ff92da4079c93e9c2a101aba7c75892d4f88b965905742"
+      },
+      {
+        "path": "images/Boeing787/075.jpg",
+        "class": "Boeing787",
+        "file_sha256": "6dbcb43ca1ed1bb0b0ff92da4079c93e9c2a101aba7c75892d4f88b965905742"
+      }
+    ],
+    [
+      {
+        "path": "images/A330/021.jpg",
+        "class": "A330",
+        "file_sha256": "dcf97f666ac95f6bb4b8512ee12e854fb8cbf69a99037481fff73390950d69a3"
+      },
+      {
+        "path": "images/Boeing787/322.jpg",
+        "class": "Boeing787",
+        "file_sha256": "dcf97f666ac95f6bb4b8512ee12e854fb8cbf69a99037481fff73390950d69a3"
+      }
+    ],
+    [
+      {
+        "path": "images/A330/119.jpg",
+        "class": "A330",
+        "file_sha256": "b6dde36770d09384ec349a42b0de2f3c65546b215c9274ff363592254de9f18c"
+      },
+      {
+        "path": "images/Boeing787/068.jpg",
+        "class": "Boeing787",
+        "file_sha256": "b6dde36770d09384ec349a42b0de2f3c65546b215c9274ff363592254de9f18c"
+      }
+    ],
+    [
+      {
+        "path": "images/A330/186.jpg",
+        "class": "A330",
+        "file_sha256": "eecf0584cbff0ba0b1ed6ab76b2bb4a169827dec00aa55fe77ca2821e6dc3ce0"
+      },
+      {
+        "path": "images/Boeing787/021.jpg",
+        "class": "Boeing787",
+        "file_sha256": "eecf0584cbff0ba0b1ed6ab76b2bb4a169827dec00aa55fe77ca2821e6dc3ce0"
+      }
+    ],
+    [
+      {
+        "path": "images/A330/197.jpg",
+        "class": "A330",
+        "file_sha256": "8e14577f4a7136439da38bfca80491012e4983d3f3957c125e7666501a6d45c1"
+      },
+      {
+        "path": "images/Boeing787/336.jpg",
+        "class": "Boeing787",
+        "file_sha256": "8e14577f4a7136439da38bfca80491012e4983d3f3957c125e7666501a6d45c1"
+      }
+    ],
+    [
+      {
+        "path": "images/A330/218.jpg",
+        "class": "A330",
+        "file_sha256": "9059221a9d7e73c801b9040c036e8a17bb2524ea068d83ea846bfc7598ea2623"
+      },
+      {
+        "path": "images/Boeing787/295.jpg",
+        "class": "Boeing787",
+        "file_sha256": "9059221a9d7e73c801b9040c036e8a17bb2524ea068d83ea846bfc7598ea2623"
+      }
+    ],
+    [
+      {
+        "path": "images/A330/359.jpg",
+        "class": "A330",
+        "file_sha256": "218477ab3e06ca5f4d5b149b5d6746cd99b8187fcf5cf50af4f3d982f63affac"
+      },
+      {
+        "path": "images/Boeing787/311.jpg",
+        "class": "Boeing787",
+        "file_sha256": "218477ab3e06ca5f4d5b149b5d6746cd99b8187fcf5cf50af4f3d982f63affac"
+      }
+    ],
+    [
+      {
+        "path": "images/A330/400.jpg",
+        "class": "A330",
+        "file_sha256": "94dd685c613dd8b6b4ca3c429090b5287b103edf5fbe90658487801dc9dd434f"
+      },
+      {
+        "path": "images/Boeing787/313.jpg",
+        "class": "Boeing787",
+        "file_sha256": "94dd685c613dd8b6b4ca3c429090b5287b103edf5fbe90658487801dc9dd434f"
+      }
+    ]
+  ],
+  "source_modified": false
+}

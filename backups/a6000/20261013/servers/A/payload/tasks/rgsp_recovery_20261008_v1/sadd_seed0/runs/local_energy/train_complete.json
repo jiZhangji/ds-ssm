@@ -1,0 +1,26 @@
+{
+  "finished_utc": "2026-10-08T20:09:55.245669+00:00",
+  "last_epoch_observed": 168,
+  "smoke_only": false,
+  "best_sha256": "f223bbba1023545ee7b0b06ddd0c851a529dd46695f2d84e7b5e59b4ee3a973f",
+  "reloaded_controls": [
+    {
+      "name": "model.3",
+      "control": "local_energy",
+      "lambda_s": 0.52099609375,
+      "alpha": 0.489990234375,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.0999755859375,
+      "buffer_scalars": [
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "min_retain": 0.5,
+      "input_path": false,
+      "delta_path": false,
+      "fixed_importance": null
+    }
+  ]
+}

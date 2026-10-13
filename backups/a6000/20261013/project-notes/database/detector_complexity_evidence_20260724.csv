@@ -1,0 +1,16 @@
+method,class_setting,params_total_M,params_trainable_M,GFLOPs_640_ultralytics_equivalent,fvcore_raw_Gops_640,evidence,source_commit_or_doi,configuration,status
+Faster R-CNN,1,41.295061,41.072661,150.343158,75.171579,server-measured,02b5c4e295e990042a714712c21dc79b731e8833,Detectron2 canonical faster_rcnn_R_50_FPN_3x.yaml,measured
+RetinaNet,1,36.276717,36.054317,159.341683,79.670842,server-measured,02b5c4e295e990042a714712c21dc79b731e8833,Detectron2 canonical retinanet_R_50_FPN_3x.yaml,measured
+DiffusionDet,1,110.551518,110.329118,204.262993,102.131496,server-measured,1efb36d4b0b721f2d509bc72656235a94d73ab02,Official R50-FPN 500 proposals one sampling step,measured
+DiffusionDet,7,110.560770,110.338370,204.272209,102.136104,server-measured,1efb36d4b0b721f2d509bc72656235a94d73ab02,Official R50-FPN 500 proposals one sampling step,measured
+ConsistencyDet,1,110.551518,110.329118,3743.693988,1871.846994,server-measured,0f6e44a260f70f10c7632b9da56cb755bffe2cc8,Official R50-FPN 500 proposals current forward executes 40 head passes,measured-with-device-only-patch
+ConsistencyDet,7,110.560770,110.338370,3744.062628,1872.031314,server-measured,0f6e44a260f70f10c7632b9da56cb755bffe2cc8,Official R50-FPN 500 proposals current forward executes 40 head passes,measured-with-device-only-patch
+DiffDet4SAR,1,111.141342,110.918942,204.787281,102.393640,server-measured,0baf842ab7d33959792a7ed7b58f8cebc6a8f175,Official R50-FPN 500 proposals with explicit malformed-YAML settings applied,measured-with-config-repair
+DiffDet4SAR,7,111.150594,110.928194,204.796497,102.398248,server-measured,0baf842ab7d33959792a7ed7b58f8cebc6a8f175,Official R50-FPN 500 proposals with explicit malformed-YAML settings applied,measured-with-config-repair
+Improved FCOS,1,40.600000,NR,NR,NR,author-reported,10.1109/JSTARS.2022.3213583,Final all-module model in original Table I; FLOPs not reported,partially-reported
+MLSDNet,7,0.928250,NR,1.420000,NR,author-reported,10.1109/LGRS.2023.3312398,Original abstract; input/FLOP convention not specified in comparison table,reported-not-normalized
+SAR-ShipNet,1,NR,NR,NR,NR,not-reported,10.1109/ICASSP43922.2022.9747359,No public implementation and no numerical complexity on public paper page,unavailable
+GFECSI-Net,1,NR,NR,NR,NR,not-reported,10.1109/LGRS.2023.3307793,No public implementation and no numerical complexity on public paper page,unavailable
+CMFT,1,NR,NR,NR,NR,not-reported,10.1109/TGRS.2023.3300536,No public implementation and no numerical complexity on public paper page,unavailable
+SA-Net,7,NR,NR,NR,NR,not-reported,10.12000/JR23043,Full public article does not report numerical Params or FLOPs,unavailable
+MaDiNet MambaSAR res4+res5 core,N/A,223.264800,NR,345.283000,NR,server-measured core lower bound,94e7cf410bdec218b45a1fc9503e4f222158344a,Official released core only; complete detector/config absent,core-only

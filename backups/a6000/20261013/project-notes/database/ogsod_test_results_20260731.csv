@@ -1,0 +1,4 @@
+dataset,split,model,training_status,input_size,epochs,global_batch,gpus,optimizer,precision,recall,ap50,ap75,ap50_95,params_m,gflops_640,evidence
+OGSOD-1.0,test,Mamba-YOLO-T,complete,1024,300,64,2xH200,AdamW,0.801434,0.711545,0.771733,0.402109,0.423018,5.984593,13.6,local best.pt test evaluation
+OGSOD-1.0,test,IG-DS-SSM/PFIM-T,complete,1024,300,64,2xH200,AdamW,0.797140,0.716924,0.772630,0.409711,0.436021,5.963803,13.2,local best.pt test evaluation
+OGSOD-1.0,test,delta PFIM-T minus baseline,derived,1024,300,64,2xH200,AdamW,-0.004294,0.005379,0.000897,0.007602,0.013003,-0.020790,-0.4,paired protocol difference

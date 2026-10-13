@@ -1,0 +1,14 @@
+{
+  "gpu": {
+    "checked_utc": "2026-10-09T03:24:03.188513+00:00",
+    "compute_processes": [],
+    "memory_total_mib": 49140,
+    "memory_used_mib": 530,
+    "name": "NVIDIA RTX A6000",
+    "utilization_percent": 0,
+    "uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964"
+  },
+  "scope": "independent finite nc7 probe",
+  "state": "waiting_idle",
+  "updated_utc": "2026-10-09T03:24:03.188530+00:00"
+}

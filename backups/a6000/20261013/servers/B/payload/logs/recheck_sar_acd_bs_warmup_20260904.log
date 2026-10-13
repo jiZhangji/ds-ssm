@@ -1,0 +1,1071 @@
+[2026-09-04 23:14:04] waiting for B OpenEarthMap queue PID 119326
+[2026-09-05 05:08:05] starting SAR-ACD BS/warmup sweep
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 1134, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 1130, in main
+    run(parser.parse_args())
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 835, in run
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json'
+[2026-09-05 10:06:55] waiting for B OpenEarthMap queue PID 119326
+[2026-09-05 10:06:55] starting SAR-ACD BS/warmup sweep
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 1134, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 1130, in main
+    run(parser.parse_args())
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 974, in run
+    loss = criterion(model(*inputs), target)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 528, in forward
+    return self.head(features[-1].mean(dim=(2, 3)))
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/normalization.py", line 190, in forward
+    return F.layer_norm(
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/functional.py", line 2515, in layer_norm
+    return torch.layer_norm(input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+RuntimeError: Given normalized_shape=[256], expected input with shape [*, 256], but got input of size[64, 768]
+[2026-09-05 10:09:35] waiting for B OpenEarthMap queue PID 119326
+[2026-09-05 10:09:35] starting SAR-ACD BS/warmup sweep
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+SAR-ACD baseline finetune 1/200 loss=1.41895 score=0.50121
+SAR-ACD baseline finetune 2/200 loss=1.20167 score=0.50281
+SAR-ACD baseline finetune 3/200 loss=0.99345 score=0.73246
+SAR-ACD baseline finetune 4/200 loss=0.83892 score=0.69591
+SAR-ACD baseline finetune 5/200 loss=0.73973 score=0.80244
+SAR-ACD baseline finetune 6/200 loss=0.63481 score=0.82016
+SAR-ACD baseline finetune 7/200 loss=0.59970 score=0.83360
+SAR-ACD baseline finetune 8/200 loss=0.57402 score=0.90560
+SAR-ACD baseline finetune 9/200 loss=0.52757 score=0.90866
+SAR-ACD baseline finetune 10/200 loss=0.50235 score=0.96748
+SAR-ACD baseline finetune 11/200 loss=0.50743 score=0.91954
+SAR-ACD baseline finetune 12/200 loss=0.49447 score=0.94913
+SAR-ACD baseline finetune 13/200 loss=0.51109 score=0.94227
+SAR-ACD baseline finetune 14/200 loss=0.48885 score=0.96784
+SAR-ACD baseline finetune 15/200 loss=0.46918 score=0.88635
+SAR-ACD baseline finetune 16/200 loss=0.46651 score=0.92817
+SAR-ACD baseline finetune 17/200 loss=0.45534 score=0.97562
+SAR-ACD baseline finetune 18/200 loss=0.45333 score=0.98806
+SAR-ACD baseline finetune 19/200 loss=0.46817 score=0.95976
+SAR-ACD baseline finetune 20/200 loss=0.44540 score=0.94813
+SAR-ACD baseline finetune 21/200 loss=0.44815 score=0.90835
+SAR-ACD baseline finetune 22/200 loss=0.44206 score=0.98382
+SAR-ACD baseline finetune 23/200 loss=0.45036 score=0.93183
+SAR-ACD baseline finetune 24/200 loss=0.44161 score=0.93631
+SAR-ACD baseline finetune 25/200 loss=0.44039 score=0.96290
+SAR-ACD baseline finetune 26/200 loss=0.43034 score=0.99594
+SAR-ACD baseline finetune 27/200 loss=0.42830 score=0.95525
+SAR-ACD baseline finetune 28/200 loss=0.43660 score=0.97565
+SAR-ACD baseline finetune 29/200 loss=0.43429 score=0.94023
+SAR-ACD baseline finetune 30/200 loss=0.42581 score=0.97998
+SAR-ACD baseline finetune 31/200 loss=0.41952 score=0.96294
+SAR-ACD baseline finetune 32/200 loss=0.42920 score=0.93662
+SAR-ACD baseline finetune 33/200 loss=0.42920 score=0.94794
+SAR-ACD baseline finetune 34/200 loss=0.43071 score=0.97202
+SAR-ACD baseline finetune 35/200 loss=0.43178 score=0.92480
+SAR-ACD baseline finetune 36/200 loss=0.42562 score=0.98813
+SAR-ACD baseline finetune 37/200 loss=0.41990 score=0.96730
+SAR-ACD baseline finetune 38/200 loss=0.43463 score=0.97545
+SAR-ACD baseline finetune 39/200 loss=0.43069 score=0.96392
+SAR-ACD baseline finetune 40/200 loss=0.42725 score=0.98370
+SAR-ACD baseline finetune 41/200 loss=0.43011 score=0.95179
+SAR-ACD baseline finetune 42/200 loss=0.41982 score=0.98010
+SAR-ACD baseline finetune 43/200 loss=0.42171 score=0.98381
+SAR-ACD baseline finetune 44/200 loss=0.42292 score=0.91317
+SAR-ACD baseline finetune 45/200 loss=0.42436 score=0.98350
+SAR-ACD baseline finetune 46/200 loss=0.41608 score=0.98024
+SAR-ACD baseline finetune 47/200 loss=0.41926 score=0.95145
+SAR-ACD baseline finetune 48/200 loss=0.41388 score=0.97187
+SAR-ACD baseline finetune 49/200 loss=0.41912 score=0.98781
+SAR-ACD baseline finetune 50/200 loss=0.41221 score=0.93676
+SAR-ACD baseline finetune 51/200 loss=0.41275 score=0.94787
+SAR-ACD baseline finetune 52/200 loss=0.41448 score=0.96378
+SAR-ACD baseline finetune 53/200 loss=0.42134 score=0.97590
+SAR-ACD baseline finetune 54/200 loss=0.42406 score=0.96023
+SAR-ACD baseline finetune 55/200 loss=0.41311 score=0.96820
+SAR-ACD baseline finetune 56/200 loss=0.40811 score=0.98790
+SAR-ACD baseline finetune 57/200 loss=0.41461 score=0.99604
+SAR-ACD baseline finetune 58/200 loss=0.41478 score=0.98407
+SAR-ACD baseline finetune 59/200 loss=0.41863 score=0.95528
+SAR-ACD baseline finetune 60/200 loss=0.41063 score=0.98794
+SAR-ACD baseline finetune 61/200 loss=0.40475 score=0.99191
+SAR-ACD baseline finetune 62/200 loss=0.40000 score=0.99191
+SAR-ACD baseline finetune 63/200 loss=0.40310 score=0.98788
+SAR-ACD baseline finetune 64/200 loss=0.40834 score=0.97191
+SAR-ACD baseline finetune 65/200 loss=0.41195 score=0.97194
+SAR-ACD baseline finetune 66/200 loss=0.40247 score=0.97968
+SAR-ACD baseline finetune 67/200 loss=0.40788 score=0.95605
+SAR-ACD baseline finetune 68/200 loss=0.41129 score=0.95982
+SAR-ACD baseline finetune 69/200 loss=0.41414 score=0.96791
+SAR-ACD baseline finetune 70/200 loss=0.41591 score=0.98786
+SAR-ACD baseline finetune 71/200 loss=0.41466 score=0.92244
+SAR-ACD baseline finetune 72/200 loss=0.41151 score=0.96769
+SAR-ACD baseline finetune 73/200 loss=0.40666 score=0.99188
+SAR-ACD baseline finetune 74/200 loss=0.40502 score=0.97990
+SAR-ACD baseline finetune 75/200 loss=0.40794 score=0.97580
+SAR-ACD baseline finetune 76/200 loss=0.41303 score=0.98006
+SAR-ACD baseline finetune 77/200 loss=0.41116 score=0.98362
+SAR-ACD baseline finetune 78/200 loss=0.40247 score=0.98394
+SAR-ACD baseline finetune 79/200 loss=0.40736 score=0.97986
+SAR-ACD baseline finetune 80/200 loss=0.40576 score=0.98390
+SAR-ACD baseline finetune 81/200 loss=0.40284 score=0.98794
+SAR-ACD baseline finetune 82/200 loss=0.41116 score=0.98380
+SAR-ACD baseline finetune 83/200 loss=0.40840 score=0.97590
+SAR-ACD baseline finetune 84/200 loss=0.40828 score=0.94834
+SAR-ACD baseline finetune 85/200 loss=0.41441 score=0.98382
+SAR-ACD baseline finetune 86/200 loss=0.40993 score=0.98382
+SAR-ACD baseline finetune 87/200 loss=0.40314 score=0.99604
+SAR-ACD baseline finetune 88/200 loss=0.40342 score=0.98390
+SAR-ACD baseline finetune 89/200 loss=0.40082 score=0.98781
+SAR-ACD baseline finetune 90/200 loss=0.40394 score=0.98010
+SAR-ACD baseline finetune 91/200 loss=0.40422 score=0.99604
+SAR-ACD baseline finetune 92/200 loss=0.40200 score=0.97626
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "backbone_layout": "vmamba_tiny",
+  "decoder": "multiscale",
+  "initialization": "official_vmamba_tiny_backbone_plus_random_new_modules",
+  "pretrained": {
+    "path": "/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "loaded_tensors": 272,
+    "model_tensors": 280,
+    "coverage": 0.9714285714285714,
+    "missing_tensors": 8,
+    "unexpected_tensors": 4
+  },
+  "protocol": null,
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 64,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 224,
+  "eval_batch": 64,
+  "epochs_requested": 200,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 200,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 57,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.9921259842519685,
+    "macro_precision": 0.9924501424501425,
+    "macro_recall": 0.991823112223613,
+    "macro_f1": 0.9920583578944692,
+    "per_class_recall": [
+      0.9787234042553191,
+      1.0,
+      1.0,
+      1.0,
+      0.9803921568627451
+    ],
+    "confusion_matrix": [
+      [
+        46,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        51,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        52,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        53,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        50
+      ]
+    ]
+  },
+  "params": 29486789,
+  "gflops": 0.5507136,
+  "latency_ms": 8.42140629926386,
+  "fps": 118.74501294248361,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_sar_acd_bs_warmup_20260904/baseline_bs64/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+SAR-ACD baseline finetune 1/200 loss=1.49831 score=0.51370
+SAR-ACD baseline finetune 2/200 loss=1.13295 score=0.56070
+SAR-ACD baseline finetune 3/200 loss=1.04120 score=0.59234
+SAR-ACD baseline finetune 4/200 loss=0.92446 score=0.76587
+SAR-ACD baseline finetune 5/200 loss=0.80992 score=0.78925
+SAR-ACD baseline finetune 6/200 loss=0.70560 score=0.86176
+SAR-ACD baseline finetune 7/200 loss=0.63396 score=0.89178
+SAR-ACD baseline finetune 8/200 loss=0.58617 score=0.89933
+SAR-ACD baseline finetune 9/200 loss=0.56338 score=0.84486
+SAR-ACD baseline finetune 10/200 loss=0.55604 score=0.88661
+SAR-ACD baseline finetune 11/200 loss=0.51640 score=0.93081
+SAR-ACD baseline finetune 12/200 loss=0.50854 score=0.90024
+SAR-ACD baseline finetune 13/200 loss=0.49253 score=0.88740
+SAR-ACD baseline finetune 14/200 loss=0.48249 score=0.94026
+SAR-ACD baseline finetune 15/200 loss=0.47225 score=0.93583
+SAR-ACD baseline finetune 16/200 loss=0.46363 score=0.96380
+SAR-ACD baseline finetune 17/200 loss=0.46667 score=0.97582
+SAR-ACD baseline finetune 18/200 loss=0.46154 score=0.92866
+SAR-ACD baseline finetune 19/200 loss=0.47144 score=0.93528
+SAR-ACD baseline finetune 20/200 loss=0.46352 score=0.95110
+SAR-ACD baseline finetune 21/200 loss=0.43958 score=0.97591
+SAR-ACD baseline finetune 22/200 loss=0.42790 score=0.96377
+SAR-ACD baseline finetune 23/200 loss=0.43917 score=0.93220
+SAR-ACD baseline finetune 24/200 loss=0.44775 score=0.90472
+SAR-ACD baseline finetune 25/200 loss=0.44840 score=0.93562
+SAR-ACD baseline finetune 26/200 loss=0.43810 score=0.97185
+SAR-ACD baseline finetune 27/200 loss=0.44244 score=0.97191
+SAR-ACD baseline finetune 28/200 loss=0.43866 score=0.94009
+SAR-ACD baseline finetune 29/200 loss=0.43247 score=0.97546
+SAR-ACD baseline finetune 30/200 loss=0.42302 score=0.95136
+SAR-ACD baseline finetune 31/200 loss=0.42570 score=0.96022
+SAR-ACD baseline finetune 32/200 loss=0.41768 score=0.94014
+SAR-ACD baseline finetune 33/200 loss=0.41289 score=0.92387
+SAR-ACD baseline finetune 34/200 loss=0.41575 score=0.91027
+SAR-ACD baseline finetune 35/200 loss=0.43481 score=0.94006
+SAR-ACD baseline finetune 36/200 loss=0.43897 score=0.97955
+SAR-ACD baseline finetune 37/200 loss=0.43105 score=0.95176
+SAR-ACD baseline finetune 38/200 loss=0.41734 score=0.94679
+SAR-ACD baseline finetune 39/200 loss=0.41861 score=0.95921
+SAR-ACD baseline finetune 40/200 loss=0.42258 score=0.95989
+SAR-ACD baseline finetune 41/200 loss=0.43318 score=0.97194
+SAR-ACD baseline finetune 42/200 loss=0.42383 score=0.97993
+SAR-ACD baseline finetune 43/200 loss=0.42614 score=0.97185
+SAR-ACD baseline finetune 44/200 loss=0.42111 score=0.97597
+SAR-ACD baseline finetune 45/200 loss=0.41736 score=0.98768
+SAR-ACD baseline finetune 46/200 loss=0.41614 score=0.95985
+SAR-ACD baseline finetune 47/200 loss=0.41532 score=0.95584
+SAR-ACD baseline finetune 48/200 loss=0.41730 score=0.94812
+SAR-ACD baseline finetune 49/200 loss=0.41116 score=0.97169
+SAR-ACD baseline finetune 50/200 loss=0.41431 score=0.97602
+SAR-ACD baseline finetune 51/200 loss=0.42348 score=0.96412
+SAR-ACD baseline finetune 52/200 loss=0.41157 score=0.90075
+SAR-ACD baseline finetune 53/200 loss=0.41591 score=0.87706
+SAR-ACD baseline finetune 54/200 loss=0.41427 score=0.97612
+SAR-ACD baseline finetune 55/200 loss=0.41400 score=0.93252
+SAR-ACD baseline finetune 56/200 loss=0.41348 score=0.96784
+SAR-ACD baseline finetune 57/200 loss=0.41845 score=0.95624
+SAR-ACD baseline finetune 58/200 loss=0.40955 score=0.98794
+SAR-ACD baseline finetune 59/200 loss=0.40881 score=0.99194
+SAR-ACD baseline finetune 60/200 loss=0.41652 score=0.95917
+SAR-ACD baseline finetune 61/200 loss=0.41370 score=0.98362
+SAR-ACD baseline finetune 62/200 loss=0.41180 score=0.99191
+SAR-ACD baseline finetune 63/200 loss=0.41076 score=0.98399
+SAR-ACD baseline finetune 64/200 loss=0.40655 score=0.96417
+SAR-ACD baseline finetune 65/200 loss=0.40541 score=0.98777
+SAR-ACD baseline finetune 66/200 loss=0.40494 score=0.98790
+SAR-ACD baseline finetune 67/200 loss=0.40823 score=0.98390
+SAR-ACD baseline finetune 68/200 loss=0.41246 score=0.98347
+SAR-ACD baseline finetune 69/200 loss=0.41312 score=0.96382
+SAR-ACD baseline finetune 70/200 loss=0.41763 score=0.97589
+SAR-ACD baseline finetune 71/200 loss=0.40844 score=0.97227
+SAR-ACD baseline finetune 72/200 loss=0.40444 score=0.97989
+SAR-ACD baseline finetune 73/200 loss=0.40196 score=0.97588
+SAR-ACD baseline finetune 74/200 loss=0.40046 score=0.98812
+SAR-ACD baseline finetune 75/200 loss=0.40223 score=0.96802
+SAR-ACD baseline finetune 76/200 loss=0.40442 score=0.98399
+SAR-ACD baseline finetune 77/200 loss=0.40272 score=0.97998
+SAR-ACD baseline finetune 78/200 loss=0.40273 score=0.99207
+SAR-ACD baseline finetune 79/200 loss=0.40187 score=0.99208
+SAR-ACD baseline finetune 80/200 loss=0.40018 score=0.99191
+SAR-ACD baseline finetune 81/200 loss=0.40047 score=0.97584
+SAR-ACD baseline finetune 82/200 loss=0.40074 score=0.96788
+SAR-ACD baseline finetune 83/200 loss=0.40325 score=0.98406
+SAR-ACD baseline finetune 84/200 loss=0.39800 score=0.98812
+SAR-ACD baseline finetune 85/200 loss=0.40039 score=0.98795
+SAR-ACD baseline finetune 86/200 loss=0.40479 score=0.95162
+SAR-ACD baseline finetune 87/200 loss=0.40802 score=0.96419
+SAR-ACD baseline finetune 88/200 loss=0.40459 score=0.98416
+SAR-ACD baseline finetune 89/200 loss=0.40459 score=0.96788
+SAR-ACD baseline finetune 90/200 loss=0.40320 score=0.98790
+SAR-ACD baseline finetune 91/200 loss=0.40325 score=0.95996
+SAR-ACD baseline finetune 92/200 loss=0.39957 score=0.97596
+SAR-ACD baseline finetune 93/200 loss=0.39821 score=0.97596
+SAR-ACD baseline finetune 94/200 loss=0.39842 score=0.97597
+SAR-ACD baseline finetune 95/200 loss=0.39985 score=0.96774
+SAR-ACD baseline finetune 96/200 loss=0.40124 score=0.98003
+SAR-ACD baseline finetune 97/200 loss=0.39929 score=0.97182
+SAR-ACD baseline finetune 98/200 loss=0.39899 score=0.98812
+SAR-ACD baseline finetune 99/200 loss=0.39798 score=0.97576
+SAR-ACD baseline finetune 100/200 loss=0.39677 score=0.95564
+SAR-ACD baseline finetune 101/200 loss=0.39708 score=0.96772
+SAR-ACD baseline finetune 102/200 loss=0.39695 score=0.97989
+SAR-ACD baseline finetune 103/200 loss=0.39815 score=0.97972
+SAR-ACD baseline finetune 104/200 loss=0.39622 score=0.97584
+SAR-ACD baseline finetune 105/200 loss=0.39571 score=0.97186
+SAR-ACD baseline finetune 106/200 loss=0.39619 score=0.97582
+SAR-ACD baseline finetune 107/200 loss=0.39734 score=0.95597
+SAR-ACD baseline finetune 108/200 loss=0.39954 score=0.99207
+SAR-ACD baseline finetune 109/200 loss=0.39833 score=0.94438
+SAR-ACD baseline finetune 110/200 loss=0.40175 score=0.97227
+SAR-ACD baseline finetune 111/200 loss=0.40028 score=0.97216
+SAR-ACD baseline finetune 112/200 loss=0.39814 score=0.98402
+SAR-ACD baseline finetune 113/200 loss=0.39749 score=0.97999
+SAR-ACD baseline finetune 114/200 loss=0.39907 score=0.98388
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "backbone_layout": "vmamba_tiny",
+  "decoder": "multiscale",
+  "initialization": "official_vmamba_tiny_backbone_plus_random_new_modules",
+  "pretrained": {
+    "path": "/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "loaded_tensors": 272,
+    "model_tensors": 280,
+    "coverage": 0.9714285714285714,
+    "missing_tensors": 8,
+    "unexpected_tensors": 4
+  },
+  "protocol": null,
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 128,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 224,
+  "eval_batch": 128,
+  "epochs_requested": 200,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 200,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 79,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.984251968503937,
+    "macro_precision": 0.9841279586905015,
+    "macro_recall": 0.9841279586905015,
+    "macro_f1": 0.9840920197866382,
+    "per_class_recall": [
+      0.9787234042553191,
+      0.9803921568627451,
+      1.0,
+      0.9811320754716981,
+      0.9803921568627451
+    ],
+    "confusion_matrix": [
+      [
+        46,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        52,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        52,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        50
+      ]
+    ]
+  },
+  "params": 29486789,
+  "gflops": 0.5507136,
+  "latency_ms": 8.435734900801132,
+  "fps": 118.54331741802736,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_sar_acd_bs_warmup_20260904/baseline_bs128/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+SAR-ACD ours finetune 1/200 loss=1.31353 score=0.55386
+SAR-ACD ours finetune 2/200 loss=1.03568 score=0.70518
+SAR-ACD ours finetune 3/200 loss=0.91180 score=0.70019
+SAR-ACD ours finetune 4/200 loss=0.77516 score=0.80073
+SAR-ACD ours finetune 5/200 loss=0.68584 score=0.78692
+SAR-ACD ours finetune 6/200 loss=0.63664 score=0.85949
+SAR-ACD ours finetune 7/200 loss=0.62024 score=0.91097
+SAR-ACD ours finetune 8/200 loss=0.54441 score=0.86467
+SAR-ACD ours finetune 9/200 loss=0.53445 score=0.82285
+SAR-ACD ours finetune 10/200 loss=0.51513 score=0.84659
+SAR-ACD ours finetune 11/200 loss=0.51289 score=0.89263
+SAR-ACD ours finetune 12/200 loss=0.51399 score=0.91209
+SAR-ACD ours finetune 13/200 loss=0.47355 score=0.91219
+SAR-ACD ours finetune 14/200 loss=0.47280 score=0.86821
+SAR-ACD ours finetune 15/200 loss=0.46709 score=0.88574
+SAR-ACD ours finetune 16/200 loss=0.47705 score=0.94422
+SAR-ACD ours finetune 17/200 loss=0.45348 score=0.92465
+SAR-ACD ours finetune 18/200 loss=0.46282 score=0.86183
+SAR-ACD ours finetune 19/200 loss=0.46814 score=0.88539
+SAR-ACD ours finetune 20/200 loss=0.46269 score=0.95167
+SAR-ACD ours finetune 21/200 loss=0.46606 score=0.93936
+SAR-ACD ours finetune 22/200 loss=0.44896 score=0.97568
+SAR-ACD ours finetune 23/200 loss=0.44280 score=0.92002
+SAR-ACD ours finetune 24/200 loss=0.43001 score=0.97518
+SAR-ACD ours finetune 25/200 loss=0.43264 score=0.97987
+SAR-ACD ours finetune 26/200 loss=0.46352 score=0.93905
+SAR-ACD ours finetune 27/200 loss=0.45416 score=0.95997
+SAR-ACD ours finetune 28/200 loss=0.44759 score=0.97580
+SAR-ACD ours finetune 29/200 loss=0.44257 score=0.94775
+SAR-ACD ours finetune 30/200 loss=0.43828 score=0.96374
+SAR-ACD ours finetune 31/200 loss=0.44135 score=0.95626
+SAR-ACD ours finetune 32/200 loss=0.43280 score=0.97996
+SAR-ACD ours finetune 33/200 loss=0.43686 score=0.98794
+SAR-ACD ours finetune 34/200 loss=0.42255 score=0.95614
+SAR-ACD ours finetune 35/200 loss=0.44172 score=0.98018
+SAR-ACD ours finetune 36/200 loss=0.42846 score=0.95969
+SAR-ACD ours finetune 37/200 loss=0.41335 score=0.97193
+SAR-ACD ours finetune 38/200 loss=0.41463 score=0.98399
+SAR-ACD ours finetune 39/200 loss=0.41597 score=0.97989
+SAR-ACD ours finetune 40/200 loss=0.42919 score=0.90430
+SAR-ACD ours finetune 41/200 loss=0.43214 score=0.99197
+SAR-ACD ours finetune 42/200 loss=0.43658 score=0.98378
+SAR-ACD ours finetune 43/200 loss=0.42622 score=0.98802
+SAR-ACD ours finetune 44/200 loss=0.42296 score=0.99604
+SAR-ACD ours finetune 45/200 loss=0.42306 score=0.99191
+SAR-ACD ours finetune 46/200 loss=0.42261 score=0.94389
+SAR-ACD ours finetune 47/200 loss=0.41194 score=0.97561
+SAR-ACD ours finetune 48/200 loss=0.43484 score=0.96217
+SAR-ACD ours finetune 49/200 loss=0.41934 score=0.97583
+SAR-ACD ours finetune 50/200 loss=0.42096 score=0.93642
+SAR-ACD ours finetune 51/200 loss=0.41585 score=0.95572
+SAR-ACD ours finetune 52/200 loss=0.43001 score=0.98402
+SAR-ACD ours finetune 53/200 loss=0.41795 score=0.97176
+SAR-ACD ours finetune 54/200 loss=0.40902 score=0.96798
+SAR-ACD ours finetune 55/200 loss=0.41999 score=0.96355
+SAR-ACD ours finetune 56/200 loss=0.43313 score=0.96780
+SAR-ACD ours finetune 57/200 loss=0.42390 score=0.93655
+SAR-ACD ours finetune 58/200 loss=0.41239 score=0.99191
+SAR-ACD ours finetune 59/200 loss=0.41844 score=0.97152
+SAR-ACD ours finetune 60/200 loss=0.41611 score=0.97552
+SAR-ACD ours finetune 61/200 loss=0.41420 score=0.96741
+SAR-ACD ours finetune 62/200 loss=0.40582 score=0.97580
+SAR-ACD ours finetune 63/200 loss=0.40904 score=0.97564
+SAR-ACD ours finetune 64/200 loss=0.40654 score=0.99191
+SAR-ACD ours finetune 65/200 loss=0.41357 score=0.97580
+SAR-ACD ours finetune 66/200 loss=0.41617 score=0.97986
+SAR-ACD ours finetune 67/200 loss=0.42171 score=0.98790
+SAR-ACD ours finetune 68/200 loss=0.41330 score=0.97139
+SAR-ACD ours finetune 69/200 loss=0.41543 score=0.98790
+SAR-ACD ours finetune 70/200 loss=0.41358 score=0.98372
+SAR-ACD ours finetune 71/200 loss=0.41681 score=0.97154
+SAR-ACD ours finetune 72/200 loss=0.41324 score=0.97986
+SAR-ACD ours finetune 73/200 loss=0.40566 score=0.97158
+SAR-ACD ours finetune 74/200 loss=0.40991 score=0.98790
+SAR-ACD ours finetune 75/200 loss=0.41004 score=0.99191
+SAR-ACD ours finetune 76/200 loss=0.41014 score=0.95844
+SAR-ACD ours finetune 77/200 loss=0.41282 score=0.96715
+SAR-ACD ours finetune 78/200 loss=0.40142 score=0.97542
+SAR-ACD ours finetune 79/200 loss=0.40501 score=0.97974
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "vmamba_tiny",
+  "decoder": "multiscale",
+  "initialization": "official_vmamba_tiny_backbone_plus_random_new_modules",
+  "pretrained": {
+    "path": "/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "loaded_tensors": 272,
+    "model_tensors": 280,
+    "coverage": 0.9714285714285714,
+    "missing_tensors": 8,
+    "unexpected_tensors": 4
+  },
+  "protocol": null,
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 32,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 224,
+  "eval_batch": 32,
+  "epochs_requested": 200,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 200,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 44,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.968503937007874,
+    "macro_precision": 0.9686066763425254,
+    "macro_recall": 0.9686272996058813,
+    "macro_f1": 0.9680513673422666,
+    "per_class_recall": [
+      0.9574468085106383,
+      1.0,
+      0.9807692307692307,
+      0.9245283018867925,
+      0.9803921568627451
+    ],
+    "confusion_matrix": [
+      [
+        45,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        51,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        51,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        49,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        50
+      ]
+    ]
+  },
+  "params": 29812907,
+  "gflops": 0.804089856,
+  "latency_ms": 9.265934901001552,
+  "fps": 107.92219141232152,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_sar_acd_bs_warmup_20260904/ours_bs32/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+SAR-ACD ours finetune 1/200 loss=1.39492 score=0.44096
+SAR-ACD ours finetune 2/200 loss=1.10043 score=0.59574
+SAR-ACD ours finetune 3/200 loss=0.94389 score=0.75304
+SAR-ACD ours finetune 4/200 loss=0.78020 score=0.79134
+SAR-ACD ours finetune 5/200 loss=0.69156 score=0.79863
+SAR-ACD ours finetune 6/200 loss=0.62514 score=0.88236
+SAR-ACD ours finetune 7/200 loss=0.58624 score=0.89127
+SAR-ACD ours finetune 8/200 loss=0.54731 score=0.78984
+SAR-ACD ours finetune 9/200 loss=0.56268 score=0.90364
+SAR-ACD ours finetune 10/200 loss=0.49814 score=0.94798
+SAR-ACD ours finetune 11/200 loss=0.50029 score=0.94306
+SAR-ACD ours finetune 12/200 loss=0.49294 score=0.93081
+SAR-ACD ours finetune 13/200 loss=0.48029 score=0.93512
+SAR-ACD ours finetune 14/200 loss=0.46544 score=0.96761
+SAR-ACD ours finetune 15/200 loss=0.47007 score=0.95169
+SAR-ACD ours finetune 16/200 loss=0.45152 score=0.98801
+SAR-ACD ours finetune 17/200 loss=0.46191 score=0.96786
+SAR-ACD ours finetune 18/200 loss=0.45309 score=0.97998
+SAR-ACD ours finetune 19/200 loss=0.44275 score=0.91344
+SAR-ACD ours finetune 20/200 loss=0.46485 score=0.93883
+SAR-ACD ours finetune 21/200 loss=0.44188 score=0.94712
+SAR-ACD ours finetune 22/200 loss=0.44975 score=0.95629
+SAR-ACD ours finetune 23/200 loss=0.44363 score=0.95154
+SAR-ACD ours finetune 24/200 loss=0.43279 score=0.95938
+SAR-ACD ours finetune 25/200 loss=0.43012 score=0.94374
+SAR-ACD ours finetune 26/200 loss=0.44018 score=0.96777
+SAR-ACD ours finetune 27/200 loss=0.43729 score=0.93532
+SAR-ACD ours finetune 28/200 loss=0.42111 score=0.97593
+SAR-ACD ours finetune 29/200 loss=0.42667 score=0.97574
+SAR-ACD ours finetune 30/200 loss=0.43504 score=0.97141
+SAR-ACD ours finetune 31/200 loss=0.43272 score=0.95573
+SAR-ACD ours finetune 32/200 loss=0.42177 score=0.96431
+SAR-ACD ours finetune 33/200 loss=0.43332 score=0.99604
+SAR-ACD ours finetune 34/200 loss=0.43326 score=0.97160
+SAR-ACD ours finetune 35/200 loss=0.43499 score=0.98373
+SAR-ACD ours finetune 36/200 loss=0.42313 score=0.96378
+SAR-ACD ours finetune 37/200 loss=0.41628 score=0.97117
+SAR-ACD ours finetune 38/200 loss=0.42397 score=0.97167
+SAR-ACD ours finetune 39/200 loss=0.42506 score=0.96774
+SAR-ACD ours finetune 40/200 loss=0.41094 score=0.97589
+SAR-ACD ours finetune 41/200 loss=0.41378 score=0.97589
+SAR-ACD ours finetune 42/200 loss=0.41754 score=0.95978
+SAR-ACD ours finetune 43/200 loss=0.41960 score=0.96815
+SAR-ACD ours finetune 44/200 loss=0.42221 score=0.97953
+SAR-ACD ours finetune 45/200 loss=0.41370 score=0.98416
+SAR-ACD ours finetune 46/200 loss=0.43406 score=0.98778
+SAR-ACD ours finetune 47/200 loss=0.42243 score=0.97996
+SAR-ACD ours finetune 48/200 loss=0.41313 score=0.99604
+SAR-ACD ours finetune 49/200 loss=0.41761 score=0.97997
+SAR-ACD ours finetune 50/200 loss=0.41327 score=0.99604
+SAR-ACD ours finetune 51/200 loss=0.40795 score=0.98778
+SAR-ACD ours finetune 52/200 loss=0.40747 score=0.97158
+SAR-ACD ours finetune 53/200 loss=0.40863 score=0.98366
+SAR-ACD ours finetune 54/200 loss=0.41170 score=0.97970
+SAR-ACD ours finetune 55/200 loss=0.41272 score=0.98790
+SAR-ACD ours finetune 56/200 loss=0.42890 score=0.99593
+SAR-ACD ours finetune 57/200 loss=0.41590 score=0.98382
+SAR-ACD ours finetune 58/200 loss=0.40651 score=0.98778
+SAR-ACD ours finetune 59/200 loss=0.40671 score=0.97974
+SAR-ACD ours finetune 60/200 loss=0.41514 score=0.98413
+SAR-ACD ours finetune 61/200 loss=0.41795 score=0.99215
+SAR-ACD ours finetune 62/200 loss=0.41607 score=0.97200
+SAR-ACD ours finetune 63/200 loss=0.41722 score=0.99191
+SAR-ACD ours finetune 64/200 loss=0.42354 score=0.97975
+SAR-ACD ours finetune 65/200 loss=0.42808 score=0.96305
+SAR-ACD ours finetune 66/200 loss=0.42218 score=0.94304
+SAR-ACD ours finetune 67/200 loss=0.40990 score=0.96805
+SAR-ACD ours finetune 68/200 loss=0.41194 score=0.96806
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "vmamba_tiny",
+  "decoder": "multiscale",
+  "initialization": "official_vmamba_tiny_backbone_plus_random_new_modules",
+  "pretrained": {
+    "path": "/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "loaded_tensors": 272,
+    "model_tensors": 280,
+    "coverage": 0.9714285714285714,
+    "missing_tensors": 8,
+    "unexpected_tensors": 4
+  },
+  "protocol": null,
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 64,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 224,
+  "eval_batch": 64,
+  "epochs_requested": 200,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 200,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 33,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.9763779527559056,
+    "macro_precision": 0.976213794661551,
+    "macro_recall": 0.9767287726009712,
+    "macro_f1": 0.9760554513067362,
+    "per_class_recall": [
+      0.9787234042553191,
+      1.0,
+      1.0,
+      0.9245283018867925,
+      0.9803921568627451
+    ],
+    "confusion_matrix": [
+      [
+        46,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        51,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        52,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        49,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        50
+      ]
+    ]
+  },
+  "params": 29812907,
+  "gflops": 0.804089856,
+  "latency_ms": 9.134812034123266,
+  "fps": 109.47132751768518,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_sar_acd_bs_warmup_20260904/ours_bs64/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+SAR-ACD ours finetune 1/200 loss=1.35305 score=0.66578
+SAR-ACD ours finetune 2/200 loss=1.06791 score=0.67722
+SAR-ACD ours finetune 3/200 loss=0.95326 score=0.71403
+SAR-ACD ours finetune 4/200 loss=0.79273 score=0.78304
+SAR-ACD ours finetune 5/200 loss=0.69579 score=0.86927
+SAR-ACD ours finetune 6/200 loss=0.67023 score=0.80329
+SAR-ACD ours finetune 7/200 loss=0.60957 score=0.86474
+SAR-ACD ours finetune 8/200 loss=0.57725 score=0.91992
+SAR-ACD ours finetune 9/200 loss=0.52385 score=0.91124
+SAR-ACD ours finetune 10/200 loss=0.51950 score=0.93962
+SAR-ACD ours finetune 11/200 loss=0.50154 score=0.93530
+SAR-ACD ours finetune 12/200 loss=0.48447 score=0.95917
+SAR-ACD ours finetune 13/200 loss=0.48082 score=0.97975
+SAR-ACD ours finetune 14/200 loss=0.45859 score=0.90105
+SAR-ACD ours finetune 15/200 loss=0.45572 score=0.90746
+SAR-ACD ours finetune 16/200 loss=0.46192 score=0.96784
+SAR-ACD ours finetune 17/200 loss=0.44453 score=0.96381
+SAR-ACD ours finetune 18/200 loss=0.44999 score=0.95939
+SAR-ACD ours finetune 19/200 loss=0.46163 score=0.97586
+SAR-ACD ours finetune 20/200 loss=0.44987 score=0.91619
+SAR-ACD ours finetune 21/200 loss=0.44191 score=0.94777
+SAR-ACD ours finetune 22/200 loss=0.43649 score=0.95596
+SAR-ACD ours finetune 23/200 loss=0.42977 score=0.96003
+SAR-ACD ours finetune 24/200 loss=0.42621 score=0.96753
+SAR-ACD ours finetune 25/200 loss=0.43540 score=0.97991
+SAR-ACD ours finetune 26/200 loss=0.43387 score=0.93185
+SAR-ACD ours finetune 27/200 loss=0.43164 score=0.96366
+SAR-ACD ours finetune 28/200 loss=0.42638 score=0.94826
+SAR-ACD ours finetune 29/200 loss=0.42156 score=0.97186
+SAR-ACD ours finetune 30/200 loss=0.42352 score=0.96350
+SAR-ACD ours finetune 31/200 loss=0.42773 score=0.97950
+SAR-ACD ours finetune 32/200 loss=0.42114 score=0.89161
+SAR-ACD ours finetune 33/200 loss=0.42116 score=0.97538
+SAR-ACD ours finetune 34/200 loss=0.42611 score=0.91684
+SAR-ACD ours finetune 35/200 loss=0.42681 score=0.98788
+SAR-ACD ours finetune 36/200 loss=0.42043 score=0.94784
+SAR-ACD ours finetune 37/200 loss=0.43351 score=0.98437
+SAR-ACD ours finetune 38/200 loss=0.42319 score=0.97985
+SAR-ACD ours finetune 39/200 loss=0.41521 score=0.93245
+SAR-ACD ours finetune 40/200 loss=0.41556 score=0.98419
+SAR-ACD ours finetune 41/200 loss=0.41339 score=0.98374
+SAR-ACD ours finetune 42/200 loss=0.41685 score=0.97561
+SAR-ACD ours finetune 43/200 loss=0.41089 score=0.97579
+SAR-ACD ours finetune 44/200 loss=0.41145 score=0.97986
+SAR-ACD ours finetune 45/200 loss=0.41236 score=0.95971
+SAR-ACD ours finetune 46/200 loss=0.41114 score=0.96777
+SAR-ACD ours finetune 47/200 loss=0.40878 score=0.95605
+SAR-ACD ours finetune 48/200 loss=0.40979 score=0.95248
+SAR-ACD ours finetune 49/200 loss=0.40665 score=0.95551
+SAR-ACD ours finetune 50/200 loss=0.40893 score=0.94346
+SAR-ACD ours finetune 51/200 loss=0.40979 score=0.96809
+SAR-ACD ours finetune 52/200 loss=0.40654 score=0.97980
+SAR-ACD ours finetune 53/200 loss=0.40775 score=0.96744
+SAR-ACD ours finetune 54/200 loss=0.41105 score=0.97194
+SAR-ACD ours finetune 55/200 loss=0.41223 score=0.98382
+SAR-ACD ours finetune 56/200 loss=0.40714 score=0.97193
+SAR-ACD ours finetune 57/200 loss=0.40885 score=0.97578
+SAR-ACD ours finetune 58/200 loss=0.41640 score=0.94820
+SAR-ACD ours finetune 59/200 loss=0.41523 score=0.99604
+SAR-ACD ours finetune 60/200 loss=0.42192 score=0.97584
+SAR-ACD ours finetune 61/200 loss=0.41193 score=0.95155
+SAR-ACD ours finetune 62/200 loss=0.40489 score=0.97968
+SAR-ACD ours finetune 63/200 loss=0.40513 score=0.97602
+SAR-ACD ours finetune 64/200 loss=0.40609 score=0.98382
+SAR-ACD ours finetune 65/200 loss=0.40812 score=0.95948
+SAR-ACD ours finetune 66/200 loss=0.41157 score=0.95969
+SAR-ACD ours finetune 67/200 loss=0.41092 score=0.95171
+SAR-ACD ours finetune 68/200 loss=0.41312 score=0.95095
+SAR-ACD ours finetune 69/200 loss=0.40797 score=0.91721
+SAR-ACD ours finetune 70/200 loss=0.40894 score=0.97173
+SAR-ACD ours finetune 71/200 loss=0.40145 score=0.98790
+SAR-ACD ours finetune 72/200 loss=0.39753 score=0.97985
+SAR-ACD ours finetune 73/200 loss=0.40074 score=0.97998
+SAR-ACD ours finetune 74/200 loss=0.41555 score=0.99186
+SAR-ACD ours finetune 75/200 loss=0.40752 score=0.98406
+SAR-ACD ours finetune 76/200 loss=0.40680 score=0.95928
+SAR-ACD ours finetune 77/200 loss=0.40569 score=0.97209
+SAR-ACD ours finetune 78/200 loss=0.40226 score=0.97606
+SAR-ACD ours finetune 79/200 loss=0.40005 score=0.97954
+SAR-ACD ours finetune 80/200 loss=0.40436 score=0.96722
+SAR-ACD ours finetune 81/200 loss=0.40406 score=0.96756
+SAR-ACD ours finetune 82/200 loss=0.40124 score=0.97541
+SAR-ACD ours finetune 83/200 loss=0.39925 score=0.98002
+SAR-ACD ours finetune 84/200 loss=0.40120 score=0.97577
+SAR-ACD ours finetune 85/200 loss=0.40490 score=0.95149
+SAR-ACD ours finetune 86/200 loss=0.40413 score=0.98396
+SAR-ACD ours finetune 87/200 loss=0.40182 score=0.95535
+SAR-ACD ours finetune 88/200 loss=0.40349 score=0.99604
+SAR-ACD ours finetune 89/200 loss=0.39985 score=0.97602
+SAR-ACD ours finetune 90/200 loss=0.40163 score=0.97591
+SAR-ACD ours finetune 91/200 loss=0.40058 score=0.94018
+SAR-ACD ours finetune 92/200 loss=0.40265 score=0.99198
+SAR-ACD ours finetune 93/200 loss=0.40218 score=0.97169
+SAR-ACD ours finetune 94/200 loss=0.39933 score=0.99208
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "vmamba_tiny",
+  "decoder": "multiscale",
+  "initialization": "official_vmamba_tiny_backbone_plus_random_new_modules",
+  "pretrained": {
+    "path": "/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "loaded_tensors": 272,
+    "model_tensors": 280,
+    "coverage": 0.9714285714285714,
+    "missing_tensors": 8,
+    "unexpected_tensors": 4
+  },
+  "protocol": null,
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 128,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 224,
+  "eval_batch": 128,
+  "epochs_requested": 200,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 200,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 59,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.9763779527559056,
+    "macro_precision": 0.9776221706521373,
+    "macro_recall": 0.975283569871144,
+    "macro_f1": 0.9758311500972304,
+    "per_class_recall": [
+      0.9148936170212766,
+      1.0,
+      1.0,
+      0.9811320754716981,
+      0.9803921568627451
+    ],
+    "confusion_matrix": [
+      [
+        43,
+        1,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        51,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        52,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        52,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        50
+      ]
+    ]
+  },
+  "params": 29812907,
+  "gflops": 0.804089856,
+  "latency_ms": 9.246906467402974,
+  "fps": 108.14427544229865,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_sar_acd_bs_warmup_20260904/ours_bs128/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 1175, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 1171, in main
+    run(parser.parse_args())
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 1011, in run
+    scaler.scale(raw_loss / group_size).backward()
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/_tensor.py", line 488, in backward
+    torch.autograd.backward(
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn

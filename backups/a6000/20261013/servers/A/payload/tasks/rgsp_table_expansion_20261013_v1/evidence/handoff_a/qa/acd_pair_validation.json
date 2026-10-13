@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "verified_variants": [
+    "full3032",
+    "clean2992"
+  ],
+  "shared_holdouts_exact": true,
+  "full_only_train_images": 40,
+  "conflict_groups": 20,
+  "rejection_tests": [
+    "relabeled_image",
+    "duplicate_image",
+    "changed_holdout_fingerprint",
+    "conflict_moved_to_test"
+  ],
+  "source_files_modified": false,
+  "model_or_holdout_inference": false
+}

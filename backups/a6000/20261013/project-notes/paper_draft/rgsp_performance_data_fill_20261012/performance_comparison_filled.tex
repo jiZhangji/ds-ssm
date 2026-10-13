@@ -1,0 +1,1254 @@
+\subsection{不同任务的性能比较}
+\label{sec:performance_comparison}
+
+本文选择目标检测、图像分类和变化检测，
+分别考察 RGSP 在目标级定位、图像级判别和像素级变化识别中的表现。
+目标检测需要同时保持目标的判别性与空间定位信息；
+图像分类关注局部结构与整体表征对类别区分的作用；
+变化检测则要求结合双时相信息，
+区分真实变化与背景响应差异。
+三类任务具有不同的输出粒度和特征需求，
+因而能够从互补角度考察局部结构引导状态传播的适用性。
+
+本节分别比较 RGSP 与代表性方法的性能。
+外部方法采用文献报告结果，
+本地实验比较原始网络 Original 与完整配置 RGSP，
+分类与变化检测表另列结构匹配控制 Matched075。
+各表分别注明结果来源、数据协议和初始化设置；
+相同协议内的结果用于分析配置间的性能变化，
+不同协议的文献结果用于提供已有方法的性能参照。
+除特别说明外，指标均以百分数表示，
+``--'' 表示来源未报告该项指标。
+本节中的 RGSP 均指预先定义的完整配置，
+不根据测试结果将其他消融变体替换为最终方法。
+
+\subsubsection{目标检测}
+\label{sec:detection_results}
+
+本节在 SSDD、SADD 和 SAR-ShipDataset 上比较检测性能，
+每个数据集用一张表汇总已有结果。
+三表均以 Mamba-YOLO-T~\cite{mambayolo2024} 为本地基础检测器参照，
+SSDD 与 SADD 另列 YOLOv8n 轻量 CNN 对照；
+SAR-ShipDataset 尚无对应 YOLOv8n 结果。
+表内先列文献方法，再列本地基线与本文配置，
+每个直接比较组以本文方法收尾。
+SSDD 和 SADD 中 RGSP (Ours) 均为预先定义的 Full：
+在 Mamba-YOLO-T 的 P3/8 阶段替换一个状态空间块。
+SAR-ShipDataset 仅有 IG-DS-SSM/PFIM-T、S 历史配置，
+保留其原名称，不视为当前 Full 的重复实验。
+
+各行保留方法引文、发表出处和年份，
+数值转引来源在表内及表注中说明。
+P、R 分别为 Precision、Recall，指标单位为百分数，
+短横线表示未报告或不适用。
+不同划分、训练条件与种子统计采用表内分组；
+三种子结果为均值$\pm$样本标准差，
+加粗仅用于本地同协议组内最优值。
+文献报告、历史非独立测试记录与本地对照不合并排名。
+
+\textbf{SSDD。}
+表~\ref{tab:ssdd_detection_comparison}
+列出文献报告及本地对照结果。
+文献组包括通用检测器 ViTDet，
+SAR 舰船检测方法 FEPS-Net、FGBG-Net 和 PEGNet，
+以及 ViTDet4SAR、SARATR-X、SUMMIT 和 SARDet-MIM
+等预训练方法。
+方法原始出处见行内引文，
+本表数值统一转引自 SARDet-MIM 的 Table 1~\cite{sardetmim2026}，
+不将其视为本文在统一协议下的复现结果。
+历史检查点及非独立测试记录在同表单独分组，口径见表注。
+本地直接对照区分历史 $742/186/232$ 划分的三种子比较，
+以及清理后 $730/186/232$ 固定划分的单种子比较。
+
+\begin{table*}[!t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{SSDD 上的目标检测与模型复杂度结果。
+检测指标单位为\%，参数量单位为M，计算量单位为G。
+外部方法按发表年份排列，本地结果列于表末；
+加粗仅表示各本地同协议组内的最优检测结果。}
+\label{tab:ssdd_detection_comparison}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccrrrrrrr}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{Publication}
+& \multicolumn{5}{c}{Detection metrics ($\uparrow$)}
+& \multicolumn{2}{c}{Complexity ($\downarrow$)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-8}\cmidrule(lr){9-10}
+& Venue & Year & P & R
+& AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$
+& Params (M) & FLOPs (G) \\
+\midrule
+Faster R-CNN
+& NeurIPS & 2015
+& 87.1 & 90.4 & 89.7 & -- & --
+& $41.295^{*}$ & $150.343^{*}$ \\
+RetinaNet
+& ICCV & 2017
+& 94.0 & 93.1 & 95.0 & -- & --
+& $36.277^{*}$ & $159.342^{*}$ \\
+Cascade R-CNN
+& CVPR & 2018
+& 84.1 & 90.8 & 90.5 & -- & --
+& $69.152^{*}$ & $237.395^{*}$ \\
+YOLOv3
+& arXiv & 2018
+& 95.5 & 94.8 & 96.2 & -- & --
+& $61.524^{*}$ & $155.260^{*}$ \\
+CenterNet
+& ICCV & 2019
+& 94.3 & 93.6 & 95.1 & -- & --
+& -- & -- \\
+FCOS
+& ICCV & 2019
+& 94.6 & 93.9 & 95.3 & -- & --
+& $32.113^{*}$ & $157.158^{*}$ \\
+YOLOv5s
+& Software & 2020
+& 97.2 & 96.4 & 98.3 & -- & --
+& $7.022^{*}$ & $15.946^{*}$ \\
+YOLOv5n
+& Software & 2021
+& 97.0 & 95.8 & 98.0 & -- & --
+& $1.765^{*}$ & $4.224^{*}$ \\
+YOLOX
+& arXiv & 2021
+& 95.0 & 93.8 & 96.2 & -- & --
+& -- & -- \\
+FEPS-Net~\cite{feps2023}
+& JSTARS & 2023
+& -- & -- & 96.0 & 67.5 & 59.9
+& -- & -- \\
+YOLOv8n~\cite{yolov82023}
+& Software & 2023
+& 97.3 & 96.4 & 98.1 & -- & --
+& $3.011^{*}$ & $8.194^{*}$ \\
+DiffusionDet~\cite{diffusiondet2023}
+& ICCV & 2023
+& 95.1 & 93.9 & 96.3 & -- & --
+& $110.552^{*}$ & $204.263^{*}$ \\
+ConsistencyDet
+& arXiv & 2024
+& 94.5 & 94.0 & 95.6 & -- & --
+& $110.552^{*}$ & $3743.694^{*}$ \\
+DiffDet4SAR~\cite{diffdet4sar2024}
+& GRSL & 2024
+& 95.3 & 95.2 & 96.9 & -- & --
+& $111.141^{*}$ & $204.787^{*}$ \\
+FGBG-Net~\cite{fgbg2025}
+& TGRS & 2025
+& -- & -- & 95.5 & 80.1 & 66.9
+& $32.712^{*}$ & $171.142^{*}$ \\
+PEGNet~\cite{pegnet2025}
+& GRSL & 2025
+& -- & -- & 97.3 & 87.0 & 71.1
+& -- & -- \\
+MaDiNet~\cite{madinet2025}
+& TCSVT & 2025
+& 98.0 & 97.0 & 99.0 & -- & --
+& -- & -- \\
+\midrule
+\multicolumn{10}{l}{\textit{历史检查点记录：训练条件未完全匹配，评估口径见表注}} \\
+Mamba-YOLO-T~\cite{mambayolo2024}
+& AAAI & 2025
+& 96.738 & 96.154 & 98.605 & 83.613 & 70.348
+& -- & -- \\
+IG-DS-SSM/PFIM ex27
+& Internal & --
+& 97.759 & 95.857 & 98.688 & 84.005 & 71.445
+& -- & -- \\
+IG-DS-SSM/PFIM P3 (TEST-as-VAL)$^{\ddagger}$
+& Internal & --
+& 97.302 & 95.421 & 98.549 & 85.552 & 72.261
+& -- & -- \\
+IG-DS-SSM/PFIM ex27 (VAL)$^{\S}$
+& Internal & --
+& 97.378 & 95.219 & 98.704 & -- & 74.022
+& $5.9648$ & $13.2079$ \\
+\addlinespace
+\multicolumn{10}{l}{\textit{本地对照：历史 $742/186/232$ 划分，3 seeds，scratch}} \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}
+& AAAI & 2025
+& $89.55\pm1.83$ & $79.24\pm1.70$
+& $86.52\pm2.56$ & $34.05\pm5.25$ & $42.03\pm3.47$
+& 5.986 & $13.612^{\#}$ \\
+RGSP (Ours)
+& This work & --
+& $\mathbf{91.91\pm1.49}$ & $\mathbf{79.85\pm1.02}$
+& $\mathbf{87.97\pm0.11}$ & $\mathbf{34.10\pm3.12}$
+& $\mathbf{42.91\pm1.13}$
+& 5.920 & $13.148^{\#}$ \\
+\addlinespace
+\multicolumn{10}{l}{\textit{本地对照：清理后 $730/186/232$ 划分，seed 0，scratch}} \\
+YOLOv8n~\cite{yolov82023}
+& Software & 2023
+& 89.77 & \textbf{81.87} & 87.24 & 35.01 & 42.46
+& 3.011 & 8.194 \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}$^{\dagger}$
+& AAAI & 2025
+& 92.99 & 77.66 & 86.08 & \textbf{38.20} & \textbf{43.81}
+& 5.986 & $13.612^{\#}$ \\
+RGSP (Ours)
+& This work & --
+& \textbf{93.91} & 78.57 & \textbf{87.74} & 32.74 & 42.69
+& 5.920 & $13.148^{\#}$ \\
+\addlinespace
+\multicolumn{10}{l}{\textit{新增本地对照：统一150轮上限协议，$730/186/232$，seed 0，scratch}} \\
+YOLOv8n~\cite{yolov82023}
+& Software & 2023
+& 89.84 & 75.46 & 83.23 & 30.30 & 39.18
+& -- & -- \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}
+& AAAI & 2025
+& 91.08 & \textbf{76.56} & \textbf{87.28} & \textbf{39.83} & \textbf{43.71}
+& -- & -- \\
+Matched075
+& This work & --
+& \textbf{92.12} & 74.18 & 86.76 & 35.13 & 43.40
+& -- & -- \\
+RGSP (Ours)
+& This work & --
+& -- & -- & -- & -- & --
+& -- & -- \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+Publication 为方法出处。
+FEPS-Net、FGBG-Net 和 PEGNet 的检测指标转引自
+SARDet-MIM~\cite{sardetmim2026} Table 1；
+其余外部方法的检测指标转引自
+MaDiNet 预印本~\cite{madinet_preprint} Table 3，
+对应评估集合尚未核实为独立测试集。
+不同来源沿用各自实验协议，不作统一排名。
+
+$^{*}$表示指定实现的完整检测网络复杂度参考值，
+尚未确认与文献检测成绩对应的确切模型版本一致。
+复杂度采用单类、$640\times640$输入，
+一次乘加计为2 FLOPs。
+Faster R-CNN、RetinaNet、FCOS 和 Cascade R-CNN 采用R50-FPN；
+YOLOv3、YOLOv5n/s采用Ultralytics YOLOv5 v7.0实现，
+YOLOv8n采用项目冻结的Ultralytics实现。
+FGBG-Net采用作者master分支的单类R50配置，
+补齐缺失的同版本框架文件后测量，
+可变形卷积的卷积乘加已计入。
+DiffusionDet、ConsistencyDet 和 DiffDet4SAR
+沿用已有R50-FPN、500 proposals测量记录；
+ConsistencyDet对应实际40次检测头调用。
+计算量不含完整预处理与后处理，
+部分逐元素运算、ROIAlign、采样及插值等未计入。
+$^{\#}$为THOP支持算子的计算量，自定义选择性扫描未计入。
+
+“--”表示缺少可核验结果或无法确认该行完整模型配置。
+CenterNet对应Keypoint Triplets方法，
+已测HG52/HG104；YOLOX已测六种规模，
+但文献行未明确具体版本，故未任意选择数值填入。
+FEPS-Net仅完成兼容重建诊断，
+其完整配置尚未与原论文绑定。
+PEGNet未找到已确认的作者完整实现；
+MaDiNet的公开核心模块复杂度不作为完整检测器结果。
+历史检查点未套用其他版本的复杂度。
+
+本地三种子检测结果为均值$\pm$样本标准差，
+复杂度来自seed 0结构记录；
+清理后复杂度按对应冻结配置测量，
+两套检测结果不合并统计。
+两组本地对照的物理训练batch size均为16。
+$^{\dagger}$表示复用清理后协议的既有Original结果。
+本地P、R采用最优F1工作点，
+MaDiNet Table 3标注置信度阈值为0.5。
+历史检查点前两行使用官方232张测试图像、
+$640\times640$输入、评估batch size 32和FP32，
+训练初始化、预算和代码版本未完全匹配。
+$^{\ddagger}$P3采用部分迁移初始化、300轮训练和20轮模块预热，
+官方测试集同时用于验证选模，该行不是独立测试结果。
+$^{\S}$74.022为ex27的验证集成绩，
+同一检查点的测试复评为71.445。
+Internal不等同于当前RGSP Full。
+
+新增本地对照组采用物理batch size 16、梯度累积4、FP32，
+AdamW初始学习率$2\times10^{-4}$、权重衰减$5\times10^{-4}$；
+3轮线性预热后线性衰减，最大150轮、早停patience 30。
+仅依据验证集选择EMA检查点，随后在独立测试集评估。
+该组截至2026年10月12日23:25仅列共同seed 0，
+RGSP尚未完成，未填入成绩；
+新增组复杂度尚未按对应运行核验，保持空缺。
+其结果不替换上方历史协议结果。
+\end{minipage}
+\end{table*}
+
+在历史三种子从头训练实验中，
+RGSP 的 AP$_{50}$ 从 $86.52\%$ 提高至 $87.97\%$，
+AP$_{50:95}$ 从 $42.03\%$ 提高至 $42.91\%$，
+分别增加 $1.45$ 和 $0.88$ 个百分点；
+AP$_{75}$ 仅提高 $0.05$ 个百分点。
+主要指标的逐种子配对差分别为
+$-0.35$、$+5.93$ 和 $-2.94$ 个百分点，
+平均为 $+0.88\pm4.57$ 个百分点。
+三次比较中仅一次为正，
+均值改善尚未体现为跨种子一致的增益。
+
+在清理后固定划分的单种子实验中，
+RGSP 的 AP$_{50:95}$ 为 $42.69\%$，
+比 YOLOv8n 高 $0.23$ 个百分点，
+但比 Original 低 $1.12$ 个百分点。
+RGSP 的 AP$_{50}$ 高于两个参考模型，
+AP$_{75}$ 则低于两者，
+说明宽松匹配与较严格定位指标的变化并不一致。
+这些结果说明，整块替换的性能变化
+需要结合对应训练和评估条件解释。
+
+历史检查点复评中，
+IG-DS-SSM/PFIM ex27 的 AP$_{50}$、
+AP$_{75}$ 和 AP$_{50:95}$
+分别为 $98.688\%$、$84.005\%$ 和 $71.445\%$。
+相对历史 Mamba-YOLO-T 检查点，
+三项指标分别提高 $0.083$、$0.393$
+和 $1.098$ 个百分点。
+这一比较确认了两个检查点在同一评估器下的数值差异，
+但训练条件尚未完全匹配，
+不能将差值全部归因于模块设计。
+
+历史 P3 配置记录的 AP$_{50:95}$ 为 $72.261\%$，
+历史 ex27 的验证集成绩为 $74.022\%$。
+这些结果高于当前从头训练实验的数值，
+但同时涉及初始化、训练预算、网络版本
+和选模协议的变化。
+其中，300轮配置将官方测试集同时用于验证选模，
+74.022则属于验证集记录；
+因此两项结果保留其原始口径，
+不用于替代当前独立测试对照。
+
+\textbf{SADD。}
+表~\ref{tab:sadd_detection_comparison}
+比较通用 YOLO 检测器、SAR 飞机专用的 YOLO-SAD，
+以及 ViTDet 和 SAR 表征预训练方法。
+YOLO 系列数值转引自 YOLO-SAD 的 Table 9~\cite{yolosad2024}，
+其余文献数值转引自 SARDet-MIM 的 Table 2~\cite{sardetmim2026}。
+YOLO-SAD 文献在去重后的701张图像上
+按60:40划分训练与验证集；
+SARDet-MIM 文献在2966张图像上
+按5:1随机划分训练与测试集。
+本文采用单类阳性子集的固定 $795/44/44$ 划分，
+与两组外部协议不同，因此分别列示而不统一排名。
+
+\begin{table*}[!t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.8pt}
+\renewcommand{\arraystretch}{1.08}
+\caption{SADD 上的目标检测与模型复杂度结果。
+检测指标单位为\%，参数量单位为M，计算量单位为G。
+外部方法按发表年份排列，来源与协议见表注；
+加粗仅表示各本地同协议组内的最优检测结果。}
+\label{tab:sadd_detection_comparison}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccrrrrrrr}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{Publication}
+& \multicolumn{5}{c}{Detection metrics ($\uparrow$)}
+& \multicolumn{2}{c}{Complexity ($\downarrow$)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-8}\cmidrule(lr){9-10}
+& Venue & Year & P & R
+& AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$
+& Params (M) & FLOPs (G) \\
+\midrule
+Faster R-CNN$^{C}$
+& NeurIPS & 2015
+& 87.2 & 93.1 & 91.1 & -- & 51.7
+& 41.7 & 91.3 \\
+Cascade R-CNN$^{C}$
+& CVPR & 2018
+& 88.8 & 92.4 & 90.4 & -- & 47.9
+& 69.4 & 119.0 \\
+YOLOv4~\cite{yolov42020}$^{A}$
+& arXiv & 2020
+& 93.8 & 77.5 & 87.8 & -- & 54.0
+& 105.5 & 119.7 \\
+ResNet50-CSP$^{A}$
+& Software & --
+& 92.3 & 83.5 & 91.5 & -- & 55.9
+& 65.1 & 64.4 \\
+ResNeXt50-CSP$^{A}$
+& Software & --
+& 88.9 & 85.3 & 91.3 & -- & 55.4
+& 64.3 & 59.7 \\
+YOLOR-P6$^{A}$
+& arXiv & 2021
+& 93.6 & 80.5 & 89.2 & -- & 53.5
+& 74.3 & 80.6 \\
+SEFEPNet$^{B}$
+& JSTARS & 2022
+& 89.0 & 98.0 & -- & -- & --
+& -- & -- \\
+YOLOv7~\cite{yolov72023}$^{A}$
+& CVPR & 2023
+& 92.6 & 82.7 & 89.8 & -- & 55.2
+& 74.8 & 105.1 \\
+YOLOv8n~\cite{yolov82023}$^{C}$
+& Software & 2023
+& 97.6 & 98.9 & 99.3 & -- & 74.2
+& 3.2 & 8.1 \\
+YOLOv8s~\cite{yolov82023}$^{C}$
+& Software & 2023
+& 98.9 & 98.2 & 99.4 & -- & 79.9
+& 11.1 & 28.4 \\
+YOLO-SAD~\cite{yolosad2024}$^{A}$
+& Appl. Sci. & 2024
+& 94.0 & 81.2 & 91.9 & -- & 57.1
+& 69.9 & 97.2 \\
+FEMSFNet$^{B}$
+& Remote Sens. & 2024
+& 92.0 & 96.0 & -- & -- & --
+& -- & -- \\
+YOLOv10n$^{C}$
+& NeurIPS & 2024
+& 94.9 & 94.1 & 98.4 & -- & 63.4
+& 2.7 & 8.4 \\
+YOLO11n$^{C}$
+& Software & 2024
+& 96.6 & 98.1 & 99.1 & -- & 68.8
+& 2.6 & 6.4 \\
+MSAD-T$^{C}$
+& IET Comput. Vis. & 2025
+& 98.6 & 98.7 & 99.1 & -- & 76.3
+& 5.5 & 12.2 \\
+MSAD-B$^{C}$
+& IET Comput. Vis. & 2025
+& 98.4 & 99.1 & 99.4 & -- & 83.0
+& 20.7 & 47.8 \\
+CCS-Net$^{D}$
+& Aerospace & 2026
+& 95.1 & 93.5 & 97.7 & 58.3 & --
+& -- & -- \\
+WSF-YOLO$^{E}$
+& Remote Sens. & 2026
+& 97.8 & 98.2 & 99.1 & -- & 71.8
+& -- & -- \\
+\midrule
+\multicolumn{10}{l}{\textit{本地对照：固定阳性 $795/44/44$ 划分，3 seeds，scratch}} \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}
+& AAAI & 2025
+& $93.57\pm0.44$ & $\mathbf{94.23\pm2.23}$
+& $97.32\pm0.91$ & $\mathbf{52.82\pm4.44}$
+& $\mathbf{53.35\pm0.88}$
+& -- & -- \\
+RGSP (Ours)
+& This work & --
+& $\mathbf{94.11\pm1.60}$ & $93.97\pm1.82$
+& $\mathbf{97.73\pm0.55}$ & $49.11\pm5.49$
+& $51.98\pm2.59$
+& -- & -- \\
+\addlinespace
+\multicolumn{10}{l}{\textit{本地对照：固定阳性 $795/44/44$ 划分，seed 0，scratch}} \\
+YOLOv8n~\cite{yolov82023}
+& Software & 2023
+& 93.70 & 94.77 & 97.03 & 50.74 & 52.73
+& -- & -- \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}
+& AAAI & 2025
+& \textbf{94.52} & \textbf{97.19}
+& \textbf{98.53} & \textbf{53.77} & \textbf{54.09}
+& -- & -- \\
+RGSP (Ours)$^{\dagger}$
+& This work & --
+& 92.59 & 91.94 & 97.09 & 43.56 & 49.00
+& -- & -- \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+Publication 为方法出处；
+来源标记对应本表数值的引用来源。
+$^{A}$来自 YOLO-SAD~\cite{yolosad2024}的 Table 9，
+采用去重后701张图像的60:40训练/验证划分，
+训练300轮、batch size 20。
+ResNet50-CSP 与 ResNeXt50-CSP 的数值按该表取值；
+具体配置的发表年份尚未核实。
+$^{B}$来自 FEMSFNet~\cite{femsfnet2024}的 Table 4；
+其中 SEFEPNet 为该表转引的原始 SADD 基线结果。
+FEMSFNet 使用包含负样本的5:1训练/测试划分、
+$224\times224$输入和batch size 128；
+其模型文件大小不换算为参数量。
+$^{C}$来自 MSAD~\cite{msad2025}的 Table 3，
+采用5:1训练/测试划分、$640\times640$输入、
+300轮训练及50轮早停设置；
+该组复杂度按原文单类、batch size 1记录。
+$^{D}$来自 CCS-Net~\cite{ccsnet2026}的 Table 6；
+原文采用8:2划分、100轮训练、batch size 16，
+58.3为其明确报告的AP$_{75}$。
+$^{E}$来自 WSF-YOLO~\cite{wsfyolo2026}的 Table 12，
+采用5:1训练/验证划分、$640\times640$输入、
+100轮训练和batch size 32。
+WSF-YOLO 的其他数据集复杂度未直接套入本行。
+各来源的划分、初始化及评估协议不完全一致，
+复杂度沿用原文统计，不据此统一排名。
+“--”表示缺少该指标或尚未完成对应配置核实。
+
+本地三种子结果为均值$\pm$样本标准差，
+三个训练种子共享同一划分；
+输入为 $640\times640$，物理训练batch size为16。
+三种子 Original 包含历史断点恢复记录。
+$^{\dagger}$表示复用三种子实验中的RGSP seed 0，
+不构成额外独立重复；
+单种子组的Original为新增运行。
+本地P、R为评估器的最优F1工作点结果。
+\end{minipage}
+\end{table*}
+
+在本地三种子实验中，
+RGSP 的 AP$_{50}$ 均值为 $97.73\%$，
+比 Original 高 $0.41$ 个百分点；
+但 AP$_{75}$ 从 $52.82\%$ 降至 $49.11\%$，
+AP$_{50:95}$ 从 $53.35\%$ 降至 $51.98\%$。
+主要指标的逐种子配对差分别为
+$-4.71$、$-0.78$ 和 $+1.39$ 个百分点，
+平均为 $-1.37\pm3.09$ 个百分点。
+因此，宽松 IoU 条件下的改善
+没有转化为较严格定位指标上的提高。
+
+单种子对照也呈现相同的主要指标变化方向：
+RGSP 的 AP$_{50:95}$ 为 $49.00\%$，
+低于 Original 的 $54.09\%$
+和 YOLOv8n 的 $52.73\%$。
+完整配置在当前设置下仍存在定位性能下降的问题。
+由于测试集仅包含 44 张阳性图像，
+这些结果描述有目标场景下的检测表现，
+纯背景图像上的误检表现仍需另行评估。
+
+\textbf{SAR-ShipDataset。}
+表~\ref{tab:sarship_detection_comparison}
+给出 SAR-ShipDataset 上的结果。
+文献方法包括 SAR 舰船检测的 Improved FCOS、
+跨模态特征迁移方法 CMFT、
+通用扩散式检测器 DiffusionDet，
+以及 DiffDet4SAR 和 MaDiNet。
+方法出处采用各自正式版本，
+本表性能数值则统一取自 MaDiNet 的2024年作者稿
+（arXiv:2411.07500v1，Table 4）~\cite{madinet_preprint}。
+两者不混用为同一版本的报告。
+
+本地结果沿用历史 Mamba-YOLO-T 基线
+以及 IG-DS-SSM/PFIM 的 T、S 规模配置。
+IG-DS-SSM/PFIM 是内部历史方法名称，
+不等同于当前完整 RGSP 配置在统一协议下的独立重复。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{SAR-ShipDataset 上的目标检测结果（\%）。
+文献结果按方法年份排列，数值来源以上标标注；
+不同来源与本地历史记录的实验协议未完全统一。}
+\label{tab:sarship_detection_comparison}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccrrrrrrr}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{Publication}
+& \multicolumn{5}{c}{Detection metrics ($\uparrow$)}
+& \multicolumn{2}{c}{Complexity ($\downarrow$)} \\
+\cmidrule(lr){2-3}
+\cmidrule(lr){4-8}
+\cmidrule(lr){9-10}
+& Venue & Year
+& P & R & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$
+& Params (M) & FLOPs (G) \\
+\midrule
+Faster R-CNN~\cite{fasterrcnn2015}$^{A}$
+& NeurIPS & 2015
+& 82.5 & 95.1 & 93.1 & -- & -- & -- & -- \\
+RetinaNet~\cite{retinanet2017}$^{A}$
+& ICCV & 2017
+& 86.5 & 94.9 & 93.4 & -- & -- & -- & -- \\
+Cascade R-CNN~\cite{cascadercnn2018}$^{A}$
+& CVPR & 2018
+& 87.6 & 94.3 & 92.7 & -- & -- & -- & -- \\
+YOLOv3~\cite{yolov32018}$^{A}$
+& arXiv & 2018
+& 84.5 & 89.2 & 88.8 & -- & -- & -- & -- \\
+CenterNet~\cite{centernet2019}$^{A}$
+& ICCV & 2019
+& 90.3 & 93.5 & 92.1 & -- & -- & -- & -- \\
+FCOS~\cite{fcos2019}$^{A}$
+& ICCV & 2019
+& 90.4 & 94.1 & 92.8 & -- & -- & -- & -- \\
+YOLOv4~\cite{yolov42020}$^{A}$
+& arXiv & 2020
+& 79.4 & 73.8 & 77.9 & -- & -- & -- & -- \\
+YOLOv5n~\cite{yolov52020}$^{A}$
+& Software & 2020
+& 85.9 & 90.0 & 89.3 & -- & -- & -- & -- \\
+PP-YOLO$^{C}$
+& arXiv & 2020
+& -- & -- & 92.6 & 62.3 & 55.9 & -- & 9.153 \\
+PP-YOLOv2$^{C}$
+& arXiv & 2021
+& -- & -- & 94.7 & 70.1 & 60.3 & -- & 9.153 \\
+Improved FCOS~\cite{improvedfcos2022}$^{A}$
+& JSTARS & 2022
+& 89.8 & 95.2 & 94.1 & -- & -- & -- & -- \\
+PP-YOLOE$^{C}$
+& arXiv & 2022
+& -- & -- & 93.8 & 66.8 & 59.2 & -- & 8.879 \\
+YOLOv7~\cite{yolov72023}$^{A}$
+& CVPR & 2023
+& 83.8 & 81.9 & 86.1 & -- & -- & -- & -- \\
+YOLOv8$^{C}$
+& Software & 2023
+& -- & -- & 93.2 & 64.2 & 57.7 & -- & 15.378 \\
+CMFT~\cite{cmft2023}$^{A}$
+& TGRS & 2023
+& 90.1 & 94.4 & 94.5 & -- & -- & -- & -- \\
+DiffusionDet~\cite{diffusiondet2023}$^{A}$
+& ICCV & 2023
+& 92.1 & 94.9 & 95.0 & -- & -- & -- & -- \\
+LRTransDet~\cite{lrtransdet2023}$^{B}$
+& Remote Sens. & 2023
+& 92.6 & 91.5 & 95.1 & -- & -- & 3.07 & 0.96 \\
+ConsistencyDet$^{A}$
+& arXiv & 2024
+& 90.3 & 93.1 & 94.2 & -- & -- & -- & -- \\
+DiffDet4SAR~\cite{diffdet4sar2024}$^{A}$
+& GRSL & 2024
+& 92.1 & 95.0 & 95.1 & -- & -- & -- & -- \\
+YOLOv10$^{C}$
+& NeurIPS & 2024
+& -- & -- & 93.7 & 67.5 & 59.2 & -- & 9.632 \\
+YOLO11$^{C}$
+& Software & 2024
+& -- & -- & 93.4 & 65.5 & 58.1 & -- & 14.664 \\
+MaDiNet~\cite{madinet2025}$^{A}$
+& TCSVT & 2025
+& 96.2 & 95.6 & 97.5 & -- & -- & -- & -- \\
+TPNet~\cite{tpnet2025}$^{C}$
+& Remote Sens. & 2025
+& -- & -- & 95.7 & 71.4 & 62.1 & -- & 0.486 \\
+\midrule
+\multicolumn{10}{l}{
+\textit{本地历史记录：不同训练配置，未使用测试时增强}} \\
+Mamba-YOLO-T~\cite{mambayolo2024}
+& AAAI & 2025
+& -- & -- & 94.62 & -- & 49.57 & -- & -- \\
+IG-DS-SSM/PFIM-T
+& Internal & --
+& -- & -- & 94.84 & -- & 57.82 & -- & -- \\
+IG-DS-SSM/PFIM-S
+& Internal & --
+& -- & -- & 95.61 & -- & 53.18 & -- & -- \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+$^{A}$数值转引自 MaDiNet 作者稿
+arXiv:2411.07500v1~\cite{madinet_preprint}，Table~4；
+其 P、R 在置信度阈值 0.5 下计算。
+方法出处与数值来源分别标注，
+MaDiNet 行的期刊年份不表示数值取自正式期刊版本。
+$^{B}$数值取自 LRTransDet~\cite{lrtransdet2023}
+的 SAR-ShipDataset 实验。
+$^{C}$数值取自 TPNet~\cite{tpnet2025}，Table~4；
+其中 AP 对应 AP$_{50:95}$，
+YOLO 系列沿用来源中的名称，未自行指定模型规模。
+Params、FLOPs 为对应来源报告值，
+尚未统一输入尺寸和计算口径，不据此统一排名；
+-- 表示未报告或尚未核实与该行配置对应的数值。
+Improved FCOS 为 SAR 舰船改进模型，不等同于通用 FCOS。
+Internal 表示本地历史配置，T、S 为模型规模标记，
+不等同于当前 RGSP Full。
+本地记录的初始化、批大小调度、模型规模和训练预算
+尚未全部统一，不将其差值解释为严格组件增益。
+\end{minipage}
+\end{table*}
+
+历史 IG-DS-SSM/PFIM-T 的 AP$_{50}$ 为 $94.84\%$，
+相对 Mamba-YOLO-T 提高 $0.23$ 个百分点；
+AP$_{50:95}$ 从 $49.57\%$ 提高至 $57.82\%$，
+增加 $8.25$ 个百分点。
+历史 S 规模方法的 AP$_{50}$ 为 $95.61\%$，
+高于 T 规模方法，但 AP$_{50:95}$ 为 $53.18\%$，
+低于 T 规模方法。
+这些结果体现不同配置在宽松匹配和综合定位指标上的差异；
+由于历史实验条件尚未全部统一，
+其性能变化仍需在固定协议下进一步验证。
+
+\FloatBarrier
+\subsubsection{图像分类}
+\label{sec:classification_results}
+
+本节在 SAR-ACD 和 SAMPLE 上比较分类性能，
+采用 Accuracy 和 Macro-F1 作为评价指标。
+各数据集分别使用一张表汇总文献结果与本地结果，
+已核实出处的方法按发表年份排列，
+本地基线、结构匹配控制与本文方法列于表格末尾。
+文献中定义相同的 OA 统一记为 Accuracy；
+``--'' 表示来源未报告该项指标，
+或尚未核实其与对应实验配置的关系。
+加粗仅表示本地同协议比较中的最高值。
+参数量与计算量采用能够确认来源的报告值，
+不同输入尺寸和统计口径下的复杂度不作统一排名。
+不同类别组成、数据划分和训练设置下的文献结果
+仅作为性能参照，不与本地结果直接计算性能增益。
+
+\textbf{SAR-ACD。}
+表~\ref{tab:saracd_performance}
+给出 SAR-ACD 上的分类性能比较，
+涵盖通用 CNN、Transformer
+及 SAR 专用分类方法，
+并补充近期的 Light-ResKAN 和 MDBDPL
+\cite{summit2025,busip2025,lightreskan2026,mdbdpl2027}。
+文献结果采用六类设置，
+本文采用五类固定划分，
+各来源的数据划分与训练配置亦存在差异，
+因此不对全部方法进行统一排名。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{SAR-ACD 上的分类性能比较（\%）。
+上标标识数值来源与实验协议；
+加粗仅表示本地同协议比较中的最高值。}
+\label{tab:saracd_performance}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccrrrr}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{Publication}
+& \multicolumn{2}{c}{Classification metrics ($\uparrow$)}
+& \multicolumn{2}{c}{Complexity ($\downarrow$)} \\
+\cmidrule(lr){2-3}
+\cmidrule(lr){4-5}
+\cmidrule(lr){6-7}
+& Venue & Year
+& Accuracy & Macro-F1
+& Params (M) & FLOPs (G) \\
+\midrule
+AlexNet$^{B}$
+& NeurIPS & 2012
+& 91.65 & -- & -- & -- \\
+VGGNet$^{B}$
+& ICLR & 2015
+& 92.30 & -- & -- & -- \\
+GoogLeNet$^{B}$
+& CVPR & 2015
+& 93.61 & -- & -- & -- \\
+ResNet$^{B}$
+& CVPR & 2016
+& 92.79 & -- & -- & -- \\
+ResNet-50$^{A}$
+& CVPR & 2016
+& 84.08 & -- & -- & -- \\
+A-ConvNet$^{B}$
+& TGRS & 2016
+& 90.12 & -- & -- & -- \\
+ViT$^{A}$
+& ICLR & 2021
+& 93.20 & -- & -- & -- \\
+Swin-T$^{A}$
+& ICCV & 2021
+& 85.74 & -- & -- & -- \\
+Swin-B$^{A}$
+& ICCV & 2021
+& 86.24 & -- & -- & -- \\
+BU-SIP~\cite{busip2025}$^{B}$
+& arXiv & 2025
+& 95.43 & -- & -- & -- \\
+Light-ResKAN~\cite{lightreskan2026}$^{C}$
+& arXiv & 2026
+& 97.26 & -- & 0.82 & -- \\
+MDBDPL~\cite{mdbdpl2027}$^{D}$
+& Signal Process. & 2027
+& 98.85 & -- & -- & -- \\
+Lm-BN-CNN$^{B}$
+& -- & --
+& 87.34 & -- & -- & -- \\
+CBAM Net$^{B}$
+& -- & --
+& 92.66 & -- & -- & -- \\
+VIB Net$^{B}$
+& -- & --
+& 93.50 & -- & -- & -- \\
+\midrule
+\multicolumn{7}{l}{
+\textit{本地实验：五类，固定划分，从头训练，seed 0}} \\
+Original
+& This work & --
+& \textbf{94.88} & \textbf{94.82} & -- & -- \\
+Matched075
+& This work & --
+& 92.13 & 92.05 & -- & -- \\
+RGSP (Ours)
+& This work & --
+& 92.91 & 92.95 & -- & -- \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+$^{A}$数值取自 SUMMIT~\cite{summit2025} 的 Table~5，
+采用六类、100\%训练数据设置；
+来源以验证集准确率评估，
+不视为与本地独立测试等价的结果。
+仅保留该文献报告的普通模型基线，
+不列入自监督预训练方法 SUMMIT。
+$^{B}$数值取自 BU-SIP~\cite{busip2025} 的 Table~7，
+采用六类、每类200张训练图像的设置。
+$^{C}$数值取自 Light-ResKAN~\cite{lightreskan2026}，
+采用六类、约$7:3$训练/测试划分。
+参数量为来源报告值；
+其计算量描述采用每批次口径，
+未直接填入单图 FLOPs 列。
+$^{D}$数值取自 MDBDPL~\cite{mdbdpl2027}，
+采用六类、$8:2$训练/测试划分；
+来源报告的 F1 未确认采用宏平均，
+故不填入 Macro-F1 列。
+该文献于2026年在线发表，
+正式卷期为2027年，表中按正式卷期标注年份。
+Publication 为方法出处，
+不表示数值直接取自方法原论文。
+ResNet、VGGNet、CBAM Net 和 VIB Net
+沿用来源名称，不自行指定网络深度或模型规模；
+出处未核实的条目列于文献组末尾。
+本地训练/验证/测试图像数为2003/251/254，
+Original、Matched075 与 RGSP
+共享相同划分和训练协议。
+未核实的复杂度不以标准 ImageNet 模型的默认值代填。
+\end{minipage}
+\end{table*}
+
+在本地五类设置下，
+Original 的 Accuracy 和 Macro-F1
+分别为 $94.88\%$ 和 $94.82\%$，
+RGSP 分别为 $92.91\%$ 和 $92.95\%$，
+下降 $1.97$ 和 $1.87$ 个百分点。
+两个指标的变化方向一致，
+表明完整 RGSP 在当前从头训练设置下
+未改善相对 Original 的分类性能。
+Matched075 的 Accuracy 和 Macro-F1
+分别为 $92.13\%$ 和 $92.05\%$；
+RGSP 相对该结构匹配控制
+分别提高 $0.79$ 和 $0.90$ 个百分点，
+但仍未达到 Original 的水平。
+因此，整块替换相对原始模型的效果，
+与新增组件相对匹配结构的效果，
+需要分别判断。
+外部六类结果采用不同类别组成和实验协议，
+不与本文五类结果直接排名。
+
+\textbf{SAMPLE。}
+表~\ref{tab:sample_performance}
+给出 SAMPLE 上的分类性能比较。
+外部结果主要采用 MLDA 文献报告的
+合成数据训练、实测数据测试协议，
+并补充 IRASNet 的 Scenario~1 结果
+\cite{mlda2025,irasnet2025}。
+两项来源均采用
+$14^\circ$--$16^\circ$合成数据训练、
+$17^\circ$实测数据测试，
+但数据增强和训练配置不同。
+本文采用仅包含实测数据的闭集协议，
+分别考察实测数据内部的类别识别能力；
+该任务与外部合成到实测的跨域泛化任务不同。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{SAMPLE 上的分类性能比较（\%）。
+合成到实测与 real-only 闭集协议分别列示；
+加粗仅表示本地同协议比较中的最高值。}
+\label{tab:sample_performance}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccrrrr}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{Publication}
+& \multicolumn{2}{c}{Classification metrics ($\uparrow$)}
+& \multicolumn{2}{c}{Complexity ($\downarrow$)} \\
+\cmidrule(lr){2-3}
+\cmidrule(lr){4-5}
+\cmidrule(lr){6-7}
+& Venue & Year
+& Accuracy & Macro-F1
+& Params (M) & FLOPs (G) \\
+\midrule
+ResNet-50$^{A,B}$
+& CVPR & 2016
+& $48.37\pm3.73$ & $45.54\pm3.75$
+& 23.52 & 1.32 \\
+A-ConvNet$^{A,B}$
+& TGRS & 2016
+& $52.36\pm3.97$ & $48.47\pm3.66$
+& 0.30 & 0.20 \\
+CORAL$^{A}$
+& ECCV & 2016
+& $87.76\pm2.58$ & $86.92\pm2.67$
+& -- & -- \\
+DANN$^{A}$
+& JMLR & 2016
+& $90.42\pm2.06$ & $89.87\pm2.14$
+& -- & -- \\
+Inkawhich et al.$^{A,B}$
+& JSTARS & 2021
+& $94.91\pm1.61$ & $94.83\pm1.58$
+& 11.18 & 0.60 \\
+VREx$^{A,B}$
+& ICML & 2021
+& $92.64\pm2.09$ & $92.67\pm1.89$
+& 23.52 & 1.32 \\
+HDANet$^{A,B}$
+& JSTARS & 2023
+& $86.21\pm2.61$ & $85.79\pm2.47$
+& 12.28 & 0.90 \\
+SSR~\cite{ssr2024}$^{A}$
+& IEEE Access & 2024
+& $94.69\pm1.19$ & $94.65\pm1.21$
+& -- & -- \\
+IRASNet~\cite{irasnet2025}$^{C}$
+& TAES & 2025
+& 97.40 & --
+& -- & -- \\
+MLDA~\cite{mlda2025}$^{A,\dagger}$
+& Remote Sens. & 2025
+& $96.76\pm1.34$ & $96.70\pm1.29$
+& -- & -- \\
+ERM$^{A,B}$
+& -- & --
+& $91.78\pm1.86$ & $90.97\pm1.72$
+& 23.52 & 1.32 \\
+\midrule
+\multicolumn{7}{l}{
+\textit{本地实验：real-only，固定划分，从头训练，seed 0}} \\
+Original
+& This work & --
+& 97.04 & 96.81 & -- & -- \\
+Matched075
+& This work & --
+& \textbf{98.52} & \textbf{98.35} & -- & -- \\
+RGSP (Ours)
+& This work & --
+& 97.78 & 97.70 & -- & -- \\
+\addlinespace
+\multicolumn{7}{l}{\textit{新增本地实验：合成训练/验证$\rightarrow17^\circ$实测测试，3 seeds，scratch}} \\
+ResNet-50
+& CVPR & 2016
+& $\mathbf{4.70\pm2.56}$ & $\mathbf{5.76\pm3.28}$ & -- & -- \\
+Original
+& This work & --
+& $3.96\pm2.70$ & $2.40\pm2.14$ & -- & -- \\
+Matched075
+& This work & --
+& $3.59\pm3.19$ & $1.89\pm0.97$ & -- & -- \\
+RGSP (Ours)
+& This work & --
+& $4.33\pm6.38$ & $1.52\pm2.12$ & -- & -- \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+$^{A}$分类结果取自 MLDA~\cite{mlda2025} 的 Table~2：
+采用$14^\circ$--$16^\circ$合成数据训练，
+在$17^\circ$实测数据上测试；
+均值与标准差沿用来源报告。
+SSR 为 Soft Segmented Randomization，
+该行数值采用 MLDA 文献中的比较结果。
+$^{B}$复杂度取自同文 Table~4，
+对应单张$128\times128$输入的推理模型；
+不包含仅在训练阶段使用的辅助模块。
+$^{C}$IRASNet 的数值取自作者稿
+arXiv:2409.16845v1 的 Table~III、Scenario~1，
+同样采用$14^\circ$--$16^\circ$合成数据训练、
+$17^\circ$实测数据测试，
+训练阶段不使用实测数据。
+97.40为五次独立实验的平均准确率，
+来源未报告相应标准差和 Macro-F1。
+该行列出正式期刊出处，
+数值来源为上述作者稿；
+其增强方式和训练配置与$^{A}$组不同。
+$^{\dagger}$MLDA 原文 Table~4 中骨干名称
+与准确率的对应关系存在冲突，
+故保留 Table~2 的分类结果，
+暂不配填参数量和计算量。
+Publication 为方法出处，
+不表示该行数值直接取自方法原论文。
+ERM 为来源中的经验风险最小化训练基线，
+不赋予独立发表年份。
+本地仅使用实测图像，
+训练/验证/测试图像数为1075/135/135，
+Original、Matched075 与 RGSP
+共享相同划分和训练协议。
+外部与本地复杂度尚未统一测量。
+
+新增合成到实测组采用645/161/539的训练/验证/测试划分，
+seed 0、1、2的均值$\pm$样本标准差；
+物理batch size 16、梯度累积4、FP32，AdamW初始学习率
+$2\times10^{-4}$、权重衰减$5\times10^{-4}$，
+3轮线性预热后线性衰减，最大150轮、早停patience 30。
+依据合成验证集Macro-F1选择EMA检查点，
+实测测试集仅用于最终评估；
+截至2026年10月12日23:25三个种子均完成。
+新增组复杂度保持空缺，上方real-only成绩及文献成绩保持原协议。
+\end{minipage}
+\end{table*}
+
+在本地 real-only 设置下，
+RGSP 的 Accuracy 从 $97.04\%$ 提高至 $97.78\%$，
+Macro-F1 从 $96.81\%$ 提高至 $97.70\%$，
+分别增加 $0.74$ 和 $0.89$ 个百分点。
+Accuracy 的变化对应135张测试图像中
+增加一张正确分类图像，
+因此当前观察到的改善幅度较小。
+Matched075 的 Accuracy 和 Macro-F1
+分别为 $98.52\%$ 和 $98.35\%$，
+均高于 RGSP；
+相对 Matched075，RGSP 分别下降
+$0.74$ 和 $0.65$ 个百分点。
+因此，RGSP 相对 Original 的小幅改善
+尚不足以证明新增组件优于相同替换块结构。
+外部方法的合成到实测结果用于提供跨域泛化参照，
+不与本文 real-only 结果直接计算性能增益。
+
+两个分类数据集呈现不同的变化方向：
+相对 Original，RGSP 在 SAMPLE 上小幅改善，
+在 SAR-ACD 上下降；
+相对 Matched075，RGSP 在 SAR-ACD 上提高，
+在 SAMPLE 上下降。
+当前单种子实验未显示整块替换的跨数据集一致增益，
+也未显示新增组件组合相对匹配结构的一致优势。
+\subsubsection{变化检测}
+\label{sec:change_detection_results}
+
+本节在 Ottawa 上比较变化检测性能，
+考察 RGSP 在双时相像素级变化识别中的表现。
+表~\ref{tab:ottawa_performance}
+汇总文献结果与本地对照，
+文献方法按发表年份排列，
+本地基线、结构匹配控制与本文方法列于表格末尾。
+外部结果包括 SARCDNet 文献报告的
+DDNet、LANTNet、CAMixer、MDDNet 和 WBANet，
+并补充 Ihmeida 等人的高置信聚类与轻量 U-Net 方法，
+以及近期的 WASNet
+\cite{sarcdnet2026,ihmeida2025,wasnet2026}。
+
+外部方法采用各自的预处理、训练样本构造
+和图像对评估协议。
+其中，SARCDNet 和 Ihmeida 等人的方法
+利用聚类产生可靠伪标签，
+在对应图像对上训练并生成变化图。
+本文采用固定的训练、验证和测试区域划分，
+依据验证集选择判定阈值并固定用于测试。
+本地 Original、Matched075 和 RGSP
+采用相同的双时相网络框架、
+差分特征构造和解码头，
+均从头训练，使用 seed 0。
+三者统一采用 AdamW 优化器，
+初始学习率为 $2\times10^{-4}$，
+权重衰减为 $5\times10^{-4}$，
+采用余弦学习率调度。
+模型输入尺寸为 $192\times192$，
+训练 batch size 为16，
+最大训练轮数为150，
+早停 patience 为25，
+不设置模块预热。
+各配置使用相同的验证集选模规则，
+实际训练轮数可因早停而不同。
+
+重叠预测聚合到原始像素后评估，
+每个测试像素仅计一次。
+评价指标包括 Precision、Recall、F1、IoU 和 OA。
+来源中与 OA 定义相同的 PCC 统一记为 OA，
+以比例报告的 F1 转换为百分数。
+``--'' 表示来源未报告该项指标，
+或尚未核实其与对应配置的关系；
+加粗仅表示本地同协议比较中的最高值。
+文献整图结果与本地测试区域结果不作统一排名。
+复杂度采用来源报告值并注明统计口径，
+不将逐像素图块模型的计算量
+与本地双时相网络的计算量直接比较。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{Ottawa 上的变化检测性能比较（\%）。
+上标标识数值来源；
+文献整图结果与本地测试区域结果不作统一排名。}
+\label{tab:ottawa_performance}
+\begin{tabular*}{\textwidth}
+{@{\extracolsep{\fill}}lccrrrrrrr}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{Publication}
+& \multicolumn{5}{c}{Detection metrics ($\uparrow$)}
+& \multicolumn{2}{c}{Complexity ($\downarrow$)} \\
+\cmidrule(lr){2-3}
+\cmidrule(lr){4-8}
+\cmidrule(lr){9-10}
+& Venue & Year
+& P & R & F1 & IoU & OA
+& Params (M) & FLOPs (G) \\
+\midrule
+DDNet$^{A,D}$
+& GRSL & 2022
+& -- & -- & 94.10 & -- & 98.17
+& 0.006710 & $1.1486\times10^{-4}$ \\
+LANTNet$^{A,D}$
+& GRSL & 2022
+& -- & -- & 94.50 & -- & 98.30
+& 0.024960 & 0.001210 \\
+CAMixer$^{A,D}$
+& GRSL & 2023
+& -- & -- & 93.90 & -- & 98.13
+& 0.034210 & $3.3386\times10^{-4}$ \\
+MDDNet$^{A,D}$
+& CONECCT & 2024
+& -- & -- & 94.50 & -- & 98.30
+& 7.098000 & 0.350000 \\
+WBANet$^{A,D}$
+& GRSL & 2024
+& -- & -- & 94.20 & -- & 98.22
+& 0.007160 & $2.3550\times10^{-5}$ \\
+Ihmeida et al.~\cite{ihmeida2025}$^{B}$
+& LNAI & 2025
+& -- & -- & 94.19 & 89.02 & 98.26
+& -- & -- \\
+SARCDNet~\cite{sarcdnet2026}$^{A,D}$
+& Sci. Rep. & 2026
+& -- & -- & 94.90 & -- & 98.41
+& 0.006287 & $4.7160\times10^{-5}$ \\
+WASNet~\cite{wasnet2026}$^{C}$
+& IJRS & 2026
+& -- & -- & 95.14 & -- & --
+& -- & -- \\
+\midrule
+\multicolumn{10}{l}{
+\textit{本地实验：固定测试区域，从头训练，seed 0}} \\
+Original
+& This work & --
+& 96.18 & \textbf{96.66}
+& 96.42 & 93.09 & 98.91
+& -- & -- \\
+Matched075
+& This work & --
+& 96.27 & 96.34
+& 96.31 & 92.88 & 98.88
+& -- & -- \\
+RGSP (Ours)
+& This work & --
+& \textbf{96.97} & 96.48
+& \textbf{96.73} & \textbf{93.66} & \textbf{99.01}
+& -- & -- \\
+\addlinespace
+\multicolumn{10}{l}{\textit{新增本地复现：图像伪标签、传导式整图评估，3 seeds，scratch}} \\
+DDNet
+& GRSL & 2022
+& $95.98\pm0.42$ & $\mathbf{92.82\pm1.23}$ & $94.37\pm0.47$ & $89.34\pm0.85$ & $98.25\pm0.13$
+& -- & -- \\
+LANTNet
+& GRSL & 2022
+& $96.35\pm0.43$ & $92.69\pm0.59$ & $\mathbf{94.48\pm0.17}$ & $\mathbf{89.54\pm0.31}$ & $\mathbf{98.29\pm0.05}$
+& -- & -- \\
+CAMixer
+& GRSL & 2023
+& $96.37\pm0.69$ & $92.51\pm1.13$ & $94.39\pm0.26$ & $89.38\pm0.47$ & $98.26\pm0.07$
+& -- & -- \\
+WBANet
+& GRSL & 2024
+& $\mathbf{96.37\pm0.22}$ & $91.52\pm0.48$ & $93.88\pm0.28$ & $88.47\pm0.51$ & $98.11\pm0.08$
+& -- & -- \\
+WASNet
+& IJRS & 2026
+& $95.77\pm0.29$ & $92.17\pm0.81$ & $93.93\pm0.28$ & $88.56\pm0.51$ & $98.12\pm0.08$
+& -- & -- \\
+\addlinespace
+\multicolumn{10}{l}{\textit{新增本地实验：有监督固定测试区域，统一150轮上限协议，3 seeds，scratch}} \\
+Original
+& This work & --
+& $\mathbf{95.36\pm1.66}$ & $96.34\pm0.90$ & $\mathbf{95.84\pm0.42}$ & $\mathbf{92.01\pm0.78}$ & $\mathbf{98.73\pm0.15}$
+& -- & -- \\
+Matched075
+& This work & --
+& $94.84\pm0.68$ & $\mathbf{96.63\pm0.60}$ & $95.72\pm0.30$ & $91.80\pm0.55$ & $98.69\pm0.09$
+& -- & -- \\
+RGSP (Ours)
+& This work & --
+& $93.79\pm0.45$ & $96.46\pm0.68$ & $95.11\pm0.51$ & $90.67\pm0.93$ & $98.50\pm0.15$
+& -- & -- \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+$^{A}$性能取自 SARCDNet~\cite{sarcdnet2026} 的 Table~2。
+$^{B}$性能取自 Ihmeida 等人~\cite{ihmeida2025}
+作者稿的 Table~1，
+采用差异图融合、高置信 FCM 伪标签
+和轻量 Mini-U-Net 的图像对评估协议；
+LNAI 为其收录系列。
+$^{C}$F1 取自 WASNet~\cite{wasnet2026} 的 Table~1，
+其训练设置不与$^{A}$、$^{B}$组视为完全一致。
+$^{D}$复杂度取自 SARCDNet 的 Table~4，
+将 Parameters (K) 和 FLOPs (K)
+分别换算为 M 和 G；
+保留来源统计口径，
+未统一核实输入图块尺寸、算子覆盖
+及整图推理累计计算量。
+Publication 为方法出处，
+不表示数值直接取自方法原论文。
+DDNet 按正式卷期标注2022年，在线发表年份为2021年。
+MDDNet 指 CONECCT 2024 的 Modified Dual Domain Network。
+本地训练/验证/测试图块数为112/24/32，
+三个配置共享固定划分；
+原始图块尺寸为$48\times48$，
+模型预测映射回原始分辨率后聚合。
+测试包含18432个唯一像素，
+判定阈值由各模型的验证集结果确定并固定用于测试。
+
+新增两组均报告seed 0、1、2的均值$\pm$样本标准差，
+采用物理batch size 16、梯度累积4、FP32，AdamW初始学习率
+$2\times10^{-4}$、权重衰减$5\times10^{-4}$，
+3轮线性预热后线性衰减，最大150轮、早停patience 30。
+新增外部方法复现使用对应作者结构及图像伪标签，
+按伪标签验证损失选模；真实标签只用于最终整图评估，
+评估101500个像素，不属于原论文成绩的精确复现。
+新增有监督组保持112/24/32空间图块划分及18432个唯一测试像素，
+按验证集F1选择EMA检查点与判定阈值。
+两种监督和评估协议分别比较，不合并排名；
+新增组复杂度保持空缺。
+新增成绩截至2026年10月12日23:25均已完成，
+不替换上方文献成绩及旧单种子结果。
+\end{minipage}
+\end{table*}
+
+在本地一致协议下，
+RGSP 的 F1 从 $96.42\%$ 提高至 $96.73\%$，
+IoU 从 $93.09\%$ 提高至 $93.66\%$，
+分别增加 $0.31$ 和 $0.57$ 个百分点。
+Precision 从 $96.18\%$ 提高至 $96.97\%$，
+Recall 从 $96.66\%$ 降至 $96.48\%$。
+精确率提高与召回率小幅降低
+共同带来 F1 和 IoU 的有限改善。
+
+Matched075 的 F1 和 IoU
+分别为 $96.31\%$ 和 $92.88\%$；
+RGSP 相对该结构匹配控制
+分别提高 $0.42$ 和 $0.78$ 个百分点。
+因此，RGSP 在 Ottawa 上的改善
+同时出现在相对 Original
+和相对 Matched075 的比较中，
+但增益幅度较小。
+由于文献采用不同训练与评估协议，
+本地较高的数值不能直接解释为对外部方法的超越。
+当前结论限于 Ottawa 的单种子空间划分实验，
+尚不能据此推断跨场景泛化能力，
+也不能单独分离各组件的贡献。
+
+\FloatBarrier

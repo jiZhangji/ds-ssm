@@ -1,0 +1,35 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_full_seed0/config.json",
+      "sha256": "c6041296bd6b4e9a0541768549e2f2b06670871b76c0d9eec0bd9d55155a6ec8"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_full_seed0/initialization.json",
+      "sha256": "e4275a5abaa79e3b57a7a380289b6a24ab0bc0d5fba923dc46916a3fb0f413a2"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_full_seed0/metrics.jsonl",
+      "sha256": "2f31c06db433542b72a95463b303771b2cf22a6fea12ea11e4de0cb02bc1e8d5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_full_seed0/test_evaluation.json",
+      "sha256": "edae6832c601e476c12e18db1b68b6403b336b523d52150fb99869648d9bd0fe"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_full_seed0/result.json",
+      "sha256": "5e38bb395379772645c1429abe994561f978d8afe4d7d49aeaacf9ff1d139198"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_full_seed0/best.pt",
+      "sha256": "ad09b0afc37f88015d9063f25a0b8688accdec03fdedf83697f2192939db999f"
+    }
+  ],
+  "finished_utc": "2026-10-09T13:23:17.712694+00:00",
+  "identity_sha256": "66b705e2a16a20b466e23136ec78fc733bd10b51f374d15dba32c2eada8148dc",
+  "protocol_sha256": "0a35cf65390feca192d2d8e7df423b46cea401b091ede0f8ab9690eac6bf7838",
+  "schema": "rgsp-cross-trial-v1",
+  "seed": 0,
+  "status": "complete",
+  "variant": "full"
+}

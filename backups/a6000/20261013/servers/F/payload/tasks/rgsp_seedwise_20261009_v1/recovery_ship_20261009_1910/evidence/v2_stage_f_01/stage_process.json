@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/stage_shipdataset.py",
+    "--audit",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1945_f/archive_audit.json",
+    "--reviewed-audit-sha256",
+    "9092777ec2a04caaea06420cc5df715bf703cc3f1e4ec5538cbdff65edbf763d"
+  ],
+  "finished_utc": "2026-10-09T12:10:48.397508+00:00",
+  "returncode": 0
+}

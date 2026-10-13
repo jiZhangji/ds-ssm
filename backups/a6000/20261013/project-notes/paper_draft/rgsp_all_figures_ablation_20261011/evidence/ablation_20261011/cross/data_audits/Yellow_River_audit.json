@@ -1,0 +1,38 @@
+{
+  "all_referenced_files_exist_and_decode": true,
+  "annotation_policy": "fail",
+  "counts": {
+    "test": 16,
+    "train": 100,
+    "val": 16
+  },
+  "dataset": "Yellow_River",
+  "geometry": {
+    "buffer_zone_required_or_claimed": false,
+    "cross_split_intersection_count": 0,
+    "cross_split_touching_crop_pairs": 99,
+    "evaluation": "Resize predictions to native crop; mean overlapping probabilities; count each heldout source pixel once.",
+    "limitation": "One-scene spatial holdout, adjacent correlated regions; not unseen-scene generalization.",
+    "minimum_cross_split_rectangle_gap_pixels": 0.0,
+    "scene_disjoint": false,
+    "within_split_overlapping_crop_pairs": {
+      "test": 90,
+      "train": 531,
+      "val": 90
+    }
+  },
+  "ready": true,
+  "schema": "rgsp-cross-data-v1",
+  "source_counts": {
+    "test": 16,
+    "train": 100,
+    "val": 16
+  },
+  "source_files_modified": false,
+  "source_manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Yellow_River/manifest.json",
+  "source_manifest_sha256": "eac69f2def1a37daa7bc08a93328f567498b278e7002a83ae3fba4fd0c5a479f",
+  "source_records": 132,
+  "split_policy": "Preserve pre-existing label-balanced native 96px macroblocks; no split reoptimization.",
+  "task": "change_detection",
+  "unique_staged_files": 3
+}

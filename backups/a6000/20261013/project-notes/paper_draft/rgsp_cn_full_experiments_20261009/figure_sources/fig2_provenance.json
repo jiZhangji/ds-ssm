@@ -1,0 +1,1763 @@
+{
+  "artifact": "RGSP architecture redraw, integrated revision 2026-10-09",
+  "dimensions_mm": [
+    180,
+    160.2
+  ],
+  "format": "Native vector PDF; editable SVG text and paths; no raster assets",
+  "sources": {
+    "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\paper_draft\\rgsp_ieee2col_motivation_20261008\\main.tex": "fd7b1028e79570c40895e93f4867eb21ceef06578df435fb25dca4ee63a0ba77",
+    "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\source_code\\work_train_single\\ultralytics\\nn\\modules\\mamba_yolo.py": "c5248810985a825e32eeef4b276b821230ce1b999970e73ee9d87ecb8f5a7add",
+    "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\experiments\\rgsp_controls_20261008_v3\\evidence\\f\\seed0\\manifest\\configs\\full.yaml": "507b57012bb211fd9e346fc5bb549d5cba1b87647ede70caeb43179c9910a640",
+    "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\output\\figures\\rgsp_overall_network_20261007_v1.png": "74e1b48f2a2af0e030560124d011899ec8de4e1ffd8eceeb0a1f177a8b15927c",
+    "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\output\\figures\\sar_mamba_architecture_20261007_v1.png": "c29a85a1ead055c8b2d874b35ef716a45d826438f1656ae794e077e17e2b6d93"
+  },
+  "script_sha256": "8dea1539efece77be1d4ee3ef08ea7a83cbce601693a215f2bb77f682a9ad85d",
+  "pdf_sha256": "f62a2704abd07707b1b7974cdcc25aa80c81829ce42ba9800491de720be4a3d7",
+  "scientific_constraints": [
+    "Detection instantiation: one P3/8 replacement, P3/P4/P5 neck inputs.",
+    "Stage 4 output includes SPPF; downsampling is abstracted into stages.",
+    "Other tasks are separately configured, not simultaneous detector heads.",
+    "Local standard deviation takes corrected features, not the trend.",
+    "Guidance I is a trained structural signal, not calibrated reliability.",
+    "I conditions only input modulation and step-size generation.",
+    "B,C originate from u before input modulation.",
+    "Gamma and write gate multiply the same scan input.",
+    "Trend energy is feature RMS, not physical scattering energy.",
+    "The output bypass uses corrected x; output gating uses z.",
+    "Core R and the full residual/FFN block are distinct panels."
+  ],
+  "rendered_text": [
+    {
+      "text": "(a)  Detection network",
+      "size_pt": 9.2,
+      "left": 3,
+      "right": 36.9024267578125,
+      "baseline": 5.4
+    },
+    {
+      "text": "Mamba-YOLO-T instantiation",
+      "size_pt": 7.1,
+      "left": 144.42638102213542,
+      "right": 177.0,
+      "baseline": 5.4
+    },
+    {
+      "text": "SAR input",
+      "size_pt": 7.1,
+      "left": 2.161317477756077,
+      "right": 13.438682522243923,
+      "baseline": 23.400000000000002
+    },
+    {
+      "text": "Stem",
+      "size_pt": 7.8,
+      "left": 22.288826497395835,
+      "right": 28.71117350260417,
+      "baseline": 17.009999999999998
+    },
+    {
+      "text": "Stage 1",
+      "size_pt": 8,
+      "left": 42.135525173611114,
+      "right": 51.86447482638889,
+      "baseline": 15.5475
+    },
+    {
+      "text": "P2 / 4",
+      "size_pt": 8,
+      "left": 43.31305881076389,
+      "right": 50.686941189236116,
+      "baseline": 18.4725
+    },
+    {
+      "text": "Stage 2",
+      "size_pt": 8,
+      "left": 68.98049587673611,
+      "right": 79.01950412326389,
+      "baseline": 14.085
+    },
+    {
+      "text": "RGSP",
+      "size_pt": 8,
+      "left": 70.00093315972222,
+      "right": 77.99906684027778,
+      "baseline": 17.009999999999998
+    },
+    {
+      "text": "P3 / 8",
+      "size_pt": 8,
+      "left": 70.31305881076389,
+      "right": 77.68694118923611,
+      "baseline": 19.935
+    },
+    {
+      "text": "Stage 3",
+      "size_pt": 8,
+      "left": 96.13552517361111,
+      "right": 105.86447482638889,
+      "baseline": 15.5475
+    },
+    {
+      "text": "P4 / 16",
+      "size_pt": 8,
+      "left": 96.52826605902777,
+      "right": 105.47173394097221,
+      "baseline": 18.4725
+    },
+    {
+      "text": "Stage 4",
+      "size_pt": 7.6,
+      "left": 121.37874891493055,
+      "right": 130.62125108506945,
+      "baseline": 14.085
+    },
+    {
+      "text": "P5 / 32",
+      "size_pt": 7.6,
+      "left": 121.75185275607639,
+      "right": 130.2481472439236,
+      "baseline": 17.009999999999998
+    },
+    {
+      "text": "SPPF",
+      "size_pt": 7.6,
+      "left": 122.49871500651042,
+      "right": 129.50128499348958,
+      "baseline": 19.935
+    },
+    {
+      "text": "Multi-scale",
+      "size_pt": 7.5,
+      "left": 142.67803446451822,
+      "right": 155.32196553548175,
+      "baseline": 21.3975
+    },
+    {
+      "text": "neck",
+      "size_pt": 7.5,
+      "left": 146.20559692382812,
+      "right": 151.79440307617188,
+      "baseline": 24.322499999999998
+    },
+    {
+      "text": "Detection",
+      "size_pt": 7.4,
+      "left": 163.98571126302085,
+      "right": 175.01428873697918,
+      "baseline": 18.2475
+    },
+    {
+      "text": "head",
+      "size_pt": 7.4,
+      "left": 166.5962668185764,
+      "right": 172.4037331814236,
+      "baseline": 21.1725
+    },
+    {
+      "text": "P3",
+      "size_pt": 6.9,
+      "left": 119,
+      "right": 121.97733764648437,
+      "baseline": 29.25
+    },
+    {
+      "text": "P4",
+      "size_pt": 6.9,
+      "left": 111,
+      "right": 113.97733764648437,
+      "baseline": 24.75
+    },
+    {
+      "text": "RGSP block expanded in (b)",
+      "size_pt": 7.1,
+      "left": 58.12840203179253,
+      "right": 89.87159796820745,
+      "baseline": 35.46
+    },
+    {
+      "text": "(b)  RGSP block",
+      "size_pt": 9.2,
+      "left": 3,
+      "right": 27.523912217881943,
+      "baseline": 42.300000000000004
+    },
+    {
+      "text": "Spatial size and channels preserved",
+      "size_pt": 7.1,
+      "left": 136.76056125217013,
+      "right": 177.0,
+      "baseline": 42.300000000000004
+    },
+    {
+      "text": "Flatten",
+      "size_pt": 7.5,
+      "left": 13.455673217773438,
+      "right": 21.544326782226562,
+      "baseline": 56.61
+    },
+    {
+      "text": "LN",
+      "size_pt": 7.8,
+      "left": 33.241244303385415,
+      "right": 36.75875569661458,
+      "baseline": 56.61
+    },
+    {
+      "text": "State modeling R",
+      "size_pt": 7.6,
+      "left": 48.21673448350695,
+      "right": 68.78326551649306,
+      "baseline": 55.1475
+    },
+    {
+      "text": "see (c)",
+      "size_pt": 7.6,
+      "left": 54.403057996961806,
+      "right": 62.596942003038194,
+      "baseline": 58.072500000000005
+    },
+    {
+      "text": "",
+      "size_pt": 8.8,
+      "left": 81.5,
+      "right": 81.5,
+      "baseline": 56.61
+    },
+    {
+      "text": "a",
+      "size_pt": 9.2,
+      "left": 80.1044111111111,
+      "right": 81.72718888888889,
+      "baseline": 56.7
+    },
+    {
+      "text": "1",
+      "size_pt": 6.624,
+      "left": 81.72718888888889,
+      "right": 82.8955888888889,
+      "baseline": 57.375
+    },
+    {
+      "text": "LN",
+      "size_pt": 7.8,
+      "left": 101.24124430338541,
+      "right": 104.75875569661459,
+      "baseline": 56.61
+    },
+    {
+      "text": "FFN",
+      "size_pt": 7.7,
+      "left": 119.3598769124349,
+      "right": 124.6401230875651,
+      "baseline": 55.1475
+    },
+    {
+      "text": "GELU",
+      "size_pt": 7.7,
+      "left": 118.30144022623698,
+      "right": 125.69855977376302,
+      "baseline": 58.072500000000005
+    },
+    {
+      "text": "",
+      "size_pt": 8.8,
+      "left": 140.5,
+      "right": 140.5,
+      "baseline": 56.61
+    },
+    {
+      "text": "a",
+      "size_pt": 9.2,
+      "left": 139.10441111111112,
+      "right": 140.7271888888889,
+      "baseline": 56.7
+    },
+    {
+      "text": "2",
+      "size_pt": 6.624,
+      "left": 140.7271888888889,
+      "right": 141.89558888888888,
+      "baseline": 57.375
+    },
+    {
+      "text": "Reshape",
+      "size_pt": 7.4,
+      "left": 159.77506483289932,
+      "right": 170.2249351671007,
+      "baseline": 56.61
+    },
+    {
+      "text": "F",
+      "size_pt": 9.6,
+      "left": 3.56564453125,
+      "right": 5.63435546875,
+      "baseline": 56.7
+    },
+    {
+      "text": "+",
+      "size_pt": 8,
+      "left": 91.17593315972222,
+      "right": 92.82406684027778,
+      "baseline": 56.61
+    },
+    {
+      "text": "+",
+      "size_pt": 8,
+      "left": 150.17593315972223,
+      "right": 151.8240668402778,
+      "baseline": 56.61
+    },
+    {
+      "text": "Row-major, N = HW",
+      "size_pt": 7.0,
+      "left": 12,
+      "right": 34.02122260199653,
+      "baseline": 64.17
+    },
+    {
+      "text": "a",
+      "size_pt": 7.0,
+      "left": 109.87274763997397,
+      "right": 111.24613495551216,
+      "baseline": 64.17
+    },
+    {
+      "text": "1",
+      "size_pt": 5.04,
+      "left": 111.24613495551216,
+      "right": 112.23497382269966,
+      "baseline": 64.75500000000001
+    },
+    {
+      "text": ", a",
+      "size_pt": 7.0,
+      "left": 112.23497382269966,
+      "right": 114.9805426703559,
+      "baseline": 64.17
+    },
+    {
+      "text": "2",
+      "size_pt": 5.04,
+      "left": 114.9805426703559,
+      "right": 115.9693815375434,
+      "baseline": 64.75500000000001
+    },
+    {
+      "text": ": channel-wise scaling",
+      "size_pt": 7.0,
+      "left": 115.9693815375434,
+      "right": 140.12725236002603,
+      "baseline": 64.17
+    },
+    {
+      "text": "F",
+      "size_pt": 8.7,
+      "left": 171.6507387451172,
+      "right": 173.52550803222658,
+      "baseline": 64.17
+    },
+    {
+      "text": "out",
+      "size_pt": 6.263999999999999,
+      "left": 173.52550803222658,
+      "right": 176.34926125488283,
+      "baseline": 64.845
+    },
+    {
+      "text": "(c)  Structure-guided state modeling R",
+      "size_pt": 9.2,
+      "left": 3,
+      "right": 61.96515190972221,
+      "baseline": 72.9
+    },
+    {
+      "text": "Normalized sequence x → output o",
+      "size_pt": 7.1,
+      "left": 137.87716837565105,
+      "right": 177.0,
+      "baseline": 72.9
+    },
+    {
+      "text": "LRC",
+      "size_pt": 9.0,
+      "left": 18.737408447265626,
+      "right": 25.262591552734378,
+      "baseline": 81.18
+    },
+    {
+      "text": "Local response correction",
+      "size_pt": 7.5,
+      "left": 6.851699829101564,
+      "right": 37.14830017089844,
+      "baseline": 84.60000000000001
+    },
+    {
+      "text": "LSGM",
+      "size_pt": 9.0,
+      "left": 62.4142333984375,
+      "right": 71.5857666015625,
+      "baseline": 81.18
+    },
+    {
+      "text": "Local structure guidance",
+      "size_pt": 7.5,
+      "left": 52.586151123046875,
+      "right": 81.41384887695312,
+      "baseline": 84.60000000000001
+    },
+    {
+      "text": "Selective state update",
+      "size_pt": 9.0,
+      "left": 118.32427368164062,
+      "right": 151.67572631835938,
+      "baseline": 81.18
+    },
+    {
+      "text": "RMS → E",
+      "size_pt": 7.0,
+      "left": 101.51187676323785,
+      "right": 112.48812323676215,
+      "baseline": 89.73
+    },
+    {
+      "text": "x",
+      "size_pt": 9.1,
+      "left": 53.28756286621094,
+      "right": 54.71243713378907,
+      "baseline": 128.25
+    },
+    {
+      "text": "~",
+      "size_pt": 7.28,
+      "left": 53.25009917534722,
+      "right": 54.74990082465278,
+      "baseline": 126.72000000000001
+    },
+    {
+      "text": "u",
+      "size_pt": 8.9,
+      "left": 125.31506944444443,
+      "right": 126.88493055555554,
+      "baseline": 127.62000000000002
+    },
+    {
+      "text": "Local trend",
+      "size_pt": 7.3,
+      "left": 18.62907965766059,
+      "right": 31.370920342339407,
+      "baseline": 95.1975
+    },
+    {
+      "text": "DWConv1D, k=3",
+      "size_pt": 7.3,
+      "left": 15.37540228949653,
+      "right": 34.62459771050347,
+      "baseline": 98.1225
+    },
+    {
+      "text": "Residual correction",
+      "size_pt": 7.4,
+      "left": 13.827383083767362,
+      "right": 36.17261691623264,
+      "baseline": 117.135
+    },
+    {
+      "text": "r = x - x̄",
+      "size_pt": 7.4,
+      "left": 20.612533094618055,
+      "right": 29.38746690538194,
+      "baseline": 120.06
+    },
+    {
+      "text": "",
+      "size_pt": 7.4,
+      "left": 25.0,
+      "right": 25.0,
+      "baseline": 122.98500000000001
+    },
+    {
+      "text": "x̃ = x - λ",
+      "size_pt": 7.4,
+      "left": 19.489994205729168,
+      "right": 28.700870399305558,
+      "baseline": 122.98500000000001
+    },
+    {
+      "text": "s",
+      "size_pt": 5.328,
+      "left": 28.700870399305558,
+      "right": 29.640670399305556,
+      "baseline": 123.57000000000001
+    },
+    {
+      "text": "r",
+      "size_pt": 7.4,
+      "left": 29.640670399305556,
+      "right": 30.510005794270832,
+      "baseline": 122.98500000000001
+    },
+    {
+      "text": "x",
+      "size_pt": 9.5,
+      "left": 4.756246948242188,
+      "right": 6.243753051757813,
+      "baseline": 108.9
+    },
+    {
+      "text": "x",
+      "size_pt": 9.1,
+      "left": 27.787562866210937,
+      "right": 29.212437133789063,
+      "baseline": 108.0
+    },
+    {
+      "text": "Trend",
+      "size_pt": 7.8,
+      "left": 51.405904134114586,
+      "right": 58.59409586588542,
+      "baseline": 97.4475
+    },
+    {
+      "text": "x̄",
+      "size_pt": 7.8,
+      "left": 54.312083333333334,
+      "right": 55.687916666666666,
+      "baseline": 100.3725
+    },
+    {
+      "text": "Local std.",
+      "size_pt": 7.5,
+      "left": 49.337554931640625,
+      "right": 60.662445068359375,
+      "baseline": 117.2475
+    },
+    {
+      "text": "3 × 3",
+      "size_pt": 7.5,
+      "left": 52.020853678385414,
+      "right": 57.97914632161458,
+      "baseline": 120.17250000000001
+    },
+    {
+      "text": "Concat",
+      "size_pt": 6.1,
+      "left": 66.09082824707032,
+      "right": 72.9091717529297,
+      "baseline": 108.81
+    },
+    {
+      "text": "LN",
+      "size_pt": 6.2,
+      "left": 79.10201470269097,
+      "right": 81.89798529730902,
+      "baseline": 105.885
+    },
+    {
+      "text": "MLP",
+      "size_pt": 6.2,
+      "left": 78.25136895073784,
+      "right": 82.74863104926214,
+      "baseline": 108.81
+    },
+    {
+      "text": "Sigmoid",
+      "size_pt": 6.2,
+      "left": 76.5490094672309,
+      "right": 84.4509905327691,
+      "baseline": 111.73500000000001
+    },
+    {
+      "text": "I",
+      "size_pt": 8.5,
+      "left": 88.58344489203559,
+      "right": 89.41655510796441,
+      "baseline": 108.81
+    },
+    {
+      "text": "Input projection",
+      "size_pt": 7.4,
+      "left": 102.5746533203125,
+      "right": 120.42534667968751,
+      "baseline": 128.94750000000002
+    },
+    {
+      "text": "u, z",
+      "size_pt": 7.4,
+      "left": 109.39613186306424,
+      "right": 113.60386813693577,
+      "baseline": 131.8725
+    },
+    {
+      "text": "Input modulation",
+      "size_pt": 7.5,
+      "left": 133.71829732259116,
+      "right": 153.28170267740887,
+      "baseline": 98.79750000000001
+    },
+    {
+      "text": "",
+      "size_pt": 7.5,
+      "left": 143.5,
+      "right": 143.5,
+      "baseline": 101.72250000000001
+    },
+    {
+      "text": "γ · g",
+      "size_pt": 7.5,
+      "left": 138.32791259765625,
+      "right": 143.47359334309897,
+      "baseline": 101.72250000000001
+    },
+    {
+      "text": "w",
+      "size_pt": 5.3999999999999995,
+      "left": 143.47359334309897,
+      "right": 144.84932332356772,
+      "baseline": 102.30750000000002
+    },
+    {
+      "text": " · u",
+      "size_pt": 7.5,
+      "left": 144.84932332356772,
+      "right": 148.67208740234375,
+      "baseline": 101.72250000000001
+    },
+    {
+      "text": "Step size Δ",
+      "size_pt": 7.1,
+      "left": 137.1642024061415,
+      "right": 149.8357975938585,
+      "baseline": 112.7475
+    },
+    {
+      "text": "Linear + softplus",
+      "size_pt": 7.1,
+      "left": 134.27545539008247,
+      "right": 152.72454460991753,
+      "baseline": 115.67250000000001
+    },
+    {
+      "text": "B, C projection",
+      "size_pt": 7.2,
+      "left": 135.1705859375,
+      "right": 151.8294140625,
+      "baseline": 128.16
+    },
+    {
+      "text": "Selective",
+      "size_pt": 7.6,
+      "left": 162.68678032769097,
+      "right": 174.31321967230903,
+      "baseline": 112.29750000000001
+    },
+    {
+      "text": "scan",
+      "size_pt": 7.6,
+      "left": 165.44447591145834,
+      "right": 171.5555240885417,
+      "baseline": 115.22250000000001
+    },
+    {
+      "text": "Learned",
+      "size_pt": 6.8,
+      "left": 164.0981325954861,
+      "right": 172.9018674045139,
+      "baseline": 124.2
+    },
+    {
+      "text": "A",
+      "size_pt": 8.7,
+      "left": 167.56261535644532,
+      "right": 169.4373846435547,
+      "baseline": 127.35000000000001
+    },
+    {
+      "text": "Guidance",
+      "size_pt": 6.8,
+      "left": 94.86546413845487,
+      "right": 105.13453586154515,
+      "baseline": 106.56
+    },
+    {
+      "text": "One guidance scalar per position",
+      "size_pt": 6.0,
+      "left": 51.527042643229166,
+      "right": 82.47295735677083,
+      "baseline": 133.82999999999998
+    },
+    {
+      "text": "z",
+      "size_pt": 8.9,
+      "left": 114.3890726047092,
+      "right": 115.6109273952908,
+      "baseline": 144.45000000000002
+    },
+    {
+      "text": "Corrected-feature bypass",
+      "size_pt": 7.1,
+      "left": 64.86935519748263,
+      "right": 93.13064480251735,
+      "baseline": 151.82999999999998
+    },
+    {
+      "text": "D · x̃  +  scan output",
+      "size_pt": 7.3,
+      "left": 131.44142903645835,
+      "right": 154.55857096354168,
+      "baseline": 145.1475
+    },
+    {
+      "text": "SiLU(z) gate → output projection",
+      "size_pt": 7.3,
+      "left": 124.31980516221789,
+      "right": 161.68019483778212,
+      "baseline": 148.07250000000002
+    },
+    {
+      "text": "o",
+      "size_pt": 9.5,
+      "left": 174.16215277777778,
+      "right": 175.83784722222222,
+      "baseline": 146.70000000000002
+    },
+    {
+      "text": "Output fusion",
+      "size_pt": 7.9,
+      "left": 5,
+      "right": 23.26482828776042,
+      "baseline": 143.73
+    },
+    {
+      "text": "Bypass + output gate",
+      "size_pt": 7.0,
+      "left": 5,
+      "right": 28.270414225260414,
+      "baseline": 147.06
+    },
+    {
+      "text": "Feature flow",
+      "size_pt": 7.0,
+      "left": 17,
+      "right": 30.58797336154514,
+      "baseline": 158.4
+    },
+    {
+      "text": "Structural guidance",
+      "size_pt": 7.0,
+      "left": 62,
+      "right": 83.27725423177083,
+      "baseline": 158.4
+    },
+    {
+      "text": "Junction",
+      "size_pt": 7.0,
+      "left": 115,
+      "right": 124.19771592881945,
+      "baseline": 158.4
+    },
+    {
+      "text": "Schematic, not an activation map",
+      "size_pt": 6.8,
+      "left": 141.66441351996528,
+      "right": 177.0,
+      "baseline": 158.4
+    }
+  ],
+  "nodes": [
+    [
+      19,
+      9.9,
+      13,
+      12.6
+    ],
+    [
+      37,
+      9.9,
+      20,
+      12.6
+    ],
+    [
+      62,
+      9.0,
+      24,
+      14.4
+    ],
+    [
+      91,
+      9.9,
+      20,
+      12.6
+    ],
+    [
+      116,
+      9.0,
+      20,
+      14.4
+    ],
+    [
+      141,
+      9.9,
+      16,
+      24.3
+    ],
+    [
+      162,
+      12.6,
+      15,
+      12.6
+    ],
+    [
+      10,
+      51.300000000000004,
+      15,
+      9.0
+    ],
+    [
+      30,
+      51.300000000000004,
+      10,
+      9.0
+    ],
+    [
+      45,
+      51.300000000000004,
+      27,
+      9.0
+    ],
+    [
+      77,
+      51.300000000000004,
+      9,
+      9.0
+    ],
+    [
+      98,
+      51.300000000000004,
+      10,
+      9.0
+    ],
+    [
+      113,
+      51.300000000000004,
+      18,
+      9.0
+    ],
+    [
+      136,
+      51.300000000000004,
+      9,
+      9.0
+    ],
+    [
+      157,
+      51.300000000000004,
+      16,
+      9.0
+    ],
+    [
+      97,
+      86.22,
+      20,
+      5.4
+    ],
+    [
+      13,
+      90.9,
+      24,
+      9.9
+    ],
+    [
+      13,
+      112.5,
+      24,
+      13.5
+    ],
+    [
+      47,
+      93.60000000000001,
+      16,
+      9.0
+    ],
+    [
+      47,
+      113.4,
+      16,
+      9.0
+    ],
+    [
+      65,
+      105.75,
+      9,
+      4.5
+    ],
+    [
+      76,
+      102.60000000000001,
+      9,
+      10.8
+    ],
+    [
+      99,
+      125.10000000000001,
+      25,
+      9.0
+    ],
+    [
+      131,
+      94.5,
+      25,
+      9.9
+    ],
+    [
+      131,
+      108.9,
+      25,
+      9.0
+    ],
+    [
+      131,
+      123.3,
+      25,
+      8.1
+    ],
+    [
+      162,
+      94.5,
+      13,
+      36.9
+    ],
+    [
+      121,
+      141.3,
+      44,
+      9.0
+    ]
+  ],
+  "edges": [
+    {
+      "points": [
+        [
+          12,
+          16.2
+        ],
+        [
+          19,
+          16.2
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          32,
+          16.2
+        ],
+        [
+          37,
+          16.2
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          57,
+          16.2
+        ],
+        [
+          62,
+          16.2
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          86,
+          16.2
+        ],
+        [
+          91,
+          16.2
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          111,
+          16.2
+        ],
+        [
+          116,
+          16.2
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          136,
+          16.2
+        ],
+        [
+          141,
+          16.2
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          157,
+          18.900000000000002
+        ],
+        [
+          162,
+          18.900000000000002
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          74,
+          23.400000000000002
+        ],
+        [
+          74,
+          30.6
+        ],
+        [
+          141,
+          30.6
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          101,
+          22.5
+        ],
+        [
+          101,
+          26.1
+        ],
+        [
+          141,
+          26.1
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3,
+          37.800000000000004
+        ],
+        [
+          177,
+          37.800000000000004
+        ]
+      ],
+      "kind": "feature",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          6.5,
+          55.800000000000004
+        ],
+        [
+          10,
+          55.800000000000004
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          25,
+          55.800000000000004
+        ],
+        [
+          30,
+          55.800000000000004
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          40,
+          55.800000000000004
+        ],
+        [
+          45,
+          55.800000000000004
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          72,
+          55.800000000000004
+        ],
+        [
+          77,
+          55.800000000000004
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          86,
+          55.800000000000004
+        ],
+        [
+          90.2,
+          55.800000000000004
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          93.8,
+          55.800000000000004
+        ],
+        [
+          98,
+          55.800000000000004
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          108,
+          55.800000000000004
+        ],
+        [
+          113,
+          55.800000000000004
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          131,
+          55.800000000000004
+        ],
+        [
+          136,
+          55.800000000000004
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          145,
+          55.800000000000004
+        ],
+        [
+          149.2,
+          55.800000000000004
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          152.8,
+          55.800000000000004
+        ],
+        [
+          157,
+          55.800000000000004
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          173,
+          55.800000000000004
+        ],
+        [
+          177,
+          55.800000000000004
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          27,
+          55.800000000000004
+        ],
+        [
+          27,
+          46.800000000000004
+        ],
+        [
+          92,
+          46.800000000000004
+        ],
+        [
+          92,
+          54.18000000000001
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          95.5,
+          55.800000000000004
+        ],
+        [
+          95.5,
+          46.800000000000004
+        ],
+        [
+          151,
+          46.800000000000004
+        ],
+        [
+          151,
+          54.18000000000001
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          3,
+          67.5
+        ],
+        [
+          177,
+          67.5
+        ]
+      ],
+      "kind": "feature",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          7,
+          108.0
+        ],
+        [
+          9,
+          108.0
+        ],
+        [
+          9,
+          95.85000000000001
+        ],
+        [
+          13,
+          95.85000000000001
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          9,
+          108.0
+        ],
+        [
+          9,
+          119.25
+        ],
+        [
+          13,
+          119.25
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          25,
+          100.8
+        ],
+        [
+          25,
+          112.5
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          37,
+          95.85000000000001
+        ],
+        [
+          42,
+          95.85000000000001
+        ],
+        [
+          47,
+          95.85000000000001
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          42,
+          95.85000000000001
+        ],
+        [
+          42,
+          88.92
+        ],
+        [
+          143,
+          88.92
+        ],
+        [
+          143,
+          94.5
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          25,
+          126.0
+        ],
+        [
+          25,
+          129.6
+        ],
+        [
+          99,
+          129.6
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          43,
+          129.6
+        ],
+        [
+          43,
+          117.9
+        ],
+        [
+          47,
+          117.9
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          63,
+          98.10000000000001
+        ],
+        [
+          69.5,
+          98.10000000000001
+        ],
+        [
+          69.5,
+          105.75
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          63,
+          117.9
+        ],
+        [
+          69.5,
+          117.9
+        ],
+        [
+          69.5,
+          110.25
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          74,
+          108.0
+        ],
+        [
+          76,
+          108.0
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          85,
+          108.0
+        ],
+        [
+          87,
+          108.0
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          124,
+          129.6
+        ],
+        [
+          128,
+          129.6
+        ],
+        [
+          128,
+          102.60000000000001
+        ],
+        [
+          131,
+          102.60000000000001
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          128,
+          116.10000000000001
+        ],
+        [
+          131,
+          116.10000000000001
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          128,
+          129.6
+        ],
+        [
+          131,
+          129.6
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          156,
+          99.45
+        ],
+        [
+          162,
+          99.45
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          156,
+          113.4
+        ],
+        [
+          162,
+          113.4
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          156,
+          127.35000000000001
+        ],
+        [
+          162,
+          127.35000000000001
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          27.787562866210937,
+          105.795
+        ],
+        [
+          29.212437133789063,
+          105.795
+        ]
+      ],
+      "kind": "feature",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          91,
+          108.0
+        ],
+        [
+          119,
+          108.0
+        ],
+        [
+          119,
+          97.65
+        ],
+        [
+          131,
+          97.65
+        ]
+      ],
+      "kind": "guidance-to-input",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          119,
+          108.0
+        ],
+        [
+          119,
+          111.15
+        ],
+        [
+          131,
+          111.15
+        ]
+      ],
+      "kind": "crossover-mask",
+      "arrow": false
+    },
+    {
+      "points": [
+        [
+          119,
+          108.0
+        ],
+        [
+          119,
+          111.15
+        ],
+        [
+          131,
+          111.15
+        ]
+      ],
+      "kind": "guidance-to-delta",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          168.5,
+          131.4
+        ],
+        [
+          168.5,
+          137.97000000000003
+        ],
+        [
+          158,
+          137.97000000000003
+        ],
+        [
+          158,
+          141.3
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          111.5,
+          134.1
+        ],
+        [
+          111.5,
+          145.8
+        ],
+        [
+          121,
+          145.8
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          38,
+          129.6
+        ],
+        [
+          38,
+          153.0
+        ],
+        [
+          135,
+          153.0
+        ],
+        [
+          135,
+          150.3
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          165,
+          145.8
+        ],
+        [
+          173,
+          145.8
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          5,
+          157.5
+        ],
+        [
+          15,
+          157.5
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    },
+    {
+      "points": [
+        [
+          50,
+          157.5
+        ],
+        [
+          60,
+          157.5
+        ]
+      ],
+      "kind": "feature",
+      "arrow": true
+    }
+  ],
+  "manuscript_modified": false,
+  "model_execution": false
+}

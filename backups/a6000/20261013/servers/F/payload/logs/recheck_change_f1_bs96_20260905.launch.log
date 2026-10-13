@@ -1,0 +1,407 @@
+[2026-09-05 17:09:17] start change-detection BS=96 device=cuda:1 tag=f1_bs96
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Farmland baseline finetune 1/150 loss=2.09265 score=0.07348
+Farmland baseline finetune 2/150 loss=1.63548 score=0.07348
+Farmland baseline finetune 3/150 loss=1.50292 score=0.07348
+Farmland baseline finetune 4/150 loss=1.30757 score=0.59081
+Farmland baseline finetune 5/150 loss=1.22566 score=0.46550
+Farmland baseline finetune 6/150 loss=1.22134 score=0.70108
+Farmland baseline finetune 7/150 loss=1.14021 score=0.79361
+Farmland baseline finetune 8/150 loss=1.16667 score=0.84995
+Farmland baseline finetune 9/150 loss=1.27176 score=0.85732
+Farmland baseline finetune 10/150 loss=1.29445 score=0.85914
+Farmland baseline finetune 11/150 loss=1.09725 score=0.86010
+Farmland baseline finetune 12/150 loss=1.26749 score=0.85921
+Farmland baseline finetune 13/150 loss=1.11125 score=0.87189
+Farmland baseline finetune 14/150 loss=1.17912 score=0.87995
+Farmland baseline finetune 15/150 loss=1.16165 score=0.88623
+Farmland baseline finetune 16/150 loss=1.03476 score=0.88723
+Farmland baseline finetune 17/150 loss=1.15634 score=0.88423
+Farmland baseline finetune 18/150 loss=1.08838 score=0.87569
+Farmland baseline finetune 19/150 loss=1.17802 score=0.87261
+Farmland baseline finetune 20/150 loss=1.05677 score=0.87653
+Farmland baseline finetune 21/150 loss=1.02437 score=0.88733
+Farmland baseline finetune 22/150 loss=1.00788 score=0.89420
+Farmland baseline finetune 23/150 loss=1.01762 score=0.89773
+Farmland baseline finetune 24/150 loss=0.99578 score=0.89873
+Farmland baseline finetune 25/150 loss=0.98308 score=0.89789
+Farmland baseline finetune 26/150 loss=1.08379 score=0.89321
+Farmland baseline finetune 27/150 loss=0.97890 score=0.89311
+Farmland baseline finetune 28/150 loss=1.11570 score=0.89221
+Farmland baseline finetune 29/150 loss=0.93877 score=0.89090
+Farmland baseline finetune 30/150 loss=1.10622 score=0.88425
+Farmland baseline finetune 31/150 loss=1.00852 score=0.87672
+Farmland baseline finetune 32/150 loss=1.03296 score=0.87998
+Farmland baseline finetune 33/150 loss=1.04192 score=0.89096
+Farmland baseline finetune 34/150 loss=1.13635 score=0.89517
+Farmland baseline finetune 35/150 loss=0.94990 score=0.89699
+Farmland baseline finetune 36/150 loss=0.96674 score=0.89514
+Farmland baseline finetune 37/150 loss=1.02372 score=0.89514
+Farmland baseline finetune 38/150 loss=1.10776 score=0.89177
+Farmland baseline finetune 39/150 loss=0.92414 score=0.89843
+Farmland baseline finetune 40/150 loss=1.11933 score=0.88820
+Farmland baseline finetune 41/150 loss=0.91708 score=0.88762
+Farmland baseline finetune 42/150 loss=0.93976 score=0.89596
+Farmland baseline finetune 43/150 loss=1.10512 score=0.90305
+Farmland baseline finetune 44/150 loss=0.90872 score=0.90675
+Farmland baseline finetune 45/150 loss=1.27537 score=0.90735
+Farmland baseline finetune 46/150 loss=0.89951 score=0.90640
+Farmland baseline finetune 47/150 loss=0.90842 score=0.90468
+Farmland baseline finetune 48/150 loss=1.03428 score=0.89768
+Farmland baseline finetune 49/150 loss=1.01087 score=0.90264
+Farmland baseline finetune 50/150 loss=0.89199 score=0.90699
+Farmland baseline finetune 51/150 loss=1.09505 score=0.90653
+Farmland baseline finetune 52/150 loss=0.88540 score=0.90352
+Farmland baseline finetune 53/150 loss=0.84014 score=0.90047
+Farmland baseline finetune 54/150 loss=0.85903 score=0.89708
+Farmland baseline finetune 55/150 loss=0.93986 score=0.89833
+Farmland baseline finetune 56/150 loss=0.95505 score=0.90451
+Farmland baseline finetune 57/150 loss=0.91284 score=0.90860
+Farmland baseline finetune 58/150 loss=0.86173 score=0.91081
+Farmland baseline finetune 59/150 loss=0.82245 score=0.90924
+Farmland baseline finetune 60/150 loss=0.93042 score=0.90422
+Farmland baseline finetune 61/150 loss=1.05347 score=0.89779
+Farmland baseline finetune 62/150 loss=0.86420 score=0.90565
+Farmland baseline finetune 63/150 loss=0.81911 score=0.91012
+Farmland baseline finetune 64/150 loss=0.84692 score=0.91272
+Farmland baseline finetune 65/150 loss=0.82427 score=0.91412
+Farmland baseline finetune 66/150 loss=0.80628 score=0.91240
+Farmland baseline finetune 67/150 loss=0.81351 score=0.91002
+Farmland baseline finetune 68/150 loss=0.77777 score=0.90868
+Farmland baseline finetune 69/150 loss=0.84929 score=0.90900
+Farmland baseline finetune 70/150 loss=0.82091 score=0.91097
+Farmland baseline finetune 71/150 loss=0.90223 score=0.91368
+Farmland baseline finetune 72/150 loss=0.81788 score=0.91521
+Farmland baseline finetune 73/150 loss=0.80898 score=0.91210
+Farmland baseline finetune 74/150 loss=0.86286 score=0.91170
+Farmland baseline finetune 75/150 loss=1.02661 score=0.90867
+Farmland baseline finetune 76/150 loss=0.82322 score=0.91076
+Farmland baseline finetune 77/150 loss=1.08155 score=0.90813
+Farmland baseline finetune 78/150 loss=0.79311 score=0.91115
+Farmland baseline finetune 79/150 loss=0.82116 score=0.91053
+Farmland baseline finetune 80/150 loss=0.81843 score=0.90994
+Farmland baseline finetune 81/150 loss=0.77379 score=0.90951
+Farmland baseline finetune 82/150 loss=0.76358 score=0.90792
+Farmland baseline finetune 83/150 loss=0.92950 score=0.90322
+Farmland baseline finetune 84/150 loss=0.88283 score=0.90297
+Farmland baseline finetune 85/150 loss=0.85994 score=0.91100
+Farmland baseline finetune 86/150 loss=0.86362 score=0.91399
+Farmland baseline finetune 87/150 loss=0.76905 score=0.91624
+Farmland baseline finetune 88/150 loss=0.75510 score=0.91688
+Farmland baseline finetune 89/150 loss=0.79700 score=0.91691
+Farmland baseline finetune 90/150 loss=0.91783 score=0.91464
+Farmland baseline finetune 91/150 loss=0.87521 score=0.91369
+Farmland baseline finetune 92/150 loss=0.81085 score=0.91404
+Farmland baseline finetune 93/150 loss=0.87441 score=0.91425
+Farmland baseline finetune 94/150 loss=0.87332 score=0.91469
+Farmland baseline finetune 95/150 loss=0.77921 score=0.91410
+Farmland baseline finetune 96/150 loss=0.76447 score=0.91335
+Farmland baseline finetune 97/150 loss=0.78660 score=0.91251
+Farmland baseline finetune 98/150 loss=0.83408 score=0.91315
+Farmland baseline finetune 99/150 loss=0.83697 score=0.91300
+Farmland baseline finetune 100/150 loss=1.03608 score=0.91166
+Farmland baseline finetune 101/150 loss=0.72865 score=0.90911
+Farmland baseline finetune 102/150 loss=0.78855 score=0.90598
+Farmland baseline finetune 103/150 loss=0.86085 score=0.90493
+Farmland baseline finetune 104/150 loss=0.73212 score=0.90845
+Farmland baseline finetune 105/150 loss=0.81468 score=0.91111
+Farmland baseline finetune 106/150 loss=0.83905 score=0.91122
+Farmland baseline finetune 107/150 loss=0.75767 score=0.91243
+Farmland baseline finetune 108/150 loss=0.85531 score=0.91205
+Farmland baseline finetune 109/150 loss=0.76666 score=0.91222
+Farmland baseline finetune 110/150 loss=0.72693 score=0.91251
+Farmland baseline finetune 111/150 loss=0.84747 score=0.91143
+Farmland baseline finetune 112/150 loss=0.80145 score=0.91123
+Farmland baseline finetune 113/150 loss=0.90067 score=0.91058
+Farmland baseline finetune 114/150 loss=0.84878 score=0.91065
+Farmland baseline finetune 115/150 loss=0.82641 score=0.91158
+Farmland baseline finetune 116/150 loss=0.77998 score=0.91196
+Farmland baseline finetune 117/150 loss=0.71659 score=0.91192
+Farmland baseline finetune 118/150 loss=0.77162 score=0.91179
+Farmland baseline finetune 119/150 loss=0.91831 score=0.91206
+Farmland baseline finetune 120/150 loss=0.77324 score=0.91211
+Farmland baseline finetune 121/150 loss=0.71456 score=0.91200
+Farmland baseline finetune 122/150 loss=0.71804 score=0.91182
+Farmland baseline finetune 123/150 loss=0.77435 score=0.91208
+Farmland baseline finetune 124/150 loss=0.90052 score=0.91134
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "Farmland",
+  "task": "change_detection",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "backbone_layout": "legacy",
+  "decoder": "multiscale",
+  "initialization": "scratch",
+  "pretrained": {
+    "path": null,
+    "loaded_tensors": 0,
+    "model_tensors": 209,
+    "coverage": 0.0
+  },
+  "protocol": "dense-spatial-macroblocks",
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 112,
+    "val": 16,
+    "test": 16
+  },
+  "imgsz": 192,
+  "batch": 96,
+  "devices": "cuda:1",
+  "num_devices": 1,
+  "eval_imgsz": 192,
+  "eval_batch": 96,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 150,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 89,
+  "threshold": 0.8000000000000002,
+  "metric": {
+    "precision": 0.806232140427269,
+    "recall": 0.12531725888324874,
+    "f1": 0.21691775430632082,
+    "iou": 0.12165325229960579,
+    "oa": 0.9274715847439237,
+    "kappa": 0.19965674001718592
+  },
+  "params": 2346329,
+  "gflops": 1.177137648,
+  "latency_ms": 6.767389432449515,
+  "fps": 147.767467792679,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_change_f1_bs96_20260905/Farmland/baseline_bs96/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Farmland/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Farmland ours finetune 1/150 loss=2.14952 score=0.07348
+Farmland ours finetune 2/150 loss=1.82796 score=0.07348
+Farmland ours finetune 3/150 loss=1.69480 score=0.07348
+Farmland ours finetune 4/150 loss=1.60871 score=0.26776
+Farmland ours finetune 5/150 loss=1.38347 score=0.23595
+Farmland ours finetune 6/150 loss=1.33490 score=0.43777
+Farmland ours finetune 7/150 loss=1.58841 score=0.62528
+Farmland ours finetune 8/150 loss=1.28144 score=0.78907
+Farmland ours finetune 9/150 loss=1.32942 score=0.85779
+Farmland ours finetune 10/150 loss=1.26331 score=0.87299
+Farmland ours finetune 11/150 loss=1.29427 score=0.86008
+Farmland ours finetune 12/150 loss=1.24879 score=0.86247
+Farmland ours finetune 13/150 loss=1.34708 score=0.88324
+Farmland ours finetune 14/150 loss=1.18205 score=0.88843
+Farmland ours finetune 15/150 loss=1.20608 score=0.88943
+Farmland ours finetune 16/150 loss=1.14813 score=0.88948
+Farmland ours finetune 17/150 loss=1.12183 score=0.88882
+Farmland ours finetune 18/150 loss=1.16248 score=0.88366
+Farmland ours finetune 19/150 loss=1.20534 score=0.87748
+Farmland ours finetune 20/150 loss=1.14715 score=0.87616
+Farmland ours finetune 21/150 loss=1.20677 score=0.87663
+Farmland ours finetune 22/150 loss=1.09980 score=0.88281
+Farmland ours finetune 23/150 loss=1.12921 score=0.88026
+Farmland ours finetune 24/150 loss=1.13143 score=0.87611
+Farmland ours finetune 25/150 loss=1.19001 score=0.88385
+Farmland ours finetune 26/150 loss=1.13683 score=0.89735
+Farmland ours finetune 27/150 loss=1.19601 score=0.90012
+Farmland ours finetune 28/150 loss=1.15911 score=0.90029
+Farmland ours finetune 29/150 loss=1.10803 score=0.90097
+Farmland ours finetune 30/150 loss=1.03877 score=0.90047
+Farmland ours finetune 31/150 loss=1.09608 score=0.89550
+Farmland ours finetune 32/150 loss=1.08187 score=0.89244
+Farmland ours finetune 33/150 loss=1.40369 score=0.89022
+Farmland ours finetune 34/150 loss=1.09485 score=0.89274
+Farmland ours finetune 35/150 loss=1.02871 score=0.89596
+Farmland ours finetune 36/150 loss=1.04555 score=0.89854
+Farmland ours finetune 37/150 loss=1.09999 score=0.90003
+Farmland ours finetune 38/150 loss=1.02316 score=0.90134
+Farmland ours finetune 39/150 loss=1.00796 score=0.90199
+Farmland ours finetune 40/150 loss=1.12544 score=0.89948
+Farmland ours finetune 41/150 loss=1.07784 score=0.90205
+Farmland ours finetune 42/150 loss=1.08549 score=0.90581
+Farmland ours finetune 43/150 loss=0.99927 score=0.90848
+Farmland ours finetune 44/150 loss=1.09774 score=0.91045
+Farmland ours finetune 45/150 loss=1.14166 score=0.90962
+Farmland ours finetune 46/150 loss=1.06733 score=0.90889
+Farmland ours finetune 47/150 loss=1.00928 score=0.90730
+Farmland ours finetune 48/150 loss=0.98276 score=0.90417
+Farmland ours finetune 49/150 loss=1.08710 score=0.90095
+Farmland ours finetune 50/150 loss=1.02444 score=0.90231
+Farmland ours finetune 51/150 loss=1.05007 score=0.90309
+Farmland ours finetune 52/150 loss=0.99619 score=0.90309
+Farmland ours finetune 53/150 loss=0.97059 score=0.90251
+Farmland ours finetune 54/150 loss=1.06828 score=0.90257
+Farmland ours finetune 55/150 loss=1.05413 score=0.90427
+Farmland ours finetune 56/150 loss=0.96636 score=0.90468
+Farmland ours finetune 57/150 loss=1.09562 score=0.90565
+Farmland ours finetune 58/150 loss=0.95527 score=0.90641
+Farmland ours finetune 59/150 loss=1.07870 score=0.90689
+Farmland ours finetune 60/150 loss=1.02462 score=0.90776
+Farmland ours finetune 61/150 loss=0.97827 score=0.90753
+Farmland ours finetune 62/150 loss=0.96848 score=0.90770
+Farmland ours finetune 63/150 loss=1.05963 score=0.90798
+Farmland ours finetune 64/150 loss=1.12992 score=0.90715
+Farmland ours finetune 65/150 loss=1.07650 score=0.90605
+Farmland ours finetune 66/150 loss=1.04732 score=0.90866
+Farmland ours finetune 67/150 loss=1.01001 score=0.90976
+Farmland ours finetune 68/150 loss=0.94781 score=0.91116
+Farmland ours finetune 69/150 loss=1.06916 score=0.91015
+Farmland ours finetune 70/150 loss=0.92597 score=0.90827
+Farmland ours finetune 71/150 loss=0.98069 score=0.90884
+Farmland ours finetune 72/150 loss=1.04410 score=0.90973
+Farmland ours finetune 73/150 loss=0.89983 score=0.90961
+Farmland ours finetune 74/150 loss=0.96260 score=0.90854
+Farmland ours finetune 75/150 loss=0.95711 score=0.90775
+Farmland ours finetune 76/150 loss=0.90599 score=0.90707
+Farmland ours finetune 77/150 loss=0.97496 score=0.90670
+Farmland ours finetune 78/150 loss=0.99004 score=0.90665
+Farmland ours finetune 79/150 loss=1.16128 score=0.90645
+Farmland ours finetune 80/150 loss=0.98663 score=0.90589
+Farmland ours finetune 81/150 loss=1.03277 score=0.90625
+Farmland ours finetune 82/150 loss=0.96850 score=0.90679
+Farmland ours finetune 83/150 loss=0.95084 score=0.90806
+Farmland ours finetune 84/150 loss=1.31324 score=0.90952
+Farmland ours finetune 85/150 loss=0.99927 score=0.91108
+Farmland ours finetune 86/150 loss=0.96338 score=0.91106
+Farmland ours finetune 87/150 loss=0.88764 score=0.91030
+Farmland ours finetune 88/150 loss=0.89330 score=0.90702
+Farmland ours finetune 89/150 loss=1.04138 score=0.90374
+Farmland ours finetune 90/150 loss=1.05668 score=0.90240
+Farmland ours finetune 91/150 loss=0.86684 score=0.90999
+Farmland ours finetune 92/150 loss=0.87629 score=0.91357
+Farmland ours finetune 93/150 loss=0.89275 score=0.91425
+Farmland ours finetune 94/150 loss=1.03137 score=0.91501
+Farmland ours finetune 95/150 loss=0.90075 score=0.91433
+Farmland ours finetune 96/150 loss=0.96057 score=0.91471
+Farmland ours finetune 97/150 loss=0.89253 score=0.91536
+Farmland ours finetune 98/150 loss=1.04365 score=0.91450
+Farmland ours finetune 99/150 loss=0.87816 score=0.91387
+Farmland ours finetune 100/150 loss=1.12326 score=0.91321
+Farmland ours finetune 101/150 loss=1.01751 score=0.91183
+Farmland ours finetune 102/150 loss=0.92776 score=0.91028
+Farmland ours finetune 103/150 loss=0.89383 score=0.91462
+Farmland ours finetune 104/150 loss=0.86534 score=0.91503
+Farmland ours finetune 105/150 loss=0.92272 score=0.91465
+Farmland ours finetune 106/150 loss=1.16938 score=0.91382
+Farmland ours finetune 107/150 loss=0.91203 score=0.91234
+Farmland ours finetune 108/150 loss=0.94959 score=0.91158
+Farmland ours finetune 109/150 loss=0.84784 score=0.91246
+Farmland ours finetune 110/150 loss=0.85640 score=0.91436
+Farmland ours finetune 111/150 loss=0.88217 score=0.91417
+Farmland ours finetune 112/150 loss=1.02214 score=0.91257
+Farmland ours finetune 113/150 loss=0.87061 score=0.91548
+Farmland ours finetune 114/150 loss=0.97536 score=0.91608
+Farmland ours finetune 115/150 loss=0.88708 score=0.91608
+Farmland ours finetune 116/150 loss=0.92227 score=0.91599
+Farmland ours finetune 117/150 loss=1.35096 score=0.91579
+Farmland ours finetune 118/150 loss=0.85195 score=0.91557
+Farmland ours finetune 119/150 loss=1.02271 score=0.91436
+Farmland ours finetune 120/150 loss=0.84439 score=0.91484
+Farmland ours finetune 121/150 loss=0.99041 score=0.91453
+Farmland ours finetune 122/150 loss=0.85939 score=0.91308
+Farmland ours finetune 123/150 loss=0.99116 score=0.91474
+Farmland ours finetune 124/150 loss=1.00045 score=0.91345
+Farmland ours finetune 125/150 loss=1.24924 score=0.91333
+Farmland ours finetune 126/150 loss=0.89879 score=0.91507
+Farmland ours finetune 127/150 loss=0.85002 score=0.91572
+Farmland ours finetune 128/150 loss=0.88857 score=0.91542
+Farmland ours finetune 129/150 loss=1.00871 score=0.91552
+Farmland ours finetune 130/150 loss=0.86295 score=0.91538
+Farmland ours finetune 131/150 loss=1.15268 score=0.91050
+Farmland ours finetune 132/150 loss=1.09652 score=0.91001
+Farmland ours finetune 133/150 loss=0.89039 score=0.91421
+Farmland ours finetune 134/150 loss=0.86813 score=0.91626
+Farmland ours finetune 135/150 loss=0.88364 score=0.91420
+Farmland ours finetune 136/150 loss=0.99480 score=0.91595
+Farmland ours finetune 137/150 loss=0.90355 score=0.91603
+Farmland ours finetune 138/150 loss=1.00320 score=0.91601
+Farmland ours finetune 139/150 loss=0.93253 score=0.91626
+Farmland ours finetune 140/150 loss=0.86211 score=0.91659
+Farmland ours finetune 141/150 loss=0.98207 score=0.91646
+Farmland ours finetune 142/150 loss=0.86501 score=0.91663
+Farmland ours finetune 143/150 loss=0.87220 score=0.91725
+Farmland ours finetune 144/150 loss=0.93452 score=0.91708
+Farmland ours finetune 145/150 loss=0.94366 score=0.91707
+Farmland ours finetune 146/150 loss=0.95925 score=0.91559
+Farmland ours finetune 147/150 loss=0.86711 score=0.91627
+Farmland ours finetune 148/150 loss=1.01182 score=0.91653
+Farmland ours finetune 149/150 loss=0.83455 score=0.91688
+Farmland ours finetune 150/150 loss=0.83949 score=0.91672
+{
+  "dataset": "Farmland",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "legacy",
+  "decoder": "multiscale",
+  "initialization": "scratch",
+  "pretrained": {
+    "path": null,
+    "loaded_tensors": 0,
+    "model_tensors": 200,
+    "coverage": 0.0
+  },
+  "protocol": "dense-spatial-macroblocks",
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 112,
+    "val": 16,
+    "test": 16
+  },
+  "imgsz": 192,
+  "batch": 96,
+  "devices": "cuda:1",
+  "num_devices": 1,
+  "eval_imgsz": 192,
+  "eval_batch": 96,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 150,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 143,
+  "threshold": 0.8500000000000002,
+  "metric": {
+    "precision": 0.9174733136932318,
+    "recall": 0.5071912013536379,
+    "f1": 0.6532546957789068,
+    "iou": 0.48506179582094383,
+    "oa": 0.9568396674262153,
+    "kappa": 0.6322663864362935
+  },
+  "params": 2138147,
+  "gflops": 1.136191824,
+  "latency_ms": 6.6461296325239045,
+  "fps": 150.46351113982777,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_change_f1_bs96_20260905/Farmland/ours_bs96/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Farmland/manifest.json"
+}
+[2026-09-05 17:13:21] completed change-detection BS=96 tag=f1_bs96

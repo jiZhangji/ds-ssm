@@ -1,0 +1,15 @@
+# Minimal add-on dependencies for the existing sar-pretrain environment.
+# Do not reinstall torch/torchvision here; sar-pretrain already has torch 2.1.2 + torchvision 0.16.2.
+einops
+matplotlib>=3.3.0
+opencv-python-headless>=4.6.0
+pandas>=1.1.4
+pillow>=7.1.2
+psutil
+py-cpuinfo
+pyyaml>=5.3.1
+requests>=2.23.0
+scipy>=1.4.1
+seaborn>=0.11.0
+tqdm>=4.64.0
+ultralytics-thop>=0.2.5

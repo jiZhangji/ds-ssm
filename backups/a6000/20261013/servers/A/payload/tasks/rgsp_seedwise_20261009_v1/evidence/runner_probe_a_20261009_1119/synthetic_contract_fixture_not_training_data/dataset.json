@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "test": 1,
+    "train": 1,
+    "val": 1
+  },
+  "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/synthetic_contract_fixture_not_training_data/data_content.json",
+  "manifest_sha256": "3cad2563bcdde552cfdcb9e7c760312428f85915d7df55e53a7038fa34f144d7",
+  "names": [
+    "ship"
+  ],
+  "nc": 1,
+  "protocol": "ssdd",
+  "root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/synthetic_contract_fixture_not_training_data",
+  "yaml": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/synthetic_contract_fixture_not_training_data/data.yaml",
+  "yaml_sha256": "5c8dd107a8e9a140e99a396cbc46e47687b9d5562dd3a74c7e2c26a60aff43b2"
+}

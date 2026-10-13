@@ -1,0 +1,16 @@
+{
+  "audit_sha256": "2afec04e064386ca18d471a457b2f95618282f11a0ea2f1091f3073c4c996a32",
+  "counts": {
+    "test": 16,
+    "train": 112,
+    "val": 16
+  },
+  "dataset": "Farmland",
+  "files_sha256": "d1f8637229fbddf3c5946c5eee1eb2ecb7bf9ef015b7a84e147836bbce947bfb",
+  "logical_manifest_sha256": "fecc230c85d3c4fc527edd707d1d17109b01f12e8e6b7cb00bb41a506cfcab55",
+  "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Farmland/manifest.json",
+  "manifest_sha256": "f4cc2695ff85817eb364eeb50803a16282f6b59ab70a8da5470033fec63abbe9",
+  "native_cross_split_pixel_intersections": 0,
+  "preserved_record_identity_sha256": "cf06013c4e698900046aa5d63e2bc1a3af02b424913ee887cf57b82deba9d0c1",
+  "unique_files_rehashed_and_redecoded": 3
+}

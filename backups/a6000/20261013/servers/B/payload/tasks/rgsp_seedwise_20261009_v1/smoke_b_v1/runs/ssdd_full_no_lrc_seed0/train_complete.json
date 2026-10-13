@@ -1,0 +1,53 @@
+{
+  "best_sha256": "06f2239036b9ec946db0df0aae6fe6969435168a40a8410446ffdd5ad97f6d0a",
+  "finished_utc": "2026-10-09T02:57:37.973834+00:00",
+  "last_epoch_observed": 2,
+  "plan_sha256": "6328e555e42d10869e756d5058fb914c4ba6b35712a4d9206b1f5f8e4f160971",
+  "raw_fp32_last_sha256": "13cee14d8431a443a0a9b8366ee231cbd5d480d6a8a369832e185fb50a1d7981",
+  "reloaded_controls": [
+    {
+      "alpha": 0.5,
+      "beta_i": 1.0,
+      "buffer_scalars": [
+        "lambda_s"
+      ],
+      "control": "full_no_lrc",
+      "delta_path": true,
+      "descriptor_mode": "trend_std",
+      "eta_i": 0.0999755859375,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "lambda_s": 0.0,
+      "lrc_enabled": false,
+      "min_retain": 0.5,
+      "name": "model.3",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "parameter_scalars": [
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "predictor_input_features": 128,
+      "predictor_parameters_active": true,
+      "requires_grad": {
+        "alpha": false,
+        "beta_i": false,
+        "eta_i": false,
+        "lambda_s": false,
+        "rho_i": false
+      },
+      "rho_i": 0.99951171875,
+      "state_dim": 16,
+      "trend_parameters_active": false
+    }
+  ],
+  "resumed": false,
+  "schema": "rgsp-seedwise-v1",
+  "smoke_only": true,
+  "trial_sha256": "feefe29f35258a07ca5665ae22fae6657bdec2effd8b600f6dce98cd080701a6"
+}

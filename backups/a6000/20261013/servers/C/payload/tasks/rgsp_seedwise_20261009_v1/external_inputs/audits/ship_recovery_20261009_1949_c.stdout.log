@@ -1,0 +1,23 @@
+2026-10-09T11:49:05.049159+00:00 CRC sar_shipdataset
+2026-10-09T11:49:11.364618+00:00 extracted sar_shipdataset
+2026-10-09T11:49:11.459558+00:00 image audit sar_shipdataset 0 / 39729
+2026-10-09T11:49:12.814633+00:00 image audit sar_shipdataset 2000 / 39729
+2026-10-09T11:49:14.192580+00:00 image audit sar_shipdataset 4000 / 39729
+2026-10-09T11:49:15.478300+00:00 image audit sar_shipdataset 6000 / 39729
+2026-10-09T11:49:16.781982+00:00 image audit sar_shipdataset 8000 / 39729
+2026-10-09T11:49:18.083594+00:00 image audit sar_shipdataset 10000 / 39729
+2026-10-09T11:49:19.338762+00:00 image audit sar_shipdataset 12000 / 39729
+2026-10-09T11:49:20.682057+00:00 image audit sar_shipdataset 14000 / 39729
+2026-10-09T11:49:21.967517+00:00 image audit sar_shipdataset 16000 / 39729
+2026-10-09T11:49:23.239126+00:00 image audit sar_shipdataset 18000 / 39729
+2026-10-09T11:49:24.549572+00:00 image audit sar_shipdataset 20000 / 39729
+2026-10-09T11:49:25.845119+00:00 image audit sar_shipdataset 22000 / 39729
+2026-10-09T11:49:27.050738+00:00 image audit sar_shipdataset 24000 / 39729
+2026-10-09T11:49:28.259815+00:00 image audit sar_shipdataset 26000 / 39729
+2026-10-09T11:49:29.469590+00:00 image audit sar_shipdataset 28000 / 39729
+2026-10-09T11:49:30.672671+00:00 image audit sar_shipdataset 30000 / 39729
+2026-10-09T11:49:31.948786+00:00 image audit sar_shipdataset 32000 / 39729
+2026-10-09T11:49:33.298224+00:00 image audit sar_shipdataset 34000 / 39729
+2026-10-09T11:49:34.589156+00:00 image audit sar_shipdataset 36000 / 39729
+2026-10-09T11:49:35.896749+00:00 image audit sar_shipdataset 38000 / 39729
+{"byte_candidate_exclusions": {"test": 0, "train": 48, "val": 2}, "byte_duplicate_groups": 143, "mismatches": 0, "pixel_candidate_exclusions": {"test": 0, "train": 48, "val": 2}, "pixel_duplicate_groups": 143, "report": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1949_c/archive_audit.json", "sha256": "a4b42255677feac2173652ec870130a89c647c57e677eb98613551c11c4794ac"}

@@ -1,0 +1,35 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 553, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 549, in main
+    run(parser.parse_args())
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 463, in run
+    loss = criterion(model(*inputs), target)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 211, in forward
+    features = self.backbone(inputs[0])
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 161, in forward
+    p2 = self.p2(self.stem(image))
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/mamba_yolo.py", line 1120, in forward
+    x = input + self.drop_path(self.op(self.norm(X1)))
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/mamba_yolo.py", line 924, in forward
+    y = self.forward_core(x, channel_first=(self.d_conv > 1))
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/mamba_yolo.py", line 903, in forward_corev2
+    x = cross_selective_scan(
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/common_utils_mbyolo.py", line 243, in cross_selective_scan
+    ys: torch.Tensor = selective_scan(
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/common_utils_mbyolo.py", line 218, in selective_scan
+    return selective_scan_reference(u, delta, A, B, C, D, delta_bias, delta_softplus)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/common_utils_mbyolo.py", line 182, in selective_scan_reference
+    state = transition * state + dt.unsqueeze(-1) * b_step * u[:, :, index].unsqueeze(-1)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB (GPU 0; 47.41 GiB total capacity; 12.04 GiB already allocated; 7.31 MiB free; 12.07 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

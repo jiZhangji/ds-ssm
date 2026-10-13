@@ -1,0 +1,51 @@
+{
+  "csv": "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\database\\complexity_comparison_madinet_ds_ssm.csv",
+  "report": "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\reports\\madinet_ds_ssm_complexity_report.md",
+  "docx": "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm\\paper_draft\\DS_SSM_方法优势与MaDiNet复杂度实测对比_中文.docx",
+  "rows": [
+    {
+      "method": "Mamba-YOLO-T-SSDD",
+      "scope": "full Mamba-YOLO detector",
+      "params_M": "5.9855",
+      "GFLOPs": "13.6116",
+      "latency_ms": "26.3284",
+      "fps": "37.9817",
+      "device": "NVIDIA GeForce RTX 3090",
+      "source": "server measured",
+      "note": "640 input, batch=1, fp32"
+    },
+    {
+      "method": "Mamba-YOLO-T-DS-SSM_Backbone-SSDD-ex7",
+      "scope": "full Mamba-YOLO detector",
+      "params_M": "5.9648",
+      "GFLOPs": "13.2079",
+      "latency_ms": "28.7546",
+      "fps": "34.777",
+      "device": "NVIDIA GeForce RTX 3090",
+      "source": "server measured",
+      "note": "640 input, batch=1, fp32"
+    },
+    {
+      "method": "Mamba-YOLO-T-DG-DSSSM-SSDD-ex34-erase-write-delta",
+      "scope": "full Mamba-YOLO detector",
+      "params_M": "5.9632",
+      "GFLOPs": "13.1554",
+      "latency_ms": "29.0699",
+      "fps": "34.3998",
+      "device": "NVIDIA GeForce RTX 3090",
+      "source": "server measured",
+      "note": "640 input, batch=1, fp32"
+    },
+    {
+      "method": "MaDiNet official MambaSAR res4+res5",
+      "scope": "official core module only; not full detector",
+      "params_M": "223.2648",
+      "GFLOPs": "345.283",
+      "latency_ms": "27.2921",
+      "fps": "",
+      "device": "NVIDIA GeForce RTX 3090",
+      "source": "official code measured",
+      "note": "Official MambaSAR.py res4/res5 block; full detector requires Detectron2 config/environment."
+    }
+  ]
+}

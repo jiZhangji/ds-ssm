@@ -1,0 +1,1801 @@
+[
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/fusar-map/baseline/best.pt",
+    "bytes": 28352906,
+    "mtime_ns": 1788221780707833179,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/fusar-map/baseline/last.pt",
+    "bytes": 28352906,
+    "mtime_ns": 1788221780635832478,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/fusar-map/ours/best.pt",
+    "bytes": 25847908,
+    "mtime_ns": 1787865477329219523,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/fusar-map/ours/last.pt",
+    "bytes": 25847908,
+    "mtime_ns": 1788094612170916504,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/fusar-map/baseline/best.pt",
+    "bytes": 28352714,
+    "mtime_ns": 1787844634659895507,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/fusar-map/baseline/last.pt",
+    "bytes": 28352714,
+    "mtime_ns": 1788102476054667784,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/classification/SAMPLE/baseline/best.pt",
+    "bytes": 23892760,
+    "mtime_ns": 1787765940242739781,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/classification/SAMPLE/baseline/last.pt",
+    "bytes": 23892824,
+    "mtime_ns": 1787766033020163868,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/classification/SAMPLE/ours/best.pt",
+    "bytes": 21387954,
+    "mtime_ns": 1787766081604890831,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/classification/SAMPLE/ours/last.pt",
+    "bytes": 21388018,
+    "mtime_ns": 1787766170434191262,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/segmentation/FUSAR_Map/ours/best.pt",
+    "bytes": 10755573,
+    "mtime_ns": 1787809031949419883,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/segmentation/FUSAR_Map/ours/last.pt",
+    "bytes": 10755637,
+    "mtime_ns": 1787809097242526063,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_fusarmap_head_d16_v1/baseline/seed_0/best.pt",
+    "bytes": 53462645,
+    "mtime_ns": 1788286686326486408,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_fusarmap_head_d16_v1/baseline/seed_0/best_fwiou.pt",
+    "bytes": 53512213,
+    "mtime_ns": 1788290323521227211,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_fusarmap_head_d16_v1/baseline/seed_0/best_miou.pt",
+    "bytes": 53511237,
+    "mtime_ns": 1788286686446487474,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_fusarmap_head_d16_v1/baseline/seed_0/last.pt",
+    "bytes": 53462645,
+    "mtime_ns": 1788290566028477891,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_upernet_miou_d16_v1/baseline/seed_0/best.pt",
+    "bytes": 45701411,
+    "mtime_ns": 1788252195152462521,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_upernet_miou_d16_v1/baseline/seed_0/best_fwiou.pt",
+    "bytes": 45755255,
+    "mtime_ns": 1788241446510713033,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_upernet_miou_d16_v1/baseline/seed_0/best_miou.pt",
+    "bytes": 45754153,
+    "mtime_ns": 1788252195352463000,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_upernet_miou_d16_v1/baseline/seed_0/last.pt",
+    "bytes": 45701411,
+    "mtime_ns": 1788252663542618792,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_upernet_smoke_20260901/baseline/best.pt",
+    "bytes": 45701411,
+    "mtime_ns": 1788234591270499945,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_upernet_smoke_20260901/baseline/best_fwiou.pt",
+    "bytes": 45755255,
+    "mtime_ns": 1788234591486501646,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_upernet_smoke_20260901/baseline/best_miou.pt",
+    "bytes": 45754153,
+    "mtime_ns": 1788234591378500794,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_upernet_smoke_20260901/baseline/last.pt",
+    "bytes": 45701411,
+    "mtime_ns": 1788234708091414025,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_p3_d16_v1/baseline/best.pt",
+    "bytes": 45706019,
+    "mtime_ns": 1788327197184746653,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_p3_d16_v1/baseline/best_fwiou.pt",
+    "bytes": 45759863,
+    "mtime_ns": 1788329645570293499,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_p3_d16_v1/baseline/best_miou.pt",
+    "bytes": 45758761,
+    "mtime_ns": 1788327197364750449,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_p3_d16_v1/baseline/last.pt",
+    "bytes": 45706019,
+    "mtime_ns": 1788329917731081696,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_finetune_from_warmup20_p3_d16_v1/ours/best.pt",
+    "bytes": 375673287,
+    "mtime_ns": 1788448665106915773,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_finetune_from_warmup20_p3_d16_v1/ours/best_fwiou.pt",
+    "bytes": 375745669,
+    "mtime_ns": 1788448666002921736,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_finetune_from_warmup20_p3_d16_v1/ours/best_miou.pt",
+    "bytes": 375744272,
+    "mtime_ns": 1788448665566918835,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_finetune_from_warmup20_p3_d16_v1/ours/last.pt",
+    "bytes": 375673287,
+    "mtime_ns": 1788455199489065308,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_bs32_v1/ours/best.pt",
+    "bytes": 375669447,
+    "mtime_ns": 1788512325176628831,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_bs32_v1/ours/best_fwiou.pt",
+    "bytes": 375741829,
+    "mtime_ns": 1788512326080638218,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_bs32_v1/ours/best_miou.pt",
+    "bytes": 375740432,
+    "mtime_ns": 1788512325640633649,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_bs32_v1/ours/last.pt",
+    "bytes": 375669447,
+    "mtime_ns": 1788518842551722880,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_decoder_warmup20_bs32_v1/ours/best.pt",
+    "bytes": 375669447,
+    "mtime_ns": 1788421360126006973,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_decoder_warmup20_bs32_v1/ours/best_fwiou.pt",
+    "bytes": 375741829,
+    "mtime_ns": 1788425708236733905,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_decoder_warmup20_bs32_v1/ours/best_miou.pt",
+    "bytes": 375740432,
+    "mtime_ns": 1788421360586011309,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_decoder_warmup20_bs32_v1/ours/last.pt",
+    "bytes": 375669447,
+    "mtime_ns": 1788427880591387104,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_v1/baseline/best.pt",
+    "bytes": 371725415,
+    "mtime_ns": 1788360155374619430,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_v1/baseline/best_fwiou.pt",
+    "bytes": 371792469,
+    "mtime_ns": 1788359780429948907,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_v1/baseline/best_miou.pt",
+    "bytes": 371791192,
+    "mtime_ns": 1788360155818629081,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_v1/baseline/last.pt",
+    "bytes": 371725415,
+    "mtime_ns": 1788365791805088994,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup50_bs32_queue_v1/ours/best.pt",
+    "bytes": 375669447,
+    "mtime_ns": 1788554083639513710,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup50_bs32_queue_v1/ours/best_fwiou.pt",
+    "bytes": 375741829,
+    "mtime_ns": 1788554084547528472,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup50_bs32_queue_v1/ours/best_miou.pt",
+    "bytes": 375740432,
+    "mtime_ns": 1788554084099521189,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup50_bs32_queue_v1/ours/last.pt",
+    "bytes": 375669447,
+    "mtime_ns": 1788556033835707841,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_shared_20260831/formal_fusar_paper_protocol_p3_d16_fp32_v3/FUSAR_Map/baseline/seed_0/best.pt",
+    "bytes": 28351690,
+    "mtime_ns": 1788198492979069978,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_shared_20260831/formal_fusar_paper_protocol_p3_d16_fp32_v3/FUSAR_Map/baseline/seed_0/last.pt",
+    "bytes": 28351690,
+    "mtime_ns": 1788207751571902912,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_shared_20260831/formal_fusar_paper_protocol_p3_d16_fp32_v3/FUSAR_Map/ours/seed_0/best.pt",
+    "bytes": 25846884,
+    "mtime_ns": 1788212860199592704,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_shared_20260831/formal_fusar_paper_protocol_p3_d16_fp32_v3/FUSAR_Map/ours/seed_0/last.pt",
+    "bytes": 25846884,
+    "mtime_ns": 1788220839726121719,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_shared_20260831/formal_fusar_paper_protocol_p3_d16_v2/FUSAR_Map/baseline/seed_0/best.pt",
+    "bytes": 28351818,
+    "mtime_ns": 1788186212491486134,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_shared_20260831/formal_fusar_paper_protocol_p3_d16_v2/FUSAR_Map/baseline/seed_0/last.pt",
+    "bytes": 28351818,
+    "mtime_ns": 1788190783344036586,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_shared_20260831/fusar_fp32_stability_smoke_p3_d16_v3/FUSAR_Map/baseline/seed_0/best.pt",
+    "bytes": 28351690,
+    "mtime_ns": 1788193975510659547,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_shared_20260831/fusar_fp32_stability_smoke_p3_d16_v3/FUSAR_Map/baseline/seed_0/last.pt",
+    "bytes": 28351690,
+    "mtime_ns": 1788194065286807834,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs64_fixed_20260905/baseline_bs64/best.pt",
+    "bytes": 127708201,
+    "mtime_ns": 1788600133762701698,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs64_fixed_20260905/baseline_bs64/last.pt",
+    "bytes": 127708201,
+    "mtime_ns": 1788600463827508208,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs64_fixed_20260905/ours_bs64/best.pt",
+    "bytes": 131651921,
+    "mtime_ns": 1788601635262629954,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs64_fixed_20260905/ours_bs64/last.pt",
+    "bytes": 131651921,
+    "mtime_ns": 1788602002027331568,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs64_fixed_20260905/ours_warmup20_bs64/best.pt",
+    "bytes": 131651921,
+    "mtime_ns": 1788603062717234347,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs64_fixed_20260905/ours_warmup20_bs64/last.pt",
+    "bytes": 131651921,
+    "mtime_ns": 1788603429074454871,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs64_fixed_20260905/ours_warmup50_bs64/best.pt",
+    "bytes": 131651921,
+    "mtime_ns": 1788605147675757921,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs64_fixed_20260905/ours_warmup50_bs64/last.pt",
+    "bytes": 131651921,
+    "mtime_ns": 1788605514360501692,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs_warmup_20260904/baseline_bs128/best.pt",
+    "bytes": 354123483,
+    "mtime_ns": 1788576848405378570,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs_warmup_20260904/baseline_bs128/last.pt",
+    "bytes": 354123483,
+    "mtime_ns": 1788577405988645979,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs_warmup_20260904/baseline_bs64/best.pt",
+    "bytes": 354123483,
+    "mtime_ns": 1788575045534581454,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs_warmup_20260904/baseline_bs64/last.pt",
+    "bytes": 354123483,
+    "mtime_ns": 1788575574750612603,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs_warmup_20260904/ours_bs128/best.pt",
+    "bytes": 355436835,
+    "mtime_ns": 1788580710718046656,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs_warmup_20260904/ours_bs128/last.pt",
+    "bytes": 355436835,
+    "mtime_ns": 1788581286038058148,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs_warmup_20260904/ours_bs32/best.pt",
+    "bytes": 355436835,
+    "mtime_ns": 1788578112147797005,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs_warmup_20260904/ours_bs32/last.pt",
+    "bytes": 355436835,
+    "mtime_ns": 1788578663544526480,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs_warmup_20260904/ours_bs64/best.pt",
+    "bytes": 355436835,
+    "mtime_ns": 1788579186644038579,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_sar_acd_bs_warmup_20260904/ours_bs64/last.pt",
+    "bytes": 355436835,
+    "mtime_ns": 1788579729058139328,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/best.pt",
+    "bytes": 12271885,
+    "mtime_ns": 1787761810795199253,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch10.pt",
+    "bytes": 36579463,
+    "mtime_ns": 1787757717078675029,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch100.pt",
+    "bytes": 36590215,
+    "mtime_ns": 1787760404852251070,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch110.pt",
+    "bytes": 36591367,
+    "mtime_ns": 1787760703765197963,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch120.pt",
+    "bytes": 36592583,
+    "mtime_ns": 1787761002605453874,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch130.pt",
+    "bytes": 36593799,
+    "mtime_ns": 1787761301909920222,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch140.pt",
+    "bytes": 36594951,
+    "mtime_ns": 1787761601086623471,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch20.pt",
+    "bytes": 36580679,
+    "mtime_ns": 1787758015630512189,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch30.pt",
+    "bytes": 36581895,
+    "mtime_ns": 1787758314313749204,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch40.pt",
+    "bytes": 36583047,
+    "mtime_ns": 1787758612748648148,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch50.pt",
+    "bytes": 36584263,
+    "mtime_ns": 1787758911150320749,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch60.pt",
+    "bytes": 36585415,
+    "mtime_ns": 1787759209963824079,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch70.pt",
+    "bytes": 36586631,
+    "mtime_ns": 1787759508998937412,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch80.pt",
+    "bytes": 36587847,
+    "mtime_ns": 1787759807638949130,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/epoch90.pt",
+    "bytes": 36588999,
+    "mtime_ns": 1787760106327460891,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_baseline/weights/last.pt",
+    "bytes": 12275405,
+    "mtime_ns": 1787761810647198830,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/best.pt",
+    "bytes": 12137402,
+    "mtime_ns": 1787765865477552720,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch10.pt",
+    "bytes": 36181401,
+    "mtime_ns": 1787762134040164636,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch100.pt",
+    "bytes": 36192089,
+    "mtime_ns": 1787764584366879874,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch110.pt",
+    "bytes": 36193305,
+    "mtime_ns": 1787764856729157132,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch120.pt",
+    "bytes": 36194457,
+    "mtime_ns": 1787765129010238456,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch130.pt",
+    "bytes": 36195673,
+    "mtime_ns": 1787765401256961382,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch140.pt",
+    "bytes": 36196825,
+    "mtime_ns": 1787765674182312164,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch20.pt",
+    "bytes": 36182553,
+    "mtime_ns": 1787762406341021500,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch30.pt",
+    "bytes": 36183769,
+    "mtime_ns": 1787762678513900499,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch40.pt",
+    "bytes": 36184921,
+    "mtime_ns": 1787762950967375825,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch50.pt",
+    "bytes": 36186137,
+    "mtime_ns": 1787763223262356632,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch60.pt",
+    "bytes": 36187353,
+    "mtime_ns": 1787763495307270371,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch70.pt",
+    "bytes": 36188505,
+    "mtime_ns": 1787763767446975358,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch80.pt",
+    "bytes": 36189721,
+    "mtime_ns": 1787764039557968843,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/epoch90.pt",
+    "bytes": 36190873,
+    "mtime_ns": 1787764311936547017,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed1_a6000b_v1_ssdd_full_p3/weights/last.pt",
+    "bytes": 12140986,
+    "mtime_ns": 1787765865317550137,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/best.pt",
+    "bytes": 12271885,
+    "mtime_ns": 1787733431983462055,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch10.pt",
+    "bytes": 36579399,
+    "mtime_ns": 1787729312901671585,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch100.pt",
+    "bytes": 36590151,
+    "mtime_ns": 1787731998558272266,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch110.pt",
+    "bytes": 36591303,
+    "mtime_ns": 1787732296735214474,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch120.pt",
+    "bytes": 36592519,
+    "mtime_ns": 1787732595307390543,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch130.pt",
+    "bytes": 36593671,
+    "mtime_ns": 1787732893794667070,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch140.pt",
+    "bytes": 36594887,
+    "mtime_ns": 1787733192637445600,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch20.pt",
+    "bytes": 36580615,
+    "mtime_ns": 1787729611407315156,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch30.pt",
+    "bytes": 36581831,
+    "mtime_ns": 1787729909673034833,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch40.pt",
+    "bytes": 36582983,
+    "mtime_ns": 1787730208193997767,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch50.pt",
+    "bytes": 36584199,
+    "mtime_ns": 1787730506742999927,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch60.pt",
+    "bytes": 36585351,
+    "mtime_ns": 1787730805160264756,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch70.pt",
+    "bytes": 36586567,
+    "mtime_ns": 1787731103381675392,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch80.pt",
+    "bytes": 36587783,
+    "mtime_ns": 1787731401727168473,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/epoch90.pt",
+    "bytes": 36588935,
+    "mtime_ns": 1787731699980706773,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/last.pt",
+    "bytes": 12275469,
+    "mtime_ns": 1787733431827460783,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/full/weights/best.pt",
+    "bytes": 12146554,
+    "mtime_ns": 1791494338244164858,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/full/weights/last.pt",
+    "bytes": 12147258,
+    "mtime_ns": 1791494338092156473,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/local_energy/weights/best.pt",
+    "bytes": 12137722,
+    "mtime_ns": 1791488671037975776,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/local_energy/weights/last.pt",
+    "bytes": 12142458,
+    "mtime_ns": 1791488670885975549,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/matched_scale075/weights/best.pt",
+    "bytes": 12146362,
+    "mtime_ns": 1791484097342571298,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/matched_scale075/weights/last.pt",
+    "bytes": 12147066,
+    "mtime_ns": 1791484097190550836,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/original/weights/best.pt",
+    "bytes": 12277133,
+    "mtime_ns": 1791478461004271367,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/original/weights/last.pt",
+    "bytes": 12281677,
+    "mtime_ns": 1791478460848266467,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/seed1/runs/original/weights/best.pt",
+    "bytes": 36588935,
+    "mtime_ns": 1791442855819662736,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/seed1/runs/original/weights/last.pt",
+    "bytes": 36589255,
+    "mtime_ns": 1791442943911851263,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/full/weights/best.pt",
+    "bytes": 12123706,
+    "mtime_ns": 1791440099803399124,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/full/weights/last.pt",
+    "bytes": 12123706,
+    "mtime_ns": 1791440099655398247,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/weights/best.pt",
+    "bytes": 12141562,
+    "mtime_ns": 1791534791062499321,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/weights/last.pt",
+    "bytes": 12146298,
+    "mtime_ns": 1791534790918496537,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95480046,
+    "mtime_ns": 1791533709382055672,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95493486,
+    "mtime_ns": 1791534790450487487,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/weights/best.pt",
+    "bytes": 12141690,
+    "mtime_ns": 1791525668423801963,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/weights/last.pt",
+    "bytes": 12146426,
+    "mtime_ns": 1791525668283800767,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95502044,
+    "mtime_ns": 1791524582858526300,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95515484,
+    "mtime_ns": 1791525667823796839,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_original_seed0/weights/best.pt",
+    "bytes": 12280973,
+    "mtime_ns": 1791554148722821013,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_original_seed0/weights/last.pt",
+    "bytes": 12281677,
+    "mtime_ns": 1791554148566819968,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_original_seed0/weights/raw_fp32_best.pt",
+    "bytes": 96571771,
+    "mtime_ns": 1791553969809535632,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_original_seed0/weights/raw_fp32_last.pt",
+    "bytes": 96573755,
+    "mtime_ns": 1791554148090816782,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/weights/best.pt",
+    "bytes": 12146810,
+    "mtime_ns": 1791544204242079333,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/weights/last.pt",
+    "bytes": 12147514,
+    "mtime_ns": 1791544204098079253,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95518873,
+    "mtime_ns": 1791544039738050765,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95520857,
+    "mtime_ns": 1791544203630078995,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_cnn_yolov8n_seed0/weights/best.pt",
+    "bytes": 6247918,
+    "mtime_ns": 1791619035065333728,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_cnn_yolov8n_seed0/weights/last.pt",
+    "bytes": 6250926,
+    "mtime_ns": 1791619034981333356,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_cnn_yolov8n_seed0/weights/raw_fp32_best.pt",
+    "bytes": 48683820,
+    "mtime_ns": 1791618939060928356,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_cnn_yolov8n_seed0/weights/raw_fp32_last.pt",
+    "bytes": 48692268,
+    "mtime_ns": 1791619034713332166,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/weights/best.pt",
+    "bytes": 12138426,
+    "mtime_ns": 1791538679089455386,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/weights/last.pt",
+    "bytes": 12141434,
+    "mtime_ns": 1791538678945453743,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95471342,
+    "mtime_ns": 1791538037220400121,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95479726,
+    "mtime_ns": 1791538678485448494,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_energy_only_seed0/weights/best.pt",
+    "bytes": 12138362,
+    "mtime_ns": 1791577595919853332,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_energy_only_seed0/weights/last.pt",
+    "bytes": 12141370,
+    "mtime_ns": 1791577595771858107,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_energy_only_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95469812,
+    "mtime_ns": 1791576953222274002,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_energy_only_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95478196,
+    "mtime_ns": 1791577595315872819,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/weights/best.pt",
+    "bytes": 12132602,
+    "mtime_ns": 1791602640737253111,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/weights/last.pt",
+    "bytes": 12136186,
+    "mtime_ns": 1791602640593248689,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95511318,
+    "mtime_ns": 1791601856509488996,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95521430,
+    "mtime_ns": 1791602640129234437,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d8_seed0/weights/best.pt",
+    "bytes": 12137530,
+    "mtime_ns": 1791601215313831749,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d8_seed0/weights/last.pt",
+    "bytes": 12138490,
+    "mtime_ns": 1791601215169830958,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d8_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95477590,
+    "mtime_ns": 1791601007668715869,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d8_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95480278,
+    "mtime_ns": 1791601214701828389,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_fixed_half_seed0/weights/best.pt",
+    "bytes": 12140666,
+    "mtime_ns": 1791569803050740676,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_fixed_half_seed0/weights/last.pt",
+    "bytes": 12141434,
+    "mtime_ns": 1791569802910737689,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_fixed_half_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95476977,
+    "mtime_ns": 1791569648455181845,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_fixed_half_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95478961,
+    "mtime_ns": 1791569802450727872,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/weights/best.pt",
+    "bytes": 12138554,
+    "mtime_ns": 1791529582335218256,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/weights/last.pt",
+    "bytes": 12141562,
+    "mtime_ns": 1791529582195216591,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95493340,
+    "mtime_ns": 1791528936114342840,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95501724,
+    "mtime_ns": 1791529581727211029,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/weights/best.pt",
+    "bytes": 12140858,
+    "mtime_ns": 1791520443926144763,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/weights/last.pt",
+    "bytes": 12141562,
+    "mtime_ns": 1791520443770143172,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95502806,
+    "mtime_ns": 1791520287392434418,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95504854,
+    "mtime_ns": 1791520443314138522,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/weights/best.pt",
+    "bytes": 12140602,
+    "mtime_ns": 1791610509389729960,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/weights/last.pt",
+    "bytes": 12141562,
+    "mtime_ns": 1791610509245732525,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95502166,
+    "mtime_ns": 1791610300806719525,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95504854,
+    "mtime_ns": 1791610508781740807,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats7_seed0/weights/best.pt",
+    "bytes": 12138362,
+    "mtime_ns": 1791618419147861012,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats7_seed0/weights/last.pt",
+    "bytes": 12141562,
+    "mtime_ns": 1791618419007861104,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats7_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95495766,
+    "mtime_ns": 1791617717251193300,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats7_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95504854,
+    "mtime_ns": 1791618418547861411,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend5_seed0/weights/best.pt",
+    "bytes": 12138618,
+    "mtime_ns": 1791606571434112896,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend5_seed0/weights/last.pt",
+    "bytes": 12141818,
+    "mtime_ns": 1791606571290116292,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend5_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95497814,
+    "mtime_ns": 1791605871093388546,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend5_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95506902,
+    "mtime_ns": 1791606570838126964,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend7_seed0/weights/best.pt",
+    "bytes": 12141114,
+    "mtime_ns": 1791614467301318659,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend7_seed0/weights/last.pt",
+    "bytes": 12142074,
+    "mtime_ns": 1791614467153315601,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend7_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95506262,
+    "mtime_ns": 1791614259456450124,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend7_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95508950,
+    "mtime_ns": 1791614466697306172,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_global_seed0/weights/best.pt",
+    "bytes": 12140858,
+    "mtime_ns": 1791585502014082284,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_global_seed0/weights/last.pt",
+    "bytes": 12141562,
+    "mtime_ns": 1791585501862079925,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_global_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95502806,
+    "mtime_ns": 1791585345339628779,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_global_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95504854,
+    "mtime_ns": 1791585501402072782,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_guidance_only_seed0/weights/best.pt",
+    "bytes": 12138362,
+    "mtime_ns": 1791581555320684198,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_guidance_only_seed0/weights/last.pt",
+    "bytes": 12141562,
+    "mtime_ns": 1791581555176685843,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_guidance_only_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95494236,
+    "mtime_ns": 1791580853234418844,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_guidance_only_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95503260,
+    "mtime_ns": 1791581554720691062,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/weights/best.pt",
+    "bytes": 12138362,
+    "mtime_ns": 1791565908305254334,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/weights/last.pt",
+    "bytes": 12141562,
+    "mtime_ns": 1791565908161253918,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95494236,
+    "mtime_ns": 1791565208831068882,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95503260,
+    "mtime_ns": 1791565907697252578,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/weights/best.pt",
+    "bytes": 12140922,
+    "mtime_ns": 1791561979928135065,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/weights/last.pt",
+    "bytes": 12141626,
+    "mtime_ns": 1791561979776131431,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95502041,
+    "mtime_ns": 1791561823284191358,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95504089,
+    "mtime_ns": 1791561979316120433,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_point_only_seed0/weights/best.pt",
+    "bytes": 12138618,
+    "mtime_ns": 1791597281744877503,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_point_only_seed0/weights/last.pt",
+    "bytes": 12141626,
+    "mtime_ns": 1791597281588876156,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_point_only_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95496470,
+    "mtime_ns": 1791596634722706696,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_point_only_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95504854,
+    "mtime_ns": 1791597281128872184,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_std_only_seed0/weights/best.pt",
+    "bytes": 12138362,
+    "mtime_ns": 1791593358967815744,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_std_only_seed0/weights/last.pt",
+    "bytes": 12141626,
+    "mtime_ns": 1791593358819813572,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_std_only_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95495766,
+    "mtime_ns": 1791592656652670432,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_std_only_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95504854,
+    "mtime_ns": 1791593358363806877,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/weights/best.pt",
+    "bytes": 12140090,
+    "mtime_ns": 1791589420384581182,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/weights/last.pt",
+    "bytes": 12141626,
+    "mtime_ns": 1791589420244579893,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95500502,
+    "mtime_ns": 1791589084085448850,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95504854,
+    "mtime_ns": 1791589419772575549,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_matched_scale075_seed0/weights/best.pt",
+    "bytes": 12140410,
+    "mtime_ns": 1791558040451292234,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_matched_scale075_seed0/weights/last.pt",
+    "bytes": 12141306,
+    "mtime_ns": 1791558040299290686,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_matched_scale075_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95472378,
+    "mtime_ns": 1791557834941144063,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_matched_scale075_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95475066,
+    "mtime_ns": 1791558039839286006,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_post_gate_seed0/weights/best.pt",
+    "bytes": 12140602,
+    "mtime_ns": 1791548147701151477,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_post_gate_seed0/weights/last.pt",
+    "bytes": 12141562,
+    "mtime_ns": 1791548147553151656,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_post_gate_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95501401,
+    "mtime_ns": 1791547939385521953,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_post_gate_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95504089,
+    "mtime_ns": 1791548147089152221,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_residual_scale075_seed0/weights/best.pt",
+    "bytes": 12138746,
+    "mtime_ns": 1791573698360520714,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_residual_scale075_seed0/weights/last.pt",
+    "bytes": 12141370,
+    "mtime_ns": 1791573698220521293,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_residual_scale075_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95470772,
+    "mtime_ns": 1791573132871108182,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ssdd_residual_scale075_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95478196,
+    "mtime_ns": 1791573697760523201,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_const_guidance_seed0/weights/best.pt",
+    "bytes": 12123770,
+    "mtime_ns": 1791514746228391813,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_const_guidance_seed0/weights/last.pt",
+    "bytes": 12123770,
+    "mtime_ns": 1791514746088391479,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_const_guidance_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95430254,
+    "mtime_ns": 1791514745636390402,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_const_guidance_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95430254,
+    "mtime_ns": 1791514745408389857,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/weights/best.pt",
+    "bytes": 12123898,
+    "mtime_ns": 1791514656272179217,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/weights/last.pt",
+    "bytes": 12123898,
+    "mtime_ns": 1791514656136178899,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95452252,
+    "mtime_ns": 1791514655680177832,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95452252,
+    "mtime_ns": 1791514655452177299,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/weights/best.pt",
+    "bytes": 12123898,
+    "mtime_ns": 1791514836864609778,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/weights/last.pt",
+    "bytes": 12123898,
+    "mtime_ns": 1791514836724609439,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95454617,
+    "mtime_ns": 1791514836268608334,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95454617,
+    "mtime_ns": 1791514836040607782,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/clean2992-full/run0/best.pt",
+    "bytes": 11251757,
+    "mtime_ns": 1791861135223515185,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/clean2992-matched075/run0/best.pt",
+    "bytes": 11251757,
+    "mtime_ns": 1791860426574887501,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/clean2992-original/run0/best.pt",
+    "bytes": 11516159,
+    "mtime_ns": 1791863766260796426,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/full3032-full/run0/best.pt",
+    "bytes": 11251757,
+    "mtime_ns": 1791862044975299198,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/full3032-matched075/run0/best.pt",
+    "bytes": 11251757,
+    "mtime_ns": 1791862961379597381,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/jobs/full3032-original/run0/best.pt",
+    "bytes": 11516159,
+    "mtime_ns": 1791864789769437057,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "bytes": 121094026,
+    "mtime_ns": 1788341398214141786,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  }
+]

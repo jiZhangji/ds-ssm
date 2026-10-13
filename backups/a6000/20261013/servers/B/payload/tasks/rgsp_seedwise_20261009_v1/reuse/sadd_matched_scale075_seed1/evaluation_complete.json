@@ -1,0 +1,12 @@
+{
+  "best_sha256": "1a4ee34ae64f91f8e009ef9bc1d10b26e6401b14bab75577ab5247fd660fad6c",
+  "derivation": "Verified complete legacy train/test chain; no new training/evaluation performed.",
+  "eval_test_sha256": "09127d5a8c63502ffc1cba62f8758962210c33c13a138b2ccd919882c866e19c",
+  "smoke_only": false,
+  "source_evaluation_complete": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/matched_scale075/evaluation_complete.json",
+    "sha256": "6e17bfaef38e1415c98eeeb30af55a1ba1d151bfb5a8e7b8cc9e74e4a00b0343"
+  },
+  "source_train_complete_sha256": "5a4f59678e2eba02a14389462e3135cb4cf2928e4e80882cc81b1538f8ee59b9",
+  "status": "complete"
+}

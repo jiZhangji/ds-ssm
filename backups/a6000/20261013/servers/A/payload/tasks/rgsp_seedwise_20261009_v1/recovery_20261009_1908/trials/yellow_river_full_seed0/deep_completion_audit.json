@@ -1,0 +1,45 @@
+{
+  "actual_epochs": 96,
+  "best_epoch": 71,
+  "best_sha256": "fba06e76f7232158150b8e68bc3132aaaef33836a844cb46ef12a1b1a2f30ec2",
+  "checked_utc": "2026-10-09T13:29:16.599388+00:00",
+  "finite_training_and_test": true,
+  "identity_sha256": "0c207c6c63c47d3e1f3094a4de97a3c678e9b57a0f5a8056f4f7b7f7ebcdf26f",
+  "internal_artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_full_seed0/config.json",
+      "sha256": "89e22ddcd81f6b30e575397fef9ce8c3e90ca81ced519b834854da727167c741"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_full_seed0/initialization.json",
+      "sha256": "e4275a5abaa79e3b57a7a380289b6a24ab0bc0d5fba923dc46916a3fb0f413a2"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_full_seed0/metrics.jsonl",
+      "sha256": "1c4f4d9dcf37863083d14089bf33881c53beccbdc94ecc2d3a64238a1b152bbd"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_full_seed0/test_evaluation.json",
+      "sha256": "cc076d0252e41c19be8de898a1118eab73a7f5141c96c47ba3621442a5e8571c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_full_seed0/result.json",
+      "sha256": "f8623f0da087daaded6ccd326bb4fe1a35aa2785b0a22d22036452efdb29d79d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_full_seed0/best.pt",
+      "sha256": "fba06e76f7232158150b8e68bc3132aaaef33836a844cb46ef12a1b1a2f30ec2"
+    }
+  ],
+  "last_checkpoint": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_full_seed0/last.pt",
+    "sha256": "4df1948f77522fab7d1f150b0effc66dacea9282d15cd2f8b23ff525e4d34881",
+    "size": 44963599
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "protocol_sha256": "7e20b559cfe9b6364bd0aeeceb9d024ed8f4d0a0f648bc4da3fd416e74620c0f",
+  "schema": "rgsp-operator-cross-recovery-v1",
+  "seed": 0,
+  "status": "deep_verified",
+  "trial_id": "yellow_river_full_seed0"
+}

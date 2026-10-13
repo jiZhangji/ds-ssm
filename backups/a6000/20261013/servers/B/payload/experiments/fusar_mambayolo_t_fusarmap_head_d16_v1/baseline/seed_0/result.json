@@ -1,0 +1,71 @@
+{
+  "dataset": "FUSAR-Map",
+  "task": "segmentation",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "backbone_layout": "full_t",
+  "decoder": "fusar_map_net",
+  "initialization": "scratch",
+  "protocol": "fusar-map-paper-disclosed-17560-train-4390-val-wuhan-1280-test",
+  "selection_policy": "best-validation-fwiou-test-once",
+  "class_names": [
+    "building",
+    "vegetation",
+    "water",
+    "road"
+  ],
+  "split_sizes": {
+    "train": 17560,
+    "val": 4390,
+    "test": 1280
+  },
+  "imgsz": 256,
+  "batch": 10,
+  "epochs_requested": 150,
+  "optimizer": "Adam",
+  "scheduler": "step",
+  "lr": 0.001,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.93,
+  "momentum": 0.9,
+  "weight_decay": 0.0,
+  "label_smoothing": 0.0,
+  "segmentation_loss": "weighted_cross_entropy_plus_dice",
+  "selection_metric": "miou_all",
+  "best_epoch": 118,
+  "threshold": null,
+  "metric": {
+    "miou_all": 0.4291146061083728,
+    "miou_foreground": 0.5361942962698173,
+    "mpa": 0.49997876307462646,
+    "dice": 0.4937254863299675,
+    "oa": 0.7877122044563294,
+    "fwiou": 0.663928708665133,
+    "per_class_iou": [
+      0.10787553562403931,
+      0.738963261133396,
+      0.8696156010884983,
+      4.026587557643118e-06
+    ],
+    "per_class_pa": [
+      0.16439591109941634,
+      0.9023465938705247,
+      0.9331685207025001,
+      4.026626064853846e-06
+    ],
+    "per_class_dice": [
+      0.19474305940563197,
+      0.8498894457974522,
+      0.9302613869740971,
+      8.053142688602084e-06
+    ]
+  },
+  "params": 5496532,
+  "gflops": 6.298366464,
+  "latency_ms": 5.369868533064921,
+  "fps": 186.22429838691733,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/fusar_mambayolo_t_fusarmap_head_d16_v1/baseline/seed_0/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/segmentation/FUSAR_Map_Paper_Code/manifest.json"
+}

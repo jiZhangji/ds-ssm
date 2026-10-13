@@ -1,0 +1,12 @@
+{
+  "children_were_not_signaled": true,
+  "finished_utc": "2026-10-09T02:51:26.665104+00:00",
+  "parent_lanes": [
+    "f0",
+    "f1"
+  ],
+  "schema": "rgsp-legacy-handoff-v1",
+  "script_sha256": "e6dec3a6795748d53dc76bd886a8427c3b2c7adea3736cb42d4ce2ff43db0938",
+  "spec_sha256": "d1f589aa41f341171ea6e15378565a2c594af5281eb96974f343d78e3c45c1ca",
+  "status": "both_scheduler_parents_frozen"
+}

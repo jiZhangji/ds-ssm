@@ -1,0 +1,41 @@
+{
+  "batch": 16,
+  "conf": 0.001,
+  "data": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/ssdd/data.yaml",
+  "data_manifest_sha256": "cd2f5314ecc8139f8e51a8c283d309f522c12abd58320003ea86bacbaac853de",
+  "data_yaml_sha256": "55784492a13eec556af419b736b7005a3f308dba96b1f4df2b02883199af34ec",
+  "imgsz": 640,
+  "iou": 0.6,
+  "overall": {
+    "ap50": 0.855415415453138,
+    "ap50_95": 0.41061205299673614,
+    "ap75": 0.3191692833711293,
+    "precision": 0.897229959357842,
+    "recall": 0.7835036529908325
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "precision_mode": "fp32",
+  "result_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_residual_scale075_seed0/evaluation/test",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "smoke_only": false,
+  "spec": {
+    "control": "residual_scale075",
+    "placement": "p3",
+    "state_dim": 16,
+    "stats_kernel_size": 3,
+    "trend_kernel_size": 3
+  },
+  "speed_ms": {
+    "inference": 5.9473781750119965,
+    "loss": 0.00035248953720618936,
+    "postprocess": 0.18848016344267746,
+    "preprocess": 0.06495262014454808
+  },
+  "split": "test",
+  "subset": "ssdd",
+  "trial_id": "ssdd_residual_scale075_seed0",
+  "trial_sha256": "a2409e5c7576db9fd49d2fdfaf2d05d5e543280b88604cba48f5e9b902996e52",
+  "weights": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_residual_scale075_seed0/weights/best.pt",
+  "weights_sha256": "27a7054ba6e675471fc405d5444c3ab5d15f1a8b026580e8bb6d9a83429776a0"
+}

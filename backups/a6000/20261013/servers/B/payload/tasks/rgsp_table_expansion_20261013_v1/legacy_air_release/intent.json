@@ -1,0 +1,32 @@
+{
+  "authorization": "2026-10-13 user explicitly allowed ending B AIR waiting queue for supplemental experiments",
+  "processes": [
+    {
+      "pid": 104082,
+      "state": "S",
+      "pgid": 104082,
+      "start_ticks": "7349377",
+      "command": "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -B -u /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py --plan /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json --host-key b --inherited-lock-fd 3 --attempt-dir /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/b/attempt_2026-10-09T032844.767085_0000_d2849acc "
+    },
+    {
+      "pid": 104083,
+      "state": "S",
+      "pgid": 104082,
+      "start_ticks": "7349389",
+      "command": "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -B -u /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py --plan /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json --lane b_seed0 "
+    },
+    {
+      "pid": 168807,
+      "state": "S",
+      "pgid": 104082,
+      "start_ticks": "17602743",
+      "command": "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/train_trial.py --plan /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json --trial sar_aircraft10_matched_scale075_seed0 --gpu-uuid GPU-09b018e1-7140-296a-73d4-9e010ee209a2 "
+    }
+  ],
+  "GPU_compute_empty": true,
+  "run_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_aircraft10_matched_scale075_seed0",
+  "no_training_checkpoint": true,
+  "legacy_barrier_untouched": true,
+  "action": "SIGTERM exact waiting process group 104082, preserve all files and receipts",
+  "time": "2026-10-13 10:27:13 +0800"
+}

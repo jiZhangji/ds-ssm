@@ -1,0 +1,232 @@
+SAR-ACD {"classes": ["A220", "A330", "ARJ21", "Boeing737", "Boeing787"], "split": {"train": 2017, "val": 251, "test": 254}, "class_count": {"A220": 464, "A330": 512, "ARJ21": 514, "Boeing737": 528, "Boeing787": 504}, "protocol": "stratified-random-80-10-10"}
+SAMPLE {"classes": ["2s1", "bmp2", "btr70", "m1", "m2", "m35", "m548", "m60", "t72", "zsu23"], "split": {"train": 1075, "val": 135, "test": 135}, "class_count": {"2s1": 174, "bmp2": 107, "btr70": 92, "m1": 129, "m2": 128, "m35": 129, "m548": 128, "m60": 176, "t72": 108, "zsu23": 174}, "protocol": "stratified-random-80-10-10-real-only"}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+SAR-ACD baseline epoch=1/200 loss=1.48844 score=0.10769
+SAR-ACD baseline epoch=2/200 loss=1.29070 score=0.15463
+SAR-ACD baseline epoch=3/200 loss=1.23746 score=0.24876
+SAR-ACD baseline epoch=4/200 loss=1.21205 score=0.35896
+SAR-ACD baseline epoch=5/200 loss=1.14657 score=0.48403
+SAR-ACD baseline epoch=6/200 loss=1.11969 score=0.23633
+SAR-ACD baseline epoch=7/200 loss=1.14478 score=0.25725
+SAR-ACD baseline epoch=8/200 loss=1.11349 score=0.52678
+SAR-ACD baseline epoch=9/200 loss=1.06313 score=0.46183
+SAR-ACD baseline epoch=10/200 loss=1.02927 score=0.35085
+SAR-ACD baseline epoch=11/200 loss=1.01628 score=0.54637
+SAR-ACD baseline epoch=12/200 loss=1.00626 score=0.52420
+SAR-ACD baseline epoch=13/200 loss=0.98561 score=0.35062
+SAR-ACD baseline epoch=14/200 loss=0.94300 score=0.54684
+SAR-ACD baseline epoch=15/200 loss=0.93573 score=0.59579
+SAR-ACD baseline epoch=16/200 loss=0.92884 score=0.11731
+SAR-ACD baseline epoch=17/200 loss=0.92650 score=0.63142
+SAR-ACD baseline epoch=18/200 loss=0.89099 score=0.51047
+SAR-ACD baseline epoch=19/200 loss=0.86990 score=0.30742
+SAR-ACD baseline epoch=20/200 loss=0.87320 score=0.52028
+SAR-ACD baseline epoch=21/200 loss=0.83693 score=0.59200
+SAR-ACD baseline epoch=22/200 loss=0.81472 score=0.67616
+SAR-ACD baseline epoch=23/200 loss=0.79448 score=0.45294
+SAR-ACD baseline epoch=24/200 loss=0.79679 score=0.61993
+SAR-ACD baseline epoch=25/200 loss=0.77186 score=0.70860
+SAR-ACD baseline epoch=26/200 loss=0.75863 score=0.66578
+SAR-ACD baseline epoch=27/200 loss=0.75209 score=0.52160
+SAR-ACD baseline epoch=28/200 loss=0.74011 score=0.71070
+SAR-ACD baseline epoch=29/200 loss=0.71092 score=0.75289
+SAR-ACD baseline epoch=30/200 loss=0.70554 score=0.72014
+SAR-ACD baseline epoch=31/200 loss=0.69409 score=0.72768
+SAR-ACD baseline epoch=32/200 loss=0.66226 score=0.79931
+SAR-ACD baseline epoch=33/200 loss=0.67204 score=0.77244
+SAR-ACD baseline epoch=34/200 loss=0.66536 score=0.80111
+SAR-ACD baseline epoch=35/200 loss=0.65597 score=0.80381
+SAR-ACD baseline epoch=36/200 loss=0.64576 score=0.77533
+SAR-ACD baseline epoch=37/200 loss=0.61797 score=0.83038
+SAR-ACD baseline epoch=38/200 loss=0.62486 score=0.84631
+SAR-ACD baseline epoch=39/200 loss=0.60769 score=0.77591
+SAR-ACD baseline epoch=40/200 loss=0.60262 score=0.85072
+SAR-ACD baseline epoch=41/200 loss=0.60169 score=0.83009
+SAR-ACD baseline epoch=42/200 loss=0.58128 score=0.83383
+SAR-ACD baseline epoch=43/200 loss=0.58462 score=0.87748
+SAR-ACD baseline epoch=44/200 loss=0.56310 score=0.84474
+SAR-ACD baseline epoch=45/200 loss=0.56510 score=0.60929
+SAR-ACD baseline epoch=46/200 loss=0.55578 score=0.81650
+SAR-ACD baseline epoch=47/200 loss=0.55519 score=0.81162
+SAR-ACD baseline epoch=48/200 loss=0.54592 score=0.81459
+SAR-ACD baseline epoch=49/200 loss=0.54863 score=0.85654
+SAR-ACD baseline epoch=50/200 loss=0.54051 score=0.76230
+SAR-ACD baseline epoch=51/200 loss=0.55821 score=0.77233
+SAR-ACD baseline epoch=52/200 loss=0.52960 score=0.78147
+SAR-ACD baseline epoch=53/200 loss=0.52441 score=0.91886
+SAR-ACD baseline epoch=54/200 loss=0.52699 score=0.91127
+SAR-ACD baseline epoch=55/200 loss=0.51590 score=0.90866
+SAR-ACD baseline epoch=56/200 loss=0.50395 score=0.82406
+SAR-ACD baseline epoch=57/200 loss=0.51594 score=0.89071
+SAR-ACD baseline epoch=58/200 loss=0.49499 score=0.84872
+SAR-ACD baseline epoch=59/200 loss=0.50234 score=0.91492
+SAR-ACD baseline epoch=60/200 loss=0.51359 score=0.75396
+SAR-ACD baseline epoch=61/200 loss=0.51877 score=0.78482
+SAR-ACD baseline epoch=62/200 loss=0.49992 score=0.90402
+SAR-ACD baseline epoch=63/200 loss=0.50028 score=0.86944
+SAR-ACD baseline epoch=64/200 loss=0.50028 score=0.87823
+SAR-ACD baseline epoch=65/200 loss=0.49257 score=0.89158
+SAR-ACD baseline epoch=66/200 loss=0.48980 score=0.93117
+SAR-ACD baseline epoch=67/200 loss=0.47584 score=0.89432
+SAR-ACD baseline epoch=68/200 loss=0.47187 score=0.89669
+SAR-ACD baseline epoch=69/200 loss=0.47808 score=0.84557
+SAR-ACD baseline epoch=70/200 loss=0.47879 score=0.86244
+SAR-ACD baseline epoch=71/200 loss=0.47840 score=0.88447
+SAR-ACD baseline epoch=72/200 loss=0.48504 score=0.90751
+SAR-ACD baseline epoch=73/200 loss=0.47488 score=0.92005
+SAR-ACD baseline epoch=74/200 loss=0.48131 score=0.89717
+SAR-ACD baseline epoch=75/200 loss=0.47870 score=0.86610
+SAR-ACD baseline epoch=76/200 loss=0.47367 score=0.88478
+SAR-ACD baseline epoch=77/200 loss=0.46760 score=0.91549
+SAR-ACD baseline epoch=78/200 loss=0.46086 score=0.87341
+SAR-ACD baseline epoch=79/200 loss=0.47139 score=0.91538
+SAR-ACD baseline epoch=80/200 loss=0.45640 score=0.91265
+SAR-ACD baseline epoch=81/200 loss=0.45057 score=0.90464
+SAR-ACD baseline epoch=82/200 loss=0.45758 score=0.85412
+SAR-ACD baseline epoch=83/200 loss=0.46007 score=0.93626
+SAR-ACD baseline epoch=84/200 loss=0.46243 score=0.91513
+SAR-ACD baseline epoch=85/200 loss=0.46640 score=0.93971
+SAR-ACD baseline epoch=86/200 loss=0.45130 score=0.89301
+SAR-ACD baseline epoch=87/200 loss=0.46248 score=0.93134
+SAR-ACD baseline epoch=88/200 loss=0.44866 score=0.91566
+SAR-ACD baseline epoch=89/200 loss=0.45116 score=0.86882
+SAR-ACD baseline epoch=90/200 loss=0.45995 score=0.90457
+SAR-ACD baseline epoch=91/200 loss=0.45044 score=0.86086
+SAR-ACD baseline epoch=92/200 loss=0.44661 score=0.89376
+SAR-ACD baseline epoch=93/200 loss=0.44936 score=0.91092
+SAR-ACD baseline epoch=94/200 loss=0.44573 score=0.95160
+SAR-ACD baseline epoch=95/200 loss=0.43725 score=0.89850
+SAR-ACD baseline epoch=96/200 loss=0.44802 score=0.94694
+SAR-ACD baseline epoch=97/200 loss=0.44075 score=0.93177
+SAR-ACD baseline epoch=98/200 loss=0.44088 score=0.90049
+SAR-ACD baseline epoch=99/200 loss=0.44605 score=0.90106
+SAR-ACD baseline epoch=100/200 loss=0.43698 score=0.93612
+SAR-ACD baseline epoch=101/200 loss=0.43529 score=0.95559
+SAR-ACD baseline epoch=102/200 loss=0.43769 score=0.95188
+SAR-ACD baseline epoch=103/200 loss=0.43843 score=0.93464
+SAR-ACD baseline epoch=104/200 loss=0.43342 score=0.94319
+SAR-ACD baseline epoch=105/200 loss=0.42988 score=0.95570
+SAR-ACD baseline epoch=106/200 loss=0.43617 score=0.91562
+SAR-ACD baseline epoch=107/200 loss=0.43138 score=0.92459
+SAR-ACD baseline epoch=108/200 loss=0.44483 score=0.93525
+SAR-ACD baseline epoch=109/200 loss=0.43368 score=0.94351
+SAR-ACD baseline epoch=110/200 loss=0.43167 score=0.95177
+SAR-ACD baseline epoch=111/200 loss=0.43173 score=0.94285
+SAR-ACD baseline epoch=112/200 loss=0.43259 score=0.92356
+SAR-ACD baseline epoch=113/200 loss=0.43568 score=0.91977
+SAR-ACD baseline epoch=114/200 loss=0.43311 score=0.91541
+SAR-ACD baseline epoch=115/200 loss=0.43582 score=0.94748
+SAR-ACD baseline epoch=116/200 loss=0.43761 score=0.93198
+SAR-ACD baseline epoch=117/200 loss=0.42981 score=0.94345
+SAR-ACD baseline epoch=118/200 loss=0.43275 score=0.94767
+SAR-ACD baseline epoch=119/200 loss=0.42722 score=0.95615
+SAR-ACD baseline epoch=120/200 loss=0.42883 score=0.95596
+SAR-ACD baseline epoch=121/200 loss=0.42968 score=0.95172
+SAR-ACD baseline epoch=122/200 loss=0.42775 score=0.93172
+SAR-ACD baseline epoch=123/200 loss=0.42562 score=0.93908
+SAR-ACD baseline epoch=124/200 loss=0.42766 score=0.95104
+SAR-ACD baseline epoch=125/200 loss=0.42444 score=0.94388
+SAR-ACD baseline epoch=126/200 loss=0.42185 score=0.93966
+SAR-ACD baseline epoch=127/200 loss=0.41719 score=0.95165
+SAR-ACD baseline epoch=128/200 loss=0.42279 score=0.95172
+SAR-ACD baseline epoch=129/200 loss=0.42307 score=0.91193
+SAR-ACD baseline epoch=130/200 loss=0.42255 score=0.94284
+SAR-ACD baseline epoch=131/200 loss=0.42282 score=0.95546
+SAR-ACD baseline epoch=132/200 loss=0.41909 score=0.93550
+SAR-ACD baseline epoch=133/200 loss=0.41858 score=0.95080
+SAR-ACD baseline epoch=134/200 loss=0.42320 score=0.94414
+SAR-ACD baseline epoch=135/200 loss=0.42108 score=0.91621
+SAR-ACD baseline epoch=136/200 loss=0.42250 score=0.95915
+SAR-ACD baseline epoch=137/200 loss=0.42480 score=0.93513
+SAR-ACD baseline epoch=138/200 loss=0.42387 score=0.94668
+SAR-ACD baseline epoch=139/200 loss=0.41858 score=0.94777
+SAR-ACD baseline epoch=140/200 loss=0.42154 score=0.96339
+SAR-ACD baseline epoch=141/200 loss=0.41614 score=0.95601
+SAR-ACD baseline epoch=142/200 loss=0.41439 score=0.96731
+SAR-ACD baseline epoch=143/200 loss=0.41832 score=0.94751
+SAR-ACD baseline epoch=144/200 loss=0.41729 score=0.92267
+SAR-ACD baseline epoch=145/200 loss=0.41689 score=0.95164
+SAR-ACD baseline epoch=146/200 loss=0.41388 score=0.95977
+SAR-ACD baseline epoch=147/200 loss=0.42007 score=0.96360
+SAR-ACD baseline epoch=148/200 loss=0.41978 score=0.95158
+SAR-ACD baseline epoch=149/200 loss=0.41307 score=0.94328
+SAR-ACD baseline epoch=150/200 loss=0.41231 score=0.94775
+SAR-ACD baseline epoch=151/200 loss=0.41711 score=0.95953
+SAR-ACD baseline epoch=152/200 loss=0.41389 score=0.94320
+SAR-ACD baseline epoch=153/200 loss=0.41798 score=0.93945
+SAR-ACD baseline epoch=154/200 loss=0.41339 score=0.93107
+SAR-ACD baseline epoch=155/200 loss=0.41842 score=0.95146
+SAR-ACD baseline epoch=156/200 loss=0.41273 score=0.95949
+SAR-ACD baseline epoch=157/200 loss=0.41510 score=0.95953
+SAR-ACD baseline epoch=158/200 loss=0.41194 score=0.95133
+SAR-ACD baseline epoch=159/200 loss=0.41332 score=0.95098
+SAR-ACD baseline epoch=160/200 loss=0.41101 score=0.97545
+SAR-ACD baseline epoch=161/200 loss=0.41420 score=0.96310
+SAR-ACD baseline epoch=162/200 loss=0.40875 score=0.96310
+SAR-ACD baseline epoch=163/200 loss=0.41003 score=0.95515
+SAR-ACD baseline epoch=164/200 loss=0.41047 score=0.95119
+SAR-ACD baseline epoch=165/200 loss=0.40757 score=0.94263
+SAR-ACD baseline epoch=166/200 loss=0.40888 score=0.96721
+SAR-ACD baseline epoch=167/200 loss=0.40835 score=0.94677
+SAR-ACD baseline epoch=168/200 loss=0.41389 score=0.95930
+SAR-ACD baseline epoch=169/200 loss=0.41129 score=0.94677
+SAR-ACD baseline epoch=170/200 loss=0.40943 score=0.95098
+SAR-ACD baseline epoch=171/200 loss=0.40878 score=0.95914
+SAR-ACD baseline epoch=172/200 loss=0.41217 score=0.95123
+SAR-ACD baseline epoch=173/200 loss=0.41217 score=0.96722
+SAR-ACD baseline epoch=174/200 loss=0.40874 score=0.95138
+SAR-ACD baseline epoch=175/200 loss=0.41116 score=0.95549
+SAR-ACD baseline epoch=176/200 loss=0.40934 score=0.96338
+SAR-ACD baseline epoch=177/200 loss=0.41047 score=0.95124
+SAR-ACD baseline epoch=178/200 loss=0.41137 score=0.95547
+SAR-ACD baseline epoch=179/200 loss=0.40949 score=0.95526
+SAR-ACD baseline epoch=180/200 loss=0.40980 score=0.95531
+SAR-ACD baseline epoch=181/200 loss=0.41073 score=0.96722
+SAR-ACD baseline epoch=182/200 loss=0.41021 score=0.94770
+SAR-ACD baseline epoch=183/200 loss=0.41062 score=0.95946
+SAR-ACD baseline epoch=184/200 loss=0.41270 score=0.95549
+SAR-ACD baseline epoch=185/200 loss=0.40847 score=0.95150
+SAR-ACD baseline epoch=186/200 loss=0.40803 score=0.94742
+SAR-ACD baseline epoch=187/200 loss=0.40931 score=0.95134
+SAR-ACD baseline epoch=188/200 loss=0.40916 score=0.96745
+SAR-ACD baseline epoch=189/200 loss=0.41240 score=0.95918
+SAR-ACD baseline epoch=190/200 loss=0.41198 score=0.96326
+SAR-ACD baseline epoch=191/200 loss=0.40883 score=0.94748
+SAR-ACD baseline epoch=192/200 loss=0.40757 score=0.95134
+SAR-ACD baseline epoch=193/200 loss=0.40934 score=0.96722
+SAR-ACD baseline epoch=194/200 loss=0.40744 score=0.96326
+SAR-ACD baseline epoch=195/200 loss=0.40786 score=0.95941
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "initialization": "scratch",
+  "protocol": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 64,
+  "epochs_requested": 200,
+  "best_epoch": 160,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.9488188976377953,
+    "macro_precision": 0.9497252747252747,
+    "macro_recall": 0.9484999391474467,
+    "macro_f1": 0.9481494064850304
+  },
+  "params": 1975645,
+  "gflops": 0.272907118,
+  "latency_ms": 314.6390860318206,
+  "fps": 3.178244675866069,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd32_20260827/sar-acd/baseline/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}

@@ -1,0 +1,15 @@
+{
+  "dataset": "FUSAR-Map",
+  "task": "segmentation",
+  "variant": "ours",
+  "state_dim": 16,
+  "metric": {
+    "miou": 0.2148853696562626,
+    "mpa": 0.2863716192149095,
+    "dice": 0.2749064308446857
+  },
+  "latency_ms": 7.666271524866432,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/segmentation/FUSAR_Map/ours/best.pt",
+  "epochs": 100,
+  "params": 1839783
+}

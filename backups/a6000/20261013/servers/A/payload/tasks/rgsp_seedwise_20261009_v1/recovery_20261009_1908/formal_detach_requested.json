@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "nohup",
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/operator_cross_recover.py",
+    "run"
+  ],
+  "cwd": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908",
+  "operator_sha256": "796528f8854ab0c246bdf2e7b19edd7cee11e3e2913d5731891a6735fe01e806",
+  "preformal_validation_sha256": "01819aa788fec51354387f38cfb7fd5ff0c0e2f4bf34f3daeec3a712ef823667",
+  "requested_utc": "2026-10-09T11:34:02.855146+00:00"
+}

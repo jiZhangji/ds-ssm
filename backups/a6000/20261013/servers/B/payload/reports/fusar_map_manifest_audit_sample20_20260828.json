@@ -1,0 +1,117 @@
+{
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/segmentation/FUSAR_Map/manifest.json",
+  "protocol": "city-disjoint",
+  "declared_classes": 5,
+  "class_names": [
+    "background",
+    "building",
+    "vegetation",
+    "water",
+    "road"
+  ],
+  "palette": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      255,
+      0,
+      0
+    ],
+    [
+      0,
+      255,
+      0
+    ],
+    [
+      0,
+      0,
+      255
+    ],
+    [
+      255,
+      255,
+      0
+    ]
+  ],
+  "records_total": 610,
+  "records_audited": 20,
+  "split_counts": {
+    "test": 77,
+    "train": 408,
+    "val": 125
+  },
+  "city_counts_by_split": {
+    "test": {
+      "unknown": 20
+    }
+  },
+  "mask_shapes": {
+    "1024x1024": 20
+  },
+  "duplicate_pairs": 0,
+  "known_pixels": 20971520,
+  "unknown_pixels": 0,
+  "unknown_fraction": 0.0,
+  "unknown_color_examples": [],
+  "class_pixel_distribution": [
+    {
+      "index": 0,
+      "name": "background",
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "pixels": 6456606,
+      "fraction_of_known": 0.3078749656677246
+    },
+    {
+      "index": 1,
+      "name": "building",
+      "rgb": [
+        255,
+        0,
+        0
+      ],
+      "pixels": 1891455,
+      "fraction_of_known": 0.09019160270690918
+    },
+    {
+      "index": 2,
+      "name": "vegetation",
+      "rgb": [
+        0,
+        255,
+        0
+      ],
+      "pixels": 1868630,
+      "fraction_of_known": 0.08910322189331055
+    },
+    {
+      "index": 3,
+      "name": "water",
+      "rgb": [
+        0,
+        0,
+        255
+      ],
+      "pixels": 9913301,
+      "fraction_of_known": 0.4727030277252197
+    },
+    {
+      "index": 4,
+      "name": "road",
+      "rgb": [
+        255,
+        255,
+        0
+      ],
+      "pixels": 841528,
+      "fraction_of_known": 0.04012718200683594
+    }
+  ],
+  "metric_warning": "The current trainer reports both all-class mIoU and foreground-only mIoU. Published values are comparable only after confirming whether background is included."
+}

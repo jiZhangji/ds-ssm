@@ -1,0 +1,25 @@
+{
+  "owner": {
+    "argv": [
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "-B",
+      "-u",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py",
+      "--plan",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+      "--host-key",
+      "c",
+      "--inherited-lock-fd",
+      "3",
+      "--attempt-dir",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/c/attempt_2026-10-09T033438.035978_0000_547f4d71"
+    ],
+    "pid": 3599938,
+    "ppid": 3599935,
+    "session": 3599938,
+    "start_ticks": 16430251,
+    "state": "R"
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "started_utc": "2026-10-09T03:34:38.092189+00:00"
+}

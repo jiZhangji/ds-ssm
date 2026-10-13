@@ -1,0 +1,97 @@
+Waiting for existing experiment PID 277877: SAMPLE
+Starting shared SAR tasks: SAMPLE
+[ready] SAMPLE: {'format': 'class-directory', 'images': 1345, 'classes': ['2s1', 'bmp2', 'btr70', 'm1', 'm2', 'm35', 'm548', 'm60', 't72', 'zsu23'], 'manifest': '/home/powerleader/ig-ds-ssm/data/cross_task_prepared/classification/SAMPLE/manifest.json'}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+SAMPLE baseline epoch=1/100 score=0.58088
+SAMPLE baseline epoch=2/100 score=0.83824
+SAMPLE baseline epoch=3/100 score=0.94118
+SAMPLE baseline epoch=4/100 score=0.97794
+SAMPLE baseline epoch=5/100 score=0.99265
+SAMPLE baseline epoch=6/100 score=0.99265
+SAMPLE baseline epoch=7/100 score=0.97794
+SAMPLE baseline epoch=8/100 score=0.97059
+SAMPLE baseline epoch=9/100 score=1.00000
+SAMPLE baseline epoch=10/100 score=1.00000
+SAMPLE baseline epoch=11/100 score=1.00000
+SAMPLE baseline epoch=12/100 score=1.00000
+SAMPLE baseline epoch=13/100 score=0.98529
+SAMPLE baseline epoch=14/100 score=0.89706
+SAMPLE baseline epoch=15/100 score=0.97794
+SAMPLE baseline epoch=16/100 score=0.98529
+SAMPLE baseline epoch=17/100 score=0.98529
+SAMPLE baseline epoch=18/100 score=0.98529
+SAMPLE baseline epoch=19/100 score=0.98529
+SAMPLE baseline epoch=20/100 score=0.98529
+SAMPLE baseline epoch=21/100 score=0.98529
+SAMPLE baseline epoch=22/100 score=0.98529
+SAMPLE baseline epoch=23/100 score=0.98529
+SAMPLE baseline epoch=24/100 score=0.97059
+SAMPLE baseline epoch=25/100 score=0.99265
+SAMPLE baseline epoch=26/100 score=0.98529
+SAMPLE baseline epoch=27/100 score=0.98529
+SAMPLE baseline epoch=28/100 score=0.99265
+SAMPLE baseline epoch=29/100 score=1.00000
+EARLY STOP: SAMPLE baseline after 20 stale epochs
+{
+  "dataset": "SAMPLE",
+  "task": "classification",
+  "variant": "baseline",
+  "state_dim": 0,
+  "metric": {
+    "accuracy": 1.0
+  },
+  "latency_ms": 2.3026177824130687,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/classification/SAMPLE/baseline/best.pt",
+  "epochs": 100,
+  "params": 1976418
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+SAMPLE ours epoch=1/100 score=0.48529
+SAMPLE ours epoch=2/100 score=0.82353
+SAMPLE ours epoch=3/100 score=0.97059
+SAMPLE ours epoch=4/100 score=0.97794
+SAMPLE ours epoch=5/100 score=0.98529
+SAMPLE ours epoch=6/100 score=0.99265
+SAMPLE ours epoch=7/100 score=0.99265
+SAMPLE ours epoch=8/100 score=0.99265
+SAMPLE ours epoch=9/100 score=0.97794
+SAMPLE ours epoch=10/100 score=1.00000
+SAMPLE ours epoch=11/100 score=1.00000
+SAMPLE ours epoch=12/100 score=0.99265
+SAMPLE ours epoch=13/100 score=1.00000
+SAMPLE ours epoch=14/100 score=1.00000
+SAMPLE ours epoch=15/100 score=1.00000
+SAMPLE ours epoch=16/100 score=1.00000
+SAMPLE ours epoch=17/100 score=1.00000
+SAMPLE ours epoch=18/100 score=1.00000
+SAMPLE ours epoch=19/100 score=1.00000
+SAMPLE ours epoch=20/100 score=1.00000
+SAMPLE ours epoch=21/100 score=1.00000
+SAMPLE ours epoch=22/100 score=1.00000
+SAMPLE ours epoch=23/100 score=1.00000
+SAMPLE ours epoch=24/100 score=1.00000
+SAMPLE ours epoch=25/100 score=1.00000
+SAMPLE ours epoch=26/100 score=1.00000
+SAMPLE ours epoch=27/100 score=1.00000
+SAMPLE ours epoch=28/100 score=1.00000
+SAMPLE ours epoch=29/100 score=1.00000
+SAMPLE ours epoch=30/100 score=1.00000
+EARLY STOP: SAMPLE ours after 20 stale epochs
+{
+  "dataset": "SAMPLE",
+  "task": "classification",
+  "variant": "ours",
+  "state_dim": 16,
+  "metric": {
+    "accuracy": 1.0
+  },
+  "latency_ms": 2.352077463739619,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/classification/SAMPLE/ours/best.pt",
+  "epochs": 100,
+  "params": 1768236
+}
+Wrote /home/powerleader/ig-ds-ssm/experiments/cross_task/final_results.json

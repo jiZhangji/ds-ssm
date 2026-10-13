@@ -1,0 +1,55 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/provenance.json",
+      "sha256": "9d670562cf1f851236d059825a7187ac7318f7540952e727998bf220d8559075"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/train_complete.json",
+      "sha256": "a65e884b4840917430b7dd5aa62a4dd189b722b1e01c6273f0fc709edc5e59ba"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/eval_test.json",
+      "sha256": "23fd54b22ee44493c7d6e3d7f3d11136213fa20da53ba47ec3928d5e3e12f40c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/evaluation_complete.json",
+      "sha256": "01f39b4186dc88d3d39d3c7d7da8f4540a00627e97fcefdbaf9b100764468bc6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/weights/best.pt",
+      "sha256": "f2cb0643ccbf5179f405d8cf2ecf9be0f645ea8d4763896ca6c2be362999d54e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/weights/raw_fp32_last.pt",
+      "sha256": "e813830dc7c4cccf421eb2992de4e98d2137ee031825cffedf3280d6ca64a425"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/controls_by_epoch.jsonl",
+      "sha256": "cd59201568b8100ca50abb1d3118cfb53afef01188a8bd784bafc8f61dbfc073"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/trial_complete.json",
+      "sha256": "77de49727230b8773aaa4ebbd0c46ee332a9f518b5c8e29d3c1fdfbb051fd473"
+    }
+  ],
+  "details": {
+    "kind": "detection",
+    "overall": {
+      "ap50": 0.6818567713263167,
+      "ap50_95": 0.22229270000055226,
+      "ap75": 0.06657156107870892,
+      "precision": 0.8164968714571473,
+      "recall": 0.608058608058608
+    },
+    "resumed": false,
+    "smoke_only": false
+  },
+  "finished_utc": "2026-10-10T03:24:05.199177+00:00",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "ssdd_full_d32_seed0",
+  "trial_sha256": "04107a6c0eacf3f8e689e94a6626ac5d03048759da77b02cfeb44c8317ccdf70"
+}

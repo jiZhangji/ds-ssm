@@ -1,0 +1,371 @@
+{
+  "status": "STATIC_PASS_COMPILE_NOT_RUN",
+  "originalDetectionRows": 37,
+  "revisedDetectionRows": 37,
+  "methodMetricRowsUnchanged": true,
+  "detectionTables": 4,
+  "totalTables": 16,
+  "other12TablesUnchanged": true,
+  "nonDetectionTextUnchangedExceptRequiredHistoricalTableReference": true,
+  "labels": 74,
+  "duplicateLabels": [],
+  "undefinedRefs": [],
+  "citedKeys": 42,
+  "bibitems": 42,
+  "missingCitations": [],
+  "duplicateBibs": [],
+  "environmentErrors": [],
+  "unclosedEnvironments": [],
+  "braceBalance": 0,
+  "minimumBraceDepth": 0,
+  "bibliographyChanges": {
+    "added": [
+      "feps2023",
+      "fgbg2025",
+      "pegnet2025",
+      "vitdet4sar2025",
+      "saratrx2025",
+      "vitdet2022",
+      "yolov42020",
+      "yolov72023",
+      "yolov82023",
+      "improvedfcos2022",
+      "cmft2023",
+      "diffusiondet2023",
+      "diffdet4sar2024"
+    ],
+    "updated": [
+      "mambayolo2024",
+      "madinet2025",
+      "madinet_preprint"
+    ],
+    "total": 42,
+    "unused": []
+  },
+  "figures": [
+    "figures/fig1_motivation_20261009.pdf",
+    "figures/fig2_architecture_20261009.pdf",
+    "gallery/pdf/C12.pdf",
+    "gallery/pdf/C13.pdf",
+    "figures/fig1_motivation.pdf",
+    "figures/fig1_motivation_20261008.pdf",
+    "figures/fig2_method.pdf"
+  ],
+  "compilation": "not_run",
+  "layout": "not_visually_verified",
+  "sourceAttachment": "C:/Users/13207/.codex/attachments/6481447a-5303-4625-9caf-81c5dcddcc66/已粘贴的文本.txt",
+  "sourceSha256": "5d132949a615c0441eecc82b3557f0afc4ba3a1a28b52868588191f5c217e471",
+  "recordedAt": "2026-10-11T20:16:32.9492748+08:00",
+  "artifacts": [
+    {
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\RGSP_detection_revised_20261011.tex",
+      "sha256": "2e903a97c2cd776c4b43e26e2fb354abfdc6423f4c2949a1fa089bd16f43e05d",
+      "bytes": 108853
+    },
+    {
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\DETECTION_SECTION_20261011.tex",
+      "sha256": "6d54a7be418b3ce157a19e295947becab625b5a3b31f61df3acfb97b213cf938",
+      "bytes": 16151
+    },
+    {
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\DETECTION_REFERENCES_20261011.tex",
+      "sha256": "b95622e5378c21cf9fca3bde65da83a61fbeb3a9211ad4b38f7155cf49094f72",
+      "bytes": 4416
+    },
+    {
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\RGSP_revised_20261011.tex",
+      "sha256": "cb4873d3cc09bee63e3f11d260ca3ba9b5887efbfabccedf036e325e7e96cfe1",
+      "bytes": 100862
+    },
+    {
+      "path": "C:\\Users\\13207\\.codex\\attachments\\6481447a-5303-4625-9caf-81c5dcddcc66\\已粘贴的文本.txt",
+      "sha256": "5d132949a615c0441eecc82b3557f0afc4ba3a1a28b52868588191f5c217e471",
+      "bytes": 11168
+    }
+  ],
+  "independentReview": {
+    "scope": "37 result rows, general-baseline publication metadata, 19 detection citations, grouping and LaTeX table structure",
+    "result": "PASS; compilation and final width/pagination not assessed"
+  },
+  "methodPublications": [
+    {
+      "name": "ViTDet",
+      "key": "vitdet2022",
+      "venue": "ECCV",
+      "year": "2022"
+    },
+    {
+      "name": "FEPS-Net",
+      "key": "feps2023",
+      "venue": "JSTARS",
+      "year": "2023"
+    },
+    {
+      "name": "FGBG-Net",
+      "key": "fgbg2025",
+      "venue": "TGRS",
+      "year": "2025"
+    },
+    {
+      "name": "PEGNet",
+      "key": "pegnet2025",
+      "venue": "GRSL",
+      "year": "2025"
+    },
+    {
+      "name": "ViTDet4SAR",
+      "key": "vitdet4sar2025",
+      "venue": "IGARSS",
+      "year": "2025"
+    },
+    {
+      "name": "SARATR-X",
+      "key": "saratrx2025",
+      "venue": "TIP",
+      "year": "2025"
+    },
+    {
+      "name": "SUMMIT",
+      "key": "summit2025",
+      "venue": "IJAEOG",
+      "year": "2025"
+    },
+    {
+      "name": "SARDet-MIM",
+      "key": "sardetmim2026",
+      "venue": "Remote Sens.",
+      "year": "2026"
+    },
+    {
+      "name": "YOLOv4",
+      "key": "yolov42020",
+      "venue": "arXiv",
+      "year": "2020"
+    },
+    {
+      "name": "YOLOv7",
+      "key": "yolov72023",
+      "venue": "CVPR",
+      "year": "2023"
+    },
+    {
+      "name": "YOLO-SAD",
+      "key": "yolosad2024",
+      "venue": "Appl. Sci.",
+      "year": "2024"
+    },
+    {
+      "name": "YOLOv8n",
+      "key": "yolov82023",
+      "venue": "Software",
+      "year": "2023"
+    },
+    {
+      "name": "Mamba-YOLO-T (Original)",
+      "key": "mambayolo2024",
+      "venue": "AAAI",
+      "year": "2025"
+    },
+    {
+      "name": "Improved FCOS",
+      "key": "improvedfcos2022",
+      "venue": "JSTARS",
+      "year": "2022"
+    },
+    {
+      "name": "CMFT",
+      "key": "cmft2023",
+      "venue": "TGRS",
+      "year": "2023"
+    },
+    {
+      "name": "DiffusionDet",
+      "key": "diffusiondet2023",
+      "venue": "ICCV",
+      "year": "2023"
+    },
+    {
+      "name": "DiffDet4SAR",
+      "key": "diffdet4sar2024",
+      "venue": "GRSL",
+      "year": "2024"
+    },
+    {
+      "name": "MaDiNet",
+      "key": "madinet2025",
+      "venue": "TCSVT",
+      "year": "2025"
+    }
+  ],
+  "crossrefEvidence": [
+    {
+      "doi": "10.1109/jstars.2022.3230859",
+      "title": [
+        "Feature Enhancement Pyramid and Shallow Feature Reconstruction Network for SAR Ship Detection"
+      ],
+      "authors": [
+        "Lin Bai",
+        "Cheng Yao",
+        "Zhen Ye",
+        "Dongling Xue",
+        "Xiangyuan Lin",
+        "Meng Hui"
+      ],
+      "venue": [
+        "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing"
+      ],
+      "volume": "16",
+      "pages": "1042-1056",
+      "published": {
+        "date-parts": [
+          [
+            2023
+          ]
+        ]
+      },
+      "sourceURL": "https://api.crossref.org/works/10.1109/jstars.2022.3230859"
+    },
+    {
+      "doi": "10.1109/tgrs.2025.3572095",
+      "title": [
+        "Dense-Weak Ship Detection Based on Foreground-Guided Background Generation Network in SAR Images"
+      ],
+      "authors": [
+        "Wenping Ma",
+        "Xiaoting Yang",
+        "Hao Zhu",
+        "Xiaoteng Wang",
+        "Biao Hou",
+        "Mengru Ma",
+        "Yue Wu"
+      ],
+      "venue": [
+        "IEEE Transactions on Geoscience and Remote Sensing"
+      ],
+      "volume": "63",
+      "pages": "1-16",
+      "published": {
+        "date-parts": [
+          [
+            2025
+          ]
+        ]
+      },
+      "sourceURL": "https://api.crossref.org/works/10.1109/tgrs.2025.3572095"
+    },
+    {
+      "doi": "10.1109/lgrs.2025.3528221",
+      "title": [
+        "PEGNet: An Enhanced Ship Detection Model for Dense Scenes and Multiscale Targets"
+      ],
+      "authors": [
+        "Xiao Tang",
+        "Jingyu Zhang",
+        "Yunzhi Xia",
+        "Kun Cao",
+        "Chang Zhang"
+      ],
+      "venue": [
+        "IEEE Geoscience and Remote Sensing Letters"
+      ],
+      "volume": "22",
+      "pages": "1-5",
+      "published": {
+        "date-parts": [
+          [
+            2025
+          ]
+        ]
+      },
+      "sourceURL": "https://api.crossref.org/works/10.1109/lgrs.2025.3528221"
+    },
+    {
+      "doi": "10.1109/igarss55030.2025.11243361",
+      "title": [
+        "Enhancing SAR Object Detection with Self-Supervised Pre-Training on Masked Auto-Encoders"
+      ],
+      "authors": [
+        "Xinyang Pu",
+        "Feng Xu"
+      ],
+      "venue": [
+        "IGARSS 2025 - 2025 IEEE International Geoscience and Remote Sensing Symposium"
+      ],
+      "volume": null,
+      "pages": "6204-6207",
+      "published": {
+        "date-parts": [
+          [
+            2025,
+            8,
+            3
+          ]
+        ]
+      },
+      "sourceURL": "https://api.crossref.org/works/10.1109/igarss55030.2025.11243361"
+    },
+    {
+      "doi": "10.1109/tip.2025.3531988",
+      "title": [
+        "SARATR-X: Toward Building a Foundation Model for SAR Target Recognition"
+      ],
+      "authors": [
+        "Weijie Li",
+        "Wei Yang",
+        "Yuenan Hou",
+        "Li Liu",
+        "Yongxiang Liu",
+        "Xiang Li"
+      ],
+      "venue": [
+        "IEEE Transactions on Image Processing"
+      ],
+      "volume": "34",
+      "pages": "869-884",
+      "published": {
+        "date-parts": [
+          [
+            2025
+          ]
+        ]
+      },
+      "sourceURL": "https://api.crossref.org/works/10.1109/tip.2025.3531988"
+    }
+  ],
+  "additionalSourceURLs": [
+    "https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/2151_ECCV_2022_paper.php",
+    "https://arxiv.org/abs/2004.10934",
+    "https://openaccess.thecvf.com/content/CVPR2023/html/Wang_YOLOv7_Trainable_Bag-of-Freebies_Sets_New_State-of-the-Art_for_Real-Time_Object_Detectors_CVPR_2023_paper.html",
+    "https://docs.ultralytics.com/models/yolov8/",
+    "https://ojs.aaai.org/index.php/AAAI/article/view/32885",
+    "https://doi.org/10.1109/JSTARS.2022.3213583",
+    "https://doi.org/10.1109/TGRS.2023.3300536",
+    "https://openaccess.thecvf.com/content/ICCV2023/html/Chen_DiffusionDet_Diffusion_Model_for_Object_Detection_ICCV_2023_paper.html",
+    "https://doi.org/10.1109/LGRS.2024.3386020",
+    "https://doi.org/10.1109/TCSVT.2025.3574657",
+    "https://arxiv.org/abs/2411.07500v1"
+  ],
+  "numericalSources": [
+    {
+      "scope": "SSDD literature rows",
+      "source": "SARDet-MIM Table 1",
+      "url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-18-00580/article_deploy/remotesensing-18-00580.xml"
+    },
+    {
+      "scope": "SADD YOLO rows",
+      "source": "YOLO-SAD Table 9",
+      "url": "https://mdpi-res.com/d_attachment/applsci/applsci-14-03025/article_deploy/applsci-14-03025.xml"
+    },
+    {
+      "scope": "SADD ViT/pretraining rows",
+      "source": "SARDet-MIM Table 2",
+      "url": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-18-00580/article_deploy/remotesensing-18-00580.xml"
+    },
+    {
+      "scope": "SAR-ShipDataset literature rows",
+      "source": "MaDiNet arXiv:2411.07500v1 (2024) Table 4",
+      "url": "https://arxiv.org/html/2411.07500v1#S4.T4"
+    }
+  ]
+}
+

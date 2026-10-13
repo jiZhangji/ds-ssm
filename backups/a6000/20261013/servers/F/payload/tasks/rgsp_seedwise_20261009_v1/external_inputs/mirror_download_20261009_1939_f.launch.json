@@ -1,0 +1,17 @@
+{
+  "pid": 133891,
+  "argv": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/download_ship_mirror_20261009_1939.py",
+    "--target",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/raw_archives/ship_dataset_v0.zip.mirror_20261009_1939_f",
+    "--expected-hostname",
+    "powerleader-a6000-f"
+  ],
+  "hostname": "powerleader-a6000-f",
+  "launched_utc": "2026-10-09T11:40:00.320884+00:00",
+  "log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/mirror_download_20261009_1939_f.log",
+  "script_sha256": "924155398dfcdbb52c00f11223f870d0e68b59aa0e1005afcdb1752498231845"
+}

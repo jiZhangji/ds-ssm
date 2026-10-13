@@ -1,0 +1,296 @@
+{
+  "checked_utc": "2026-10-09T11:33:44.823868+00:00",
+  "cpu_load": [
+    0.14,
+    0.19,
+    0.14
+  ],
+  "disk_free_gib": 215.6,
+  "hostname": "powerleader-a6000-f",
+  "hosts": {
+    "f0": {
+      "dispatch": {
+        "attempt_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f0/attempt_2026-10-09T033047.860745_0000_a7ca9603",
+        "child": {
+          "argv": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py",
+            "--plan",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+            "--lane",
+            "f0_seed0"
+          ],
+          "pid": 127345,
+          "ppid": 127344,
+          "session": 127344,
+          "start_ticks": 7376648,
+          "state": "R"
+        },
+        "child_log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f0/attempt_2026-10-09T033047.860745_0000_a7ca9603/seed0.log",
+        "completed_seeds": [],
+        "dependency_evidence": {
+          "verified": [
+            {
+              "finalizer": {
+                "argv": [
+                  "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+                  "-B",
+                  "-u",
+                  "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_legacy_pidfd_r3.py",
+                  "finalize",
+                  "--spec",
+                  "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_spec_f_20261009_r2.json",
+                  "--lane",
+                  "f0",
+                  "--confirm-evaluate-and-retire",
+                  "--wait-seconds",
+                  "172800"
+                ],
+                "pid": 126682,
+                "start_ticks": 7189074
+              },
+              "finalizer_exited": true,
+              "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f0.r3.finalizer_launch.json",
+              "sha256": "66b09b4f841bbbd151b221c827ab2038e7284202ea9841573f221abaf7d18440"
+            },
+            {
+              "equals": {
+                "status": "adopted_and_scheduler_retired"
+              },
+              "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f0.complete.json",
+              "sha256": "f0ab41496ada918d54783a77bf528060517d7bbeb0de529e7f63e22b6110b85e"
+            }
+          ]
+        },
+        "gpu_uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+        "host_key": "f0",
+        "hostname": "powerleader-a6000-f",
+        "owner": {
+          "argv": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py",
+            "--plan",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+            "--host-key",
+            "f0",
+            "--inherited-lock-fd",
+            "3",
+            "--attempt-dir",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f0/attempt_2026-10-09T033047.860745_0000_a7ca9603"
+          ],
+          "pid": 127344,
+          "ppid": 127343,
+          "session": 127344,
+          "start_ticks": 7376636,
+          "state": "R"
+        },
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-campaign-dispatch-v1",
+        "seed": 0,
+        "started_utc": "2026-10-09T03:30:47.915996+00:00",
+        "state": "running_seed0",
+        "updated_utc": "2026-10-09T03:30:47.986717+00:00"
+      },
+      "dispatcher_alive": true,
+      "gpu": {
+        "checked_utc": "2026-10-09T11:33:44.924965+00:00",
+        "compute_processes": [],
+        "memory_total_mib": 49140,
+        "memory_used_mib": 380,
+        "name": "NVIDIA RTX A6000",
+        "utilization_percent": 0,
+        "uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b"
+      },
+      "lanes": {
+        "f0_seed0": {
+          "assigned_count": 4,
+          "deferred_readiness": {
+            "status": "not_published"
+          },
+          "receipt_files_present": [
+            "ssdd_original_seed0",
+            "ssdd_matched_identity_seed0",
+            "ssdd_local_energy_seed0"
+          ],
+          "status": {
+            "completed": [
+              "ssdd_original_seed0",
+              "ssdd_matched_identity_seed0",
+              "ssdd_local_energy_seed0"
+            ],
+            "current": "sar_shipdataset_original_seed0",
+            "gpu": {
+              "checked_utc": "2026-10-09T03:31:29.191235+00:00",
+              "compute_processes": [],
+              "memory_total_mib": 49140,
+              "memory_used_mib": 370,
+              "name": "NVIDIA RTX A6000",
+              "utilization_percent": 0,
+              "uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b"
+            },
+            "gpu_uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+            "host": "powerleader-a6000-f",
+            "lane": "f0_seed0",
+            "pid": 127345,
+            "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+            "schema": "rgsp-seedwise-v1",
+            "started_utc": "2026-10-09T03:30:48.039207+00:00",
+            "state": "running",
+            "updated_utc": "2026-10-09T03:31:29.206789+00:00"
+          }
+        },
+        "f0_seed1": {
+          "assigned_count": 3,
+          "receipt_files_present": [],
+          "status": null
+        }
+      }
+    },
+    "f1": {
+      "dispatch": {
+        "attempt_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f1/attempt_2026-10-09T033048.953276_0000_cba0d0f9",
+        "child": {
+          "argv": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py",
+            "--plan",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+            "--lane",
+            "f1_seed0"
+          ],
+          "pid": 127349,
+          "ppid": 127348,
+          "session": 127348,
+          "start_ticks": 7376757,
+          "state": "R"
+        },
+        "child_log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f1/attempt_2026-10-09T033048.953276_0000_cba0d0f9/seed0.log",
+        "completed_seeds": [],
+        "dependency_evidence": {
+          "verified": [
+            {
+              "finalizer": {
+                "argv": [
+                  "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+                  "-B",
+                  "-u",
+                  "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_legacy_pidfd_r3.py",
+                  "finalize",
+                  "--spec",
+                  "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_spec_f_20261009_r2.json",
+                  "--lane",
+                  "f1",
+                  "--confirm-evaluate-and-retire",
+                  "--wait-seconds",
+                  "172800"
+                ],
+                "pid": 126683,
+                "start_ticks": 7189175
+              },
+              "finalizer_exited": true,
+              "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f1.r3.finalizer_launch.json",
+              "sha256": "66793213bf59cf90787bf54bed63eeccaeb0544fa4ab5a87eb0c2806032f8309"
+            },
+            {
+              "equals": {
+                "status": "adopted_and_scheduler_retired"
+              },
+              "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f1.complete.json",
+              "sha256": "56534c915694a15a8beba6d04d89ec5423c7f2a0709b2bfbb04bb511f66fe4f0"
+            }
+          ]
+        },
+        "gpu_uuid": "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40",
+        "host_key": "f1",
+        "hostname": "powerleader-a6000-f",
+        "owner": {
+          "argv": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py",
+            "--plan",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+            "--host-key",
+            "f1",
+            "--inherited-lock-fd",
+            "3",
+            "--attempt-dir",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f1/attempt_2026-10-09T033048.953276_0000_cba0d0f9"
+          ],
+          "pid": 127348,
+          "ppid": 127340,
+          "session": 127348,
+          "start_ticks": 7376745,
+          "state": "R"
+        },
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-campaign-dispatch-v1",
+        "seed": 0,
+        "started_utc": "2026-10-09T03:30:49.008153+00:00",
+        "state": "running_seed0",
+        "updated_utc": "2026-10-09T03:30:49.080390+00:00"
+      },
+      "dispatcher_alive": true,
+      "gpu": {
+        "checked_utc": "2026-10-09T11:33:44.970184+00:00",
+        "compute_processes": [],
+        "memory_total_mib": 49140,
+        "memory_used_mib": 16,
+        "name": "NVIDIA RTX A6000",
+        "utilization_percent": 0,
+        "uuid": "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40"
+      },
+      "lanes": {
+        "f1_seed0": {
+          "assigned_count": 2,
+          "deferred_readiness": {
+            "status": "not_published"
+          },
+          "receipt_files_present": [
+            "ssdd_full_p4_seed0"
+          ],
+          "status": {
+            "completed": [
+              "ssdd_full_p4_seed0"
+            ],
+            "current": "sar_shipdataset_matched_scale075_seed0",
+            "gpu": {
+              "checked_utc": "2026-10-09T04:40:09.729657+00:00",
+              "compute_processes": [],
+              "memory_total_mib": 49140,
+              "memory_used_mib": 16,
+              "name": "NVIDIA RTX A6000",
+              "utilization_percent": 0,
+              "uuid": "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40"
+            },
+            "gpu_uuid": "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40",
+            "host": "powerleader-a6000-f",
+            "lane": "f1_seed0",
+            "pid": 127349,
+            "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+            "schema": "rgsp-seedwise-v1",
+            "started_utc": "2026-10-09T03:30:49.129421+00:00",
+            "state": "running",
+            "updated_utc": "2026-10-09T04:40:09.751368+00:00"
+          }
+        },
+        "f1_seed1": {
+          "assigned_count": 2,
+          "receipt_files_present": [],
+          "status": null
+        }
+      }
+    }
+  },
+  "plan_file_sha256": "37e1e2254643541118e4bab29d11cb93f1483847fc73aa69be8d63be4907cbe0",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-live-snapshot-v1",
+  "warning": "Receipt presence and last epoch are progress only; verify_receipts is required for completion."
+}

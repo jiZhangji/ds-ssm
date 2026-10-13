@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "syntax": true,
+  "target_conversion": true,
+  "empty_targets": true,
+  "unique_iou_matching": true,
+  "empty_predictions": true,
+  "official_constructors": [
+    {
+      "method": "fasterrcnn_resnet50_fpn",
+      "params": 41352281,
+      "metadata": {
+        "library": "torchvision",
+        "version": "0.14.1+cu117",
+        "builder": "fasterrcnn_resnet50_fpn",
+        "constructor": {
+          "weights": null,
+          "weights_backbone": null,
+          "num_classes": 2,
+          "min_size": 640,
+          "max_size": 640,
+          "image_mean": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "image_std": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "box_score_thresh": 0.001,
+          "box_nms_thresh": 0.7,
+          "box_detections_per_img": 300
+        },
+        "backbone": "ResNet50-FPN",
+        "weights_downloaded": false,
+        "background_label": 0,
+        "foreground_labels": [
+          1
+        ],
+        "literature_scores_reproduced": false,
+        "normalization": "RGB/255; model normalization identity, matching the shared SAR input",
+        "head_classes": 2,
+        "dense_head_note": "RetinaNet/FCOS keep unused class0 logits with foreground at1; class0 predictions are excluded from SAR metrics."
+      }
+    },
+    {
+      "method": "fcos_resnet50_fpn",
+      "params": 32117575,
+      "metadata": {
+        "library": "torchvision",
+        "version": "0.14.1+cu117",
+        "builder": "fcos_resnet50_fpn",
+        "constructor": {
+          "weights": null,
+          "weights_backbone": null,
+          "num_classes": 2,
+          "min_size": 640,
+          "max_size": 640,
+          "image_mean": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "image_std": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "score_thresh": 0.001,
+          "nms_thresh": 0.7,
+          "detections_per_img": 300
+        },
+        "backbone": "ResNet50-FPN",
+        "weights_downloaded": false,
+        "background_label": 0,
+        "foreground_labels": [
+          1
+        ],
+        "literature_scores_reproduced": false,
+        "normalization": "RGB/255; model normalization identity, matching the shared SAR input",
+        "head_classes": 2,
+        "dense_head_note": "RetinaNet/FCOS keep unused class0 logits with foreground at1; class0 predictions are excluded from SAR metrics."
+      }
+    },
+    {
+      "method": "retinanet_resnet50_fpn",
+      "params": 32221814,
+      "metadata": {
+        "library": "torchvision",
+        "version": "0.14.1+cu117",
+        "builder": "retinanet_resnet50_fpn",
+        "constructor": {
+          "weights": null,
+          "weights_backbone": null,
+          "num_classes": 2,
+          "min_size": 640,
+          "max_size": 640,
+          "image_mean": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "image_std": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "score_thresh": 0.001,
+          "nms_thresh": 0.7,
+          "detections_per_img": 300
+        },
+        "backbone": "ResNet50-FPN",
+        "weights_downloaded": false,
+        "background_label": 0,
+        "foreground_labels": [
+          1
+        ],
+        "literature_scores_reproduced": false,
+        "normalization": "RGB/255; model normalization identity, matching the shared SAR input",
+        "head_classes": 2,
+        "dense_head_note": "RetinaNet/FCOS keep unused class0 logits with foreground at1; class0 predictions are excluded from SAR metrics."
+      }
+    }
+  ],
+  "gpu_preflight": "PENDING",
+  "model_forward_or_training": false
+}

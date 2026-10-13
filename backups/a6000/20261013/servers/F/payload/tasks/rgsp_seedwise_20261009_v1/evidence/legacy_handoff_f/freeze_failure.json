@@ -1,0 +1,6 @@
+{
+  "error": "RuntimeError('pidfd support is required; no PID-racy signal fallback')",
+  "policy": "No automatic SIGCONT rollback; already-frozen parents remain stopped for inspection",
+  "spec_sha256": "f94c2d7afb1f92c17d3913bb15308a2b5d7f6c3dc955eea7f98ff856859dc8fa",
+  "stopped_lanes": []
+}

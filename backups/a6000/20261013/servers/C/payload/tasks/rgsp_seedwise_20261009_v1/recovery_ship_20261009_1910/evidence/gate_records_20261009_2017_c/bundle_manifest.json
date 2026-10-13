@@ -1,0 +1,188 @@
+{
+  "schema": "rgsp-ship-gate-record-bundle-v1",
+  "hostname": "a6000-c",
+  "captured_utc": "2026-10-09T12:21:17.429895+00:00",
+  "files": [
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_validate_c_01_capture/preflight.json",
+      "size": 250,
+      "sha256": "5afff3363cb066b99b7e0f9880779545b22b0aa73d7f98acdf88daa28b3ba2c9"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_validate_c_01_capture/launch.json",
+      "size": 1133,
+      "sha256": "0c3ec94bb8fdbc81f3d30421179c825a7bff644cd7d7d2f9d78c47c2fb2b24e3"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_validate_c_01_capture/stdout.json",
+      "size": 3271,
+      "sha256": "24ed52b0e416d39f3d25914cbe6b40488bc4331ef9bfef623f3dfa2f7e5aa126"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_validate_c_01_capture/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_validate_c_01_capture/process_complete.json",
+      "size": 798,
+      "sha256": "ce2bc6c39d0191d199012c01f4a48d4cb4d3bdeaf9f8095db7d345ffd022a04b"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_validate_c_01_capture/runner.stdout.txt",
+      "size": 741,
+      "sha256": "770809715f1ab9c2b14babae0993b8a803b0c78c390dc7c0cc782dc2728158a3"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_validate_c_01_capture/runner.stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_stage_c_01_capture/preflight.json",
+      "size": 250,
+      "sha256": "9131910ced770b4a941c366347008c34f16fed841682ceae554d14570b0b40aa"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_stage_c_01_capture/launch.json",
+      "size": 1365,
+      "sha256": "1fee6be185036284552a93b37b836e87718acdee25b0d79217ff46f09eb535be"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_stage_c_01_capture/stdout.json",
+      "size": 1764,
+      "sha256": "5d6d14ca2281a806b6ca7f94bf9283e415265fdef8a97ceb841e259943243dba"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_stage_c_01_capture/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_stage_c_01_capture/process_complete.json",
+      "size": 1036,
+      "sha256": "87fa6dbdb7087ed4981d12c20bec8df1793e8063681ffb8de3d582e43ea09ee2"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_stage_c_01_capture/runner.stdout.txt",
+      "size": 963,
+      "sha256": "5e4f69e7f7652ea5bd5009bbaaa09af88bd0f8b8062d76e26c0998cbfd114b87"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_stage_c_01_capture/runner.stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_publish_c_01_capture/preflight.json",
+      "size": 249,
+      "sha256": "535c2cbba5a2a11379aa1efe098c836b24c1936a4dda33c8e2244ec4f21dd62f"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_publish_c_01_capture/launch.json",
+      "size": 1786,
+      "sha256": "c78d084dfc263e0867df505653c47f544f206839044acad42f83ded54a3eaedd"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_publish_c_01_capture/stdout.json",
+      "size": 494,
+      "sha256": "b7e60aac002d8ba6b9af9226e4002a43ea7cf11691c3b17e907d84a3be5508cf"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_publish_c_01_capture/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_publish_c_01_capture/process_complete.json",
+      "size": 1152,
+      "sha256": "3a6d2fd4fa3a021e35df5ad6e64ed2177dc8be336aff5049ce545a390bb80031"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_publish_c_01_capture/runner.stdout.txt",
+      "size": 1071,
+      "sha256": "ff75082cb66e03910e7220e8c0a5220c1e003cbfb4d8e908823b4a003f07d142"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_publish_c_01_capture/runner.stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_stage_c_01/invocation.json",
+      "size": 3776,
+      "sha256": "4485af76bc094c96c1358837e0c3596148ae387b5104d929ffc3f32aa85ac150"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_stage_c_01/stage.stdout.txt",
+      "size": 730,
+      "sha256": "e1dfe9642d8d62c32cac3a7f5236bf0c2443bcf3f2b81ae3ef4498f7034d15e1"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_stage_c_01/stage.stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_stage_c_01/stage_process.json",
+      "size": 512,
+      "sha256": "cecab38716e8e9ee4eaa63f7a96abcf2479b13ef15119c7d360f829938aefc43"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_stage_c_01/stage_gate_complete.json",
+      "size": 8340,
+      "sha256": "c7ea45dd5850c0d1f3f1291df783c27af95b76113382b7e1da7cf31aff05468c"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_publish_c_01/publication_validation.json",
+      "size": 8306,
+      "sha256": "d8c2aaba6232834996eb6c1430c2bc32542a7276d770bf05fc108da7ae9918ec"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_publish_c_01/readiness.candidate.json",
+      "size": 1047,
+      "sha256": "ee7ac8c43f233355858b8e21a5a46566a272f16de5ac38d8226b39f97aa424c5"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_publish_c_01/candidate_validation.json",
+      "size": 1878,
+      "sha256": "ab94e558d453569c693d74a3846bffd2ebf9e043d5815dc417e2a34656999241"
+    },
+    {
+      "path": "recovery_ship_20261009_1910/evidence/v2_publish_c_01/publication_complete.json",
+      "size": 1540,
+      "sha256": "e0ef557df67d4076dbafdce4e51071a7f3f4900612e8da723c52fc36c8f62bb7"
+    },
+    {
+      "path": "data/sar_shipdataset/data.yaml",
+      "size": 169,
+      "sha256": "d41830bc75db60353c19250a857815af787d40c9d5c8e6da7e2662c89d700386"
+    },
+    {
+      "path": "data/sar_shipdataset/dataset.json",
+      "size": 631,
+      "sha256": "c14a5295a56a23ccedb9edc3548e315fdafd3f89fea351274d4485131caaa3c5"
+    },
+    {
+      "path": "data/sar_shipdataset/source_audit.json",
+      "size": 47153,
+      "sha256": "1a45e249df41642a998bed9c51e6964a238d94b9ccfee2c25985697b907c2b76"
+    },
+    {
+      "path": "data/sar_shipdataset/stage_complete.json",
+      "size": 490,
+      "sha256": "d15725872cd253f23f00f0d143633f4b2fa35d25b94235beff24356a6fed0ebc"
+    },
+    {
+      "path": "data/sar_shipdataset/exclusions.json",
+      "size": 19953,
+      "sha256": "4177e9880749c0144941ffdf9aee7da0c407c973ef038c38521da59e581b2d8e"
+    },
+    {
+      "path": "data/sar_shipdataset/readiness.json",
+      "size": 1047,
+      "sha256": "ee7ac8c43f233355858b8e21a5a46566a272f16de5ac38d8226b39f97aa424c5"
+    }
+  ],
+  "omitted_large_artifacts": "Original ZIP/extracted images/audited_rows and 20.45MB staged data_content.json remain SHA-bound on producer; original archive reports are already recovered separately."
+}

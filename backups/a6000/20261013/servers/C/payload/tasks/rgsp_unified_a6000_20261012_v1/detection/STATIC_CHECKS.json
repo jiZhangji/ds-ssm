@@ -1,0 +1,41 @@
+{
+  "schema": "rgsp-unified-detection-static-checks-v1",
+  "status": "STATIC_AST_PASS_RUNTIME_PENDING",
+  "checked_date": "2026-10-12",
+  "scope": "Detection adapter author; static source inspection and AST parsing only",
+  "ast_parse": {
+    "covered_flops.py": "PASS",
+    "data_binding.py": "PASS",
+    "detector_spec.py": "PASS",
+    "run_detection.py": "PASS"
+  },
+  "file_sha256": {
+    "covered_flops.py": "ec373b03b3915cd1553e667cdb993e518645f12cda2d39dd1e1d7279a5e55b48",
+    "data_binding.py": "dbf33fc6f08e27e0eaa6bbfa046289999e36b710c9b889d4560cf5dc38b4ecaf",
+    "detector_spec.py": "e55976b7a2a5edb3dce908bf7ed41128fcff0b0e085368cecc49cff5e68e8615",
+    "run_detection.py": "9ac339ecbb32e39f9a67667bb7d63769cef91d454c2543dd94428746db79ad36",
+    "CANDIDATE_AUDIT.md": "de84ad655998c678d4a6e80c23e17ca15bd63825149a8a25e3b99d2b1f04845c",
+    "README.md": "e52e339dc20761e3efe366e8a442fcc8a7b18f688438c6e852ccb8b244d7245a"
+  },
+  "ssh_executed_by_author": false,
+  "model_module_imported_by_author": false,
+  "cuda_probe_executed_by_author": false,
+  "training_executed_by_author": false,
+  "queue_started_by_author": false,
+  "historical_source_or_data_edited": false,
+  "formal_memory_updated_by_author": false,
+  "remaining_validation": [
+    "Server exact-UUID train-only probe with physical batch16, accumulation4, FP32 and source/data hashes",
+    "Server formal training validation, early-stop/max-budget ledger, FP32 checkpoint reload and independent test",
+    "Coordinator evidence-backed publication of runtime results and official project-memory delta"
+  ],
+  "candidate_inventory": {
+    "detection_positions": 67,
+    "external_positions": 58,
+    "local_positions": 9,
+    "distinct_external_methods": 42,
+    "all_external_methods_ready": false,
+    "yolov8s_added_to_ssdd": false,
+    "air_protocol_hold_preserved": true
+  }
+}

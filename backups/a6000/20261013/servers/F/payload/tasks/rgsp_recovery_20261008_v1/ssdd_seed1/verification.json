@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "key": "f1",
+  "checked_unix": 1791461199.9090693,
+  "original_artifacts_unchanged": 24,
+  "frozen_code_files_verified": 248,
+  "optimizer_tensors_finite": 1167,
+  "checkpoint_epoch": 33,
+  "csv_source": "checkpoint.train_results",
+  "previous_csv_rows": 32,
+  "restored_csv_rows": 33,
+  "csv_before_sha256": "4dcdd5d203ba67f996a166beeb7b4b01d4c02efa937e6b0b367252d2c9b78711",
+  "csv_after_sha256": "fc03d1ec016d94df64ecf147066d65ee237c92e581c56e0c95190126add206b2",
+  "missing_historical_control_epochs": [
+    33
+  ],
+  "missing_audit_policy": "No synthetic values; retain explicit gap, continue future real audits",
+  "gpu_training_executed": false,
+  "verifier_sha256": "ed0cb71e71818dfb0d61610d9f944a8d875370cc9e1d53f28d15abcef37191c8"
+}

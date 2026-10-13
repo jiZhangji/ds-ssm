@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/queue_after_lane.py",
+    "--lane",
+    "b0det",
+    "--predecessor",
+    "b0acd",
+    "--foreground"
+  ],
+  "lane": "b0det",
+  "pid": 394356,
+  "predecessor": "b0acd",
+  "start_ticks": "41684075"
+}

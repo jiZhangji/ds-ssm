@@ -1,0 +1,85 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.55in]{geometry}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage[table]{xcolor}
+\usepackage{makecell}
+\usepackage{caption}
+\usepackage{siunitx}
+\pagestyle{empty}
+
+\captionsetup{font=small,labelfont=bf}
+\sisetup{detect-all}
+\renewcommand\theadfont{\bfseries}
+\newcommand{\na}{--}
+\newcommand{\ours}{\textbf{Ours: IG-DS-SSM/PFIM}}
+
+\begin{document}
+
+\begin{landscape}
+\begin{table}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\renewcommand{\arraystretch}{1.16}
+\begin{threeparttable}
+\caption{Unified comparison of methods reported in MaDiNet on three SAR detection datasets, with available model complexity.}
+\label{tab:madinet_three_dataset_unified}
+\begin{tabular}{lccccccccccc}
+\toprule
+\multirow{2}{*}{Method} &
+\multicolumn{3}{c}{SSDD} &
+\multicolumn{3}{c}{SAR-ShipDataset} &
+\multicolumn{1}{c}{SAR-AIRcraft1.0} &
+\multicolumn{2}{c}{Complexity} &
+\multirow{2}{*}{Source} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-8}\cmidrule(lr){9-10}
+& P & R & AP$_{50}$ & P & R & AP$_{50}$ & mAP$_{50}$ & Params(M) & GFLOPs & \\
+\midrule
+SAR-ShipNet & 95.1 & 76.3 & 89.1 & 94.9 & 71.3 & 90.2 & \na & \na & \na & MaDiNet table \\
+DCTC & \na & \na & 93.9 & \na & \na & \na & \na & \na & \na & MaDiNet table \\
+GEFCSI-Net & 93.1 & 96.9 & 97.1 & 90.2 & 93.0 & 94.3 & \na & \na & \na & MaDiNet table \\
+SARNas & 97.4 & 94.8 & 98.5 & \na & \na & \na & \na & \na & \na & MaDiNet table \\
+MGA-Net & 94.7 & 99.0 & 98.6 & \na & \na & \na & \na & \na & \na & MaDiNet table \\
+OE-YOLO & \na & \na & \na & 85.4 & 81.5 & 86.0 & \na & \na & \na & MaDiNet table \\
+ShipDetector & \na & \na & \na & \na & \na & 91.2 & \na & \na & \na & MaDiNet table \\
+Improved FCOS & \na & \na & \na & 89.8 & 95.2 & 94.1 & \na & \na & \na & MaDiNet table \\
+CMFT & \na & \na & \na & 90.1 & 94.4 & 94.5 & \na & \na & \na & MaDiNet table \\
+SKG-Net & \na & \na & \na & \na & \na & \na & 70.5 & \na & \na & MaDiNet table \\
+SA-Net & \na & \na & \na & \na & \na & \na & 77.7 & \na & \na & MaDiNet table \\
+MLSDNet & \na & \na & \na & \na & \na & \na & 82.7 & \na & \na & MaDiNet table \\
+\midrule
+Faster R-CNN & 87.1 & 90.4 & 89.7 & 82.5 & 95.1 & 93.1 & 75.9 & \na & \na & MaDiNet table \\
+Cascade R-CNN & 84.1 & 90.8 & 90.5 & 87.6 & 94.3 & 92.7 & 75.4 & \na & \na & MaDiNet table \\
+RetinaNet & 94.0 & 93.1 & 95.0 & 86.5 & 94.9 & 93.4 & 72.3 & \na & \na & MaDiNet table \\
+CenterNet & 94.3 & 93.6 & 95.1 & 90.3 & 93.5 & 92.1 & 70.5 & \na & \na & MaDiNet table \\
+FCOS & 94.6 & 93.9 & 95.3 & 90.4 & 94.1 & 92.8 & 54.8 & \na & \na & MaDiNet table \\
+ConsistencyDet & 94.5 & 94.0 & 95.6 & 90.3 & 93.1 & 94.2 & 85.1 & \na & \na & MaDiNet table \\
+YOLOv4 & \na & \na & \na & 79.4 & 73.8 & 77.9 & \na & \na & \na & MaDiNet table \\
+YOLOv7 & \na & \na & \na & 83.8 & 81.9 & 86.1 & \na & \na & \na & MaDiNet table \\
+YOLOv3 & 95.5 & 94.8 & 96.2 & 84.5 & 89.2 & 88.8 & 83.9 & 103.7541 & 283.3202 & MaDiNet + local complexity \\
+YOLOX & 95.0 & 93.8 & 96.2 & \na & \na & \na & 81.0 & \na & \na & MaDiNet table \\
+DiffusionDet & 95.1 & 93.9 & 96.3 & 92.1 & 94.9 & 95.0 & 86.6 & \na & \na & MaDiNet table \\
+YOLOv5n & 97.0 & 95.8 & 98.0 & 85.9 & 90.0 & 89.3 & 88.2 & 2.6548 & 7.8401 & MaDiNet + local complexity \\
+YOLOv8n & 97.3 & 96.4 & 98.1 & \na & \na & \na & 88.2 & 3.1572 & 8.8575 & MaDiNet + local complexity \\
+YOLOv5s & 97.2 & 96.4 & 98.3 & \na & \na & \na & \na & 9.1532 & 24.2129 & MaDiNet + local complexity \\
+RepPoints & \na & \na & \na & \na & \na & \na & 72.6 & \na & \na & MaDiNet table \\
+DiffDet4SAR & 95.3 & 95.2 & 96.9 & 92.1 & 95.0 & 95.1 & 88.4 & \na & \na & MaDiNet table \\
+MaDiNet & \textbf{98.0} & 97.0 & \textbf{99.0} & \textbf{96.2} & \textbf{95.6} & \textbf{97.5} & \textbf{90.5} & 223.2648$^\dagger$ & 345.2830$^\dagger$ & MaDiNet + local complexity \\
+\midrule
+\rowcolor{gray!12}
+\ours & 97.378 & 95.219 & 98.704 & \na & \na & \na & \na & \textbf{5.9648} & \textbf{13.2079} & Local measured \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Notes: all detection metrics are percentages. MaDiNet reports P/R/AP$_{50}$/F1 for SSDD and SAR-ShipDataset, while SAR-AIRcraft1.0 is summarized by overall mAP$_{50}$ in this unified table. ``--'' denotes not reported in the corresponding MaDiNet table or not yet measured locally. Complexity values are local 640-input, batch-1, fp32 measurements where available. $^\dagger$ MaDiNet complexity is for the official MambaSAR res4+res5 core module only, not the full end-to-end detector. Our SAR-ShipDataset and SAR-AIRcraft1.0 results are intentionally left blank because they have not been verified yet.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\end{landscape}
+
+\end{document}

@@ -1,0 +1,54 @@
+{
+  "captured_utc": "2026-10-13T02:53:27.608901+00:00",
+  "files": [
+    {
+      "path": "plans/a0acd.production.json",
+      "sha256": "a62d9c8c57361e089b2b38ab857ae36831ad94e9b17cf0d49a4de68fc75249eb"
+    },
+    {
+      "path": "plans/b0acd.production.json",
+      "sha256": "e35c27ffcaf44382a3b13177e3732f4bd2794246016950ce6d438b4966a06ca1"
+    },
+    {
+      "path": "dispatch/a0acd.gate.launch.json",
+      "sha256": "64e52638e5cb87cc2dc7a734afff0128c383da337e768583d52188667fa7432a"
+    },
+    {
+      "path": "dispatch/a0acd.gate.state.json",
+      "sha256": "d99d14a66ff9392500ac07dda106f0d7a85448a771ed9fbc68f21a0f5c8b3d22"
+    },
+    {
+      "path": "qa/acd_pair_validation.json",
+      "sha256": "ecc055a59b2ba417f2523d387799ee7bd5ec8a7dcb193e8c2fde4da98da1757c"
+    },
+    {
+      "path": "taskdata/acd_pair_v1/clean2992/manifest.json",
+      "sha256": "24fe4b0f7877bbaf11cda98c4d7c31a072fa8edda2ebb68c1eb9bcbac174c610"
+    },
+    {
+      "path": "taskdata/acd_pair_v1/clean2992/readiness.json",
+      "sha256": "515ae62395b9e5d4d03a12836babbb12c06a7151dffacd44e5e7a71b5ef40989"
+    },
+    {
+      "path": "taskdata/acd_pair_v1/clean2992/source_audit.json",
+      "sha256": "6deabfb252c4fb99ef2b9faa58632cd435df366d05b8821aa9b675fc6808d11c"
+    },
+    {
+      "path": "taskdata/acd_pair_v1/full3032/manifest.json",
+      "sha256": "917e638f6bb9e8111e7d83d1b8fcc45dade396e1ac66c40645415e349c1dfc49"
+    },
+    {
+      "path": "taskdata/acd_pair_v1/full3032/readiness.json",
+      "sha256": "651e933e4c9eb87b0673ca6eaef387a0f33738a71ff912ef26baec390dfa2ec6"
+    },
+    {
+      "path": "taskdata/acd_pair_v1/full3032/source_audit.json",
+      "sha256": "6deabfb252c4fb99ef2b9faa58632cd435df366d05b8821aa9b675fc6808d11c"
+    },
+    {
+      "path": "source/GIT_EXPORT.json",
+      "sha256": "aa69bc9e781af4366e5d2644f601ff171fc075a7656edacc17568d0d9657bba6"
+    }
+  ],
+  "note": "One handoff snapshot, not monitoring or a completion claim."
+}

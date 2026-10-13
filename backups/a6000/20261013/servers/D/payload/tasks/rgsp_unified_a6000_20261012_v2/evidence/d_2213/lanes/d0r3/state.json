@@ -1,0 +1,918 @@
+{
+  "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+  "jobs": {
+    "ottawa-author-camixer": {
+      "estimated_seconds": 264.3438693682547,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "camixer",
+          "--image1",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+          "--image2",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+          "--ground-truth",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+          "--cuda-compat",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/probe",
+          "--gpu-uuid",
+          "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.037040107999928,
+        "ended_at": 1791813032.7335298,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/probe",
+        "payload": {
+          "dataset": "Ottawa",
+          "device": "cuda:0",
+          "estimate_caveat": "6-update extrapolation; pseudo-validation and uncertain inference use train-time/3 forward estimate, never sampled",
+          "estimate_components": {
+            "train_seconds": 237.5032639974961,
+            "unmeasured_pseudo_validation_seconds": 19.79193866645801,
+            "unmeasured_uncertain_inference_seconds": 0.3610049612761941
+          },
+          "estimated_full_seconds": 264.3438693682547,
+          "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "ground_truth_read": false,
+          "mean_timed_update_seconds": 0.012666840746533126,
+          "method": "camixer",
+          "optimizer_updates": 6,
+          "planned_max_updates": 18750,
+          "preprocessing_seconds": 6.687661743024364,
+          "protocol_sha256": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5",
+          "seed": 0,
+          "source_audit": {
+            "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+            "author_source_unmodified": true,
+            "commit": "10d0ce340a64075da929b9867cd9e45dc51d5e04",
+            "definitions": [
+              {
+                "cell_source_sha256": {
+                  "vendor/camixer/CAMixer.ipynb:cell7": "53de8f3b1b68612257ff4a1e1eaf9b97147de32e8bc8981f2e3b0c29586a0375",
+                  "vendor/camixer/CAMixer.ipynb:cell8": "936431357e5dc4510682983de8bc1bd291402cbe20f958638c5db4e0f45fadc2"
+                },
+                "definitions": [
+                  "Attention",
+                  "CAMixer",
+                  "CSC",
+                  "SGU",
+                  "ViT",
+                  "pair",
+                  "shift"
+                ],
+                "hook_once_rewrites": 0,
+                "precision_cast_rewrites": 0,
+                "source": "vendor/camixer/CAMixer.ipynb",
+                "source_sha256": "49e326c1262352c399e08cbb206f85fe01619014cfd7455174963bd6565b881b",
+                "transformed_ast_sha256": "861b998266c9f3e4f9abbd5dae284f9e33ed97bfe860344a7fa57e18186793cd"
+              }
+            ],
+            "method": "camixer",
+            "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+            "repository": "https://github.com/summitgao/CAMixer",
+            "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+          },
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "test_loader_created": false,
+          "timed_updates": 4,
+          "timestamp": "2026-10-12T13:50:31.483829+00:00",
+          "training_losses": [
+            0.9093101620674133,
+            0.9486071020364761,
+            0.9296230375766754,
+            0.8903653770685196,
+            0.8429795950651169,
+            0.8457641899585724
+          ],
+          "update_seconds": [
+            0.7658186650369316,
+            0.011845453002024442,
+            0.012480980018153787,
+            0.014242406992707402,
+            0.012047405005432665,
+            0.011896570969838649
+          ],
+          "validation_loader_created": false,
+          "warmup_probe_updates": 2
+        },
+        "pid": 388896,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791813022.6676972,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5",
+      "reason": null,
+      "runs": {
+        "0": {
+          "command": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+            "--dataset",
+            "Ottawa",
+            "--method",
+            "camixer",
+            "--image1",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+            "--image2",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+            "--ground-truth",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+            "--cuda-compat",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+            "--seed",
+            "0",
+            "--output",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run0",
+            "--gpu-uuid",
+            "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+            "--mode",
+            "train"
+          ],
+          "elapsed_seconds": 85.09261876001256,
+          "ended_at": 1791813583.6709166,
+          "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run0",
+          "pid": 389765,
+          "recovered": false,
+          "returncode": 0,
+          "started_at": 1791813498.548766,
+          "status": "COMPLETE",
+          "verification": {
+            "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run0/best.pt",
+            "checkpoint_sha256": "6e1deb71c1c19e8aa4ab8017bb5bebf21f41b01cbc7b6d51a39c86133556d70a",
+            "completion_sha256": "eb3e354da4bc37b24cfe218e1be9359be06748d2bd9569f16602c07c19849a77",
+            "metrics": {
+              "FN": 1086,
+              "FP": 634,
+              "TN": 84817,
+              "TP": 14963,
+              "f1": 0.9456487391771472,
+              "iou": 0.8969010369837559,
+              "kappa": 0.9356134652659875,
+              "overall_accuracy": 0.9830541871921182,
+              "percent_error": 1.6945812807881773,
+              "pixels": 101500,
+              "precision": 0.9593511572738347,
+              "recall": 0.9323322325378528
+            },
+            "protocol_sha256": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5",
+            "result_sha256": "491ac5dd07c2f3e349b11922bffc2ac5d995ccd4b3627983736c3320e65a2a1e"
+          }
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "ottawa-author-ddnet": {
+      "estimated_seconds": 577.7805648367503,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "ddnet",
+          "--image1",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+          "--image2",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+          "--ground-truth",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+          "--cuda-compat",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/probe",
+          "--gpu-uuid",
+          "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.037762103951536,
+        "ended_at": 1791813256.1633408,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/probe",
+        "payload": {
+          "dataset": "Ottawa",
+          "device": "cuda:0",
+          "estimate_caveat": "6-update extrapolation; pseudo-validation and uncertain inference use train-time/3 forward estimate, never sampled",
+          "estimate_components": {
+            "train_seconds": 526.4155406621285,
+            "unmeasured_pseudo_validation_seconds": 43.86796172184404,
+            "unmeasured_uncertain_inference_seconds": 0.8001516218064353
+          },
+          "estimated_full_seconds": 577.7805648367503,
+          "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "ground_truth_read": false,
+          "mean_timed_update_seconds": 0.028075495501980186,
+          "method": "ddnet",
+          "optimizer_updates": 6,
+          "planned_max_updates": 18750,
+          "preprocessing_seconds": 6.696910830971319,
+          "protocol_sha256": "777013c652ed47960bd1877c4f33e910088a6941e15c08ac69172ee141e5344e",
+          "seed": 0,
+          "source_audit": {
+            "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+            "author_source_unmodified": true,
+            "commit": "30c77afd08aa7f09790096470add465ec771a9c7",
+            "definitions": [
+              {
+                "cell_source_sha256": {
+                  "vendor/ddnet/DDNet_github.ipynb:cell5": "c6fb95227d1d75658ff020627ce6d083fc64a1b5f7c493859fc1ba3912ae95e2",
+                  "vendor/ddnet/DDNet_github.ipynb:cell6": "7330db0717e37fff857e1924e7701a91f78ac680ba9ad135472cc5e16fbbc69a"
+                },
+                "definitions": [
+                  "DCT",
+                  "DDNet",
+                  "MRC"
+                ],
+                "hook_once_rewrites": 0,
+                "precision_cast_rewrites": 0,
+                "source": "vendor/ddnet/DDNet_github.ipynb",
+                "source_sha256": "c1a463690b8d357396c92d56d1fa51d0b3cb5121ab137d89e1bfe26761189ab5",
+                "transformed_ast_sha256": "0cdd8a2d0dcf9fd9da359d5c63c8a6813daf48987c5bd24832fe901ef6bf6c65"
+              }
+            ],
+            "method": "ddnet",
+            "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+            "repository": "https://github.com/summitgao/SAR_CD_DDNet",
+            "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+          },
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "test_loader_created": false,
+          "timed_updates": 4,
+          "timestamp": "2026-10-12T13:54:15.106487+00:00",
+          "training_losses": [
+            12.186346054077148,
+            9.74430137872696,
+            6.911202251911163,
+            5.969151318073273,
+            9.441317558288574,
+            8.541663527488708
+          ],
+          "update_seconds": [
+            0.8332673300174065,
+            0.03202559700002894,
+            0.028634203015826643,
+            0.02792321500601247,
+            0.027881201007403433,
+            0.027863362978678197
+          ],
+          "validation_loader_created": false,
+          "warmup_probe_updates": 2
+        },
+        "pid": 389395,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791813246.0986025,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "777013c652ed47960bd1877c4f33e910088a6941e15c08ac69172ee141e5344e",
+      "reason": null,
+      "runs": {
+        "0": {
+          "command": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+            "--dataset",
+            "Ottawa",
+            "--method",
+            "ddnet",
+            "--image1",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+            "--image2",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+            "--ground-truth",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+            "--cuda-compat",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+            "--seed",
+            "0",
+            "--output",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run0",
+            "--gpu-uuid",
+            "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+            "--mode",
+            "train"
+          ],
+          "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run0",
+          "pid": 390563,
+          "started_at": 1791814217.5287645,
+          "status": "RUNNING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "ottawa-author-lantnet": {
+      "estimated_seconds": 247.31843810740247,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "lantnet",
+          "--image1",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+          "--image2",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+          "--ground-truth",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+          "--cuda-compat",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/probe",
+          "--gpu-uuid",
+          "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.032379439042415,
+        "ended_at": 1791812961.4729233,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/probe",
+        "payload": {
+          "dataset": "Ottawa",
+          "device": "cuda:0",
+          "estimate_caveat": "6-update extrapolation; pseudo-validation and uncertain inference use train-time/3 forward estimate, never sampled",
+          "estimate_components": {
+            "train_seconds": 221.74527730385307,
+            "unmeasured_pseudo_validation_seconds": 18.478773108654423,
+            "unmeasured_uncertain_inference_seconds": 0.42131602687732084
+          },
+          "estimated_full_seconds": 247.31843810740247,
+          "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "ground_truth_read": false,
+          "mean_timed_update_seconds": 0.014783018486923538,
+          "method": "lantnet",
+          "optimizer_updates": 6,
+          "planned_max_updates": 15000,
+          "preprocessing_seconds": 6.673071668017656,
+          "protocol_sha256": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe",
+          "seed": 0,
+          "source_audit": {
+            "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+            "author_source_unmodified": true,
+            "commit": "3d22af4a989f96a6b07b4f15e86c73cffd1841a2",
+            "definitions": [
+              {
+                "cell_source_sha256": {
+                  "vendor/lantnet/LANTNet.ipynb:cell5": "8ddd8f2c9bd552073d539beb92b6cb727e05b2ee5e61e94313cbbf341d60019e",
+                  "vendor/lantnet/LANTNet.ipynb:cell7": "843d02f3114b413956586baec8101b6c4f8406f6cb5210f341217842a1c9c936"
+                },
+                "definitions": [
+                  "LANTNet",
+                  "LayerAttention"
+                ],
+                "hook_once_rewrites": 1,
+                "precision_cast_rewrites": 0,
+                "source": "vendor/lantnet/LANTNet.ipynb",
+                "source_sha256": "0533acc070502570556ecf68f94d835f92b72ec6ca8d7bbd543a4713e51bf5e9",
+                "transformed_ast_sha256": "05624c253cb6d386a8a7c415e46b0c78923024758715564b462557524096632a"
+              }
+            ],
+            "method": "lantnet",
+            "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+            "repository": "https://github.com/summitgao/LANTNet",
+            "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+          },
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "test_loader_created": false,
+          "timed_updates": 4,
+          "timestamp": "2026-10-12T13:49:20.398771+00:00",
+          "training_losses": [
+            0.8596059679985046,
+            0.8410363048315048,
+            0.8617988079786301,
+            0.8769652843475342,
+            0.8612998872995377,
+            0.8411202430725098
+          ],
+          "update_seconds": [
+            0.020427616022061557,
+            0.014968093950301409,
+            0.014895419997628778,
+            0.01512337796157226,
+            0.014534378016833216,
+            0.014578897971659899
+          ],
+          "validation_loader_created": false,
+          "warmup_probe_updates": 2
+        },
+        "pid": 388669,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791812951.4125752,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe",
+      "reason": null,
+      "runs": {
+        "0": {
+          "command": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+            "--dataset",
+            "Ottawa",
+            "--method",
+            "lantnet",
+            "--image1",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+            "--image2",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+            "--ground-truth",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+            "--cuda-compat",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+            "--seed",
+            "0",
+            "--output",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run0",
+            "--gpu-uuid",
+            "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+            "--mode",
+            "train"
+          ],
+          "elapsed_seconds": 120.11419744999148,
+          "ended_at": 1791813437.481728,
+          "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run0",
+          "pid": 389556,
+          "recovered": false,
+          "returncode": 0,
+          "started_at": 1791813317.3396103,
+          "status": "COMPLETE",
+          "verification": {
+            "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run0/best.pt",
+            "checkpoint_sha256": "0c86c22f601fb0c9cdabb707a2c2dd2c39957ce48115ad523dafa81218790b70",
+            "completion_sha256": "36b7ca75226ade9ce89e7345598908884bea33abfd51c02a955f3a3e329a8c32",
+            "metrics": {
+              "FN": 1280,
+              "FP": 486,
+              "TN": 84965,
+              "TP": 14769,
+              "f1": 0.9435854842831587,
+              "iou": 0.8931962503779861,
+              "kappa": 0.9333076858872779,
+              "overall_accuracy": 0.9826009852216748,
+              "percent_error": 1.7399014778325124,
+              "pixels": 101500,
+              "precision": 0.968141592920354,
+              "recall": 0.9202442519783164
+            },
+            "protocol_sha256": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe",
+            "result_sha256": "f3782cf67eab6dd0247a69797ecce01b1ecb8e3feec776eca47f999c29d81593"
+          }
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "ottawa-author-wasnet": {
+      "estimated_seconds": 334.75846183391695,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "wasnet",
+          "--image1",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+          "--image2",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+          "--ground-truth",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+          "--cuda-compat",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/probe",
+          "--gpu-uuid",
+          "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 15.0390014279983,
+        "ended_at": 1791813185.0852952,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/probe",
+        "payload": {
+          "dataset": "Ottawa",
+          "device": "cuda:0",
+          "estimate_caveat": "6-update extrapolation; pseudo-validation and uncertain inference use train-time/3 forward estimate, never sampled",
+          "estimate_components": {
+            "train_seconds": 302.4076545443677,
+            "unmeasured_pseudo_validation_seconds": 25.200637878697307,
+            "unmeasured_uncertain_inference_seconds": 0.4596596349074389
+          },
+          "estimated_full_seconds": 334.75846183391695,
+          "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "ground_truth_read": false,
+          "mean_timed_update_seconds": 0.016128408242366277,
+          "method": "wasnet",
+          "optimizer_updates": 6,
+          "planned_max_updates": 18750,
+          "preprocessing_seconds": 6.69050977594452,
+          "protocol_sha256": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74",
+          "seed": 0,
+          "source_audit": {
+            "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+            "author_source_unmodified": true,
+            "commit": "d586acb41ab52a0c6a28168964687c3e34379b88",
+            "definitions": [
+              {
+                "cell_source_sha256": {
+                  "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell12": "7352a82c857f1bae4591b4df720fc8675e82d0faa14f3bda36a214ea22eb4bdb",
+                  "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell13": "80f2b5dc6d9024ce5d15e784af49b5dae6561e0874ea1af8caf881fa12bb4cb3",
+                  "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell14": "c10b461291fdf6154255ee53b23490308630d4fe3bfb1709eb040ee3459d58b8",
+                  "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell5": "de82a787925fd7d4d4c3684ab20af8d05b183e832a9502f8acf565abcf026c13",
+                  "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell8": "111e013d0dcb14bb863ea00fa4fb752c387085a8d31a2efe6953f5798e506992"
+                },
+                "definitions": [
+                  "BiAttn",
+                  "ConcactFeature",
+                  "DWT_2D",
+                  "DWT_Function",
+                  "IDWT_2D",
+                  "IDWT_Function",
+                  "MHSA",
+                  "SEBlock",
+                  "WASNet",
+                  "WSM",
+                  "WaveAttention",
+                  "pair"
+                ],
+                "hook_once_rewrites": 0,
+                "precision_cast_rewrites": 1,
+                "source": "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb",
+                "source_sha256": "a896f8b7bb97026346040124da555ba6033a5ebb35901e8941c70fe1f22df45c",
+                "transformed_ast_sha256": "e193ddaf2d14864e8123f7bb9e3452c0c34b4b693dfca26e076aef0b1731a033"
+              }
+            ],
+            "method": "wasnet",
+            "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+            "repository": "https://github.com/Mohamed-DL/WASNet",
+            "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+          },
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "test_loader_created": false,
+          "timed_updates": 4,
+          "timestamp": "2026-10-12T13:52:59.653166+00:00",
+          "training_losses": [
+            0.2753608003258705,
+            0.2692447453737259,
+            0.2671939581632614,
+            0.26760101318359375,
+            0.26671499758958817,
+            0.26925260573625565
+          ],
+          "update_seconds": [
+            0.8186076830024831,
+            0.015072805050294846,
+            0.018513176997657865,
+            0.015804628026671708,
+            0.01530685496982187,
+            0.014888972975313663
+          ],
+          "validation_loader_created": false,
+          "warmup_probe_updates": 2
+        },
+        "pid": 389228,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791813170.0193067,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74",
+      "reason": null,
+      "runs": {
+        "0": {
+          "command": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+            "--dataset",
+            "Ottawa",
+            "--method",
+            "wasnet",
+            "--image1",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+            "--image2",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+            "--ground-truth",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+            "--cuda-compat",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+            "--seed",
+            "0",
+            "--output",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run0",
+            "--gpu-uuid",
+            "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+            "--mode",
+            "train"
+          ],
+          "elapsed_seconds": 320.2761107039987,
+          "ended_at": 1791814156.2741835,
+          "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run0",
+          "pid": 390170,
+          "recovered": false,
+          "returncode": 0,
+          "started_at": 1791813835.9704392,
+          "status": "COMPLETE",
+          "verification": {
+            "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run0/best.pt",
+            "checkpoint_sha256": "8e0b855aec529d9cfa982e8b287f705efb9a329c6ee388874db9f696eebe5fc6",
+            "completion_sha256": "10ecac89e1ce83d7bafc47a09a78ce00a3b828aa83d788bd8e25a4be0f42bbda",
+            "metrics": {
+              "FN": 1130,
+              "FP": 705,
+              "TN": 84746,
+              "TP": 14919,
+              "f1": 0.9420642187352003,
+              "iou": 0.8904739166766146,
+              "kappa": 0.9313559909808004,
+              "overall_accuracy": 0.9819211822660099,
+              "percent_error": 1.8078817733990147,
+              "pixels": 101500,
+              "precision": 0.9548771121351767,
+              "recall": 0.9295906286996074
+            },
+            "protocol_sha256": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74",
+            "result_sha256": "d4083e560e5dca49cc7095783ff13f6d1b1063151904bea46d6fc8378b3f5687"
+          }
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "ottawa-author-wbanet": {
+      "estimated_seconds": 328.39557487693673,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "wbanet",
+          "--image1",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+          "--image2",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+          "--ground-truth",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+          "--cuda-compat",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/probe",
+          "--gpu-uuid",
+          "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 15.037841664045118,
+        "ended_at": 1791813108.8571303,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/probe",
+        "payload": {
+          "dataset": "Ottawa",
+          "device": "cuda:0",
+          "estimate_caveat": "6-update extrapolation; pseudo-validation and uncertain inference use train-time/3 forward estimate, never sampled",
+          "estimate_components": {
+            "train_seconds": 296.5487768051389,
+            "unmeasured_pseudo_validation_seconds": 24.71239806709491,
+            "unmeasured_uncertain_inference_seconds": 0.45075414074381115
+          },
+          "estimated_full_seconds": 328.39557487693673,
+          "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "ground_truth_read": false,
+          "mean_timed_update_seconds": 0.015815934762940742,
+          "method": "wbanet",
+          "optimizer_updates": 6,
+          "planned_max_updates": 18750,
+          "preprocessing_seconds": 6.6836458639591,
+          "protocol_sha256": "4d1bb67e58ffcd025240c1b13e2e472d7fde90cd16f5f2e7e73258b29bc68b89",
+          "seed": 0,
+          "source_audit": {
+            "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+            "author_source_unmodified": true,
+            "commit": "4a6e6a44a750ded84ac951eb995debf8428df7a5",
+            "definitions": [
+              {
+                "cell_source_sha256": {
+                  "vendor/wbanet/torch_wavelets.py": "9d14e0717d2ad9e4fac39c11e8d4248c41511c49701a37f2e17256a04f010c1e"
+                },
+                "definitions": [
+                  "DWT_2D",
+                  "DWT_Function",
+                  "IDWT_2D",
+                  "IDWT_Function"
+                ],
+                "hook_once_rewrites": 0,
+                "precision_cast_rewrites": 5,
+                "source": "vendor/wbanet/torch_wavelets.py",
+                "source_sha256": "98e0398c6ea6d1442abf11c66b1a15e37071965b95e260e62a1b26f11297f836",
+                "transformed_ast_sha256": "ade883d647c76c795480d82d8568efe683385bfd7dfaa02e8fedbfe1168ca147"
+              },
+              {
+                "cell_source_sha256": {
+                  "vendor/wbanet/wbanet.ipynb:cell3": "703c4776bcb649a6084f8b3acfe5b6a90790f5f77c3fa007b279608715edffb4",
+                  "vendor/wbanet/wbanet.ipynb:cell6": "55b57254ed1c8efaf96bd35cdfcecac46dc181361dfc37b77a95a6f03046eb8f",
+                  "vendor/wbanet/wbanet.ipynb:cell7": "b5e3d7464950a5404c19a3d0658da178f8faa02e88cbf8b73d15f0278e69c218",
+                  "vendor/wbanet/wbanet.ipynb:cell8": "755eda6388584b042a915318c031caa422099a8d15ea18a26ebb4dc4d8a93fb7"
+                },
+                "definitions": [
+                  "BiAttn",
+                  "ConcactFeature",
+                  "WBANet",
+                  "WSM",
+                  "WaveAttention",
+                  "pair"
+                ],
+                "hook_once_rewrites": 0,
+                "precision_cast_rewrites": 2,
+                "source": "vendor/wbanet/wbanet.ipynb",
+                "source_sha256": "52173bdc1aee943ec3949623a4cc177bf935c5d377245b2b2c84bc69a798bfcc",
+                "transformed_ast_sha256": "f56d2de0c87db4c84821ed9b523bcd00684c66861d73987aa14b18b4e9fb7591"
+              }
+            ],
+            "method": "wbanet",
+            "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+            "repository": "https://github.com/summitgao/WBANet",
+            "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+          },
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "test_loader_created": false,
+          "timed_updates": 4,
+          "timestamp": "2026-10-12T13:51:43.399406+00:00",
+          "training_losses": [
+            0.7882052063941956,
+            0.8005228191614151,
+            0.802491083741188,
+            0.7823189198970795,
+            0.7547062933444977,
+            0.7969455420970917
+          ],
+          "update_seconds": [
+            0.8187341439770535,
+            0.015094975009560585,
+            0.017419226001948118,
+            0.015924910025205463,
+            0.015012009011115879,
+            0.014907594013493508
+          ],
+          "validation_loader_created": false,
+          "warmup_probe_updates": 2
+        },
+        "pid": 389059,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791813093.7922792,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "4d1bb67e58ffcd025240c1b13e2e472d7fde90cd16f5f2e7e73258b29bc68b89",
+      "reason": null,
+      "runs": {
+        "0": {
+          "command": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+            "--dataset",
+            "Ottawa",
+            "--method",
+            "wbanet",
+            "--image1",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+            "--image2",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+            "--ground-truth",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+            "--cuda-compat",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+            "--seed",
+            "0",
+            "--output",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run0",
+            "--gpu-uuid",
+            "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+            "--mode",
+            "train"
+          ],
+          "elapsed_seconds": 130.12894661800237,
+          "ended_at": 1791813774.8771584,
+          "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run0",
+          "pid": 389953,
+          "recovered": false,
+          "returncode": 0,
+          "started_at": 1791813644.7203703,
+          "status": "COMPLETE",
+          "verification": {
+            "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run0/best.pt",
+            "checkpoint_sha256": "a7396411bdc3617b46517bc119359f331cd30882ec2add61bf2f5ea63e09fdf5",
+            "completion_sha256": "ab0c13a51067c553eb0241111c0103466101687faa481ebbeff7c6df0d3c5806",
+            "metrics": {
+              "FN": 1273,
+              "FP": 545,
+              "TN": 84906,
+              "TP": 14776,
+              "f1": 0.9420465412814791,
+              "iou": 0.8904423285524888,
+              "kappa": 0.9314607342800705,
+              "overall_accuracy": 0.982088669950739,
+              "percent_error": 1.7911330049261085,
+              "pixels": 101500,
+              "precision": 0.9644279094053912,
+              "recall": 0.9206804162253099
+            },
+            "protocol_sha256": "4d1bb67e58ffcd025240c1b13e2e472d7fde90cd16f5f2e7e73258b29bc68b89",
+            "result_sha256": "23f6aef329afa74d9a4e9e812662ae34a7a8a0705d1559780fff7d97f2968f9f"
+          }
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    }
+  },
+  "lane": "d0r3",
+  "plan_sha256": "d1cffd1f5919753cbe93d7a8b6ee357c940495d120b60be850b59d4c52ced90b",
+  "revision": 59,
+  "root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2",
+  "status": "RUNNING",
+  "updated_at": 1791814217.557398,
+  "version": 1
+}

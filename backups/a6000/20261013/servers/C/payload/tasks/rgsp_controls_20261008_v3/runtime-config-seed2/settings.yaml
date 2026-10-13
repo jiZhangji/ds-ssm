@@ -1,0 +1,17 @@
+settings_version: 0.0.4
+datasets_dir: /home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code/datasets
+weights_dir: weights
+runs_dir: runs
+uuid: 6b7c6b9790383eb74c18069f7b5b1074b42f8fe1258925ad7ebf9a9d60b669eb
+sync: true
+api_key: ''
+openai_api_key: ''
+clearml: true
+comet: true
+dvc: true
+hub: true
+mlflow: true
+neptune: true
+raytune: true
+tensorboard: true
+wandb: true

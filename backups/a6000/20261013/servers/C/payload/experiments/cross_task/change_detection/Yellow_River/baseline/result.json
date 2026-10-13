@@ -1,0 +1,17 @@
+{
+  "dataset": "Yellow River",
+  "task": "change_detection",
+  "variant": "baseline",
+  "state_dim": 0,
+  "metric": {
+    "precision": 0.2693481445312459,
+    "recall": 0.9999999999999434,
+    "f1": 0.4243881329037791,
+    "iou": 0.2693481445312459,
+    "oa": 0.2693481445312459
+  },
+  "latency_ms": 143.05671598413028,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/change_detection/Yellow_River/baseline/best.pt",
+  "epochs": 100,
+  "params": 2047705
+}

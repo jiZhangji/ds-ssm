@@ -1,0 +1,55 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/provenance.json",
+      "sha256": "4ef1ef0d8bb876d26a4aeefddaed9732b5d2d2c2c6b6010b268255b913cf337f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/train_complete.json",
+      "sha256": "a3b1a08441f18bc440472032f9d1ae08e0514c85a7e7c4e344bad3c2c05a9ff7"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/eval_test.json",
+      "sha256": "a8678e8f2f91104d264df95d76289ef67b264dcea0d316eb615fd61ba497214e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/evaluation_complete.json",
+      "sha256": "7cae3b5d7b6273ee0f066954ebd957860f61668ad534094e3240d3a2d9f7981a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/weights/best.pt",
+      "sha256": "88a40e413851e591a95c20747ecd31f379122999d03fe15ba06dc1c70c0341c0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/weights/raw_fp32_last.pt",
+      "sha256": "ab532f48cd7a8eac588f2ad478cfec4e804e61bdf3eb95fb0a46fd7b4b5c4b8a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/controls_by_epoch.jsonl",
+      "sha256": "08d16cde05b8eb1cdacb6defb85e792db2e4f422782f20005b3a7cd41c4fa6df"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/trial_complete.json",
+      "sha256": "d517113f073af58169f765ceda7cd59aedd5c1ee2e9e2b6222a1511dd18df9e3"
+    }
+  ],
+  "details": {
+    "kind": "detection",
+    "overall": {
+      "ap50": 0.8749535000953477,
+      "ap50_95": 0.4526363805667681,
+      "ap75": 0.3983645727222496,
+      "precision": 0.8997970441898387,
+      "recall": 0.815018315018315
+    },
+    "resumed": false,
+    "smoke_only": false
+  },
+  "finished_utc": "2026-10-09T16:06:24.189088+00:00",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "ssdd_local_energy_input_seed0",
+  "trial_sha256": "94c5acaf9a6b18e096857d0fc98ffbd1891fd0b18207919ff0c572709db6ced3"
+}

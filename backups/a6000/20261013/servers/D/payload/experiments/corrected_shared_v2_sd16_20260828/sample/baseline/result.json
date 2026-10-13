@@ -1,0 +1,31 @@
+{
+  "dataset": "SAMPLE",
+  "task": "classification",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "initialization": "scratch",
+  "protocol": null,
+  "split_sizes": {
+    "train": 1075,
+    "val": 135,
+    "test": 135
+  },
+  "imgsz": 224,
+  "batch": 64,
+  "epochs_requested": 200,
+  "best_epoch": 146,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.9851851851851852,
+    "macro_precision": 0.985645933014354,
+    "macro_recall": 0.9846153846153847,
+    "macro_f1": 0.9845353925353926
+  },
+  "params": 1976930,
+  "gflops": 0.272908398,
+  "latency_ms": 3.108766267541796,
+  "fps": 321.6710147819292,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/sample/baseline/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAMPLE/manifest.json"
+}

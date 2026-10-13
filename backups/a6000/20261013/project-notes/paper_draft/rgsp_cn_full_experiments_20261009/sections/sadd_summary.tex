@@ -1,0 +1,19 @@
+\begin{table*}[tp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{SADD 新消融：三种子均值$\pm$样本标准差（\%），固定阳性 795/44/44 轨道。}\label{tab:sadd_current}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrr}
+\toprule
+Configuration & Precision & Recall & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$\\
+\midrule
+Original & $93.57\pm0.44$ & $94.23\pm2.23$ & $97.32\pm0.91$ & $52.82\pm4.44$ & $53.35\pm0.88$ \\
+Matched075 & $93.96\pm2.34$ & $94.44\pm1.48$ & $97.37\pm1.26$ & $50.67\pm1.01$ & $52.18\pm0.88$ \\
+LocalEnergy & $94.28\pm1.49$ & $94.22\pm1.60$ & $97.57\pm0.91$ & $48.75\pm1.77$ & $52.37\pm0.43$ \\
+Full & $94.11\pm1.60$ & $93.97\pm1.82$ & $97.73\pm0.55$ & $49.11\pm5.49$ & $51.98\pm2.59$ \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+四配置采用相同固定划分；Original 经历史断点恢复，恢复与阳性筛选限制见实验设置。未将旧单次 SADD 表并入统计。
+\end{minipage}
+\end{table*}

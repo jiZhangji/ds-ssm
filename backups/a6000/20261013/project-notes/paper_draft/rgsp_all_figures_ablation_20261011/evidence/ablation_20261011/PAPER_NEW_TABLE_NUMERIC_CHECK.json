@@ -1,0 +1,35 @@
+{
+  "schema": "rgsp-paper-added-result-table-audit-v1",
+  "recorded_utc": "2026-10-11T03:24:17.758Z",
+  "status": "PASS",
+  "main_path": "../../main.tex",
+  "main_sha256": "f5224ace7cd0cc603f62fa7966f3028d09a8b493dc1b8283525e3039ae0970b1",
+  "scope": "Only the newly inserted seven SSDD seed0 rows and fifteen unified-interface cross-task seed0 rows; source arithmetic/formatting and documented protocol consistency, not rendering or new model evaluation.",
+  "source_capture": {
+    "detection": "detection/DETECTION_READ_VERIFICATION.json",
+    "detection_original_files": 42,
+    "cross": "cross/METRICS_READ_CAPTURE.json",
+    "cross_capture_sha256": "00228be1f6b83326ebdb3a8e0cc1937b7fee5b75918126235a5d4003de92f3a3"
+  },
+  "table_row_counts": {
+    "ssdd_total": 27,
+    "classification_new": 6,
+    "change_detection_new": 9
+  },
+  "numeric_cell_counts": {
+    "ssdd_new_7_times_6": 42,
+    "classification_6_times_5": 30,
+    "change_detection_9_times_8": 72,
+    "total_compared": 144
+  },
+  "mismatch_count": 0,
+  "mismatches": [],
+  "method": "Parse each target LaTeX tabular row by dataset/configuration; compare against original JSON metrics multiplied by 100 and rounded to 4 decimal places; preserve kappa raw rounded to 4 places, validation threshold raw rounded to 2 places, and integer epochs. All 144 numeric/epoch/threshold cells matched.",
+  "narrative_review": "New section checked against frozen protocol and JSON evidence: same data split per dataset; full backbone/internal P3; classification and change heads; scratch/no extra warmup/cosine; unique-pixel aggregation and validation-only model-specific thresholds; Farmland all-negative baseline and 3 additional true positives; Yellow River recall decrease with 637 fewer false positives and 372 more false negatives. No concrete content mismatch found.",
+  "limitations": [
+    "Small result/protocol/receipt files checked; no new training, inference, checkpoint-byte hashing or model evaluation.",
+    "Paper source comparison only; no claim that a PDF was compiled, rendered or visually inspected in this check.",
+    "The original 20 SSDD and 9 SADD rows are preserved and are not counted in these 144 newly added cells.",
+    "Source hash binds this exact paper snapshot; subsequent changes to main.tex require noting the new hash or repeating the static check."
+  ]
+}

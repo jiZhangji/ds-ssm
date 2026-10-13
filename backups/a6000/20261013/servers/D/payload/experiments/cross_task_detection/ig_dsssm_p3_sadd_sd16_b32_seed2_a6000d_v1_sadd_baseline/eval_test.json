@@ -1,0 +1,43 @@
+{
+  "experiment": "ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline",
+  "placement": "baseline",
+  "variant": "baseline",
+  "state_dim": 0,
+  "seed": 2,
+  "subset": "SADD",
+  "weights": "/home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/best.pt",
+  "weights_sha256": "3402c10b290cae2de82b8fe2f505b2b01117ec46c59dc987e6dc5233d851502a",
+  "data": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SADD/SADD.yaml",
+  "data_yaml_sha256": "72b9e1657ad6d6824dd8b13ebfe8053409ec1b597eb0809454e07608589dc9a8",
+  "split": "test",
+  "imgsz": 640,
+  "batch": 32,
+  "conf": 0.001,
+  "iou": 0.6,
+  "precision_mode": "fp32",
+  "result_dir": "/home/powerleader/ig-ds-ssm/experiments/cross_task_detection/evaluations/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline_test",
+  "speed_ms": {
+    "preprocess": 0.08811934628470579,
+    "inference": 9.461354727696891,
+    "loss": 0.00021192762586805553,
+    "postprocess": 0.34885053281430844
+  },
+  "overall": {
+    "precision": 0.9428439685029409,
+    "recall": 0.9527186761229315,
+    "ap50": 0.9719067676561689,
+    "ap75": 0.5450890719888817,
+    "ap50_95": 0.5431676978856741
+  },
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "aircraft",
+      "precision": 0.9428439685029409,
+      "recall": 0.9527186761229315,
+      "ap50": 0.9719067676561689,
+      "ap75": 0.5450890719888817,
+      "ap50_95": 0.5431676978856741
+    }
+  ]
+}

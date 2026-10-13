@@ -1,0 +1,42 @@
+[
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1945_f/audited_rows.json",
+    "bytes": 43737169,
+    "sha256": "6cd1c18c130300304d54cc3ec8aa25a05470c0f508f57beac88163be2d6a91b6",
+    "mode": 436,
+    "source_mtime_ns": 1791546440182403495,
+    "changed_during_read": false
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/lanes/f0_seed0/logs/sar_shipdataset_original_seed0.log",
+    "bytes": 89845671,
+    "sha256": "06fe7c86ca7e7c944ef204697046a7d1d8a8e2fcdc2a3aee4a413b7e6e234733",
+    "mode": 436,
+    "source_mtime_ns": 1791725509021768880,
+    "changed_during_read": false
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/lanes/f1_seed0/logs/sar_shipdataset_matched_scale075_seed0.log",
+    "bytes": 89846436,
+    "sha256": "97628c8b58e65cf60be975f254065387e677b975cac8eda82b00da1bf3c2df83",
+    "mode": 436,
+    "source_mtime_ns": 1791707367076463481,
+    "changed_during_read": false
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/sar_ship-original/run0/verified_data_records.json",
+    "bytes": 23590413,
+    "sha256": "c86d9a59917ce0ad8c9287904b4869e83eca5b90e7e9bd0ad0a01b944865094f",
+    "mode": 436,
+    "source_mtime_ns": 1791823492102305409,
+    "changed_during_read": false
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/f1/jobs/sar_ship-matched075/run0/verified_data_records.json",
+    "bytes": 23590413,
+    "sha256": "c86d9a59917ce0ad8c9287904b4869e83eca5b90e7e9bd0ad0a01b944865094f",
+    "mode": 436,
+    "source_mtime_ns": 1791828777960792303,
+    "changed_during_read": false
+  }
+]

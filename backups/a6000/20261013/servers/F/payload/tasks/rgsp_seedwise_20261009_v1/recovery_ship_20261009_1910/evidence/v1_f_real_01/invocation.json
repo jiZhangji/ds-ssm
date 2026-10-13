@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/ship_gate.py",
+    "--validate-only",
+    "--expected-hostname",
+    "powerleader-a6000-f",
+    "--audit",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1945_f/archive_audit.json",
+    "--reviewed-audit-sha256",
+    "9092777ec2a04caaea06420cc5df715bf703cc3f1e4ec5538cbdff65edbf763d"
+  ],
+  "returncode": 2,
+  "recorded_utc": "2026-10-09T11:51:48.197745+00:00",
+  "readiness_present": false
+}

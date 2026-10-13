@@ -1,0 +1,5 @@
+﻿experiment_id,source_server,mode,epoch,precision,recall,mAP50,mAP50-95,notes
+server_current_3090x2__ssdd__ddp_PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_80bsx2-ex27-codex3,server_current_3090x2,train_best_val,296,0.9731,0.9304,0.97976,0.73028,Best row recomputed from training results.csv
+server_current_3090x2__ssdd__ddp_PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_80bsx2-ex27-codex3,server_current_3090x2,train_last_val,300,0.94292,0.95971,0.97806,0.72844,Last epoch from training results.csv
+server_current_3090x2__ssdd__ddp_PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_80bsx2-ex27-codex3,server_current_3090x2,standard_test,,0.983,0.926,0.978,0.729,Parsed from user pasted test output
+server_current_3090x2__ssdd__ddp_PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_80bsx2-ex27-codex3,server_current_3090x2,tta_iou0.55_conf0.001,,0.969,0.952,0.978,0.715,Parsed from user pasted test output

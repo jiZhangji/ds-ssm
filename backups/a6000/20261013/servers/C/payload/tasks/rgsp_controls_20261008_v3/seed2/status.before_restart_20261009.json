@@ -1,0 +1,23 @@
+{
+  "host": "a6000-c",
+  "pid": 3544342,
+  "seed": 2,
+  "cuda_visible_devices": "0",
+  "started_utc": "2026-10-08T04:30:14.999164+00:00",
+  "state": "failed",
+  "completed": [
+    "original",
+    "matched_identity",
+    "matched_scale075",
+    "local_energy",
+    "local_energy_input",
+    "local_energy_delta",
+    "full",
+    "full_fixed_half",
+    "residual_scale075",
+    "energy_only"
+  ],
+  "current": "guidance_only",
+  "error": "RuntimeError('Assigned GPU already has a compute task; not taking over:\\n3577823, /home/powerleader/project/envs/comfyui/bin/python')",
+  "updated_utc": "2026-10-08T16:15:21.729019+00:00"
+}

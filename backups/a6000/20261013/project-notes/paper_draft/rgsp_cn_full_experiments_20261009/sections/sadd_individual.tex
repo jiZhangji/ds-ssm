@@ -1,0 +1,30 @@
+\begin{table*}[tp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{SADD 新 12 次消融的完整逐种子结果（\%）。}\label{tab:sadd_individual}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrr}
+\toprule
+Configuration & Seed & Precision & Recall & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$\\
+\midrule
+Original & 0 & 93.5901 & 96.6239 & 98.3691 & 53.5163 & 53.7117 \\
+Original & 1 & 94.0026 & 92.1999 & 96.8641 & 56.8648 & 53.9804 \\
+Original & 2 & 93.1134 & 93.8725 & 96.7214 & 48.0764 & 52.3480 \\
+\midrule
+Matched075 & 0 & 94.1825 & 95.8333 & 97.5739 & 49.5962 & 52.0914 \\
+Matched075 & 1 & 96.1783 & 92.8922 & 98.5252 & 51.6064 & 53.0962 \\
+Matched075 & 2 & 91.5080 & 94.6078 & 96.0201 & 50.8144 & 51.3444 \\
+\midrule
+LocalEnergy & 0 & 93.2900 & 94.6078 & 97.5941 & 48.1029 & 51.9479 \\
+LocalEnergy & 1 & 93.5523 & 92.4613 & 96.6499 & 47.3977 & 52.3537 \\
+LocalEnergy & 2 & 95.9915 & 95.5882 & 98.4768 & 50.7618 & 52.8014 \\
+\midrule
+Full & 0 & 92.5945 & 91.9369 & 97.0944 & 43.5558 & 49.0030 \\
+Full & 1 & 95.7783 & 94.5301 & 98.0804 & 49.2254 & 53.1989 \\
+Full & 2 & 93.9679 & 95.4537 & 98.0135 & 54.5365 & 53.7361 \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+数值由回收 JSON 的原始比例值乘 100 得到，表格四舍五入不参与二次统计。三个 seed 共用同一固定划分。
+\end{minipage}
+\end{table*}

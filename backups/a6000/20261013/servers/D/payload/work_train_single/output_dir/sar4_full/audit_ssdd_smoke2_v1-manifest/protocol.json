@@ -1,0 +1,45 @@
+{
+  "amp": true,
+  "augmentation": {
+    "close_mosaic": 1,
+    "degrees": 0.0,
+    "fliplr": 0.5,
+    "flipud": 0.0,
+    "mosaic": 1.0,
+    "scale": 0.5,
+    "translate": 0.1
+  },
+  "batch": 32,
+  "code": {
+    "mbyolo_train_sarair.py": "a09dbbe373d321eb2e776daf6dc18f5b9c0c15b603ba706285d74ddc335051be",
+    "tools/evaluate_sarmix.py": "b618852403eeda8737cadd847ac5193848325141eb6666dac10fa8185d67c50d",
+    "tools/run_sar4_full_suite.py": "52e004061d0e5e8d3ba4ce9ebf7019dcbf7d9f54ccd2f19986d6d108edc1d9d3",
+    "ultralytics/nn/modules/mamba_yolo.py": "6abc3a657f7925c076e84f890500e56d4fe00106f4e02edbfea4cf7dea93819d"
+  },
+  "configs": {
+    "SSDD:baseline": "74dcda6fcbd55daea5dbb87026787d41886d0104c58b2bf5c805dca0077d5f44",
+    "SSDD:full_p3": "ec287ccce00023599bda0a916fcad804e20e07a12e0b4b5aec57d2bfbc4ebc79"
+  },
+  "cos_lr": false,
+  "datasets": {
+    "SSDD": {
+      "path": "/home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/audit_ssdd_smoke2_v1-manifest/datasets/SSDD.yaml",
+      "sha256": "f329b374505259e58a5b355a9fb0e8bacdd937f1a08878df25b58b18d22c1e68"
+    }
+  },
+  "epochs": 2,
+  "eval_batch": 64,
+  "experiment_id": "audit_ssdd_smoke2_v1",
+  "imgsz": 640,
+  "lr0": 0.001,
+  "lrf": 0.01,
+  "module_warmup_epochs": 0,
+  "nbs": 64,
+  "optimizer": "AdamW",
+  "optimizer_warmup_epochs": 1.0,
+  "patience": 2,
+  "seed": 0,
+  "state_dim": 16,
+  "weight_decay": 0.0005,
+  "weights": "none"
+}

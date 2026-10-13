@@ -1,0 +1,212 @@
+[
+  {
+    "key": "ssdd2021",
+    "line": 47,
+    "context": "amba；选择性状态空间模型；局部结构；状态传播；空间重要性  \\section{引言}\\label{sec:intro} 合成孔径雷达（Synthetic Aperture Radar，SAR）具有全天时、全天候成像能力，已用于海面舰船监测、机场目标识别和地表变化分析。公开舰船基准揭示了近岸背景、小目标和密集停泊等场景对识别与定位的挑战\\cite{ssdd2021}；SAR-AIRcraft-1.0 则体现了飞机散射点离散、尺度差异和机场强干扰带来的困难\\cite{saraircraft2023}。不同于自然光学成像，SAR 局部响"
+  },
+  {
+    "key": "saraircraft2023",
+    "line": 47,
+    "context": "} 合成孔径雷达（Synthetic Aperture Radar，SAR）具有全天时、全天候成像能力，已用于海面舰船监测、机场目标识别和地表变化分析。公开舰船基准揭示了近岸背景、小目标和密集停泊等场景对识别与定位的挑战\\cite{ssdd2021}；SAR-AIRcraft-1.0 则体现了飞机散射点离散、尺度差异和机场强干扰带来的困难\\cite{saraircraft2023}。不同于自然光学成像，SAR 局部响应受目标散射特性、成像几何和相干成像过程共同影响。较强响应既可能对应有意义的目标散射中心，也可能来自背景杂波；弱响应同样"
+  },
+  {
+    "key": "resnet2015",
+    "line": 49,
+    "context": "和相干成像过程共同影响。较强响应既可能对应有意义的目标散射中心，也可能来自背景杂波；弱响应同样可能携带细小目标或边界信息。因此，响应强度与任务相关结构价值并不等价。有效的 SAR 表征不仅需要较大范围的上下文，还需要利用局部结构判断信息应以何种方式参与后续特征更新。  卷积网络通过层级结构聚合局部信息，残差学习使深层视觉表示的优化成为可能\\cite{resnet2015}。视觉 Transformer 则通过图像块之间的自注意力建立远距离联系\\cite{vit2020}，其中全局注意力的成对交互在高分辨率特征上带来较高的存储与计算成本"
+  },
+  {
+    "key": "vit2020",
+    "line": 49,
+    "context": "目标或边界信息。因此，响应强度与任务相关结构价值并不等价。有效的 SAR 表征不仅需要较大范围的上下文，还需要利用局部结构判断信息应以何种方式参与后续特征更新。  卷积网络通过层级结构聚合局部信息，残差学习使深层视觉表示的优化成为可能\\cite{resnet2015}。视觉 Transformer 则通过图像块之间的自注意力建立远距离联系\\cite{vit2020}，其中全局注意力的成对交互在高分辨率特征上带来较高的存储与计算成本。Mamba 利用输入依赖的选择性状态空间模型（Selective State Space Model，S"
+  },
+  {
+    "key": "mamba2023",
+    "line": 49,
+    "context": "则通过图像块之间的自注意力建立远距离联系\\cite{vit2020}，其中全局注意力的成对交互在高分辨率特征上带来较高的存储与计算成本。Mamba 利用输入依赖的选择性状态空间模型（Selective State Space Model，SSM）控制信息写入与状态演化，其选择性扫描在固定通道数和状态维数时具有随序列长度线性增长的计算复杂度\\cite{mamba2023}。Vision Mamba（Vim）通过双向状态空间建模扩展视觉序列表征\\cite{vim2024}；VMamba 通过二维选择性扫描（SS2D）组织四条空间扫描路线\\"
+  },
+  {
+    "key": "vim2024",
+    "line": 49,
+    "context": "特征上带来较高的存储与计算成本。Mamba 利用输入依赖的选择性状态空间模型（Selective State Space Model，SSM）控制信息写入与状态演化，其选择性扫描在固定通道数和状态维数时具有随序列长度线性增长的计算复杂度\\cite{mamba2023}。Vision Mamba（Vim）通过双向状态空间建模扩展视觉序列表征\\cite{vim2024}；VMamba 通过二维选择性扫描（SS2D）组织四条空间扫描路线\\cite{vmamba2024}。进一步地，Mamba YOLO 将状态空间建模与层级目标检测结构结合\\"
+  },
+  {
+    "key": "vmamba2024",
+    "line": 49,
+    "context": "e State Space Model，SSM）控制信息写入与状态演化，其选择性扫描在固定通道数和状态维数时具有随序列长度线性增长的计算复杂度\\cite{mamba2023}。Vision Mamba（Vim）通过双向状态空间建模扩展视觉序列表征\\cite{vim2024}；VMamba 通过二维选择性扫描（SS2D）组织四条空间扫描路线\\cite{vmamba2024}。进一步地，Mamba YOLO 将状态空间建模与层级目标检测结构结合\\cite{mambayolo2024}，为研究 SAR 特征在局部细节与长程关联之间的传播方式"
+  },
+  {
+    "key": "mambayolo2024",
+    "line": 49,
+    "context": "数时具有随序列长度线性增长的计算复杂度\\cite{mamba2023}。Vision Mamba（Vim）通过双向状态空间建模扩展视觉序列表征\\cite{vim2024}；VMamba 通过二维选择性扫描（SS2D）组织四条空间扫描路线\\cite{vmamba2024}。进一步地，Mamba YOLO 将状态空间建模与层级目标检测结构结合\\cite{mambayolo2024}，为研究 SAR 特征在局部细节与长程关联之间的传播方式提供了合适接口。  Mamba 已经具有内容选择能力，但其输入依赖参数并不天然等价于对 SAR 结构可靠"
+  },
+  {
+    "key": "rsmamba2024",
+    "line": 53,
+    "context": "索，却不能单独判定可靠性：离散强散射点可能属于目标，高局部变化也可能对应重要边缘。由此，本文研究的问题不是替代 Mamba 已有的选择性，而是：\\emph{能否显式引入 SAR 局部结构线索，进一步调节当前响应的状态写入及后续状态演化？}  已有遥感 Mamba 研究从不同方面增强空间表征。RS-Mamba 面向大幅面遥感图像研究密集预测\\cite{rsmamba2024}，RSMTMamba 研究跨任务特征学习\\cite{rstmtmamba2025}，MaDiNet 将 Mamba 引入 SAR 目标检测框架\\cite{madin"
+  },
+  {
+    "key": "rstmtmamba2025",
+    "line": 53,
+    "context": "边缘。由此，本文研究的问题不是替代 Mamba 已有的选择性，而是：\\emph{能否显式引入 SAR 局部结构线索，进一步调节当前响应的状态写入及后续状态演化？}  已有遥感 Mamba 研究从不同方面增强空间表征。RS-Mamba 面向大幅面遥感图像研究密集预测\\cite{rsmamba2024}，RSMTMamba 研究跨任务特征学习\\cite{rstmtmamba2025}，MaDiNet 将 Mamba 引入 SAR 目标检测框架\\cite{madinet2025}。在这些研究基础上，本文聚焦局部结构线索进入选择性递推的具体位"
+  },
+  {
+    "key": "madinet2025",
+    "line": 53,
+    "context": "局部结构线索，进一步调节当前响应的状态写入及后续状态演化？}  已有遥感 Mamba 研究从不同方面增强空间表征。RS-Mamba 面向大幅面遥感图像研究密集预测\\cite{rsmamba2024}，RSMTMamba 研究跨任务特征学习\\cite{rstmtmamba2025}，MaDiNet 将 Mamba 引入 SAR 目标检测框架\\cite{madinet2025}。在这些研究基础上，本文聚焦局部结构线索进入选择性递推的具体位置：扫描输入驱动决定当前信息以何种幅度写入状态，离散化步长则同时参与历史状态衰减和当前输入写入。这一设"
+  },
+  {
+    "key": "lee1980",
+    "line": 83,
+    "context": "入方式、训练条件和结构细节对适用范围的影响。 \\end{enumerate}  \\section{相关工作}\\label{sec:related} \\subsection{SAR 局部统计、图像去斑与任务表征} 局部统计长期用于图像增强和噪声滤波。Lee 滤波利用局部统计构造自适应图像估计，为局部响应与邻域背景之间的关系提供了经典建模思路\\cite{lee1980}。Speckle-Free SAR Image Ship Detection 则直接研究散斑处理与舰船检测的联系\\cite{specklefree2021}。这些工作提示，"
+  },
+  {
+    "key": "specklefree2021",
+    "line": 83,
+    "context": "ed} \\subsection{SAR 局部统计、图像去斑与任务表征} 局部统计长期用于图像增强和噪声滤波。Lee 滤波利用局部统计构造自适应图像估计，为局部响应与邻域背景之间的关系提供了经典建模思路\\cite{lee1980}。Speckle-Free SAR Image Ship Detection 则直接研究散斑处理与舰船检测的联系\\cite{specklefree2021}。这些工作提示，局部响应处理应结合下游任务理解：图像域的平滑程度、视觉质量和目标定位精度不是同一个优化目标。  近期状态空间模型也被用于 SAR 图像复原。"
+  },
+  {
+    "key": "rssnet2026",
+    "line": 85,
+    "context": "R Image Ship Detection 则直接研究散斑处理与舰船检测的联系\\cite{specklefree2021}。这些工作提示，局部响应处理应结合下游任务理解：图像域的平滑程度、视觉质量和目标定位精度不是同一个优化目标。  近期状态空间模型也被用于 SAR 图像复原。RSS-Net 面向 SAR 图像去噪构建 Mamba 网络\\cite{rssnet2026}；MambaDIP 将 Mamba 用于深度图像先验框架下的去斑与增强\\cite{mambadip2026}。RGSP 与这些方法的区别在于处理对象和优化位置：本文在"
+  },
+  {
+    "key": "mambadip2026",
+    "line": 85,
+    "context": "efree2021}。这些工作提示，局部响应处理应结合下游任务理解：图像域的平滑程度、视觉质量和目标定位精度不是同一个优化目标。  近期状态空间模型也被用于 SAR 图像复原。RSS-Net 面向 SAR 图像去噪构建 Mamba 网络\\cite{rssnet2026}；MambaDIP 将 Mamba 用于深度图像先验框架下的去斑与增强\\cite{mambadip2026}。RGSP 与这些方法的区别在于处理对象和优化位置：本文在中间特征域修正局部残差，并进一步控制递推输入与步长，没有独立的干净图像重建输出或复原损失。二维邻域标准差"
+  },
+  {
+    "key": "mamba2023",
+    "line": 88,
+    "context": "在于处理对象和优化位置：本文在中间特征域修正局部残差，并进一步控制递推输入与步长，没有独立的干净图像重建输出或复原损失。二维邻域标准差在本文中是特征描述子，而非估计真实散斑方差的物理模型。  \\subsection{视觉与遥感选择性状态空间模型} Mamba 通过输入相关的 $\\Delta$、$B$、$C$ 参数实现内容选择和长程序列建模\\cite{mamba2023}。因此，“选择哪些信息传播”本身不是本文新引入的问题。Vim 的双向建模\\cite{vim2024}和 VMamba 的四路线 SS2D\\cite{vmamba2024"
+  },
+  {
+    "key": "vim2024",
+    "line": 88,
+    "context": "输出或复原损失。二维邻域标准差在本文中是特征描述子，而非估计真实散斑方差的物理模型。  \\subsection{视觉与遥感选择性状态空间模型} Mamba 通过输入相关的 $\\Delta$、$B$、$C$ 参数实现内容选择和长程序列建模\\cite{mamba2023}。因此，“选择哪些信息传播”本身不是本文新引入的问题。Vim 的双向建模\\cite{vim2024}和 VMamba 的四路线 SS2D\\cite{vmamba2024}分别处理视觉序列的方向性与二维空间组织。Mamba YOLO 在检测网络中结合状态空间建模和局部特征处"
+  },
+  {
+    "key": "vmamba2024",
+    "line": 88,
+    "context": "散斑方差的物理模型。  \\subsection{视觉与遥感选择性状态空间模型} Mamba 通过输入相关的 $\\Delta$、$B$、$C$ 参数实现内容选择和长程序列建模\\cite{mamba2023}。因此，“选择哪些信息传播”本身不是本文新引入的问题。Vim 的双向建模\\cite{vim2024}和 VMamba 的四路线 SS2D\\cite{vmamba2024}分别处理视觉序列的方向性与二维空间组织。Mamba YOLO 在检测网络中结合状态空间建模和局部特征处理\\cite{mambayolo2024}，构成本研究检测实现的"
+  },
+  {
+    "key": "mambayolo2024",
+    "line": 88,
+    "context": "$ 参数实现内容选择和长程序列建模\\cite{mamba2023}。因此，“选择哪些信息传播”本身不是本文新引入的问题。Vim 的双向建模\\cite{vim2024}和 VMamba 的四路线 SS2D\\cite{vmamba2024}分别处理视觉序列的方向性与二维空间组织。Mamba YOLO 在检测网络中结合状态空间建模和局部特征处理\\cite{mambayolo2024}，构成本研究检测实现的直接架构背景。  在遥感应用中，RS-Mamba 研究大幅面图像的密集表征\\cite{rsmamba2024}，RSMTMamba 研究跨"
+  },
+  {
+    "key": "rsmamba2024",
+    "line": 90,
+    "context": "模\\cite{vim2024}和 VMamba 的四路线 SS2D\\cite{vmamba2024}分别处理视觉序列的方向性与二维空间组织。Mamba YOLO 在检测网络中结合状态空间建模和局部特征处理\\cite{mambayolo2024}，构成本研究检测实现的直接架构背景。  在遥感应用中，RS-Mamba 研究大幅面图像的密集表征\\cite{rsmamba2024}，RSMTMamba 研究跨任务信息学习\\cite{rstmtmamba2025}。这类研究与本文的关系是互补的：空间序列组织决定上下文如何被访问，局部结构条件化调"
+  },
+  {
+    "key": "rstmtmamba2025",
+    "line": 90,
+    "context": "{vmamba2024}分别处理视觉序列的方向性与二维空间组织。Mamba YOLO 在检测网络中结合状态空间建模和局部特征处理\\cite{mambayolo2024}，构成本研究检测实现的直接架构背景。  在遥感应用中，RS-Mamba 研究大幅面图像的密集表征\\cite{rsmamba2024}，RSMTMamba 研究跨任务信息学习\\cite{rstmtmamba2025}。这类研究与本文的关系是互补的：空间序列组织决定上下文如何被访问，局部结构条件化调制决定访问到的信息如何参与递推。当前 RGSP 实现采用单向扫描块替换原始四"
+  },
+  {
+    "key": "madinet2025",
+    "line": 93,
+    "context": "构条件化调制决定访问到的信息如何参与递推。当前 RGSP 实现采用单向扫描块替换原始四向块，两种因素在整体检测对照中同时变化；第\\ref{sec:integration}节明确披露这一实现差异。  \\subsection{SAR-Mamba 与特征重加权} MaDiNet 是与本文直接相关的 SAR 检测研究，其正式版本发表于 TCSVT\\cite{madinet2025}。可核对的预印本具体描述了 MambaSAR、多方向 SAR-SSM 以及局部与全局分支的结合\\cite{madinet2024v1}。本文以这些可定位的设计为比较"
+  },
+  {
+    "key": "madinet2024v1",
+    "line": 93,
+    "context": "ref{sec:integration}节明确披露这一实现差异。  \\subsection{SAR-Mamba 与特征重加权} MaDiNet 是与本文直接相关的 SAR 检测研究，其正式版本发表于 TCSVT\\cite{madinet2025}。可核对的预印本具体描述了 MambaSAR、多方向 SAR-SSM 以及局部与全局分支的结合\\cite{madinet2024v1}。本文以这些可定位的设计为比较对象，不将版本间不同的文字、模型代码和数值混合为同一冻结实现。MCMN 则将 Doppler 与散射感知特征和 Mamba-CNN"
+  },
+  {
+    "key": "mcmn2026",
+    "line": 93,
+    "context": "可核对的预印本具体描述了 MambaSAR、多方向 SAR-SSM 以及局部与全局分支的结合\\cite{madinet2024v1}。本文以这些可定位的设计为比较对象，不将版本间不同的文字、模型代码和数值混合为同一冻结实现。MCMN 则将 Doppler 与散射感知特征和 Mamba-CNN 多尺度网络相结合，研究 PolSAR 舰船检测\\cite{mcmn2026}。已有工作已经从输入特征、扫描结构和任务框架等层次利用 SAR 信息，本文的定位因而不能建立在“首次把 Mamba 用于 SAR”之上。  特征重加权提供了另一类直接相关"
+  },
+  {
+    "key": "cbam2018",
+    "line": 95,
+    "context": "特征和 Mamba-CNN 多尺度网络相结合，研究 PolSAR 舰船检测\\cite{mcmn2026}。已有工作已经从输入特征、扫描结构和任务框架等层次利用 SAR 信息，本文的定位因而不能建立在“首次把 Mamba 用于 SAR”之上。  特征重加权提供了另一类直接相关的设计。CBAM 在通道和空间维度学习注意力，并对特征进行乘性细化\\cite{cbam2018}。RGSP 的输入驱动调制同样包含乘性权重，但其步长分支直接参与递推系数的形成。另一方面，若将普通注意力放在 $\\Delta,B,C$ 的生成之前，它也会间接改变状态更新"
+  },
+  {
+    "key": "lee1980",
+    "line": 104,
+    "context": "ering\\small \\caption{代表性设计的作用位置。表中区分设计接口，不据此推断性能优劣。} \\label{tab:related} \\begin{tabularx}{\\linewidth}{P{2.5cm}P{3.25cm}Y} \\toprule 设计 & 主要作用位置 & 与本研究的联系\\\\ \\midrule 局部统计滤波\\cite{lee1980} & 图像域局部估计 & 提供局部统计背景；与任务驱动特征变换不同\\\\ VMamba\\cite{vmamba2024} & 二维扫描组织 & 四向空间递推；是原始 VSS/"
+  },
+  {
+    "key": "vmamba2024",
+    "line": 105,
+    "context": "bel{tab:related} \\begin{tabularx}{\\linewidth}{P{2.5cm}P{3.25cm}Y} \\toprule 设计 & 主要作用位置 & 与本研究的联系\\\\ \\midrule 局部统计滤波\\cite{lee1980} & 图像域局部估计 & 提供局部统计背景；与任务驱动特征变换不同\\\\ VMamba\\cite{vmamba2024} & 二维扫描组织 & 四向空间递推；是原始 VSS/SS2D 的直接背景\\\\ MaDiNet 预印本\\cite{madinet2024v1} & 检测框架与 Mam"
+  },
+  {
+    "key": "madinet2024v1",
+    "line": 106,
+    "context": "oprule 设计 & 主要作用位置 & 与本研究的联系\\\\ \\midrule 局部统计滤波\\cite{lee1980} & 图像域局部估计 & 提供局部统计背景；与任务驱动特征变换不同\\\\ VMamba\\cite{vmamba2024} & 二维扫描组织 & 四向空间递推；是原始 VSS/SS2D 的直接背景\\\\ MaDiNet 预印本\\cite{madinet2024v1} & 检测框架与 MambaSAR & 结合扫描和多分支表征；版本需单独识别\\\\ MCMN\\cite{mcmn2026} & 输入线索与混合多尺度网络 & 使用"
+  },
+  {
+    "key": "mcmn2026",
+    "line": 107,
+    "context": "域局部估计 & 提供局部统计背景；与任务驱动特征变换不同\\\\ VMamba\\cite{vmamba2024} & 二维扫描组织 & 四向空间递推；是原始 VSS/SS2D 的直接背景\\\\ MaDiNet 预印本\\cite{madinet2024v1} & 检测框架与 MambaSAR & 结合扫描和多分支表征；版本需单独识别\\\\ MCMN\\cite{mcmn2026} & 输入线索与混合多尺度网络 & 使用 Doppler/散射特征；输入模态与本文不同\\\\ CBAM\\cite{cbam2018} & 通道和空间特征细化 & 是注入位置"
+  },
+  {
+    "key": "cbam2018",
+    "line": 108,
+    "context": " 四向空间递推；是原始 VSS/SS2D 的直接背景\\\\ MaDiNet 预印本\\cite{madinet2024v1} & 检测框架与 MambaSAR & 结合扫描和多分支表征；版本需单独识别\\\\ MCMN\\cite{mcmn2026} & 输入线索与混合多尺度网络 & 使用 Doppler/散射特征；输入模态与本文不同\\\\ CBAM\\cite{cbam2018} & 通道和空间特征细化 & 是注入位置对照的代表，而非自动等价于输出注意力\\\\ RGSP & 局部特征修正、扫描驱动与步长 & 研究结构描述子参与选择性递推的具体方式\\"
+  },
+  {
+    "key": "mamba2023",
+    "line": 122,
+    "context": "n} X=\\LN\\!\\left(\\operatorname{Flatten}_{HW}(F)\\right)\\in\\R^{b\\times L\\times d}. \\label{eq:tokens} \\end{equation} 本文用 $m$ 表示状态维数，避免与序列长度混淆。选择性 SSM 根据当前内容生成输入依赖参数，沿序列更新隐藏状态\\cite{mamba2023}。在本文采用的扫描实现中，通道 $c$、状态维 $n$ 上的递推为 \\begin{equation} h_{t,c,n}=\\exp(\\Delta_{t,c}A_{c,n"
+  },
+  {
+    "key": "ssdd2021",
+    "line": 310,
+    "context": "，只在独立背景表中出现。第四类为待完成实验（Planned），仅给出问题、控制条件与验收标准，不填写推测成绩。来源类别不等于可比性等级，同属实测也需核对初始化、划分和评估口径。  \\subsection{数据集与任务范围} SSDD 是本研究的主要检测验证数据，采用水平框任务；官方发布工作同时讨论了数据划分、目标尺度和近岸/离岸等使用标准\\cite{ssdd2021}。本批实验记录使用官方训练部分 928 张、测试部分 232 张图像，在每个 seed 下将训练部分进一步划分为 742 张训练、186 张验证图像。五个变体在同一 se"
+  },
+  {
+    "key": "sarship2019",
+    "line": 312,
+    "context": "方训练部分 928 张、测试部分 232 张图像，在每个 seed 下将训练部分进一步划分为 742 张训练、186 张验证图像。五个变体在同一 seed 内共享划分；不同 seed 同时改变划分及训练随机性。因此，跨 seed 的波动不能被单独归因为初始化或数据划分。  SAR-ShipDataset 提供复杂背景下的 SAR 舰船图像\\cite{sarship2019}，SAR-AIRcraft-1.0 提供高分辨率飞机检测与识别数据\\cite{saraircraft2023}。两者属于检测跨数据集验证的目标范围，但现有本地记录尚"
+  },
+  {
+    "key": "saraircraft2023",
+    "line": 312,
+    "context": "张训练、186 张验证图像。五个变体在同一 seed 内共享划分；不同 seed 同时改变划分及训练随机性。因此，跨 seed 的波动不能被单独归因为初始化或数据划分。  SAR-ShipDataset 提供复杂背景下的 SAR 舰船图像\\cite{sarship2019}，SAR-AIRcraft-1.0 提供高分辨率飞机检测与识别数据\\cite{saraircraft2023}。两者属于检测跨数据集验证的目标范围，但现有本地记录尚未形成与 SSDD 对应的统一三种子矩阵。分类探索使用本地 SAR-ACD 五类集合与 SAMPLE "
+  },
+  {
+    "key": "sample2019",
+    "line": 312,
+    "context": "AIRcraft-1.0 提供高分辨率飞机检测与识别数据\\cite{saraircraft2023}。两者属于检测跨数据集验证的目标范围，但现有本地记录尚未形成与 SSDD 对应的统一三种子矩阵。分类探索使用本地 SAR-ACD 五类集合与 SAMPLE 的 real-only 选样；SAMPLE 的正式数据集论文介绍了实测与合成配对数据\\cite{sample2019}，本文选样不等同于该数据集所有公开评测协议。  语义分割包括 Gaofen-3 FUSAR-Map\\cite{fusar2021}和用于高分辨率土地覆盖制图的 Ope"
+  },
+  {
+    "key": "fusar2021",
+    "line": 314,
+    "context": "范围，但现有本地记录尚未形成与 SSDD 对应的统一三种子矩阵。分类探索使用本地 SAR-ACD 五类集合与 SAMPLE 的 real-only 选样；SAMPLE 的正式数据集论文介绍了实测与合成配对数据\\cite{sample2019}，本文选样不等同于该数据集所有公开评测协议。  语义分割包括 Gaofen-3 FUSAR-Map\\cite{fusar2021}和用于高分辨率土地覆盖制图的 OpenEarthMap-SAR\\cite{oemsar2025}。变化检测使用项目中 Ottawa、Yellow River、Farml"
+  },
+  {
+    "key": "oemsar2025",
+    "line": 314,
+    "context": "D 五类集合与 SAMPLE 的 real-only 选样；SAMPLE 的正式数据集论文介绍了实测与合成配对数据\\cite{sample2019}，本文选样不等同于该数据集所有公开评测协议。  语义分割包括 Gaofen-3 FUSAR-Map\\cite{fusar2021}和用于高分辨率土地覆盖制图的 OpenEarthMap-SAR\\cite{oemsar2025}。变化检测使用项目中 Ottawa、Yellow River、Farmland 和 Sulzberger 的配准图像对记录。后者为单场景空间裁块实验，不能把多个裁块当"
+  },
+  {
+    "key": "adamw2017",
+    "line": 333,
+    "context": "end{table}  \\subsection{SSDD 训练、选模与可复现性} 随原始包提供的训练记录描述了统一的 scratch 初始化（\\texttt{weights=none}）、输入尺寸 640、batch size 16、至多 150 epochs 和 patience 30。优化器采用 AdamW；其解耦权重衰减机制见原论文\\cite{adamw2017}。其余记录参数列于表\\ref{tab:protocol}。记录环境为 RTX A6000、Python 3.10.16、PyTorch 1.13.1+cu117 和 U"
+  },
+  {
+    "key": "coco2014",
+    "line": 381,
+    "context": "内比较控制量的空间粒度，是当前更接近单因素的对照，但仍需依托原 run 配置核对其余设置。  \\subsection{指标与统计口径} 检测报告 $\\ap_{50}$、$\\ap_{75}$、$\\ap_{50:95}$、precision（P）和 recall（R）。$\\ap_{50:95}$ 沿用 COCO 风格的多 IoU 阈值评价概念\\cite{coco2014}，由项目 Ultralytics 评估器计算；“COCO 风格”不意味着未经比对就与另一套官方评估器逐项数值等价。P/R 取该实现平滑 F1 曲线的最优操作点，不同模型可"
+  },
+  {
+    "key": "sample2019",
+    "line": 635,
+    "context": "整记录}\\label{app:cross} \\subsection{分类数据与接口} 本地 SAR-ACD 集合记录为 2,522 张、5 类；不与其他文献中的六类或不同样本量版本混合。当前修订未将该本地集合与唯一首发文献及发布版本完成绑定，故不以近似同名论文代替数据来源。SAMPLE 使用项目筛选的 real-only 子集；其来源论文\\cite{sample2019}不自动赋予本地子集与原论文协议相同的资格。  scratch 记录使用输入 224、batch 64、最多 200 epochs、seed 0。VMamba 初始化轨"
+  },
+  {
+    "key": "madinet2024v1",
+    "line": 746,
+    "context": "craft FP32 运行在 epoch15、batch166 出现非有限损失，epoch14 验证 $\\ap_{50:95}=53.902\\%$ 仅是中间过程值；没有将其填入最终结果表。  \\subsection{公开结果只作版本明确的文献背景} 表\\ref{tab:author}仅列 MaDiNet 预印本 v1 自身报告的三项主指标\\cite{madinet2024v1}。其正式期刊版本作为相关工作单独引用\\cite{madinet2025}，但不将两个版本的作者、实现和数字互相替换。本文没有对这些配置执行同协议复现，也不将本地"
+  },
+  {
+    "key": "madinet2025",
+    "line": 746,
+    "context": "失，epoch14 验证 $\\ap_{50:95}=53.902\\%$ 仅是中间过程值；没有将其填入最终结果表。  \\subsection{公开结果只作版本明确的文献背景} 表\\ref{tab:author}仅列 MaDiNet 预印本 v1 自身报告的三项主指标\\cite{madinet2024v1}。其正式期刊版本作为相关工作单独引用\\cite{madinet2025}，但不将两个版本的作者、实现和数字互相替换。本文没有对这些配置执行同协议复现，也不将本地 scratch 结果放在同一排行榜中。  \\begin{table}[H]"
+  }
+]

@@ -1,0 +1,38 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+ssdd_baseline summary: 388 layers, 5984203 parameters, 0 gradients, 13.6 GFLOPs
+[34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/sar4_prepared/SSDD/labels/test.cache... 232 images, 0 backgrounds, 0 corrupt: 100%|██████████| 232/232 [00:00<?, ?it/s][34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/sar4_prepared/SSDD/labels/test.cache... 232 images, 0 backgrounds, 0 corrupt: 100%|██████████| 232/232 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/4 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  25%|██▌       | 1/4 [00:00<00:02,  1.46it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 2/4 [00:01<00:01,  1.70it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  75%|███████▌  | 3/4 [00:01<00:00,  1.72it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:02<00:00,  1.90it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:02<00:00,  1.80it/s]
+                   all        232        546          0          0          0          0
+Speed: 0.1ms preprocess, 7.8ms inference, 0.0ms loss, 0.0ms postprocess per image
+experiment: audit_ssdd_smoke2_noamp_v1_ssdd_baseline
+subset:     SSDD
+P/R:        0.000000/0.000000
+AP50:       0.000000
+AP75:       0.000000
+AP50-95:    0.000000
+JSON:       /home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/audit_ssdd_smoke2_noamp_v1_ssdd_baseline/eval_test.json
+Exception in thread Thread-1 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 49, in _pin_memory_loop
+    do_one_step()
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 26, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 305, in rebuild_storage_fd
+    fd = df.detach()
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/multiprocessing/connection.py", line 508, in Client
+    
+===== 2026-08-29T15:36:05.744604 =====
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/tools/evaluate_sarmix.py --weights /home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/audit_ssdd_smoke2_noamp_v1_ssdd_baseline/weights/best.pt --data /home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/audit_ssdd_smoke2_noamp_v1-manifest/datasets/SSDD.yaml --experiment audit_ssdd_smoke2_noamp_v1_ssdd_baseline --placement baseline --variant baseline --state-dim 0 --seed 0 --subset SSDD --split test --output-json /home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/audit_ssdd_smoke2_noamp_v1_ssdd_baseline/eval_test.json --imgsz 640 --batch 64 --device 0 --workers 8 --project /home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/evaluations --name audit_ssdd_smoke2_noamp_v1_ssdd_baseline_test

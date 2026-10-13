@@ -1,0 +1,19 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+sadd_full_p3 summary: 380 layers, 5919097 parameters, 0 gradients, 13.1 GFLOPs
+[34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SADD/labels/test.cache... 297 images, 207 backgrounds, 0 corrupt: 100%|██████████| 297/297 [00:00<?, ?it/s][34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SADD/labels/test.cache... 297 images, 207 backgrounds, 0 corrupt: 100%|██████████| 297/297 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/10 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  10%|█         | 1/10 [00:00<00:04,  2.06it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  20%|██        | 2/10 [00:00<00:03,  2.59it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  30%|███       | 3/10 [00:01<00:02,  2.77it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  40%|████      | 4/10 [00:01<00:02,  2.87it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 5/10 [00:01<00:01,  3.00it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  60%|██████    | 6/10 [00:02<00:01,  3.07it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  70%|███████   | 7/10 [00:02<00:00,  3.17it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  80%|████████  | 8/10 [00:02<00:00,  3.25it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  90%|█████████ | 9/10 [00:02<00:00,  3.29it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [00:03<00:00,  3.28it/s]
+                   all        297        846      0.957      0.945      0.969      0.535
+Speed: 0.1ms preprocess, 8.8ms inference, 0.0ms loss, 0.5ms postprocess per image
+experiment: ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3
+subset:     SADD
+P/R:        0.956914/0.945081
+AP50:       0.969249
+AP75:       0.535950
+AP50-95:    0.534945
+JSON:       /home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/eval_test.json
+
+===== 2026-08-27T06:41:31.712256 =====
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/tools/evaluate_sarmix.py --weights /home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/best.pt --data /home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SADD/SADD.yaml --experiment ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3 --placement p3 --variant full --state-dim 16 --seed 2 --subset SADD --split test --output-json /home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/eval_test.json --imgsz 640 --batch 32 --device 0 --workers 8 --project /home/powerleader/ig-ds-ssm/experiments/cross_task_detection/evaluations --name ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3_test

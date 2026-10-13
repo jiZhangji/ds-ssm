@@ -1,0 +1,72 @@
+[2026-09-05 17:38:18] start OpenEarthMap-SAR physical BS64 queue on cuda:1
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+OpenEarthMap-SAR ours warmup 1/20 loss=2.29860 score=0.16549
+OpenEarthMap-SAR ours warmup 2/20 loss=2.06909 score=0.17204
+OpenEarthMap-SAR ours warmup 3/20 loss=1.97037 score=0.17161
+OpenEarthMap-SAR ours warmup 4/20 loss=1.93414 score=0.19870
+OpenEarthMap-SAR ours warmup 5/20 loss=1.90250 score=0.18484
+OpenEarthMap-SAR ours warmup 6/20 loss=1.86517 score=0.18902
+OpenEarthMap-SAR ours warmup 7/20 loss=1.83706 score=0.19809
+OpenEarthMap-SAR ours warmup 8/20 loss=1.81542 score=0.21223
+OpenEarthMap-SAR ours warmup 9/20 loss=1.79683 score=0.19895
+OpenEarthMap-SAR ours warmup 10/20 loss=1.78363 score=0.20269
+OpenEarthMap-SAR ours warmup 11/20 loss=1.77766 score=0.22517
+OpenEarthMap-SAR ours warmup 12/20 loss=1.77451 score=0.20866
+OpenEarthMap-SAR ours warmup 13/20 loss=1.76613 score=0.21704
+OpenEarthMap-SAR ours warmup 14/20 loss=1.75787 score=0.21422
+OpenEarthMap-SAR ours warmup 15/20 loss=1.74196 score=0.22548
+OpenEarthMap-SAR ours warmup 16/20 loss=1.73514 score=0.22188
+OpenEarthMap-SAR ours warmup 17/20 loss=1.72568 score=0.21940
+OpenEarthMap-SAR ours warmup 18/20 loss=1.71897 score=0.22171
+OpenEarthMap-SAR ours warmup 19/20 loss=1.71360 score=0.21226
+OpenEarthMap-SAR ours warmup 20/20 loss=1.69567 score=0.23550
+WARMUP COMPLETE: restored ImageNet backbone and started full fine-tuning
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 1177, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 1173, in main
+    run(parser.parse_args())
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 1011, in run
+    raw_loss = criterion(model(*inputs), target)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 533, in forward
+    features = self.backbone(inputs[0])
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_backbone.py", line 79, in forward
+    features = list(self.encoder(image))
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/vmamba.py", line 1623, in forward
+    o, x = layer_forward(layer, x) # (B, H, W, C)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/vmamba.py", line 1616, in layer_forward
+    x = l.blocks(x)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/vmamba.py", line 1247, in forward
+    return self._forward(input)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/vmamba.py", line 1235, in _forward
+    x = x + self.drop_path(self.op(self.norm(x)))
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/vmamba.py", line 666, in forwardv2
+    y = self.forward_core(x)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/vmamba.py", line 610, in forward_corev2
+    xs = cross_scan_fn(x, in_channel_first=True, out_channel_first=True, scans=_scan_mode, force_torch=scan_force_torch)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py", line 525, in cross_scan_fn
+    return CSF.apply(x, in_channel_first, out_channel_first, one_by_one, scans)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py", line 220, in forward
+    y = _fn(x, in_channel_first, out_channel_first, scans)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py", line 43, in cross_scan_fwd
+    y = x.new_empty((B, 4, C, H * W))
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 384.00 MiB (GPU 1; 47.54 GiB total capacity; 46.27 GiB already allocated; 244.19 MiB free; 46.45 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

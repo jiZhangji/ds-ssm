@@ -1,0 +1,21 @@
+[
+  "mmdet/models/dense_heads/embedding_rpn_head.py",
+  "mmdet/models/dense_heads/pisa_ssd_head.py",
+  "mmdet/models/dense_heads/corner_head.py",
+  "mmdet/models/dense_heads/base_dense_head.py",
+  "mmdet/models/dense_heads/retina_sepbn_head.py",
+  "mmdet/models/dense_heads/mask2former_head.py",
+  "mmdet/models/dense_heads/maskformer_head.py",
+  "mmdet/models/dense_heads/ddod_head.py",
+  "mmdet/models/dense_heads/dense_test_mixins.py",
+  "mmdet/models/dense_heads/sabl_retina_head.py",
+  "mmdet/models/dense_heads/solo_head.py",
+  "mmdet/models/dense_heads/base_mask_head.py",
+  "mmdet/models/dense_heads/autoassign_head.py",
+  "mmdet/models/dense_heads/centripetal_head.py",
+  "mmdet/models/dense_heads/pisa_retinanet_head.py",
+  "mmdet/models/dense_heads/nasfcos_head.py",
+  "mmdet/models/dense_heads/fsaf_head.py",
+  "mmdet/models/dense_heads/atss_head.py",
+  "mmdet/models/dense_heads/paa_head.py"
+]

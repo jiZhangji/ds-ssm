@@ -1,0 +1,59 @@
+{
+  "attempt_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/a/attempt_2026-10-09T033014.593114_0000_324976ee",
+  "child": {
+    "argv": [
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "-B",
+      "-u",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py",
+      "--plan",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+      "--lane",
+      "a_seed0"
+    ],
+    "pid": 122932,
+    "ppid": 122931,
+    "returncode": 1,
+    "session": 122931,
+    "start_ticks": 7354419,
+    "state": "R"
+  },
+  "child_log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/a/attempt_2026-10-09T033014.593114_0000_324976ee/seed0.log",
+  "completed_seeds": [],
+  "dependency_evidence": {
+    "verified": []
+  },
+  "error": "RuntimeError('Seed0 lane failed with exit=1; no retry/kill/further phase: /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/a/attempt_2026-10-09T033014.593114_0000_324976ee/seed0.log')",
+  "failed_utc": "2026-10-09T05:11:25.415787+00:00",
+  "failure_policy": "Stop, preserve evidence, no automatic retry or process signal",
+  "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "host_key": "a",
+  "hostname": "powerleader-PT6620W",
+  "owner": {
+    "argv": [
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "-B",
+      "-u",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py",
+      "--plan",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+      "--host-key",
+      "a",
+      "--inherited-lock-fd",
+      "3",
+      "--attempt-dir",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/a/attempt_2026-10-09T033014.593114_0000_324976ee"
+    ],
+    "pid": 122931,
+    "ppid": 122928,
+    "session": 122931,
+    "start_ticks": 7354407,
+    "state": "R"
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-campaign-dispatch-v1",
+  "seed": 0,
+  "started_utc": "2026-10-09T03:30:14.648242+00:00",
+  "state": "failed",
+  "updated_utc": "2026-10-09T05:11:25.415807+00:00"
+}

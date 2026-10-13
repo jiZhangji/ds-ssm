@@ -1,0 +1,14 @@
+Experiment: seed0
+Runs:       1
+Weights:    none
+Module warmup: 0 epochs
+Placement:  P3 for Full; original Mamba-YOLO for Baseline
+Eval split: test
+START: SSDD / baseline; epochs=0
+
+$ /home/powerleader/ig-ds-ssm/work_train_single/../envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/mbyolo_train_sarair.py --task train --data /home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0-manifest/datasets/SSDD.yaml --config /home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0-manifest/configs/ssdd_baseline.yaml --weights none --imgsz 640 --batch_size 16 --device 0 --epochs 150 --workers 8 --optimizer AdamW --lr0 0.0002 --lrf 0.01 --weight_decay 0.0005 --nbs 64 --warmup_epochs 3.0 --warmup_bias_lr 0.1 --module_warmup_epochs 0 --patience 30 --mosaic 0.3 --close_mosaic 15 --degrees 180.0 --translate 0.1 --scale 0.3 --flipud 0.5 --fliplr 0.5 --hsv_h 0.0 --hsv_s 0.0 --hsv_v 0.1 --seed 0 --deterministic --project /home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1 --name seed0_ssdd_baseline
+
+$ /home/powerleader/ig-ds-ssm/work_train_single/../envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/tools/evaluate_sarmix.py --weights /home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0_ssdd_baseline/weights/best.pt --data /home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0-manifest/datasets/SSDD.yaml --experiment seed0_ssdd_baseline --placement baseline --variant baseline --state-dim 0 --seed 0 --subset SSDD --split test --output-json /home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0_ssdd_baseline/eval_test.json --imgsz 640 --batch 16 --device 0 --workers 8 --project /home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/evaluations --name seed0_ssdd_baseline_test
+Summary: /home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0_summary.md
+Summary: /home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0_summary.md
+Queue finished: seed0

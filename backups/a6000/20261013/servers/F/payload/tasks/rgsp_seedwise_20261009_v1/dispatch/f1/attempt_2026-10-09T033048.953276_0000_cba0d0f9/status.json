@@ -1,0 +1,89 @@
+{
+  "attempt_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f1/attempt_2026-10-09T033048.953276_0000_cba0d0f9",
+  "child": {
+    "argv": [
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "-B",
+      "-u",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py",
+      "--plan",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+      "--lane",
+      "f1_seed0"
+    ],
+    "pid": 127349,
+    "ppid": 127348,
+    "returncode": 0,
+    "session": 127348,
+    "start_ticks": 7376757,
+    "state": "R"
+  },
+  "child_log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f1/attempt_2026-10-09T033048.953276_0000_cba0d0f9/seed0.log",
+  "completed_seeds": [
+    0
+  ],
+  "dependency_evidence": {
+    "verified": [
+      {
+        "finalizer": {
+          "argv": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_legacy_pidfd_r3.py",
+            "finalize",
+            "--spec",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_spec_f_20261009_r2.json",
+            "--lane",
+            "f1",
+            "--confirm-evaluate-and-retire",
+            "--wait-seconds",
+            "172800"
+          ],
+          "pid": 126683,
+          "start_ticks": 7189175
+        },
+        "finalizer_exited": true,
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f1.r3.finalizer_launch.json",
+        "sha256": "66793213bf59cf90787bf54bed63eeccaeb0544fa4ab5a87eb0c2806032f8309"
+      },
+      {
+        "equals": {
+          "status": "adopted_and_scheduler_retired"
+        },
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f1.complete.json",
+        "sha256": "56534c915694a15a8beba6d04d89ec5423c7f2a0709b2bfbb04bb511f66fe4f0"
+      }
+    ]
+  },
+  "gpu_uuid": "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40",
+  "host_key": "f1",
+  "hostname": "powerleader-a6000-f",
+  "owner": {
+    "argv": [
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "-B",
+      "-u",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py",
+      "--plan",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+      "--host-key",
+      "f1",
+      "--inherited-lock-fd",
+      "3",
+      "--attempt-dir",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f1/attempt_2026-10-09T033048.953276_0000_cba0d0f9"
+    ],
+    "pid": 127348,
+    "ppid": 127340,
+    "session": 127348,
+    "start_ticks": 7376745,
+    "state": "R"
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-campaign-dispatch-v1",
+  "seed": 0,
+  "started_utc": "2026-10-09T03:30:49.008153+00:00",
+  "state": "waiting_global_seed0",
+  "updated_utc": "2026-10-13T04:13:25.432855+00:00"
+}

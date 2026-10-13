@@ -1,0 +1,110 @@
+\documentclass[UTF8,fontset=fandol,10pt]{ctexart}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,tabularx,array,multirow,graphicx,cite,xurl,placeins}
+\usepackage{longtable,xltabular,needspace}
+\setmainfont{TeX Gyre Termes}
+\emergencystretch=2em
+\pagestyle{plain}
+\linespread{1.15}
+\renewcommand{\thetable}{S\arabic{table}}
+\title{RGSP 补充材料\\协议、逐种子结果与历史记录}
+\author{}
+\date{2026 年 10 月 9 日修订}
+\begin{document}
+\maketitle
+\section{阅读范围与证据等级}
+本材料与正文分工：正文呈现计算机制与可解释的配置比较，本材料保存逐 run 结果、控制定义和历史记录。历史表格的原始数值未因结果不利而删除，也没有升级为同协议排行榜。源自不同论文的外部数值属于旧稿收集记录，完整逐行主文献数值核验尚未完成；具体来源、已核对的书目信息和缺口见随包 \texttt{SOURCE\_REGISTRY.md}。仅补上文献名称或 DOI，不表示已复现该方法或核验了其全部数值。
+
+本版依据本地最新双栏正文包及 10 月 8 日两份图件修订；原 26 页单栏 PDF 与当前可编辑正文范围不完全相同，本材料不声称恢复该旧 PDF 的全部附录。原始 ZIP、旧稿及实验记录在原位置保留，新包的历史源副本另存于 \texttt{archive/20261008}，不作为当前结论使用。
+
+\section{控制实验协议}
+SSDD 历史 15-run 为 742/186/232 轨道，存在关闭参数漂移及内容重叠限制；新的 730/186/232 轨道保留官方 test，按内容组划分开发集，采用运行时关闭条件与初始化核验。字节去重不能替代近重复、场景关联和标签一致性审计。新轨道完整结果在本次回收范围内尚未验收，不以部分 run 或旧成绩填充。
+
+\begin{table}[!htbp]
+\centering\small
+\caption{新 SSDD 的 12 配置定义。R 为残差修正，E 为趋势能量调制；U、$\Delta$ 为结构引导作用路径。}
+\begin{tabularx}{\linewidth}{@{}lccccX@{}}
+\toprule
+配置 & R&E&$I\to U$&$I\to\Delta$&说明\\
+\midrule
+Original & --&--&--&--&原始四向 SS2D 系统参考\\
+MatchedIdentity&0&0&0&0&相同替换结构，输入倍率 1\\
+Matched075&0&0&0&0&相同替换结构，输入倍率 0.75\\
+Residual075&1&0&0&0&保持常数缩放背景，只开残差修正\\
+EnergyOnly&0&1&0&0&只开启趋势能量调制\\
+LocalEnergy&1&1&0&0&残差与能量组合\\
+LocalEnergy+Input&1&1&1&0&仅增加输入结构引导\\
+LocalEnergy+Delta&1&1&0&1&仅增加步长结构引导\\
+Full&1&1&1&1&完整两条结构引导路径\\
+FixedHalf&1&1&常数&常数&$I=0.5$，保留 0.05 步长 logits 偏置\\
+GuidanceOnly&0&0&1&1&严格关闭 R/E 的引导控制\\
+Global&1&1&均值&均值&可训练引导空间均值后广播\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\FloatBarrier
+
+关闭参数通过不参与优化的 buffer 固定，保持统一模块构造顺序和共同张量初始化；不是简单设置 \texttt{requires\_grad=False}。关闭分支保留的 buffer 不计为可训练参数，故不声称所有变体具有完全相同的可训练参数数量。残差/能量四格及输入/步长四格均按种子计算差分中的差分，不能用 Full 减某单一变体替代严格交互。
+
+当前检测 Full 的计算路径对应 PFIM、DeSpeckleSSM 和 DS\_VSSBlock：PFIM 对应 LSGM；DeSpeckleSSM 是含 LRC、输入/步长调制及输出融合的整个状态建模核心，而非 LRC 的同义词；DS\_VSSBlock 包含核心之外的归一化、残差和 FFN。论文符号 $a_1,a_2$ 对应块级通道缩放，不能与扫描输入因子 $\gamma$ 混淆。正文图 2(c) 展示的是核心，不是整个替换块。
+
+SSDD 使用 150e/patience30；SADD 使用 200e/patience40；其余增强、AdamW、线性学习率、FP32 与选模定义见正文。验证采用 $0.1\mathrm{AP}_{50}+0.9\mathrm{AP}_{50:95}$ 选模；训练验证 NMS IoU=0.7，最终独立测试 conf=0.001、NMS IoU=0.6。这两阶段的后处理设置不完全相同。
+
+\section{SADD：全部种子与恢复边界}
+固定阳性子集 795/44/44，四配置各三个训练种子。下表由回收 JSON 中的比例值乘以 100 生成，主文采用均值及样本标准差。完整比例值、Precision/Recall 和权重 SHA256 见 \texttt{sadd\_results\_individual.csv}，源 JSON 随包保留。
+\begin{table}[!htbp]
+\centering\small
+\caption{SADD 新轨道的 12 项结果（\%），不与后文历史 SADD 表混算。}
+\begin{tabular}{lrrrr}
+\toprule
+Configuration & Seed & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$\\
+\midrule
+Original & 0 & 98.3691 & 53.5163 & 53.7117 \\
+Matched075 & 0 & 97.5739 & 49.5962 & 52.0914 \\
+LocalEnergy & 0 & 97.5941 & 48.1029 & 51.9479 \\
+Full & 0 & 97.0944 & 43.5558 & 49.0030 \\
+Original & 1 & 96.8641 & 56.8648 & 53.9804 \\
+Matched075 & 1 & 98.5252 & 51.6064 & 53.0962 \\
+LocalEnergy & 1 & 96.6499 & 47.3977 & 52.3537 \\
+Full & 1 & 98.0804 & 49.2254 & 53.1989 \\
+Original & 2 & 96.7214 & 48.0764 & 52.3480 \\
+Matched075 & 2 & 96.0201 & 50.8144 & 51.3444 \\
+LocalEnergy & 2 & 98.4768 & 50.7618 & 52.8014 \\
+Full & 2 & 98.0135 & 54.5365 & 53.7361 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+Full 相对 Original 的配对差为 $-4.7087/-0.7816/+1.3881$ 个百分点。仅一个种子为正，平均 $-1.3674$，不能宣称稳定改善。Original 经 EMA/FP16 优化器断点恢复，非逐位无中断等价；seed0/1 恢复前部分控制审计记录缺失。阳性筛选排除了空场景，测试集仅 44 张，且没有完成场景独立性证明。完成训练及测试不消除这些限制。
+
+\section{SSDD：历史标签纠正与全部记录}
+旧表的 DS-only 在本稿称 LocalEnergy，包含残差修正和趋势能量调制；PFIM-only 改称 Legacy-PFIM，因为三个旧检查点中的 $\lambda_s$、$\alpha$ 非零，不满足关闭条件。原 15-run 全指标和权重摘要保存在 \path{results_individual.csv}，数值未改动。所有种子一视同仁地保留，不使用“outlier”排除 seed2。Full 减 LocalEnergy 只是边际差，不命名为严格交互。
+
+\begin{table}[!htbp]
+\centering\small
+\caption{历史 SSDD 相对 Original 的 AP$_{50:95}$ 配对差（百分点）。Legacy-PFIM 不是严格仅引导控制。}
+\begin{tabular}{lrrrr}
+\toprule
+配置 & Seed 0 & Seed 1 & Seed 2 & Mean$\pm$Std\\
+\midrule
+LocalEnergy & +2.90 & +5.26 & -2.30 & $+1.95\pm3.87$\\
+Legacy-PFIM & +2.13 & +3.16 & -2.00 & $+1.09\pm2.73$\\
+Full & -0.35 & +5.93 & -2.94 & $+0.88\pm4.57$\\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\section{保留的历史跨任务与文献结果}
+以下表格继承最新双栏稿的数值和批次标签。历史 SADD、SSDD 高分轨道及跨任务结果均不冒充本版新控制实验；文献与项目结果仅按来源分区，不进行统一排名。未完成逐行来源核验的外部行只作为待核验记录保留，不能直接移回投稿主表。
+\input{supplementary/legacy_tables}
+\FloatBarrier
+\section{后续验收项}
+完成新 SSDD 36-run 的逐项训练/测试与关闭条件核验，补齐公平第二/第三数据集和外部轻量基线，统一效率协议，并检查真实预测和引导信号。未知结果保持未知，不根据中间结果修改控制定义。需要继续核验的文献行与跨任务配置详见来源登记，不把本文编辑等同于实验实施。
+\begin{thebibliography}{99}
+\interlinepenalty=10000
+\bibitem{sarcdnet2026}
+V. D. Kevala, V. Mukundan, S. Nedungatt, S. Suresh, and S. Lal, SARCDNet-an enhanced deep learning network for change detection from bi-temporal SAR images, \emph{Scientific Reports}, vol. 16, art. 1826, 2026 (online Dec. 31, 2025). doi:10.1038/s41598-025-31488-y.
+\end{thebibliography}
+
+\end{document}

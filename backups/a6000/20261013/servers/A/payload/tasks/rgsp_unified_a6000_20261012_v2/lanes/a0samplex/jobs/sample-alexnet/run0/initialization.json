@@ -1,0 +1,34 @@
+{
+  "control": {
+    "auxiliary_heads": null,
+    "builder": "torchvision.models.alexnet",
+    "initialization": "scratch",
+    "input_channels": 3,
+    "input_size": 224,
+    "literature_result_reproduction_claimed": false,
+    "method_id": "alexnet",
+    "num_classes": 10,
+    "output": "single_logits_tensor",
+    "pretrained_weights": null,
+    "torchvision_version": "0.14.1+cu117"
+  },
+  "state_sha256": "8bac051ba8e7515936094dcaaa67e29a5aea19ee096ea74f4900f968b7ae6ffb",
+  "tensors": {
+    "classifier.1.bias": "0b773487111b3701bc087f02122637a9c7d9b042261db5a9f0d3c8cc99d52024",
+    "classifier.1.weight": "4a96d482eb6e135bc920d3d0f83559707c1a0ca7ed1460c1c721c7e31f11c208",
+    "classifier.4.bias": "cdef81b7c37d321eb1a3785db1f63f1453d277e50dca5da18c9baf3300abd8d3",
+    "classifier.4.weight": "cbaa62632afe938132131c08e2d17cd22a1e0187c4a1df1ab0f0deeb1dfc6411",
+    "classifier.6.bias": "df3db016bea932c1437c687609ce5e38bd20f4240e2ce82c8fa37c1fcaa1ef37",
+    "classifier.6.weight": "e4a14f49e3bd36f2807cc0b486a625230994fc6b1db7a1f8809cbc6fd261a7d2",
+    "features.0.bias": "eaf995ec4376792cb6b5d790c5a32de3e227b62140a09c473078970b46f08aa7",
+    "features.0.weight": "2ea290b1745b98aae8adfaf6275844e5088cb0bc245805a38e42f3c4f0ead6c4",
+    "features.10.bias": "2616df54d178988c6a721c21bddea9b7085ba47ac9a2f849f44612deddf3a746",
+    "features.10.weight": "fb8ef9df89b1426ac9952b8f85f6ea3ae960c76f87df7671f0bb35c690807522",
+    "features.3.bias": "bbc98b3ed37764b16257d75f97b04bfd41d07b88186dbaea947ff670fcd6fee0",
+    "features.3.weight": "ae2bfae10b7e9cbe42075a4b5b7b81229562ab63b04c37cf9ed7515ff4bef7e4",
+    "features.6.bias": "52d2dbfb1e687df2fb3e26a0a6f109cbc79726b5d9049cdcc7e3ab53a1370d07",
+    "features.6.weight": "350e4fa75a53eaaa60f6a0479b1728a9ec2d27d1015b3f53bc0d7af707814965",
+    "features.8.bias": "5b0860f703f33a016860ea128478a8b4bcbb70197e9688d7d09ab572537ea673",
+    "features.8.weight": "23a6f3c23f5909dac39fec11aa080424677ce38846e988df4673a2f7babf2f9c"
+  }
+}

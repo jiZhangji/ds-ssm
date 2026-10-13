@@ -1,0 +1,66 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+{"epoch": 1, "updates": 2, "loss": 1.9155015468597412, "val_score": 0.3760352422907489, "best_epoch": 1}
+{"epoch": 2, "updates": 4, "loss": 1.8320845413208007, "val_score": 0.3760352422907489, "best_epoch": 1}
+{"epoch": 3, "updates": 6, "loss": 1.7417505168914795, "val_score": 0.8742052679382379, "best_epoch": 3}
+{"epoch": 4, "updates": 8, "loss": 1.4925079774856567, "val_score": 0.8634301270417423, "best_epoch": 3}
+{"epoch": 5, "updates": 10, "loss": 1.376087007522583, "val_score": 0.7299557304476145, "best_epoch": 3}
+{"epoch": 6, "updates": 12, "loss": 1.3489868354797363, "val_score": 0.7634873662645116, "best_epoch": 3}
+{"epoch": 7, "updates": 14, "loss": 1.277810001373291, "val_score": 0.8248929201310152, "best_epoch": 3}
+{"epoch": 8, "updates": 16, "loss": 1.178630118370056, "val_score": 0.8626320845341018, "best_epoch": 3}
+{"epoch": 9, "updates": 18, "loss": 1.3641728496551513, "val_score": 0.8867552929591335, "best_epoch": 9}
+{"epoch": 10, "updates": 20, "loss": 1.1120187759399414, "val_score": 0.8979690522243714, "best_epoch": 10}
+{"epoch": 11, "updates": 22, "loss": 1.043864517211914, "val_score": 0.9036820287734699, "best_epoch": 11}
+{"epoch": 12, "updates": 24, "loss": 1.0662412929534912, "val_score": 0.9045273281726484, "best_epoch": 12}
+{"epoch": 13, "updates": 26, "loss": 1.040736017227173, "val_score": 0.9139633286318759, "best_epoch": 13}
+{"epoch": 14, "updates": 28, "loss": 1.1457963371276856, "val_score": 0.912626020163226, "best_epoch": 13}
+{"epoch": 15, "updates": 30, "loss": 1.0417164373397827, "val_score": 0.9202165215344787, "best_epoch": 15}
+{"epoch": 16, "updates": 32, "loss": 0.902921380996704, "val_score": 0.9196768060836501, "best_epoch": 15}
+{"epoch": 17, "updates": 34, "loss": 0.9294156527519226, "val_score": 0.92590844738084, "best_epoch": 17}
+{"epoch": 18, "updates": 36, "loss": 0.9358205604553222, "val_score": 0.932992089343881, "best_epoch": 18}
+{"epoch": 19, "updates": 38, "loss": 0.9871591830253601, "val_score": 0.9341678256838201, "best_epoch": 19}
+{"epoch": 20, "updates": 40, "loss": 0.908040714263916, "val_score": 0.9368099600657741, "best_epoch": 20}
+{"epoch": 21, "updates": 42, "loss": 0.9262745094299316, "val_score": 0.9369620842056293, "best_epoch": 21}
+{"epoch": 22, "updates": 44, "loss": 0.8945078611373901, "val_score": 0.9373831775700935, "best_epoch": 22}
+{"epoch": 23, "updates": 46, "loss": 0.8515602993965149, "val_score": 0.9343504392048081, "best_epoch": 22}
+{"epoch": 24, "updates": 48, "loss": 0.9020565629005433, "val_score": 0.9304635761589404, "best_epoch": 22}
+{"epoch": 25, "updates": 50, "loss": 0.9434883856773376, "val_score": 0.9303647560397916, "best_epoch": 22}
+{"epoch": 26, "updates": 52, "loss": 0.8583951807022094, "val_score": 0.9232236528373868, "best_epoch": 22}
+{"epoch": 27, "updates": 54, "loss": 0.8864887428283691, "val_score": 0.9325035902345621, "best_epoch": 22}
+{"epoch": 28, "updates": 56, "loss": 0.9124904489517212, "val_score": 0.93446088794926, "best_epoch": 22}
+{"epoch": 29, "updates": 58, "loss": 0.8114938664436341, "val_score": 0.9382311651848386, "best_epoch": 29}
+{"epoch": 30, "updates": 60, "loss": 0.8434068775177002, "val_score": 0.9407632872863497, "best_epoch": 30}
+{"epoch": 31, "updates": 62, "loss": 0.817980260848999, "val_score": 0.9392655367231638, "best_epoch": 30}
+{"epoch": 32, "updates": 64, "loss": 0.8049663090705872, "val_score": 0.930929524701475, "best_epoch": 30}
+{"epoch": 33, "updates": 66, "loss": 0.8672552680969239, "val_score": 0.9327872801734522, "best_epoch": 30}
+{"epoch": 34, "updates": 68, "loss": 0.8302861452102661, "val_score": 0.9369837148926127, "best_epoch": 30}
+{"epoch": 35, "updates": 70, "loss": 0.946356201171875, "val_score": 0.9322953526775183, "best_epoch": 30}
+{"epoch": 36, "updates": 72, "loss": 0.8874101829528809, "val_score": 0.9311760444337117, "best_epoch": 30}
+{"epoch": 37, "updates": 74, "loss": 0.8535099577903748, "val_score": 0.913235294117647, "best_epoch": 30}
+{"epoch": 38, "updates": 76, "loss": 0.831104440689087, "val_score": 0.9237864077669903, "best_epoch": 30}
+{"epoch": 39, "updates": 78, "loss": 0.8088018131256104, "val_score": 0.9230412610106629, "best_epoch": 30}
+{"epoch": 40, "updates": 80, "loss": 0.7791803407669068, "val_score": 0.9184216896635198, "best_epoch": 30}
+{"epoch": 41, "updates": 82, "loss": 0.9638982939720154, "val_score": 0.9209704539995196, "best_epoch": 30}
+{"epoch": 42, "updates": 84, "loss": 0.8318176651000977, "val_score": 0.9349904397705545, "best_epoch": 30}
+{"epoch": 43, "updates": 86, "loss": 0.7714789891242981, "val_score": 0.9312514565369377, "best_epoch": 30}
+{"epoch": 44, "updates": 88, "loss": 0.8571260738372802, "val_score": 0.9338919925512106, "best_epoch": 30}
+{"epoch": 45, "updates": 90, "loss": 0.7648940086364746, "val_score": 0.9314875645236977, "best_epoch": 30}
+{"epoch": 46, "updates": 92, "loss": 0.7421451234817504, "val_score": 0.9303960628075931, "best_epoch": 30}
+{"epoch": 47, "updates": 94, "loss": 0.745707426071167, "val_score": 0.9342997428103811, "best_epoch": 30}
+{"epoch": 48, "updates": 96, "loss": 0.7251109194755554, "val_score": 0.9321180139122092, "best_epoch": 30}
+{"epoch": 49, "updates": 98, "loss": 0.7710961771011352, "val_score": 0.9370335820895523, "best_epoch": 30}
+{"epoch": 50, "updates": 100, "loss": 0.9108146762847901, "val_score": 0.9323128438172686, "best_epoch": 30}
+{"epoch": 51, "updates": 102, "loss": 0.7082264661788941, "val_score": 0.9356890459363957, "best_epoch": 30}
+{"epoch": 52, "updates": 104, "loss": 0.726417465209961, "val_score": 0.9325210871602624, "best_epoch": 30}
+{"epoch": 53, "updates": 106, "loss": 0.6982891988754273, "val_score": 0.932159009759581, "best_epoch": 30}
+{"epoch": 54, "updates": 108, "loss": 0.7345907163619995, "val_score": 0.9303977272727273, "best_epoch": 30}
+{"epoch": 55, "updates": 110, "loss": 0.7579695796966552, "val_score": 0.9315448658649399, "best_epoch": 30}
+{"epoch": 56, "updates": 112, "loss": 0.6891820049285888, "val_score": 0.9284351145038169, "best_epoch": 30}
+{"epoch": 57, "updates": 114, "loss": 0.8150670075416565, "val_score": 0.9335540316859778, "best_epoch": 30}
+{"epoch": 58, "updates": 116, "loss": 0.8790064573287963, "val_score": 0.9325554259043174, "best_epoch": 30}
+{"epoch": 59, "updates": 118, "loss": 0.7332882022857666, "val_score": 0.9249521988527724, "best_epoch": 30}
+{"epoch": 60, "updates": 120, "loss": 0.7247543334960938, "val_score": 0.9235048678720446, "best_epoch": 30}
+{"status": "TRAINING_COMPLETE", "result": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-full/run2/result.json"}

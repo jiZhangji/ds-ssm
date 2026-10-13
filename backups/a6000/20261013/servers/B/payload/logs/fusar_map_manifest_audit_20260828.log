@@ -1,0 +1,224 @@
+{
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/segmentation/FUSAR_Map/manifest.json",
+  "protocol": "city-disjoint",
+  "declared_classes": 5,
+  "class_names": [
+    "background",
+    "building",
+    "vegetation",
+    "water",
+    "road"
+  ],
+  "palette": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      255,
+      0,
+      0
+    ],
+    [
+      0,
+      255,
+      0
+    ],
+    [
+      0,
+      0,
+      255
+    ],
+    [
+      255,
+      255,
+      0
+    ]
+  ],
+  "records_total": 610,
+  "records_audited": 610,
+  "split_counts": {
+    "test": 77,
+    "train": 408,
+    "val": 125
+  },
+  "city_counts_by_split": {
+    "test": {
+      "unknown": 77
+    },
+    "train": {
+      "unknown": 408
+    },
+    "val": {
+      "unknown": 125
+    }
+  },
+  "mask_shapes": {
+    "1024x1024": 610
+  },
+  "duplicate_pairs": 0,
+  "known_pixels": 639583671,
+  "unknown_pixels": 47689,
+  "unknown_fraction": 7.455700733622566e-05,
+  "unknown_color_examples": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      4,
+      0
+    ],
+    [
+      0,
+      5,
+      0
+    ],
+    [
+      0,
+      6,
+      0
+    ],
+    [
+      0,
+      7,
+      0
+    ],
+    [
+      0,
+      8,
+      0
+    ],
+    [
+      0,
+      9,
+      0
+    ],
+    [
+      0,
+      10,
+      0
+    ],
+    [
+      0,
+      11,
+      0
+    ],
+    [
+      0,
+      12,
+      0
+    ],
+    [
+      0,
+      13,
+      0
+    ],
+    [
+      0,
+      14,
+      0
+    ],
+    [
+      0,
+      15,
+      0
+    ],
+    [
+      0,
+      16,
+      0
+    ],
+    [
+      0,
+      17,
+      0
+    ],
+    [
+      0,
+      18,
+      0
+    ],
+    [
+      0,
+      19,
+      0
+    ],
+    [
+      0,
+      20,
+      0
+    ]
+  ],
+  "class_pixel_distribution": [
+    {
+      "index": 0,
+      "name": "background",
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "pixels": 296726049,
+      "fraction_of_known": 0.46393624861632843
+    },
+    {
+      "index": 1,
+      "name": "building",
+      "rgb": [
+        255,
+        0,
+        0
+      ],
+      "pixels": 76485017,
+      "fraction_of_known": 0.11958563119726676
+    },
+    {
+      "index": 2,
+      "name": "vegetation",
+      "rgb": [
+        0,
+        255,
+        0
+      ],
+      "pixels": 114607244,
+      "fraction_of_known": 0.17919038461505687
+    },
+    {
+      "index": 3,
+      "name": "water",
+      "rgb": [
+        0,
+        0,
+        255
+      ],
+      "pixels": 115542383,
+      "fraction_of_known": 0.18065249042294576
+    },
+    {
+      "index": 4,
+      "name": "road",
+      "rgb": [
+        255,
+        255,
+        0
+      ],
+      "pixels": 36222978,
+      "fraction_of_known": 0.05663524514840217
+    }
+  ],
+  "metric_warning": "The current trainer reports both all-class mIoU and foreground-only mIoU. Published values are comparable only after confirming whether background is included."
+}

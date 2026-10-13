@@ -1,0 +1,9 @@
+{
+  "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/ssdd_cnn_yolov8n_seed0/data",
+  "train": "images/train",
+  "val": "images/val",
+  "test": "images/val",
+  "names": {
+    "0": "ship"
+  }
+}

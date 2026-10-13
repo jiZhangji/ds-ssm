@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/worker.py",
+    "--root",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1",
+    "--plan",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/plans/b0acd.production.json",
+    "--lane",
+    "b0acd"
+  ],
+  "lane": "b0acd",
+  "pid": 390514,
+  "plan_sha256": "8dd3747e64c0c8b5c0090c7ef78469567fde79cc636f9eaab0fe3f307a31a06e",
+  "start_ticks": "41598445"
+}

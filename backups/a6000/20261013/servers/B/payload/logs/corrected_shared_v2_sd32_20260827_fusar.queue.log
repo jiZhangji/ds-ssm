@@ -1,0 +1,24 @@
+FUSAR-Map {"split": {"test": 77, "train": 408, "val": 125}, "test_city": "JiuJiang", "val_city": "WenZhou"}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+FUSAR-Map baseline epoch=1/160 loss=2.18935 score=0.16240
+FUSAR-Map baseline epoch=2/160 loss=2.05206 score=0.15623
+FUSAR-Map baseline epoch=3/160 loss=1.96618 score=0.18389
+FUSAR-Map baseline epoch=4/160 loss=1.95835 score=0.18205
+FUSAR-Map baseline epoch=5/160 loss=1.96681 score=0.15742
+FUSAR-Map baseline epoch=6/160 loss=1.98231 score=0.16141
+FUSAR-Map baseline epoch=7/160 loss=1.91093 score=0.16580
+FUSAR-Map baseline epoch=8/160 loss=1.89091 score=0.11050
+FUSAR-Map baseline epoch=9/160 loss=1.88769 score=0.11306
+FUSAR-Map baseline epoch=10/160 loss=1.85242 score=0.14707
+FUSAR-Map baseline epoch=11/160 loss=1.82787 score=0.15479
+FUSAR-Map baseline epoch=12/160 loss=1.87828 score=0.12377
+FUSAR-Map baseline epoch=13/160 loss=1.84456 score=0.12042
+FUSAR-Map baseline epoch=14/160 loss=1.83740 score=0.16786
+FUSAR-Map baseline epoch=15/160 loss=1.79038 score=0.16649
+FUSAR-Map baseline epoch=16/160 loss=1.80207 score=0.18314
+FUSAR-Map baseline epoch=17/160 loss=1.82515 score=0.16286
+FUSAR-Map baseline epoch=18/160 loss=1.80781 score=0.15900
+FUSAR-Map baseline epoch=19/160 loss=1.78446 score=0.18368
+FUSAR-Map baseline epoch=20/160 loss=1.80599 score=0.16733

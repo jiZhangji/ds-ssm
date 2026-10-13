@@ -1,0 +1,55 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/provenance.json",
+      "sha256": "6d0641512cd098343e64d8b2c492e8d16a7f54cd106783155b1f4c40ef980377"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/train_complete.json",
+      "sha256": "98a001f886a3d9bea536cc0153da43000d3fdd9d1b498ac6faa546652ccef133"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/eval_test.json",
+      "sha256": "27d06cedb81504e9f51105fb9eecce3151b894fee3ad4c1479223d7830f3f3f6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/evaluation_complete.json",
+      "sha256": "42eace2354d4b358fb78af214bcd5e2b530df553c394e79d7a1e1e865c291b83"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/weights/best.pt",
+      "sha256": "91bce3790608d17e72a879bfa2bdc162fb8d2bc18b13d54c26dc99e4aa41499e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/weights/raw_fp32_last.pt",
+      "sha256": "ab29ad567a7317d2292444347c2726142f0a8d8952f36d50b35076bc4144a460"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/controls_by_epoch.jsonl",
+      "sha256": "10f48bc6366e4375c7a3a0fa464ed8e1e88d88ce7a2da96978f62dca1c01448a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/trial_complete.json",
+      "sha256": "c5656573b8d43675b8763867a168a88d42ebfcde8bd4ab7c1fa040a974de7ee3"
+    }
+  ],
+  "details": {
+    "kind": "detection",
+    "overall": {
+      "ap50": 0.8682456834425558,
+      "ap50_95": 0.4234263621863392,
+      "ap75": 0.37401186976291406,
+      "precision": 0.8745218929863373,
+      "recall": 0.804175391313684
+    },
+    "resumed": false,
+    "smoke_only": false
+  },
+  "finished_utc": "2026-10-10T05:35:25.097748+00:00",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "ssdd_full_stats5_seed0",
+  "trial_sha256": "6d630b74109290d21f923d3142983a1103d214f68facce4b13ef2be3cbefffc2"
+}

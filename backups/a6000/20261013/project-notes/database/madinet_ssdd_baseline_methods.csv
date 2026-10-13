@@ -1,0 +1,21 @@
+﻿method,open_source,family,R_percent,P_percent,AP50_percent,F1_percent,repo_or_implementation,reproduction_track,priority,note
+SAR-ShipNet,no,SAR anchor-free,76.3,95.1,89.1,85.0,paper only,quote only,low,MaDiNet table marks non-open-source.
+DCTC,no,SAR anchor-free,,,93.9,,paper only,quote only,low,MaDiNet table marks non-open-source.
+GEFCSI-Net,no,SAR-specific,96.9,93.1,97.1,95.0,paper only,quote only,medium,Strong non-open SAR baseline.
+SARNas,no,SAR-specific NAS,94.8,97.4,98.5,96.1,paper only,quote only,medium,Strong non-open SAR baseline.
+MGA-Net,no,SAR-specific,99.0,94.7,98.6,96.8,paper only,quote only,medium,Strong non-open SAR baseline.
+Faster R-CNN,yes,two-stage,90.4,87.1,89.7,88.7,MMDetection / Detectron2,mmdetection,medium,Classic two-stage detector; useful but far below modern YOLO on SSDD.
+Cascade R-CNN,yes,two-stage,90.8,84.1,90.5,92.4,MMDetection / Detectron2,mmdetection,medium,Classic cascade two-stage detector.
+RetinaNet,yes,one-stage anchor-based,93.1,94.0,95.0,93.6,MMDetection / Detectron2,mmdetection,medium,Strong anchor-based baseline.
+CenterNet,yes,anchor-free,93.6,94.3,95.1,93.9,MMDetection,mmdetection,medium,Anchor-free baseline.
+FCOS,yes,anchor-free,93.9,94.6,95.3,94.2,MMDetection,mmdetection,medium,Anchor-free baseline.
+ConsistencyDet,yes,generative/consistency,94.0,94.5,95.6,94.2,https://github.com/Tankowa/ConsistencyDet,official repo,medium,Open-source but requires separate Detectron2-like environment.
+YOLOv3,yes,YOLO,94.8,95.5,96.2,95.2,Ultralytics / MMYOLO,yolo,high,"Easy to reproduce, useful classic YOLO baseline."
+YOLOX,yes,YOLO,93.8,95.0,96.2,94.4,https://github.com/Megvii-BaseDetection/YOLOX,official repo or MMYOLO,high,Good modern one-stage baseline.
+DiffusionDet,yes,generative/diffusion,93.9,95.1,96.3,94.5,https://github.com/ShoufaChen/DiffusionDet,official repo,medium,Needs Detectron2-style environment.
+YOLOv5n,yes,YOLO lightweight,95.8,97.0,98.0,96.4,https://github.com/ultralytics/yolov5,yolo,high,Important lightweight baseline.
+YOLOv8n,yes,YOLO lightweight,96.4,97.3,98.1,96.9,https://github.com/ultralytics/ultralytics,yolo,high,Important lightweight baseline; closest to our code ecosystem.
+YOLOv5s,yes,YOLO lightweight,96.4,97.2,98.3,97.0,https://github.com/ultralytics/yolov5,yolo,high,Strong lightweight YOLO baseline.
+DiffDet4SAR,yes,SAR diffusion,95.2,95.3,96.9,95.2,https://github.com/JoyeZLearning/DiffDet4SAR,official repo,medium,Open-source SAR diffusion baseline from same group as MaDiNet.
+MaDiNet,yes,SAR diffusion + Mamba,97.0,98.0,99.0,97.5,https://github.com/JoyeZLearning/MaDiNet,official repo,reference,SOTA reference; current server lacks Detectron2 for full detector profiling.
+Ours: DS-SSM/PFIM,yes,lightweight Mamba-YOLO,95.219,97.378,98.704,,local Mamba-YOLO-ds-ssm,already measured,main,"Current best verified row: P=0.97378, R=0.95219, mAP50=0.98704; complexity measured on server."

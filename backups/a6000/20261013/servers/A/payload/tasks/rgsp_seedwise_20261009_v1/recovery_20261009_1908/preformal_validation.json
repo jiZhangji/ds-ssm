@@ -1,0 +1,303 @@
+{
+  "checked_utc": "2026-10-09T11:34:02.838978+00:00",
+  "formal_trial_ids": [
+    "sar_acd_original_seed0",
+    "sar_acd_matched_scale075_seed0",
+    "sar_acd_full_seed0",
+    "sample_original_seed0",
+    "sample_matched_scale075_seed0",
+    "sample_full_seed0",
+    "ottawa_original_seed0",
+    "ottawa_matched_scale075_seed0",
+    "ottawa_full_seed0",
+    "farmland_original_seed0",
+    "farmland_matched_scale075_seed0",
+    "farmland_full_seed0",
+    "yellow_river_original_seed0",
+    "yellow_river_matched_scale075_seed0",
+    "yellow_river_full_seed0"
+  ],
+  "gpu": {
+    "checked_utc": "2026-10-09T11:34:02.838543+00:00",
+    "compute_processes": [],
+    "memory_total_mib": 49140,
+    "memory_used_mib": 530,
+    "name": "NVIDIA RTX A6000",
+    "utilization_percent": 0,
+    "uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964"
+  },
+  "locks_verified_free": [
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/a/dispatch.lock",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/lanes/a_seed0/lane.lock",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/locks/GPU-12cf4841-46b9-94d1-2715-9932134cf964.lock"
+  ],
+  "pending_air_ids": [
+    "sar_aircraft10_original_seed0",
+    "sar_aircraft10_full_seed0"
+  ],
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "probes": {
+    "change_detection": {
+      "checks": [
+        {
+          "checkpoint_reload": true,
+          "controls": {
+            "controlled_blocks": 0,
+            "variant": "original"
+          },
+          "gradients": {
+            "disconnected_trainable_parameters": [],
+            "nonfinite_gradients": [],
+            "required_stage_gradient_l2": {
+              "backbone.p3": 8.13247974784019,
+              "backbone.p4": 12.189862194564066,
+              "backbone.p5": 8.61733536687935,
+              "decoder": 12.189825583315663
+            }
+          },
+          "logits_shape": [
+            2,
+            1,
+            192,
+            192
+          ],
+          "loss": 3.2805681228637695,
+          "variant": "original"
+        },
+        {
+          "checkpoint_reload": true,
+          "controls": {
+            "buffer_scalars": [
+              "lambda_s",
+              "alpha",
+              "beta_i",
+              "rho_i",
+              "eta_i"
+            ],
+            "controlled_blocks": 1,
+            "min_retain": 0.5,
+            "placement": "internal P3/8, 64 channels",
+            "scalars": {
+              "alpha": 0.0,
+              "beta_i": 1.0,
+              "eta_i": 0.10000000149011612,
+              "lambda_s": 0.0,
+              "rho_i": 1.0
+            },
+            "use_pfim": false,
+            "variant": "matched_scale075"
+          },
+          "gradients": {
+            "disconnected_trainable_parameters": [],
+            "nonfinite_gradients": [],
+            "required_stage_gradient_l2": {
+              "backbone.p3": 0.15128229842310828,
+              "backbone.p4": 9.836714373016587,
+              "backbone.p5": 7.0919523533728075,
+              "decoder": 11.065828723213288
+            }
+          },
+          "logits_shape": [
+            2,
+            1,
+            192,
+            192
+          ],
+          "loss": 3.329775810241699,
+          "variant": "matched_scale075"
+        },
+        {
+          "checkpoint_reload": true,
+          "controls": {
+            "buffer_scalars": [],
+            "controlled_blocks": 1,
+            "min_retain": 0.5,
+            "placement": "internal P3/8, 64 channels",
+            "scalars": {
+              "alpha": 0.4998020827770233,
+              "beta_i": 0.9999998807907104,
+              "eta_i": 0.10019991546869278,
+              "lambda_s": 0.4997999370098114,
+              "rho_i": 0.9999998807907104
+            },
+            "use_pfim": true,
+            "variant": "full"
+          },
+          "gradients": {
+            "disconnected_trainable_parameters": [],
+            "nonfinite_gradients": [],
+            "required_stage_gradient_l2": {
+              "backbone.p3": 0.13769945371050288,
+              "backbone.p4": 11.358213286539621,
+              "backbone.p5": 7.840950473296776,
+              "decoder": 11.762499603311728
+            }
+          },
+          "logits_shape": [
+            2,
+            1,
+            192,
+            192
+          ],
+          "loss": 3.3607420921325684,
+          "variant": "full"
+        }
+      ],
+      "compatibility": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/probes/change_detection/cuda_compatibility.json",
+        "sha256": "183295bec5b764846bf80b50ffdaa59c2cf4aff3346f56b15781ff3527ef15b3",
+        "size": 998
+      },
+      "cuda_identity": {
+        "compatibility_applied": true,
+        "cuda_runtime_count": 1,
+        "cuda_visible_devices": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+        "gpu_mask_changed": false,
+        "hostname": "powerleader-PT6620W",
+        "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+        "physical_gpu_index": 0,
+        "physical_gpu_name": "NVIDIA RTX A6000",
+        "physical_gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+        "reported_count_after": 1,
+        "reported_count_before": 0,
+        "torch": "1.13.1+cu117",
+        "torch_installation_modified": false
+      },
+      "validation": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/probe_runs/change_detection/validation.json",
+        "sha256": "4a23e60e8472352dfb5f163b8075614e761f17fced2c9ecd4a781da1c70b0150",
+        "size": 3822
+      }
+    },
+    "classification": {
+      "checks": [
+        {
+          "checkpoint_reload": true,
+          "controls": {
+            "controlled_blocks": 0,
+            "variant": "original"
+          },
+          "gradients": {
+            "disconnected_trainable_parameters": [],
+            "nonfinite_gradients": [],
+            "required_stage_gradient_l2": {
+              "backbone.p3": 21.40175016635879,
+              "backbone.p4": 32.54803298710553,
+              "backbone.p5": 23.12339549640533,
+              "head": 7.321793471544699
+            }
+          },
+          "logits_shape": [
+            2,
+            5
+          ],
+          "loss": 2.034949779510498,
+          "variant": "original"
+        },
+        {
+          "checkpoint_reload": true,
+          "controls": {
+            "buffer_scalars": [
+              "lambda_s",
+              "alpha",
+              "beta_i",
+              "rho_i",
+              "eta_i"
+            ],
+            "controlled_blocks": 1,
+            "min_retain": 0.5,
+            "placement": "internal P3/8, 64 channels",
+            "scalars": {
+              "alpha": 0.0,
+              "beta_i": 1.0,
+              "eta_i": 0.10000000149011612,
+              "lambda_s": 0.0,
+              "rho_i": 1.0
+            },
+            "use_pfim": false,
+            "variant": "matched_scale075"
+          },
+          "gradients": {
+            "disconnected_trainable_parameters": [],
+            "nonfinite_gradients": [],
+            "required_stage_gradient_l2": {
+              "backbone.p3": 0.4143213912239171,
+              "backbone.p4": 31.228854506392985,
+              "backbone.p5": 21.404675306549947,
+              "head": 6.856644911007608
+            }
+          },
+          "logits_shape": [
+            2,
+            5
+          ],
+          "loss": 1.7951773405075073,
+          "variant": "matched_scale075"
+        },
+        {
+          "checkpoint_reload": true,
+          "controls": {
+            "buffer_scalars": [],
+            "controlled_blocks": 1,
+            "min_retain": 0.5,
+            "placement": "internal P3/8, 64 channels",
+            "scalars": {
+              "alpha": 0.499801367521286,
+              "beta_i": 0.9999998807907104,
+              "eta_i": 0.10019979625940323,
+              "lambda_s": 0.5001999139785767,
+              "rho_i": 0.9999998807907104
+            },
+            "use_pfim": true,
+            "variant": "full"
+          },
+          "gradients": {
+            "disconnected_trainable_parameters": [],
+            "nonfinite_gradients": [],
+            "required_stage_gradient_l2": {
+              "backbone.p3": 0.31723291752753124,
+              "backbone.p4": 28.54848509872641,
+              "backbone.p5": 20.43021556265698,
+              "head": 5.689504595025109
+            }
+          },
+          "logits_shape": [
+            2,
+            5
+          ],
+          "loss": 1.5160799026489258,
+          "variant": "full"
+        }
+      ],
+      "compatibility": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/probes/classification/cuda_compatibility.json",
+        "sha256": "3cee674a91a2e687218ed4cb41a9fa50be7f309c2787e0310857b4152e23f149",
+        "size": 998
+      },
+      "cuda_identity": {
+        "compatibility_applied": true,
+        "cuda_runtime_count": 1,
+        "cuda_visible_devices": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+        "gpu_mask_changed": false,
+        "hostname": "powerleader-PT6620W",
+        "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+        "physical_gpu_index": 0,
+        "physical_gpu_name": "NVIDIA RTX A6000",
+        "physical_gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+        "reported_count_after": 1,
+        "reported_count_before": 0,
+        "torch": "1.13.1+cu117",
+        "torch_installation_modified": false
+      },
+      "validation": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/probe_runs/classification/validation.json",
+        "sha256": "009710e5d78a26e532158176220f22f71e6f4307ab668e61420eb6d883c2e08e",
+        "size": 3775
+      }
+    }
+  },
+  "schema": "rgsp-operator-cross-recovery-v1",
+  "source_files_verified": 360,
+  "task_processes": [],
+  "unit_test_log_sha256": "c3287ee017f23cbace84d7e1e7022273ccfea64a41c2a5e6e475b77aa3321ed4"
+}

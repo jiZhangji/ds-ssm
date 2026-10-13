@@ -1,0 +1,278 @@
+{
+  "independent_test": false,
+  "protocol_group": "old300epoch_TEST_as_VAL",
+  "results": [
+    {
+      "audit_scope": "Live checkpoint/data hashes and300-row ledger/CSV; no new model evaluation.",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/ssdd_matched_scale075_seed0/run/weights/best.pt",
+      "checkpoint_sha256": "94ab4471dab18e3de27378d67fea5f895d0731359def8d04870775a12bc62ab8",
+      "hashes": {
+        "data_manifest.json": "8c8db821f87451251bc670b4b69f1a70a55ceeb1ffd8ba91f7f6bf70447eef05",
+        "optimizer_ledger.jsonl": "a6218c925b33788cd661fa29527dd3326c18451134e1e143ac29221fa0ff120d",
+        "protocol.json": "021d241a2b4b187103589112ae7109dc899e07e35d14b8594f297c6c9d012e16",
+        "result.json": "77d046f6e23a5669136644839d04d2f952512412d719d8f38f33560d8285afba",
+        "run/results.csv": "6f20214faf505f01d72551b682fa7ddb87cedd1125aba747898f1339125b77de",
+        "runtime_audit.json": "1eaaab5a2e7a12ae3ad027ff024a86f071bbf3932f95fdedb904dc6c31414654"
+      },
+      "producer_fp32_reload_attestation": true,
+      "result": {
+        "AP50": 95.85973914718406,
+        "AP50_95": 69.14101382531273,
+        "AP75": 82.63366389703374,
+        "best_epoch": 152,
+        "best_sha256": "94ab4471dab18e3de27378d67fea5f895d0731359def8d04870775a12bc62ab8",
+        "epoch": 300,
+        "optimizer_updates": 8700,
+        "paper_eligible": true,
+        "precision": 94.97271119903976,
+        "protocol": {
+          "accumulation": 8,
+          "augmentation": "letterbox640; horizontal+vertical flip p0.5; all other generic augmentations off",
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "code_sha256": "89543c9855575c59a707ea1d4d119ed3e367a6b0ae4ab87c29f2cb66aabf8f63",
+          "data_manifest_sha256": "8c8db821f87451251bc670b4b69f1a70a55ceeb1ffd8ba91f7f6bf70447eef05",
+          "detection_loss": {
+            "box": 7.5,
+            "cls": 0.5,
+            "dfl": 1.5
+          },
+          "early_stopping": false,
+          "effective_batch": 32,
+          "ema": "original ModelEMA policy",
+          "epochs": 300,
+          "eps": 1e-08,
+          "evaluation": {
+            "P_R": "maximum-F1 curve summary; not fixed deployment threshold",
+            "conf": 0.001,
+            "iou_nms": 0.7,
+            "max_det": 300
+          },
+          "gradient_clip_l2": 10.0,
+          "identity": {
+            "compatibility_applied": true,
+            "cuda_runtime_count": 1,
+            "cuda_visible_devices": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+            "gpu_mask_changed": false,
+            "hostname": "powerleader-a6000-f",
+            "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+            "physical_gpu_index": 0,
+            "physical_gpu_name": "NVIDIA RTX A6000",
+            "physical_gpu_uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+            "reported_count_after": 1,
+            "reported_count_before": 0,
+            "torch": "1.13.1+cu117",
+            "torch_installation_modified": false
+          },
+          "input": [
+            3,
+            640,
+            640
+          ],
+          "loss_normalization": "native summed microbatch loss; divide accumulated gradients by actual samples",
+          "lr0": 0.001,
+          "module_warmup": 0,
+          "optimizer": "AdamW",
+          "optimizer_group_policy": "v2: any local parameter name containing bias (including dt_projs_bias) has zero WD; norm zero; remaining weights 0.0005",
+          "physical_batch": 4,
+          "precision": "FP32 training/checkpoints/evaluation; AMP and TF32 off",
+          "schedule": "5 full epochs linear warmup at optimizer updates, then cosine to lr0*0.01",
+          "schema": "rgsp-ssdd-table-completion-v1",
+          "seed": 0,
+          "selection": "EMA best 0.1*AP50+0.9*AP50:95; earliest tie",
+          "smoke_only": false,
+          "source_manifest_sha256": "149133bdfefb969279040921719bfb79b5d307e0a8c350d9f8214867b465c502",
+          "split": "928 train / official232 TEST-as-VAL; no independent test claim",
+          "variant": "matched_scale075",
+          "weight_decay": {
+            "bias_and_norm": 0.0,
+            "weights": 0.0005
+          }
+        },
+        "recall": 88.09523809523809,
+        "selection_warning": "Official test used for repeated validation/selection; not independent test",
+        "serialized_best_controls": [
+          {
+            "alpha": 0.0,
+            "beta_i": 1.0,
+            "buffer_scalars": [
+              "lambda_s",
+              "alpha",
+              "beta_i",
+              "rho_i",
+              "eta_i"
+            ],
+            "control": "matched_scale075",
+            "delta_path": false,
+            "descriptor_mode": "trend_std",
+            "eta_i": 0.09999999403953552,
+            "fixed_importance": null,
+            "importance_factor_location": "scan_input",
+            "input_path": false,
+            "lambda_s": 0.0,
+            "lrc_enabled": true,
+            "min_retain": 0.5,
+            "name": "model.3",
+            "options": {
+              "stats_kernel_size": 3,
+              "trend_kernel_size": 3
+            },
+            "parameter_scalars": [],
+            "predictor_input_features": 128,
+            "predictor_parameters_active": false,
+            "requires_grad": {
+              "alpha": false,
+              "beta_i": false,
+              "eta_i": false,
+              "lambda_s": false,
+              "rho_i": false
+            },
+            "rho_i": 1.0,
+            "trend_parameters_active": false
+          }
+        ],
+        "serialized_best_fp32_verified": true,
+        "status": "TRAINING_COMPLETE"
+      },
+      "variant": "matched_scale075"
+    },
+    {
+      "audit_scope": "Live checkpoint/data hashes and300-row ledger/CSV; no new model evaluation.",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/ssdd_full_seed0/run/weights/best.pt",
+      "checkpoint_sha256": "698aefc62077ace23d99e568ddf182521a27752ca14397dd0bf006153bf188f3",
+      "hashes": {
+        "data_manifest.json": "8c8db821f87451251bc670b4b69f1a70a55ceeb1ffd8ba91f7f6bf70447eef05",
+        "optimizer_ledger.jsonl": "d6688ae068993d24a05ebab4ef2ac7a9aab6c953a8bf004174fda45a2874283d",
+        "protocol.json": "306e4d9c5e3df88fb27e56f77b5a49f8f68eb32f8cbba966216fa3ece0ba84a2",
+        "result.json": "bdfa27409b104d35375864942350f2f032fc71651fd6b29b154e8c7eb0f39a75",
+        "run/results.csv": "48489a33f2e1faa56880655d37cc2955eddd844f7f59db5de41d92e9c8a365d8",
+        "runtime_audit.json": "9b7d8ca948acf8ea0f113b76764a67c69a91bf55014b3d2fd5792f07054fa23a"
+      },
+      "producer_fp32_reload_attestation": true,
+      "result": {
+        "AP50": 95.59968996213725,
+        "AP50_95": 68.96463772502881,
+        "AP75": 83.39187226567772,
+        "best_epoch": 196,
+        "best_sha256": "698aefc62077ace23d99e568ddf182521a27752ca14397dd0bf006153bf188f3",
+        "epoch": 300,
+        "optimizer_updates": 8700,
+        "paper_eligible": true,
+        "precision": 93.33102142462148,
+        "protocol": {
+          "accumulation": 8,
+          "augmentation": "letterbox640; horizontal+vertical flip p0.5; all other generic augmentations off",
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "code_sha256": "89543c9855575c59a707ea1d4d119ed3e367a6b0ae4ab87c29f2cb66aabf8f63",
+          "data_manifest_sha256": "8c8db821f87451251bc670b4b69f1a70a55ceeb1ffd8ba91f7f6bf70447eef05",
+          "detection_loss": {
+            "box": 7.5,
+            "cls": 0.5,
+            "dfl": 1.5
+          },
+          "early_stopping": false,
+          "effective_batch": 32,
+          "ema": "original ModelEMA policy",
+          "epochs": 300,
+          "eps": 1e-08,
+          "evaluation": {
+            "P_R": "maximum-F1 curve summary; not fixed deployment threshold",
+            "conf": 0.001,
+            "iou_nms": 0.7,
+            "max_det": 300
+          },
+          "gradient_clip_l2": 10.0,
+          "identity": {
+            "compatibility_applied": true,
+            "cuda_runtime_count": 1,
+            "cuda_visible_devices": "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40",
+            "gpu_mask_changed": false,
+            "hostname": "powerleader-a6000-f",
+            "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+            "physical_gpu_index": 1,
+            "physical_gpu_name": "NVIDIA RTX A6000",
+            "physical_gpu_uuid": "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40",
+            "reported_count_after": 1,
+            "reported_count_before": 0,
+            "torch": "1.13.1+cu117",
+            "torch_installation_modified": false
+          },
+          "input": [
+            3,
+            640,
+            640
+          ],
+          "loss_normalization": "native summed microbatch loss; divide accumulated gradients by actual samples",
+          "lr0": 0.001,
+          "module_warmup": 0,
+          "optimizer": "AdamW",
+          "optimizer_group_policy": "v2: any local parameter name containing bias (including dt_projs_bias) has zero WD; norm zero; remaining weights 0.0005",
+          "physical_batch": 4,
+          "precision": "FP32 training/checkpoints/evaluation; AMP and TF32 off",
+          "schedule": "5 full epochs linear warmup at optimizer updates, then cosine to lr0*0.01",
+          "schema": "rgsp-ssdd-table-completion-v1",
+          "seed": 0,
+          "selection": "EMA best 0.1*AP50+0.9*AP50:95; earliest tie",
+          "smoke_only": false,
+          "source_manifest_sha256": "149133bdfefb969279040921719bfb79b5d307e0a8c350d9f8214867b465c502",
+          "split": "928 train / official232 TEST-as-VAL; no independent test claim",
+          "variant": "full",
+          "weight_decay": {
+            "bias_and_norm": 0.0,
+            "weights": 0.0005
+          }
+        },
+        "recall": 90.65934065934066,
+        "selection_warning": "Official test used for repeated validation/selection; not independent test",
+        "serialized_best_controls": [
+          {
+            "alpha": 0.669252872467041,
+            "beta_i": 1.1421724557876587,
+            "buffer_scalars": [],
+            "control": "full",
+            "delta_path": true,
+            "descriptor_mode": "trend_std",
+            "eta_i": -0.042270876467227936,
+            "fixed_importance": null,
+            "importance_factor_location": "scan_input",
+            "input_path": true,
+            "lambda_s": 0.5508455038070679,
+            "lrc_enabled": true,
+            "min_retain": 0.5,
+            "name": "model.3",
+            "options": {
+              "stats_kernel_size": 3,
+              "trend_kernel_size": 3
+            },
+            "parameter_scalars": [
+              "lambda_s",
+              "alpha",
+              "beta_i",
+              "rho_i",
+              "eta_i"
+            ],
+            "predictor_input_features": 128,
+            "predictor_parameters_active": true,
+            "requires_grad": {
+              "alpha": false,
+              "beta_i": false,
+              "eta_i": false,
+              "lambda_s": false,
+              "rho_i": false
+            },
+            "rho_i": 1.1562784910202026,
+            "trend_parameters_active": true
+          }
+        ],
+        "serialized_best_fp32_verified": true,
+        "status": "TRAINING_COMPLETE"
+      },
+      "variant": "full"
+    }
+  ]
+}

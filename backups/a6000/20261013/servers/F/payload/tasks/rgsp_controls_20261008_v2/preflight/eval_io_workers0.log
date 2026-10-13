@@ -1,0 +1,16 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+full summary: 380 layers, 5919097 parameters, 0 gradients, 13.1 GFLOPs
+[34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v2/smoke/data/labels/val.cache... 16 images, 0 backgrounds, 0 corrupt: 100%|██████████| 16/16 [00:00<?, ?it/s][34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v2/smoke/data/labels/val.cache... 16 images, 0 backgrounds, 0 corrupt: 100%|██████████| 16/16 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:00<00:00,  5.32it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:00<00:00,  5.32it/s]
+                   all         16         21          0          0          0          0
+Speed: 0.1ms preprocess, 8.3ms inference, 0.0ms loss, 0.3ms postprocess per image
+experiment: preflight_val_io_workers0
+subset:     SSDD_SMOKE
+P/R:        0.000000/0.000000
+AP50:       0.000000
+AP75:       0.000000
+AP50-95:    0.000000
+JSON:       /home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v2/preflight/eval_io_workers0.json

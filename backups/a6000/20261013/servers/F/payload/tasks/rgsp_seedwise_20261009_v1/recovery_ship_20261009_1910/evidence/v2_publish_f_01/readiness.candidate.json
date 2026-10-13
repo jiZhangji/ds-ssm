@@ -1,0 +1,18 @@
+{
+  "archive_audit_sha256": "9092777ec2a04caaea06420cc5df715bf703cc3f1e4ec5538cbdff65edbf763d",
+  "dataset_identity": "SAR-ShipDataset",
+  "descriptor_sha256": "c14a5295a56a23ccedb9edc3548e315fdafd3f89fea351274d4485131caaa3c5",
+  "gate_validation": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/v2_publish_f_01/publication_validation.json",
+    "sha256": "6878ae7c30534a3133bd9e119c0939a72cdfb00bd28c68a332e5c20b7de70f1d",
+    "size": 8318
+  },
+  "helper_sha256": "caabe5022a1d53d94747c0091f9899413b5a86b1fac21e700a343baed3be4806",
+  "manifest_sha256": "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78",
+  "nc": 1,
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-ship-publication-gate-v2",
+  "source_audit_sha256": "a1b77cbe73ce2e4376cd3a22d0dae14538148e69b9d8ce993a95872ad80b7709",
+  "stage_complete_sha256": "a4e689cc4e5f7c18f9863d431fd4a87ce841cb51276cc140de71d3021fde1512",
+  "status": "verified_ready"
+}

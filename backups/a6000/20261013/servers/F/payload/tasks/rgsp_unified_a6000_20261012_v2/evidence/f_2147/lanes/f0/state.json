@@ -1,0 +1,1256 @@
+{
+  "gpu_uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+  "jobs": {
+    "sar_ship-original": {
+      "estimated_seconds": 179575.00534675783,
+      "probe": {
+        "status": "PENDING"
+      },
+      "protocol_sha256": "8f35051b1be2b4effa675a5dcf5886e76def9ba80673069040d43ed17a47a1e6",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": null,
+      "status": "PENDING"
+    },
+    "ssdd-original": {
+      "estimated_seconds": 4346.796265651938,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/detection/run_detection.py",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--dataset-manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/ssdd/data_content.json",
+          "--data",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/ssdd/data.yaml",
+          "--dataset-id",
+          "ssdd",
+          "--method",
+          "Original",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-original/probe",
+          "--gpu-uuid",
+          "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 25.046558036003262,
+        "ended_at": 1791811030.5817056,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-original/probe",
+        "payload": {
+          "code_sha256": "8fd9862b7b7cc37c8219c85ea61e545cee1c02a471a9ea41894da01f07f48aad",
+          "complexity": {
+            "batch": 1,
+            "coverage": {
+              "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+              "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+              "exhaustive": false,
+              "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+              "not_included": [
+                "Scan exponentials and softplus special functions; symbolic counts are separate.",
+                "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+                "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+                "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+              ],
+              "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+              "scope": "Full unfused detector including dense head; eval, batch=1, FP32, no TF32, no NMS.",
+              "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+              "version": "rgsp-covered-operations-v1"
+            },
+            "covered_flops_g": 17.9148224,
+            "cross_merge_add_flops": 17203200,
+            "cross_merge_calls": [
+              {
+                "flops": 4915200,
+                "module": "model.1.op",
+                "shape": [
+                  1,
+                  4,
+                  64,
+                  160,
+                  160
+                ]
+              },
+              {
+                "flops": 2457600,
+                "module": "model.3.op",
+                "shape": [
+                  1,
+                  4,
+                  128,
+                  80,
+                  80
+                ]
+              },
+              {
+                "flops": 1228800,
+                "module": "model.5.0.op",
+                "shape": [
+                  1,
+                  4,
+                  256,
+                  40,
+                  40
+                ]
+              },
+              {
+                "flops": 1228800,
+                "module": "model.5.1.op",
+                "shape": [
+                  1,
+                  4,
+                  256,
+                  40,
+                  40
+                ]
+              },
+              {
+                "flops": 1228800,
+                "module": "model.5.2.op",
+                "shape": [
+                  1,
+                  4,
+                  256,
+                  40,
+                  40
+                ]
+              },
+              {
+                "flops": 614400,
+                "module": "model.7.op",
+                "shape": [
+                  1,
+                  4,
+                  512,
+                  20,
+                  20
+                ]
+              },
+              {
+                "flops": 1228800,
+                "module": "model.11.ss2d.0",
+                "shape": [
+                  1,
+                  4,
+                  256,
+                  40,
+                  40
+                ]
+              },
+              {
+                "flops": 2457600,
+                "module": "model.14.ss2d.0",
+                "shape": [
+                  1,
+                  4,
+                  128,
+                  80,
+                  80
+                ]
+              },
+              {
+                "flops": 1228800,
+                "module": "model.17.ss2d.0",
+                "shape": [
+                  1,
+                  4,
+                  256,
+                  40,
+                  40
+                ]
+              },
+              {
+                "flops": 614400,
+                "module": "model.20.ss2d.0",
+                "shape": [
+                  1,
+                  4,
+                  512,
+                  20,
+                  20
+                ]
+              }
+            ],
+            "dense_output_shape": [
+              1,
+              5,
+              8400
+            ],
+            "device": "cuda:0",
+            "einsum_calls": [
+              {
+                "equation": "b k d l, k c d -> b k c l",
+                "flops": 445644800,
+                "module": "model.1.op",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    64,
+                    25600
+                  ],
+                  [
+                    4,
+                    34,
+                    64
+                  ]
+                ]
+              },
+              {
+                "equation": "b k r l, k d r -> b k d l",
+                "flops": 26214400,
+                "module": "model.1.op",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    2,
+                    25600
+                  ],
+                  [
+                    4,
+                    64,
+                    2
+                  ]
+                ]
+              },
+              {
+                "equation": "b k d l, k c d -> b k c l",
+                "flops": 235929600,
+                "module": "model.3.op",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    128,
+                    6400
+                  ],
+                  [
+                    4,
+                    36,
+                    128
+                  ]
+                ]
+              },
+              {
+                "equation": "b k r l, k d r -> b k d l",
+                "flops": 26214400,
+                "module": "model.3.op",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    4,
+                    6400
+                  ],
+                  [
+                    4,
+                    128,
+                    4
+                  ]
+                ]
+              },
+              {
+                "equation": "b k d l, k c d -> b k c l",
+                "flops": 131072000,
+                "module": "model.5.0.op",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    256,
+                    1600
+                  ],
+                  [
+                    4,
+                    40,
+                    256
+                  ]
+                ]
+              },
+              {
+                "equation": "b k r l, k d r -> b k d l",
+                "flops": 26214400,
+                "module": "model.5.0.op",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    8,
+                    1600
+                  ],
+                  [
+                    4,
+                    256,
+                    8
+                  ]
+                ]
+              },
+              {
+                "equation": "b k d l, k c d -> b k c l",
+                "flops": 131072000,
+                "module": "model.5.1.op",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    256,
+                    1600
+                  ],
+                  [
+                    4,
+                    40,
+                    256
+                  ]
+                ]
+              },
+              {
+                "equation": "b k r l, k d r -> b k d l",
+                "flops": 26214400,
+                "module": "model.5.1.op",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    8,
+                    1600
+                  ],
+                  [
+                    4,
+                    256,
+                    8
+                  ]
+                ]
+              },
+              {
+                "equation": "b k d l, k c d -> b k c l",
+                "flops": 131072000,
+                "module": "model.5.2.op",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    256,
+                    1600
+                  ],
+                  [
+                    4,
+                    40,
+                    256
+                  ]
+                ]
+              },
+              {
+                "equation": "b k r l, k d r -> b k d l",
+                "flops": 26214400,
+                "module": "model.5.2.op",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    8,
+                    1600
+                  ],
+                  [
+                    4,
+                    256,
+                    8
+                  ]
+                ]
+              },
+              {
+                "equation": "b k d l, k c d -> b k c l",
+                "flops": 78643200,
+                "module": "model.7.op",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    512,
+                    400
+                  ],
+                  [
+                    4,
+                    48,
+                    512
+                  ]
+                ]
+              },
+              {
+                "equation": "b k r l, k d r -> b k d l",
+                "flops": 26214400,
+                "module": "model.7.op",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    16,
+                    400
+                  ],
+                  [
+                    4,
+                    512,
+                    16
+                  ]
+                ]
+              },
+              {
+                "equation": "b k d l, k c d -> b k c l",
+                "flops": 131072000,
+                "module": "model.11.ss2d.0",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    256,
+                    1600
+                  ],
+                  [
+                    4,
+                    40,
+                    256
+                  ]
+                ]
+              },
+              {
+                "equation": "b k r l, k d r -> b k d l",
+                "flops": 26214400,
+                "module": "model.11.ss2d.0",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    8,
+                    1600
+                  ],
+                  [
+                    4,
+                    256,
+                    8
+                  ]
+                ]
+              },
+              {
+                "equation": "b k d l, k c d -> b k c l",
+                "flops": 235929600,
+                "module": "model.14.ss2d.0",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    128,
+                    6400
+                  ],
+                  [
+                    4,
+                    36,
+                    128
+                  ]
+                ]
+              },
+              {
+                "equation": "b k r l, k d r -> b k d l",
+                "flops": 26214400,
+                "module": "model.14.ss2d.0",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    4,
+                    6400
+                  ],
+                  [
+                    4,
+                    128,
+                    4
+                  ]
+                ]
+              },
+              {
+                "equation": "b k d l, k c d -> b k c l",
+                "flops": 131072000,
+                "module": "model.17.ss2d.0",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    256,
+                    1600
+                  ],
+                  [
+                    4,
+                    40,
+                    256
+                  ]
+                ]
+              },
+              {
+                "equation": "b k r l, k d r -> b k d l",
+                "flops": 26214400,
+                "module": "model.17.ss2d.0",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    8,
+                    1600
+                  ],
+                  [
+                    4,
+                    256,
+                    8
+                  ]
+                ]
+              },
+              {
+                "equation": "b k d l, k c d -> b k c l",
+                "flops": 78643200,
+                "module": "model.20.ss2d.0",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    512,
+                    400
+                  ],
+                  [
+                    4,
+                    48,
+                    512
+                  ]
+                ]
+              },
+              {
+                "equation": "b k r l, k d r -> b k d l",
+                "flops": 26214400,
+                "module": "model.20.ss2d.0",
+                "shapes": [
+                  [
+                    1,
+                    4,
+                    16,
+                    400
+                  ],
+                  [
+                    4,
+                    512,
+                    16
+                  ]
+                ]
+              }
+            ],
+            "finite_forward": true,
+            "functional_einsum_mac2_flops": 1992294400,
+            "fused": false,
+            "input_shapes": [
+              [
+                1,
+                3,
+                640,
+                640
+              ]
+            ],
+            "nms_included": false,
+            "output_shape": [
+              1,
+              5,
+              8400
+            ],
+            "output_shapes": [
+              [
+                1,
+                5,
+                8400
+              ]
+            ],
+            "parameters": 5985547,
+            "precision": "FP32",
+            "scan_basic_arithmetic_flops": 2293760000,
+            "scan_calls": [
+              {
+                "a_shape": [
+                  256,
+                  16
+                ],
+                "b_shape": [
+                  1,
+                  4,
+                  16,
+                  25600
+                ],
+                "backend": "core",
+                "basic_arithmetic_flops": 655360000,
+                "c_shape": [
+                  1,
+                  4,
+                  16,
+                  25600
+                ],
+                "delta_softplus": true,
+                "has_D": true,
+                "has_delta_bias": true,
+                "module": "model.1.op",
+                "special_function_evaluations_symbolic_upper_bound": 117964800,
+                "u_shape": [
+                  1,
+                  256,
+                  25600
+                ]
+              },
+              {
+                "a_shape": [
+                  512,
+                  16
+                ],
+                "b_shape": [
+                  1,
+                  4,
+                  16,
+                  6400
+                ],
+                "backend": "core",
+                "basic_arithmetic_flops": 327680000,
+                "c_shape": [
+                  1,
+                  4,
+                  16,
+                  6400
+                ],
+                "delta_softplus": true,
+                "has_D": true,
+                "has_delta_bias": true,
+                "module": "model.3.op",
+                "special_function_evaluations_symbolic_upper_bound": 58982400,
+                "u_shape": [
+                  1,
+                  512,
+                  6400
+                ]
+              },
+              {
+                "a_shape": [
+                  1024,
+                  16
+                ],
+                "b_shape": [
+                  1,
+                  4,
+                  16,
+                  1600
+                ],
+                "backend": "core",
+                "basic_arithmetic_flops": 163840000,
+                "c_shape": [
+                  1,
+                  4,
+                  16,
+                  1600
+                ],
+                "delta_softplus": true,
+                "has_D": true,
+                "has_delta_bias": true,
+                "module": "model.5.0.op",
+                "special_function_evaluations_symbolic_upper_bound": 29491200,
+                "u_shape": [
+                  1,
+                  1024,
+                  1600
+                ]
+              },
+              {
+                "a_shape": [
+                  1024,
+                  16
+                ],
+                "b_shape": [
+                  1,
+                  4,
+                  16,
+                  1600
+                ],
+                "backend": "core",
+                "basic_arithmetic_flops": 163840000,
+                "c_shape": [
+                  1,
+                  4,
+                  16,
+                  1600
+                ],
+                "delta_softplus": true,
+                "has_D": true,
+                "has_delta_bias": true,
+                "module": "model.5.1.op",
+                "special_function_evaluations_symbolic_upper_bound": 29491200,
+                "u_shape": [
+                  1,
+                  1024,
+                  1600
+                ]
+              },
+              {
+                "a_shape": [
+                  1024,
+                  16
+                ],
+                "b_shape": [
+                  1,
+                  4,
+                  16,
+                  1600
+                ],
+                "backend": "core",
+                "basic_arithmetic_flops": 163840000,
+                "c_shape": [
+                  1,
+                  4,
+                  16,
+                  1600
+                ],
+                "delta_softplus": true,
+                "has_D": true,
+                "has_delta_bias": true,
+                "module": "model.5.2.op",
+                "special_function_evaluations_symbolic_upper_bound": 29491200,
+                "u_shape": [
+                  1,
+                  1024,
+                  1600
+                ]
+              },
+              {
+                "a_shape": [
+                  2048,
+                  16
+                ],
+                "b_shape": [
+                  1,
+                  4,
+                  16,
+                  400
+                ],
+                "backend": "core",
+                "basic_arithmetic_flops": 81920000,
+                "c_shape": [
+                  1,
+                  4,
+                  16,
+                  400
+                ],
+                "delta_softplus": true,
+                "has_D": true,
+                "has_delta_bias": true,
+                "module": "model.7.op",
+                "special_function_evaluations_symbolic_upper_bound": 14745600,
+                "u_shape": [
+                  1,
+                  2048,
+                  400
+                ]
+              },
+              {
+                "a_shape": [
+                  1024,
+                  16
+                ],
+                "b_shape": [
+                  1,
+                  4,
+                  16,
+                  1600
+                ],
+                "backend": "core",
+                "basic_arithmetic_flops": 163840000,
+                "c_shape": [
+                  1,
+                  4,
+                  16,
+                  1600
+                ],
+                "delta_softplus": true,
+                "has_D": true,
+                "has_delta_bias": true,
+                "module": "model.11.ss2d.0",
+                "special_function_evaluations_symbolic_upper_bound": 29491200,
+                "u_shape": [
+                  1,
+                  1024,
+                  1600
+                ]
+              },
+              {
+                "a_shape": [
+                  512,
+                  16
+                ],
+                "b_shape": [
+                  1,
+                  4,
+                  16,
+                  6400
+                ],
+                "backend": "core",
+                "basic_arithmetic_flops": 327680000,
+                "c_shape": [
+                  1,
+                  4,
+                  16,
+                  6400
+                ],
+                "delta_softplus": true,
+                "has_D": true,
+                "has_delta_bias": true,
+                "module": "model.14.ss2d.0",
+                "special_function_evaluations_symbolic_upper_bound": 58982400,
+                "u_shape": [
+                  1,
+                  512,
+                  6400
+                ]
+              },
+              {
+                "a_shape": [
+                  1024,
+                  16
+                ],
+                "b_shape": [
+                  1,
+                  4,
+                  16,
+                  1600
+                ],
+                "backend": "core",
+                "basic_arithmetic_flops": 163840000,
+                "c_shape": [
+                  1,
+                  4,
+                  16,
+                  1600
+                ],
+                "delta_softplus": true,
+                "has_D": true,
+                "has_delta_bias": true,
+                "module": "model.17.ss2d.0",
+                "special_function_evaluations_symbolic_upper_bound": 29491200,
+                "u_shape": [
+                  1,
+                  1024,
+                  1600
+                ]
+              },
+              {
+                "a_shape": [
+                  2048,
+                  16
+                ],
+                "b_shape": [
+                  1,
+                  4,
+                  16,
+                  400
+                ],
+                "backend": "core",
+                "basic_arithmetic_flops": 81920000,
+                "c_shape": [
+                  1,
+                  4,
+                  16,
+                  400
+                ],
+                "delta_softplus": true,
+                "has_D": true,
+                "has_delta_bias": true,
+                "module": "model.20.ss2d.0",
+                "special_function_evaluations_symbolic_upper_bound": 14745600,
+                "u_shape": [
+                  1,
+                  2048,
+                  400
+                ]
+              }
+            ],
+            "ssm_module_calls": [
+              {
+                "cross_merge_calls": 1,
+                "einsum_calls": 2,
+                "kind": "SS2D",
+                "module": "model.1.op",
+                "scan_calls": 1
+              },
+              {
+                "cross_merge_calls": 1,
+                "einsum_calls": 2,
+                "kind": "SS2D",
+                "module": "model.3.op",
+                "scan_calls": 1
+              },
+              {
+                "cross_merge_calls": 1,
+                "einsum_calls": 2,
+                "kind": "SS2D",
+                "module": "model.5.0.op",
+                "scan_calls": 1
+              },
+              {
+                "cross_merge_calls": 1,
+                "einsum_calls": 2,
+                "kind": "SS2D",
+                "module": "model.5.1.op",
+                "scan_calls": 1
+              },
+              {
+                "cross_merge_calls": 1,
+                "einsum_calls": 2,
+                "kind": "SS2D",
+                "module": "model.5.2.op",
+                "scan_calls": 1
+              },
+              {
+                "cross_merge_calls": 1,
+                "einsum_calls": 2,
+                "kind": "SS2D",
+                "module": "model.7.op",
+                "scan_calls": 1
+              },
+              {
+                "cross_merge_calls": 1,
+                "einsum_calls": 2,
+                "kind": "SS2D",
+                "module": "model.11.ss2d.0",
+                "scan_calls": 1
+              },
+              {
+                "cross_merge_calls": 1,
+                "einsum_calls": 2,
+                "kind": "SS2D",
+                "module": "model.14.ss2d.0",
+                "scan_calls": 1
+              },
+              {
+                "cross_merge_calls": 1,
+                "einsum_calls": 2,
+                "kind": "SS2D",
+                "module": "model.17.ss2d.0",
+                "scan_calls": 1
+              },
+              {
+                "cross_merge_calls": 1,
+                "einsum_calls": 2,
+                "kind": "SS2D",
+                "module": "model.20.ss2d.0",
+                "scan_calls": 1
+              }
+            ],
+            "status": "PASS",
+            "thop_legacy_x2_flops": 13611564800.0,
+            "thop_version": "2.0.16",
+            "torch_version": "1.13.1+cu117",
+            "trainable_parameters": 5985531,
+            "unregistered_leaf_module_types": [
+              "timm.layers.drop.DropPath",
+              "torch.nn.modules.activation.GELU",
+              "torch.nn.modules.activation.SiLU",
+              "torch.nn.modules.linear.Identity",
+              "ultralytics.nn.modules.conv.Concat"
+            ],
+            "unsupported": [
+              "Scan exponentials and softplus special functions; symbolic counts are separate.",
+              "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+              "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+              "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing.",
+              "Unregistered THOP leaf: timm.layers.drop.DropPath",
+              "Unregistered THOP leaf: torch.nn.modules.activation.GELU",
+              "Unregistered THOP leaf: torch.nn.modules.activation.SiLU",
+              "Unregistered THOP leaf: torch.nn.modules.linear.Identity",
+              "Unregistered THOP leaf: ultralytics.nn.modules.conv.Concat"
+            ]
+          },
+          "controls": [],
+          "data_sha256": "9b9207954510e1c4ef4f1899e2fc03821662665e775c806ec4e362ce43dc9b09",
+          "estimate_scope": "planned150-epoch training steps only; excludes validation/checkpoint/I/O overhead and early stopping",
+          "estimated_full_seconds": 4346.796265651938,
+          "finished_utc": "2026-10-12T13:17:07.173394+00:00",
+          "images_per_second": 26.502277300250274,
+          "mean_update_seconds": 2.4148868142510764,
+          "measured_updates": 4,
+          "method": "Original",
+          "paper_eligible": false,
+          "peak_allocated_gib": 13.448460578918457,
+          "peak_reserved_gib": 14.857421875,
+          "protocol_sha256": "7ab36f41d7f04949eb4307ab7952b2f44a4ea71383b20a0d28783bbe26d042c1",
+          "schema": "rgsp-unified-detection-20261012-v1",
+          "seed": 0,
+          "source_sha256": "19ae98a884ec902cf3e61dbe66b3f66e63243bc93b14233a781e8cb89d65ad4c",
+          "status": "PROBE_PASS",
+          "test_evaluated": false,
+          "timing_warmup_updates": 2,
+          "val_evaluated": false
+        },
+        "pid": 218496,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791811005.5101407,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "7ab36f41d7f04949eb4307ab7952b2f44a4ea71383b20a0d28783bbe26d042c1",
+      "reason": null,
+      "runs": {
+        "0": {
+          "command": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/detection/run_detection.py",
+            "--source-root",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+            "--dataset-manifest",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/ssdd/data_content.json",
+            "--data",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/ssdd/data.yaml",
+            "--dataset-id",
+            "ssdd",
+            "--method",
+            "Original",
+            "--seed",
+            "0",
+            "--output",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-original/run0",
+            "--gpu-uuid",
+            "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+            "--mode",
+            "train"
+          ],
+          "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-original/run0",
+          "pid": 222038,
+          "started_at": 1791811898.3692024,
+          "status": "RUNNING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "reason": "probe_duration_policy",
+          "status": "SKIPPED"
+        }
+      },
+      "seed_limit": 2,
+      "status": "ACTIVE"
+    },
+    "ssdd-yolov8n": {
+      "estimated_seconds": 676.536963286344,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/detection/run_detection.py",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--dataset-manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/ssdd/data_content.json",
+          "--data",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/ssdd/data.yaml",
+          "--dataset-id",
+          "ssdd",
+          "--method",
+          "YOLOv8n",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-yolov8n/probe",
+          "--gpu-uuid",
+          "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.035254381014965,
+        "ended_at": 1791810944.3839157,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-yolov8n/probe",
+        "payload": {
+          "code_sha256": "8fd9862b7b7cc37c8219c85ea61e545cee1c02a471a9ea41894da01f07f48aad",
+          "complexity": {
+            "batch": 1,
+            "coverage": {
+              "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+              "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+              "exhaustive": false,
+              "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+              "not_included": [
+                "Scan exponentials and softplus special functions; symbolic counts are separate.",
+                "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+                "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+                "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+              ],
+              "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+              "scope": "Full unfused detector including dense head; eval, batch=1, FP32, no TF32, no NMS.",
+              "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+              "version": "rgsp-covered-operations-v1"
+            },
+            "covered_flops_g": 8.1941504,
+            "cross_merge_add_flops": 0,
+            "cross_merge_calls": [],
+            "dense_output_shape": [
+              1,
+              5,
+              8400
+            ],
+            "device": "cuda:0",
+            "einsum_calls": [],
+            "finite_forward": true,
+            "functional_einsum_mac2_flops": 0,
+            "fused": false,
+            "input_shapes": [
+              [
+                1,
+                3,
+                640,
+                640
+              ]
+            ],
+            "nms_included": false,
+            "output_shape": [
+              1,
+              5,
+              8400
+            ],
+            "output_shapes": [
+              [
+                1,
+                5,
+                8400
+              ]
+            ],
+            "parameters": 3011043,
+            "precision": "FP32",
+            "scan_basic_arithmetic_flops": 0,
+            "scan_calls": [],
+            "ssm_module_calls": [],
+            "status": "PASS",
+            "thop_legacy_x2_flops": 8194150400.0,
+            "thop_version": "2.0.16",
+            "torch_version": "1.13.1+cu117",
+            "trainable_parameters": 3011027,
+            "unregistered_leaf_module_types": [
+              "torch.nn.modules.activation.SiLU",
+              "ultralytics.nn.modules.conv.Concat"
+            ],
+            "unsupported": [
+              "Scan exponentials and softplus special functions; symbolic counts are separate.",
+              "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+              "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+              "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing.",
+              "Unregistered THOP leaf: torch.nn.modules.activation.SiLU",
+              "Unregistered THOP leaf: ultralytics.nn.modules.conv.Concat"
+            ]
+          },
+          "controls": [],
+          "data_sha256": "9b9207954510e1c4ef4f1899e2fc03821662665e775c806ec4e362ce43dc9b09",
+          "estimate_scope": "planned150-epoch training steps only; excludes validation/checkpoint/I/O overhead and early stopping",
+          "estimated_full_seconds": 676.536963286344,
+          "finished_utc": "2026-10-12T13:15:41.597066+00:00",
+          "images_per_second": 170.27894446506636,
+          "mean_update_seconds": 0.3758538684924133,
+          "measured_updates": 4,
+          "method": "YOLOv8n",
+          "paper_eligible": false,
+          "peak_allocated_gib": 3.3138818740844727,
+          "peak_reserved_gib": 3.640625,
+          "protocol_sha256": "1f1e38a6606f2b7000848fe2c8c0eb477a176965ee9ca8f7664b20d57415f13e",
+          "schema": "rgsp-unified-detection-20261012-v1",
+          "seed": 0,
+          "source_sha256": "19ae98a884ec902cf3e61dbe66b3f66e63243bc93b14233a781e8cb89d65ad4c",
+          "status": "PROBE_PASS",
+          "test_evaluated": false,
+          "timing_warmup_updates": 2,
+          "val_evaluated": false
+        },
+        "pid": 218283,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791810934.3227618,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "1f1e38a6606f2b7000848fe2c8c0eb477a176965ee9ca8f7664b20d57415f13e",
+      "reason": null,
+      "runs": {
+        "0": {
+          "command": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/detection/run_detection.py",
+            "--source-root",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+            "--dataset-manifest",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/ssdd/data_content.json",
+            "--data",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/ssdd/data.yaml",
+            "--dataset-id",
+            "ssdd",
+            "--method",
+            "YOLOv8n",
+            "--seed",
+            "0",
+            "--output",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-yolov8n/run0",
+            "--gpu-uuid",
+            "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+            "--mode",
+            "train"
+          ],
+          "elapsed_seconds": 745.6413872129633,
+          "ended_at": 1791811837.2373962,
+          "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-yolov8n/run0",
+          "pid": 218757,
+          "recovered": false,
+          "returncode": 0,
+          "started_at": 1791811091.5700307,
+          "status": "COMPLETE",
+          "verification": {
+            "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-yolov8n/run0/weights/best.pt",
+            "checkpoint_sha256": "00fbe79b4394db9a9aa6b2e2fc8547ba4e93de18d9829bfe36fbc3f909ec3b2d",
+            "completion_sha256": "51ba456340e2a64d3bcd3ae70b99266ef54f971f2ffc98230745fd610e769094",
+            "metrics": {
+              "AP50": 0.8323355847064412,
+              "AP50_95": 0.39175859260113394,
+              "AP75": 0.3029887994757052,
+              "P": 0.8983610562607071,
+              "R": 0.7545787545787546
+            },
+            "protocol_sha256": "1f1e38a6606f2b7000848fe2c8c0eb477a176965ee9ca8f7664b20d57415f13e",
+            "result_sha256": "d21806fc1932535d3c23dfcb874d97a84036100a8fe2b26292a61384eac7be26"
+          }
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    }
+  },
+  "lane": "f0",
+  "plan_sha256": "58d99febe41d257e6ef123fd61eddedf978b4345df29727dd2f4483060610a16",
+  "revision": 23,
+  "root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2",
+  "status": "RUNNING",
+  "updated_at": 1791811898.3961885,
+  "version": 1
+}

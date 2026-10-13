@@ -1,0 +1,43 @@
+{
+  "experiment": "rgsp_recovery_SADD_seed2_local_energy",
+  "placement": "p3",
+  "variant": "local_energy",
+  "state_dim": 16,
+  "seed": 2,
+  "subset": "SADD",
+  "weights": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed2/runs/local_energy/weights/best.pt",
+  "weights_sha256": "fae438f5f7ea14f92c3231b19ff093df3a3095fcbbd508eb984e596b8d6cb57d",
+  "data": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed2/manifest/data.yaml",
+  "data_yaml_sha256": "5916672b63f5b1b893e59fe0f4ca5cc7da341c48d691829e84fbbaa9f0b697fd",
+  "split": "test",
+  "imgsz": 640,
+  "batch": 16,
+  "conf": 0.001,
+  "iou": 0.6,
+  "precision_mode": "fp32",
+  "result_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed2/evaluations/local_energy",
+  "speed_ms": {
+    "preprocess": 0.0962398268959739,
+    "inference": 8.090604435313832,
+    "loss": 0.00044974413785067475,
+    "postprocess": 0.23283741690895776
+  },
+  "overall": {
+    "precision": 0.959915319006731,
+    "recall": 0.9558823529411765,
+    "ap50": 0.9847677039964826,
+    "ap75": 0.5076181124358745,
+    "ap50_95": 0.5280138439328546
+  },
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "aircraft",
+      "precision": 0.959915319006731,
+      "recall": 0.9558823529411765,
+      "ap50": 0.9847677039964826,
+      "ap75": 0.5076181124358745,
+      "ap50_95": 0.5280138439328546
+    }
+  ]
+}

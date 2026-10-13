@@ -1,0 +1,20 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+air_sarship_20_baseline summary: 388 layers, 5984203 parameters, 0 gradients, 13.6 GFLOPs
+[34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/AIR_SARShip_2/labels/test...:   0%|          | 0/180 [00:00<?, ?it/s][34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/AIR_SARShip_2/labels/test... 115 images, 32 backgrounds, 0 corrupt:  64%|██████▍   | 115/180 [00:00<00:00, 1143.18it/s][34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/AIR_SARShip_2/labels/test... 180 images, 55 backgrounds, 0 corrupt: 100%|██████████| 180/180 [00:00<00:00, 1227.41it/s]
+[34m[1mval: [0mNew cache created: /home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/AIR_SARShip_2/labels/test.cache
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/6 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  17%|█▋        | 1/6 [00:00<00:03,  1.34it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  33%|███▎      | 2/6 [00:01<00:02,  1.94it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 3/6 [00:01<00:01,  2.30it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  67%|██████▋   | 4/6 [00:01<00:00,  2.55it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  83%|████████▎ | 5/6 [00:02<00:00,  2.71it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 6/6 [00:02<00:00,  3.20it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 6/6 [00:02<00:00,  2.61it/s]
+                   all        180        575      0.565      0.452      0.476      0.174
+Speed: 0.1ms preprocess, 9.5ms inference, 0.0ms loss, 0.5ms postprocess per image
+experiment: corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline
+subset:     AIR-SARShip-2.0
+P/R:        0.565412/0.452174
+AP50:       0.475901
+AP75:       0.074629
+AP50-95:    0.173750
+JSON:       /home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/eval_test.json
+
+===== 2026-08-28T12:04:13.560414 =====
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/tools/evaluate_sarmix.py --weights /home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/best.pt --data /home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/AIR_SARShip_2/AIR_SARShip_2.yaml --experiment corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline --placement baseline --variant baseline --state-dim 0 --seed 0 --subset AIR-SARShip-2.0 --split test --output-json /home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/eval_test.json --imgsz 640 --batch 32 --device 0 --workers 8 --project /home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/evaluations --name corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline_test

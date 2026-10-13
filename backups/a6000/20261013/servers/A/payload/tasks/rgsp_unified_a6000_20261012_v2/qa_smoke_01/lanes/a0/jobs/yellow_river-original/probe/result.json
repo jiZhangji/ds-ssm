@@ -1,0 +1,21 @@
+{
+  "dataset": "Yellow_River",
+  "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+  "estimated_full_seconds": 199.7194615935325,
+  "method": "Original",
+  "params": 3782737,
+  "peak_gpu_allocated_bytes": 2105719296,
+  "protocol_sha256": "8781cae2f9aa0e24f4179dee8a0e059ba082a9728e251f632b51d2d26ca7b1b0",
+  "seed": 0,
+  "status": "PROBE_PASS",
+  "task": "change_detection",
+  "test_evaluated": false,
+  "timed_update_seconds": [
+    0.544490009022411,
+    0.33401747298194095,
+    0.5404666500398889,
+    0.33189631399000064
+  ],
+  "updates_per_epoch": 2,
+  "validation_evaluated": false
+}

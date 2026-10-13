@@ -1,0 +1,20 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+sadd_baseline summary: 388 layers, 5984203 parameters, 0 gradients, 13.6 GFLOPs
+[34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SADD/labels/test...:   0%|          | 0/44 [00:00<?, ?it/s][34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SADD/labels/test... 44 images, 0 backgrounds, 0 corrupt: 100%|██████████| 44/44 [00:00<00:00, 1650.55it/s]
+[34m[1mval: [0mNew cache created: /home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SADD/labels/test.cache
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/2 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 1/2 [00:00<00:00,  2.08it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 2/2 [00:00<00:00,  3.53it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 2/2 [00:00<00:00,  3.20it/s]
+                   all         44        408      0.934      0.966      0.983       0.55
+Speed: 0.1ms preprocess, 9.6ms inference, 0.0ms loss, 0.7ms postprocess per image
+experiment: corrected_v2_sadd_sd32_b32_sadd_baseline
+subset:     SADD
+P/R:        0.934041/0.965686
+AP50:       0.983350
+AP75:       0.570299
+AP50-95:    0.550183
+JSON:       /home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/eval_test.json
+
+===== 2026-08-27T17:35:45.465481 =====
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/tools/evaluate_sarmix.py --weights /home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/best.pt --data /home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SADD/SADD.yaml --experiment corrected_v2_sadd_sd32_b32_sadd_baseline --placement baseline --variant baseline --state-dim 0 --seed 0 --subset SADD --split test --output-json /home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/eval_test.json --imgsz 640 --batch 32 --device 0 --workers 8 --project /home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/evaluations --name corrected_v2_sadd_sd32_b32_sadd_baseline_test

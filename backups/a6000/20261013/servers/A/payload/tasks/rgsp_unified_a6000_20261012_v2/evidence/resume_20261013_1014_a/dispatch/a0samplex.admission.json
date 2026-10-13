@@ -1,0 +1,15 @@
+{
+  "admitted": [
+    "sample-alexnet",
+    "sample-vgg16",
+    "sample-googlenet",
+    "sample-vit_b_16",
+    "sample-swin_t",
+    "sample-swin_b"
+  ],
+  "blocked": [],
+  "lane": "a0samplex",
+  "preflight_state_sha256": "9db25bd21e93ce26d81e17e0dc8e5dce3d94f61f96e769ee4cd6a4d218b2d599",
+  "production_sha256": "41a4e95e3b17a4417d49d988476fdce39288b304aef50728f6560203bfe5853c",
+  "state": "ADMITTED_FOR_TRAINING"
+}

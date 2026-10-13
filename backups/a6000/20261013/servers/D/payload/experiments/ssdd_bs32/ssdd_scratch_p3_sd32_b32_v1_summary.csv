@@ -1,0 +1,2 @@
+dataset,experiment,variant,placement,state_dim,precision,recall,ap50,ap75,ap50_95,inference_ms,weights
+SSDD,ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3,full,p3,32,0.9247787355242555,0.8106017929947384,0.886109486794051,0.3689887391757016,0.4394833461103955,6.75890980095699,/home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/best.pt

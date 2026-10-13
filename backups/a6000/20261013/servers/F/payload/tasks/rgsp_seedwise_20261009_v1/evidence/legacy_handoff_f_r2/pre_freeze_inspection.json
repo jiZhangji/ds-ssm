@@ -1,0 +1,246 @@
+{
+  "f0": {
+    "child": {
+      "argv": [
+        "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/train_redirect.py",
+        "--code",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code",
+        "--output",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed0",
+        "--variant",
+        "local_energy",
+        "--seed",
+        "0",
+        "--epochs",
+        "150",
+        "--patience",
+        "30"
+      ],
+      "exit_code": 0,
+      "pid": 124025,
+      "ppid": 122224,
+      "process_group": 122224,
+      "session": 122224,
+      "signal_metadata": {
+        "ShdPnd": "0000000000000000",
+        "SigBlk": "0000000000000000",
+        "SigCgt": "0000000180010002",
+        "SigIgn": "0000000001001000",
+        "SigPnd": "0000000000000000",
+        "Threads": "29",
+        "Uid": "1000\t1000\t1000\t1000"
+      },
+      "start_ticks": 6959750,
+      "state": "R"
+    },
+    "gpu": {
+      "memory_mib": 14988,
+      "name": "NVIDIA RTX A6000",
+      "pids": [
+        124025
+      ],
+      "utilization_percent": 98,
+      "uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b"
+    },
+    "observed_utc": "2026-10-09T02:51:26.426801+00:00",
+    "parent": {
+      "argv": [
+        "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/recovery_queue.py",
+        "queue",
+        "--key",
+        "f0"
+      ],
+      "exit_code": 0,
+      "pid": 122224,
+      "ppid": 1,
+      "process_group": 122224,
+      "session": 122224,
+      "signal_metadata": {
+        "ShdPnd": "0000000000000000",
+        "SigBlk": "0000000000000000",
+        "SigCgt": "0000000180000002",
+        "SigIgn": "0000000001001000",
+        "SigPnd": "0000000000000000",
+        "Threads": "1",
+        "Uid": "1000\t1000\t1000\t1000"
+      },
+      "start_ticks": 6617006,
+      "state": "S"
+    },
+    "queue_state": {
+      "command": [
+        "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/train_redirect.py",
+        "--code",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code",
+        "--output",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed0",
+        "--variant",
+        "local_energy",
+        "--seed",
+        "0",
+        "--epochs",
+        "150",
+        "--patience",
+        "30"
+      ],
+      "completed": [
+        "original",
+        "matched_identity",
+        "matched_scale075"
+      ],
+      "current": "local_energy",
+      "gpu": {
+        "memory_mib": 370,
+        "pids": [],
+        "utilization": 0,
+        "uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b"
+      },
+      "gpu_uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+      "host": "powerleader-a6000-f",
+      "idle_seconds": 120.32722425399697,
+      "pending": [
+        "matched_scale075",
+        "local_energy",
+        "local_energy_input",
+        "local_energy_delta",
+        "full",
+        "full_fixed_half",
+        "residual_scale075",
+        "energy_only",
+        "guidance_only",
+        "global"
+      ],
+      "pid": 122224,
+      "predecessor_state": "/home/powerleader/codex_sar_agent_final_v1p1_20261008/results/final/study_v1_1/model_runs_dist/a6000_f_gpu0/frozen_queue_state.json",
+      "started_unix": 1791509051.5972583,
+      "state": "running",
+      "updated_unix": 1791512478.9988256
+    },
+    "recovery_manifest_sha256": "ad7e68e95734010f1d99af0ad6b7cb39ca2b25f3883159c822cb5b7e398b27c0"
+  },
+  "f1": {
+    "child": {
+      "argv": [
+        "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/train_redirect.py",
+        "--code",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code",
+        "--output",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed1",
+        "--variant",
+        "local_energy",
+        "--seed",
+        "1",
+        "--epochs",
+        "150",
+        "--patience",
+        "30"
+      ],
+      "exit_code": 0,
+      "pid": 123607,
+      "ppid": 122228,
+      "process_group": 122228,
+      "session": 122228,
+      "signal_metadata": {
+        "ShdPnd": "0000000000000000",
+        "SigBlk": "0000000000000000",
+        "SigCgt": "0000000180010002",
+        "SigIgn": "0000000001001000",
+        "SigPnd": "0000000000000000",
+        "Threads": "29",
+        "Uid": "1000\t1000\t1000\t1000"
+      },
+      "start_ticks": 6847065,
+      "state": "R"
+    },
+    "gpu": {
+      "memory_mib": 14634,
+      "name": "NVIDIA RTX A6000",
+      "pids": [
+        123607
+      ],
+      "utilization_percent": 100,
+      "uuid": "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40"
+    },
+    "observed_utc": "2026-10-09T02:51:26.469138+00:00",
+    "parent": {
+      "argv": [
+        "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/recovery_queue.py",
+        "queue",
+        "--key",
+        "f1"
+      ],
+      "exit_code": 0,
+      "pid": 122228,
+      "ppid": 1,
+      "process_group": 122228,
+      "session": 122228,
+      "signal_metadata": {
+        "ShdPnd": "0000000000000000",
+        "SigBlk": "0000000000000000",
+        "SigCgt": "0000000180000002",
+        "SigIgn": "0000000001001000",
+        "SigPnd": "0000000000000000",
+        "Threads": "1",
+        "Uid": "1000\t1000\t1000\t1000"
+      },
+      "start_ticks": 6617015,
+      "state": "S"
+    },
+    "queue_state": {
+      "command": [
+        "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/train_redirect.py",
+        "--code",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code",
+        "--output",
+        "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed1",
+        "--variant",
+        "local_energy",
+        "--seed",
+        "1",
+        "--epochs",
+        "150",
+        "--patience",
+        "30"
+      ],
+      "completed": [
+        "original",
+        "matched_identity",
+        "matched_scale075"
+      ],
+      "current": "local_energy",
+      "gpu": {
+        "memory_mib": 16,
+        "pids": [],
+        "utilization": 0,
+        "uuid": "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40"
+      },
+      "gpu_uuid": "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40",
+      "host": "powerleader-a6000-f",
+      "idle_seconds": 120.37202663700737,
+      "pending": [
+        "matched_scale075",
+        "local_energy",
+        "local_energy_input",
+        "local_energy_delta",
+        "full",
+        "full_fixed_half",
+        "residual_scale075",
+        "energy_only",
+        "guidance_only",
+        "global"
+      ],
+      "pid": 122228,
+      "predecessor_state": "/home/powerleader/codex_sar_agent_final_v1p1_20261008/results/final/study_v1_1/model_runs_dist/a6000_f_gpu1/frozen_queue_state.json",
+      "started_unix": 1791509051.6905658,
+      "state": "running",
+      "updated_unix": 1791511352.1475883
+    },
+    "recovery_manifest_sha256": "046b5eea5f2dc34c8211e2fbe915471b6168cc9b6f27d4c9e1382dd2422efd3a"
+  }
+}

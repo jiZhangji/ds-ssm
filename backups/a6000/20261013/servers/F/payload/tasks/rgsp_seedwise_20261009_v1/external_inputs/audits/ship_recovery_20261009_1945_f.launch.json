@@ -1,0 +1,26 @@
+{
+  "pid": 134323,
+  "argv": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/audit_external_archives.py",
+    "--dataset",
+    "sar_shipdataset",
+    "--snapshot-zip",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/source_snapshot_v1.zip",
+    "--snapshot-sha256",
+    "aea74cd1d3a55b750004b72249a8896c13a7751025b5398d8eb2e37098bb9b69",
+    "--output",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1945_f"
+  ],
+  "hostname": "powerleader-a6000-f",
+  "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/raw_archives/ship_dataset_v0.zip.mirror_20261009_1939_f",
+  "source_sha256": "6a185fbf2f51408d19ca941745581a8e1aabbacd33db6494985621086495481e",
+  "canonical_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/raw_archives/ship_dataset_v0.zip",
+  "canonical_link_created": true,
+  "no_old_files_overwritten": true,
+  "readiness_published": false,
+  "launched_utc": "2026-10-09T11:46:46.549171+00:00",
+  "log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1945_f.stdout.log"
+}

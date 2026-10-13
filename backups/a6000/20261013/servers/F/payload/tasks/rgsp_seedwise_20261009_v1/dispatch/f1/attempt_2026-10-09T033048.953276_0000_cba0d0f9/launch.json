@@ -1,0 +1,46 @@
+{
+  "attempt_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f1/attempt_2026-10-09T033048.953276_0000_cba0d0f9",
+  "command": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py",
+    "--plan",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+    "--host-key",
+    "f1",
+    "--inherited-lock-fd",
+    "3",
+    "--attempt-dir",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f1/attempt_2026-10-09T033048.953276_0000_cba0d0f9"
+  ],
+  "detached": true,
+  "host_key": "f1",
+  "initial_returncode": null,
+  "launched_utc": "2026-10-09T03:30:49.957539+00:00",
+  "log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f1/attempt_2026-10-09T033048.953276_0000_cba0d0f9/dispatcher.log",
+  "owner": {
+    "argv": [
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "-B",
+      "-u",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py",
+      "--plan",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+      "--host-key",
+      "f1",
+      "--inherited-lock-fd",
+      "3",
+      "--attempt-dir",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/f1/attempt_2026-10-09T033048.953276_0000_cba0d0f9"
+    ],
+    "pid": 127348,
+    "ppid": 127340,
+    "session": 127348,
+    "start_ticks": 7376745,
+    "state": "S"
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-campaign-dispatch-v1",
+  "script_sha256": "9def6f9d37cd8f38faf51a7812d9e3612495bc333415c46375fa28b09dc67477"
+}

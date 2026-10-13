@@ -1,0 +1,63 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Resume runtime override: imgsz=640
+Resume runtime override: batch=8
+Resume runtime override: device=0
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+WARNING ⚠️ Upgrade to torch>=2.0.0 for deterministic training.
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zhangji/ig-ds-ssm-cross/experiments/detection/ig_dsssm_p3_remaining_detection_seed0_sadd_baseline/weights'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zhangji/ig-ds-ssm-cross/experiments/detection/ig_dsssm_p3_remaining_detection_seed0_sadd_baseline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zhangji/ig-ds-ssm-cross/experiments/detection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zhangji/ig-ds-ssm-cross/experiments'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zhangji/ig-ds-ssm-cross'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/mbyolo_train_sarair.py", line 208, in <module>
+    model.train(**train_args)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/engine/model.py", line 655, in train
+    self.trainer = (trainer or self._smart_load("trainer"))(overrides=args, _callbacks=self.callbacks)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/engine/trainer.py", line 112, in __init__
+    self.wdir.mkdir(parents=True, exist_ok=True)  # make dir
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1179, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1179, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1179, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  [Previous line repeated 2 more times]
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/home/zhangji'
+
+===== 2026-08-26T11:21:54.716149 =====
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/mbyolo_train_sarair.py --task train --data /home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SADD/SADD.yaml --config /home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0-manifest/configs/sadd_baseline.yaml --resume /home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_baseline/weights/last.pt --resume_batch_size 8 --resume_imgsz 640 --resume_device 0 --epochs 150 --workers 8 --optimizer AdamW --lr0 0.0002 --lrf 0.01 --weight_decay 0.0005 --nbs 64 --warmup_epochs 3.0 --module_warmup_epochs 0 --patience 30 --cos_lr --mosaic 0.3 --close_mosaic 15 --degrees 180 --translate 0.1 --scale 0.3 --flipud 0.5 --fliplr 0.5 --seed 0 --deterministic --project /home/powerleader/ig-ds-ssm/experiments/cross_task_detection --name ig_dsssm_p3_remaining_detection_seed0_sadd_baseline

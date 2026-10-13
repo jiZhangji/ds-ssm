@@ -1,0 +1,1124 @@
+[2026-09-05 17:00:53] starting corrected SAR-ACD BS64 sweep
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+SAR-ACD baseline finetune 1/200 loss=1.42271 score=0.41252
+SAR-ACD baseline finetune 2/200 loss=1.25017 score=0.37947
+SAR-ACD baseline finetune 3/200 loss=1.24462 score=0.49304
+SAR-ACD baseline finetune 4/200 loss=1.20369 score=0.54370
+SAR-ACD baseline finetune 5/200 loss=1.16558 score=0.51294
+SAR-ACD baseline finetune 6/200 loss=1.12475 score=0.55728
+SAR-ACD baseline finetune 7/200 loss=1.09290 score=0.53991
+SAR-ACD baseline finetune 8/200 loss=1.08930 score=0.57715
+SAR-ACD baseline finetune 9/200 loss=1.06065 score=0.65014
+SAR-ACD baseline finetune 10/200 loss=1.03282 score=0.63067
+SAR-ACD baseline finetune 11/200 loss=1.03423 score=0.62332
+SAR-ACD baseline finetune 12/200 loss=0.97788 score=0.66780
+SAR-ACD baseline finetune 13/200 loss=0.96992 score=0.63712
+SAR-ACD baseline finetune 14/200 loss=0.96948 score=0.60344
+SAR-ACD baseline finetune 15/200 loss=0.94106 score=0.67791
+SAR-ACD baseline finetune 16/200 loss=0.93044 score=0.66814
+SAR-ACD baseline finetune 17/200 loss=0.88772 score=0.65429
+SAR-ACD baseline finetune 18/200 loss=0.90232 score=0.71629
+SAR-ACD baseline finetune 19/200 loss=0.89651 score=0.72844
+SAR-ACD baseline finetune 20/200 loss=0.87149 score=0.69140
+SAR-ACD baseline finetune 21/200 loss=0.82652 score=0.73486
+SAR-ACD baseline finetune 22/200 loss=0.83080 score=0.74160
+SAR-ACD baseline finetune 23/200 loss=0.77393 score=0.77173
+SAR-ACD baseline finetune 24/200 loss=0.81242 score=0.81932
+SAR-ACD baseline finetune 25/200 loss=0.78447 score=0.77011
+SAR-ACD baseline finetune 26/200 loss=0.75124 score=0.76860
+SAR-ACD baseline finetune 27/200 loss=0.74772 score=0.76140
+SAR-ACD baseline finetune 28/200 loss=0.77232 score=0.73497
+SAR-ACD baseline finetune 29/200 loss=0.76288 score=0.81888
+SAR-ACD baseline finetune 30/200 loss=0.73556 score=0.80060
+SAR-ACD baseline finetune 31/200 loss=0.70639 score=0.77586
+SAR-ACD baseline finetune 32/200 loss=0.69793 score=0.78734
+SAR-ACD baseline finetune 33/200 loss=0.73462 score=0.76346
+SAR-ACD baseline finetune 34/200 loss=0.68585 score=0.84387
+SAR-ACD baseline finetune 35/200 loss=0.69488 score=0.77566
+SAR-ACD baseline finetune 36/200 loss=0.67847 score=0.83968
+SAR-ACD baseline finetune 37/200 loss=0.68227 score=0.74432
+SAR-ACD baseline finetune 38/200 loss=0.65787 score=0.83655
+SAR-ACD baseline finetune 39/200 loss=0.67274 score=0.83809
+SAR-ACD baseline finetune 40/200 loss=0.62923 score=0.79011
+SAR-ACD baseline finetune 41/200 loss=0.65214 score=0.82274
+SAR-ACD baseline finetune 42/200 loss=0.62087 score=0.81032
+SAR-ACD baseline finetune 43/200 loss=0.62222 score=0.74642
+SAR-ACD baseline finetune 44/200 loss=0.61506 score=0.83560
+SAR-ACD baseline finetune 45/200 loss=0.61217 score=0.87052
+SAR-ACD baseline finetune 46/200 loss=0.59602 score=0.80905
+SAR-ACD baseline finetune 47/200 loss=0.59864 score=0.80973
+SAR-ACD baseline finetune 48/200 loss=0.59108 score=0.88783
+SAR-ACD baseline finetune 49/200 loss=0.57827 score=0.87650
+SAR-ACD baseline finetune 50/200 loss=0.57839 score=0.86854
+SAR-ACD baseline finetune 51/200 loss=0.57699 score=0.88420
+SAR-ACD baseline finetune 52/200 loss=0.56619 score=0.82699
+SAR-ACD baseline finetune 53/200 loss=0.56016 score=0.75581
+SAR-ACD baseline finetune 54/200 loss=0.57256 score=0.87204
+SAR-ACD baseline finetune 55/200 loss=0.56152 score=0.85921
+SAR-ACD baseline finetune 56/200 loss=0.55171 score=0.81694
+SAR-ACD baseline finetune 57/200 loss=0.53377 score=0.88219
+SAR-ACD baseline finetune 58/200 loss=0.53869 score=0.89285
+SAR-ACD baseline finetune 59/200 loss=0.55574 score=0.88081
+SAR-ACD baseline finetune 60/200 loss=0.53410 score=0.86477
+SAR-ACD baseline finetune 61/200 loss=0.55332 score=0.87884
+SAR-ACD baseline finetune 62/200 loss=0.51908 score=0.86179
+SAR-ACD baseline finetune 63/200 loss=0.53825 score=0.89150
+SAR-ACD baseline finetune 64/200 loss=0.53411 score=0.87599
+SAR-ACD baseline finetune 65/200 loss=0.52808 score=0.84916
+SAR-ACD baseline finetune 66/200 loss=0.51820 score=0.90419
+SAR-ACD baseline finetune 67/200 loss=0.51775 score=0.91964
+SAR-ACD baseline finetune 68/200 loss=0.52468 score=0.89788
+SAR-ACD baseline finetune 69/200 loss=0.49463 score=0.87528
+SAR-ACD baseline finetune 70/200 loss=0.50888 score=0.90342
+SAR-ACD baseline finetune 71/200 loss=0.51942 score=0.87487
+SAR-ACD baseline finetune 72/200 loss=0.52135 score=0.91903
+SAR-ACD baseline finetune 73/200 loss=0.52136 score=0.91574
+SAR-ACD baseline finetune 74/200 loss=0.48633 score=0.86361
+SAR-ACD baseline finetune 75/200 loss=0.51583 score=0.92813
+SAR-ACD baseline finetune 76/200 loss=0.49607 score=0.89490
+SAR-ACD baseline finetune 77/200 loss=0.50134 score=0.89591
+SAR-ACD baseline finetune 78/200 loss=0.48556 score=0.89148
+SAR-ACD baseline finetune 79/200 loss=0.49136 score=0.89599
+SAR-ACD baseline finetune 80/200 loss=0.48208 score=0.87969
+SAR-ACD baseline finetune 81/200 loss=0.48199 score=0.87941
+SAR-ACD baseline finetune 82/200 loss=0.49007 score=0.91546
+SAR-ACD baseline finetune 83/200 loss=0.48233 score=0.91983
+SAR-ACD baseline finetune 84/200 loss=0.48105 score=0.88549
+SAR-ACD baseline finetune 85/200 loss=0.48804 score=0.88674
+SAR-ACD baseline finetune 86/200 loss=0.47038 score=0.90019
+SAR-ACD baseline finetune 87/200 loss=0.47477 score=0.89931
+SAR-ACD baseline finetune 88/200 loss=0.47879 score=0.91167
+SAR-ACD baseline finetune 89/200 loss=0.47350 score=0.90769
+SAR-ACD baseline finetune 90/200 loss=0.48127 score=0.89504
+SAR-ACD baseline finetune 91/200 loss=0.46729 score=0.91552
+SAR-ACD baseline finetune 92/200 loss=0.47040 score=0.94751
+SAR-ACD baseline finetune 93/200 loss=0.48030 score=0.88746
+SAR-ACD baseline finetune 94/200 loss=0.47355 score=0.90842
+SAR-ACD baseline finetune 95/200 loss=0.47410 score=0.88742
+SAR-ACD baseline finetune 96/200 loss=0.47961 score=0.84617
+SAR-ACD baseline finetune 97/200 loss=0.47806 score=0.88383
+SAR-ACD baseline finetune 98/200 loss=0.45923 score=0.94015
+SAR-ACD baseline finetune 99/200 loss=0.47132 score=0.91209
+SAR-ACD baseline finetune 100/200 loss=0.46335 score=0.92018
+SAR-ACD baseline finetune 101/200 loss=0.45858 score=0.90333
+SAR-ACD baseline finetune 102/200 loss=0.47414 score=0.90424
+SAR-ACD baseline finetune 103/200 loss=0.46392 score=0.92827
+SAR-ACD baseline finetune 104/200 loss=0.46554 score=0.91222
+SAR-ACD baseline finetune 105/200 loss=0.45547 score=0.92360
+SAR-ACD baseline finetune 106/200 loss=0.45005 score=0.92004
+SAR-ACD baseline finetune 107/200 loss=0.46640 score=0.91611
+SAR-ACD baseline finetune 108/200 loss=0.45006 score=0.92727
+SAR-ACD baseline finetune 109/200 loss=0.45882 score=0.92767
+SAR-ACD baseline finetune 110/200 loss=0.45427 score=0.92767
+SAR-ACD baseline finetune 111/200 loss=0.45049 score=0.91983
+SAR-ACD baseline finetune 112/200 loss=0.44910 score=0.92780
+SAR-ACD baseline finetune 113/200 loss=0.44599 score=0.92424
+SAR-ACD baseline finetune 114/200 loss=0.45151 score=0.89594
+SAR-ACD baseline finetune 115/200 loss=0.45200 score=0.91219
+SAR-ACD baseline finetune 116/200 loss=0.44945 score=0.87743
+SAR-ACD baseline finetune 117/200 loss=0.44947 score=0.93129
+SAR-ACD baseline finetune 118/200 loss=0.44859 score=0.92351
+SAR-ACD baseline finetune 119/200 loss=0.45470 score=0.93064
+SAR-ACD baseline finetune 120/200 loss=0.45391 score=0.91117
+SAR-ACD baseline finetune 121/200 loss=0.45245 score=0.92416
+SAR-ACD baseline finetune 122/200 loss=0.45176 score=0.91233
+SAR-ACD baseline finetune 123/200 loss=0.44970 score=0.91597
+SAR-ACD baseline finetune 124/200 loss=0.44297 score=0.92378
+SAR-ACD baseline finetune 125/200 loss=0.43822 score=0.92386
+SAR-ACD baseline finetune 126/200 loss=0.44405 score=0.94792
+SAR-ACD baseline finetune 127/200 loss=0.44425 score=0.91999
+SAR-ACD baseline finetune 128/200 loss=0.43673 score=0.93543
+SAR-ACD baseline finetune 129/200 loss=0.43600 score=0.90339
+SAR-ACD baseline finetune 130/200 loss=0.44694 score=0.92379
+SAR-ACD baseline finetune 131/200 loss=0.43885 score=0.92373
+SAR-ACD baseline finetune 132/200 loss=0.44012 score=0.92408
+SAR-ACD baseline finetune 133/200 loss=0.43819 score=0.92795
+SAR-ACD baseline finetune 134/200 loss=0.44265 score=0.92006
+SAR-ACD baseline finetune 135/200 loss=0.43652 score=0.95561
+SAR-ACD baseline finetune 136/200 loss=0.43968 score=0.92356
+SAR-ACD baseline finetune 137/200 loss=0.44104 score=0.91997
+SAR-ACD baseline finetune 138/200 loss=0.44360 score=0.93992
+SAR-ACD baseline finetune 139/200 loss=0.43628 score=0.94768
+SAR-ACD baseline finetune 140/200 loss=0.43188 score=0.91984
+SAR-ACD baseline finetune 141/200 loss=0.43487 score=0.94779
+SAR-ACD baseline finetune 142/200 loss=0.43951 score=0.92726
+SAR-ACD baseline finetune 143/200 loss=0.43312 score=0.91571
+SAR-ACD baseline finetune 144/200 loss=0.44021 score=0.91577
+SAR-ACD baseline finetune 145/200 loss=0.43352 score=0.90418
+SAR-ACD baseline finetune 146/200 loss=0.43922 score=0.92773
+SAR-ACD baseline finetune 147/200 loss=0.43416 score=0.94003
+SAR-ACD baseline finetune 148/200 loss=0.42895 score=0.92409
+SAR-ACD baseline finetune 149/200 loss=0.42777 score=0.92752
+SAR-ACD baseline finetune 150/200 loss=0.43958 score=0.92746
+SAR-ACD baseline finetune 151/200 loss=0.43373 score=0.91922
+SAR-ACD baseline finetune 152/200 loss=0.43214 score=0.92021
+SAR-ACD baseline finetune 153/200 loss=0.42737 score=0.91966
+SAR-ACD baseline finetune 154/200 loss=0.42660 score=0.92782
+SAR-ACD baseline finetune 155/200 loss=0.43028 score=0.92758
+SAR-ACD baseline finetune 156/200 loss=0.43579 score=0.91187
+SAR-ACD baseline finetune 157/200 loss=0.42938 score=0.91587
+SAR-ACD baseline finetune 158/200 loss=0.42923 score=0.90778
+SAR-ACD baseline finetune 159/200 loss=0.43013 score=0.91979
+SAR-ACD baseline finetune 160/200 loss=0.43509 score=0.91975
+SAR-ACD baseline finetune 161/200 loss=0.42515 score=0.93165
+SAR-ACD baseline finetune 162/200 loss=0.43364 score=0.91961
+SAR-ACD baseline finetune 163/200 loss=0.43030 score=0.94027
+SAR-ACD baseline finetune 164/200 loss=0.42535 score=0.93602
+SAR-ACD baseline finetune 165/200 loss=0.42918 score=0.91588
+SAR-ACD baseline finetune 166/200 loss=0.42685 score=0.91546
+SAR-ACD baseline finetune 167/200 loss=0.42706 score=0.91562
+SAR-ACD baseline finetune 168/200 loss=0.43172 score=0.92769
+SAR-ACD baseline finetune 169/200 loss=0.42729 score=0.91555
+SAR-ACD baseline finetune 170/200 loss=0.43027 score=0.92738
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "backbone_layout": "vmamba_tiny",
+  "decoder": "multiscale",
+  "initialization": "official_vmamba_tiny_backbone_plus_random_new_modules",
+  "pretrained": {
+    "path": "/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "loaded_tensors": 272,
+    "model_tensors": 280,
+    "coverage": 0.9714285714285714,
+    "missing_tensors": 8,
+    "unexpected_tensors": 4
+  },
+  "protocol": null,
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 64,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 224,
+  "eval_batch": 64,
+  "epochs_requested": 200,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 200,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 135,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.8976377952755905,
+    "macro_precision": 0.8974186546314206,
+    "macro_recall": 0.8965964046737183,
+    "macro_f1": 0.8958501136303578,
+    "per_class_recall": [
+      0.8085106382978723,
+      0.9411764705882353,
+      0.9038461538461539,
+      0.8490566037735849,
+      0.9803921568627451
+    ],
+    "confusion_matrix": [
+      [
+        38,
+        4,
+        3,
+        1,
+        1
+      ],
+      [
+        1,
+        48,
+        0,
+        0,
+        2
+      ],
+      [
+        3,
+        0,
+        47,
+        1,
+        1
+      ],
+      [
+        6,
+        1,
+        0,
+        45,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        50
+      ]
+    ]
+  },
+  "params": 29482757,
+  "gflops": 0.550708416,
+  "latency_ms": 8.334235264919698,
+  "fps": 119.98701359069868,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_sar_acd_bs64_fixed_20260905/baseline_bs64/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+SAR-ACD ours finetune 1/200 loss=1.44214 score=0.45162
+SAR-ACD ours finetune 2/200 loss=1.26300 score=0.47624
+SAR-ACD ours finetune 3/200 loss=1.20091 score=0.57341
+SAR-ACD ours finetune 4/200 loss=1.20252 score=0.57791
+SAR-ACD ours finetune 5/200 loss=1.15084 score=0.56120
+SAR-ACD ours finetune 6/200 loss=1.18305 score=0.43821
+SAR-ACD ours finetune 7/200 loss=1.12543 score=0.58368
+SAR-ACD ours finetune 8/200 loss=1.09482 score=0.59320
+SAR-ACD ours finetune 9/200 loss=1.08559 score=0.59000
+SAR-ACD ours finetune 10/200 loss=1.03872 score=0.59660
+SAR-ACD ours finetune 11/200 loss=1.01936 score=0.57735
+SAR-ACD ours finetune 12/200 loss=1.00771 score=0.57781
+SAR-ACD ours finetune 13/200 loss=1.01350 score=0.63525
+SAR-ACD ours finetune 14/200 loss=0.93837 score=0.68267
+SAR-ACD ours finetune 15/200 loss=0.91280 score=0.54652
+SAR-ACD ours finetune 16/200 loss=0.94138 score=0.60951
+SAR-ACD ours finetune 17/200 loss=0.91153 score=0.72579
+SAR-ACD ours finetune 18/200 loss=0.89838 score=0.76953
+SAR-ACD ours finetune 19/200 loss=0.83913 score=0.75080
+SAR-ACD ours finetune 20/200 loss=0.83235 score=0.75591
+SAR-ACD ours finetune 21/200 loss=0.80866 score=0.60728
+SAR-ACD ours finetune 22/200 loss=0.82224 score=0.79738
+SAR-ACD ours finetune 23/200 loss=0.76831 score=0.73300
+SAR-ACD ours finetune 24/200 loss=0.76912 score=0.70589
+SAR-ACD ours finetune 25/200 loss=0.74679 score=0.74209
+SAR-ACD ours finetune 26/200 loss=0.72161 score=0.74256
+SAR-ACD ours finetune 27/200 loss=0.67920 score=0.83041
+SAR-ACD ours finetune 28/200 loss=0.66836 score=0.74694
+SAR-ACD ours finetune 29/200 loss=0.67808 score=0.80767
+SAR-ACD ours finetune 30/200 loss=0.66432 score=0.73477
+SAR-ACD ours finetune 31/200 loss=0.66643 score=0.79837
+SAR-ACD ours finetune 32/200 loss=0.65651 score=0.85547
+SAR-ACD ours finetune 33/200 loss=0.62374 score=0.86560
+SAR-ACD ours finetune 34/200 loss=0.63660 score=0.77178
+SAR-ACD ours finetune 35/200 loss=0.63457 score=0.79371
+SAR-ACD ours finetune 36/200 loss=0.59029 score=0.74529
+SAR-ACD ours finetune 37/200 loss=0.62603 score=0.89163
+SAR-ACD ours finetune 38/200 loss=0.58391 score=0.85746
+SAR-ACD ours finetune 39/200 loss=0.58850 score=0.84017
+SAR-ACD ours finetune 40/200 loss=0.58391 score=0.84058
+SAR-ACD ours finetune 41/200 loss=0.58549 score=0.85968
+SAR-ACD ours finetune 42/200 loss=0.55402 score=0.81557
+SAR-ACD ours finetune 43/200 loss=0.55692 score=0.82838
+SAR-ACD ours finetune 44/200 loss=0.54943 score=0.87228
+SAR-ACD ours finetune 45/200 loss=0.54168 score=0.89499
+SAR-ACD ours finetune 46/200 loss=0.56142 score=0.92042
+SAR-ACD ours finetune 47/200 loss=0.52260 score=0.89147
+SAR-ACD ours finetune 48/200 loss=0.52379 score=0.84794
+SAR-ACD ours finetune 49/200 loss=0.52613 score=0.79835
+SAR-ACD ours finetune 50/200 loss=0.53188 score=0.89632
+SAR-ACD ours finetune 51/200 loss=0.51221 score=0.86795
+SAR-ACD ours finetune 52/200 loss=0.51433 score=0.85576
+SAR-ACD ours finetune 53/200 loss=0.50185 score=0.89847
+SAR-ACD ours finetune 54/200 loss=0.49978 score=0.88918
+SAR-ACD ours finetune 55/200 loss=0.51399 score=0.84413
+SAR-ACD ours finetune 56/200 loss=0.51156 score=0.87317
+SAR-ACD ours finetune 57/200 loss=0.49866 score=0.92736
+SAR-ACD ours finetune 58/200 loss=0.48818 score=0.93561
+SAR-ACD ours finetune 59/200 loss=0.48046 score=0.88915
+SAR-ACD ours finetune 60/200 loss=0.47860 score=0.82528
+SAR-ACD ours finetune 61/200 loss=0.49111 score=0.87665
+SAR-ACD ours finetune 62/200 loss=0.47344 score=0.88423
+SAR-ACD ours finetune 63/200 loss=0.47375 score=0.92665
+SAR-ACD ours finetune 64/200 loss=0.46648 score=0.86529
+SAR-ACD ours finetune 65/200 loss=0.47813 score=0.91597
+SAR-ACD ours finetune 66/200 loss=0.47331 score=0.91977
+SAR-ACD ours finetune 67/200 loss=0.47874 score=0.93191
+SAR-ACD ours finetune 68/200 loss=0.46834 score=0.85042
+SAR-ACD ours finetune 69/200 loss=0.46579 score=0.87363
+SAR-ACD ours finetune 70/200 loss=0.48329 score=0.87487
+SAR-ACD ours finetune 71/200 loss=0.46643 score=0.89549
+SAR-ACD ours finetune 72/200 loss=0.46876 score=0.91623
+SAR-ACD ours finetune 73/200 loss=0.45607 score=0.90430
+SAR-ACD ours finetune 74/200 loss=0.46335 score=0.90423
+SAR-ACD ours finetune 75/200 loss=0.45728 score=0.86450
+SAR-ACD ours finetune 76/200 loss=0.45707 score=0.90366
+SAR-ACD ours finetune 77/200 loss=0.45620 score=0.87745
+SAR-ACD ours finetune 78/200 loss=0.44827 score=0.85774
+SAR-ACD ours finetune 79/200 loss=0.45481 score=0.87170
+SAR-ACD ours finetune 80/200 loss=0.45175 score=0.91298
+SAR-ACD ours finetune 81/200 loss=0.45371 score=0.92004
+SAR-ACD ours finetune 82/200 loss=0.46204 score=0.92023
+SAR-ACD ours finetune 83/200 loss=0.44405 score=0.92013
+SAR-ACD ours finetune 84/200 loss=0.44630 score=0.92368
+SAR-ACD ours finetune 85/200 loss=0.44068 score=0.89820
+SAR-ACD ours finetune 86/200 loss=0.44985 score=0.92026
+SAR-ACD ours finetune 87/200 loss=0.44338 score=0.92738
+SAR-ACD ours finetune 88/200 loss=0.43920 score=0.88879
+SAR-ACD ours finetune 89/200 loss=0.44594 score=0.92007
+SAR-ACD ours finetune 90/200 loss=0.44601 score=0.92401
+SAR-ACD ours finetune 91/200 loss=0.43912 score=0.93982
+SAR-ACD ours finetune 92/200 loss=0.43963 score=0.90914
+SAR-ACD ours finetune 93/200 loss=0.43447 score=0.95178
+SAR-ACD ours finetune 94/200 loss=0.43599 score=0.88922
+SAR-ACD ours finetune 95/200 loss=0.44099 score=0.93170
+SAR-ACD ours finetune 96/200 loss=0.44361 score=0.90012
+SAR-ACD ours finetune 97/200 loss=0.44366 score=0.90859
+SAR-ACD ours finetune 98/200 loss=0.43529 score=0.92416
+SAR-ACD ours finetune 99/200 loss=0.42333 score=0.93598
+SAR-ACD ours finetune 100/200 loss=0.42125 score=0.91995
+SAR-ACD ours finetune 101/200 loss=0.43806 score=0.91109
+SAR-ACD ours finetune 102/200 loss=0.42798 score=0.92796
+SAR-ACD ours finetune 103/200 loss=0.43020 score=0.91577
+SAR-ACD ours finetune 104/200 loss=0.43094 score=0.91070
+SAR-ACD ours finetune 105/200 loss=0.43093 score=0.89924
+SAR-ACD ours finetune 106/200 loss=0.43259 score=0.93510
+SAR-ACD ours finetune 107/200 loss=0.43326 score=0.91995
+SAR-ACD ours finetune 108/200 loss=0.42725 score=0.92427
+SAR-ACD ours finetune 109/200 loss=0.43369 score=0.94379
+SAR-ACD ours finetune 110/200 loss=0.42098 score=0.92833
+SAR-ACD ours finetune 111/200 loss=0.42662 score=0.95623
+SAR-ACD ours finetune 112/200 loss=0.42790 score=0.93479
+SAR-ACD ours finetune 113/200 loss=0.42388 score=0.94767
+SAR-ACD ours finetune 114/200 loss=0.43091 score=0.94790
+SAR-ACD ours finetune 115/200 loss=0.42600 score=0.92398
+SAR-ACD ours finetune 116/200 loss=0.42664 score=0.94744
+SAR-ACD ours finetune 117/200 loss=0.42170 score=0.91527
+SAR-ACD ours finetune 118/200 loss=0.42032 score=0.86191
+SAR-ACD ours finetune 119/200 loss=0.42998 score=0.93639
+SAR-ACD ours finetune 120/200 loss=0.42198 score=0.90027
+SAR-ACD ours finetune 121/200 loss=0.42620 score=0.94423
+SAR-ACD ours finetune 122/200 loss=0.42465 score=0.91266
+SAR-ACD ours finetune 123/200 loss=0.41897 score=0.94044
+SAR-ACD ours finetune 124/200 loss=0.41947 score=0.92826
+SAR-ACD ours finetune 125/200 loss=0.41645 score=0.93163
+SAR-ACD ours finetune 126/200 loss=0.42526 score=0.94837
+SAR-ACD ours finetune 127/200 loss=0.42137 score=0.91094
+SAR-ACD ours finetune 128/200 loss=0.42468 score=0.93198
+SAR-ACD ours finetune 129/200 loss=0.42033 score=0.93611
+SAR-ACD ours finetune 130/200 loss=0.42000 score=0.94024
+SAR-ACD ours finetune 131/200 loss=0.41668 score=0.94385
+SAR-ACD ours finetune 132/200 loss=0.41973 score=0.92827
+SAR-ACD ours finetune 133/200 loss=0.42186 score=0.92873
+SAR-ACD ours finetune 134/200 loss=0.41513 score=0.92034
+SAR-ACD ours finetune 135/200 loss=0.42199 score=0.92451
+SAR-ACD ours finetune 136/200 loss=0.41299 score=0.92811
+SAR-ACD ours finetune 137/200 loss=0.41510 score=0.94017
+SAR-ACD ours finetune 138/200 loss=0.41912 score=0.93197
+SAR-ACD ours finetune 139/200 loss=0.41297 score=0.92828
+SAR-ACD ours finetune 140/200 loss=0.41359 score=0.94001
+SAR-ACD ours finetune 141/200 loss=0.41413 score=0.91282
+SAR-ACD ours finetune 142/200 loss=0.41414 score=0.94024
+SAR-ACD ours finetune 143/200 loss=0.41281 score=0.94402
+SAR-ACD ours finetune 144/200 loss=0.42043 score=0.93180
+SAR-ACD ours finetune 145/200 loss=0.41112 score=0.94019
+SAR-ACD ours finetune 146/200 loss=0.42077 score=0.94380
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "vmamba_tiny",
+  "decoder": "multiscale",
+  "initialization": "official_vmamba_tiny_backbone_plus_random_new_modules",
+  "pretrained": {
+    "path": "/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "loaded_tensors": 272,
+    "model_tensors": 280,
+    "coverage": 0.9714285714285714,
+    "missing_tensors": 8,
+    "unexpected_tensors": 4
+  },
+  "protocol": null,
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 64,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 224,
+  "eval_batch": 64,
+  "epochs_requested": 200,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 200,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 111,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.9133858267716536,
+    "macro_precision": 0.9169741937362215,
+    "macro_recall": 0.91358004956607,
+    "macro_f1": 0.9127491305831613,
+    "per_class_recall": [
+      0.9148936170212766,
+      0.8431372549019608,
+      0.9230769230769231,
+      0.8867924528301887,
+      1.0
+    ],
+    "confusion_matrix": [
+      [
+        43,
+        3,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        43,
+        0,
+        0,
+        7
+      ],
+      [
+        3,
+        0,
+        48,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        47,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        51
+      ]
+    ]
+  },
+  "params": 29808875,
+  "gflops": 0.804084672,
+  "latency_ms": 9.258341166423634,
+  "fps": 108.01070969674429,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_sar_acd_bs64_fixed_20260905/ours_bs64/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+SAR-ACD ours warmup 1/20 loss=1.69795 score=0.20605
+SAR-ACD ours warmup 2/20 loss=1.56069 score=0.35349
+SAR-ACD ours warmup 3/20 loss=1.34159 score=0.35698
+SAR-ACD ours warmup 4/20 loss=1.25539 score=0.43267
+SAR-ACD ours warmup 5/20 loss=1.21169 score=0.53246
+SAR-ACD ours warmup 6/20 loss=1.19179 score=0.54283
+SAR-ACD ours warmup 7/20 loss=1.17538 score=0.55067
+SAR-ACD ours warmup 8/20 loss=1.16944 score=0.54507
+SAR-ACD ours warmup 9/20 loss=1.15263 score=0.56694
+SAR-ACD ours warmup 10/20 loss=1.13124 score=0.57486
+SAR-ACD ours warmup 11/20 loss=1.12480 score=0.53787
+SAR-ACD ours warmup 12/20 loss=1.11204 score=0.57213
+SAR-ACD ours warmup 13/20 loss=1.11024 score=0.54195
+SAR-ACD ours warmup 14/20 loss=1.10339 score=0.57528
+SAR-ACD ours warmup 15/20 loss=1.09762 score=0.59135
+SAR-ACD ours warmup 16/20 loss=1.09776 score=0.58108
+SAR-ACD ours warmup 17/20 loss=1.08976 score=0.60687
+SAR-ACD ours warmup 18/20 loss=1.08674 score=0.59551
+SAR-ACD ours warmup 19/20 loss=1.08254 score=0.59551
+SAR-ACD ours warmup 20/20 loss=1.08496 score=0.60734
+WARMUP COMPLETE: restored ImageNet backbone and started full fine-tuning
+SAR-ACD ours finetune 1/200 loss=1.43582 score=0.49539
+SAR-ACD ours finetune 2/200 loss=1.19345 score=0.46952
+SAR-ACD ours finetune 3/200 loss=1.17956 score=0.45547
+SAR-ACD ours finetune 4/200 loss=1.15169 score=0.54802
+SAR-ACD ours finetune 5/200 loss=1.11945 score=0.66498
+SAR-ACD ours finetune 6/200 loss=1.08659 score=0.59266
+SAR-ACD ours finetune 7/200 loss=1.03558 score=0.58557
+SAR-ACD ours finetune 8/200 loss=1.00250 score=0.62254
+SAR-ACD ours finetune 9/200 loss=0.97165 score=0.70220
+SAR-ACD ours finetune 10/200 loss=0.90240 score=0.67681
+SAR-ACD ours finetune 11/200 loss=0.90366 score=0.71102
+SAR-ACD ours finetune 12/200 loss=0.85078 score=0.74023
+SAR-ACD ours finetune 13/200 loss=0.83046 score=0.73407
+SAR-ACD ours finetune 14/200 loss=0.80146 score=0.71826
+SAR-ACD ours finetune 15/200 loss=0.77977 score=0.72808
+SAR-ACD ours finetune 16/200 loss=0.73195 score=0.77587
+SAR-ACD ours finetune 17/200 loss=0.74552 score=0.68607
+SAR-ACD ours finetune 18/200 loss=0.70817 score=0.73547
+SAR-ACD ours finetune 19/200 loss=0.67209 score=0.77780
+SAR-ACD ours finetune 20/200 loss=0.66831 score=0.77049
+SAR-ACD ours finetune 21/200 loss=0.64144 score=0.88269
+SAR-ACD ours finetune 22/200 loss=0.64058 score=0.80887
+SAR-ACD ours finetune 23/200 loss=0.61708 score=0.85594
+SAR-ACD ours finetune 24/200 loss=0.59581 score=0.88198
+SAR-ACD ours finetune 25/200 loss=0.57937 score=0.93907
+SAR-ACD ours finetune 26/200 loss=0.58089 score=0.88733
+SAR-ACD ours finetune 27/200 loss=0.56847 score=0.84169
+SAR-ACD ours finetune 28/200 loss=0.56985 score=0.89929
+SAR-ACD ours finetune 29/200 loss=0.55053 score=0.89951
+SAR-ACD ours finetune 30/200 loss=0.55294 score=0.89086
+SAR-ACD ours finetune 31/200 loss=0.54643 score=0.86394
+SAR-ACD ours finetune 32/200 loss=0.52976 score=0.89311
+SAR-ACD ours finetune 33/200 loss=0.53500 score=0.93531
+SAR-ACD ours finetune 34/200 loss=0.51638 score=0.90689
+SAR-ACD ours finetune 35/200 loss=0.52268 score=0.90822
+SAR-ACD ours finetune 36/200 loss=0.50898 score=0.90737
+SAR-ACD ours finetune 37/200 loss=0.50789 score=0.86582
+SAR-ACD ours finetune 38/200 loss=0.50979 score=0.94394
+SAR-ACD ours finetune 39/200 loss=0.49419 score=0.97217
+SAR-ACD ours finetune 40/200 loss=0.49418 score=0.91517
+SAR-ACD ours finetune 41/200 loss=0.49600 score=0.89171
+SAR-ACD ours finetune 42/200 loss=0.48430 score=0.95211
+SAR-ACD ours finetune 43/200 loss=0.46914 score=0.92362
+SAR-ACD ours finetune 44/200 loss=0.47391 score=0.94816
+SAR-ACD ours finetune 45/200 loss=0.47737 score=0.95449
+SAR-ACD ours finetune 46/200 loss=0.48098 score=0.91503
+SAR-ACD ours finetune 47/200 loss=0.47498 score=0.91644
+SAR-ACD ours finetune 48/200 loss=0.46068 score=0.93140
+SAR-ACD ours finetune 49/200 loss=0.45827 score=0.95135
+SAR-ACD ours finetune 50/200 loss=0.46712 score=0.91701
+SAR-ACD ours finetune 51/200 loss=0.45317 score=0.90831
+SAR-ACD ours finetune 52/200 loss=0.45508 score=0.94431
+SAR-ACD ours finetune 53/200 loss=0.45692 score=0.91569
+SAR-ACD ours finetune 54/200 loss=0.45913 score=0.92325
+SAR-ACD ours finetune 55/200 loss=0.45570 score=0.95616
+SAR-ACD ours finetune 56/200 loss=0.46053 score=0.94006
+SAR-ACD ours finetune 57/200 loss=0.46034 score=0.91924
+SAR-ACD ours finetune 58/200 loss=0.44734 score=0.95588
+SAR-ACD ours finetune 59/200 loss=0.44069 score=0.95190
+SAR-ACD ours finetune 60/200 loss=0.44071 score=0.95268
+SAR-ACD ours finetune 61/200 loss=0.44643 score=0.95204
+SAR-ACD ours finetune 62/200 loss=0.44244 score=0.97580
+SAR-ACD ours finetune 63/200 loss=0.45632 score=0.91969
+SAR-ACD ours finetune 64/200 loss=0.45032 score=0.95552
+SAR-ACD ours finetune 65/200 loss=0.43924 score=0.96769
+SAR-ACD ours finetune 66/200 loss=0.44719 score=0.97572
+SAR-ACD ours finetune 67/200 loss=0.44695 score=0.95065
+SAR-ACD ours finetune 68/200 loss=0.44674 score=0.90886
+SAR-ACD ours finetune 69/200 loss=0.44275 score=0.93171
+SAR-ACD ours finetune 70/200 loss=0.43920 score=0.96405
+SAR-ACD ours finetune 71/200 loss=0.43846 score=0.95999
+SAR-ACD ours finetune 72/200 loss=0.43384 score=0.93068
+SAR-ACD ours finetune 73/200 loss=0.43976 score=0.92366
+SAR-ACD ours finetune 74/200 loss=0.43767 score=0.97976
+SAR-ACD ours finetune 75/200 loss=0.42651 score=0.96360
+SAR-ACD ours finetune 76/200 loss=0.43205 score=0.95973
+SAR-ACD ours finetune 77/200 loss=0.42973 score=0.95563
+SAR-ACD ours finetune 78/200 loss=0.43195 score=0.95141
+SAR-ACD ours finetune 79/200 loss=0.43382 score=0.94465
+SAR-ACD ours finetune 80/200 loss=0.43778 score=0.91671
+SAR-ACD ours finetune 81/200 loss=0.42977 score=0.97576
+SAR-ACD ours finetune 82/200 loss=0.43311 score=0.96325
+SAR-ACD ours finetune 83/200 loss=0.42707 score=0.98013
+SAR-ACD ours finetune 84/200 loss=0.43003 score=0.97593
+SAR-ACD ours finetune 85/200 loss=0.43463 score=0.96003
+SAR-ACD ours finetune 86/200 loss=0.42037 score=0.96803
+SAR-ACD ours finetune 87/200 loss=0.42897 score=0.91622
+SAR-ACD ours finetune 88/200 loss=0.43152 score=0.98810
+SAR-ACD ours finetune 89/200 loss=0.41557 score=0.96781
+SAR-ACD ours finetune 90/200 loss=0.42506 score=0.98006
+SAR-ACD ours finetune 91/200 loss=0.42529 score=0.97184
+SAR-ACD ours finetune 92/200 loss=0.42340 score=0.96835
+SAR-ACD ours finetune 93/200 loss=0.42028 score=0.97596
+SAR-ACD ours finetune 94/200 loss=0.42052 score=0.98802
+SAR-ACD ours finetune 95/200 loss=0.42390 score=0.97168
+SAR-ACD ours finetune 96/200 loss=0.42087 score=0.96806
+SAR-ACD ours finetune 97/200 loss=0.41220 score=0.96802
+SAR-ACD ours finetune 98/200 loss=0.42473 score=0.95593
+SAR-ACD ours finetune 99/200 loss=0.41854 score=0.94904
+SAR-ACD ours finetune 100/200 loss=0.41983 score=0.94081
+SAR-ACD ours finetune 101/200 loss=0.42206 score=0.96057
+SAR-ACD ours finetune 102/200 loss=0.42001 score=0.94781
+SAR-ACD ours finetune 103/200 loss=0.41822 score=0.94345
+SAR-ACD ours finetune 104/200 loss=0.41880 score=0.97613
+SAR-ACD ours finetune 105/200 loss=0.41829 score=0.98413
+SAR-ACD ours finetune 106/200 loss=0.41473 score=0.95944
+SAR-ACD ours finetune 107/200 loss=0.41848 score=0.97620
+SAR-ACD ours finetune 108/200 loss=0.42104 score=0.98417
+SAR-ACD ours finetune 109/200 loss=0.41381 score=0.94000
+SAR-ACD ours finetune 110/200 loss=0.41697 score=0.95199
+SAR-ACD ours finetune 111/200 loss=0.41377 score=0.98007
+SAR-ACD ours finetune 112/200 loss=0.42174 score=0.95193
+SAR-ACD ours finetune 113/200 loss=0.41219 score=0.97962
+SAR-ACD ours finetune 114/200 loss=0.41537 score=0.96331
+SAR-ACD ours finetune 115/200 loss=0.41355 score=0.95977
+SAR-ACD ours finetune 116/200 loss=0.41457 score=0.98809
+SAR-ACD ours finetune 117/200 loss=0.41803 score=0.98370
+SAR-ACD ours finetune 118/200 loss=0.41553 score=0.98007
+SAR-ACD ours finetune 119/200 loss=0.42103 score=0.96825
+SAR-ACD ours finetune 120/200 loss=0.41428 score=0.96399
+SAR-ACD ours finetune 121/200 loss=0.41325 score=0.98370
+SAR-ACD ours finetune 122/200 loss=0.41210 score=0.97573
+SAR-ACD ours finetune 123/200 loss=0.40843 score=0.97957
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "vmamba_tiny",
+  "decoder": "multiscale",
+  "initialization": "official_vmamba_tiny_backbone_plus_random_new_modules",
+  "pretrained": {
+    "path": "/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "loaded_tensors": 272,
+    "model_tensors": 280,
+    "coverage": 0.9714285714285714,
+    "missing_tensors": 8,
+    "unexpected_tensors": 4
+  },
+  "protocol": null,
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 64,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 224,
+  "eval_batch": 64,
+  "epochs_requested": 200,
+  "module_warmup_epochs": 20,
+  "fine_tune_epochs": 200,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 108,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.9645669291338582,
+    "macro_precision": 0.9646244343891404,
+    "macro_recall": 0.9645605930974434,
+    "macro_f1": 0.9641018366544778,
+    "per_class_recall": [
+      0.9574468085106383,
+      0.9607843137254902,
+      0.9423076923076923,
+      0.9622641509433962,
+      1.0
+    ],
+    "confusion_matrix": [
+      [
+        45,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        49,
+        0,
+        0,
+        1
+      ],
+      [
+        3,
+        0,
+        49,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        51,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        51
+      ]
+    ]
+  },
+  "params": 29808875,
+  "gflops": 0.804084672,
+  "latency_ms": 9.07713110015417,
+  "fps": 110.16696673941566,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_sar_acd_bs64_fixed_20260905/ours_warmup20_bs64/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+SAR-ACD ours warmup 1/50 loss=1.69795 score=0.20605
+SAR-ACD ours warmup 2/50 loss=1.56047 score=0.35358
+SAR-ACD ours warmup 3/50 loss=1.33949 score=0.35698
+SAR-ACD ours warmup 4/50 loss=1.25486 score=0.43059
+SAR-ACD ours warmup 5/50 loss=1.21059 score=0.53639
+SAR-ACD ours warmup 6/50 loss=1.18937 score=0.53582
+SAR-ACD ours warmup 7/50 loss=1.17210 score=0.55264
+SAR-ACD ours warmup 8/50 loss=1.16453 score=0.55298
+SAR-ACD ours warmup 9/50 loss=1.14726 score=0.57042
+SAR-ACD ours warmup 10/50 loss=1.12170 score=0.58437
+SAR-ACD ours warmup 11/50 loss=1.11648 score=0.55622
+SAR-ACD ours warmup 12/50 loss=1.10668 score=0.56465
+SAR-ACD ours warmup 13/50 loss=1.09652 score=0.59409
+SAR-ACD ours warmup 14/50 loss=1.08304 score=0.61677
+SAR-ACD ours warmup 15/50 loss=1.08021 score=0.56426
+SAR-ACD ours warmup 16/50 loss=1.06569 score=0.58137
+SAR-ACD ours warmup 17/50 loss=1.05326 score=0.62127
+SAR-ACD ours warmup 18/50 loss=1.05370 score=0.60807
+SAR-ACD ours warmup 19/50 loss=1.04017 score=0.64370
+SAR-ACD ours warmup 20/50 loss=1.03766 score=0.63908
+SAR-ACD ours warmup 21/50 loss=1.02283 score=0.66563
+SAR-ACD ours warmup 22/50 loss=1.01850 score=0.64375
+SAR-ACD ours warmup 23/50 loss=1.01324 score=0.67910
+SAR-ACD ours warmup 24/50 loss=1.00477 score=0.64820
+SAR-ACD ours warmup 25/50 loss=0.98830 score=0.65085
+SAR-ACD ours warmup 26/50 loss=0.98830 score=0.65636
+SAR-ACD ours warmup 27/50 loss=0.97578 score=0.66224
+SAR-ACD ours warmup 28/50 loss=0.97771 score=0.64712
+SAR-ACD ours warmup 29/50 loss=0.97088 score=0.70110
+SAR-ACD ours warmup 30/50 loss=0.96474 score=0.67573
+SAR-ACD ours warmup 31/50 loss=0.96390 score=0.65833
+SAR-ACD ours warmup 32/50 loss=0.95354 score=0.66808
+SAR-ACD ours warmup 33/50 loss=0.94462 score=0.68920
+SAR-ACD ours warmup 34/50 loss=0.94488 score=0.69951
+SAR-ACD ours warmup 35/50 loss=0.93384 score=0.70011
+SAR-ACD ours warmup 36/50 loss=0.93869 score=0.69691
+SAR-ACD ours warmup 37/50 loss=0.93684 score=0.68297
+SAR-ACD ours warmup 38/50 loss=0.92342 score=0.68458
+SAR-ACD ours warmup 39/50 loss=0.92882 score=0.70185
+SAR-ACD ours warmup 40/50 loss=0.92621 score=0.66326
+SAR-ACD ours warmup 41/50 loss=0.91309 score=0.68023
+SAR-ACD ours warmup 42/50 loss=0.92957 score=0.68848
+SAR-ACD ours warmup 43/50 loss=0.91714 score=0.68421
+SAR-ACD ours warmup 44/50 loss=0.92218 score=0.68263
+SAR-ACD ours warmup 45/50 loss=0.92221 score=0.67677
+SAR-ACD ours warmup 46/50 loss=0.91513 score=0.67696
+SAR-ACD ours warmup 47/50 loss=0.91258 score=0.66758
+SAR-ACD ours warmup 48/50 loss=0.91448 score=0.67662
+SAR-ACD ours warmup 49/50 loss=0.92014 score=0.67114
+SAR-ACD ours warmup 50/50 loss=0.91987 score=0.67662
+WARMUP COMPLETE: restored ImageNet backbone and started full fine-tuning
+SAR-ACD ours finetune 1/200 loss=1.41453 score=0.54965
+SAR-ACD ours finetune 2/200 loss=1.15807 score=0.44877
+SAR-ACD ours finetune 3/200 loss=1.10308 score=0.41525
+SAR-ACD ours finetune 4/200 loss=1.07818 score=0.59911
+SAR-ACD ours finetune 5/200 loss=0.97891 score=0.65640
+SAR-ACD ours finetune 6/200 loss=0.94964 score=0.69536
+SAR-ACD ours finetune 7/200 loss=0.90269 score=0.68637
+SAR-ACD ours finetune 8/200 loss=0.88445 score=0.71547
+SAR-ACD ours finetune 9/200 loss=0.85809 score=0.76879
+SAR-ACD ours finetune 10/200 loss=0.80196 score=0.74179
+SAR-ACD ours finetune 11/200 loss=0.77158 score=0.81121
+SAR-ACD ours finetune 12/200 loss=0.78023 score=0.80741
+SAR-ACD ours finetune 13/200 loss=0.72630 score=0.82939
+SAR-ACD ours finetune 14/200 loss=0.68399 score=0.83090
+SAR-ACD ours finetune 15/200 loss=0.68647 score=0.81635
+SAR-ACD ours finetune 16/200 loss=0.64317 score=0.87080
+SAR-ACD ours finetune 17/200 loss=0.62797 score=0.90040
+SAR-ACD ours finetune 18/200 loss=0.62347 score=0.91614
+SAR-ACD ours finetune 19/200 loss=0.63301 score=0.88807
+SAR-ACD ours finetune 20/200 loss=0.59387 score=0.89453
+SAR-ACD ours finetune 21/200 loss=0.58895 score=0.91496
+SAR-ACD ours finetune 22/200 loss=0.57249 score=0.87648
+SAR-ACD ours finetune 23/200 loss=0.56793 score=0.89455
+SAR-ACD ours finetune 24/200 loss=0.54422 score=0.90752
+SAR-ACD ours finetune 25/200 loss=0.52316 score=0.91119
+SAR-ACD ours finetune 26/200 loss=0.52832 score=0.91137
+SAR-ACD ours finetune 27/200 loss=0.54211 score=0.82439
+SAR-ACD ours finetune 28/200 loss=0.54895 score=0.93157
+SAR-ACD ours finetune 29/200 loss=0.51329 score=0.87847
+SAR-ACD ours finetune 30/200 loss=0.50237 score=0.90007
+SAR-ACD ours finetune 31/200 loss=0.50551 score=0.91332
+SAR-ACD ours finetune 32/200 loss=0.49802 score=0.95209
+SAR-ACD ours finetune 33/200 loss=0.48798 score=0.95993
+SAR-ACD ours finetune 34/200 loss=0.48471 score=0.96739
+SAR-ACD ours finetune 35/200 loss=0.49397 score=0.91994
+SAR-ACD ours finetune 36/200 loss=0.51121 score=0.91632
+SAR-ACD ours finetune 37/200 loss=0.48369 score=0.95873
+SAR-ACD ours finetune 38/200 loss=0.47294 score=0.93887
+SAR-ACD ours finetune 39/200 loss=0.47182 score=0.96023
+SAR-ACD ours finetune 40/200 loss=0.46691 score=0.95600
+SAR-ACD ours finetune 41/200 loss=0.45460 score=0.95116
+SAR-ACD ours finetune 42/200 loss=0.45734 score=0.94780
+SAR-ACD ours finetune 43/200 loss=0.46544 score=0.93939
+SAR-ACD ours finetune 44/200 loss=0.45969 score=0.93978
+SAR-ACD ours finetune 45/200 loss=0.45017 score=0.93944
+SAR-ACD ours finetune 46/200 loss=0.45875 score=0.94006
+SAR-ACD ours finetune 47/200 loss=0.44956 score=0.91232
+SAR-ACD ours finetune 48/200 loss=0.46367 score=0.92809
+SAR-ACD ours finetune 49/200 loss=0.45797 score=0.94415
+SAR-ACD ours finetune 50/200 loss=0.45824 score=0.95992
+SAR-ACD ours finetune 51/200 loss=0.45787 score=0.96016
+SAR-ACD ours finetune 52/200 loss=0.44866 score=0.96763
+SAR-ACD ours finetune 53/200 loss=0.45321 score=0.95217
+SAR-ACD ours finetune 54/200 loss=0.44593 score=0.89912
+SAR-ACD ours finetune 55/200 loss=0.45540 score=0.96779
+SAR-ACD ours finetune 56/200 loss=0.43721 score=0.93206
+SAR-ACD ours finetune 57/200 loss=0.44322 score=0.93454
+SAR-ACD ours finetune 58/200 loss=0.44173 score=0.93079
+SAR-ACD ours finetune 59/200 loss=0.43691 score=0.91546
+SAR-ACD ours finetune 60/200 loss=0.43989 score=0.93888
+SAR-ACD ours finetune 61/200 loss=0.43552 score=0.95174
+SAR-ACD ours finetune 62/200 loss=0.43809 score=0.97169
+SAR-ACD ours finetune 63/200 loss=0.44113 score=0.93645
+SAR-ACD ours finetune 64/200 loss=0.43706 score=0.95508
+SAR-ACD ours finetune 65/200 loss=0.44204 score=0.95559
+SAR-ACD ours finetune 66/200 loss=0.44337 score=0.96330
+SAR-ACD ours finetune 67/200 loss=0.43012 score=0.95580
+SAR-ACD ours finetune 68/200 loss=0.43152 score=0.95193
+SAR-ACD ours finetune 69/200 loss=0.42591 score=0.97994
+SAR-ACD ours finetune 70/200 loss=0.43223 score=0.97985
+SAR-ACD ours finetune 71/200 loss=0.43165 score=0.97596
+SAR-ACD ours finetune 72/200 loss=0.42958 score=0.96399
+SAR-ACD ours finetune 73/200 loss=0.43132 score=0.95991
+SAR-ACD ours finetune 74/200 loss=0.43055 score=0.93443
+SAR-ACD ours finetune 75/200 loss=0.42987 score=0.95155
+SAR-ACD ours finetune 76/200 loss=0.43262 score=0.94371
+SAR-ACD ours finetune 77/200 loss=0.42469 score=0.97194
+SAR-ACD ours finetune 78/200 loss=0.42372 score=0.96035
+SAR-ACD ours finetune 79/200 loss=0.42676 score=0.97191
+SAR-ACD ours finetune 80/200 loss=0.42021 score=0.95164
+SAR-ACD ours finetune 81/200 loss=0.42404 score=0.97569
+SAR-ACD ours finetune 82/200 loss=0.42272 score=0.95171
+SAR-ACD ours finetune 83/200 loss=0.42037 score=0.95500
+SAR-ACD ours finetune 84/200 loss=0.42537 score=0.96009
+SAR-ACD ours finetune 85/200 loss=0.42235 score=0.97993
+SAR-ACD ours finetune 86/200 loss=0.41736 score=0.96790
+SAR-ACD ours finetune 87/200 loss=0.42376 score=0.95201
+SAR-ACD ours finetune 88/200 loss=0.43224 score=0.96764
+SAR-ACD ours finetune 89/200 loss=0.42268 score=0.97576
+SAR-ACD ours finetune 90/200 loss=0.42564 score=0.95566
+SAR-ACD ours finetune 91/200 loss=0.41820 score=0.96445
+SAR-ACD ours finetune 92/200 loss=0.41800 score=0.93555
+SAR-ACD ours finetune 93/200 loss=0.41713 score=0.97616
+SAR-ACD ours finetune 94/200 loss=0.41872 score=0.96769
+SAR-ACD ours finetune 95/200 loss=0.41727 score=0.97582
+SAR-ACD ours finetune 96/200 loss=0.41557 score=0.97161
+SAR-ACD ours finetune 97/200 loss=0.41640 score=0.98398
+SAR-ACD ours finetune 98/200 loss=0.41616 score=0.98421
+SAR-ACD ours finetune 99/200 loss=0.41797 score=0.97597
+SAR-ACD ours finetune 100/200 loss=0.41622 score=0.97197
+SAR-ACD ours finetune 101/200 loss=0.41667 score=0.98392
+SAR-ACD ours finetune 102/200 loss=0.41980 score=0.97561
+SAR-ACD ours finetune 103/200 loss=0.42008 score=0.96777
+SAR-ACD ours finetune 104/200 loss=0.41672 score=0.97180
+SAR-ACD ours finetune 105/200 loss=0.41485 score=0.96769
+SAR-ACD ours finetune 106/200 loss=0.42220 score=0.98010
+SAR-ACD ours finetune 107/200 loss=0.41464 score=0.97597
+SAR-ACD ours finetune 108/200 loss=0.41364 score=0.96343
+SAR-ACD ours finetune 109/200 loss=0.41609 score=0.97582
+SAR-ACD ours finetune 110/200 loss=0.41140 score=0.97554
+SAR-ACD ours finetune 111/200 loss=0.40948 score=0.97554
+SAR-ACD ours finetune 112/200 loss=0.41032 score=0.98392
+SAR-ACD ours finetune 113/200 loss=0.40990 score=0.96768
+SAR-ACD ours finetune 114/200 loss=0.41013 score=0.98794
+SAR-ACD ours finetune 115/200 loss=0.41075 score=0.97183
+SAR-ACD ours finetune 116/200 loss=0.40985 score=0.97565
+SAR-ACD ours finetune 117/200 loss=0.41387 score=0.95566
+SAR-ACD ours finetune 118/200 loss=0.40969 score=0.96786
+SAR-ACD ours finetune 119/200 loss=0.41163 score=0.97597
+SAR-ACD ours finetune 120/200 loss=0.41262 score=0.97597
+SAR-ACD ours finetune 121/200 loss=0.41537 score=0.97180
+SAR-ACD ours finetune 122/200 loss=0.40947 score=0.98032
+SAR-ACD ours finetune 123/200 loss=0.40829 score=0.97615
+SAR-ACD ours finetune 124/200 loss=0.40794 score=0.97225
+SAR-ACD ours finetune 125/200 loss=0.41656 score=0.94386
+SAR-ACD ours finetune 126/200 loss=0.41260 score=0.98001
+SAR-ACD ours finetune 127/200 loss=0.41030 score=0.96803
+SAR-ACD ours finetune 128/200 loss=0.41280 score=0.97615
+SAR-ACD ours finetune 129/200 loss=0.40765 score=0.97199
+SAR-ACD ours finetune 130/200 loss=0.41028 score=0.98004
+SAR-ACD ours finetune 131/200 loss=0.40941 score=0.96816
+SAR-ACD ours finetune 132/200 loss=0.41091 score=0.98813
+SAR-ACD ours finetune 133/200 loss=0.41184 score=0.96784
+SAR-ACD ours finetune 134/200 loss=0.40664 score=0.97177
+SAR-ACD ours finetune 135/200 loss=0.40609 score=0.97988
+SAR-ACD ours finetune 136/200 loss=0.40659 score=0.97598
+SAR-ACD ours finetune 137/200 loss=0.40722 score=0.95580
+SAR-ACD ours finetune 138/200 loss=0.40618 score=0.96777
+SAR-ACD ours finetune 139/200 loss=0.40743 score=0.97180
+SAR-ACD ours finetune 140/200 loss=0.40975 score=0.95962
+SAR-ACD ours finetune 141/200 loss=0.40863 score=0.96359
+SAR-ACD ours finetune 142/200 loss=0.41038 score=0.96777
+SAR-ACD ours finetune 143/200 loss=0.40758 score=0.96784
+SAR-ACD ours finetune 144/200 loss=0.40902 score=0.97576
+SAR-ACD ours finetune 145/200 loss=0.40652 score=0.97576
+SAR-ACD ours finetune 146/200 loss=0.40658 score=0.97168
+SAR-ACD ours finetune 147/200 loss=0.40806 score=0.96762
+SAR-ACD ours finetune 148/200 loss=0.40619 score=0.96773
+SAR-ACD ours finetune 149/200 loss=0.41179 score=0.96762
+SAR-ACD ours finetune 150/200 loss=0.40530 score=0.97177
+SAR-ACD ours finetune 151/200 loss=0.40589 score=0.97584
+SAR-ACD ours finetune 152/200 loss=0.40639 score=0.97188
+SAR-ACD ours finetune 153/200 loss=0.40555 score=0.97590
+SAR-ACD ours finetune 154/200 loss=0.40561 score=0.97580
+SAR-ACD ours finetune 155/200 loss=0.40367 score=0.97177
+SAR-ACD ours finetune 156/200 loss=0.40827 score=0.97592
+SAR-ACD ours finetune 157/200 loss=0.40505 score=0.98002
+SAR-ACD ours finetune 158/200 loss=0.40721 score=0.98002
+SAR-ACD ours finetune 159/200 loss=0.40608 score=0.96784
+SAR-ACD ours finetune 160/200 loss=0.40651 score=0.97990
+SAR-ACD ours finetune 161/200 loss=0.40788 score=0.98002
+SAR-ACD ours finetune 162/200 loss=0.40287 score=0.97990
+SAR-ACD ours finetune 163/200 loss=0.40343 score=0.97976
+SAR-ACD ours finetune 164/200 loss=0.40351 score=0.97990
+SAR-ACD ours finetune 165/200 loss=0.40364 score=0.97576
+SAR-ACD ours finetune 166/200 loss=0.40498 score=0.97177
+SAR-ACD ours finetune 167/200 loss=0.40611 score=0.96368
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "vmamba_tiny",
+  "decoder": "multiscale",
+  "initialization": "official_vmamba_tiny_backbone_plus_random_new_modules",
+  "pretrained": {
+    "path": "/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "loaded_tensors": 272,
+    "model_tensors": 280,
+    "coverage": 0.9714285714285714,
+    "missing_tensors": 8,
+    "unexpected_tensors": 4
+  },
+  "protocol": null,
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 64,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 224,
+  "eval_batch": 64,
+  "epochs_requested": 200,
+  "module_warmup_epochs": 50,
+  "fine_tune_epochs": 200,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 182,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.968503937007874,
+    "macro_precision": 0.9693962246903425,
+    "macro_recall": 0.9680729964221122,
+    "macro_f1": 0.9682971478488536,
+    "per_class_recall": [
+      0.9361702127659575,
+      0.9803921568627451,
+      0.9615384615384616,
+      0.9622641509433962,
+      1.0
+    ],
+    "confusion_matrix": [
+      [
+        44,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        50,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        51,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        51
+      ]
+    ]
+  },
+  "params": 29808875,
+  "gflops": 0.804084672,
+  "latency_ms": 9.074790333397686,
+  "fps": 110.19538339301671,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_sar_acd_bs64_fixed_20260905/ours_warmup50_bs64/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}
+[2026-09-05 18:51:56] corrected SAR-ACD BS64 sweep completed

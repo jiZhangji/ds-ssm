@@ -1,0 +1,266 @@
+{
+  "all_global_seed0_verified_locally": false,
+  "all_requested_complete": false,
+  "checked_utc": "2026-10-09T11:33:45.207442+00:00",
+  "global_seed0_not_ready_ids": [],
+  "global_seed0_trial_ids": [
+    "farmland_full_seed0",
+    "farmland_matched_scale075_seed0",
+    "farmland_original_seed0",
+    "ottawa_full_seed0",
+    "ottawa_matched_scale075_seed0",
+    "ottawa_original_seed0",
+    "sadd_cnn_yolov8n_seed0",
+    "sadd_const_guidance_seed0",
+    "sadd_full_no_lrc_seed0",
+    "sadd_full_seed0",
+    "sadd_local_energy_seed0",
+    "sadd_matched_identity_seed0",
+    "sadd_matched_scale075_seed0",
+    "sadd_original_seed0",
+    "sadd_post_gate_seed0",
+    "sample_full_seed0",
+    "sample_matched_scale075_seed0",
+    "sample_original_seed0",
+    "sar_acd_full_seed0",
+    "sar_acd_matched_scale075_seed0",
+    "sar_acd_original_seed0",
+    "sar_aircraft10_full_seed0",
+    "sar_aircraft10_matched_scale075_seed0",
+    "sar_aircraft10_original_seed0",
+    "sar_shipdataset_full_seed0",
+    "sar_shipdataset_matched_scale075_seed0",
+    "sar_shipdataset_original_seed0",
+    "ssdd_cnn_yolov8n_seed0",
+    "ssdd_const_guidance_seed0",
+    "ssdd_energy_only_seed0",
+    "ssdd_full_d32_seed0",
+    "ssdd_full_d8_seed0",
+    "ssdd_full_fixed_half_seed0",
+    "ssdd_full_no_lrc_seed0",
+    "ssdd_full_p2_seed0",
+    "ssdd_full_p4_seed0",
+    "ssdd_full_seed0",
+    "ssdd_full_stats5_seed0",
+    "ssdd_full_stats7_seed0",
+    "ssdd_full_trend5_seed0",
+    "ssdd_full_trend7_seed0",
+    "ssdd_global_seed0",
+    "ssdd_guidance_only_seed0",
+    "ssdd_local_energy_delta_seed0",
+    "ssdd_local_energy_input_seed0",
+    "ssdd_local_energy_seed0",
+    "ssdd_lsgm_point_only_seed0",
+    "ssdd_lsgm_std_only_seed0",
+    "ssdd_lsgm_trend_only_seed0",
+    "ssdd_matched_identity_seed0",
+    "ssdd_matched_scale075_seed0",
+    "ssdd_original_seed0",
+    "ssdd_post_gate_seed0",
+    "ssdd_residual_scale075_seed0",
+    "yellow_river_full_seed0",
+    "yellow_river_matched_scale075_seed0",
+    "yellow_river_original_seed0"
+  ],
+  "global_seed0_unverified_in_this_snapshot": [
+    "farmland_full_seed0",
+    "farmland_matched_scale075_seed0",
+    "farmland_original_seed0",
+    "ottawa_full_seed0",
+    "ottawa_matched_scale075_seed0",
+    "ottawa_original_seed0",
+    "sadd_cnn_yolov8n_seed0",
+    "sadd_const_guidance_seed0",
+    "sadd_full_no_lrc_seed0",
+    "sadd_full_seed0",
+    "sadd_local_energy_seed0",
+    "sadd_matched_identity_seed0",
+    "sadd_matched_scale075_seed0",
+    "sadd_original_seed0",
+    "sadd_post_gate_seed0",
+    "sample_full_seed0",
+    "sample_matched_scale075_seed0",
+    "sample_original_seed0",
+    "sar_acd_full_seed0",
+    "sar_acd_matched_scale075_seed0",
+    "sar_acd_original_seed0",
+    "sar_aircraft10_full_seed0",
+    "sar_aircraft10_matched_scale075_seed0",
+    "sar_aircraft10_original_seed0",
+    "sar_shipdataset_full_seed0",
+    "sar_shipdataset_matched_scale075_seed0",
+    "sar_shipdataset_original_seed0",
+    "ssdd_cnn_yolov8n_seed0",
+    "ssdd_const_guidance_seed0",
+    "ssdd_energy_only_seed0",
+    "ssdd_full_d32_seed0",
+    "ssdd_full_d8_seed0",
+    "ssdd_full_fixed_half_seed0",
+    "ssdd_full_no_lrc_seed0",
+    "ssdd_full_p2_seed0",
+    "ssdd_full_seed0",
+    "ssdd_full_stats5_seed0",
+    "ssdd_full_stats7_seed0",
+    "ssdd_full_trend5_seed0",
+    "ssdd_full_trend7_seed0",
+    "ssdd_global_seed0",
+    "ssdd_guidance_only_seed0",
+    "ssdd_local_energy_delta_seed0",
+    "ssdd_local_energy_input_seed0",
+    "ssdd_local_energy_seed0",
+    "ssdd_lsgm_point_only_seed0",
+    "ssdd_lsgm_std_only_seed0",
+    "ssdd_lsgm_trend_only_seed0",
+    "ssdd_matched_identity_seed0",
+    "ssdd_matched_scale075_seed0",
+    "ssdd_original_seed0",
+    "ssdd_post_gate_seed0",
+    "ssdd_residual_scale075_seed0",
+    "yellow_river_full_seed0",
+    "yellow_river_matched_scale075_seed0",
+    "yellow_river_original_seed0"
+  ],
+  "host_key": "f1",
+  "hostname": "powerleader-a6000-f",
+  "lane": "f1_seed0",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "requested_count": 2,
+  "requested_trial_ids": [
+    "ssdd_full_p4_seed0",
+    "sar_shipdataset_matched_scale075_seed0"
+  ],
+  "rows": [
+    {
+      "artifacts_verified": 8,
+      "kind": "detection",
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/provenance.json",
+            "sha256": "6344d833797fb99516ad728bc40ebfad65c28a8fa0dc790f4289926a8162449c"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/train_complete.json",
+            "sha256": "9d647205525f8d26a7ace29d1360cf4ce23a6ddf08a1cbc065c136aeed75a841"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/eval_test.json",
+            "sha256": "8cc1cef74f31eef233a1c8766b18ef8f0125ebccf81534f4ba76270b2842ece2"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/evaluation_complete.json",
+            "sha256": "5ca3dab0689856bedf31d99857dbc19b2cbda42c0563b6e6b7cf35ba4ae67651"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/weights/best.pt",
+            "sha256": "14b5c46296c1ea63ae3674d41f3d309f429b207caac6bf8458e4d9d38f503fa6"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/weights/raw_fp32_last.pt",
+            "sha256": "47c477aec8abda9e6854644d89fe463a569645d8fcd99dcc1e3eee5e05b307e8"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/controls_by_epoch.jsonl",
+            "sha256": "57a4c04f3f3be9936d571c4a6b1fbabfcf08038bfd1425bd59230308591e87f2"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/trial_complete.json",
+            "sha256": "70b4be45a990b94b3d6f16119cef893877f3c58e1151241e67310041feb3fd41"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.8582540154841388,
+            "ap50_95": 0.43149162502588456,
+            "ap75": 0.3588323002805714,
+            "precision": 0.9388117897768538,
+            "recall": 0.7587214548150778
+          },
+          "resumed": false,
+          "smoke_only": false
+        },
+        "finished_utc": "2026-10-09T04:39:48.327986+00:00",
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_full_p4_seed0",
+        "trial_sha256": "e848f13f9ebfb046b03e5d7ff109f6d32b74e474bb85686967643f893da1941b"
+      },
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_p4_seed0.json",
+      "receipt_sha256": "25792e7a816af446801f44240a98fc10fe648fa2ad8d296b97a47ca250f72de1",
+      "seed": 0,
+      "status": "verified",
+      "trial_id": "ssdd_full_p4_seed0"
+    },
+    {
+      "kind": "command",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/sar_shipdataset_matched_scale075_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "sar_shipdataset_matched_scale075_seed0"
+    }
+  ],
+  "schema": "rgsp-verified-receipt-snapshot-v1",
+  "scope": "Read-only verification of the full explicit local lane subset; combine producing-host snapshots before a trusted global barrier",
+  "seed": 0,
+  "verified_count": 1,
+  "verified_receipts": {
+    "ssdd_full_p4_seed0": {
+      "artifacts": [
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/provenance.json",
+          "sha256": "6344d833797fb99516ad728bc40ebfad65c28a8fa0dc790f4289926a8162449c"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/train_complete.json",
+          "sha256": "9d647205525f8d26a7ace29d1360cf4ce23a6ddf08a1cbc065c136aeed75a841"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/eval_test.json",
+          "sha256": "8cc1cef74f31eef233a1c8766b18ef8f0125ebccf81534f4ba76270b2842ece2"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/evaluation_complete.json",
+          "sha256": "5ca3dab0689856bedf31d99857dbc19b2cbda42c0563b6e6b7cf35ba4ae67651"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/weights/best.pt",
+          "sha256": "14b5c46296c1ea63ae3674d41f3d309f429b207caac6bf8458e4d9d38f503fa6"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/weights/raw_fp32_last.pt",
+          "sha256": "47c477aec8abda9e6854644d89fe463a569645d8fcd99dcc1e3eee5e05b307e8"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/controls_by_epoch.jsonl",
+          "sha256": "57a4c04f3f3be9936d571c4a6b1fbabfcf08038bfd1425bd59230308591e87f2"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/trial_complete.json",
+          "sha256": "70b4be45a990b94b3d6f16119cef893877f3c58e1151241e67310041feb3fd41"
+        }
+      ],
+      "details": {
+        "kind": "detection",
+        "overall": {
+          "ap50": 0.8582540154841388,
+          "ap50_95": 0.43149162502588456,
+          "ap75": 0.3588323002805714,
+          "precision": 0.9388117897768538,
+          "recall": 0.7587214548150778
+        },
+        "resumed": false,
+        "smoke_only": false
+      },
+      "finished_utc": "2026-10-09T04:39:48.327986+00:00",
+      "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+      "schema": "rgsp-seedwise-v1",
+      "seed": 0,
+      "status": "complete",
+      "trial_id": "ssdd_full_p4_seed0",
+      "trial_sha256": "e848f13f9ebfb046b03e5d7ff109f6d32b74e474bb85686967643f893da1941b"
+    }
+  }
+}

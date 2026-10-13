@@ -1,0 +1,34 @@
+\begin{table*}[tp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{SSDD 历史 15 次消融的完整逐种子结果（\%）。}\label{tab:ssdd_individual}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrr}
+\toprule
+Configuration & Seed & Precision & Recall & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$\\
+\midrule
+Original & 0 & 89.2285 & 80.4029 & 87.1822 & 35.6859 & 42.6943 \\
+Original & 1 & 87.8971 & 77.2894 & 83.6934 & 28.1695 & 38.2746 \\
+Original & 2 & 91.5192 & 80.0366 & 88.6714 & 38.2830 & 45.1215 \\
+\midrule
+LocalEnergy & 0 & 90.9989 & 79.4872 & 87.1986 & 41.9141 & 45.5944 \\
+LocalEnergy & 1 & 89.3584 & 79.9723 & 87.3584 & 35.8419 & 43.5303 \\
+LocalEnergy & 2 & 89.3093 & 79.5616 & 85.5283 & 34.9699 & 42.8199 \\
+\midrule
+Legacy-PFIM & 0 & 90.6961 & 83.9133 & 90.0920 & 38.1567 & 44.8217 \\
+Legacy-PFIM & 1 & 88.6802 & 80.4029 & 87.3274 & 30.4719 & 41.4304 \\
+Legacy-PFIM & 2 & 91.0193 & 79.8535 & 87.2713 & 35.8535 & 43.1189 \\
+\midrule
+Full & 0 & 93.2318 & 80.7692 & 88.0882 & 30.7187 & 42.3400 \\
+Full & 1 & 92.2132 & 78.7546 & 87.8664 & 36.8629 & 44.2091 \\
+Full & 2 & 90.2943 & 80.0366 & 87.9535 & 34.7167 & 42.1778 \\
+\midrule
+Global & 0 & 91.9194 & 78.0220 & 86.8336 & 40.0310 & 44.9822 \\
+Global & 1 & 90.8392 & 77.8388 & 86.7447 & 38.0432 & 44.4228 \\
+Global & 2 & 92.5226 & 79.4872 & 85.6446 & 32.5236 & 41.8918 \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+原始比例值与权重哈希随包保留；未删除 seed2。不同 seed 的训练/验证划分不同，所有变体在同一 seed 内配对。
+\end{minipage}
+\end{table*}

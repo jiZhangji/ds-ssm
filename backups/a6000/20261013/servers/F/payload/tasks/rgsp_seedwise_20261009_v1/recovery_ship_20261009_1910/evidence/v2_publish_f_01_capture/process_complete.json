@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/ship_gate_v2.py",
+    "--publish",
+    "--expected-hostname",
+    "powerleader-a6000-f",
+    "--audit",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1945_f/archive_audit.json",
+    "--reviewed-audit-sha256",
+    "9092777ec2a04caaea06420cc5df715bf703cc3f1e4ec5538cbdff65edbf763d",
+    "--reviewed-stage-complete-sha256",
+    "a4e689cc4e5f7c18f9863d431fd4a87ce841cb51276cc140de71d3021fde1512",
+    "--expected-manifest-sha256",
+    "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78",
+    "--evidence-dir",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/v2_publish_f_01"
+  ],
+  "returncode": 0,
+  "finished_utc": "2026-10-09T12:16:21.454538+00:00",
+  "hostname": "powerleader-a6000-f",
+  "stdout_sha256": "1bc10f3aa5ef3f09bf55108d39c3515b24c45aab1878d393ebd10e1f1afbea42",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

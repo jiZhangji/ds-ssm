@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py", line 309, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py", line 303, in main
+    run_dispatch(plan_path, plan, args.host_key, entry, lanes, root, attempt, owner)
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py", line 224, in run_dispatch
+    execute_seed(0)
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py", line 209, in execute_seed
+    raise RuntimeError(f"Seed{seed} lane failed with exit={result}; no retry/kill/further phase: {log_path}")
+RuntimeError: Seed0 lane failed with exit=1; no retry/kill/further phase: /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/a/attempt_2026-10-09T033014.593114_0000_324976ee/seed0.log

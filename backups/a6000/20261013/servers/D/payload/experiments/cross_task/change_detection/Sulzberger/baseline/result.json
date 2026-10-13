@@ -1,0 +1,17 @@
+{
+  "dataset": "Sulzberger",
+  "task": "change_detection",
+  "variant": "baseline",
+  "state_dim": 0,
+  "metric": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "iou": 0.0,
+    "oa": 0.33605957031249484
+  },
+  "latency_ms": 143.9722339855507,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/change_detection/Sulzberger/baseline/best.pt",
+  "epochs": 100,
+  "params": 2047705
+}

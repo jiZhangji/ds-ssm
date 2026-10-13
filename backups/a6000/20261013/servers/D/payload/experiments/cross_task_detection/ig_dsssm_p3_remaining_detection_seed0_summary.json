@@ -1,0 +1,19 @@
+{
+  "experiment_id": "ig_dsssm_p3_remaining_detection_seed0",
+  "records": [
+    {
+      "dataset": "SADD",
+      "experiment": "ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3",
+      "variant": "full",
+      "placement": "p3",
+      "state_dim": 32,
+      "precision": 0.9069275313169205,
+      "recall": 0.91725768321513,
+      "ap50": 0.9445971094744444,
+      "ap75": 0.4482611980438998,
+      "ap50_95": 0.47854469601108357,
+      "inference_ms": 8.300373449871435,
+      "weights": "/home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/best.pt"
+    }
+  ]
+}

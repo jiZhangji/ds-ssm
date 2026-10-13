@@ -1,0 +1,45 @@
+{
+  "candidate": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/v2_publish_c_01/readiness.candidate.json",
+    "sha256": "ee7ac8c43f233355858b8e21a5a46566a272f16de5ac38d8226b39f97aa424c5",
+    "size": 1047
+  },
+  "dataset_audit": {
+    "counts": {
+      "test": 3974,
+      "train": 31735,
+      "val": 3970
+    },
+    "manifest_sha256": "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78",
+    "verified_utc": "2026-10-09T12:16:23.591249+00:00"
+  },
+  "live_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/readiness.json",
+  "provenance": {
+    "class_names": {
+      "0": "ship"
+    },
+    "dataset_identity": "SAR-ShipDataset",
+    "descriptor": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/dataset.json",
+      "sha256": "c14a5295a56a23ccedb9edc3548e315fdafd3f89fea351274d4485131caaa3c5"
+    },
+    "nc": 1,
+    "protocol": "ssdd",
+    "readiness": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/v2_publish_c_01/readiness.candidate.json",
+      "sha256": "ee7ac8c43f233355858b8e21a5a46566a272f16de5ac38d8226b39f97aa424c5",
+      "size": 1047
+    },
+    "source_audit": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/source_audit.json",
+      "sha256": "1a45e249df41642a998bed9c51e6964a238d94b9ccfee2c25985697b907c2b76"
+    },
+    "source_class_names": {
+      "0": "ship"
+    },
+    "trust_model": "producer source audit and coordinator publication; not a security signature",
+    "verification": "ready publication + source audit + full staged image/label manifest hashes"
+  },
+  "status": "verified_candidate_not_published",
+  "verified_utc": "2026-10-09T12:16:23.599370+00:00"
+}

@@ -1,0 +1,6 @@
+path: /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/stdlib_c_01/fixtures/test_deferred_candidate_without_live_publication/synthetic_data
+train: images/train
+val: images/val
+test: images/test
+nc: 1
+names: [ship]

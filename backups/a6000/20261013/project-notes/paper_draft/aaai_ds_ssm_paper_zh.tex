@@ -1,0 +1,351 @@
+\documentclass[10pt,twocolumn]{ctexart}
+\usepackage[a4paper,margin=1.65cm,columnsep=0.7cm]{geometry}
+\setmainfont{Times New Roman}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{caption}
+\usepackage{natbib}
+\usepackage[hyphens]{url}
+\usepackage{placeins}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\captionsetup{font=small}
+
+\newcommand{\method}{IG-DS-SSM}
+\newcommand{\apfifty}{AP$_{50}$}
+\newcommand{\apcoco}{AP$_{50:95}$}
+
+\title{面向轻量化 SAR 目标检测的\\重要性引导去斑状态空间建模}
+\author{匿名投稿\quad 中文伴随稿}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+合成孔径雷达（SAR）目标响应常与乘性斑点及强背景散射共存。视觉状态空间模型能够以线性复杂度进行长程建模，但未经约束的扫描也可能跨 token 传播杂波主导的证据。本文提出重要性引导去斑状态空间模型（Importance-Guided De-Speckle State Space Model，\method）。该模块先削弱局部序列残差，再由感知特征重要性模块 PFIM 从局部趋势和二维变化估计 token 重要性，将扫描驱动分解为能量感知抑制与重要性缩放两个因子，并独立调制动态步长。实现中仅替换 Mamba-YOLO 的一个浅层阶段，并在 FP32 中执行 CUDA selective scan，T 级模型仅含 5.96M 参数和 13.21 GFLOPs。在每种架构各完成一次的同协议 OGSOD-1.0 实验中，PFIM-T 相对 Mamba-YOLO-T 将 AP$_{75}$ 和 \apcoco{} 分别提高 0.760 和 1.300 个百分点，而 \apfifty{} 仅变化 0.090 点，模型复杂度还略有下降。SSDD、SAR-ShipDataset 和 SAR-AIRcraft 的恢复实验只提供方向上相容的档案观察；由于 baseline 或数据划分不完全受控，它们不用于证明跨数据集趋势。密集 tank 类结果还表明，整体定位提升并不等价于所有类别均受益。因此，现有证据仅支持将 \method{} 定位为该同协议设置下轻量、面向定位质量的 SAR 状态控制候选，而非在所有指标上普遍占优的检测器。
+\end{abstract}
+
+\section{引言}
+
+SAR 具备全天时、全天候成像能力，广泛用于海上监测、机场管理和应急响应。然而，相干成像会产生斑点噪声；舰船往往只占据少量像素，飞机则常表现为不连续散射中心。海浪、岸线、金属建筑、航站楼和机库都可能形成与目标相似的强响应，使检测器在漏检与误检之间难以平衡。
+
+YOLO 系列具有较高部署效率，但卷积对长程依赖的表达有限。Mamba 等状态空间模型通过输入相关的 selective scan，以线性复杂度建模长序列 \citep{mamba,s4}。Mamba-YOLO 进一步将其引入目标检测 \citep{mambayolo}。但对 SAR 图像而言，通用视觉 SSM 存在一个额外风险：局部杂波一旦进入扫描输入，可能沿扫描顺序持续影响后续位置。
+
+MaDiNet 将扩散检测与 MambaSAR 结合，在 SSDD、SAR-ShipDataset 和 SAR-AIRcraft1.0 上取得了较强结果 \citep{madinet}。该方法说明全局上下文非常重要，但也引出了另一条路线：是否可以直接改造轻量级 SSM 的状态驱动过程，以更小的模型获得有竞争力的 SAR 检测能力？
+
+本文提出 \method{} 回答这一问题。其核心贡献包括：
+\begin{itemize}
+  \item 使用可学习局部序列残差抑制，在进入全局扫描前削弱局部扰动；
+  \item 利用 PFIM 从局部趋势与二维局部标准差中估计重要性，因子化调制扫描驱动，并自适应调整动态步长 $\Delta$；
+  \item 仅替换一个浅层阶段，使完整 T 级检测器保持 5.96M 参数和 13.21 GFLOPs；
+  \item 提供一次 OGSOD-1.0 同协议 baseline 对比，并将其与 SSDD、SAR-ShipDataset、SAR-AIRcraft 的非同协议档案证据明确分离。
+\end{itemize}
+
+\section{相关工作}
+
+\subsection{SAR 目标检测数据集}
+
+SSDD 是典型 SAR 舰船检测基准 \citep{ssdd2017,ssddofficial}。SAR-ShipDataset 包含来自高分三号和 Sentinel-1 的 39,729 张图像切片，覆盖港口、近岸和开阔海面等场景 \citep{sarshipdataset}。SAR-AIRcraft1.0 包含 4,368 张高分辨率原始图像、16,463 个实例和七个细粒度类别 \citep{saraircraft}。OGSOD-1.0 是面向光学信息引导 SAR 检测提出的统一基准，包含 bridge、harbor 和 oil tank 三类地物 \citep{ogsod}。四者在图像尺度、目标密度和背景复杂度方面差异明显，因此数据划分与预处理会显著影响最终指标。
+
+\subsection{扩散检测与状态空间模型}
+
+DiffusionDet 将检测建模为边界框去噪过程 \citep{diffusiondet}，DiffDet4SAR 将其用于 SAR 飞机检测 \citep{diffdet4sar}。MaDiNet 在扩散框架中引入 MambaSAR，以建模目标与背景的全局关系。与其不同，本文不采用迭代扩散检测，而是在一次前向传播的轻量 Mamba-YOLO 中直接抑制不可靠的扫描驱动。
+
+\section{方法}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figures/ig_dsssm_framework.pdf}
+  \caption{轻量检测器与单个 \method{} 块的整体结构。模型只替换浅层 P2/4 阶段；块内由残差抑制 token 和二维局部变化构造 PFIM 重要性场。实际 CUDA 路径以 $\gamma$ 和 $w$ 共同因子化调制扫描驱动，同时调整步长 $\Delta$，并在 FP32 中执行 selective scan。}
+  \label{fig:framework-zh}
+\end{figure*}
+
+\subsection{设计目标与插入位置}
+
+通用视觉 SSM 默认每个 token 都是可信的状态驱动，但 SAR 中孤立斑点一旦进入扫描，就可能沿序列污染后续位置；反之，直接抑制所有高频响应又会削弱真实散射中心。因此本文将问题拆成两个判断：局部响应是否与邻域不一致，以及该响应是否具有目标重要性。前者由可学习残差抑制完成，后者由 PFIM 估计。
+
+给定浅层特征图 $\mathbf{F}\in\mathbb{R}^{B\times C\times H\times W}$，展平并归一化得到
+\begin{equation}
+\mathbf{x}=\mathrm{LN}(\mathrm{Flatten}(\mathbf{F}))
+\in\mathbb{R}^{B\times N\times C},\qquad N=HW.
+\end{equation}
+如图~\ref{fig:framework-zh} 所示，本文仅将 Mamba-YOLO 的 P2/4 VSS 阶段替换为 \method，P3--P5、双向特征金字塔和检测头保持不变。这样可在低层噪声反复进入多尺度融合前进行控制，同时避免在全部阶段堆叠额外模块。
+
+\subsection{局部残差抑制}
+
+首先在展平序列上使用逐通道一维卷积估计局部趋势，其卷积核初始化为三点均值滤波：
+\begin{equation}
+\bar{\mathbf{x}}=\mathrm{DWConv1D}(\mathbf{x}),\qquad
+\mathbf{r}=\mathbf{x}-\bar{\mathbf{x}}.
+\end{equation}
+状态驱动被修正为
+\begin{equation}
+\widetilde{\mathbf{x}}=\mathbf{x}-\lambda_s\mathbf{r},
+\label{eq:despeckle-zh}
+\end{equation}
+其中 $\lambda_s$ 与卷积核均可学习。式~\ref{eq:despeckle-zh} 并非不可逆的图像去斑，而是削弱进入扫描的局部不一致成分；块级残差仍保留原始特征，使网络可以在抑制过强时恢复目标证据。
+
+\subsection{感知特征重要性模块}
+
+局部残差幅值本身无法区分斑点与真实散射中心。PFIM 将 $\widetilde{\mathbf{x}}$ 恢复为二维布局，并通过 $3\times3$ 平均池化计算局部一阶、二阶矩：
+\begin{align}
+\boldsymbol{\mu}&=\mathrm{AvgPool}_{2D}(\widetilde{\mathbf{X}}),\\
+\mathbf{s}&=\sqrt{\mathrm{AvgPool}_{2D}(\widetilde{\mathbf{X}}^2)-\boldsymbol{\mu}^2+\epsilon}.
+\end{align}
+将 $\mathbf{s}$ 展平后，与序列趋势共同输入轻量 MLP：
+\begin{equation}
+I_t=\sigma\!\left(\mathbf{W}_2\mathrm{GELU}
+\left(\mathbf{W}_1\mathrm{LN}([\bar{\mathbf{x}}_t;\mathbf{s}_t])\right)\right),
+\quad \widehat I_t=I_t-0.5.
+\label{eq:pfim-zh}
+\end{equation}
+最后一层采用零初始化，使 $I_t=0.5$，即从非饱和值开始学习连续重要性，而不是预设脆弱的前景硬掩码。由于两个扫描驱动因子均使用中心化的 $\widehat I_t$，PFIM 对它们的初始增量为零；但动态步长使用未中心化的 $I_t$，因此初始时接收一个较小的正偏置 $\eta/2$。故本文只声称重要性估计器采用非饱和初始化，不把完整模块描述为严格恒等或完全中性初始化。
+
+\subsection{因子化驱动与步长调制}
+
+去斑 token 经投影得到扫描驱动 $\mathbf{u}$ 和输出门 $\mathbf{z}$，$\mathbf{B}_t$ 与 $\mathbf{C}_t$ 也由 $\mathbf{u}_t$ 动态生成。PFIM 同时控制三条互补路径。动态步长为
+\begin{equation}
+\Delta_t=\mathrm{softplus}(\mathbf{W}_{\Delta}\mathbf{u}_t+\eta I_t).
+\end{equation}
+PFIM 在两个实际执行位置起作用：动态步长，以及由两个不同条件项构成的扫描驱动。局部趋势能量 $e_t=\lVert\bar{\mathbf{x}}_t\rVert_2/\sqrt{C}$ 与中心化重要性共同形成第一个驱动因子：
+\begin{equation}
+\gamma_t=g_{min}+(1-g_{min})
+\sigma(-\alpha\sigma_n e_t+\beta\widehat I_t),
+\end{equation}
+其中 $g_{min}=0.5$ 防止完全擦除。第二个驱动因子仅依赖中心化重要性：
+\begin{equation}
+w_t=\max(0.1,1+\tanh(\rho)\widehat I_t).
+\end{equation}
+因此，$\gamma_t$ 引入能量感知抑制，$w_t$ 缩放目标样当前证据，$\Delta_t$ 调整 SSM 的有效时间尺度。$\gamma_t$ 与 $w_t$ 虽然参数独立，但在实际模型中相乘后作用于同一扫描输入，不能解释成两个独立的循环更新位置。
+
+\subsection{实际执行的 selective scan}
+
+所有报告实验均使用 CUDA 快速路径。由于当前内核不提供外部隐藏状态阻尼接口，实际执行的扫描输入为
+\begin{equation}
+\mathbf{u}^{scan}_t=\gamma_t w_t\mathbf{u}_t,
+\end{equation}
+随后计算
+\begin{align}
+\mathbf{y}^{ssm}&=\mathrm{SelectiveScan}(\mathbf{u}^{scan},\Delta,\mathbf{A},\mathbf{B},\mathbf{C}),\\
+\mathbf{y}&=\mathbf{W}_{out}[(\mathbf{y}^{ssm}+\mathbf{D}\widetilde{\mathbf{x}})
+\odot\mathrm{SiLU}(\mathbf{z})].
+\end{align}
+扫描操作数在关闭 autocast 的区域显式转换为 FP32。输出被放入预归一化残差块，SSM 和 MLP 两条分支的 layer scale 均初始化为 $10^{-2}$。深度滤波、局部池化、PFIM 和 selective scan 对 token 数 $N$ 均保持线性复杂度。仅替换一个浅层阶段后，完整检测器在 640 输入下为 5.9648M 参数和 13.2079 GFLOPs。
+
+\section{实验}
+
+\subsection{数据协议与训练设置}
+
+SSDD 主结果来自恢复的多服务器实验档案，采用 640 输入和 300 轮训练。SAR-ShipDataset 本地固定随机种子划分为 31,783/3,972/3,974 张训练、验证和测试图像。SAR-AIRcraft 当前版本是由 4,368 张原始大图产生的 18,888 张 512$\times$512 重叠切片，训练、验证和测试切片数分别为 13,976、1,923 和 2,989；三个划分的原图 ID 不重叠。OGSOD-1.0 原论文报告 14,665 对光学--SAR 训练图像和 3,666 张 SAR 测试图像 \citep{ogsod}。本文恢复档案的 JSON 划分为 14,664/1,834/1,833 张 SAR 图像；转换后的测试集含 4,769 个有效框，其中 bridge、harbor、tank 分别为 3,165、399、1,205 个。因此本文将其标记为本地三划分协议，而非原论文测试划分的严格复现。OGSOD 训练用验证集复合 fitness $0.1\,\mathrm{AP}_{50}+0.9\,\mathrm{AP}_{50:95}$ 选择 \texttt{best.pt}，再对该权重在留出的本地 TEST 上进行一次 FP32 评估；TEST 不参与 checkpoint 选择，但每种架构只有一次完整运行，仍无法估计随机种子方差。
+
+\begin{table}[t]
+\centering
+\small
+\caption{代表性训练设置。}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrl}
+\toprule
+数据集 & 尺寸 & 轮数 & 全局BS & GPU & 优化器 \\
+\midrule
+SSDD ex27 & 640 & 300 & 32 & 1 & SGD \\
+SAR-Ship T & 512 & 300 & 384 & 2 H200 & AdamW \\
+SAR-Air T & 1024 & 300 & 48 & 2 H100 & AdamW \\
+OGSOD T & 1024 & 300 & 64 & 2 H200 & AdamW \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+\subsection{复杂度统计规则}
+
+表~\ref{tab:ssdd-large-zh}--\ref{tab:air-large-zh} 将 MaDiNet 原文性能与可确认的复杂度放在同一表中。标记 $\dagger$ 的数值均为服务器统一 640 输入、batch 1、FP32 实测；Detectron2 行使用官方 R50-FPN 配置，并与 Ultralytics 行采用相同的乘加折算口径。标记 $\star$ 的数值来自作者原文，其输入和计数口径未统一。MaDiNet 未发布完整检测器配置，标记 $\ddagger$ 的数值只统计官方 MambaSAR res4+res5 核心，因此是完整模型的保守下界。NR 表示原文未报告数值且没有公开实现可供复现；精度列中的“--”表示该指标未报告。由于 profiler 存在未支持算子，实测 FLOPs 仍是保守的架构参考。OGSOD 仅比较本地同量级模型，并单独报告。
+
+\subsection{SSDD：接近最强参考的轻量结果}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\caption{SSDD 代表性结果。文献 AP$_{50}$ 来自 MaDiNet，本地 AP 使用 Ultralytics；复杂度统一为 640 输入参考。}
+\label{tab:ssdd-large-zh}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrl}
+\toprule
+方法 & AP$_{50}$ & AP$_{50:95}$ & 参数(M) & GFLOPs & 证据来源 \\
+\midrule
+Faster R-CNN & 89.7 & -- & 41.295$^\dagger$ & 150.343$^\dagger$ & 文献+实测 \\
+DiffDet4SAR & 96.9 & -- & 111.141$^\dagger$ & 204.787$^\dagger$ & 文献+实测 \\
+YOLOv5n & 98.0 & -- & 2.655$^\dagger$ & 7.840$^\dagger$ & 文献+实测 \\
+YOLOv8n & 98.1 & -- & 3.157$^\dagger$ & 8.858$^\dagger$ & 文献+实测 \\
+YOLOv5s & 98.3 & -- & 9.153$^\dagger$ & 24.213$^\dagger$ & 文献+实测 \\
+MaDiNet & \textbf{99.0} & -- & $\geq$223.265$^\ddagger$ & $\geq$345.283$^\ddagger$ & 文献+核心下界 \\
+\midrule
+Mamba-YOLO-T & 98.485 & 72.852 & 5.986$^\dagger$ & 13.612$^\dagger$ & 本地档案 \\
+\rowcolor{gray!12}
+\method{} / PFIM-T & \textbf{98.704} & \textbf{74.022} & \textbf{5.965}$^\dagger$ & \textbf{13.208}$^\dagger$ & 本地档案 \\
+\bottomrule
+\end{tabular}}
+\caption*{\footnotesize 指标单位为百分比。跨论文 AP 因划分和评估器差异仅作背景。}
+\end{table}
+
+本文 AP$_{50}$ 仅比 MaDiNet 低 0.296 个百分点，而完整检测器只有 5.965M 参数和 13.208 GFLOPs。即使只统计 MaDiNet 的核心，其参数量和计算量也至少分别是本文的 37.4 倍和 26.1 倍。相较归档 Mamba-YOLO-T，本文在不增加规模的情况下将 AP$_{50}$ 提高 0.219 点、AP$_{50:95}$ 提高 1.170 点。由于两行来自恢复的不同代码状态，这一趋势与定位改善一致，但不作为主要因果证据。
+
+\subsection{SAR-ShipDataset：大规模舰船迁移}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\caption{SAR-ShipDataset 代表性结果。文献与本地行采用不同且未公开的样本列表，仅作背景比较。}
+\label{tab:ship-large-zh}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrl}
+\toprule
+方法 & AP$_{50}$ & AP$_{50:95}$ & 参数(M) & GFLOPs & 证据来源 \\
+\midrule
+SAR-ShipNet & 90.2 & -- & NR & NR & 文献 \\
+YOLOv5n & 89.3 & -- & 2.655$^\dagger$ & 7.840$^\dagger$ & 文献+实测 \\
+DiffusionDet & 95.0 & -- & 110.552$^\dagger$ & 204.263$^\dagger$ & 文献+实测 \\
+DiffDet4SAR & 95.1 & -- & 111.141$^\dagger$ & 204.787$^\dagger$ & 文献+实测 \\
+MaDiNet & \textbf{97.5} & -- & $\geq$223.265$^\ddagger$ & $\geq$345.283$^\ddagger$ & 文献+核心下界 \\
+\midrule
+Mamba-YOLO-T & 94.616 & 49.568 & 5.986$^\dagger$ & 13.612$^\dagger$ & 本地档案$^*$ \\
+\rowcolor{gray!12}
+\method{} / PFIM-T & 94.844 & \textbf{57.818} & \textbf{5.965}$^\dagger$ & \textbf{13.208}$^\dagger$ & 本地测试 \\
+\method{} / PFIM-S & \textbf{95.609} & 53.177 & 21.739 & 48.0 & 本地测试 \\
+\bottomrule
+\end{tabular}}
+\caption*{\footnotesize $^*$归档 T baseline 在训练中将全局 batch 从 256 改为 128，仅为透明归档，不能充当严格消融。}
+\end{table}
+
+PFIM-T 是论文主推的轻量工作点。在非同划分背景下，其 AP$_{50}$ 比 MaDiNet 低 2.656 点，但复杂度只占已测 MaDiNet 核心的一小部分。PFIM-S 以 21.739M 参数、48.0 GFLOPs 将差距缩小到 1.891 点，可作为容量参考，但不是严格的扩展性消融。T 级 AP$_{50:95}$ 相对归档 baseline 的大幅提升具有潜力，但 baseline 中途改变 batch，因此尚不能作为纯架构因果结论。
+
+\subsection{SAR-AIRcraft：细粒度切片评估}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\caption{SAR-AIRcraft 代表性 AP$_{50}$ 结果。文献行采用原始大图，本地行采用重叠 512 切片验证。}
+\label{tab:air-large-zh}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrl}
+\toprule
+方法 & AP$_{50}$ & AP$_{50:95}$ & 参数(M) & GFLOPs & 证据来源 \\
+\midrule
+MLSDNet & 82.7 & -- & 0.928$^\star$ & 1.420$^\star$ & 文献 \\
+YOLOv5n & 88.2 & -- & 2.655$^\dagger$ & 7.840$^\dagger$ & 文献+实测 \\
+YOLOv8n & 88.2 & -- & 3.157$^\dagger$ & 8.858$^\dagger$ & 文献+实测 \\
+DiffDet4SAR & 88.4 & -- & 111.151$^\dagger$ & 204.796$^\dagger$ & 文献+实测 \\
+MaDiNet & \textbf{90.5} & -- & $\geq$223.265$^\ddagger$ & $\geq$345.283$^\ddagger$ & 文献+核心下界 \\
+\midrule
+Mamba-YOLO-T & 87.751 & 69.904 & 5.986$^\dagger$ & 13.612$^\dagger$ & 本地切片$^*$ \\
+\rowcolor{gray!12}
+\method{} / PFIM-T & 88.825 & 70.513 & \textbf{5.965}$^\dagger$ & \textbf{13.208}$^\dagger$ & 本地切片$^*$ \\
+\method{} / PFIM-S & \textbf{89.304} & \textbf{72.025} & 21.742 & 48.0 & 本地切片 \\
+\bottomrule
+\end{tabular}}
+\caption*{\footnotesize $^*$本地 baseline 使用不同优化器、batch 且训练未满 300 轮，不能充当严格消融。}
+\end{table}
+
+在切片验证集上，PFIM-T 不增加复杂度即可较本地 Mamba 参考提高 1.074 AP$_{50}$ 和 0.609 AP$_{50:95}$，但优化设置不一致，不能据此作纯架构归因。PFIM-S 达到 89.304 AP$_{50}$ 和 72.025 AP$_{50:95}$，较完整 T 模型分别提高 0.479 和 1.512 点，代价是约 3.64 倍复杂度。T 模型 AP$_{50}$ 比 MaDiNet 原始大图结果低 1.675 点，但两种数据表示不同，不能视为排行榜差距。其切片测试集 P/R/AP$_{50}$/AP$_{50:95}$ 为 79.276/63.733/70.822/55.552。验证与测试 AP$_{50}$ 相差 18.00 点，主要来自 Boeing737，其 AP$_{50}$ 从 78.10 降到 39.56。
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{figures/sar_aircraft_per_class_ap50.pdf}
+  \caption{SAR-Aircraft 切片验证集和测试集的逐类别 AP50。Boeing737 的分布偏移最明显。}
+\end{figure}
+
+\subsection{OGSOD-1.0：同协议定位证据}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.7pt}
+\caption{OGSOD-1.0 TEST 同协议结果。两模型均采用 300 轮、1024 输入、全局 batch 64 和 AdamW。指标单位为百分比，复杂度采用 640 输入参考。}
+\label{tab:ogsod-zh}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+模型 & P & R & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ & 参数 & GFLOPs \\
+\midrule
+Mamba-YOLO-T & \textbf{80.143} & 71.155 & 77.173 & 40.211 & 42.302 & 5.985 & 13.6 \\
+\rowcolor{gray!12}
+\method{} / PFIM-T & 79.714 & \textbf{71.692} & \textbf{77.263} & \textbf{40.971} & \textbf{43.602} & \textbf{5.964} & \textbf{13.2} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+在该同协议单次对比中，PFIM-T 的 AP$_{50}$ 仅提高 0.090 点，而 AP$_{75}$ 和 AP$_{50:95}$ 分别提高 0.760 和 1.300 点。这是当前对论文核心假设最直接的观察：改动可能主要改善严格重叠阈值下的定位质量，而不是普遍提高置信度或精度率；单次结果本身不能证明跨随机种子的稳定提升。
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.1pt}
+\caption{OGSOD-1.0 TEST 逐类别定位结果。}
+\label{tab:ogsod-class-zh}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Baseline} & \multicolumn{3}{c}{PFIM-T} \\
+类别 & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+Bridge & 81.135 & 26.050 & 36.266 & \textbf{82.272} & \textbf{28.775} & \textbf{38.272} \\
+Harbor & 98.128 & 88.213 & 73.529 & \textbf{99.315} & \textbf{88.665} & \textbf{75.388} \\
+Tank & \textbf{52.257} & \textbf{6.370} & 17.111 & 50.203 & 5.474 & \textbf{17.147} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+总体增益主要来自 bridge 和 harbor；tank 的 AP$_{50}$、AP$_{75}$ 分别下降 2.055 和 0.896 点。该类在 71 张正样本测试图像中包含 1,205 个实例，平均每张约 17 个。这是当前同协议运行中观察到的失效现象，但尚不能确定机制：目标密度、外观重复、尺度和 NMS 难度在该类中同时变化。它也不能推出普遍的小目标结论；必须完成按密度、尺度和最近邻距离分层的评估后，才能把退化归因于共享局部平滑或重要性调制。
+
+\subsection{精度--效率权衡}
+
+四个数据集的目标是刻画定位质量与低复杂度的工作点，而不是证明所有 AP$_{50}$ 上绝对领先。OGSOD 同协议对比是唯一直接的架构比较，并给出最清晰的 AP$_{75}$/AP$_{50:95}$ 观察；其余档案结果只提供非因果的背景信息。PFIM-T 在 SSDD 上距 MaDiNet 仅 0.30 AP$_{50}$，在非同协议飞机背景比较中相差 1.68 点，同时完整模型远小于 MaDiNet 已测核心。与本地 YOLOv5s 配置相比，本文参数量减少 34.8\%、FLOPs 减少 45.5\%。这些比较用于描述效率背景，不能证明跨数据集架构增益。
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\caption{T 级 PFIM 相对 baseline 的证据层级。正值表示 PFIM 提升，单位为百分点。}
+\label{tab:evidence-zh}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llrrl}
+\toprule
+数据集 & 评估 & $\Delta$AP$_{50}$ & $\Delta$AP$_{50:95}$ & 证据状态 \\
+\midrule
+OGSOD-1.0 & Test & +0.090 & +1.300 & 同协议，单次运行 \\
+SSDD & 档案验证 & +0.219 & +1.170 & 恢复代码状态 \\
+SAR-Ship & 本地测试 & +0.228 & +8.250 & baseline 中途改 BS \\
+SAR-Air & 切片验证 & +1.074 & +0.609 & 优化设置不一致 \\
+SAR-Air & 切片测试 & +0.420 & +1.039 & 优化设置不一致 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\FloatBarrier
+\section{讨论与局限}
+
+现有证据表明，\method{} 的目标是在极小计算开销下改善定位敏感指标。OGSOD-1.0 是当前最强的同协议单次运行证据，表~\ref{tab:evidence-zh} 将它与档案差值明确区分；SSDD 和 SAR-ShipDataset 扩展了应用覆盖面，SAR-Aircraft 则暴露出明显类别和划分偏移，但三者均未提供第二个受控架构比较。飞机 T 模型在验证集上表现为高精度、较低召回，这与抑制模糊响应相容，但在完成统一阈值与同配置实验前，不能把该现象归因于 PFIM。
+
+OGSOD 的 tank 结果进一步收缩了结论边界。密集、重复的散射模式可能需要当前单一共享重要性场之外的实例分离线索。还需通过按密度分桶的评估和重要性图可视化，判断退化来自残差平滑、共享调制还是检测头；本文只把它作为已观察到的局限，不把该假设描述为已验证机制。
+
+OGSOD 已提供一个同协议架构参考，但当前仍有四项限制。第一，每个模型只有一次完整训练，尚无多随机种子方差。第二，PFIM 尚未拆分为 gamma-only、write-only、delta-only、no-PFIM 和参数匹配的空间无结构对照，因子化驱动与步长适配的作用尚未隔离；其中 gamma 与 write 只能视为同一执行位置上的两种参数化因子。第三，部分 SSDD 结果来自多服务器历史恢复；SAR-Ship 的 baseline 中途将全局 batch 从 256 改为 128；SAR-Aircraft baseline 的优化器、batch 和训练轮数也不同，因此这些差值只能作为归档证据。第四，MaDiNet 未公开三个数据集的全部精确划分，当前飞机数据是重叠切片，恢复的 OGSOD 三划分也不同于原论文协议。
+
+正式投稿前，应在同一代码提交下，采用相同初始化流程和对应随机种子、优化器、batch、数据增强和 300 轮训练时长，对 Mamba-YOLO-T、无 PFIM 的 DS-SSM、参数匹配的图像级重要性对照和完整 token 级 PFIM 至少运行三个随机种子并报告均值与标准差，再补充 gamma/write/delta 的诊断性分支消融和密度/尺度/间距分析。
+
+\section{结论}
+
+本文提出 \method{}，通过局部序列残差抑制和 PFIM 重要性估计，对因子化 selective-scan 输入驱动与动态步长进行联合调制。该模块仅插入 Mamba-YOLO 浅层，T 级模型保持 5.96M 参数和 13.21 GFLOPs。每种架构一次的 OGSOD-1.0 同协议实验显示 AP$_{50:95}$ 提升 1.300 点，而 AP$_{50}$ 几乎不变；另外三个归档数据集只提供协议受限的背景信息，而非可复制的跨数据集结论。密集 tank 结果也说明收益不会覆盖所有目标布局。因而本文的可辩护结论是：\method{} 是一个面向定位敏感 SAR 检测的轻量候选方案，仍需多随机种子、参数匹配和分支级因果验证。
+
+\begingroup
+\footnotesize
+\setlength{\bibsep}{0pt}
+\bibliographystyle{plainnat}
+\bibliography{aaai_ds_ssm_refs}
+\endgroup
+\end{document}

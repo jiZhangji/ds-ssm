@@ -1,0 +1,70 @@
+{
+  "status": "PROBE_PASS",
+  "task": "change_detection",
+  "method": "lantnet",
+  "dataset": "Ottawa",
+  "seed": 0,
+  "device": "cuda:0",
+  "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+  "test_evaluated": false,
+  "ground_truth_read": false,
+  "validation_loader_created": false,
+  "test_loader_created": false,
+  "optimizer_updates": 6,
+  "warmup_probe_updates": 2,
+  "timed_updates": 4,
+  "update_seconds": [
+    0.020427616022061557,
+    0.014968093950301409,
+    0.014895419997628778,
+    0.01512337796157226,
+    0.014534378016833216,
+    0.014578897971659899
+  ],
+  "training_losses": [
+    0.8596059679985046,
+    0.8410363048315048,
+    0.8617988079786301,
+    0.8769652843475342,
+    0.8612998872995377,
+    0.8411202430725098
+  ],
+  "mean_timed_update_seconds": 0.014783018486923538,
+  "preprocessing_seconds": 6.673071668017656,
+  "estimated_full_seconds": 247.31843810740247,
+  "planned_max_updates": 15000,
+  "estimate_components": {
+    "train_seconds": 221.74527730385307,
+    "unmeasured_pseudo_validation_seconds": 18.478773108654423,
+    "unmeasured_uncertain_inference_seconds": 0.42131602687732084
+  },
+  "estimate_caveat": "6-update extrapolation; pseudo-validation and uncertain inference use train-time/3 forward estimate, never sampled",
+  "protocol_sha256": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe",
+  "source_audit": {
+    "method": "lantnet",
+    "repository": "https://github.com/summitgao/LANTNet",
+    "commit": "3d22af4a989f96a6b07b4f15e86c73cffd1841a2",
+    "definitions": [
+      {
+        "source": "vendor/lantnet/LANTNet.ipynb",
+        "source_sha256": "0533acc070502570556ecf68f94d835f92b72ec6ca8d7bbd543a4713e51bf5e9",
+        "cell_source_sha256": {
+          "vendor/lantnet/LANTNet.ipynb:cell5": "8ddd8f2c9bd552073d539beb92b6cb727e05b2ee5e61e94313cbbf341d60019e",
+          "vendor/lantnet/LANTNet.ipynb:cell7": "843d02f3114b413956586baec8101b6c4f8406f6cb5210f341217842a1c9c936"
+        },
+        "definitions": [
+          "LANTNet",
+          "LayerAttention"
+        ],
+        "transformed_ast_sha256": "05624c253cb6d386a8a7c415e46b0c78923024758715564b462557524096632a",
+        "precision_cast_rewrites": 0,
+        "hook_once_rewrites": 1
+      }
+    ],
+    "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+    "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+    "author_source_unmodified": true,
+    "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+  },
+  "timestamp": "2026-10-12T13:49:20.398771+00:00"
+}

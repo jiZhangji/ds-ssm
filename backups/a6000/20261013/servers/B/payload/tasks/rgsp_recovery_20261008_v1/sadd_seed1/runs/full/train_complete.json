@@ -1,0 +1,22 @@
+{
+  "finished_utc": "2026-10-08T21:18:59.435209+00:00",
+  "last_epoch_observed": 200,
+  "smoke_only": false,
+  "best_sha256": "e7f369df3c23818bbee8420c4b43b22603809786d4256814bd2ab909ad69b023",
+  "reloaded_controls": [
+    {
+      "name": "model.3",
+      "control": "full",
+      "lambda_s": 0.486572265625,
+      "alpha": 0.473876953125,
+      "beta_i": 0.99072265625,
+      "rho_i": 0.99169921875,
+      "eta_i": 0.12744140625,
+      "buffer_scalars": [],
+      "min_retain": 0.5,
+      "input_path": true,
+      "delta_path": true,
+      "fixed_importance": null
+    }
+  ]
+}

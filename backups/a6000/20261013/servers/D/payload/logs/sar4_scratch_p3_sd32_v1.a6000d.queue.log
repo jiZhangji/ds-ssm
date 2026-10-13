@@ -1,0 +1,13 @@
+Experiment: sar4_scratch_p3_sd32_v1
+Runs:       1
+Scratch:    True
+Placement:  P3 for Full; original Mamba-YOLO for Baseline
+Eval split: test
+START: SSDD / full_p3; epochs=0
+
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/mbyolo_train_sarair.py --task train --data /home/powerleader/ig-ds-ssm/experiments/sar4/sar4_scratch_p3_sd32_v1-manifest/datasets/SSDD.yaml --config /home/powerleader/ig-ds-ssm/experiments/sar4/sar4_scratch_p3_sd32_v1-manifest/configs/ssdd_full_p3.yaml --weights none --imgsz 640 --batch_size 16 --device 0 --epochs 150 --workers 8 --optimizer AdamW --lr0 0.0002 --lrf 0.01 --weight_decay 0.0005 --nbs 64 --warmup_epochs 3.0 --module_warmup_epochs 0 --patience 30 --cos_lr --mosaic 0.3 --close_mosaic 15 --degrees 180 --translate 0.1 --scale 0.3 --flipud 0.5 --fliplr 0.5 --seed 0 --deterministic --project /home/powerleader/ig-ds-ssm/experiments/sar4 --name sar4_scratch_p3_sd32_v1_ssdd_full_p3
+
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/tools/evaluate_sarmix.py --weights /home/powerleader/ig-ds-ssm/experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/best.pt --data /home/powerleader/ig-ds-ssm/experiments/sar4/sar4_scratch_p3_sd32_v1-manifest/datasets/SSDD.yaml --experiment sar4_scratch_p3_sd32_v1_ssdd_full_p3 --placement p3 --variant full --state-dim 32 --seed 0 --subset SSDD --split test --output-json /home/powerleader/ig-ds-ssm/experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/eval_test.json --imgsz 640 --batch 16 --device 0 --workers 8 --project /home/powerleader/ig-ds-ssm/experiments/sar4/evaluations --name sar4_scratch_p3_sd32_v1_ssdd_full_p3_test
+Summary: /home/powerleader/ig-ds-ssm/experiments/sar4/sar4_scratch_p3_sd32_v1_summary.md
+Summary: /home/powerleader/ig-ds-ssm/experiments/sar4/sar4_scratch_p3_sd32_v1_summary.md
+Queue finished: sar4_scratch_p3_sd32_v1

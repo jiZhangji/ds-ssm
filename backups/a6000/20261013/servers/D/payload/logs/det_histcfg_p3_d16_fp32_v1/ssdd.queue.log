@@ -1,0 +1,14 @@
+Experiment: det_histcfg_p3_d16_fp32_v1
+Runs:       1
+Weights:    /home/powerleader/ig-ds-ssm/yolov8n.pt
+Module warmup: 20 epochs
+Placement:  P3 for Full; original Mamba-YOLO for Baseline
+Eval split: test
+START: SSDD / full_p3; epochs=0
+
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/mbyolo_train_sarair.py --task train --data /home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1-manifest/datasets/SSDD.yaml --config /home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1-manifest/configs/ssdd_full_p3.yaml --weights /home/powerleader/ig-ds-ssm/yolov8n.pt --imgsz 640 --batch_size 32 --device 0 --epochs 300 --workers 4 --optimizer AdamW --lr0 0.001 --lrf 0.01 --weight_decay 0.0005 --nbs 64 --warmup_epochs 5.0 --warmup_bias_lr 0.001 --module_warmup_epochs 20 --patience 100 --mosaic 1.0 --close_mosaic 10 --degrees 0.0 --translate 0.1 --scale 0.5 --flipud 0.0 --fliplr 0.5 --hsv_h 0.015 --hsv_s 0.7 --hsv_v 0.4 --seed 0 --deterministic --project /home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection --name det_histcfg_p3_d16_fp32_v1_ssdd_full_p3 --cache
+
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/tools/evaluate_sarmix.py --weights /home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/best.pt --data /home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1-manifest/datasets/SSDD.yaml --experiment det_histcfg_p3_d16_fp32_v1_ssdd_full_p3 --placement p3 --variant full --state-dim 16 --seed 0 --subset SSDD --split test --output-json /home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/eval_test.json --imgsz 640 --batch 64 --device 0 --workers 4 --project /home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/evaluations --name det_histcfg_p3_d16_fp32_v1_ssdd_full_p3_test
+Summary: /home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_summary.md
+Summary: /home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_summary.md
+Queue finished: det_histcfg_p3_d16_fp32_v1

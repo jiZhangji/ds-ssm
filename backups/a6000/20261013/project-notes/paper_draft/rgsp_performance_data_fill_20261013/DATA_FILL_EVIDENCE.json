@@ -1,0 +1,28 @@
+{
+  "source_attachment": "C:/Users/13207/.codex/attachments/45dee9dc-9fc4-4124-b4a2-d1cf67b21d01/已粘贴的文本.txt",
+  "source_sha256": "091f2bf201df7a464213e621cb83dcfab91a13853d019b9f91bcbf0b6fe4d2b5",
+  "output_sha256": "814b93624e5f7f1fbbc1ef4d28333b9921e5c0aada3e505d592d1c142360c2ea",
+  "new_performance_cells": 45,
+  "previous_blank_complexity_cells_filled": 56,
+  "new_group_complexity_cells": 24,
+  "external_cd_profile_raw_sha256": "a7d21753bf9d35bdbdb2a08a41caf8ff78bf339e17ef73a789ba044b1a04f691",
+  "pywavelets_runtime_archive_sha256": "cf6723aac568b337079861dfc46390f0fb9bb38d17d26fe6beb6be400472df54",
+  "sources": [
+    "evidence/COMPLETED_RUNS.json",
+    "evidence/PROTOCOL_VERIFICATION.json",
+    "evidence/EDIT_OPERATIONS.json",
+    "evidence/STATIC_CHECKS.json",
+    "../../experiments/rgsp_profile_fill_20261013_v1/results.remote.json",
+    "../../experiments/rgsp_table_completion_20261012_v1/profile/recovered_run2/results.json",
+    "../../experiments/rgsp_table_completion_20261012_v1/reuse/DETECTION_PROFILE_CELL_SOURCE_MAPPING.json"
+  ],
+  "limitations": [
+    "Six original tables, original prose and old performance numbers retained.",
+    "Common two-seed SSDD statistics exclude YOLOv8n seed2.",
+    "Original full SADD and current Ship performances incomplete.",
+    "Literature/historical complexity without exact configuration binding stays blank.",
+    "Covered FLOPs are partial arithmetic estimates; not exhaustive or measured speed.",
+    "External CD uses native single patches with explicitly omitted functional DCT/wavelet/attention operations.",
+    "No parent-document compilation or pagination verification."
+  ]
+}

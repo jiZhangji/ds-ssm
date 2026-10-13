@@ -1,0 +1,580 @@
+{
+  "schema": "cross-raw-evidence-readonly-manifest-v1",
+  "hostname": "powerleader-PT6620W",
+  "capture_utc": "2026-10-11T03:15:50.458166+00:00",
+  "source_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+  "read_only": true,
+  "file_count": 95,
+  "files": [
+    {
+      "local_relative": "sar_acd_original_seed0/result.json",
+      "source_relative": "runs/sar_acd_original_seed0/result.json",
+      "sha256": "78295008b867e71e47d6b221983c9b16842169e4277e2e4ac06e1b2cee329bbf",
+      "bytes": 4093
+    },
+    {
+      "local_relative": "sar_acd_original_seed0/test_evaluation.json",
+      "source_relative": "runs/sar_acd_original_seed0/test_evaluation.json",
+      "sha256": "f766b288ed5390681b9c46bf61d64c6902fefd853d38bf2c2284c7c9d9cc8827",
+      "bytes": 952
+    },
+    {
+      "local_relative": "sar_acd_original_seed0/config.json",
+      "source_relative": "runs/sar_acd_original_seed0/config.json",
+      "sha256": "ceef262a2b29a29887b695c48043ad93580835e027c27b01e06892da34249033",
+      "bytes": 2733
+    },
+    {
+      "local_relative": "sar_acd_original_seed0/completion.json",
+      "source_relative": "runs/sar_acd_original_seed0/completion.json",
+      "sha256": "800ef186a00d2da049e6d0611c0af213f397b97f3bcacb0b48631683656fe69c",
+      "bytes": 1646
+    },
+    {
+      "local_relative": "sar_acd_original_seed0/sar_acd_original_seed0.json",
+      "source_relative": "receipts/sar_acd_original_seed0.json",
+      "sha256": "dda67e7575b89e4f10c76b1554ed248cee0f617460446d1aa93631fdc2e74170",
+      "bytes": 4586
+    },
+    {
+      "local_relative": "sar_acd_original_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/sar_acd_original_seed0/deep_completion_audit.json",
+      "sha256": "1d6656971fed2575614ea43604a93744ed9d7b92e7f52c196b18bd47bb1f8e80",
+      "bytes": 2179
+    },
+    {
+      "local_relative": "sar_acd_matched_scale075_seed0/result.json",
+      "source_relative": "runs/sar_acd_matched_scale075_seed0/result.json",
+      "sha256": "5976e8287de1f068e24b56a96a3322df02c228791eece1ddf0cd198895aaaca7",
+      "bytes": 4444
+    },
+    {
+      "local_relative": "sar_acd_matched_scale075_seed0/test_evaluation.json",
+      "source_relative": "runs/sar_acd_matched_scale075_seed0/test_evaluation.json",
+      "sha256": "9e1a91b76e82d48477d1ff497f75ca99b32f33472006fd5c1895612d0c99456d",
+      "bytes": 934
+    },
+    {
+      "local_relative": "sar_acd_matched_scale075_seed0/config.json",
+      "source_relative": "runs/sar_acd_matched_scale075_seed0/config.json",
+      "sha256": "018e52898361627757b43c92d429611d2fb1d4572ae7d74a2cc6007ffc66a4c0",
+      "bytes": 2749
+    },
+    {
+      "local_relative": "sar_acd_matched_scale075_seed0/completion.json",
+      "source_relative": "runs/sar_acd_matched_scale075_seed0/completion.json",
+      "sha256": "48d7ec91f4c3fe4198f773a644369216f92fcd7378643cc0da4619055e720ab8",
+      "bytes": 1702
+    },
+    {
+      "local_relative": "sar_acd_matched_scale075_seed0/sar_acd_matched_scale075_seed0.json",
+      "source_relative": "receipts/sar_acd_matched_scale075_seed0.json",
+      "sha256": "3986866ace1844a44230e2d5e9694ea9928b46c27e07b99b32fef2c233ce95d6",
+      "bytes": 4690
+    },
+    {
+      "local_relative": "sar_acd_matched_scale075_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/sar_acd_matched_scale075_seed0/deep_completion_audit.json",
+      "sha256": "04a0a283578abc4f4d75913458cdc1c6e4e980be83b5ea1757347b5ad5f64295",
+      "bytes": 2243
+    },
+    {
+      "local_relative": "sar_acd_full_seed0/result.json",
+      "source_relative": "runs/sar_acd_full_seed0/result.json",
+      "sha256": "052e28a6358b7aa9ed53a7c611e1df856f61eb60c95af2a27292c929246eb124",
+      "bytes": 4384
+    },
+    {
+      "local_relative": "sar_acd_full_seed0/test_evaluation.json",
+      "source_relative": "runs/sar_acd_full_seed0/test_evaluation.json",
+      "sha256": "b6ce184aa021552c32534ca6ac8648ce51c3a78f0e0d25001e4a7c4656ad4b20",
+      "bytes": 936
+    },
+    {
+      "local_relative": "sar_acd_full_seed0/config.json",
+      "source_relative": "runs/sar_acd_full_seed0/config.json",
+      "sha256": "b72915e3976ed0b77697439db72badd265023a91f5755735bc1379e76873254c",
+      "bytes": 2725
+    },
+    {
+      "local_relative": "sar_acd_full_seed0/completion.json",
+      "source_relative": "runs/sar_acd_full_seed0/completion.json",
+      "sha256": "499bbb7d36a8b6e12597b7db72dba8ec401a7b426161e7b1059fed5df297e3c0",
+      "bytes": 1618
+    },
+    {
+      "local_relative": "sar_acd_full_seed0/sar_acd_full_seed0.json",
+      "source_relative": "receipts/sar_acd_full_seed0.json",
+      "sha256": "b7c7c7ec25ac7f4053cc56fcce1114389553a74f31f67c89c88f19f998151069",
+      "bytes": 4534
+    },
+    {
+      "local_relative": "sar_acd_full_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/sar_acd_full_seed0/deep_completion_audit.json",
+      "sha256": "80626dbf5806e991963a7bda0627eacdf675fc7ec2506608459feb9c0857624a",
+      "bytes": 2146
+    },
+    {
+      "local_relative": "sample_original_seed0/result.json",
+      "source_relative": "runs/sample_original_seed0/result.json",
+      "sha256": "161f3fc0dd2f035beb5e04518a400f6ab7bb3b77706d8e72705e12a88069bdb3",
+      "bytes": 4942
+    },
+    {
+      "local_relative": "sample_original_seed0/test_evaluation.json",
+      "source_relative": "runs/sample_original_seed0/test_evaluation.json",
+      "sha256": "955e5603ff37ec76aef2f4d7a17b6f531bf3856781e25334a2b852d7a58c8b98",
+      "bytes": 1883
+    },
+    {
+      "local_relative": "sample_original_seed0/config.json",
+      "source_relative": "runs/sample_original_seed0/config.json",
+      "sha256": "5823dd705474f8dd762107b4ea7d27e952a9c9c0886b1a40bd1e22d8d6395551",
+      "bytes": 2652
+    },
+    {
+      "local_relative": "sample_original_seed0/completion.json",
+      "source_relative": "runs/sample_original_seed0/completion.json",
+      "sha256": "4a9e703463738f088a687cbcacd87acc4c22001ce093d73ace50d54376b50ab3",
+      "bytes": 1640
+    },
+    {
+      "local_relative": "sample_original_seed0/sample_original_seed0.json",
+      "source_relative": "receipts/sample_original_seed0.json",
+      "sha256": "e27fe7a7c2d9db4d9f4c9d4b94ea8e0c315ca21ac54d273c1db57c7b75791e43",
+      "bytes": 4571
+    },
+    {
+      "local_relative": "sample_original_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/sample_original_seed0/deep_completion_audit.json",
+      "sha256": "37202daa91c64eb83669f8565e784d1ae8be7a528f11723a4985aaae46797b87",
+      "bytes": 2170
+    },
+    {
+      "local_relative": "sample_matched_scale075_seed0/result.json",
+      "source_relative": "runs/sample_matched_scale075_seed0/result.json",
+      "sha256": "9ba38eb5ea9929b87a4a19ac6165b3bdb012a38f2aa1e166756bf28388e4a47f",
+      "bytes": 5299
+    },
+    {
+      "local_relative": "sample_matched_scale075_seed0/test_evaluation.json",
+      "source_relative": "runs/sample_matched_scale075_seed0/test_evaluation.json",
+      "sha256": "4a4cbca2087170d11041b0d64ba82ef4fc56327ee4f32c1b54263b1658b2188e",
+      "bytes": 1871
+    },
+    {
+      "local_relative": "sample_matched_scale075_seed0/config.json",
+      "source_relative": "runs/sample_matched_scale075_seed0/config.json",
+      "sha256": "4eca5a736f2922dfe97b0661e53d8f9e2d897e160e0d44dc3dccd2c1420468eb",
+      "bytes": 2668
+    },
+    {
+      "local_relative": "sample_matched_scale075_seed0/completion.json",
+      "source_relative": "runs/sample_matched_scale075_seed0/completion.json",
+      "sha256": "97b60b10d450f923567612f11824b768896c4196acdc51aecb7485031aa234b6",
+      "bytes": 1696
+    },
+    {
+      "local_relative": "sample_matched_scale075_seed0/sample_matched_scale075_seed0.json",
+      "source_relative": "receipts/sample_matched_scale075_seed0.json",
+      "sha256": "0e5ba105e6e1df1866ff4a8dd188209190509594301eb6f2fe89075ee0d0a7ad",
+      "bytes": 4675
+    },
+    {
+      "local_relative": "sample_matched_scale075_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/sample_matched_scale075_seed0/deep_completion_audit.json",
+      "sha256": "b18bbfc8d37b420c39b0f08eba9adf4b48a675896d86a74652c3bc621b61fa9a",
+      "bytes": 2235
+    },
+    {
+      "local_relative": "sample_full_seed0/result.json",
+      "source_relative": "runs/sample_full_seed0/result.json",
+      "sha256": "1ca580d9b452068922fdb299ecd8c71f2ea5b5c3f7e521ed4378f6746ffbd7c8",
+      "bytes": 5252
+    },
+    {
+      "local_relative": "sample_full_seed0/test_evaluation.json",
+      "source_relative": "runs/sample_full_seed0/test_evaluation.json",
+      "sha256": "59cc7010208d29f1df061d38989d7a2522a32e4612ebfd618deaee2f18ee41ea",
+      "bytes": 1884
+    },
+    {
+      "local_relative": "sample_full_seed0/config.json",
+      "source_relative": "runs/sample_full_seed0/config.json",
+      "sha256": "0db04c335d05ff95e25c35de604cbfd418b78500c64b6406b7d13cfcecc454e1",
+      "bytes": 2644
+    },
+    {
+      "local_relative": "sample_full_seed0/completion.json",
+      "source_relative": "runs/sample_full_seed0/completion.json",
+      "sha256": "bdfb1ec865e14a2b8ceb3fa6c8065c41408c9a03dcd47f78f895e38b3a6c88fb",
+      "bytes": 1612
+    },
+    {
+      "local_relative": "sample_full_seed0/sample_full_seed0.json",
+      "source_relative": "receipts/sample_full_seed0.json",
+      "sha256": "278fde86f4522be398b95209cb87a770fa345fb21298079f551a8fba23535d62",
+      "bytes": 4519
+    },
+    {
+      "local_relative": "sample_full_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/sample_full_seed0/deep_completion_audit.json",
+      "sha256": "43a43587730472b1ceb9e0fd5364c020f3175e9f8cd64243095d70d3f89cacc8",
+      "bytes": 2138
+    },
+    {
+      "local_relative": "ottawa_original_seed0/result.json",
+      "source_relative": "runs/ottawa_original_seed0/result.json",
+      "sha256": "fae6c86e7bc215bf8e42200bfd2c9a427d19934cfbedb4167aec4af5502d9040",
+      "bytes": 3671
+    },
+    {
+      "local_relative": "ottawa_original_seed0/test_evaluation.json",
+      "source_relative": "runs/ottawa_original_seed0/test_evaluation.json",
+      "sha256": "e15feffda8018062199a8b7b1e549dd0d72b34cf03e801fef608845c18a5b481",
+      "bytes": 620
+    },
+    {
+      "local_relative": "ottawa_original_seed0/config.json",
+      "source_relative": "runs/ottawa_original_seed0/config.json",
+      "sha256": "2fa20fbbaea074b760e7713451eb466cb91c5efbd63032ce31966d05178d10a2",
+      "bytes": 2642
+    },
+    {
+      "local_relative": "ottawa_original_seed0/completion.json",
+      "source_relative": "runs/ottawa_original_seed0/completion.json",
+      "sha256": "ee6e8ac1dd38250f947f6f26d57f7e3631384119287762dfefa8c25a089fcaa4",
+      "bytes": 1640
+    },
+    {
+      "local_relative": "ottawa_original_seed0/ottawa_original_seed0.json",
+      "source_relative": "receipts/ottawa_original_seed0.json",
+      "sha256": "b3cfddd4b58b7a86ca5c51abd7c44f1a383bb269019461014c3b515cd77cb94c",
+      "bytes": 4571
+    },
+    {
+      "local_relative": "ottawa_original_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/ottawa_original_seed0/deep_completion_audit.json",
+      "sha256": "6d8b24bd5e7473b15600e14525213fa4c23e131079daae711cd574ed87eeecfd",
+      "bytes": 2169
+    },
+    {
+      "local_relative": "ottawa_matched_scale075_seed0/result.json",
+      "source_relative": "runs/ottawa_matched_scale075_seed0/result.json",
+      "sha256": "e26959ccf664fdde4598443546b101f4495eebb53da03d36c2b365776892ffd4",
+      "bytes": 4042
+    },
+    {
+      "local_relative": "ottawa_matched_scale075_seed0/test_evaluation.json",
+      "source_relative": "runs/ottawa_matched_scale075_seed0/test_evaluation.json",
+      "sha256": "b8e864b7ac8e3e7404e8339a668d224aba78f44aaea223d7641df909f916adb6",
+      "bytes": 622
+    },
+    {
+      "local_relative": "ottawa_matched_scale075_seed0/config.json",
+      "source_relative": "runs/ottawa_matched_scale075_seed0/config.json",
+      "sha256": "e83cfebf456aa0f90cbffc663a72b5c781977c6f2bc1434b984e442d6b00b4d0",
+      "bytes": 2658
+    },
+    {
+      "local_relative": "ottawa_matched_scale075_seed0/completion.json",
+      "source_relative": "runs/ottawa_matched_scale075_seed0/completion.json",
+      "sha256": "96217d7e2fd0cd009431cea87eba8c7c8a782ba9d9cc74d0c29256f6ca3d3ab6",
+      "bytes": 1696
+    },
+    {
+      "local_relative": "ottawa_matched_scale075_seed0/ottawa_matched_scale075_seed0.json",
+      "source_relative": "receipts/ottawa_matched_scale075_seed0.json",
+      "sha256": "4450dea459e971c52afdaad32b28321232d3eed9a7fe5a0fb52de61300209d68",
+      "bytes": 4675
+    },
+    {
+      "local_relative": "ottawa_matched_scale075_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/ottawa_matched_scale075_seed0/deep_completion_audit.json",
+      "sha256": "7cb0ab420055eb83229d074e37c4a69f180c63b85546ce49789a8c42e402c618",
+      "bytes": 2234
+    },
+    {
+      "local_relative": "ottawa_full_seed0/result.json",
+      "source_relative": "runs/ottawa_full_seed0/result.json",
+      "sha256": "1623006678b4861d8e34e052e8b4bcc973bc200e5a56c5082ea730842fe81f23",
+      "bytes": 3980
+    },
+    {
+      "local_relative": "ottawa_full_seed0/test_evaluation.json",
+      "source_relative": "runs/ottawa_full_seed0/test_evaluation.json",
+      "sha256": "cf786d512f01c4a8719254338373b7e580ac37cc2c48ae93b14398677b9250d7",
+      "bytes": 619
+    },
+    {
+      "local_relative": "ottawa_full_seed0/config.json",
+      "source_relative": "runs/ottawa_full_seed0/config.json",
+      "sha256": "9e6239b3c866ba7f12ad6a8a05ab91c55641d6dadb2f5560259bd17e114fd675",
+      "bytes": 2634
+    },
+    {
+      "local_relative": "ottawa_full_seed0/completion.json",
+      "source_relative": "runs/ottawa_full_seed0/completion.json",
+      "sha256": "066fbcfbe0283a2d0293d23555074de78a4936cfa38374bbeb2e6f9b50d0b7c1",
+      "bytes": 1612
+    },
+    {
+      "local_relative": "ottawa_full_seed0/ottawa_full_seed0.json",
+      "source_relative": "receipts/ottawa_full_seed0.json",
+      "sha256": "b9817a142c10f03eff0545d883e2f4c58643148939cb505d155206f0e91d737f",
+      "bytes": 4519
+    },
+    {
+      "local_relative": "ottawa_full_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/ottawa_full_seed0/deep_completion_audit.json",
+      "sha256": "7cdd98a7cf128c91646f6c1b4fa5609da857b70d9f5d8191fdc1aef9b34e8d71",
+      "bytes": 2138
+    },
+    {
+      "local_relative": "farmland_original_seed0/result.json",
+      "source_relative": "runs/farmland_original_seed0/result.json",
+      "sha256": "7a1ba14ec1945016b98f4f280855907246aa88caca12d9131bcf1e1d411717a7",
+      "bytes": 3598
+    },
+    {
+      "local_relative": "farmland_original_seed0/test_evaluation.json",
+      "source_relative": "runs/farmland_original_seed0/test_evaluation.json",
+      "sha256": "62a50b04d07a9d1dad77581bef8f7e2b3bd040d1e631b5609f8d098b23bc7c2c",
+      "bytes": 539
+    },
+    {
+      "local_relative": "farmland_original_seed0/config.json",
+      "source_relative": "runs/farmland_original_seed0/config.json",
+      "sha256": "db9283ce553ca93ab8db852d5a771a1bd21e0ff817ecd7078a32ba5fb556c79a",
+      "bytes": 2648
+    },
+    {
+      "local_relative": "farmland_original_seed0/completion.json",
+      "source_relative": "runs/farmland_original_seed0/completion.json",
+      "sha256": "3b98499c4561320e3072e4a78614b3f4bbd00b47f3ff7abc52413bbe0f383b1c",
+      "bytes": 1652
+    },
+    {
+      "local_relative": "farmland_original_seed0/farmland_original_seed0.json",
+      "source_relative": "receipts/farmland_original_seed0.json",
+      "sha256": "561d701c66daefddb5bde3121dd7176647c2c3f4ce3abb6347838d30936a698a",
+      "bytes": 4601
+    },
+    {
+      "local_relative": "farmland_original_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/farmland_original_seed0/deep_completion_audit.json",
+      "sha256": "3be9ce0acac78bfb9a99a624ec818c684e8bb8f5f9ac857144844fb1de763ad8",
+      "bytes": 2185
+    },
+    {
+      "local_relative": "farmland_matched_scale075_seed0/result.json",
+      "source_relative": "runs/farmland_matched_scale075_seed0/result.json",
+      "sha256": "857bff76ac898a7b84cc85b52e2666410e68221676fc8fb4f17153c017889ace",
+      "bytes": 4023
+    },
+    {
+      "local_relative": "farmland_matched_scale075_seed0/test_evaluation.json",
+      "source_relative": "runs/farmland_matched_scale075_seed0/test_evaluation.json",
+      "sha256": "93a3bd85a8b99c5d6273613110ca3fa26e09447393b5210383cc566e0e5ec64e",
+      "bytes": 595
+    },
+    {
+      "local_relative": "farmland_matched_scale075_seed0/config.json",
+      "source_relative": "runs/farmland_matched_scale075_seed0/config.json",
+      "sha256": "61de2f289f9ef67f6d9c656bc898d972de83956f85629a0ce3ccd132d86e9c3f",
+      "bytes": 2664
+    },
+    {
+      "local_relative": "farmland_matched_scale075_seed0/completion.json",
+      "source_relative": "runs/farmland_matched_scale075_seed0/completion.json",
+      "sha256": "6ed3d01226e1b2f6eb2ec732ede6be20681a28ee85ed2b62ee8b84343ab61fda",
+      "bytes": 1708
+    },
+    {
+      "local_relative": "farmland_matched_scale075_seed0/farmland_matched_scale075_seed0.json",
+      "source_relative": "receipts/farmland_matched_scale075_seed0.json",
+      "sha256": "38fe06bae92fc997661b8e874f4616d1d4d65dfd7e2ad690d76f6afbe038660e",
+      "bytes": 4705
+    },
+    {
+      "local_relative": "farmland_matched_scale075_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/farmland_matched_scale075_seed0/deep_completion_audit.json",
+      "sha256": "e3c2e20d177adc80edf3864fcd6c1138dd5918a01f1e456edbc8951a0832fa47",
+      "bytes": 2249
+    },
+    {
+      "local_relative": "farmland_full_seed0/result.json",
+      "source_relative": "runs/farmland_full_seed0/result.json",
+      "sha256": "5e38bb395379772645c1429abe994561f978d8afe4d7d49aeaacf9ff1d139198",
+      "bytes": 3967
+    },
+    {
+      "local_relative": "farmland_full_seed0/test_evaluation.json",
+      "source_relative": "runs/farmland_full_seed0/test_evaluation.json",
+      "sha256": "edae6832c601e476c12e18db1b68b6403b336b523d52150fb99869648d9bd0fe",
+      "bytes": 600
+    },
+    {
+      "local_relative": "farmland_full_seed0/config.json",
+      "source_relative": "runs/farmland_full_seed0/config.json",
+      "sha256": "c6041296bd6b4e9a0541768549e2f2b06670871b76c0d9eec0bd9d55155a6ec8",
+      "bytes": 2640
+    },
+    {
+      "local_relative": "farmland_full_seed0/completion.json",
+      "source_relative": "runs/farmland_full_seed0/completion.json",
+      "sha256": "f834ed4e1b7f23a700e0c5ae6f575751c4da842f98cdb5a195da261e9a399f03",
+      "bytes": 1624
+    },
+    {
+      "local_relative": "farmland_full_seed0/farmland_full_seed0.json",
+      "source_relative": "receipts/farmland_full_seed0.json",
+      "sha256": "8ffcdfaff666c57fa972504248ba4642ae6064073aefa1a01239d8af71e45708",
+      "bytes": 4549
+    },
+    {
+      "local_relative": "farmland_full_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/farmland_full_seed0/deep_completion_audit.json",
+      "sha256": "dfac3efb14da956039a4115535c2db122e3a92fa5b50d8b2c717c671926a41ab",
+      "bytes": 2153
+    },
+    {
+      "local_relative": "yellow_river_original_seed0/result.json",
+      "source_relative": "runs/yellow_river_original_seed0/result.json",
+      "sha256": "1ee1043eb3d0f5bc685c11e2cfa6fb43501ba00d6a4b7efbd9d6880916cfb1f5",
+      "bytes": 3694
+    },
+    {
+      "local_relative": "yellow_river_original_seed0/test_evaluation.json",
+      "source_relative": "runs/yellow_river_original_seed0/test_evaluation.json",
+      "sha256": "d3d644f663c4015a5c13f8f902937ebbc7c00b4507b45745f8e3eed47c50e2d3",
+      "bytes": 619
+    },
+    {
+      "local_relative": "yellow_river_original_seed0/config.json",
+      "source_relative": "runs/yellow_river_original_seed0/config.json",
+      "sha256": "8823dd2331ef6ebec53a439d4a62de1c356c5bb6dc4d31fde3c139952eb566c8",
+      "bytes": 2660
+    },
+    {
+      "local_relative": "yellow_river_original_seed0/completion.json",
+      "source_relative": "runs/yellow_river_original_seed0/completion.json",
+      "sha256": "ed5bec615e25051af5e81f8fc38a4423da7c5d2f29a87ba38a0592053b2e2556",
+      "bytes": 1676
+    },
+    {
+      "local_relative": "yellow_river_original_seed0/yellow_river_original_seed0.json",
+      "source_relative": "receipts/yellow_river_original_seed0.json",
+      "sha256": "7aea93b701dfbedeeb76f10dd7d1c5dbc5ca06f12d1bce3feaf29cf87ff4e0ad",
+      "bytes": 4661
+    },
+    {
+      "local_relative": "yellow_river_original_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/yellow_river_original_seed0/deep_completion_audit.json",
+      "sha256": "5704aaca7ee1bda989488be564c910a674dbc54a5d4caef71674b06e9a86a96c",
+      "bytes": 2217
+    },
+    {
+      "local_relative": "yellow_river_matched_scale075_seed0/result.json",
+      "source_relative": "runs/yellow_river_matched_scale075_seed0/result.json",
+      "sha256": "8d4e6128bf6891771338df6e03ee3c6859058b8c55f7e71e77ecdf6e00ecd564",
+      "bytes": 4059
+    },
+    {
+      "local_relative": "yellow_river_matched_scale075_seed0/test_evaluation.json",
+      "source_relative": "runs/yellow_river_matched_scale075_seed0/test_evaluation.json",
+      "sha256": "f437a20b7b14ee58984106a3908b96f57d84100368bc40c6956848e87c4386d5",
+      "bytes": 615
+    },
+    {
+      "local_relative": "yellow_river_matched_scale075_seed0/config.json",
+      "source_relative": "runs/yellow_river_matched_scale075_seed0/config.json",
+      "sha256": "5ec45ce895dbefef0e35456f5ddb4226904d5c455527abad34835e471da95987",
+      "bytes": 2676
+    },
+    {
+      "local_relative": "yellow_river_matched_scale075_seed0/completion.json",
+      "source_relative": "runs/yellow_river_matched_scale075_seed0/completion.json",
+      "sha256": "f1bc38584ca9827d8e88adf8d88d335081b04adb17f107c449f034a2d7aa0dee",
+      "bytes": 1732
+    },
+    {
+      "local_relative": "yellow_river_matched_scale075_seed0/yellow_river_matched_scale075_seed0.json",
+      "source_relative": "receipts/yellow_river_matched_scale075_seed0.json",
+      "sha256": "d725e4bfe900e4e9438f6a4d1d49c9a1b16a6cf006b3f45965ac9037f0f6c157",
+      "bytes": 4765
+    },
+    {
+      "local_relative": "yellow_river_matched_scale075_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/yellow_river_matched_scale075_seed0/deep_completion_audit.json",
+      "sha256": "928dd207cf6ca6a13a7ea298ec3f619a7cf385adcab40e358485d927f05e4604",
+      "bytes": 2281
+    },
+    {
+      "local_relative": "yellow_river_full_seed0/result.json",
+      "source_relative": "runs/yellow_river_full_seed0/result.json",
+      "sha256": "f8623f0da087daaded6ccd326bb4fe1a35aa2785b0a22d22036452efdb29d79d",
+      "bytes": 4001
+    },
+    {
+      "local_relative": "yellow_river_full_seed0/test_evaluation.json",
+      "source_relative": "runs/yellow_river_full_seed0/test_evaluation.json",
+      "sha256": "cc076d0252e41c19be8de898a1118eab73a7f5141c96c47ba3621442a5e8571c",
+      "bytes": 617
+    },
+    {
+      "local_relative": "yellow_river_full_seed0/config.json",
+      "source_relative": "runs/yellow_river_full_seed0/config.json",
+      "sha256": "89e22ddcd81f6b30e575397fef9ce8c3e90ca81ced519b834854da727167c741",
+      "bytes": 2652
+    },
+    {
+      "local_relative": "yellow_river_full_seed0/completion.json",
+      "source_relative": "runs/yellow_river_full_seed0/completion.json",
+      "sha256": "419be02c8230b3ab13871a8af00e249b4f59109bb7ce3b95ee79155df851ed96",
+      "bytes": 1648
+    },
+    {
+      "local_relative": "yellow_river_full_seed0/yellow_river_full_seed0.json",
+      "source_relative": "receipts/yellow_river_full_seed0.json",
+      "sha256": "a9d17fb45846e92de150aef826e48253738ca630d2dbb34000e4f5f83b262abc",
+      "bytes": 4609
+    },
+    {
+      "local_relative": "yellow_river_full_seed0/deep_completion_audit.json",
+      "source_relative": "recovery_20261009_1908/trials/yellow_river_full_seed0/deep_completion_audit.json",
+      "sha256": "2ac082b31b0c15830d7a92c7e996f32a9acc69c68f1d1fb453cede7f9530ac67",
+      "bytes": 2185
+    },
+    {
+      "local_relative": "data_audits/SAR_ACD_audit.json",
+      "source_relative": "cross_data/SAR_ACD/audit.json",
+      "sha256": "5fcd4daa8afdfedd6f519de4d4c2e7ec797f90f6904fa2a61af964f111205b93",
+      "bytes": 16056
+    },
+    {
+      "local_relative": "data_audits/SAMPLE_audit.json",
+      "source_relative": "cross_data/SAMPLE/audit.json",
+      "sha256": "a50fba37e9f4a148b5fd66884f261670e0526d882dde4febfb820da967ced87a",
+      "bytes": 2049
+    },
+    {
+      "local_relative": "data_audits/Ottawa_audit.json",
+      "source_relative": "cross_data/Ottawa/audit.json",
+      "sha256": "5935f8221f4c420c908ee2b67be062ac706bfc881051f5ecdfe0081676d4a8cd",
+      "bytes": 1314
+    },
+    {
+      "local_relative": "data_audits/Farmland_audit.json",
+      "source_relative": "cross_data/Farmland/audit.json",
+      "sha256": "6e30aa25bbf59ce5799dacdc93bf836f60bc03fb1438ed90b4681b7bafb2ec7b",
+      "bytes": 1315
+    },
+    {
+      "local_relative": "data_audits/Yellow_River_audit.json",
+      "source_relative": "cross_data/Yellow_River/audit.json",
+      "sha256": "e9d4f235c47f3f2c3add54ff364dded861f780eb2b1f76df4e02935d8bc37679",
+      "bytes": 1323
+    }
+  ]
+}

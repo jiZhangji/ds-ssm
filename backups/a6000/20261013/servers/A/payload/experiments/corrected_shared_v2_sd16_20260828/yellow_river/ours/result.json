@@ -1,0 +1,33 @@
+{
+  "dataset": "Yellow River",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "initialization": "scratch",
+  "protocol": "dense-spatial-macroblocks",
+  "split_sizes": {
+    "train": 100,
+    "val": 16,
+    "test": 16
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "epochs_requested": 150,
+  "best_epoch": 56,
+  "threshold": 0.40000000000000013,
+  "metric": {
+    "precision": 0.9088494717456626,
+    "recall": 0.8217014862591139,
+    "f1": 0.8630811572058431,
+    "iou": 0.7591405162084265,
+    "oa": 0.9747806125217013,
+    "kappa": 0.8492311436656784
+  },
+  "params": 2138147,
+  "gflops": 1.136191824,
+  "latency_ms": 437.4931912345346,
+  "fps": 2.2857498585935994,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/yellow_river/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Yellow_River/manifest.json"
+}

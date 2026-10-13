@@ -1,0 +1,588 @@
+\documentclass[UTF8,12pt,a4paper]{ctexart}
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.4cm,bottom=2.4cm}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,array,multirow}
+\usepackage{float}
+\usepackage{caption}
+\setlength{\parskip}{0.35em}
+\setlength{\parindent}{2em}
+\emergencystretch=1em
+\captionsetup{font=small,labelfont=bf}
+\newcommand{\pp}{\,\mathrm{pp}}
+\title{面向 SAR 视觉状态空间模型的局部残差修正与重要性调制\\
+\large Local Residual Correction and Importance Modulation for Visual State-Space Models in SAR}
+\author{}
+\date{论文工作稿：2026 年 10 月 2 日}
+\begin{document}
+\maketitle
+\begin{center}
+\textbf{稿件状态：内部工作稿。实验结论严格限于已记录证据；主要待验证事项见审稿清单。}
+\end{center}
+\begin{abstract}
+视觉状态空间模型为高分辨率视觉建模提供了近线性复杂度的长程依赖机制，但其输入依赖状态更新并不显式区分合成孔径雷达（SAR）图像中的局部杂波、散斑起伏与弱散射目标。本文研究一种用于 SAR 视觉状态空间模型的局部残差修正与重要性调制方法 IG-DS-SSM/PFIM：前者利用局部趋势与残差重加权扫描输入，后者从特征和局部统计中估计空间重要性，并分别调节扫描驱动与状态步长。我们将“通用状态更新缺少 SAR 显式区分线索”作为待检验的设计假设，而不将其视作已经证明的普遍缺陷。在 SSDD 官方测试划分上，我们完成了五种结构变体、三个随机种子共 15 次从头训练的受控消融。DS-SSM 单独版本的 AP$_{50:95}$ 为 $43.98\pm1.44\%$，相对基线的配对平均差为 $+1.95$ 个百分点；PFIM 单独版本为 $43.12\pm1.70\%$，配对平均差为 $+1.09$ 个百分点。朴素组合版本低于 DS-SSM 单独版本 $1.07$ 个百分点，且组合结果在三个种子中有两个低于基线；token-wise 重要性也未优于 image-wise 对照。已有分类、变化检测和分割记录呈现任务依赖的正负结果，但协议不完全统一，故仅作为探索性证据。结果支持继续研究面向 SAR 的状态更新设计，同时不支持“组合稳定增益”或“跨任务普遍提升”的结论。
+\end{abstract}
+\noindent\textbf{关键词：}合成孔径雷达；视觉状态空间模型；Mamba；目标检测；局部残差；消融实验
+
+\section{引言}
+合成孔径雷达具有全天时、全天候成像能力，已用于海面舰船、机场飞机和地表目标监测。SAR 强度图像同时包含目标散射、成像几何造成的结构变化以及乘性散斑和背景杂波。对检测模型而言，弱小目标与邻近背景在局部统计上可能相近：过强平滑会损伤目标边缘，缺少上下文建模又可能使模型把杂波纹理当作目标。由此产生一个具体问题：如何在利用长程上下文的同时，让特征更新保留对 SAR 局部结构和重要区域的响应能力。
+
+Mamba 及其选择性状态空间机制以输入相关参数控制序列状态更新，为视觉任务提供了不同于全局自注意力的建模路径\cite{gu2023mamba,liu2024visionmamba}。视觉 Mamba 已用于遥感密集预测、检测和多任务学习\cite{rs_mamba,rstmtmamba,mambayolo,madinet}。因此，本文不主张“此前没有 Mamba 用于 SAR”。本文关注更窄的问题：通用视觉状态更新通常没有显式输入 SAR 局部起伏或重要性线索的专门分支；这可能造成弱目标和背景纹理共享更新方式的风险，但该风险必须由受控实验检验，不能由图像特性直接推断为模型必然失败。
+
+本文研究 IG-DS-SSM 与 PFIM 两种状态更新改造。IG-DS-SSM 估计局部趋势和残差，并在选择性扫描前对输入作残差修正；PFIM 从特征与局部统计估计空间重要性，再以不同路径影响扫描驱动和状态步长。二者的目的，是检验 SAR 局部结构线索能否为视觉 SSM 的状态更新提供有用补充。需要强调，当前实现中的 $\gamma$ 和 write gate 共同缩放扫描输入，$\Delta$ 控制状态转移步长；$\gamma$ 不是直接控制历史隐状态保留率的门。
+\begin{figure}[H]\centering
+\includegraphics[width=.9\linewidth]{figures/fig1_motivation.pdf}
+\caption{研究动机的概念示意。该图表达待检验的问题假设，不是实验观测或已证实的噪声传播机制。}
+\label{fig:motivation}
+\end{figure}
+
+本文围绕三个问题开展研究：
+\begin{enumerate}
+\item \textbf{RQ1：}在相同训练协议下，局部残差修正是否改善 SAR 检测？
+\item \textbf{RQ2：}PFIM 单独作用、与 DS-SSM 组合以及 image-wise/token-wise 重要性粒度的效果分别如何？
+\item \textbf{RQ3：}该状态更新思路在分类、变化检测和分割中的已有证据支持到什么范围，哪些任务构成适用边界？
+\end{enumerate}
+
+本文当前可以支持的贡献限定为：\textbf{（1）}给出针对 SAR 视觉 SSM 的局部残差修正和重要性调制实现，并明确其实际作用位置；\textbf{（2）}在 SSDD 上报告五种变体、三个种子的配对消融，发现 DS-SSM 和 PFIM 单独版本的描述性均值高于基线，同时揭示组合负交互和 token-wise 无优势；\textbf{（3）}整理跨任务正负记录并区分证据等级，指出当前证据不能推出跨任务普遍有效。尚未完成的 SAR-ShipDataset、SAR-AIRcraft1.0 三种子公平复验和同协议外部基线不作为本文已完成贡献。
+
+\section{相关工作}
+\subsection{SAR 图像去斑与目标检测}
+SAR 去斑研究通过统计滤波或学习式映射减轻散斑影响；目标检测研究则直接从强度图像学习目标和背景判别特征。去斑与检测之间存在任务权衡：降低局部起伏可能压制部分噪声，也可能削弱小目标和边缘。Speckle-Free SAR ship detection 等工作已经研究了去斑与检测之间的关系\cite{specklefree}。近期 RSS-Net 将 Mamba 的二维选择性扫描与 CNN 局部特征结合用于 SAR 去斑；MambaDIP 则将 Mamba 放入深度图像先验网络，并使用 Gamma 似然处理 SAR 复原\cite{rssnet,mambadip}。这些工作说明 Mamba 已进入 SAR 去斑研究，也强调长程建模需要与局部细节和成像统计共同考虑。本文不把局部标准差解释为物理散斑估计，也不声称本文模块具有保证保边的滤波性质；它是状态更新所用的特征线索。
+
+SSDD 是公开 SAR 舰船检测数据集之一\cite{ssdd2017,ssdd2021}。
+
+SAR-ShipDataset 与 SAR-AIRcraft1.0 则涵盖不同成像场景和目标类别\cite{sardataset,saraircraft}。这些数据集上的数字只有在划分、初始化、训练预算和评估口径一致时才能进行直接比较。本文因此将 SSDD 三种子受控消融作为当前主证据，将其他数据集的历史数字单独列为不可直接排名的记录。
+
+\subsection{视觉状态空间模型与遥感 Mamba}
+Mamba 通过选择性状态空间模型实现输入相关的状态更新\cite{gu2023mamba}；Vision Mamba 将该机制扩展到视觉表征\cite{liu2024visionmamba}。遥感领域已有 RS-Mamba、跨任务 Mamba、Mamba-YOLO 等工作\cite{rs_mamba,rstmtmamba,mambayolo}。针对 SAR，也已有 MaDiNet、MCMN、RSS-Net 和 MambaDIP 等直接包含 Mamba 的研究，以及 SAR-NanoShipNet、SFD-Net 等近期目标检测方法\cite{madinet,mcmn,rssnet,mambadip,sarnano,sfdnet}。因此，本文的定位不能建立在“首次将 Mamba 用于遥感/SAR”这一宽泛表述上；更具体的问题是，现有 Mamba-SAR 研究已经从 Gamma 统计先验、Doppler/散射输入、多尺度融合、复原损失等层面注入任务知识，而当前稿件研究的是特征进入 selective scan 后对扫描驱动和步长的调节，并需要通过对照实验判断其实际价值。
+
+\subsection{输入依赖更新与 SAR 线索注入}
+选择性状态空间模型由输入相关参数调节状态更新；视觉 Mamba 和遥感 Mamba 工作进一步研究了双向、全向或跨任务扫描路径\cite{gu2023mamba,liu2024visionmamba,rs_mamba,rstmtmamba}。SAR 领域的已有工作从不同层级注入先验：MaDiNet 将 Gamma 分布建模与 MambaSAR 用于目标检测；MCMN 在 PolSAR 船舶检测中构造 Doppler/散射输入特征，并采用 Mamba-CNN 局部与全局分支；RSS-Net 将二维选择性扫描与 CNN 局部特征结合用于 SAR 去斑；MambaDIP 则将 Mamba 放入深度图像先验 U-Net，并用 Gamma 似然处理 SAR 去斑与增强\cite{madinet,mcmn,rssnet,mambadip}。近期非 Mamba 检测器如 SAR-NanoShipNet 和 SFD-Net 则围绕小目标边界、多尺度和干扰特征分解设计\cite{sarnano,sfdnet}。这类研究已覆盖 SAR 检测与复原，因而本文不以“尚无 SAR-Mamba”为缺口。
+
+表\ref{tab:related_position}按先验进入模型的位置归纳代表性方法。本文考察的是特征进入扫描后、状态更新参数形成时的调节位置；其差别是设计定位，不代表优于已发表方法。尤其是，当前 SSDD 对照仍含有 block 结构差异，故实验只能评估所实现变体的整体效果，尚不能把差异完全归因于单一公式项。
+
+\begin{table}[H]\centering\scriptsize
+\caption{代表性 SAR 状态空间、去斑及目标检测方法与本文研究位置。该表为相关工作抽样，不是穷尽性综述。}
+\label{tab:related_position}
+\begin{tabularx}{\linewidth}{p{3.2cm}p{2.25cm}p{3.7cm}X}
+\toprule
+方法 & 任务范围 & 主要先验或结构位置 & 与本文的关系\\
+\midrule
+Speckle-Free ship detection\cite{specklefree} & SAR 舰船检测 & 将去斑处理与检测流程结合 & 说明去斑和检测的任务权衡；不是状态空间更新方法\\
+RS-Mamba\cite{rs_mamba} & 大幅面遥感密集预测 & 全向选择性扫描以聚合多方向上下文 & 关注扫描方向与长程上下文，不专门建模 SAR 局部统计\\
+MaDiNet\cite{madinet} & SAR 多类目标检测 & Gamma 分布建模与 MambaSAR 特征提取 & 与本文最直接相关；其先验涉及成像统计/特征建模，本文研究 scan 驱动和步长的调节\\
+MCMN\cite{mcmn} & PolSAR 船舶检测 & Doppler/散射输入特征及 Mamba-CNN 局部与全局分支 & 在输入与网络特征层注入物理线索；本文的重点是状态更新路径\\
+MambaDIP\cite{mambadip} & SAR 去斑与增强 & 深度图像先验 U-Net、Mamba 层与 Gamma 似然 & 属于图像复原；不能作为目标检测结果的直接基线\\
+RSS-Net\cite{rssnet} & SAR 去斑 & VSSM 四向扫描与 CNN 残差特征块 & 与本文共享 SAR 状态空间建模背景；任务目标是复原而非检测\\
+SAR-NanoShipNet\cite{sarnano} & SAR 小目标舰船检测 & 可变形卷积、边界注意与尺度适配 & 提供近期 SAR 检测设计参照，不使用 Mamba\\
+SFD-Net\cite{sfdnet} & SAR 多尺度舰船检测 & 可学习特征解耦与 Star-Fusion FPN & 处理目标/干扰特征分离；不是状态空间更新方法\\
+RSMTMamba\cite{rstmtmamba} & 遥感多任务预测 & 共享编码与跨任务 Mamba 特征交互 & 支持跨任务设计背景，但不等同于 SAR 噪声感知更新\\
+本文 & SAR 视觉状态更新 & 局部残差修正；重要性调节 scan drive 与 $\Delta$ & 当前 SSDD 证据显示单模块正向均值、组合负交互；不作普遍领先主张\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{本文定位与可检验假设}
+我们将局部趋势、残差和邻域起伏作为 SAR 特征更新的候选线索，提出以下假设：局部残差修正可能减少无关高频响应对扫描输入的影响；重要性调制可能对疑似目标相关特征分配不同的写入强度与状态步长。它们是方法动机而非实证结论。本文通过单模块、组合和粒度对照检验这些设计，并保留反向或不稳定的结果。
+\section{方法}
+\subsection{问题定义与总体流程}
+给定视觉 SSM 输入特征 $x\in\mathbb{R}^{B\times H\times W\times C}$，目标是在不引入二次复杂度全局注意力的前提下，利用局部结构线索修正状态更新。总体流程如图\ref{fig:overview}所示：backbone 特征进入被替换的状态空间块，经局部趋势/残差计算和重要性预测后形成扫描输入，再由 selective scan、门控和输出投影产生模块输出。
+\begin{figure}[H]\centering
+\includegraphics[width=.94\linewidth]{figures/fig2_method.pdf}
+\caption{方法与信息流示意图。本图描述模块级信息流；检测网络中的具体层级位置以冻结代码版本为准。}
+\label{fig:overview}
+\end{figure}
+
+\subsection{局部趋势与残差修正}
+将特征图按行优先顺序展平为 $N=HW$ 个 token。令 $\mathcal{L}(\cdot)$ 表示沿该序列进行的核宽为 3 的逐通道深度卷积趋势估计，卷积权重以 $1/3$ 初始化，定义
+\begin{equation}
+\bar{x}=\mathcal{L}(x),\qquad r=x-\bar{x},\qquad
+\tilde{x}=x-\lambda_s r,
+\label{eq:residual}
+\end{equation}
+其中 $\lambda_s$ 为可学习的尺度参数。$\bar{x}$ 表示局部趋势特征，$r$ 是相对于该趋势的残差，$\tilde{x}$ 是送入后续投影与扫描分支的修正特征。由于 $\mathcal{L}$ 是对行优先展平序列执行的一维卷积，在图像行边界处，邻接 token 可能来自相邻两行；因此它不是严格的二维局部滤波器，也不是物理散斑估计。该操作是特征域变换，其有效性需要通过任务结果和更直接的机制诊断验证。
+
+\subsection{PFIM 空间重要性与状态调制}
+PFIM 将局部趋势特征与修正特征的二维局部标准差拼接后预测重要性图。默认统计窗口为 $3\times3$，计算边界统计时不把填充像素计入窗口，隐藏维数为 $\max(C/4,16)$。实现中的 MLP 含一个 LayerNorm，故将其写入算子定义，避免在公式中重复归一化：
+\begin{equation}
+v=[\bar{x},\,\operatorname{Std}_{3\times3}(\tilde{x})],\qquad
+I=\sigma\!\left(W_2\,\operatorname{GELU}\!\left(W_1\,\operatorname{LN}(v)\right)\right),
+\quad I\in[0,1],
+\label{eq:importance}
+\end{equation}
+其中 $[\cdot,\cdot]$ 表示通道拼接，$W_1,W_2$ 是两层线性映射。最后一层零初始化使初始 $I=0.5$；但因 $\Delta$ 支路含非零初始化项，不能据此宣称整个模块初始时严格等价于原始 block。
+
+对输入投影 $u,z=W_{\mathrm{in}}\tilde{x}$，实现中使用如下调制形式：
+\begin{align}
+\Delta &= \mathrm{softplus}\!\left(W_{\Delta}u+\eta_i I\right),\\
+\gamma &= g_{\min}+(1-g_{\min})
+\sigma\!\left(-\alpha\,s_n E+\beta_i(I-0.5)\right),\\
+g_w &= \max\!\left(0.1,\,1+\tanh(\rho_i)(I-0.5)\right),\\
+u_{\mathrm{scan}}&=\gamma\odot g_w\odot u,
+\label{eq:modulation}
+\end{align}
+其中 $E=\|\bar{x}\|_2/\sqrt{C}$ 是逐 token 的趋势特征能量，$s_n=0.1$ 是固定缩放常数，$g_{\min}=0.5$；$\alpha,\beta_i,\rho_i,\eta_i$ 为可学习标量，初始化值依次为 $0.5,1,1,0.1$。DS-SSM 检测块中的 $\lambda_s$ 初始化为 $0.5$。$\gamma$ 与 $g_w$ 共同缩放扫描输入，$\Delta$ 影响离散状态转移步长；它们都不直接乘到历史隐状态保留项上。令 $B_t=W_Bu_t$、$C_t=W_Cu_t$、$A=-\exp(A_{\log})$，则逐位置递推可写为
+\begin{equation}
+\begin{aligned}
+h_t&=\exp(\Delta_t A)\odot h_{t-1}
++\bigl((\Delta_t\odot u_{\mathrm{scan},t})\otimes B_t\bigr),\\
+y_t&=\langle C_t,h_t\rangle_{\mathrm{state}}+D\odot\tilde{x}_t .
+\end{aligned}
+\end{equation}
+状态输出再经 SiLU 门控 $z_t$ 与输出投影。PFIM-only 对照将 $\lambda_s$ 与 $\alpha$ 置零并冻结，其余 PFIM 调制路径保留。当前公式对应单向扫描实现；投稿前仍需将代码 commit、张量维度和实际 backbone 插入位置逐项绑定。
+
+PFIM 的 token-wise 版本逐位置预测 $I$；global/image-wise 对照使用图像级重要性。SSDD 结果不支持 token-wise 优于 image-wise，因此本文不预设更细粒度必然更有效。PFIM-only 消融设置与完整模块不同，具体冻结/置零路径须依照实验协议表理解，不能把名字当作独立机制的充分说明。
+
+\subsection{与原始状态空间块的关系及复杂度}
+本实验以 P3/8 特征层上的模块替换方式构造变体，状态维数为 16。块先对展平 token 特征做 LayerNorm，再执行单向、行优先序列扫描，随后以第二个 LayerNorm 和两层 MLP 建立残差分支；两条分支缩放参数初始化为 $10^{-2}$。DS-SSM 与 baseline 的差异涉及归一化、扫描分支和 MLP 配置（记录中 DS-SSM 的 MLP ratio 为 2，baseline block 为 4），不只是式\ref{eq:residual}的一处局部改动。因此本文把 DS-only 的数值视为该替换设计的整体证据，不将其解释为局部残差公式的纯因果效应。PFIM 和完整变体也需按各自配置表披露。
+
+SSM 序列扫描的理论计算随 token 数近似线性增长，但实际模型延迟还受卷积、投影、内存访问、实现和硬件影响。当前复杂度账本包含 seed 0 的参数量、GFLOPs 与速度记录；原始 CSV 没有完整保存硬件/计时配置，故这些速度数据仅作审计性参考，不作为论文摘要中的已核验速度优势。
+
+\section{实验设置}
+\subsection{主数据集与划分}
+主验证数据集为 SSDD。官方训练部分含 928 张图像，官方测试集含 232 张图像。对每个 seed，训练部分按冻结的 manifest 划分为 742 张训练图像和 186 张验证图像；同一 seed 下的五个变体共享这一划分，seed 0、1、2 之间则使用不同划分。因此，逐 seed 配对差控制同一划分，跨 seed 方差同时包含划分变化和随机初始化变化。测试集只用于最终评估，模型选择依赖验证集；没有使用 test-as-val。
+
+分类、变化检测和分割作为探索性跨任务记录单独汇总。SAR-ShipDataset 与 SAR-AIRcraft1.0 虽有历史单次结果，但尚无 baseline、DS-only、PFIM-only 和 full 四种变体在同一划分、scratch 初始化及相同预算下的三种子矩阵；它们不进入当前主比较。各探索任务的协议和数据覆盖见表\ref{tab:evidence_scope}及附录。
+
+\subsection{统一训练协议与选模}
+SSDD 主实验的五个变体均从头训练（\texttt{weights=none}），输入尺寸为 $640$，batch size 为 $16$，最多训练 150 epochs，patience 为 30。优化器为 AdamW，初始学习率 $2\times10^{-4}$、最终学习率比例 0.01、weight decay $5\times10^{-4}$、名义 batch size（nbs）64；使用 cosine learning-rate schedule，统一 warmup 3 epochs，新增模块 warmup 为 0。数据增强统一为 mosaic 0.3（最后 15 epochs 关闭）、degrees 180、translate 0.1、scale 0.3、vertical/horizontal flip 各 0.5，以及 HSV 参数 $(0,0,0.1)$；启用确定性设置，不使用 AMP。
+
+实验在两张 RTX A6000 上执行，三个 seed 均使用相同型号 GPU；每个 seed 的五个变体在同一张卡上完成。运行环境记录为 Python 3.10.16、PyTorch 1.13.1+cu117、Ultralytics 8.2.29，本地 selective-scan CUDA kernel 使用 FP32。统一依据验证集 AP$_{50:95}$ 选择 best checkpoint，再对官方测试集评估；所有变体遵循相同选模和评估规则。逐 run 指标及权重 SHA-256 保存在随稿补充材料中。
+
+图\ref{fig:protocol}概括了主实验的数据隔离、逐 seed 配对和选模流程。分类、变化检测、分割及历史运行不进入这条受控矩阵，单独按其各自协议报告。
+\begin{figure}[H]\centering
+\includegraphics[width=.98\linewidth]{figures/fig11_experiment_protocol.pdf}
+\caption{SSDD 受控实验流程。五个变体在每个 seed 的同一训练/验证划分上训练；验证集负责选模，官方测试集只在最终评估阶段使用。}
+\label{fig:protocol}
+\end{figure}
+
+\subsection{对比方法与受控变体}
+五个主变体均使用相同的 Mamba-YOLO-T 主干、检测颈部和任务头。基线保留原始 VSSBlock；其余变体将 P3/8 stage 的三个 VSSBlock 替换为对应 DS-SSM block，状态维数为 16。变体语义与实际开关列于表\ref{tab:variants}。该对照评估的是已实现 block 替换的整体效果：DS-SSM 与原 VSSBlock 在归一化、扫描分支及 MLP ratio 上并不完全相同，不能将差异归因于单一残差公式。
+
+当前没有完成 YOLOv8n、YOLOv5s 等轻量检测器的同协议重实现，也没有完成固定 Lee 去斑预处理对照。已有文献报告值和历史运行记录分别标注来源与协议限制，不伪装成统一预算下的实测排行榜或预处理消融。
+\begin{table}[H]\centering\scriptsize
+\caption{SSDD 受控变体及其实现开关。}
+\label{tab:variants}
+\begin{tabularx}{\linewidth}{p{2.5cm}p{3.2cm}p{3.0cm}X}
+\toprule
+变体 & 替换位置/模块 & 残差修正与能量门控 & PFIM 路径\\
+\midrule
+Baseline & 原始 VSSBlock & 关闭 & 关闭\\
+DS-only P3 & P3 的 DS-SSM block & 开启 & PFIM 关闭\\
+PFIM-only P3 & P3 的 PFIM block & $\lambda_s=0,\alpha=0$ 且冻结 & token-wise；保留 $\gamma$/write/$\Delta$ 调制\\
+Full P3 & P3 的 DS-SSM+PFIM block & 开启 & token-wise；保留各调制路径\\
+Global P3 & P3 的 image-wise PFIM block & 开启 & image-wise；用于重要性粒度对照\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{指标、统计口径与效率测量}
+检测报告 AP$_{50}$、AP$_{75}$、COCO 风格 AP$_{50:95}$、precision 和 recall。表中 mean$\pm$std 基于三个 seed；模块效果另报告同 seed 相对 baseline 的配对差。由于 $n=3$ 且 split 随 seed 变化，本文将其作为描述统计，不声称统计显著性。参数量和 GFLOPs 为记录的 seed 0 复杂度值；延迟和 FPS 虽保留在账本表中，但计时设备与复测元数据不完整，不作可靠速度排名。
+
+\subsection{探索性跨任务与历史证据}
+分类、变化检测和分割采用不同模型头、数据集接口或训练协议，且多为单 seed。它们在本文中被标记为探索性/部分可复现记录，不与 SSDD 主表合并，不支撑统一的“通用提升”结论。历史 SAR-ShipDataset、SAR-AIRcraft1.0、SADD 数字的训练划分或初始化口径不完全一致，也只在单独表中说明来源限制。旧 SSDD ex27 使用非 scratch 初始化且存在验证集口径差异，不作为主证据。
+
+为避免把实验计划当作已完成结果，表\ref{tab:evidence_scope}汇总本文使用的证据层级；不同任务指标和协议不做跨行排名。
+\begin{table}[H]\centering\scriptsize
+\caption{任务范围、现有证据与本文中的用途。}
+\label{tab:evidence_scope}
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabularx}{.99\linewidth}{p{2.1cm}p{2.4cm}p{4.8cm}X}
+\toprule
+任务/数据集 & 角色 & 当前记录 & 证据边界\\
+\midrule
+SSDD 检测 & 主验证 & 官方 test；5 变体 $\times$ 3 seed；clean scratch & 当前唯一完整多种子受控矩阵\\
+\shortstack[l]{SAR-Ship\\Dataset} 检测 & 计划主验证 & 有历史单次记录；正式公平三种子矩阵未完成 & 历史指标不得与 SSDD 合并排名\\
+\shortstack[l]{SAR-AIRcraft\\1.0} 检测 & 计划主验证 & 有 patch 协议历史记录；正式公平三种子矩阵未完成 & 划分/训练协议需统一后复验\\
+SAR-ACD、SAMPLE 分类 & 跨任务诊断 & 有单种子 scratch 与初始化/预热记录 & 不同训练轨道分开报告，不形成稳定性结论\\
+Ottawa、Farmland、Yellow River、Sulzberger 变化检测 & 跨任务诊断 & 多种 batch/state dimension 的单种子记录 & 数据集间方向混合，批次之间不作重复样本统计\\
+FUSAR-Map、\shortstack[l]{OpenEarthMap-\\SAR} 分割 & 探索边界 & 有受控单种子结果，mIoU 未改善；FUSAR road 类明显退化 & 不支撑通用性增益\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\section{实验结果}
+\subsection{SSDD 三种子主消融}
+表\ref{tab:ssdd}报告三个 seed 的均值与标准差。DS-only 在 AP$_{50:95}$ 上比 baseline 高 1.95 个百分点，PFIM-only 高 1.09 个百分点；full 高 0.88 个百分点，但低于 DS-only 1.07 个百分点。global/image-wise 变体的均值比 full/token-wise 高 0.86 个百分点。AP$_{50}$ 与 AP$_{75}$ 指标呈现不同排序，故不能据单一指标概括“全面提升”。
+\begin{table}[H]\centering\small
+\caption{SSDD 五变体官方测试结果，三个 seed，mean$\pm$std（单位：\%）。}
+\label{tab:ssdd}
+\begin{tabular}{lrrrrr}
+\toprule
+Variant & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ & Precision & Recall\\
+\midrule
+Baseline & $86.52\pm2.56$ & $34.05\pm5.25$ & $42.03\pm3.47$ & $89.55\pm1.83$ & $79.24\pm1.70$\\
+DS-only & $86.70\pm1.01$ & $37.58\pm3.78$ & $43.98\pm1.44$ & $89.89\pm0.96$ & $79.67\pm0.26$\\
+PFIM-only & $88.23\pm1.61$ & $34.83\pm3.94$ & $43.12\pm1.70$ & $90.13\pm1.27$ & $81.39\pm2.20$\\
+Full & $87.97\pm0.11$ & $34.10\pm3.12$ & $42.91\pm1.13$ & $91.91\pm1.49$ & $79.85\pm1.02$\\
+Global/image-wise & $86.41\pm0.66$ & $36.87\pm3.89$ & $43.77\pm1.65$ & $91.76\pm0.85$ & $78.45\pm0.90$\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{figure}[H]\centering
+\includegraphics[width=.78\linewidth]{figures/fig3_ssdd_main.pdf}
+\caption{SSDD 主指标的 mean$\pm$std。}
+\label{fig:ssdd}
+\end{figure}
+
+\subsection{逐 seed 配对变化与模块交互}
+表\ref{tab:paired}以百分点列出每个变体相对同 seed baseline 的 AP$_{50:95}$ 变化。DS-only 和 PFIM-only 均在两个 seed 为正、一个 seed 为负；full 也仅两个 seed 的均值有一个明显正向种子，其余两次为负。DS-only 的配对均值最高，然而 $n=3$ 仍不足以说明其跨随机划分稳定优于其他变体。
+\begin{table}[H]\centering\small
+\caption{相对同 seed baseline 的 AP$_{50:95}$ 配对变化（百分点）。}
+\label{tab:paired}
+\begin{tabular}{lrrrr}
+\toprule
+Variant & Seed 0 & Seed 1 & Seed 2 & Mean$\pm$std\\
+\midrule
+DS-only & $+2.90$ & $+5.26$ & $-2.30$ & $+1.95\pm3.87$\\
+PFIM-only & $+2.13$ & $+3.16$ & $-2.00$ & $+1.09\pm2.73$\\
+Full & $-0.35$ & $+5.93$ & $-2.94$ & $+0.88\pm4.57$\\
+Global/image-wise & $+2.29$ & $+6.15$ & $-3.23$ & $+1.74\pm4.71$\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{figure}[H]\centering
+\includegraphics[width=.78\linewidth]{figures/fig4_ssdd_paired_delta.pdf}
+\caption{各 seed 的配对 AP$_{50:95}$ 变化。图中保留负向 seed，避免只展示平均数掩盖波动。}
+\label{fig:paired}
+\end{figure}
+full 相对 DS-only 下降 1.07 个百分点，说明在当前实现和训练设定下，简单叠加两种改动没有产生互补增益。该结果与 PFIM 单独版本的正向均值并不矛盾：两个模块单独有效不保证组合有效。可能解释包括调制冗余、优化交互或 block 结构差异，但当前没有直接机制实验可区分这些解释。token-wise full 低于 global/image-wise 对照也表明，更细粒度空间预测在当前数据量和实现下没有展示优势。
+
+\subsection{参数量与计算记录}
+\begin{table}[H]\centering\small
+\caption{SSDD 复杂度账本记录（seed 0）。速度口径元数据不完整，表中数值仅作记录，不作为已验证性能优势。}
+\label{tab:efficiency}
+\begin{tabular}{lrrrr}
+\toprule
+Variant & Parameters & GFLOPs & FPS & Latency (ms)\\
+\midrule
+Baseline & 5,985,547 & 13.61 & 151.1 & 6.62\\
+DS-only & 5,918,104 & 13.12 & 166.7 & 6.00\\
+PFIM-only & 5,920,441 & 13.15 & 163.8 & 6.11\\
+Full & 5,920,441 & 13.15 & 164.2 & 6.09\\
+Global/image-wise & 5,920,441 & 13.15 & 163.2 & 6.13\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{figure}[H]\centering
+\includegraphics[width=.76\linewidth]{figures/fig5_efficiency.pdf}
+\caption{SSDD AP$_{50:95}$ 与记录 GFLOPs 的关系。各变体参数量的精确值列于表\ref{tab:efficiency}；速度未绘入图中，因为原始计时元数据不完整。}
+\label{fig:efficiency}
+\end{figure}
+参数量与 GFLOPs 记录显示，改造变体没有增加整体模型容量，部分指标略低于 baseline。不过 baseline 与 DS-only 的 MLP ratio 和块内部结构不同；复杂度差异不是单独模块开销的纯估计。投稿前需用同硬件、同精度、batch=1 和同一 profiler 对完整检测器重新测量，并报告预热轮次、重复次数、同步方式和硬件型号。
+\subsection{跨任务探索性结果与负面证据}
+\paragraph{SAR 分类。}
+分类实验存在两个不能合并的单种子轨道。scratch 轨道在 SAR-ACD 与 SAMPLE 上分别低于对应 baseline；另一条使用 VMamba-Tiny 初始化的 SAR-ACD 轨道记录了 P3 warmup 后的正向结果，但 warmup 改变训练日程。表\ref{tab:cls}将它们分开，避免把初始化与训练日程差异写成模块的稳定因果效应。旧六分类结果与当前五分类口径不兼容。
+\begin{table}[H]\centering\scriptsize
+\caption{分类跨任务单种子记录（Accuracy / Macro-F1，单位：\%）。不同轨道不可相互排名。}
+\label{tab:cls}
+\begin{tabularx}{\linewidth}{p{1.6cm}p{2.6cm}p{2.6cm}p{2.6cm}p{1.5cm}X}
+\toprule
+轨道 & 数据集/设置 & Baseline & P3 & $\Delta$ Accuracy & 说明\\
+\midrule
+Scratch & SAR-ACD & 94.882 / 94.815 & 89.370 / 89.181 & $-5.512$ & 224，BS64，至多 200e\\
+Scratch & SAMPLE & 98.519 / 98.454 & 97.037 / 96.441 & $-1.482$ & real-only 选样口径\\
+VMamba init & \shortstack[l]{SAR-ACD\\no warmup} & 89.764 / 89.585 & 91.339 / 91.275 & $+1.575$ & 新模块随机初始化\\
+VMamba init & \shortstack[l]{SAR-ACD\\warmup 20} & 89.764 / 89.585 & 96.457 / 96.410 & $+6.693$ & P3 专属预热\\
+VMamba init & \shortstack[l]{SAR-ACD\\warmup 50} & 89.764 / 89.585 & 96.850 / 96.830 & $+7.086$ & P3 专属预热\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\begin{figure}[H]\centering
+\includegraphics[width=.72\linewidth]{figures/fig7_sar_acd.pdf}
+\caption{分类 seed 0 单次记录：左侧为 scratch 的 SAR-ACD/SAMPLE 配对，右侧为 VMamba-Tiny 初始化的 SAR-ACD 轨道。右侧 warmup 改变了 P3 训练日程，不能作为同预算的模块比较。}
+\label{fig:acd}
+\end{figure}
+
+\paragraph{变化检测。}
+变化检测结果均为 seed 0。P3 $d=16$ 的 BS16/BS96 记录与后续 $d=32$, BS16 批次是独立实验，不作重复样本统计。Farmland 在这些记录中均有较大正差；Yellow River 为负；Ottawa 的方向和幅度较小；Sulzberger 记录为负。表\ref{tab:cd}列出 $d=16$ 记录，表\ref{tab:cd32}单列后来完成的 $d=32$ 记录。它们支持结果依赖数据集与配置的描述，不构成多种子或普遍提升证据。
+\begin{table}[H]\centering\scriptsize
+\caption{变化检测历史结果（seed 0；每行的 batch 条件单独比较；单位：\%）。}
+\label{tab:cd}
+\begin{tabular}{llrrrrrr}
+\toprule
+Dataset & Method & Batch & Precision & Recall & F1 & IoU & OA\\
+\midrule
+Ottawa & Baseline & 16 & 90.259 & 94.000 & 92.091 & 85.342 & 98.351\\
+Ottawa & P3 & 16 & 88.777 & 96.003 & 92.249 & 85.612 & 98.352\\
+Ottawa & Baseline & 96 & 87.953 & 95.147 & 91.409 & 84.177 & 98.173\\
+Ottawa & P3 & 96 & 89.841 & 94.346 & 92.039 & 85.251 & 98.333\\
+Yellow River & Baseline & 16 & 91.205 & 85.702 & 88.368 & 79.160 & 97.817\\
+Yellow River & P3 & 16 & 91.422 & 82.787 & 86.891 & 76.820 & 97.584\\
+Yellow River & Baseline & 96 & 89.377 & 78.320 & 83.484 & 71.650 & 97.002\\
+Yellow River & P3 & 96 & 91.218 & 71.146 & 79.941 & 66.585 & 96.546\\
+Farmland & Baseline & 16 & 77.704 & 13.887 & 23.564 & 13.355 & 92.778\\
+Farmland & P3 & 16 & 93.259 & 49.213 & 64.428 & 47.523 & 95.644\\
+Farmland & Baseline & 96 & 80.623 & 12.532 & 21.692 & 12.165 & 92.747\\
+Farmland & P3 & 96 & 91.747 & 50.719 & 65.325 & 48.506 & 95.684\\
+Sulzberger & Baseline & 16 & 75.922 & 69.540 & 72.591 & 56.974 & 90.461\\
+Sulzberger & P3 & 16 & 51.656 & 92.066 & 66.180 & 49.454 & 82.908\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{figure}[H]\centering
+\includegraphics[width=.79\linewidth]{figures/fig6_change_detection.pdf}
+\caption{变化检测 P3 相对 baseline 的 F1 差（百分点）。左图展示 Ottawa、Yellow River、Sulzberger 的非 Farmland 记录，右图单独展示数值范围较大的 Farmland；颜色对应独立的 batch/state-dimension 设置。均为单 seed。}
+\label{fig:cd}
+\end{figure}
+后续完成的 $d=32$, BS16 同协议数据集内配对结果为：Ottawa F1 92.758/92.110（$\Delta=-0.648$ pp），Yellow River 88.079/87.689（$\Delta=-0.390$ pp），Farmland 26.050/73.104（$\Delta=+47.054$ pp）；顺序均为 baseline/P3。该批次仍是单种子，且状态维数不同于表\ref{tab:cd}。
+\begin{table}[H]\centering\small
+\caption{$d=32$, BS16 变化检测结果（seed 0；单位：\%）。}
+\label{tab:cd32}
+\begin{tabular}{lrrrr}
+\toprule
+Dataset & Baseline F1 & P3 F1 & $\Delta$ F1 (pp) & P3 Params / GFLOPs\\
+\midrule
+Ottawa & 92.758 & 92.110 & $-0.648$ & 2.144M / 1.137\\
+Yellow River & 88.079 & 87.689 & $-0.390$ & 2.144M / 1.137\\
+Farmland & 26.050 & 73.104 & $+47.054$ & 2.144M / 1.137\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{分割。}
+FUSAR-Map 四类 UPerNet-lite 记录中\cite{fusar}，baseline 的 mIoU/FWIoU/OA 为 44.297/65.382/77.105\%，P3 为 43.561/65.083/76.770\%。P3 的 road IoU 从 4.782\% 降至 1.091\%，虽然 building 和 water IoU 略升。这是对任务适用边界的重要负面结果。
+
+OpenEarthMap SAR-only 记录中，baseline mIoU 为 36.551\%；P3 无 warmup、warmup 20 和 50 的 mIoU 分别为 35.898\%、35.829\% 和 35.535\%，均低于 baseline。warmup 20 的 OA 52.499\% 略高于 baseline 52.316\%，但其 mPA 和 Dice 更低。该实验为 seed 0 部分可复现记录，不能把单个指标的微小变化描述成总体改善。
+\begin{table}[H]\centering\small
+\caption{历史分割实验摘要（单位：\%；单 seed / 部分可复现）。}
+\label{tab:seg}
+\begin{tabular}{llrrrrr}
+\toprule
+Dataset & Variant & mIoU & FWIoU & mPA & Dice & OA\\
+\midrule
+FUSAR-Map & Baseline & 44.297 & 65.382 & --- & --- & 77.105\\
+FUSAR-Map & P3 & 43.561 & 65.083 & --- & --- & 76.770\\
+OpenEarthMap-SAR & Baseline & 36.551 & 36.120 & 58.090 & 50.811 & 52.316\\
+OpenEarthMap-SAR & P3, no warmup & 35.898 & 35.220 & 54.914 & 50.163 & 51.764\\
+OpenEarthMap-SAR & P3, warmup 20 & 35.829 & 36.447 & 49.055 & 49.409 & 52.499\\
+OpenEarthMap-SAR & P3, warmup 50 & 35.535 & 36.104 & 49.563 & 49.099 & 52.383\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{figure}[H]\centering
+\includegraphics[width=.83\linewidth]{figures/fig8_segmentation_limits.pdf}
+\caption{分割历史结果中 P3 与 baseline 的主要指标差异。两个任务均未显示 mIoU 增益。}
+\label{fig:seg}
+\end{figure}
+\paragraph{历史跨数据集检测。}
+表\ref{tab:histdet}所列数字来自历史报告，协议存在训练轮数、初始化或划分方面的不一致，故仅作为需要复核的账本条目。它们不能与 SSDD 当前三种子结果合并排序，也不支撑跨数据集泛化结论。
+\begin{table}[H]\centering\small
+\caption{历史检测记录摘要（单位：\%；协议非统一，不可直接排名）。}
+\label{tab:histdet}
+\begin{tabular}{llrrl}
+\toprule
+Dataset / split & Method & AP$_{50}$ & AP$_{50:95}$ & Evidence note\\
+\midrule
+SAR-AIRcraft patch val & Baseline & 87.751 & 69.904 & 历史单次记录\\
+SAR-AIRcraft patch val & P3 & 88.825 & 70.513 & 历史单次记录\\
+SAR-AIRcraft patch test & Baseline & 70.402 & 54.513 & 历史单次记录\\
+SAR-AIRcraft patch test & P3 & 70.822 & 55.552 & 历史单次记录\\
+SAR-ShipDataset & Baseline & 94.616 & 49.568 & 非严格配对\\
+SAR-ShipDataset & Ours & 94.844 & 57.818 & 非严格配对\\
+SADD scratch, 200e & Baseline & 98.335 & 55.018 & 历史单次记录\\
+SADD scratch, 200e & P3 & 97.760 & 54.597 & 历史单次记录\\
+\bottomrule
+\end{tabular}
+\end{table}
+SAR-AIRcraft test 记录的 AP$_{50:95}$ 差为 $+1.039$ 个百分点，SADD 的差为 $-0.421$ 个百分点。SAR-ShipDataset 的两行不是严格同协议配对，且标注的 AP$_{50:95}$ 差异较大，投稿前必须回到原始 run、评估脚本和配置复核。当前没有完成 SAR-ShipDataset 与 SAR-AIRcraft1.0 的公平三种子矩阵，也没有完成与 YOLOv8n、YOLOv5s 等外部方法的同协议重实现。
+
+\section{讨论}
+\subsection{结果回答了什么}
+在 SSDD 当前受控设置下，DS-only 的三种子 AP$_{50:95}$ 描述性均值最高，PFIM-only 的召回均值最高；两者均存在负向 seed。该证据支持把局部残差修正与重要性调制作为值得进一步验证的设计，而不足以支撑稳定显著的性能改进结论。full 未超过 DS-only，且 token-wise 未超过 global/image-wise，是对原始组合和空间粒度假设的直接限制。
+
+跨任务记录显示明显异质性：Farmland 变化检测为正，Yellow River、Sulzberger、两个 scratch 分类配对和两项分割的主 mIoU 记录为负；SAR-ACD 的 VMamba 初始化轨道虽有较高 warmup 结果，但训练日程并不匹配。由于任务头、初始化和实验设置不同，正负方向不能被解释为同一效应量；当前材料尚不足以证明“通用 SAR 视觉提升”。
+
+\subsection{定性可视化与反例}
+图\ref{fig:pfimvis}展示历史 SSDD 验证集审计中的两个固定样例。在一个样例中，GT 框内 importance/background importance 比值为 3.67；另一个样例为 0.45，目标区域 importance 低于背景。完整六样例的均值约 1.19、中位数约 0.72，显示均值受单个高比值样例影响。PFIM 图因此不能称为目标掩膜或稳定注意力解释。
+\begin{figure}[H]\centering
+\includegraphics[width=.96\linewidth]{figures/fig9_pfim_visualization_limits.pdf}
+\caption{历史检查点上的 PFIM 重要性图正向示例与反例。六张验证图按目标数分层固定；此处仅展示分布范围，baseline 与 PFIM 检查点训练协议不匹配，不能作为受控方法证据。}
+\label{fig:pfimvis}
+\end{figure}
+该审计使用恢复的历史检查点和 validation 图像，不是当前 clean-scratch 三种子矩阵的机制诊断。要支撑机制解释，仍需在同一固定验证协议下比较 baseline、DS-only、PFIM-only 与 full，并报告完整样本分布和重要性扰动结果。
+
+\subsection{尚未验证的机制解释}
+局部残差和空间重要性可能帮助模型对不同空间区域采用不同的扫描输入或状态步长，但 AP 与 mIoU 等终端指标不能证明这一机制。除图\ref{fig:pfimvis}所示的历史审计外，当前还缺少新矩阵上的跨 seed 预测可视化、预先定义的目标/背景区域统计、重要性扰动或分支置换实验；还需在控制 block 其他部分不变时单独测试残差修正，并评估一维展平趋势卷积跨越图像行边界的影响。
+
+\subsection{审稿人视角下的主要风险}
+\begin{enumerate}
+\item \textbf{外部比较不足：}除 SSDD 内部变体外，缺少同划分、同 scratch 策略、同训练预算的轻量检测基线重实现；SAR-ShipDataset 与 SAR-AIRcraft1.0 的三种子公平验证未完成。
+\item \textbf{结构混杂：}baseline 与 DS-only 的归一化、MLP ratio 和扫描块结构不完全匹配，当前实验不能隔离局部残差公式的因果作用。
+\item \textbf{统计不确定性：}三个 seed 的样本量较小，且 seed 同时改变训练/验证划分；不能声称显著性或普遍稳定性。
+\item \textbf{测量口径：}复杂度速度记录缺少完整硬件与计时元数据；提交前需按统一 profiler 补测。
+\item \textbf{方法复现细节：}需要冻结代码 commit、插入 stage/stride、参数维度、PFIM 路径、扫描方向和 checkpoint 哈希，并与正文公式逐项对应。
+\item \textbf{跨任务证据：}分类/变化检测/分割大多单 seed 或部分可复现，且有负结果；只能用于边界分析，不能当作统一泛化验证。
+\end{enumerate}
+
+\subsection{局限与下一步实验}
+当前证据最完整的部分是 SSDD 内部消融，不是跨数据集主比较。投稿前优先完成：SAR-ShipDataset 与 SAR-AIRcraft1.0 的 baseline、DS-only、PFIM-only、full 同协议三种子复验；对 YOLOv8n/YOLOv5s 或同类轻量模型执行公平复现；重新测量完整模型效率；增加控制其余 block 结构不变的局部残差、PFIM、gamma/write、delta 分支消融；复核数据清单与 train/test 场景隔离。若新增实验仍显示 full 低于 DS-only，应收窄方法 claim 或重新设计组合机制，而不能删去负向结果。
+
+\section{结论}
+本文研究了面向 SAR 视觉状态空间模型的局部残差修正和重要性调制，并在 SSDD 上完成五变体、三个种子的受控内部消融。DS-only 与 PFIM-only 的 AP$_{50:95}$ 描述性均值高于基线，但 full 低于 DS-only，token-wise 未优于 image-wise，且跨任务结果方向不一致。现有材料支持继续检验 SAR-aware 状态更新这一研究假设，不支持稳定联合增益、跨任务普遍有效或已经超过主流检测器等更强论断。补齐跨数据集公平复验、结构匹配消融、效率协议和机制诊断，是形成可投稿结论的必要工作。
+
+\appendix
+\section{SSDD 逐 seed 原始汇总}
+\begin{table}[H]\centering\scriptsize
+\caption{SSDD 官方测试集逐 run 指标（\%）。每个单元格对应一个 seed 和一个变体；完整精度及权重 SHA-256 见随稿 CSV。}
+\begin{tabular}{llrrrrr}
+\toprule
+Variant & Seed & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ & Precision & Recall\\
+\midrule
+Baseline & 0 & 87.1822 & 35.6859 & 42.6943 & 89.2285 & 80.4029\\
+Baseline & 1 & 83.6934 & 28.1695 & 38.2746 & 87.8971 & 77.2894\\
+Baseline & 2 & 88.6714 & 38.2830 & 45.1215 & 91.5192 & 80.0366\\
+DS-only & 0 & 87.1986 & 41.9141 & 45.5944 & 90.9989 & 79.4872\\
+DS-only & 1 & 87.3584 & 35.8419 & 43.5303 & 89.3584 & 79.9723\\
+DS-only & 2 & 85.5283 & 34.9699 & 42.8199 & 89.3093 & 79.5616\\
+PFIM-only & 0 & 90.0920 & 38.1567 & 44.8217 & 90.6961 & 83.9133\\
+PFIM-only & 1 & 87.3274 & 30.4719 & 41.4304 & 88.6802 & 80.4029\\
+PFIM-only & 2 & 87.2713 & 35.8535 & 43.1189 & 91.0193 & 79.8535\\
+Full & 0 & 88.0882 & 30.7187 & 42.3400 & 93.2318 & 80.7692\\
+Full & 1 & 87.8664 & 36.8629 & 44.2091 & 92.2132 & 78.7546\\
+Full & 2 & 87.9535 & 34.7167 & 42.1778 & 90.2943 & 80.0366\\
+Global/image-wise & 0 & 86.8336 & 40.0310 & 44.9822 & 91.9194 & 78.0220\\
+Global/image-wise & 1 & 86.7447 & 38.0432 & 44.4228 & 90.8392 & 77.8388\\
+Global/image-wise & 2 & 85.6446 & 32.5236 & 41.8918 & 92.5226 & 79.4872\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{分割类别 IoU 补充}
+FUSAR-Map 的四类 IoU（building / vegetation / water / road）分别为 baseline：14.280 / 71.493 / 86.634 / 4.782\%；P3：15.231 / 71.075 / 86.846 / 1.091\%。road 类下降说明整体 mIoU 之外还存在类别层面的明显退化。
+
+\section{跨任务实验协议与数据覆盖补充}
+\subsection{分类}
+校正后的 scratch 分类诊断使用输入尺寸 224、batch size 64、最多 200 epochs、seed 0；每个数据集内 baseline 与 P3 使用相同划分。SAR-ACD 的五类协议和 SAMPLE 当前选取的 real-only 子集分别报告，SAMPLE 结果不可与其他采样/合成图像口径混合。另有一条使用 VMamba-Tiny ImageNet 初始化的 SAR-ACD 轨道：骨干使用预训练参数，新加的 P3 模块随机初始化，输入 224、batch 64、最多 200 epochs、seed 0；warmup 20/50 是 P3 专属训练日程。该轨道与 scratch 实验分开，且 warmup 结果不能归因于模块单因素。
+
+\subsection{变化检测}
+每个变化检测数据集目前只有一个配准图像对：Ottawa $350\times290$、Yellow River $289\times257$、Farmland $291\times306$、Sulzberger $256\times256$。模型使用密集空间采样以构造训练/验证/测试块，并保持空间区域分离；历史协议说明原始裁块为 $48\times48$ 后缩放到训练输入 $192$。当前汇总记录为 scratch、P3-$d=16$、150 epochs、AdamW/cosine、seed 0，验证集选择模型后在固定测试区域评估。单个场景对无法代表跨场景泛化；同一图像对上的大量裁块也不能视为独立场景重复。
+
+\subsection{语义分割}
+FUSAR-Map 数值对应四类 UPerNet-lite 诊断：256 输入块、batch 10、FP32、最多 150 epochs，以验证 mIoU 选模；记录的划分为 17,560/4,390/1,280 个块。该数字来自报告记录，当前稿件尚未附最终 manifest 哈希，不能据此声称已完成场景泄漏审计。该组结果在实验日志中标为部分可复现。OpenEarthMap-SAR 使用 SAR-only 输入、VMamba-Tiny ImageNet 初始化骨干、P3-$d=16$，训练输入 512、测试输入 1024、seed 0，物理 batch 32 加梯度累积 2（等效全局 batch 64），150 epochs；新增模块随机初始化。两项分割结果均保留为边界分析。
+
+\section{单种子与历史检测结果账本}
+下表补充主文没有合并的配对检测记录。除表中注明的同协议单 seed 配对外，这些值不构成三种子结论；即使训练设置配对，单次差值也只描述该次运行。
+\begin{table}[H]\centering\scriptsize
+\caption{单种子或历史配对检测记录（官方/报告测试口径；AP$_{50:95}$ 单位为百分比）。}
+\begin{tabularx}{\linewidth}{p{2.2cm}p{2.5cm}rrrX}
+\toprule
+数据集 & 记录协议 & Baseline & P3/ours & 差值 (pp) & 证据边界\\
+\midrule
+SSDD & scratch, BS16, 150e & 35.239 & 42.991 & $+7.752$ & seed 0；与 BS32 结果方向相反\\
+SSDD & scratch, BS32, 150e & 45.683 & 42.486 & $-3.197$ & seed 0；独立于 BS16\\
+SADD & scratch, BS32, 200e & 55.018 & 54.597 & $-0.421$ & seed 0；单次配对\\
+AIR-SARShip-2.0 & 源图划分后切片，scratch, BS32, 200e & 17.375 & 19.291 & $+1.916$ & seed 0；文献常用预训练设置不同\\
+OGSOD-1.0 & 1024, 300e, global BS64, FP32 & 42.302 & 43.602 & $+1.300$ & 单次匹配 TEST；不支持稳定性结论\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\begin{figure}[H]\centering
+\includegraphics[width=.9\linewidth]{figures/fig10_historical_detection.pdf}
+\caption{单种子历史检测配对差的方向和大小。不同数据集与训练批次分别展示，不计算合并平均值。}
+\label{fig:historical-detection}
+\end{figure}
+
+以下历史或不完整记录单独列出，不与上述配对表混排：
+\begin{table}[H]\centering\scriptsize
+\caption{协议不匹配、无配对基线或未完成的检测记录。验证过程值不视为最终测试成绩。}
+\begin{tabularx}{\linewidth}{p{2.3cm}p{2.1cm}p{2.6cm}p{2.7cm}X}
+\toprule
+数据集/协议 & Baseline AP$_{50:95}$ & P3/ours AP$_{50:95}$ & 状态 & 限制\\
+\midrule
+SSDD 历史 ex27 官方 TEST & 70.348 & 71.445 & 已复核，历史检查点 & 旧训练配方、旧拓扑和初始化入口；不是当前 clean-scratch 对照。历史 VAL 74.022 不得写成 TEST。\\
+SSDD 部分迁移 300e & 无匹配项 & 72.261 & 单个 P3 TEST & 不能计算方法增益；不得与当前 150e scratch 矩阵比较。\\
+SADD 部分迁移 300e & 无匹配项 & 72.113 & 单个 P3 TEST & 不能计算方法增益；最终验证损失字段另有审计事项。\\
+SRSDD-v1.0 HBB & 无匹配项 & 22.147 & 单个 P3 TEST & HBB 转换与公开 OBB 协议不同，缺少匹配 baseline。\\
+SAR-ShipDataset & 49.568 & 57.818 & 历史测试记录 & baseline 训练期间 batch 从 256 改为 128，不能视为严格受控配对。\\
+SAR-AIRcraft patch TEST & 54.513 & 55.552 & 历史测试记录 & baseline 为 SGD/BS16/约 137e；P3 为 AdamW/全局 BS48/300e；重叠 patch 协议也不同于原图基准。\\
+SAR-AIRcraft1.0 失败运行 & -- & -- & 失败，不报告 TEST & FP32 P3 运行在 epoch 15、batch 166 出现非有限 loss；epoch 14 的验证 AP$_{50:95}=53.902$ 只是中间记录，未生成最终测试文件。\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+SAR-AIRcraft patch 历史记录使用 512 像素重叠裁片。训练、验证和测试分别为 13,976、1,923、2,989 个 patch，模型输入 1024；其 baseline 与 P3 的优化器、batch 和训练长度不匹配。
+
+SAR-ShipDataset 历史记录使用 31,783、3,972、3,974 张训练、验证和测试图像，输入 512；baseline 训练 batch 曾发生变化。以上数字只补充旧运行账本，不替代尚未完成的相同划分、scratch、相同预算三种子复验。
+
+\subsection{已发表检测结果的数值背景（非配对比较）}
+为交代当前结果与已发表 SAR 检测工作的距离，表\ref{tab:literature_context}摘录 MaDiNet 作者稿的 SSDD、SAR-ShipDataset 和 SAR-AIRcraft1.0 对照表中的代表性 AP$_{50}$ 数值\cite{madinet_preprint}。这些数值只描述该论文内部的比较；本项目没有在相同划分、初始化、输入、训练预算和评估脚本下重实现这些方法。特别是，SSDD 当前三种子 scratch 结果与 MaDiNet 表中的 AP$_{50}$ 差异较大，不能将其解释为模型优劣的受控估计。SAR-ShipDataset 和 SAR-AIRcraft1.0 的本地值也来自协议不匹配的历史记录。该表用于呈现文献背景和现有差距，不用于主表排名或摘要中的性能优势主张。
+\begin{table}[H]\centering\scriptsize
+\caption{MaDiNet 作者稿报告的代表性 AP$_{50}$ 与本项目现有证据。跨论文及历史值未做协议匹配，不能直接排名。}
+\label{tab:literature_context}
+\begin{tabularx}{\linewidth}{p{1.65cm}XXp{3.45cm}}
+\toprule
+数据集 & MaDiNet 作者稿内报告值（AP$_{50}$，\%） & 本项目现有记录（AP$_{50}$，\%） & 不可直接比较的原因\\
+\midrule
+SSDD & YOLOv8n 98.1；YOLOv5s 98.3；DiffDet4SAR 96.9；MaDiNet 99.0 & 当前 scratch 矩阵：baseline $86.52\pm2.56$；DS-only $86.70\pm1.01$；PFIM-only $88.23\pm1.61$；full $87.97\pm0.11$；global $86.41\pm0.66$ & MaDiNet 作者稿与本项目在初始化、切分、预算及评估配置上的一致性未经复核；本项目没有重实现这些行。\\
+SAR-ShipDataset & YOLOv5n 89.3；DiffDet4SAR 95.1；MaDiNet 97.5 & 历史 baseline 94.616、P3 94.844；非严格配对 & 本地 batch 变化，且划分、训练设置和评估链未与作者稿对齐。\\
+SAR-AIRcraft1.0 & YOLOv8n 88.2；DiffDet4SAR 88.4；MaDiNet 90.5 & 历史 patch 验证：baseline 87.751、P3 88.825；patch 测试：70.402/70.822 & 本地结果使用重叠 patch；baseline 与 P3 的优化器、batch、轮数不一致。\\
+\bottomrule
+\end{tabularx}
+\end{table}
+作者稿中的主数据集表及数值定义见其表 3--5；最终投稿若保留此背景表，仍需核对正式出版版本中的相同条目，并补齐本项目的同协议外部基线。
+
+\section{实验完成度与论文主张对应关系}
+\begin{table}[H]\centering\scriptsize
+\caption{当前证据的完成状态及可支持的论文结论范围。}
+\begin{tabularx}{\linewidth}{p{3.3cm}p{2.3cm}X}
+\toprule
+实验项 & 当前状态 & 可支持范围 / 仍缺的证据\\
+\midrule
+SSDD 内部消融 & 完成，5 变体 $\times$ 3 seeds & 可报告当前设置下的描述性均值、配对 seed 差和负交互；不足以声称统计显著。\\
+SAR-ShipDataset / SAR-AIRcraft1.0 & 正式公平矩阵未完成 & 缺少 baseline、DS-only、PFIM-only、full 的统一协议三种子结果。\\
+外部轻量检测器对比 & 同协议复现未完成 & 文献数只作背景；不能支撑超过 YOLOv8n/YOLOv5s 等主流模型的结论。\\
+固定去斑预处理对照 & Lee 等固定滤波对照未完成 & 当前不能判断所提状态更新相对固定去斑预处理的增益。\\
+分类、变化检测、分割 & 多为 seed 0 诊断 & 可记录任务依赖的正负方向；不足以主张跨任务普遍泛化。\\
+目标尺度/背景复杂度分层 & 尚无预注册分组分析 & 当前不作小目标或复杂背景上的差异性结论。\\
+PFIM 的 $\gamma$/write/$\Delta$ 分支机制 & 分支单独消融未完成 & 目前终端指标与历史热图不足以证明具体状态路径的因果机制。\\
+模型效率 & 参数量/GFLOPs 有记录，计时元数据不完整 & 不报告可靠速度优劣；须统一硬件、输入、batch、profiler 和重复次数补测。\\
+数据清单及场景泄漏核验 & 部分 manifest 可用，最终哈希审计未齐 & 不对全项目数据隔离作已完成声明。\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{复现材料清单}
+当前实验账本要求随论文归档：训练配置与命令、每个 seed 的 split manifest、数据版本标识、源码 commit、逐 run 日志、最终权重 SHA-256、评估命令和原始输出。主 SSDD 结果表和逐 run CSV 已记录权重哈希；正文投稿版仍应给出可审计的匿名归档或可访问的补充材料链接。本文不包含未经核验的数据场景泄露审计结论。
+{\footnotesize
+\setlength{\itemsep}{0pt}
+\begin{thebibliography}{99}
+\bibitem{gu2023mamba}
+A. Gu and T. Dao, "Mamba: Linear-Time Sequence Modeling with Selective State Spaces," arXiv:2312.00752, 2023. \texttt{https://arxiv.org/abs/2312.00752}.
+\bibitem{liu2024visionmamba}
+L. Zhu et al., "Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model," arXiv:2401.09417, 2024. \texttt{https://arxiv.org/abs/2401.09417}.
+\bibitem{mambayolo}
+Z. Wang et al., "Mamba YOLO: A Simple Baseline for Object Detection with State Space Model," arXiv:2406.05835, 2024. \texttt{https://arxiv.org/abs/2406.05835}.
+\bibitem{rs_mamba}
+Y. Zhao et al., "RS-Mamba for Large Remote Sensing Image Dense Prediction," \emph{IEEE Transactions on Geoscience and Remote Sensing}, 2024. doi:10.1109/TGRS.2024.3425540.
+\bibitem{rstmtmamba}
+Y. Shen et al., "Learning Cross-Task Features With Mamba for Remote Sensing Image Multitask Prediction," \emph{IEEE Transactions on Geoscience and Remote Sensing}, 2025. doi:10.1109/TGRS.2025.3540573.
+\bibitem{madinet}
+J. Zhou et al., "MaDiNet: Mamba Diffusion Network for SAR Target Detection," \emph{IEEE Transactions on Circuits and Systems for Video Technology}, vol. 35, no. 11, pp. 10787--10800, 2025. doi:10.1109/TCSVT.2025.3574657.
+\bibitem{madinet_preprint}
+J. Zhou et al., "MaDiNet: Mamba Diffusion Network for SAR Target Detection," arXiv:2411.07500v1, 2024, Tables 3--5.
+\bibitem{mcmn}
+G. Gao, C. Li, X. Zhang, B. Yao, and Z. Chen, "Mamba-CNN hybrid Multi-scale ship detection Network driven by a Dual-perception feature of Doppler and Scattering," \emph{ISPRS Journal of Photogrammetry and Remote Sensing}, vol. 232, pp. 656--674, 2026. doi:10.1016/j.isprsjprs.2026.01.004.
+\bibitem{mambadip}
+Chinchu A. et al., "MambaDIP: Mamba-Based Deep Image Prior Framework for Despeckling and Enhancement of SAR Images," \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 19, pp. 21255--21271, 2026. doi:10.1109/JSTARS.2026.3702550.
+\bibitem{rssnet}
+M. Huang, Y. Yang, and Q. Sun, "RSS-Net: A Mamba-Based Network for SAR Image Denoizing," \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 19, pp. 3539--3551, 2026. doi:10.1109/JSTARS.2025.3647971.
+\bibitem{specklefree}
+S.-W. Chen, X.-C. Cui, X.-S. Wang, and S.-P. Xiao, "Speckle-Free SAR Image Ship Detection," \emph{IEEE Transactions on Image Processing}, vol. 30, pp. 5969--5983, 2021. doi:10.1109/TIP.2021.3089936.
+\bibitem{ssdd2017}
+J. Li, C. Qu, and J. Shao, "Ship Detection in SAR Images Based on an Improved Faster R-CNN," in \emph{Proc. SAR in Big Data Era}, 2017.
+\bibitem{ssdd2021}
+T. Zhang et al., "SAR Ship Detection Dataset (SSDD): Official Release and Comprehensive Data Analysis," \emph{Remote Sensing}, vol. 13, no. 18, art. 3690, 2021. doi:10.3390/rs13183690.
+\bibitem{sardataset}
+Y. Wang et al., "A SAR Dataset of Ship Detection for Deep Learning under Complex Backgrounds," \emph{Remote Sensing}, vol. 11, no. 7, art. 765, 2019. doi:10.3390/rs11070765.
+\bibitem{saraircraft}
+Z. Wang et al., "SAR-AIRcraft-1.0: High-Resolution SAR Aircraft Detection and Recognition Dataset," \emph{Journal of Radars}, vol. 12, no. 4, pp. 906--922, 2023. doi:10.12000/JR23043.
+\bibitem{sarnano}
+Y. Zhang et al., "SAR-NanoShipNet: A Scale-Adaptive Network for Robust Small Ship Detection in SAR Imagery," \emph{ISPRS Journal of Photogrammetry and Remote Sensing}, vol. 232, pp. 262--279, 2026. doi:10.1016/j.isprsjprs.2025.12.006.
+\bibitem{sfdnet}
+B. Wu et al., "A Novel Star Feature Decoupling Network for Multiscale SAR Image Ship Detection," \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 19, pp. 18294--18305, 2026. doi:10.1109/JSTARS.2026.3688771.
+\bibitem{fusar}
+X. Shi et al., "Object-Level Semantic Segmentation on the High-Resolution Gaofen-3 FUSAR-Map Dataset," \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, 2021. doi:10.1109/JSTARS.2021.3063797.
+\end{thebibliography}
+}
+\end{document}

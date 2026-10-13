@@ -1,0 +1,2 @@
+dataset,experiment,variant,placement,state_dim,precision,recall,ap50,ap75,ap50_95,inference_ms,weights
+SADD,corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3,full,p3,16,0.9360535954013771,0.9607843137254902,0.9775979535920714,0.5698482451805351,0.545973301809999,8.94463604146784,/home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/best.pt

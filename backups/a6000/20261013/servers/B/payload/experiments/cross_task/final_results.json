@@ -1,0 +1,32 @@
+{
+  "project": "/home/powerleader/ig-ds-ssm/experiments/cross_task",
+  "records": [
+    {
+      "dataset": "SAMPLE",
+      "task": "classification",
+      "variant": "baseline",
+      "state_dim": 0,
+      "metric": {
+        "accuracy": 1.0
+      },
+      "latency_ms": 2.3026177824130687,
+      "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/classification/SAMPLE/baseline/best.pt",
+      "epochs": 100,
+      "params": 1976418
+    },
+    {
+      "dataset": "SAMPLE",
+      "task": "classification",
+      "variant": "ours",
+      "state_dim": 16,
+      "metric": {
+        "accuracy": 1.0
+      },
+      "latency_ms": 2.352077463739619,
+      "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/classification/SAMPLE/ours/best.pt",
+      "epochs": 100,
+      "params": 1768236
+    }
+  ],
+  "record_count": 2
+}

@@ -1,0 +1,23 @@
+{
+  "status": "TRAINING_COMPLETE",
+  "method": "wasnet",
+  "result_sha256": "d4083e560e5dca49cc7095783ff13f6d1b1063151904bea46d6fc8378b3f5687",
+  "protocol_sha256": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74",
+  "source_manifest": {
+    "author_models.py": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+    "run_cd_author.py": "e75db7e9e7a1f04ec5e1bff1f66860c702a873401ea83cb601a9d242033bc41d",
+    "source_registry.json": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a"
+  },
+  "outputs": {
+    "protocol.json": "a3d8790be403d3d8e24b90fd27626dcb904da0a02ab9c116f68864ceee2f4edc",
+    "model_source_audit.json": "bda452203072e9d6667cbd12b9b48403c69ae7b20c963c0fb9d27bfe6038a3c4",
+    "image_only_protocol_arrays.npz": "660e6753fdfce69c73bce31b4a7a635788c5009ffa9b031144b983cf7eb9e6b6",
+    "epochs.jsonl": "17b0eae60a30f573d3e1ef9a447e69adcc740049064550dadfd0e2c79ab7e98b",
+    "best.pt": "8e0b855aec529d9cfa982e8b287f705efb9a329c6ee388874db9f696eebe5fc6",
+    "last.pt": "a078094c561f3446435a677d3b9c1560ad8e9559921b467d78cee85c3c2dd735",
+    "prediction.png": "53bb77922e9ffce08205f8228181b5d47384b0fbf7abc1d5e42b0147ef4cffa7",
+    "prediction_before_postprocess.png": "d751b10532c7c09c87c9385185111ba409a540632e5a129d234e8f19a995bbbd",
+    "result.json": "d4083e560e5dca49cc7095783ff13f6d1b1063151904bea46d6fc8378b3f5687"
+  },
+  "completed_at": "2026-10-12T14:09:13.688373+00:00"
+}

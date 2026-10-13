@@ -1,0 +1,103 @@
+{
+  "independent_test": false,
+  "protocol_group": "old300epoch_TEST_as_VAL",
+  "results": [
+    {
+      "audit_scope": "Live checkpoint/data hashes and300-row ledger/CSV; no new model evaluation.",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/ssdd_original_seed0/run/weights/best.pt",
+      "checkpoint_sha256": "3e1255ea22539e55fb0b88b325f0639bbdb114b4f50ad1dde466a59841789814",
+      "hashes": {
+        "data_manifest.json": "8c8db821f87451251bc670b4b69f1a70a55ceeb1ffd8ba91f7f6bf70447eef05",
+        "optimizer_ledger.jsonl": "6cea45cd5b0b5beaba0c3f04c14e30674d59a2a0748d85e8b445d26714f2caa5",
+        "protocol.json": "7920592fd7dd014b58c3c25830bb9e16d705fa1f71217bec2408d461261d6d7a",
+        "result.json": "0442ae6dd01dccd99755c3f35768dfd00c11f91c4e09709126c019678c503b3f",
+        "run/results.csv": "bc42e337b9e167814854f3d433d91f8902574f39ca6ef75c41c6d2ddd2e05207",
+        "runtime_audit.json": "1b0a44814f71b30f813680ed809147f99c476cc77ec4857711c519029f1fcb62"
+      },
+      "producer_fp32_reload_attestation": true,
+      "result": {
+        "AP50": 96.22482504304442,
+        "AP50_95": 69.49752822641263,
+        "AP75": 83.2846860319921,
+        "best_epoch": 225,
+        "best_sha256": "3e1255ea22539e55fb0b88b325f0639bbdb114b4f50ad1dde466a59841789814",
+        "epoch": 300,
+        "optimizer_updates": 8700,
+        "paper_eligible": true,
+        "precision": 93.48896538267655,
+        "protocol": {
+          "accumulation": 8,
+          "augmentation": "letterbox640; horizontal+vertical flip p0.5; all other generic augmentations off",
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "code_sha256": "89543c9855575c59a707ea1d4d119ed3e367a6b0ae4ab87c29f2cb66aabf8f63",
+          "data_manifest_sha256": "8c8db821f87451251bc670b4b69f1a70a55ceeb1ffd8ba91f7f6bf70447eef05",
+          "detection_loss": {
+            "box": 7.5,
+            "cls": 0.5,
+            "dfl": 1.5
+          },
+          "early_stopping": false,
+          "effective_batch": 32,
+          "ema": "original ModelEMA policy",
+          "epochs": 300,
+          "eps": 1e-08,
+          "evaluation": {
+            "P_R": "maximum-F1 curve summary; not fixed deployment threshold",
+            "conf": 0.001,
+            "iou_nms": 0.7,
+            "max_det": 300
+          },
+          "gradient_clip_l2": 10.0,
+          "identity": {
+            "compatibility_applied": true,
+            "cuda_runtime_count": 1,
+            "cuda_visible_devices": "GPU-e5f8a5d2-306d-582e-c926-f795df943b1b",
+            "gpu_mask_changed": false,
+            "hostname": "a6000-c",
+            "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+            "physical_gpu_index": 0,
+            "physical_gpu_name": "NVIDIA RTX A6000",
+            "physical_gpu_uuid": "GPU-e5f8a5d2-306d-582e-c926-f795df943b1b",
+            "reported_count_after": 1,
+            "reported_count_before": 0,
+            "torch": "1.13.1+cu117",
+            "torch_installation_modified": false
+          },
+          "input": [
+            3,
+            640,
+            640
+          ],
+          "loss_normalization": "native summed microbatch loss; divide accumulated gradients by actual samples",
+          "lr0": 0.001,
+          "module_warmup": 0,
+          "optimizer": "AdamW",
+          "optimizer_group_policy": "v2: any local parameter name containing bias (including dt_projs_bias) has zero WD; norm zero; remaining weights 0.0005",
+          "physical_batch": 4,
+          "precision": "FP32 training/checkpoints/evaluation; AMP and TF32 off",
+          "schedule": "5 full epochs linear warmup at optimizer updates, then cosine to lr0*0.01",
+          "schema": "rgsp-ssdd-table-completion-v1",
+          "seed": 0,
+          "selection": "EMA best 0.1*AP50+0.9*AP50:95; earliest tie",
+          "smoke_only": false,
+          "source_manifest_sha256": "149133bdfefb969279040921719bfb79b5d307e0a8c350d9f8214867b465c502",
+          "split": "928 train / official232 TEST-as-VAL; no independent test claim",
+          "variant": "original",
+          "weight_decay": {
+            "bias_and_norm": 0.0,
+            "weights": 0.0005
+          }
+        },
+        "recall": 92.04202160374436,
+        "selection_warning": "Official test used for repeated validation/selection; not independent test",
+        "serialized_best_controls": [],
+        "serialized_best_fp32_verified": true,
+        "status": "TRAINING_COMPLETE"
+      },
+      "variant": "original"
+    }
+  ]
+}

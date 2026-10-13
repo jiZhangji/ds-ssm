@@ -1,0 +1,228 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py:197: UserWarning: upsample_bilinear2d_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py:197: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Ottawa full seed0 epoch=1/150 loss=1.585444 val=0.861502
+Ottawa full seed0 epoch=2/150 loss=1.203413 val=0.904110
+Ottawa full seed0 epoch=3/150 loss=0.991123 val=0.941652
+Ottawa full seed0 epoch=4/150 loss=0.964490 val=0.942548
+Ottawa full seed0 epoch=5/150 loss=0.877797 val=0.929147
+Ottawa full seed0 epoch=6/150 loss=0.810698 val=0.940317
+Ottawa full seed0 epoch=7/150 loss=0.757974 val=0.946542
+Ottawa full seed0 epoch=8/150 loss=0.717430 val=0.943945
+Ottawa full seed0 epoch=9/150 loss=0.673556 val=0.945986
+Ottawa full seed0 epoch=10/150 loss=0.643463 val=0.952237
+Ottawa full seed0 epoch=11/150 loss=0.712405 val=0.947779
+Ottawa full seed0 epoch=12/150 loss=0.597000 val=0.960961
+Ottawa full seed0 epoch=13/150 loss=0.622108 val=0.961167
+Ottawa full seed0 epoch=14/150 loss=0.582953 val=0.960657
+Ottawa full seed0 epoch=15/150 loss=0.579910 val=0.954994
+Ottawa full seed0 epoch=16/150 loss=0.627800 val=0.960515
+Ottawa full seed0 epoch=17/150 loss=0.517978 val=0.959471
+Ottawa full seed0 epoch=18/150 loss=0.548598 val=0.962244
+Ottawa full seed0 epoch=19/150 loss=0.557898 val=0.962693
+Ottawa full seed0 epoch=20/150 loss=0.477817 val=0.962757
+Ottawa full seed0 epoch=21/150 loss=0.490877 val=0.958671
+Ottawa full seed0 epoch=22/150 loss=0.486705 val=0.960734
+Ottawa full seed0 epoch=23/150 loss=0.443081 val=0.963918
+Ottawa full seed0 epoch=24/150 loss=0.453643 val=0.963866
+Ottawa full seed0 epoch=25/150 loss=0.429501 val=0.959201
+Ottawa full seed0 epoch=26/150 loss=0.410517 val=0.964640
+Ottawa full seed0 epoch=27/150 loss=0.419145 val=0.967315
+Ottawa full seed0 epoch=28/150 loss=0.420290 val=0.966688
+Ottawa full seed0 epoch=29/150 loss=0.391190 val=0.968790
+Ottawa full seed0 epoch=30/150 loss=0.379182 val=0.968390
+Ottawa full seed0 epoch=31/150 loss=0.393960 val=0.967949
+Ottawa full seed0 epoch=32/150 loss=0.351375 val=0.969970
+Ottawa full seed0 epoch=33/150 loss=0.370698 val=0.969372
+Ottawa full seed0 epoch=34/150 loss=0.345784 val=0.969774
+Ottawa full seed0 epoch=35/150 loss=0.363083 val=0.970407
+Ottawa full seed0 epoch=36/150 loss=0.395643 val=0.969851
+Ottawa full seed0 epoch=37/150 loss=0.334840 val=0.969500
+Ottawa full seed0 epoch=38/150 loss=0.325989 val=0.968957
+Ottawa full seed0 epoch=39/150 loss=0.330175 val=0.969529
+Ottawa full seed0 epoch=40/150 loss=0.317134 val=0.971368
+Ottawa full seed0 epoch=41/150 loss=0.304581 val=0.971478
+Ottawa full seed0 epoch=42/150 loss=0.311045 val=0.970242
+Ottawa full seed0 epoch=43/150 loss=0.299902 val=0.970570
+Ottawa full seed0 epoch=44/150 loss=0.297193 val=0.970770
+Ottawa full seed0 epoch=45/150 loss=0.278604 val=0.971698
+Ottawa full seed0 epoch=46/150 loss=0.282179 val=0.972402
+Ottawa full seed0 epoch=47/150 loss=0.288584 val=0.971598
+Ottawa full seed0 epoch=48/150 loss=0.280791 val=0.971076
+Ottawa full seed0 epoch=49/150 loss=0.322235 val=0.968596
+Ottawa full seed0 epoch=50/150 loss=0.315651 val=0.969489
+Ottawa full seed0 epoch=51/150 loss=0.282088 val=0.970075
+Ottawa full seed0 epoch=52/150 loss=0.275776 val=0.971441
+Ottawa full seed0 epoch=53/150 loss=0.275089 val=0.972706
+Ottawa full seed0 epoch=54/150 loss=0.272589 val=0.972050
+Ottawa full seed0 epoch=55/150 loss=0.262260 val=0.971672
+Ottawa full seed0 epoch=56/150 loss=0.280295 val=0.968723
+Ottawa full seed0 epoch=57/150 loss=0.244901 val=0.970204
+Ottawa full seed0 epoch=58/150 loss=0.275186 val=0.970733
+Ottawa full seed0 epoch=59/150 loss=0.267316 val=0.972477
+Ottawa full seed0 epoch=60/150 loss=0.247095 val=0.969042
+Ottawa full seed0 epoch=61/150 loss=0.245118 val=0.970544
+Ottawa full seed0 epoch=62/150 loss=0.244092 val=0.971416
+Ottawa full seed0 epoch=63/150 loss=0.267273 val=0.971946
+Ottawa full seed0 epoch=64/150 loss=0.263103 val=0.972312
+Ottawa full seed0 epoch=65/150 loss=0.232517 val=0.970187
+Ottawa full seed0 epoch=66/150 loss=0.261946 val=0.970544
+Ottawa full seed0 epoch=67/150 loss=0.221166 val=0.971698
+Ottawa full seed0 epoch=68/150 loss=0.219529 val=0.972043
+Ottawa full seed0 epoch=69/150 loss=0.209644 val=0.971919
+Ottawa full seed0 epoch=70/150 loss=0.246299 val=0.970894
+Ottawa full seed0 epoch=71/150 loss=0.247385 val=0.969423
+Ottawa full seed0 epoch=72/150 loss=0.220186 val=0.970894
+Ottawa full seed0 epoch=73/150 loss=0.227595 val=0.972418
+Ottawa full seed0 epoch=74/150 loss=0.220301 val=0.972801
+Ottawa full seed0 epoch=75/150 loss=0.207058 val=0.971660
+Ottawa full seed0 epoch=76/150 loss=0.283624 val=0.973078
+Ottawa full seed0 epoch=77/150 loss=0.228490 val=0.972454
+Ottawa full seed0 epoch=78/150 loss=0.231972 val=0.972753
+Ottawa full seed0 epoch=79/150 loss=0.209286 val=0.973322
+Ottawa full seed0 epoch=80/150 loss=0.202773 val=0.972731
+Ottawa full seed0 epoch=81/150 loss=0.211750 val=0.972240
+Ottawa full seed0 epoch=82/150 loss=0.216283 val=0.971795
+Ottawa full seed0 epoch=83/150 loss=0.198814 val=0.972556
+Ottawa full seed0 epoch=84/150 loss=0.209659 val=0.971539
+Ottawa full seed0 epoch=85/150 loss=0.200233 val=0.972638
+Ottawa full seed0 epoch=86/150 loss=0.197274 val=0.972731
+Ottawa full seed0 epoch=87/150 loss=0.196770 val=0.971927
+Ottawa full seed0 epoch=88/150 loss=0.200025 val=0.971660
+Ottawa full seed0 epoch=89/150 loss=0.191735 val=0.972741
+Ottawa full seed0 epoch=90/150 loss=0.197626 val=0.973285
+Ottawa full seed0 epoch=91/150 loss=0.180973 val=0.973170
+Ottawa full seed0 epoch=92/150 loss=0.197169 val=0.972857
+Ottawa full seed0 epoch=93/150 loss=0.195964 val=0.973757
+Ottawa full seed0 epoch=94/150 loss=0.174946 val=0.974589
+Ottawa full seed0 epoch=95/150 loss=0.201044 val=0.974006
+Ottawa full seed0 epoch=96/150 loss=0.221760 val=0.973136
+Ottawa full seed0 epoch=97/150 loss=0.195322 val=0.973273
+Ottawa full seed0 epoch=98/150 loss=0.185424 val=0.972246
+Ottawa full seed0 epoch=99/150 loss=0.185679 val=0.972198
+Ottawa full seed0 epoch=100/150 loss=0.179613 val=0.972685
+Ottawa full seed0 epoch=101/150 loss=0.208091 val=0.973251
+Ottawa full seed0 epoch=102/150 loss=0.180615 val=0.973205
+Ottawa full seed0 epoch=103/150 loss=0.180396 val=0.973493
+Ottawa full seed0 epoch=104/150 loss=0.181364 val=0.973065
+Ottawa full seed0 epoch=105/150 loss=0.198488 val=0.972532
+Ottawa full seed0 epoch=106/150 loss=0.194366 val=0.972086
+Ottawa full seed0 epoch=107/150 loss=0.179966 val=0.972395
+Ottawa full seed0 epoch=108/150 loss=0.178141 val=0.972938
+Ottawa full seed0 epoch=109/150 loss=0.184825 val=0.972743
+Ottawa full seed0 epoch=110/150 loss=0.180632 val=0.972175
+Ottawa full seed0 epoch=111/150 loss=0.173537 val=0.971831
+Ottawa full seed0 epoch=112/150 loss=0.168005 val=0.971831
+Ottawa full seed0 epoch=113/150 loss=0.165698 val=0.972383
+Ottawa full seed0 epoch=114/150 loss=0.185778 val=0.973170
+Ottawa full seed0 epoch=115/150 loss=0.180834 val=0.972438
+Ottawa full seed0 epoch=116/150 loss=0.195763 val=0.971931
+Ottawa full seed0 epoch=117/150 loss=0.164791 val=0.972501
+Ottawa full seed0 epoch=118/150 loss=0.173850 val=0.971819
+Ottawa full seed0 epoch=119/150 loss=0.175261 val=0.972788
+{
+  "schema": "rgsp-cross-trial-v1",
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "full",
+  "seed": 0,
+  "protocol": {
+    "schema": "rgsp-cross-trial-v1",
+    "dataset": "Ottawa",
+    "task": "change_detection",
+    "logical_data_sha256": "af42e4de932e50b34e768e0a4d1f0bb690edc62390ce939d4285fb347075ec33",
+    "split_counts": {
+      "test": 32,
+      "train": 112,
+      "val": 24
+    },
+    "annotation_policy": "fail",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "epochs": 150,
+    "patience": 25,
+    "imgsz": 192,
+    "batch": 16,
+    "eval_batch": 16,
+    "optimizer": "AdamW",
+    "lr": 0.0002,
+    "weight_decay": 0.0005,
+    "scheduler": "cosine to 1% initial lr",
+    "module_warmup_epochs": 0,
+    "precision": "FP32 (AMP/TF32 off)",
+    "gradient_clip_l2": 5.0,
+    "grad_accum": 1,
+    "classification_label_smoothing": 0.1,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "selection_metric": "f1",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "historical_results_comparable": false
+  },
+  "protocol_sha256": "65e6c9f98f6084b2d5c3c94ef662510777176ce306a3205a0f02df59d2db57e0",
+  "data": {
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/Ottawa/manifest.json",
+    "manifest_sha256": "7cfc014e6c6e94a670b692382c1fe5328404035e3ceb29941f62aef4209721d7",
+    "logical_manifest_sha256": "af42e4de932e50b34e768e0a4d1f0bb690edc62390ce939d4285fb347075ec33",
+    "counts": {
+      "test": 32,
+      "train": 112,
+      "val": 24
+    },
+    "audit_sha256": "5935f8221f4c420c908ee2b67be062ac706bfc881051f5ecdfe0081676d4a8cd",
+    "files_sha256": "f487199e1d2f4ee9fc7150a1614a670ecbf2fd1e31aa993f1e688dfba28086fc",
+    "annotation_policy": "fail"
+  },
+  "initialization_common_tensor_sha256": "d258a21c11bddf3824e3377acf6401654d52d5ccbadee72d7ec597e3fa046067",
+  "checkpoint": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_full_seed0/best.pt",
+  "best_sha256": "a554357025b5b96f45b024ea56cc401051ae1928828b2ff130a0ce063475637b",
+  "best_epoch": 94,
+  "threshold": 0.65,
+  "metric": {
+    "precision": 0.969718817591925,
+    "recall": 0.9648493543758967,
+    "f1": 0.9672779575692196,
+    "iou": 0.9366295264623955,
+    "oa": 0.9901258680555556,
+    "kappa": 0.9614636759893287,
+    "tp": 2690,
+    "fp": 84,
+    "fn": 98,
+    "tn": 15560,
+    "evaluated_native_unique_pixels": 18432,
+    "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities"
+  },
+  "reloaded_controls": {
+    "variant": "full",
+    "controlled_blocks": 1,
+    "placement": "internal P3/8, 64 channels",
+    "scalars": {
+      "lambda_s": 0.4937593340873718,
+      "alpha": 0.49656638503074646,
+      "beta_i": 1.0021215677261353,
+      "rho_i": 1.0033819675445557,
+      "eta_i": 0.10293535888195038
+    },
+    "buffer_scalars": [],
+    "min_retain": 0.5,
+    "use_pfim": true
+  },
+  "parameters": 3717631,
+  "trainable_parameters": 3717631,
+  "buffers": 5430,
+  "efficiency_status": "Params only here; matched-hardware latency and scan-aware FLOPs require the separate efficiency lane. No undercounted THOP GFLOPs claimed.",
+  "historical_negative_results_preserved": true,
+  "finished_utc": "2026-10-09T13:17:12.107791+00:00"
+}
+{"compatibility_launcher": "PASS", "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/ottawa_full_seed0/cuda_compatibility.json"}

@@ -1,0 +1,20 @@
+[
+  {
+    "image_sha256": "2ffbb0bc293183f63cb214af2ee8b684ff5a9277483e44c8f8b568013ebc044d",
+    "label_sha256": "df78b46ed58291984dc123f731e8766f3480369cf75af5b73f737d78b41c35a4",
+    "name": "contract_fixture.png",
+    "split": "train"
+  },
+  {
+    "image_sha256": "0c84913fcab4977dea9f7e6050f131cb8c1062dedb4025ecfa4bd22b9f771c98",
+    "label_sha256": "df78b46ed58291984dc123f731e8766f3480369cf75af5b73f737d78b41c35a4",
+    "name": "contract_fixture.png",
+    "split": "val"
+  },
+  {
+    "image_sha256": "bceab39eae0c55892cf69c84235d3d76ac126e25f74365ea32cf75002535df16",
+    "label_sha256": "df78b46ed58291984dc123f731e8766f3480369cf75af5b73f737d78b41c35a4",
+    "name": "contract_fixture.png",
+    "split": "test"
+  }
+]

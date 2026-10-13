@@ -1,0 +1,8 @@
+Experiment: ssdd_historical_protocol_repro_v1
+Runs:       2
+Scratch:    True
+Placement:  P3 for Full; original Mamba-YOLO for Baseline
+Eval split: test
+START: SSDD / baseline; epochs=0
+
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/mbyolo_train_sarair.py --task train --data /home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/ssdd_historical_protocol_repro_v1-manifest/datasets/SSDD.yaml --config /home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/ssdd_historical_protocol_repro_v1-manifest/configs/ssdd_baseline.yaml --weights none --imgsz 640 --batch_size 32 --device 0 --epochs 300 --workers 8 --optimizer AdamW --lr0 0.001 --lrf 0.01 --weight_decay 0.0005 --nbs 64 --warmup_epochs 5.0 --module_warmup_epochs 0 --patience 30 --mosaic 1.0 --close_mosaic 10 --degrees 0.0 --translate 0.1 --scale 0.5 --flipud 0.0 --fliplr 0.5 --seed 0 --deterministic --project /home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full --name ssdd_historical_protocol_repro_v1_ssdd_baseline

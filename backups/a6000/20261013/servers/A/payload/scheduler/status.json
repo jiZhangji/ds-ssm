@@ -1,0 +1,93 @@
+{
+  "hosts": {
+    "A": {
+      "error": null,
+      "gpus": [
+        {
+          "index": 0,
+          "memory_total": 49140,
+          "memory_used": 30890,
+          "name": "NVIDIA RTX A6000",
+          "utilization": 100
+        }
+      ],
+      "reachable": true
+    },
+    "B": {
+      "error": null,
+      "gpus": [
+        {
+          "index": 0,
+          "memory_total": 49140,
+          "memory_used": 520,
+          "name": "NVIDIA RTX A6000",
+          "utilization": 0
+        }
+      ],
+      "reachable": true
+    },
+    "C": {
+      "error": null,
+      "gpus": [
+        {
+          "index": 0,
+          "memory_total": 49140,
+          "memory_used": 12191,
+          "name": "NVIDIA RTX A6000",
+          "utilization": 100
+        }
+      ],
+      "reachable": true
+    },
+    "D": {
+      "error": null,
+      "gpus": [
+        {
+          "index": 0,
+          "memory_total": 49140,
+          "memory_used": 683,
+          "name": "NVIDIA RTX A6000",
+          "utilization": 0
+        }
+      ],
+      "reachable": true
+    },
+    "E": {
+      "error": null,
+      "gpus": [],
+      "reachable": false
+    }
+  },
+  "idle_seconds": 900,
+  "jobs": {
+    "complete": [
+      "cd_farmland_baseline",
+      "cd_farmland_p3_d16",
+      "cd_ottawa_baseline",
+      "cd_ottawa_p3_d16",
+      "cd_sulzberger_baseline",
+      "cd_sulzberger_p3_d16",
+      "cd_yellow_river_baseline",
+      "cd_yellow_river_p3_d16",
+      "cls_sample_baseline",
+      "cls_sample_p3_d16",
+      "cls_sar_acd_baseline",
+      "cls_sar_acd_p3_d16",
+      "det_airship_baseline_b32",
+      "det_airship_p3_d16_b32",
+      "det_sadd_baseline_b32",
+      "det_sadd_p3_d16_b32",
+      "det_ssdd_baseline_b16",
+      "det_ssdd_p3_d16_b16"
+    ],
+    "pending": [
+      "det_aircraft_baseline_b32",
+      "det_aircraft_p3_d16_b32",
+      "det_srsdd_baseline_b32",
+      "det_srsdd_p3_d16_b32",
+      "seg_fusar_map_baseline",
+      "seg_fusar_map_p3_d16"
+    ]
+  },
+  "updated_at": "2026-09-01T00:18:08.832445+00:00"
+}

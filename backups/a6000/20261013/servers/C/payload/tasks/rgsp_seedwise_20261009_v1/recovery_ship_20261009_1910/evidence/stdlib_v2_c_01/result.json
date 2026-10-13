@@ -1,0 +1,24 @@
+{
+  "errors": 0,
+  "failures": 0,
+  "finished_utc": "2026-10-09T12:03:55.809344+00:00",
+  "fixture_scope": "stdlib only; fixed unknown-proxy names and negative substitutions, source metadata, tiny synthetic files, candidate validation, and os.link primitive",
+  "full_data_audit_stage_or_publish_called": false,
+  "helper_sha256": "caabe5022a1d53d94747c0091f9899413b5a86b1fac21e700a343baed3be4806",
+  "hostname": "a6000-c",
+  "live_readiness_after": null,
+  "live_readiness_before": null,
+  "no_torch_or_pillow_import": true,
+  "pinned_sources_verified": {
+    "audit_external_archives.py": "772fdada1542a3bc2c644859a6cc82ae76dac150ddf2459a83462e6695473b0b",
+    "deferred_data.py": "dbfd4cadcdbe6a7533bfb679ed540d2739c8ee6b961b4558bd5e66e6e05a7fb1",
+    "manifest.py": "ff1f6708e735d5bd91d9c341edfcfdcc714829c5ab5ee0c6110df263d5b6fed7",
+    "stage_shipdataset.py": "81e621a130f8f6e66c3785c27a411ebe46dc4cb9733f1299411a35d0352f41f8"
+  },
+  "python": "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+  "started_utc": "2026-10-09T12:03:53.998852+00:00",
+  "status": "passed",
+  "test_harness_sha256": "be41278d4d632d9a0623362edc667d1c19f8a2dd78c1c79c6144731fa60adeb7",
+  "test_log": "test_atomic_link_primitive_is_no_clobber_in_fixture_only (__main__.GateStdlibTests) ... ok\ntest_deferred_candidate_without_live_publication (__main__.GateStdlibTests) ... ok\ntest_duplicate_summaries_match_frozen_auditor (__main__.GateStdlibTests) ... ok\ntest_fixed_snapshot_source_and_provenance_binding (__main__.GateStdlibTests) ... ok\ntest_frozen_runtime_context_is_read_only (__main__.GateStdlibTests) ... ok\ntest_known_unknown_audit_count_order_and_duplicate_rejected (__main__.GateStdlibTests) ... ok\ntest_known_unknown_audit_name_substitution_rejected (__main__.GateStdlibTests) ... ok\ntest_known_unknown_fixed_mapping_and_disclosure (__main__.GateStdlibTests) ... ok\ntest_known_unknown_source_count_substitution_rejected (__main__.GateStdlibTests) ... ok\ntest_known_unknown_source_group_substitution_rejected (__main__.GateStdlibTests) ... ok\ntest_known_unknown_source_name_substitution_rejected (__main__.GateStdlibTests) ... ok\ntest_known_unknown_unrecognized_family_rejected (__main__.GateStdlibTests) ... ok\ntest_paths_and_hashes_reject_substitution (__main__.GateStdlibTests) ... ok\ntest_selected_manifest_depends_on_labels_pixels_and_order (__main__.GateStdlibTests) ... ok\ntest_sorted_decimal_semantics_match_auditor (__main__.GateStdlibTests) ... ok\ntest_strict_json_rejects_duplicates_and_nan (__main__.GateStdlibTests) ... ok\ntest_test_priority_and_test_conflict_scope (__main__.GateStdlibTests) ... ok\ntest_write_new_is_no_clobber_and_serializer_matches_stager (__main__.GateStdlibTests) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 1.810s\n\nOK\n",
+  "tests_run": 18
+}

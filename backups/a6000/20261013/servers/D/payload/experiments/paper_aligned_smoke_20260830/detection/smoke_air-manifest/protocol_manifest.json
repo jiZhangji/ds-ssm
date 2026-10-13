@@ -1,0 +1,40 @@
+{
+  "experiment_id": "smoke_air",
+  "selection_policy": "fixed-last-epoch; official test evaluated once after training",
+  "initialization": "none",
+  "seed": 0,
+  "state_dim": 16,
+  "protocols": {
+    "AIR-SARShip-2.0": {
+      "key": "AIR-SARShip-2.0",
+      "folder": "AIR_SARShip_2_Paper",
+      "yaml_name": "AIR_SARShip_2_Paper.yaml",
+      "imgsz": 416,
+      "batch": 12,
+      "eval_batch": 24,
+      "epochs": 240,
+      "optimizer": "SGD",
+      "lr0": 0.001,
+      "lrf": 0.01,
+      "momentum": 0.9,
+      "weight_decay": 0.0005,
+      "nbs": 12,
+      "warmup_epochs": 3.2,
+      "lr_schedule": "multistep",
+      "lr_milestones": [
+        160,
+        200
+      ],
+      "mosaic": 0.0,
+      "close_mosaic": 0,
+      "degrees": 0.0,
+      "translate": 0.0,
+      "scale": 0.0,
+      "flipud": 0.0,
+      "fliplr": 0.0,
+      "hsv_v": 0.0,
+      "multi_scale": true,
+      "evidence": "Bao et al. 2021: 210/90, 512 crops with 256 overlap, YOLOv3 416, SGD 240e, batch 12, lr 1e-3, milestones 160/200, warmup 500 iterations"
+    }
+  }
+}

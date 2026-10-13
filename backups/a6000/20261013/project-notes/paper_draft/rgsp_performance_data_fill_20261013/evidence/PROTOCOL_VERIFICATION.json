@@ -1,0 +1,426 @@
+{
+  "verified_at": "2026-10-13 09:15",
+  "report_errors": [
+    {
+      "host": "powerleader-PT6620W",
+      "errors": []
+    },
+    {
+      "host": "a6000-c",
+      "errors": []
+    },
+    {
+      "host": "a6000-d",
+      "errors": []
+    },
+    {
+      "host": "powerleader-a6000-f",
+      "errors": []
+    }
+  ],
+  "runs": [
+    {
+      "job": "farmland-full",
+      "seed": 0,
+      "protocol_sha256": "24f609da2f3144dad63d546acc98cb9621042d84476e7915daedd0a754fabe76",
+      "result_sha256": "a2f82c2ae5965b7968a75fa6bb9cb0db8f22149c665444d2530b71744a4c0770"
+    },
+    {
+      "job": "farmland-full",
+      "seed": 2,
+      "protocol_sha256": "24f609da2f3144dad63d546acc98cb9621042d84476e7915daedd0a754fabe76",
+      "result_sha256": "abb52b613bafc42427675281b2696fc8ba86e913393d62378a32ac572f31e5f5"
+    },
+    {
+      "job": "farmland-full",
+      "seed": 1,
+      "protocol_sha256": "24f609da2f3144dad63d546acc98cb9621042d84476e7915daedd0a754fabe76",
+      "result_sha256": "f64a7a832d6126166706ec55f43011e7803ef196f46eb0a979d0416f29b4634b"
+    },
+    {
+      "job": "yellow_river-original",
+      "seed": 0,
+      "protocol_sha256": "8781cae2f9aa0e24f4179dee8a0e059ba082a9728e251f632b51d2d26ca7b1b0",
+      "result_sha256": "d93f5426baadc753473c98087f47caf0ba8f43a0bd8e43255c0f4d3d10711a6e"
+    },
+    {
+      "job": "yellow_river-original",
+      "seed": 2,
+      "protocol_sha256": "8781cae2f9aa0e24f4179dee8a0e059ba082a9728e251f632b51d2d26ca7b1b0",
+      "result_sha256": "a24bfd94210e08b5058d4764520f7c343df2c871609224c2aa0538e8487f60a0"
+    },
+    {
+      "job": "yellow_river-original",
+      "seed": 1,
+      "protocol_sha256": "8781cae2f9aa0e24f4179dee8a0e059ba082a9728e251f632b51d2d26ca7b1b0",
+      "result_sha256": "2345820558c746d8667c7decd43c897618d98992c6629488142cea892f2f5ba3"
+    },
+    {
+      "job": "farmland-matched075",
+      "seed": 0,
+      "protocol_sha256": "cbf852242e1fde515c9516c90476f294d0c035d926f2aa1a94f413cea0bdb943",
+      "result_sha256": "3990566919c89952d03caec4935dfa17194cf3da5307d35573e2a7e14f1e7554"
+    },
+    {
+      "job": "farmland-matched075",
+      "seed": 2,
+      "protocol_sha256": "cbf852242e1fde515c9516c90476f294d0c035d926f2aa1a94f413cea0bdb943",
+      "result_sha256": "af36df815104804a925c532a3752e11f1cd247699c48c403e51b0a084c58dbaf"
+    },
+    {
+      "job": "farmland-matched075",
+      "seed": 1,
+      "protocol_sha256": "cbf852242e1fde515c9516c90476f294d0c035d926f2aa1a94f413cea0bdb943",
+      "result_sha256": "8a2e38ce5c68f68894f113c1ccc5d4afe9aebf512e389d23f1dc9d5fe2a43a94"
+    },
+    {
+      "job": "ottawa-original",
+      "seed": 0,
+      "protocol_sha256": "7810f673af85c974e78e5c340a956cb6958f516ffa467e29f04ba091eb8d775f",
+      "result_sha256": "43fa061610ba27c61309836747656756a4ea1db33fa96724d3137ecdcd436269"
+    },
+    {
+      "job": "ottawa-original",
+      "seed": 2,
+      "protocol_sha256": "7810f673af85c974e78e5c340a956cb6958f516ffa467e29f04ba091eb8d775f",
+      "result_sha256": "2a581f24ac2c665e04373ea241ca4d12ab00e57d7b9f16557b07612255018467"
+    },
+    {
+      "job": "ottawa-original",
+      "seed": 1,
+      "protocol_sha256": "7810f673af85c974e78e5c340a956cb6958f516ffa467e29f04ba091eb8d775f",
+      "result_sha256": "9711d1cbc8ca940dc3cd9bb849e08b1b65feb7be1f80329e490dd944c644be1b"
+    },
+    {
+      "job": "yellow_river-full",
+      "seed": 0,
+      "protocol_sha256": "1abdd0511054b5364e6a0c98d87f83e1dafe3e5cbd251175498ed129eb07d038",
+      "result_sha256": "07e5dcfd805f48f4c458bedf53ac76f373c94de0880ad1f736c90fa21f368e9e"
+    },
+    {
+      "job": "yellow_river-full",
+      "seed": 2,
+      "protocol_sha256": "1abdd0511054b5364e6a0c98d87f83e1dafe3e5cbd251175498ed129eb07d038",
+      "result_sha256": "ee8a68e505a038437d0c092a26022cb2b5b7f63731ca04787c7f3d688e34e2c4"
+    },
+    {
+      "job": "yellow_river-full",
+      "seed": 1,
+      "protocol_sha256": "1abdd0511054b5364e6a0c98d87f83e1dafe3e5cbd251175498ed129eb07d038",
+      "result_sha256": "6b481b1d486a89c941f62f7a3fee3a4f56cbfc6530a5ba9ada858b84bd84f113"
+    },
+    {
+      "job": "yellow_river-matched075",
+      "seed": 0,
+      "protocol_sha256": "7acdbd746951f86dfb53f615ed5c36957e2a47f029fafa1ea08e28bb0c9d84d8",
+      "result_sha256": "9b3c19713e3f9c6c7160218d71d0d7f7bb17c7ee8bb3dc385c5f913b1718ea47"
+    },
+    {
+      "job": "yellow_river-matched075",
+      "seed": 2,
+      "protocol_sha256": "7acdbd746951f86dfb53f615ed5c36957e2a47f029fafa1ea08e28bb0c9d84d8",
+      "result_sha256": "6e4352dd240c70fd80ea98d572d7b68640736ebacd4d5e0dfe29e2ea3e3050e6"
+    },
+    {
+      "job": "yellow_river-matched075",
+      "seed": 1,
+      "protocol_sha256": "7acdbd746951f86dfb53f615ed5c36957e2a47f029fafa1ea08e28bb0c9d84d8",
+      "result_sha256": "8fe347072ddcf9ee90bb675857646baba308024367fc074fbeab371b26926837"
+    },
+    {
+      "job": "ottawa-full",
+      "seed": 0,
+      "protocol_sha256": "452e0080095250efe91102edef48c209300632ce6d3b5841fef15302103b8b7d",
+      "result_sha256": "43486e203a3b3cef995e297fd18ec95393a883309df714f3dfd9ab319f5ffb9e"
+    },
+    {
+      "job": "ottawa-full",
+      "seed": 2,
+      "protocol_sha256": "452e0080095250efe91102edef48c209300632ce6d3b5841fef15302103b8b7d",
+      "result_sha256": "1173b70ada1116e232249a69c86db01dab4606d047d43f3f1dd75e0bcea76f98"
+    },
+    {
+      "job": "ottawa-full",
+      "seed": 1,
+      "protocol_sha256": "452e0080095250efe91102edef48c209300632ce6d3b5841fef15302103b8b7d",
+      "result_sha256": "f76d013df940e51a63f4b6a294602ea3ed025870fa3290ae4faeabbebcbf6fbc"
+    },
+    {
+      "job": "farmland-original",
+      "seed": 0,
+      "protocol_sha256": "fe7c0e6fd22c6290ba64efaf81b39666ab3e184cda8c18007bb782634a0a6ff9",
+      "result_sha256": "f420d73bc319c497623929eec0369bd89df79f6636bfc5550416fc8927e6f3b6"
+    },
+    {
+      "job": "farmland-original",
+      "seed": 2,
+      "protocol_sha256": "fe7c0e6fd22c6290ba64efaf81b39666ab3e184cda8c18007bb782634a0a6ff9",
+      "result_sha256": "318c8377470d38ceb9b2edbd0fe4cf15407816c684d19b7f7f3a569476807d12"
+    },
+    {
+      "job": "farmland-original",
+      "seed": 1,
+      "protocol_sha256": "fe7c0e6fd22c6290ba64efaf81b39666ab3e184cda8c18007bb782634a0a6ff9",
+      "result_sha256": "9b60438c953389a36de696e08e1d60bf0e652c2733449c48e3e89e1cfeee3573"
+    },
+    {
+      "job": "ottawa-matched075",
+      "seed": 0,
+      "protocol_sha256": "644f937ddc823a638532bd170457596054546b8a0dc26b8e9331d4dc15578cbc",
+      "result_sha256": "2e769522edcd6d805008a05cf4744c26e06f8c3d2ae35d6723683f0940e21031"
+    },
+    {
+      "job": "ottawa-matched075",
+      "seed": 2,
+      "protocol_sha256": "644f937ddc823a638532bd170457596054546b8a0dc26b8e9331d4dc15578cbc",
+      "result_sha256": "cd2d83370acf4fbae475da5771a47fc1973cb721a68985c646af381517d55f4c"
+    },
+    {
+      "job": "ottawa-matched075",
+      "seed": 1,
+      "protocol_sha256": "644f937ddc823a638532bd170457596054546b8a0dc26b8e9331d4dc15578cbc",
+      "result_sha256": "713ef95fbbc47caa78510d919d81f70e658d4ea5fc92aca54edcf592731b2b37"
+    },
+    {
+      "job": "sample-matched075",
+      "seed": 0,
+      "protocol_sha256": "ffa83416d4e819aaa920047e524485fdab1f7138d54489b1a2e331803fdfb1f2",
+      "result_sha256": "2c1a5f7b95f68f7b8e8b7fe7ec94ed8a5b8c6141de9f6ebbfa4ff3ff8fc596f3"
+    },
+    {
+      "job": "sample-matched075",
+      "seed": 1,
+      "protocol_sha256": "ffa83416d4e819aaa920047e524485fdab1f7138d54489b1a2e331803fdfb1f2",
+      "result_sha256": "d8476af44c6f53cfdcfacaa4d0d6cba89f4dac6deacd96069a1d361ceaeb0e87"
+    },
+    {
+      "job": "sample-matched075",
+      "seed": 2,
+      "protocol_sha256": "ffa83416d4e819aaa920047e524485fdab1f7138d54489b1a2e331803fdfb1f2",
+      "result_sha256": "09590331468bfddc021a167f16da4ff4af36219980a2b72bac3679bf3e825e00"
+    },
+    {
+      "job": "sample-full",
+      "seed": 0,
+      "protocol_sha256": "0f7b5dfa1b351da94ebe7bb49fb8f2ea00174e1ed69047f45fd8dac3a92c1c4e",
+      "result_sha256": "517ae2c55a9ffb24aa9a829d0ca5062025a787544e659ad165bb5d2d92a49ffb"
+    },
+    {
+      "job": "sample-full",
+      "seed": 1,
+      "protocol_sha256": "0f7b5dfa1b351da94ebe7bb49fb8f2ea00174e1ed69047f45fd8dac3a92c1c4e",
+      "result_sha256": "0ba196827f6381075bc2f880440ff03856d97b1399eca301359a55ae13e36785"
+    },
+    {
+      "job": "sample-full",
+      "seed": 2,
+      "protocol_sha256": "0f7b5dfa1b351da94ebe7bb49fb8f2ea00174e1ed69047f45fd8dac3a92c1c4e",
+      "result_sha256": "f75a5fec03bf3b9bc717d49065c6c2634a1ef833cacc3b78ac292d25c64038c8"
+    },
+    {
+      "job": "sample-original",
+      "seed": 0,
+      "protocol_sha256": "d6d808b96afcaa8ecabf8b978e30b1c68b6c8e51c5a20209974fbc435368f603",
+      "result_sha256": "ef4b45a8dc3d56949a3046e9df611a9ce8d2d89ded1bf1ec0ff5addb786d0f28"
+    },
+    {
+      "job": "sample-original",
+      "seed": 1,
+      "protocol_sha256": "d6d808b96afcaa8ecabf8b978e30b1c68b6c8e51c5a20209974fbc435368f603",
+      "result_sha256": "b0a6b999502410c128809b140a77393e0c9b1155c959b881038bf8830f02d1fa"
+    },
+    {
+      "job": "sample-original",
+      "seed": 2,
+      "protocol_sha256": "d6d808b96afcaa8ecabf8b978e30b1c68b6c8e51c5a20209974fbc435368f603",
+      "result_sha256": "2d0db3f98e21113fd6f2ffa0ec87fdda3bde706d3e456dd2267b1b3501fb6c88"
+    },
+    {
+      "job": "sample-resnet50",
+      "seed": 0,
+      "protocol_sha256": "bb565dc8da68067b2dff89a3aa29aa489789a6b99a7db6ed65bd7110edc527be",
+      "result_sha256": "fccbd70b8e8b228dfe6fe37c4b141a0fec09aa5e504c62aa73d6ca67ef0a3e7c"
+    },
+    {
+      "job": "sample-resnet50",
+      "seed": 1,
+      "protocol_sha256": "bb565dc8da68067b2dff89a3aa29aa489789a6b99a7db6ed65bd7110edc527be",
+      "result_sha256": "9c6311ca10c74fe7a8de34dc98aaf50240241399ae48df73bdc4a44a7fcbf06c"
+    },
+    {
+      "job": "sample-resnet50",
+      "seed": 2,
+      "protocol_sha256": "bb565dc8da68067b2dff89a3aa29aa489789a6b99a7db6ed65bd7110edc527be",
+      "result_sha256": "585aea7e1be5599dab6a5f8d43b84bec2799115b24a07783650ceb7f8debddd6"
+    },
+    {
+      "job": "ottawa-author-camixer",
+      "seed": 1,
+      "protocol_sha256": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5",
+      "result_sha256": "8b104201361352dd193b1d6bb9a71312b5d60c0d6d77663b9fce45a1ea884de8"
+    },
+    {
+      "job": "ottawa-author-camixer",
+      "seed": 0,
+      "protocol_sha256": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5",
+      "result_sha256": "491ac5dd07c2f3e349b11922bffc2ac5d995ccd4b3627983736c3320e65a2a1e"
+    },
+    {
+      "job": "ottawa-author-camixer",
+      "seed": 2,
+      "protocol_sha256": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5",
+      "result_sha256": "731f10c38ed37a8df6bc6246abf14581b2d4f8a02ac27d20040535b14bc0fb4a"
+    },
+    {
+      "job": "ottawa-author-wasnet",
+      "seed": 1,
+      "protocol_sha256": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74",
+      "result_sha256": "c944f84a84100c3de345f4b4059988dc45ac398b8513b952b2530624a47f147b"
+    },
+    {
+      "job": "ottawa-author-wasnet",
+      "seed": 0,
+      "protocol_sha256": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74",
+      "result_sha256": "d4083e560e5dca49cc7095783ff13f6d1b1063151904bea46d6fc8378b3f5687"
+    },
+    {
+      "job": "ottawa-author-wasnet",
+      "seed": 2,
+      "protocol_sha256": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74",
+      "result_sha256": "b9c19073307ce78881d3834ed9288767c16ee6e0b25a6cd847e5599ed67e10d2"
+    },
+    {
+      "job": "ottawa-author-lantnet",
+      "seed": 1,
+      "protocol_sha256": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe",
+      "result_sha256": "49907c81bb3b7c076bba89f28f6b4c046a679226f7fe5130e442df6cb955c62e"
+    },
+    {
+      "job": "ottawa-author-lantnet",
+      "seed": 0,
+      "protocol_sha256": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe",
+      "result_sha256": "f3782cf67eab6dd0247a69797ecce01b1ecb8e3feec776eca47f999c29d81593"
+    },
+    {
+      "job": "ottawa-author-lantnet",
+      "seed": 2,
+      "protocol_sha256": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe",
+      "result_sha256": "3cebd8f7529b1e5c77fe9ea6d469a6f687b191d489157f5ba4ed8f80262b9970"
+    },
+    {
+      "job": "ottawa-author-ddnet",
+      "seed": 1,
+      "protocol_sha256": "777013c652ed47960bd1877c4f33e910088a6941e15c08ac69172ee141e5344e",
+      "result_sha256": "210a7dd1081fedfa1180ae4d8c2bb288382c493bc13c43587948a3be8107099a"
+    },
+    {
+      "job": "ottawa-author-ddnet",
+      "seed": 0,
+      "protocol_sha256": "777013c652ed47960bd1877c4f33e910088a6941e15c08ac69172ee141e5344e",
+      "result_sha256": "854bd3ee844be6eb61d66cabbb87e1a6c7cb6737edcda93fcb397a10800fb002"
+    },
+    {
+      "job": "ottawa-author-ddnet",
+      "seed": 2,
+      "protocol_sha256": "777013c652ed47960bd1877c4f33e910088a6941e15c08ac69172ee141e5344e",
+      "result_sha256": "9e5a71965f6b3383f659d8cbaa53a78e0d576cd57cc07fb92020c46031b5bb27"
+    },
+    {
+      "job": "ottawa-author-wbanet",
+      "seed": 1,
+      "protocol_sha256": "4d1bb67e58ffcd025240c1b13e2e472d7fde90cd16f5f2e7e73258b29bc68b89",
+      "result_sha256": "30229e74de4860e8355589474425efb35b2645327af78f15ca91091ec3fbc7e8"
+    },
+    {
+      "job": "ottawa-author-wbanet",
+      "seed": 0,
+      "protocol_sha256": "4d1bb67e58ffcd025240c1b13e2e472d7fde90cd16f5f2e7e73258b29bc68b89",
+      "result_sha256": "23f6aef329afa74d9a4e9e812662ae34a7a8a0705d1559780fff7d97f2968f9f"
+    },
+    {
+      "job": "ottawa-author-wbanet",
+      "seed": 2,
+      "protocol_sha256": "4d1bb67e58ffcd025240c1b13e2e472d7fde90cd16f5f2e7e73258b29bc68b89",
+      "result_sha256": "36db8d2930897ef091d6d43d550d00070426b68bb18ee6e84cb66d15be9249c8"
+    },
+    {
+      "job": "sadd-full",
+      "seed": 0,
+      "protocol_sha256": "1e4582420d0b6a9ca3ad733ace48919d85fedee7d54e0626c8c0ff31b886cae0",
+      "result_sha256": "972524c16812810789a6d35ba58d3081243ab4c08f4c0113ce16adf98b09c410"
+    },
+    {
+      "job": "sadd-matched075",
+      "seed": 0,
+      "protocol_sha256": "9a3e33deb7cb486b35fe7d7bb69919c3bb288f4d1b083385a5915be423aa04d2",
+      "result_sha256": "e297e729bee1d47453a7fce4239af163a28fff66a25e83d72dcea82c82e5d58f"
+    },
+    {
+      "job": "sadd-yolov8n",
+      "seed": 0,
+      "protocol_sha256": "c0325fd1efddd564bad4d70f3be75dd465936e841143937a3cf6d34087d3f539",
+      "result_sha256": "ef2c13019e019bad246eaf6c4cfa8de597b56c57d3535cccadcbeb0fe3283477"
+    },
+    {
+      "job": "sadd-yolov8s",
+      "seed": 0,
+      "protocol_sha256": "2732ddc4569770051d9bfa132831763811c3bbd42aef4c3dd7a5a5c38a0803b4",
+      "result_sha256": "c464526890fa3a558670258b00524bdc98e825b7171e80fcdd4f7ae087fbf036"
+    },
+    {
+      "job": "ssdd-yolov8n",
+      "seed": 2,
+      "protocol_sha256": "1f1e38a6606f2b7000848fe2c8c0eb477a176965ee9ca8f7664b20d57415f13e",
+      "result_sha256": "406d468a6084a4c39464e82490404b2b4c83ccd20c7e1040599895a0086d1471"
+    },
+    {
+      "job": "ssdd-yolov8n",
+      "seed": 1,
+      "protocol_sha256": "1f1e38a6606f2b7000848fe2c8c0eb477a176965ee9ca8f7664b20d57415f13e",
+      "result_sha256": "87ad8798cbe28235a2fb1c13c3131349203adf7ce6274c86043ee098ddf7761f"
+    },
+    {
+      "job": "ssdd-yolov8n",
+      "seed": 0,
+      "protocol_sha256": "1f1e38a6606f2b7000848fe2c8c0eb477a176965ee9ca8f7664b20d57415f13e",
+      "result_sha256": "d21806fc1932535d3c23dfcb874d97a84036100a8fe2b26292a61384eac7be26"
+    },
+    {
+      "job": "ssdd-original",
+      "seed": 1,
+      "protocol_sha256": "7ab36f41d7f04949eb4307ab7952b2f44a4ea71383b20a0d28783bbe26d042c1",
+      "result_sha256": "eb2d84fe7f98fcd9dc23bdb3d77ed5ee592450826993a57acdaa559bdc8d6095"
+    },
+    {
+      "job": "ssdd-original",
+      "seed": 0,
+      "protocol_sha256": "7ab36f41d7f04949eb4307ab7952b2f44a4ea71383b20a0d28783bbe26d042c1",
+      "result_sha256": "0c820e672ca1366f796455989bfbca2bf4d99de5be706693b163a41c748ac73e"
+    },
+    {
+      "job": "ssdd-full",
+      "seed": 1,
+      "protocol_sha256": "2df01c45f680eb7fa70f646c2ee5cc9a7a7ae33c6b44f99f2f4930f2ccc235f8",
+      "result_sha256": "5285fc1e94d8f2c55e9b72b526e65819d81c3c480377371f82f75337f51bd5ec"
+    },
+    {
+      "job": "ssdd-full",
+      "seed": 0,
+      "protocol_sha256": "2df01c45f680eb7fa70f646c2ee5cc9a7a7ae33c6b44f99f2f4930f2ccc235f8",
+      "result_sha256": "d3b23695ef1e54e7c606452418dcfe2fdcbfe7c4e4963214faf203f32c6bc6a3"
+    },
+    {
+      "job": "ssdd-matched075",
+      "seed": 1,
+      "protocol_sha256": "7b653c6ed595d5d218c01a35e78a0a56b014ec9759e8fd3e559224f79803cca6",
+      "result_sha256": "46853033c69d37d5fe4ad05c2e74b57986daeefd3fafbcc0b8006938502af0b0"
+    },
+    {
+      "job": "ssdd-matched075",
+      "seed": 0,
+      "protocol_sha256": "7b653c6ed595d5d218c01a35e78a0a56b014ec9759e8fd3e559224f79803cca6",
+      "result_sha256": "f2277a8ec3eeaa1d7feadff6cf7879a08eb6f0f742b9d4da91554da40964181d"
+    }
+  ],
+  "scope": "Stored live validator: production frozen plan, worker.validate_training, checkpoint hash and listed completion outputs. Later metrics matched at09:20. No experiment was restarted."
+}

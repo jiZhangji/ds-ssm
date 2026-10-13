@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/gpu_idle_scheduler.py", line 332, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/gpu_idle_scheduler.py", line 317, in main
+    state = load_json(state_path) if state_path.exists() else {"jobs": {}, "hosts": {}, "gpus": {}}
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/gpu_idle_scheduler.py", line 31, in load_json
+    expanded = list(job.get("completion", []))
+AttributeError: 'str' object has no attribute 'get'

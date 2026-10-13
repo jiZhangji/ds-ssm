@@ -1,0 +1,269 @@
+\documentclass[UTF8,zihao=-4]{ctexart}
+
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\title{\textbf{面向SAR舰船检测的去斑点选择性状态空间建模方法框架}}
+\author{Method Draft for DS-SSM / IG-DS-SSM / DG-DS-SSM}
+\date{\today}
+
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\xtilde}{\widetilde{\mathbf{x}}}
+\newcommand{\h}{\mathbf{h}}
+\newcommand{\I}{\mathbf{I}}
+\newcommand{\R}{\mathbf{R}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+SAR舰船检测面临显著的斑点噪声、海杂波干扰以及小目标弱纹理表达问题。直接将通用视觉骨干或Mamba类状态空间模块用于SAR图像时，模型可能将噪声扰动与真实舰船结构一并建模，导致状态传播过程中的目标响应被背景噪声污染。为此，本文方法部分建议围绕De-Speckle Selective State Space Model（DS-SSM）展开：首先通过局部背景估计构建去斑点输入表征，再利用能量感知抑制机制约束状态传播；随后引入Perceptual Feature Importance Module（PFIM）估计目标重要性，并将其注入记忆保留、信息写入和动态步长调制过程。作为主线方法的延伸，进一步探索Decoupled-Gated DS-SSM（DG-DS-SSM），将状态更新显式拆分为擦除、写入和步长调制三个分支，以获得更细粒度的SAR目标与噪声状态控制。
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{方法部分整体组织建议}
+
+按照顶会论文的写法，方法部分不宜只罗列模块，而应围绕一个清晰问题展开：\textbf{如何在状态空间建模中抑制SAR斑点噪声，同时保留舰船目标的有效结构响应}。建议方法章节组织如下：
+
+\begin{enumerate}
+  \item \textbf{Overall Architecture}：说明本文方法嵌入Mamba-YOLO检测框架，用DS-SSM替换或增强原有Mamba视觉块。
+  \item \textbf{De-Speckle Selective State Space Model}：介绍DS-SSM核心，包括局部背景估计、输入去偏置、能量感知状态抑制。
+  \item \textbf{Perceptual Feature Importance Guided Modulation}：介绍PFIM如何估计重要性图，并调制状态保留、写入和步长。
+  \item \textbf{Decoupled-Gated Extension}：作为延长线介绍DG-DS-SSM，即erase/write/delta解耦门控。
+  \item \textbf{Training Strategy and Inference}：介绍20 epoch warmup、单卡/分布式训练一致性、SSDD上指标选择。
+\end{enumerate}
+
+\section{Overall Architecture}
+
+给定输入SAR图像$\mathbf{X}\in\mathbb{R}^{H\times W\times C}$，检测骨干首先提取多尺度特征。本文方法将常规视觉状态空间块替换为SAR感知的DS-SSM块。对于第$l$层特征$\mathbf{F}^{l}$，首先将二维特征展平成token序列：
+\begin{equation}
+  \mathbf{x} = \mathrm{Flatten}(\mathbf{F}^{l}) \in \mathbb{R}^{N\times C}, \quad N=H_l W_l .
+\end{equation}
+随后，DS-SSM在token序列上执行去斑点选择性状态建模：
+\begin{equation}
+  \mathbf{y} = \mathrm{DS\mbox{-}SSM}(\mathbf{x}),
+\end{equation}
+并通过残差连接和前馈网络得到输出：
+\begin{equation}
+  \mathbf{z} = \mathbf{x} + \gamma_1 \mathrm{DS\mbox{-}SSM}(\mathrm{LN}(\mathbf{x})), \quad
+  \mathbf{o} = \mathbf{z} + \gamma_2 \mathrm{FFN}(\mathrm{LN}(\mathbf{z})).
+\end{equation}
+
+该设计保持Mamba-YOLO的高效序列建模能力，同时将SAR图像中的斑点噪声抑制机制显式注入状态空间更新过程。
+
+\section{De-Speckle Selective State Space Model}
+
+\subsection{Motivation}
+
+SAR图像中的斑点噪声通常表现为局部高频扰动。若直接将输入特征送入状态空间递推，噪声token会沿序列传播并影响后续状态。DS-SSM的核心思想是：\textbf{在状态更新之前先构建去斑点输入，并在状态传播中根据局部能量抑制不可靠响应}。
+
+\subsection{Local Background Estimation and Input De-biasing}
+
+对输入token序列$\mathbf{x}$，首先通过深度可分离局部平滑估计局部背景：
+\begin{equation}
+  \bar{\mathbf{x}} = \mathrm{DWConv}(\mathbf{x}).
+\end{equation}
+局部残差为：
+\begin{equation}
+  \mathbf{r} = \mathbf{x} - \bar{\mathbf{x}} .
+\end{equation}
+DS-SSM通过可学习系数$\lambda_s$抑制局部斑点残差，得到去斑点输入：
+\begin{equation}
+  \widetilde{\mathbf{x}} = \mathbf{x} - \lambda_s \mathbf{r}.
+\end{equation}
+其中$\lambda_s$控制去斑点强度。较大的$\lambda_s$可以更强地抑制局部扰动，但也可能损失细粒度目标结构，因此实际实现中应对其范围进行约束。
+
+\subsection{Energy-aware State Damping}
+
+SAR背景海杂波区域通常具有不稳定局部能量。本文利用局部背景能量估计token可靠性：
+\begin{equation}
+  e_t = \frac{\|\bar{\mathbf{x}}_t\|_2}{\sqrt{C}} .
+\end{equation}
+随后构建状态保留门：
+\begin{equation}
+  g_t = g_{\min} + (1-g_{\min})\sigma(-\alpha \sigma_n e_t),
+\end{equation}
+其中$g_{\min}$为最小保留率，$\sigma_n$表示噪声强度先验，$\alpha$为可学习调制系数。该门控使高能量不稳定区域的状态传播受到抑制，从而降低斑点噪声沿状态空间递推扩散的风险。
+
+\subsection{Selective State Update}
+
+在去斑点输入$\widetilde{\mathbf{x}}$上生成SSM输入、门控和状态参数：
+\begin{equation}
+  \mathbf{u},\mathbf{z}=\mathrm{Linear}(\widetilde{\mathbf{x}}), \quad
+  \Delta_t=\mathrm{softplus}(\mathrm{Linear}(\mathbf{u}_t)).
+\end{equation}
+状态递推可写为：
+\begin{equation}
+  \mathbf{h}_t = g_t \odot \bar{\mathbf{A}}_t \mathbf{h}_{t-1}
+  + \bar{\mathbf{B}}_t \mathbf{u}_t,
+\end{equation}
+\begin{equation}
+  \mathbf{y}_t = \mathbf{C}_t \mathbf{h}_t + \mathbf{D}\widetilde{\mathbf{x}}_t .
+\end{equation}
+其中$g_t$显式抑制噪声状态传播，$\mathbf{D}\widetilde{\mathbf{x}}_t$保留当前去斑点输入的残差信息。
+
+\section{Perceptual Feature Importance Guided Modulation}
+
+\subsection{PFIM Motivation}
+
+仅依靠局部能量抑制可能误伤舰船目标，因为真实舰船区域同样可能具有高响应。为解决这一问题，本文引入PFIM估计token级重要性，使模型能够区分“目标高响应”和“噪声高响应”。
+
+\subsection{Importance Estimation}
+
+PFIM以去斑点输入$\widetilde{\mathbf{x}}$、局部背景$\bar{\mathbf{x}}$以及局部统计信息为输入，生成重要性图：
+\begin{equation}
+  \mathbf{I} = \mathrm{PFIM}(\widetilde{\mathbf{x}}, \bar{\mathbf{x}}, \mathrm{Std}_{local}(\mathbf{x})),
+\end{equation}
+其中$\mathbf{I}\in[0,1]^{N\times 1}$表示每个token的重要性。局部标准差为PFIM提供纹理和斑点强度线索，有助于识别弱目标和复杂海杂波。
+
+\subsection{Importance-guided Retention, Writing and Transition}
+
+PFIM的重要性图被注入三个状态更新环节。
+
+\paragraph{Memory retention.}
+重要性调制状态保留门：
+\begin{equation}
+  g_t = g_{\min} + (1-g_{\min})
+  \sigma(-\alpha\sigma_n e_t + \beta(I_t-0.5)).
+\end{equation}
+重要目标区域获得更高保留率，噪声区域被更强抑制。
+
+\paragraph{State writing.}
+写入门控制当前输入写入状态的强度：
+\begin{equation}
+  w_t = 1 + \rho \tanh(I_t-0.5),
+\end{equation}
+\begin{equation}
+  \mathbf{u}^{write}_t = w_t \odot \mathbf{u}_t.
+\end{equation}
+
+\paragraph{Dynamic transition.}
+重要性进一步调制状态转移步长：
+\begin{equation}
+  \Delta_t = \mathrm{softplus}(\mathrm{Linear}(\mathbf{u}_t) + \eta I_t).
+\end{equation}
+该设计允许模型在目标区域采用更灵活的动态响应，在噪声区域保持更保守的状态更新。
+
+\section{DG-DS-SSM: Decoupled-Gated Extension}
+
+\subsection{Motivation}
+
+DS-SSM和PFIM已经证明重要性感知状态更新对SSDD有效。为了进一步提升状态控制能力，本文将其作为延长线提出DG-DS-SSM。其核心思想是将原先耦合的状态更新拆分为三个更可解释的分支：erase gate、write gate和delta gate。
+
+\subsection{Decoupled Erase Gate}
+
+Erase gate负责控制旧状态的保留或擦除：
+\begin{equation}
+  e^{erase}_t = -\alpha\sigma_n e_t + \beta_e(I_t-0.5),
+\end{equation}
+\begin{equation}
+  r_t = r_{\min} + (1-r_{\min})\sigma(e^{erase}_t).
+\end{equation}
+该分支用于抑制斑点噪声和海杂波在历史状态中的持续传播。
+
+\subsection{Decoupled Write Gate}
+
+Write gate负责控制当前输入写入状态的强度：
+\begin{equation}
+  q_t = 1 + s_w \tanh(\rho_w(I_t-0.5)),
+\end{equation}
+\begin{equation}
+  \mathbf{u}^{write}_t = q_t \odot \mathbf{u}_t.
+\end{equation}
+当PFIM判断当前token更可能属于舰船目标时，模型允许更多有效结构写入状态。
+
+\subsection{Delta Gate}
+
+Delta gate控制状态转移步长：
+\begin{equation}
+  \Delta_t = \mathrm{clip}\left(
+  \mathrm{softplus}(\mathrm{Linear}(\mathbf{u}_t)+\eta_d I_t)
+  \right).
+\end{equation}
+该分支影响SSM的动态响应速度，使目标区域和背景区域具有不同的状态演化强度。
+
+\subsection{Unified Update}
+
+DG-DS-SSM的递推过程可写为：
+\begin{equation}
+  \mathbf{h}_t = r_t \odot \bar{\mathbf{A}}_t \mathbf{h}_{t-1}
+  + \bar{\mathbf{B}}_t \mathbf{u}^{write}_t,
+\end{equation}
+\begin{equation}
+  \mathbf{y}_t = \mathbf{C}_t \mathbf{h}_t + \mathbf{D}\widetilde{\mathbf{x}}_t.
+\end{equation}
+与DS-SSM相比，DG-DS-SSM将“保留旧状态”“写入新信息”“调整状态步长”显式解耦，因此具有更强的可解释性。
+
+\paragraph{Forward procedure.}
+The DS-SSM / DG-DS-SSM forward pass can be summarized as follows:
+\begin{enumerate}
+  \item Estimate local background $\bar{\mathbf{x}}=\mathrm{DWConv}(\mathbf{x})$.
+  \item Compute residual $\mathbf{r}=\mathbf{x}-\bar{\mathbf{x}}$.
+  \item Construct de-speckled input $\widetilde{\mathbf{x}}=\mathbf{x}-\lambda_s\mathbf{r}$.
+  \item Estimate importance $\mathbf{I}=\mathrm{PFIM}(\widetilde{\mathbf{x}},\bar{\mathbf{x}},H,W)$.
+  \item Compute erase/retain gate $r_t$, write gate $q_t$, and dynamic step $\Delta_t$.
+  \item Run selective state-space scan with gated input and retained state.
+  \item Return output tokens with residual projection.
+\end{enumerate}
+
+\section{Training Strategy}
+
+\subsection{Warmup for Stable Optimization}
+
+由于DS-SSM包含去斑点系数、状态保留门和重要性调制分支，训练早期若所有参数同时更新，容易导致状态递推不稳定。当前工程实现采用20 epoch warmup策略：前20个epoch优先稳定新增模块或冻结部分主干参数，随后解冻全模型进行联合优化。该策略更适合作为训练稳定性设计，而不建议作为论文的核心理论创新。
+
+\subsection{Single-GPU and DDP Consistency}
+
+为了保证实验可复现，normal和DDP仓库应共享相同模型结构，仅训练启动方式不同。单卡实验建议使用：
+\begin{equation}
+  \texttt{CUDA\_VISIBLE\_DEVICES=k, --device 0}.
+\end{equation}
+分布式训练仅作为加速工具，不应改变模型模块定义。
+
+\section{Experimental Positioning on SSDD}
+
+SSDD是SAR舰船检测数据集，目标小且边界受SAR成像机理影响明显。因此，实验报告中建议以Precision、Recall和mAP50作为主要指标，mAP50-95作为辅助指标。当前关键结果可概括如下：
+
+\begin{table}[h]
+\centering
+\caption{Current representative SSDD results.}
+\begin{tabular}{lcccc}
+\toprule
+Method & Precision & Recall & mAP50 & mAP50-95 \\
+\midrule
+PFIM ex27 mainline & 0.9738 & 0.9522 & 0.9870 & 0.7402 \\
+DG-DS-SSM ex34 standard & 0.9700 & 0.9560 & 0.9850 & 0.7350 \\
+DG-DS-SSM ex34 TTA IoU0.55 & 0.9630 & 0.9620 & 0.9870 & 0.7240 \\
+DG-DS-SSM ex32 write & 0.9540 & 0.9580 & 0.9860 & 0.7270 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+这些结果表明，DS-SSM/PFIM仍是当前最稳健的论文主线；DG-DS-SSM作为延长线在Recall和mAP50上具有竞争力，说明解耦门控状态更新能够增强SAR舰船目标检出能力。
+
+\section{Recommended Writing Position}
+
+论文中建议采用如下定位：
+
+\begin{quote}
+本文的核心贡献是提出面向SAR舰船检测的DS-SSM，通过去斑点输入修正、能量感知状态抑制和PFIM重要性引导，将SAR噪声先验注入选择性状态空间建模过程。进一步地，本文探索DG-DS-SSM作为DS-SSM的延伸，通过解耦erase、write和delta门控，使状态更新过程具备更细粒度的可解释调控能力。
+\end{quote}
+
+该写法能够突出DS-SSM作为核心创新，同时合理容纳今天新增的DG-DS-SSM实验，不会因为个别指标未全面超过ex27而削弱论文主线。
+
+\section{Possible Contribution Statements}
+
+\begin{enumerate}
+  \item We propose DS-SSM, a SAR-oriented selective state-space module that suppresses speckle-induced state propagation through de-speckled input modeling and energy-aware damping.
+  \item We introduce PFIM to estimate token-level target importance and inject it into memory retention, state writing and transition-step modulation.
+  \item We further explore DG-DS-SSM, a decoupled-gated extension that explicitly separates erase, write and delta control for more interpretable SAR state updating.
+  \item Extensive SSDD experiments show that the proposed design improves target detection reliability, especially in Recall and mAP50, while maintaining competitive localization performance.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,11 @@
+{
+  "checkpoint": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f1/jobs/ssdd-full/run0/weights/best.pt",
+    "sha256": "fbe84cbec47a720ecb27a958448f572f8bbd873bdcfdeda26472a6f0d71db798"
+  },
+  "finished_utc": "2026-10-12T15:43:29.045462+00:00",
+  "protocol_sha256": "2df01c45f680eb7fa70f646c2ee5cc9a7a7ae33c6b44f99f2f4930f2ccc235f8",
+  "result_sha256": "d3b23695ef1e54e7c606452418dcfe2fdcbfe7c4e4963214faf203f32c6bc6a3",
+  "schema": "rgsp-unified-detection-20261012-v1",
+  "status": "TRAINING_COMPLETE"
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "host_label": "C",
+  "hostname": "a6000-c",
+  "started_at": "2026-10-13T12:21:46.148506+08:00",
+  "source_root": "/home/powerleader/ig-ds-ssm",
+  "mode": "read_only_snapshot",
+  "limitations": [
+    "Not an atomic cross-server snapshot.",
+    "Live files may be prefixes of running logs.",
+    "Model binaries and dataset payloads are inventoried, not uploaded.",
+    "Snapshot existence does not verify experiment completion."
+  ],
+  "gpu": "0, NVIDIA RTX A6000, 17824 MiB, 100 %",
+  "disk": "文件系统        容量  已用  可用 已用% 挂载点\n/dev/nvme0n1p2  1.8T  977G  763G   57% /",
+  "roots": [
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1949_c/audited_rows.json",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/lanes/c_seed0/logs/sar_shipdataset_full_seed0.log",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0shipfull/jobs/sar_ship-full/run0/verified_data_records.json"
+  ],
+  "excluded_dirs": [],
+  "excluded_counts": {},
+  "included_count": 3,
+  "supplement_of": "/home/powerleader/codex_tasks/mamba_github_backup_20261013_v1/snapshot/warnings.json",
+  "finished_at": "2026-10-13T12:21:59.326585+08:00",
+  "included_bytes": 157193101,
+  "model_inventory_count": 0,
+  "model_inventory_bytes": 0,
+  "live_changed_count": 0
+}

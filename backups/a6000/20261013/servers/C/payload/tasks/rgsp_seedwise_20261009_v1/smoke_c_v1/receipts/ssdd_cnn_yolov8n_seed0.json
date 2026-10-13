@@ -1,0 +1,55 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/provenance.json",
+      "sha256": "a679e4e1aad789bb254a9edbf9ea7098661b5ba231f7759fe4609ce6fc8737d6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/train_complete.json",
+      "sha256": "be7efc474289cb03410e264856e4cc577375af2217afa918b8e35c7955a21855"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/eval_test.json",
+      "sha256": "e620efbbaaac4046adfd73d07b795c20e66f41c7106d51aeac05b3f0a5f5138d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/evaluation_complete.json",
+      "sha256": "28a7d5266db6b258fef3bc5f16856fd690d3ef38b5c2840e439cf8594925c73b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/weights/best.pt",
+      "sha256": "ab8efdee3fee1828140c15c15c593396e160fc179573e1edc834f2d995bbc4c3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/weights/raw_fp32_last.pt",
+      "sha256": "a78529723f97950623575913ad59494bd745c0f209bcc8bd786b046832ef9d69"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/controls_by_epoch.jsonl",
+      "sha256": "e3a8ed47aa9faa6c0aa1468834c11fe113ab469ee999d8445adbeaf6b0f3fbbf"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_c_v1/runs/ssdd_cnn_yolov8n_seed0/trial_complete.json",
+      "sha256": "49516d91d7f857906fa4b6a96e522ca35753c2e930ab69fb047093c104baa77e"
+    }
+  ],
+  "details": {
+    "kind": "detection",
+    "overall": {
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "ap75": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "resumed": false,
+    "smoke_only": true
+  },
+  "finished_utc": "2026-10-09T02:59:56.903448+00:00",
+  "plan_sha256": "f5db470e4535f092e01fe64668ffcf423130d712149e89137ff17185910009ab",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "ssdd_cnn_yolov8n_seed0",
+  "trial_sha256": "ad3974abf780bc8e1516774302c9e207a0190cfabb024eb8eba02f7d3b2b2ccc"
+}

@@ -1,0 +1,848 @@
+% Retained numerical records from the latest local two-column ZIP.
+% Not a new benchmark or a claim of primary-source numerical verification.
+\FloatBarrier
+\subsection{图像分类}
+\label{sec:classification_results}
+
+在 SAR-ACD 和 SAMPLE 数据集上评估 RGSP 的图像分类表现，
+并汇总相关方法的文献报告结果。
+采用分类准确率（Accuracy）和宏平均 F1
+（Macro-F1）作为评价指标。
+对于文献中按正确分类样本数占测试样本总数计算的
+总体准确率（Overall Accuracy, OA），
+本文统一记为 Accuracy。
+各表按结果来源与实验设置分组；
+不同类别划分、训练数据比例和初始化设置的结果
+不进行统一排名。
+本项目结果均为单种子记录。
+
+\subsubsection{SAR-ACD}
+\label{sec:sar_acd_results}
+
+表~\ref{tab:sar_acd_comparison}
+列出了 RGSP 与相关方法在 SAR-ACD 上的分类结果，
+比较方法包括经典卷积网络、Transformer
+以及面向 SAR 图像的分类与表征学习方法。
+分类准确率统一记为 Accuracy，
+文献中定义相同的总体准确率 OA 使用相同记法。
+
+RGSP 采用 VMamba-Tiny 预训练权重初始化骨干，
+新增模块预热 50 轮后，
+Accuracy 和 Macro-F1 分别达到
+96.850\% 和 96.830\%。
+对应基线的两项指标分别为
+89.764\% 和 89.585\%。
+由于两种配置的模块预热日程不同，
+该差异反映 RGSP 与相应训练策略的组合表现。
+外部方法采用各自文献中的实验设置，
+其结果作为参考列示。
+
+\Needspace{10\baselineskip}
+\begingroup
+\small
+\setlength{\tabcolsep}{5pt}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{@{}lrr@{}}
+\caption{SAR-ACD 分类结果（\%）。
+外部方法采用文献报告值，
+其数据划分与训练设置未全部统一。
+粗体仅标识本文方法，不表示跨协议最优。}\label{tab:sar_acd_comparison}\\
+\toprule
+Method & Accuracy & Macro-F1 \\
+\midrule
+\endfirsthead
+\multicolumn{3}{c}{表~\thetable（续）}\\
+\toprule
+Method & Accuracy & Macro-F1 \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r}{接下页}\\
+\endfoot
+\bottomrule
+\endlastfoot
+AlexNet$^{a}$            & 91.65 & -- \\
+GoogLeNet$^{a}$          & 93.61 & -- \\
+VGGNet$^{a}$             & 92.30 & -- \\
+ResNet$^{a}$             & 92.79 & -- \\
+ResNet-50$^{b}$          & 84.08 & -- \\
+ResNet-101$^{b}$         & 80.70 & -- \\
+A-ConvNet$^{a}$          & 90.12 & -- \\
+Lm-BN-CNN$^{a}$          & 87.34 & -- \\
+CBAM Net$^{a}$           & 92.66 & -- \\
+VIB Net$^{a}$            & 93.50 & -- \\
+Swin-T$^{b}$             & 85.74 & -- \\
+Swin-B$^{b}$             & 86.24 & -- \\
+ViT$^{b}$                & 93.20 & -- \\
+SUMMIT$^{b}$             & 94.86 & -- \\
+Bottom-Up Scattering Network$^{a}$
+                        & 95.43 & -- \\
+SARMAE (ViT-B)$^{c}$     & 95.06 & -- \\
+SARMAE (ViT-L)$^{c}$     & 95.63 & -- \\
+MDB-DPL$^{d}$           & $98.85 \pm 0.17$ & -- \\
+\midrule
+VMamba-Tiny baseline    & 89.764 & 89.585 \\
+\textbf{RGSP (Ours)}     & 96.850 & 96.830 \\
+\end{longtable}
+\noindent
+\smallskip
+\begin{minipage}{0.98\linewidth}
+\footnotesize
+\textbf{表~\ref{tab:sar_acd_comparison} 注：}
+$^{a}$结果取自 Bottom-Up 论文的 Table 7，
+保留原表中的网络名称，其中 ResNet 的具体版本未在表中注明；
+$^{b}$结果取自 SUMMIT 论文的 Table 5，
+采用其完整训练集设置；
+$^{c}$采用 30\% 标注训练数据；
+$^{d}$采用六类、8:2 划分，报告五次实验的均值与标准差。
+本文采用五类设置，报告单种子结果；
+RGSP 使用额外 50 轮模块预热，基线无该额外日程。
+``--'' 表示未收集到对应的 Macro-F1。
+\end{minipage}
+\endgroup
+\FloatBarrier
+\subsubsection{SAMPLE}
+\label{sec:sample_results}
+
+表~\ref{tab:sample_comparison}
+汇总 SAMPLE 上的分类结果。
+外部方法包括 ResNet-50、A-ConvNet、
+CORAL、DANN、ERM、VREx、HDANet、SSR 和 MLDA。
+这些结果统一取自 MLDA 论文的比较实验，
+采用合成数据训练、实测数据测试的设置。
+其数值表示该论文报告的结果，
+并非本文对上述方法的重新实现。
+
+本项目采用当前闭集分类划分和从头训练设置。
+RGSP 的 Accuracy 和 Macro-F1
+分别为 97.037\% 和 96.441\%，
+对应基线分别为 98.519\% 和 98.454\%。
+因此，在该设置下，
+RGSP 的两项指标分别下降
+1.482 和 2.013 个百分点，
+尚未表现出分类性能增益。
+由于当前项目划分尚未与文献中的
+合成训练、实测测试协议对齐，
+两组结果分别列示，不计算跨组性能增益。
+
+\Needspace{10\baselineskip}
+\begingroup
+\small
+\setlength{\tabcolsep}{5pt}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{@{}lrr@{}}
+\caption{SAMPLE 分类结果（\%）。
+外部结果来自 MLDA 论文
+（Remote Sensing, 2025）的 Table 2，
+采用合成数据训练、实测数据测试。
+本项目结果采用当前闭集划分，为单种子记录。
+粗体仅标识本文方法。}\label{tab:sample_comparison}\\
+\toprule
+Method & Accuracy & Macro-F1 \\
+\midrule
+\endfirsthead
+\multicolumn{3}{c}{表~\thetable（续）}\\
+\toprule
+Method & Accuracy & Macro-F1 \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r}{接下页}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\multicolumn{3}{l}{
+\textit{Literature results: synthetic-to-measured}} \\
+ResNet-50
+& $48.37 \pm 3.73$ & $45.54 \pm 3.75$ \\
+A-ConvNet
+& $52.36 \pm 3.97$ & $48.47 \pm 3.66$ \\
+CORAL
+& $87.76 \pm 2.58$ & $86.92 \pm 2.67$ \\
+DANN
+& $90.42 \pm 2.06$ & $89.87 \pm 2.14$ \\
+ERM
+& $91.78 \pm 1.86$ & $90.97 \pm 1.72$ \\
+VREx
+& $92.64 \pm 2.09$ & $92.67 \pm 1.89$ \\
+HDANet
+& $86.21 \pm 2.61$ & $85.79 \pm 2.47$ \\
+SSR
+& $94.69 \pm 1.19$ & $94.65 \pm 1.21$ \\
+MLDA
+& $96.76 \pm 1.34$ & $96.70 \pm 1.29$ \\
+
+\midrule
+\multicolumn{3}{l}{
+\textit{Our experiments: current closed-set split}} \\
+Classification baseline
+& 98.519 & 98.454 \\
+\textbf{RGSP (Ours)}
+& 97.037 & 96.441 \\
+\end{longtable}
+\endgroup
+\FloatBarrier
+\FloatBarrier
+\subsection{目标检测}
+\label{sec:detection_results}
+
+在 SSDD、SAR-ShipDataset、SADD 和 AIR-SARShip-2.0
+四个数据集上评估 RGSP 的目标检测性能，
+并与通用目标检测器及 SAR 专用检测方法进行比较。
+评价指标包括 AP$_{50}$、AP$_{75}$ 和 AP$_{50:95}$。
+外部方法采用文献报告结果，
+本文方法采用已有实验记录（非本版新 SADD 三种子结果）；
+不同数据划分、初始化方式和训练预算的差异在表下注明。
+所有结果均以百分数表示，
+``--'' 表示未报告或尚未确认的指标。
+
+\subsubsection{SSDD}
+\label{sec:ssdd_results}
+
+表~\ref{tab:ssdd_comparison}
+汇总 SSDD 上的检测结果。
+RGSP 在已有的 300 轮训练配置下，
+AP$_{50}$、AP$_{75}$ 和 AP$_{50:95}$
+分别达到 $98.549\%$、$85.552\%$ 和 $72.261\%$。
+该结果来自官方测试集评估，
+与主文中的历史三种子观察分别报告。
+
+\Needspace{10\baselineskip}
+\begingroup
+\small
+\setlength{\tabcolsep}{5pt}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{@{}lrrr@{}}
+\caption{SSDD 目标检测结果（\%）。
+外部方法为文献报告值；
+本文列示已有官方测试集结果。
+粗体方法名仅标识本文方法。}\label{tab:ssdd_comparison}\\
+\toprule
+Method & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+\endfirsthead
+\multicolumn{4}{c}{表~\thetable（续）}\\
+\toprule
+Method & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r}{接下页}\\
+\endfoot
+\bottomrule
+\endlastfoot
+SAR-ShipNet       & 89.10 & --    & --    \\
+DCTC              & 93.90 & --    & --    \\
+GEFCSI-Net        & 97.10 & --    & --    \\
+SARNas            & 98.50 & --    & --    \\
+MGA-Net           & 98.60 & --    & --    \\
+Faster R-CNN      & 96.40 & 86.10 & 71.30 \\
+Cascade R-CNN     & 96.40 & 87.40 & 72.70 \\
+RetinaNet         & 95.00 & --    & --    \\
+CenterNet         & 95.10 & --    & --    \\
+FCOS              & 95.30 & --    & --    \\
+ConsistencyDet    & 95.60 & --    & --    \\
+YOLOv3            & 96.20 & --    & --    \\
+YOLOX             & 96.20 & --    & --    \\
+DiffusionDet      & 96.30 & --    & --    \\
+YOLOv5n           & 98.00 & --    & --    \\
+YOLOv5s           & 98.30 & --    & --    \\
+YOLOv8n           & 97.10 & 91.40 & 74.00 \\
+YOLOv9-tiny       & 97.30 & 88.90 & 72.20 \\
+YOLOv10n          & 97.30 & 88.50 & 72.80 \\
+DiffDet4SAR       & 96.90 & --    & --    \\
+YOLO-SRBD         & 98.30 & --    & 74.50 \\
+LRTransDet        & 97.80 & --    & --    \\
+SFS-CNet          & 99.60 & --    & --    \\
+MaDiNet           & 99.00 & --    & --    \\
+CCAI-YOLO         & 98.80 & --    & 74.90 \\
+ARGO-Net          & 99.50 & --    & 79.30 \\
+\midrule
+Mamba-YOLO-T      & 98.605 & 83.613 & 70.348 \\
+\textbf{RGSP (Ours)}
+                  & 98.549 & 85.552 & 72.261 \\
+\end{longtable}
+\noindent
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+\textbf{表~\ref{tab:ssdd_comparison} 注：}
+外部结果来自不同文献的比较记录。
+对于存在多个报告值的方法，
+本表保留原资料中同时提供更多 AP 指标的条目，
+不将不同来源的指标拼接为同一行。
+Mamba-YOLO-T 为历史官方测试集记录，
+RGSP 为 300 轮训练配置；
+二者的训练预算与初始化尚未完全对齐，
+因此不据此计算受控模块增益。
+\end{minipage}
+\endgroup
+\FloatBarrier
+
+
+\subsubsection{SAR-ShipDataset}
+\label{sec:sar_ship_results}
+
+表~\ref{tab:sar_ship_comparison}
+列出 SAR-ShipDataset 上的检测结果。
+已有 RGSP 配置的 AP$_{50:95}$ 为 $57.818\%$。
+采用较大模型规模时，
+RGSP-S 的 AP$_{50}$ 为 $95.609\%$，
+但其 AP$_{50:95}$ 为 $53.177\%$。
+两组结果分别保留完整指标，
+不将不同配置的最优指标合并为同一结果。
+
+\Needspace{10\baselineskip}
+\begingroup
+\small
+\setlength{\tabcolsep}{5pt}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{@{}lrrr@{}}
+\caption{SAR-ShipDataset 目标检测结果（\%）。
+本文同时列出 RGSP 与 RGSP-S 的已有结果，
+各行对应一个独立配置。}\label{tab:sar_ship_comparison}\\
+\toprule
+Method & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+\endfirsthead
+\multicolumn{4}{c}{表~\thetable（续）}\\
+\toprule
+Method & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r}{接下页}\\
+\endfoot
+\bottomrule
+\endlastfoot
+OE-YOLO           & 86.00 & -- & --    \\
+SAR-ShipNet       & 90.20 & -- & --    \\
+ShipDetector      & 91.20 & -- & --    \\
+Improved FCOS     & 94.10 & -- & --    \\
+GEFCSI-Net        & 94.30 & -- & --    \\
+CMFT              & 94.50 & -- & --    \\
+YOLOv4            & 77.90 & -- & --    \\
+YOLOv7            & 86.10 & -- & --    \\
+YOLOv3            & 88.80 & -- & --    \\
+YOLOv5n           & 89.30 & -- & --    \\
+CenterNet         & 92.10 & -- & --    \\
+FCOS              & 92.80 & -- & --    \\
+Cascade R-CNN     & 92.70 & -- & --    \\
+Faster R-CNN      & 93.10 & -- & --    \\
+RetinaNet         & 93.40 & -- & --    \\
+ConsistencyDet    & 94.20 & -- & --    \\
+DiffusionDet      & 95.00 & -- & --    \\
+LRTransDet        & 95.10 & -- & --    \\
+SRDet             & 95.10 & -- & 65.90 \\
+DiffDet4SAR       & 95.10 & -- & --    \\
+YOLOSAR-Lite      & 96.06 & -- & --    \\
+MaDiNet           & 97.50 & -- & --    \\
+\midrule
+Mamba-YOLO-T      & 94.616 & -- & 49.568 \\
+\textbf{RGSP (Ours)}
+                  & 94.844 & -- & 57.818 \\
+\textbf{RGSP-S (Ours)}
+                  & 95.609 & -- & 53.177 \\
+\end{longtable}
+\noindent
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+\textbf{表~\ref{tab:sar_ship_comparison} 注：}
+本文结果为历史单次实验记录，
+初始化、模型规模及训练预算未全部统一。
+RGSP-S 采用标准推理，不包含测试时增强。
+上述结果用于展示已有配置的性能，
+不作为严格受控消融结论，
+也不跨协议标注最优值。
+\end{minipage}
+\endgroup
+\FloatBarrier
+
+
+\subsubsection{SADD}
+\label{sec:sadd_results}
+
+表~\ref{tab:sadd_comparison}
+汇总 SADD 上的检测结果。
+在已有从头训练实验中，
+RGSP 的 AP$_{50:95}$ 为 $54.597\%$，
+低于对应基线的 $55.018\%$，
+当前结果未显示该设置下的性能增益。
+此外，表中保留部分权重迁移配置的历史结果，
+用于区分初始化方式带来的实验差异。
+
+\Needspace{10\baselineskip}
+\begingroup
+\small
+\setlength{\tabcolsep}{5pt}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{@{}lrrr@{}}
+\caption{SADD 目标检测结果（\%）。
+本文从头训练与部分权重迁移配置分别列示。}\label{tab:sadd_comparison}\\
+\toprule
+Method & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+\endfirsthead
+\multicolumn{4}{c}{表~\thetable（续）}\\
+\toprule
+Method & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r}{接下页}\\
+\endfoot
+\bottomrule
+\endlastfoot
+YOLOv4            & 87.80 & --    & 54.00 \\
+YOLOR-P6          & 89.20 & --    & 53.50 \\
+YOLOv7            & 89.80 & --    & 55.20 \\
+ResNet50-CSP      & 91.50 & --    & 55.90 \\
+ResNeXt50-CSP     & 91.30 & --    & 55.40 \\
+YOLO-SAD          & 91.90 & --    & 57.10 \\
+ViTDet            & 93.00 & 51.00 & 50.20 \\
+SARATR-X          & 94.30 & 50.70 & 50.40 \\
+SARDet-MIM        & 95.90 & 59.60 & 55.30 \\
+\midrule
+Mamba-YOLO-T (scratch)
+                  & 98.335 & 57.030 & 55.018 \\
+\textbf{RGSP (scratch)}
+                  & 97.760 & 56.985 & 54.597 \\
+\textbf{RGSP (partial transfer)}$^{\dagger}$
+                  & 98.297 & 82.999 & 72.113 \\
+\end{longtable}
+\noindent
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+\textbf{表~\ref{tab:sadd_comparison} 注：}
+Scratch 表示从头训练。
+$^{\dagger}$部分权重迁移结果来自历史 300 轮记录，
+其权重来源与训练协议仍需完成审计，
+暂作为候选结果保留，
+不用于宣称相对外部方法的性能优势。
+外部方法的预训练与数据划分设置并不完全一致。
+\end{minipage}
+\endgroup
+\FloatBarrier
+
+
+\subsubsection{AIR-SARShip-2.0}
+\label{sec:air_sarship_results}
+
+表~\ref{tab:air_sarship_comparison}
+列出 AIR-SARShip-2.0 上的已有检测结果。
+除文献报告值外，
+本文分别保留两组已经完成的实验：
+第一组采用 640 输入的历史切片配置；
+第二组采用 416 输入和 240 轮训练配置。
+两组实验中的 RGSP 表现方向不同，
+说明当前结论需要结合具体训练协议理解。
+
+\Needspace{10\baselineskip}
+\begingroup
+\small
+\setlength{\tabcolsep}{5pt}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{@{}lrrr@{}}
+\caption{AIR-SARShip-2.0 目标检测结果（\%）。
+本文两组已完成实验通过上标区分，
+新增 640 输入、300 轮实验的结果尚未纳入。}\label{tab:air_sarship_comparison}\\
+\toprule
+Method & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+\endfirsthead
+\multicolumn{4}{c}{表~\thetable（续）}\\
+\toprule
+Method & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r}{接下页}\\
+\endfoot
+\bottomrule
+\endlastfoot
+ImageNet-SSD      & 83.00 & 46.22 & 46.49 \\
+OSD-SSD           & 84.70 & 56.09 & 50.96 \\
+OSM-SSD           & 84.49 & 55.09 & 51.14 \\
+WBF-DM            & 85.43 & 61.56 & 54.78 \\
+FMP-Net           & 83.00 & 51.90 & 48.50 \\
+\midrule
+Mamba-YOLO-T$^{a}$
+                  & 47.590 & 7.463  & 17.375 \\
+\textbf{RGSP (Ours)}$^{a}$
+                  & 51.559 & 9.087  & 19.291 \\
+Mamba-YOLO-T$^{b}$
+                  & 47.156 & 19.403 & 22.947 \\
+\textbf{RGSP (Ours)}$^{b}$
+                  & 36.423 & 15.284 & 18.172 \\
+\end{longtable}
+\noindent
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+\textbf{表~\ref{tab:air_sarship_comparison} 注：}
+$^{a}$历史 640 输入配置：
+原图按 210/45/45 划分训练、验证与测试集，
+采用 640 像素切片、512 像素步长，
+从头训练并依据验证集选择权重。
+$^{b}$416 输入配置：
+原图按 210/90 划分训练与测试集，
+采用 512 像素切片、256 像素步长，
+从头训练 240 轮，
+使用最后一轮权重进行测试。
+两组配置均保留空背景切片。
+外部文献与本文的完整协议尚未对齐，
+不进行跨协议最优值标注。
+\end{minipage}
+\endgroup
+\FloatBarrier
+
+在配置 $a$ 中，
+RGSP 相对对应基线的 AP$_{50:95}$
+提高 $1.916$ 个百分点；
+在配置 $b$ 中则降低 $4.775$ 个百分点。
+因此，已有实验尚不支持
+RGSP 在该数据集上具有稳定的性能增益。
+\FloatBarrier
+\subsection{语义分割}
+\label{sec:segmentation_results}
+
+在 OpenEarthMap-SAR 数据集上评估 RGSP 的语义分割性能。
+本文以 VMamba-Tiny 为骨干网络，
+采用 UPerNet-lite 解码器，
+比较原始网络与接入 RGSP 后的分割结果。
+评价指标包括平均交并比（mIoU）、
+频率加权交并比（FWIoU）
+和总体准确率（OA）。
+
+表~\ref{tab:openearthmap_sar_comparison}
+汇总外部方法及本文配置的结果。
+外部比较包括 VMamba、U-Net + EfficientNet-B4
+和 SegFormer，
+其数值采用 OpenEarthMap-SAR 基准论文报告的
+SAR 单模态、P+R5 设置，
+即使用伪标签并加入每个区域 5 张真实标注图像。
+本文分别列出早期批次和有效批量为 64 的配对实验，
+各批次均保留对应的基础网络结果。
+
+\Needspace{10\baselineskip}
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{longtable}{@{}llrrr@{}}
+\caption{OpenEarthMap-SAR 语义分割结果（\%）。
+方法后注明原方法的发表出处与年份；
+外部数值来自 OpenEarthMap-SAR 基准论文。
+粗体仅标识本文方法，不表示最优结果。}\label{tab:openearthmap_sar_comparison}\\
+\toprule
+Method & Setting & mIoU & FWIoU & OA \\
+\midrule
+\endfirsthead
+\multicolumn{5}{c}{表~\thetable（续）}\\
+\toprule
+Method & Setting & mIoU & FWIoU & OA \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r}{接下页}\\
+\endfoot
+\bottomrule
+\endlastfoot
+VMamba (NeurIPS 2024)
+& SAR, P+R5
+& 35.08 & -- & -- \\
+
+U-Net + EfficientNet-B4 (Benchmark 2025)
+& SAR, P+R5
+& 36.84 & -- & -- \\
+
+SegFormer (NeurIPS 2021)
+& SAR, P+R5
+& 37.23 & -- & -- \\
+
+\midrule
+VMamba-Tiny + UPerNet-lite
+& Configuration A
+& 36.401 & 37.075 & 53.553 \\
+
+\textbf{VMamba-Tiny + UPerNet-lite + RGSP}
+& Configuration A
+& 36.532 & 36.470 & 52.683 \\
+
+VMamba-Tiny + UPerNet-lite
+& Configuration B
+& 36.551 & 36.120 & 52.316 \\
+
+\textbf{VMamba-Tiny + UPerNet-lite + RGSP}
+& Configuration B
+& 35.898 & 35.220 & 51.764 \\
+\end{longtable}
+\noindent
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+\textbf{表~\ref{tab:openearthmap_sar_comparison} 注：}
+Configuration A 为已有早期配对实验，
+RGSP 未采用额外模块预热，
+并依据验证集 mIoU 选择权重。
+Configuration B 为有效批量 64 的配对实验，
+采用单次批量 32、梯度累积 2 次，
+同样不采用额外模块预热。
+本文结果为单种子记录。
+外部方法与本文配置的标注设置及数据划分
+尚未完成逐项对齐，因此不进行跨协议最优值标注。
+``--'' 表示未报告。
+\end{minipage}
+\endgroup
+\FloatBarrier
+
+在配置 A 中，
+RGSP 的 mIoU 从 $36.401\%$ 提高至 $36.532\%$，
+增加 $0.131$ 个百分点，
+但 FWIoU 和 OA 分别下降
+$0.605$ 和 $0.870$ 个百分点。
+在配置 B 中，
+RGSP 的 mIoU 为 $35.898\%$，
+相较对应基线下降 $0.653$ 个百分点，
+FWIoU 和 OA 也有所下降。
+因此，现有分割实验仅在早期配置的 mIoU 指标上
+观察到小幅改善，
+尚未显示跨配置一致的性能增益。
+\FloatBarrier
+\subsection{变化检测}
+\label{sec:change_detection_results}
+
+在 Ottawa 和 Yellow River 数据集上评估 RGSP
+在 SAR 图像变化检测中的表现。
+比较方法包括 DDNet、LANTNet、CAMixer、
+WBANet、MDDNet 和 SARCDNet。
+外部方法的 F1 数值取自 SARCDNet 论文的比较表，
+方法名称后标注其发表来源和年份。
+本文实验报告 F1、IoU、总体准确率（OA）、
+Precision 和 Recall。
+
+为考察不同配置下的表现，
+分别列出批大小对照和早期状态维数对照。
+同一重跑批次内，RGSP 与对应批大小的基线进行比较；
+早期归档结果单独标注。
+外部方法与本文实验的训练和评估协议尚未完全对齐，
+因此文献结果用于参考，不据此作同协议性能排名。
+
+\subsubsection{Ottawa}
+\label{sec:ottawa_results}
+
+表~\ref{tab:ottawa_comparison}
+列出 Ottawa 上的变化检测结果。
+在批大小分别为 16、32、64 和 96 的重跑实验中，
+RGSP 的 F1 分别为
+92.249\%、91.827\%、91.981\% 和 92.039\%，
+相较各自基线分别提高
+0.158、0.713、0.897 和 0.630 个百分点。
+其中，BS16 配置的 Recall
+由 94.000\% 提高至 96.003\%，
+Precision 则由 90.259\% 降至 88.777\%。
+
+早期归档批次呈现不同趋势：
+状态维数为 32 和 16 的 RGSP 配置
+均低于该批次基线。
+因此，现有结果表明 RGSP 在重跑批次中获得小幅改善，
+但这一趋势尚未在所有配置中保持一致。
+
+\Needspace{10\baselineskip}
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{xltabular}{\linewidth}{@{}Xlrrrrr@{}}
+\caption{Ottawa 变化检测结果（\%）。
+所有指标均为越高越好。
+粗体仅标识本文方法，不表示最优结果。}\label{tab:ottawa_comparison}\\
+\toprule
+Method & Setting & F1 & IoU & OA & Precision & Recall \\
+\midrule
+\endfirsthead
+\multicolumn{7}{c}{表~\thetable（续）}\\
+\toprule
+Method & Setting & F1 & IoU & OA & Precision & Recall \\
+\midrule
+\endhead
+\midrule
+\multicolumn{7}{r}{接下页}\\
+\endfoot
+\bottomrule
+\endlastfoot
+DDNet (GRSL, 2021 online)
+& Literature & 94.1 & -- & -- & -- & -- \\
+LANTNet (GRSL, 2022)
+& Literature & 94.5 & -- & -- & -- & -- \\
+CAMixer (GRSL, 2023)
+& Literature & 93.9 & -- & -- & -- & -- \\
+WBANet (GRSL, 2024)
+& Literature & 94.2 & -- & -- & -- & -- \\
+MDDNet (ICASSP, 2025)
+& Literature & 94.5 & -- & -- & -- & -- \\
+SARCDNet (Scientific Reports, 2026)
+& Literature & 94.9 & -- & -- & -- & -- \\
+\midrule
+Baseline
+& A: BS16, d32
+& 92.758 & 86.495 & 98.491 & 90.990 & 94.597 \\
+\textbf{Baseline + RGSP}
+& A: BS16, d32
+& 92.110 & 85.374 & 98.350 & 90.061 & 94.254 \\
+\textbf{Baseline + RGSP}
+& A: BS16, d16
+& 92.173 & 85.483 & 98.346 & 89.238 & 95.308 \\
+\midrule
+Baseline
+& B: BS16
+& 92.091 & 85.342 & 98.351 & 90.259 & 94.000 \\
+\textbf{Baseline + RGSP}
+& B: BS16, d16
+& 92.249 & 85.612 & 98.352 & 88.777 & 96.003 \\
+Baseline
+& B: BS32
+& 91.114 & 83.678 & 98.102 & 87.319 & 95.254 \\
+\textbf{Baseline + RGSP}
+& B: BS32, d16
+& 91.827 & 84.889 & 98.272 & 88.818 & 95.047 \\
+Baseline
+& B: BS64
+& 91.084 & 83.628 & 98.096 & 87.323 & 95.184 \\
+\textbf{Baseline + RGSP}
+& B: BS64, d16
+& 91.981 & 85.152 & 98.320 & 89.764 & 94.310 \\
+Baseline
+& B: BS96
+& 91.409 & 84.177 & 98.173 & 87.953 & 95.147 \\
+\textbf{Baseline + RGSP}
+& B: BS96, d16
+& 92.039 & 85.251 & 98.333 & 89.841 & 94.346 \\
+\end{xltabular}
+\noindent
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+\textbf{表~\ref{tab:ottawa_comparison} 注：}
+A 表示早期归档批次，B 表示批大小重跑批次；
+BS 为 batch size，d 为状态维数。
+重跑批次结果为 seed 0 的单次记录。
+GRSL 指 IEEE Geoscience and Remote Sensing Letters。
+外部 F1 数值来自 SARCDNet 的 Table 2\cite{sarcdnet2026}；
+``--'' 表示当前汇总中未收录该指标。
+不同批次分别比较，不跨批次计算模块增益。
+\end{minipage}
+\endgroup
+\FloatBarrier
+
+\subsubsection{Yellow River}
+\label{sec:yellow_river_results}
+
+表~\ref{tab:yellow_river_comparison}
+列出 Yellow River 上的变化检测结果。
+早期归档批次中，
+状态维数为 32 的 RGSP 配置取得
+87.689\% 的 F1，
+对应基线为 88.079\%，
+下降 0.390 个百分点；
+状态维数为 16 时，F1 为 86.308\%。
+
+在 BS16、BS32、BS64 和 BS96 的重跑实验中，
+RGSP 的 F1 相较对应基线分别下降
+1.477、2.719、3.642 和 3.543 个百分点。
+其中 BS16、BS96 的 Precision 提高；BS32、BS64 分别由 91.293\%、91.834\% 降至 90.000\%、91.671\%，
+但 Recall 均有所下降，
+最终 F1 未获得改善。
+因此，当前实验未显示 RGSP 在
+Yellow River 上的性能增益。
+
+\Needspace{10\baselineskip}
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\LTcapwidth}{\linewidth}
+\begin{xltabular}{\linewidth}{@{}Xlrrrrr@{}}
+\caption{Yellow River 变化检测结果（\%）。
+所有指标均为越高越好。
+粗体仅标识本文方法，不表示最优结果。}\label{tab:yellow_river_comparison}\\
+\toprule
+Method & Setting & F1 & IoU & OA & Precision & Recall \\
+\midrule
+\endfirsthead
+\multicolumn{7}{c}{表~\thetable（续）}\\
+\toprule
+Method & Setting & F1 & IoU & OA & Precision & Recall \\
+\midrule
+\endhead
+\midrule
+\multicolumn{7}{r}{接下页}\\
+\endfoot
+\bottomrule
+\endlastfoot
+DDNet (GRSL, 2021 online)
+& Literature & 87.3 & -- & -- & -- & -- \\
+LANTNet (GRSL, 2022)
+& Literature & 85.8 & -- & -- & -- & -- \\
+CAMixer (GRSL, 2023)
+& Literature & 85.2 & -- & -- & -- & -- \\
+WBANet (GRSL, 2024)
+& Literature & 87.6 & -- & -- & -- & -- \\
+MDDNet (ICASSP, 2025)
+& Literature & 85.8 & -- & -- & -- & -- \\
+SARCDNet (Scientific Reports, 2026)
+& Literature & 90.0 & -- & -- & -- & -- \\
+\midrule
+Baseline
+& A: BS16, d32
+& 88.079 & 78.697 & 97.758 & 90.666 & 85.635 \\
+\textbf{Baseline + RGSP}
+& A: BS16, d32
+& 87.689 & 78.077 & 97.683 & 90.227 & 85.290 \\
+\textbf{Baseline + RGSP}
+& A: BS16, d16
+& 86.308 & 75.914 & 97.478 & 90.885 & 82.170 \\
+\midrule
+Baseline
+& B: BS16
+& 88.368 & 79.160 & 97.817 & 91.205 & 85.702 \\
+\textbf{Baseline + RGSP}
+& B: BS16, d16
+& 86.891 & 76.820 & 97.584 & 91.422 & 82.787 \\
+Baseline
+& B: BS32
+& 86.273 & 75.859 & 97.483 & 91.293 & 81.776 \\
+\textbf{Baseline + RGSP}
+& B: BS32, d16
+& 83.554 & 71.753 & 97.031 & 90.000 & 77.971 \\
+Baseline
+& B: BS64
+& 86.968 & 76.941 & 97.606 & 91.834 & 82.591 \\
+\textbf{Baseline + RGSP}
+& B: BS64, d16
+& 83.326 & 71.419 & 97.043 & 91.671 & 76.374 \\
+Baseline
+& B: BS96
+& 83.484 & 71.650 & 97.002 & 89.377 & 78.320 \\
+\textbf{Baseline + RGSP}
+& B: BS96, d16
+& 79.941 & 66.585 & 96.546 & 91.218 & 71.146 \\
+\end{xltabular}
+\noindent
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+\textbf{表~\ref{tab:yellow_river_comparison} 注：}
+A 表示早期归档批次，B 表示批大小重跑批次；
+BS 为 batch size，d 为状态维数。
+重跑批次结果为 seed 0 的单次记录。
+外部 F1 数值来自 SARCDNet 的 Table 2\cite{sarcdnet2026}；
+``--'' 表示当前汇总中未收录该指标。
+文献结果与本文实验的协议尚未完全对齐，
+不据此作同协议性能排名。
+\end{minipage}
+\endgroup
+\FloatBarrier

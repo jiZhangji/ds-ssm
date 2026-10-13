@@ -1,0 +1,41 @@
+{
+  "continuous_epochs_verified": 200,
+  "data_manifest_sha256": "23077fb38483e161a3b7675b1d0629b19cbe334482588a0bdebf7eba88372e10",
+  "epoch_audit": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/matched_scale075/controls_by_epoch.jsonl",
+    "sha256": "a1062d4be8155bf99d95580d728280a372735d541cc5586202e2bdc258f74326"
+  },
+  "limitations": [
+    "Historical continuous seeded-scratch trial, not rerun under the new launcher.",
+    "Same-shape RGSP controls share initialized tensors; different architecture/state/position do not guarantee tensor-matched initialization.",
+    "Dataset remains exact-content-cleaned image split, not a verified unseen-scene split.",
+    "Legacy EMA/FP16 checkpoint storage and test metric protocol retained."
+  ],
+  "origin_run": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/matched_scale075",
+  "protocol_compatible": true,
+  "runtime_audit": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/matched_scale075/runtime_audit.json",
+    "sha256": "9a0cea1f4328018501be3f4d050964f54efb6fa711d9b7a7b0b0035b25c80f65"
+  },
+  "seed": 1,
+  "source_code_files_verified": 251,
+  "status": "verified",
+  "training_args_verified": {
+    "amp": false,
+    "batch": 16,
+    "cos_lr": false,
+    "epochs": 200,
+    "imgsz": 640,
+    "lr0": 0.0002,
+    "lrf": 0.01,
+    "module_warmup_epochs": 0,
+    "nbs": 64,
+    "optimizer": "AdamW",
+    "patience": 40,
+    "pretrained": false,
+    "seed": 1,
+    "warmup_epochs": 3.0,
+    "weight_decay": 0.0005
+  },
+  "trial_id": "sadd_matched_scale075_seed1"
+}

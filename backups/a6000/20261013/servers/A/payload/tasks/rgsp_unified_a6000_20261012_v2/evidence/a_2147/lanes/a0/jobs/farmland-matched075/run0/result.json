@@ -1,0 +1,1062 @@
+{
+  "best_epoch": 15,
+  "best_validation_score": 0.8987654320987654,
+  "checkpoint": {
+    "path": "best.pt",
+    "sha256": "4f966b14b55bf4892bad1fcebf2dd5eec091fbc90080cefb39edcadcf6697fdc"
+  },
+  "complexity": {
+    "batch": 1,
+    "complete_operation_coverage": false,
+    "covered_flops": 3569327200.0,
+    "covered_operation_profile": {
+      "batch": 1,
+      "coverage": {
+        "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+        "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+        "exhaustive": false,
+        "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+        "not_included": [
+          "Scan exponentials and softplus special functions; symbolic counts are separate.",
+          "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+          "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+          "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+        ],
+        "parameter_sharing": "Registered shared parameters counted once; repeated module forwards counted per actual execution.",
+        "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+        "scope": "Full unfused registered model; eval, batch=1, FP32, no TF32, no task postprocessing/NMS.",
+        "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+        "version": "rgsp-covered-operations-v1"
+      },
+      "covered_flops_g": 3.5693272,
+      "cross_merge_add_flops": 1658880,
+      "cross_merge_calls": [
+        {
+          "flops": 442368,
+          "module": "backbone.p2.op",
+          "shape": [
+            1,
+            4,
+            64,
+            48,
+            48
+          ]
+        },
+        {
+          "flops": 110592,
+          "module": "backbone.p4.0.op",
+          "shape": [
+            1,
+            4,
+            256,
+            12,
+            12
+          ]
+        },
+        {
+          "flops": 110592,
+          "module": "backbone.p4.1.op",
+          "shape": [
+            1,
+            4,
+            256,
+            12,
+            12
+          ]
+        },
+        {
+          "flops": 110592,
+          "module": "backbone.p4.2.op",
+          "shape": [
+            1,
+            4,
+            256,
+            12,
+            12
+          ]
+        },
+        {
+          "flops": 55296,
+          "module": "backbone.p5.0.op",
+          "shape": [
+            1,
+            4,
+            512,
+            6,
+            6
+          ]
+        },
+        {
+          "flops": 442368,
+          "module": "backbone.p2.op",
+          "shape": [
+            1,
+            4,
+            64,
+            48,
+            48
+          ]
+        },
+        {
+          "flops": 110592,
+          "module": "backbone.p4.0.op",
+          "shape": [
+            1,
+            4,
+            256,
+            12,
+            12
+          ]
+        },
+        {
+          "flops": 110592,
+          "module": "backbone.p4.1.op",
+          "shape": [
+            1,
+            4,
+            256,
+            12,
+            12
+          ]
+        },
+        {
+          "flops": 110592,
+          "module": "backbone.p4.2.op",
+          "shape": [
+            1,
+            4,
+            256,
+            12,
+            12
+          ]
+        },
+        {
+          "flops": 55296,
+          "module": "backbone.p5.0.op",
+          "shape": [
+            1,
+            4,
+            512,
+            6,
+            6
+          ]
+        }
+      ],
+      "device": "cuda:0",
+      "einsum_calls": [
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "flops": 40108032,
+          "module": "backbone.p2.op",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              2304
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ]
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "flops": 2359296,
+          "module": "backbone.p2.op",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              2304
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ]
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "flops": 11796480,
+          "module": "backbone.p4.0.op",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ]
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "flops": 2359296,
+          "module": "backbone.p4.0.op",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ]
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "flops": 11796480,
+          "module": "backbone.p4.1.op",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ]
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "flops": 2359296,
+          "module": "backbone.p4.1.op",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ]
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "flops": 11796480,
+          "module": "backbone.p4.2.op",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ]
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "flops": 2359296,
+          "module": "backbone.p4.2.op",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ]
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "flops": 7077888,
+          "module": "backbone.p5.0.op",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              36
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ]
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "flops": 2359296,
+          "module": "backbone.p5.0.op",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              36
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ]
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "flops": 40108032,
+          "module": "backbone.p2.op",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              2304
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ]
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "flops": 2359296,
+          "module": "backbone.p2.op",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              2304
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ]
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "flops": 11796480,
+          "module": "backbone.p4.0.op",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ]
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "flops": 2359296,
+          "module": "backbone.p4.0.op",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ]
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "flops": 11796480,
+          "module": "backbone.p4.1.op",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ]
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "flops": 2359296,
+          "module": "backbone.p4.1.op",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ]
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "flops": 11796480,
+          "module": "backbone.p4.2.op",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ]
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "flops": 2359296,
+          "module": "backbone.p4.2.op",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ]
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "flops": 7077888,
+          "module": "backbone.p5.0.op",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              36
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ]
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "flops": 2359296,
+          "module": "backbone.p5.0.op",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              36
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ]
+        }
+      ],
+      "finite_forward": true,
+      "functional_einsum_mac2_flops": 188743680,
+      "fused": false,
+      "input_shapes": [
+        [
+          1,
+          3,
+          192,
+          192
+        ],
+        [
+          1,
+          3,
+          192,
+          192
+        ]
+      ],
+      "nms_included": false,
+      "output_shape": [
+        1,
+        1,
+        192,
+        192
+      ],
+      "output_shapes": [
+        [
+          1,
+          1,
+          192,
+          192
+        ]
+      ],
+      "parameters": 3715097,
+      "precision": "FP32",
+      "scan_basic_arithmetic_flops": 228261888,
+      "scan_calls": [
+        {
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "backend": "core",
+          "basic_arithmetic_flops": 58982400,
+          "c_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "delta_softplus": true,
+          "has_D": true,
+          "has_delta_bias": true,
+          "module": "backbone.p2.op",
+          "special_function_evaluations_symbolic_upper_bound": 10616832,
+          "u_shape": [
+            1,
+            256,
+            2304
+          ]
+        },
+        {
+          "a_shape": [
+            64,
+            16
+          ],
+          "b_shape": [
+            1,
+            1,
+            16,
+            576
+          ],
+          "backend": "core",
+          "basic_arithmetic_flops": 3538944,
+          "c_shape": [
+            1,
+            1,
+            16,
+            576
+          ],
+          "delta_softplus": false,
+          "has_D": false,
+          "has_delta_bias": false,
+          "module": "backbone.p3.ds_ssm",
+          "special_function_evaluations_symbolic_upper_bound": 589824,
+          "u_shape": [
+            1,
+            64,
+            576
+          ]
+        },
+        {
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "backend": "core",
+          "basic_arithmetic_flops": 14745600,
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "delta_softplus": true,
+          "has_D": true,
+          "has_delta_bias": true,
+          "module": "backbone.p4.0.op",
+          "special_function_evaluations_symbolic_upper_bound": 2654208,
+          "u_shape": [
+            1,
+            1024,
+            144
+          ]
+        },
+        {
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "backend": "core",
+          "basic_arithmetic_flops": 14745600,
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "delta_softplus": true,
+          "has_D": true,
+          "has_delta_bias": true,
+          "module": "backbone.p4.1.op",
+          "special_function_evaluations_symbolic_upper_bound": 2654208,
+          "u_shape": [
+            1,
+            1024,
+            144
+          ]
+        },
+        {
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "backend": "core",
+          "basic_arithmetic_flops": 14745600,
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "delta_softplus": true,
+          "has_D": true,
+          "has_delta_bias": true,
+          "module": "backbone.p4.2.op",
+          "special_function_evaluations_symbolic_upper_bound": 2654208,
+          "u_shape": [
+            1,
+            1024,
+            144
+          ]
+        },
+        {
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "backend": "core",
+          "basic_arithmetic_flops": 7372800,
+          "c_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "delta_softplus": true,
+          "has_D": true,
+          "has_delta_bias": true,
+          "module": "backbone.p5.0.op",
+          "special_function_evaluations_symbolic_upper_bound": 1327104,
+          "u_shape": [
+            1,
+            2048,
+            36
+          ]
+        },
+        {
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "backend": "core",
+          "basic_arithmetic_flops": 58982400,
+          "c_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "delta_softplus": true,
+          "has_D": true,
+          "has_delta_bias": true,
+          "module": "backbone.p2.op",
+          "special_function_evaluations_symbolic_upper_bound": 10616832,
+          "u_shape": [
+            1,
+            256,
+            2304
+          ]
+        },
+        {
+          "a_shape": [
+            64,
+            16
+          ],
+          "b_shape": [
+            1,
+            1,
+            16,
+            576
+          ],
+          "backend": "core",
+          "basic_arithmetic_flops": 3538944,
+          "c_shape": [
+            1,
+            1,
+            16,
+            576
+          ],
+          "delta_softplus": false,
+          "has_D": false,
+          "has_delta_bias": false,
+          "module": "backbone.p3.ds_ssm",
+          "special_function_evaluations_symbolic_upper_bound": 589824,
+          "u_shape": [
+            1,
+            64,
+            576
+          ]
+        },
+        {
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "backend": "core",
+          "basic_arithmetic_flops": 14745600,
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "delta_softplus": true,
+          "has_D": true,
+          "has_delta_bias": true,
+          "module": "backbone.p4.0.op",
+          "special_function_evaluations_symbolic_upper_bound": 2654208,
+          "u_shape": [
+            1,
+            1024,
+            144
+          ]
+        },
+        {
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "backend": "core",
+          "basic_arithmetic_flops": 14745600,
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "delta_softplus": true,
+          "has_D": true,
+          "has_delta_bias": true,
+          "module": "backbone.p4.1.op",
+          "special_function_evaluations_symbolic_upper_bound": 2654208,
+          "u_shape": [
+            1,
+            1024,
+            144
+          ]
+        },
+        {
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "backend": "core",
+          "basic_arithmetic_flops": 14745600,
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "delta_softplus": true,
+          "has_D": true,
+          "has_delta_bias": true,
+          "module": "backbone.p4.2.op",
+          "special_function_evaluations_symbolic_upper_bound": 2654208,
+          "u_shape": [
+            1,
+            1024,
+            144
+          ]
+        },
+        {
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "backend": "core",
+          "basic_arithmetic_flops": 7372800,
+          "c_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "delta_softplus": true,
+          "has_D": true,
+          "has_delta_bias": true,
+          "module": "backbone.p5.0.op",
+          "special_function_evaluations_symbolic_upper_bound": 1327104,
+          "u_shape": [
+            1,
+            2048,
+            36
+          ]
+        }
+      ],
+      "ssm_module_calls": [
+        {
+          "cross_merge_calls": 1,
+          "einsum_calls": 2,
+          "kind": "SS2D",
+          "module": "backbone.p2.op",
+          "scan_calls": 1
+        },
+        {
+          "cross_merge_calls": 0,
+          "einsum_calls": 0,
+          "kind": "DeSpeckleSSM",
+          "module": "backbone.p3.ds_ssm",
+          "scan_calls": 1
+        },
+        {
+          "cross_merge_calls": 1,
+          "einsum_calls": 2,
+          "kind": "SS2D",
+          "module": "backbone.p4.0.op",
+          "scan_calls": 1
+        },
+        {
+          "cross_merge_calls": 1,
+          "einsum_calls": 2,
+          "kind": "SS2D",
+          "module": "backbone.p4.1.op",
+          "scan_calls": 1
+        },
+        {
+          "cross_merge_calls": 1,
+          "einsum_calls": 2,
+          "kind": "SS2D",
+          "module": "backbone.p4.2.op",
+          "scan_calls": 1
+        },
+        {
+          "cross_merge_calls": 1,
+          "einsum_calls": 2,
+          "kind": "SS2D",
+          "module": "backbone.p5.0.op",
+          "scan_calls": 1
+        },
+        {
+          "cross_merge_calls": 1,
+          "einsum_calls": 2,
+          "kind": "SS2D",
+          "module": "backbone.p2.op",
+          "scan_calls": 1
+        },
+        {
+          "cross_merge_calls": 0,
+          "einsum_calls": 0,
+          "kind": "DeSpeckleSSM",
+          "module": "backbone.p3.ds_ssm",
+          "scan_calls": 1
+        },
+        {
+          "cross_merge_calls": 1,
+          "einsum_calls": 2,
+          "kind": "SS2D",
+          "module": "backbone.p4.0.op",
+          "scan_calls": 1
+        },
+        {
+          "cross_merge_calls": 1,
+          "einsum_calls": 2,
+          "kind": "SS2D",
+          "module": "backbone.p4.1.op",
+          "scan_calls": 1
+        },
+        {
+          "cross_merge_calls": 1,
+          "einsum_calls": 2,
+          "kind": "SS2D",
+          "module": "backbone.p4.2.op",
+          "scan_calls": 1
+        },
+        {
+          "cross_merge_calls": 1,
+          "einsum_calls": 2,
+          "kind": "SS2D",
+          "module": "backbone.p5.0.op",
+          "scan_calls": 1
+        }
+      ],
+      "status": "PASS",
+      "thop_legacy_x2_flops": 3150662752.0,
+      "thop_version": "2.0.16",
+      "torch_version": "1.13.1+cu117",
+      "trainable_parameters": 0,
+      "unregistered_leaf_module_types": [
+        "timm.layers.drop.DropPath",
+        "torch.nn.modules.activation.GELU",
+        "torch.nn.modules.activation.SiLU",
+        "torch.nn.modules.dropout.Dropout2d",
+        "torch.nn.modules.linear.Identity",
+        "torch.nn.modules.normalization.GroupNorm"
+      ],
+      "unsupported": [
+        "Scan exponentials and softplus special functions; symbolic counts are separate.",
+        "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+        "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+        "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing.",
+        "Unregistered THOP leaf: timm.layers.drop.DropPath",
+        "Unregistered THOP leaf: torch.nn.modules.activation.GELU",
+        "Unregistered THOP leaf: torch.nn.modules.activation.SiLU",
+        "Unregistered THOP leaf: torch.nn.modules.dropout.Dropout2d",
+        "Unregistered THOP leaf: torch.nn.modules.linear.Identity",
+        "Unregistered THOP leaf: torch.nn.modules.normalization.GroupNorm"
+      ]
+    },
+    "hardware": "RTX A6000",
+    "input_shape_each": [
+      1,
+      3,
+      192,
+      192
+    ],
+    "input_tensors": 2,
+    "latency_ms_mean": 12.357864799560048,
+    "latency_scope": "model-only; synthetic shape-matched inputs; no I/O/pre/postprocessing",
+    "params": 3715097,
+    "precision": "FP32",
+    "profiler": "THOP legacy x2 + actual selective-scan/einsum/cross-merge covered arithmetic",
+    "status": "PARTIAL_COVERAGE_MEASURED",
+    "throughput_samples_per_second": 80.92012788775622
+  },
+  "dataset": "Farmland",
+  "elapsed_seconds": 46.250968163018115,
+  "epochs_completed": 45,
+  "finished_utc": "2026-10-12T13:37:48.440500+00:00",
+  "historical_results_reused": false,
+  "method": "Matched075",
+  "metrics": {
+    "evaluated_native_unique_pixels": 9216,
+    "f1": 0.5049701789264415,
+    "fn": 238,
+    "fp": 11,
+    "iou": 0.3377659574468085,
+    "kappa": 0.49397341688078433,
+    "oa": 0.9729817708333334,
+    "precision": 0.9202898550724637,
+    "recall": 0.34794520547945207,
+    "tn": 8840,
+    "tp": 127
+  },
+  "optimizer_updates": 90,
+  "params": 3715097,
+  "protocol_group": "new_unified_supervised",
+  "protocol_sha256": "cbf852242e1fde515c9516c90476f294d0c035d926f2aa1a94f413cea0bdb943",
+  "seed": 0,
+  "status": "TRAINING_COMPLETE",
+  "task": "change_detection",
+  "test_evaluated": true,
+  "threshold_from_validation": 0.9,
+  "training_seconds": 45.732463534979615
+}

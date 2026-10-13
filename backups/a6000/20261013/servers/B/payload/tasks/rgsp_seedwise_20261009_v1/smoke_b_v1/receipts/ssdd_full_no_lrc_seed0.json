@@ -1,0 +1,55 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/provenance.json",
+      "sha256": "3a4ebfa768bebda02b6b0779af8a408dab398fdc1d99f98dfba1888e682a6852"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/train_complete.json",
+      "sha256": "7429fe1b7d44fa1cdcdc4104448f4aa4cc15fb03d0e508af9f82b12183d61ada"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/eval_test.json",
+      "sha256": "b2df7bb7f777d3c2c7a03a019d45c47551432c87b5ab777b2e8812d3d978b12e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/evaluation_complete.json",
+      "sha256": "ffc94f352413b36cf4e7b0f4c8f89154e1c5680e827af7a82a25807a6d578371"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/weights/best.pt",
+      "sha256": "06f2239036b9ec946db0df0aae6fe6969435168a40a8410446ffdd5ad97f6d0a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/weights/raw_fp32_last.pt",
+      "sha256": "13cee14d8431a443a0a9b8366ee231cbd5d480d6a8a369832e185fb50a1d7981"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/controls_by_epoch.jsonl",
+      "sha256": "440cfe514f97973453bd42550a7713eb0d531a3c98ecd923e6cf4393f90b1bf5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_full_no_lrc_seed0/trial_complete.json",
+      "sha256": "fcf1295d9e3a47278e5a957335241bbf7683c91187b4d27462650bf08d1321d1"
+    }
+  ],
+  "details": {
+    "kind": "detection",
+    "overall": {
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "ap75": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "resumed": false,
+    "smoke_only": true
+  },
+  "finished_utc": "2026-10-09T02:57:40.398443+00:00",
+  "plan_sha256": "6328e555e42d10869e756d5058fb914c4ba6b35712a4d9206b1f5f8e4f160971",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "ssdd_full_no_lrc_seed0",
+  "trial_sha256": "feefe29f35258a07ca5665ae22fae6657bdec2effd8b600f6dce98cd080701a6"
+}

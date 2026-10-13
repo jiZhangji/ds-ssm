@@ -1,0 +1,6 @@
+dataset,experiment,variant,placement,state_dim,precision,recall,ap50,ap75,ap50_95,inference_ms,weights
+SSDD,seed0_ssdd_baseline,baseline,baseline,0,0.8922851027139745,0.8040293040293041,0.8718223913817755,0.3568587938657214,0.4269426784501997,6.61654205157839,/home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0_ssdd_baseline/weights/best.pt
+SSDD,seed0_ssdd_ds_only_p3,ds_only,p3,16,0.9099886143477409,0.7948717948717948,0.8719858965080122,0.41914090696328243,0.4559438007836172,6.000570182142587,/home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0_ssdd_ds_only_p3/weights/best.pt
+SSDD,seed0_ssdd_full_p3,full,p3,16,0.9323179038538559,0.8076923076923077,0.8808824040709504,0.30718706271477436,0.42339986046718686,6.088877546376196,/home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0_ssdd_full_p3/weights/best.pt
+SSDD,seed0_ssdd_global_p3,global,p3,16,0.9191939420619933,0.7802197802197802,0.8683359682746441,0.4003101132438842,0.44982167799009476,6.129386096165098,/home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0_ssdd_global_p3/weights/best.pt
+SSDD,seed0_ssdd_pfim_only_p3,pfim_only,p3,16,0.9069612968639721,0.8391325768704999,0.9009197689547357,0.3815673896189768,0.4482170697637658,6.105005741119385,/home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0_ssdd_pfim_only_p3/weights/best.pt

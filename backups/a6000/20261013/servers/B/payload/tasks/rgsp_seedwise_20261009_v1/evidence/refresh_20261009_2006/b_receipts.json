@@ -1,0 +1,1021 @@
+{
+  "all_global_seed0_verified_locally": false,
+  "all_requested_complete": false,
+  "checked_utc": "2026-10-09T12:07:48.340552+00:00",
+  "global_seed0_not_ready_ids": [],
+  "global_seed0_trial_ids": [
+    "farmland_full_seed0",
+    "farmland_matched_scale075_seed0",
+    "farmland_original_seed0",
+    "ottawa_full_seed0",
+    "ottawa_matched_scale075_seed0",
+    "ottawa_original_seed0",
+    "sadd_cnn_yolov8n_seed0",
+    "sadd_const_guidance_seed0",
+    "sadd_full_no_lrc_seed0",
+    "sadd_full_seed0",
+    "sadd_local_energy_seed0",
+    "sadd_matched_identity_seed0",
+    "sadd_matched_scale075_seed0",
+    "sadd_original_seed0",
+    "sadd_post_gate_seed0",
+    "sample_full_seed0",
+    "sample_matched_scale075_seed0",
+    "sample_original_seed0",
+    "sar_acd_full_seed0",
+    "sar_acd_matched_scale075_seed0",
+    "sar_acd_original_seed0",
+    "sar_aircraft10_full_seed0",
+    "sar_aircraft10_matched_scale075_seed0",
+    "sar_aircraft10_original_seed0",
+    "sar_shipdataset_full_seed0",
+    "sar_shipdataset_matched_scale075_seed0",
+    "sar_shipdataset_original_seed0",
+    "ssdd_cnn_yolov8n_seed0",
+    "ssdd_const_guidance_seed0",
+    "ssdd_energy_only_seed0",
+    "ssdd_full_d32_seed0",
+    "ssdd_full_d8_seed0",
+    "ssdd_full_fixed_half_seed0",
+    "ssdd_full_no_lrc_seed0",
+    "ssdd_full_p2_seed0",
+    "ssdd_full_p4_seed0",
+    "ssdd_full_seed0",
+    "ssdd_full_stats5_seed0",
+    "ssdd_full_stats7_seed0",
+    "ssdd_full_trend5_seed0",
+    "ssdd_full_trend7_seed0",
+    "ssdd_global_seed0",
+    "ssdd_guidance_only_seed0",
+    "ssdd_local_energy_delta_seed0",
+    "ssdd_local_energy_input_seed0",
+    "ssdd_local_energy_seed0",
+    "ssdd_lsgm_point_only_seed0",
+    "ssdd_lsgm_std_only_seed0",
+    "ssdd_lsgm_trend_only_seed0",
+    "ssdd_matched_identity_seed0",
+    "ssdd_matched_scale075_seed0",
+    "ssdd_original_seed0",
+    "ssdd_post_gate_seed0",
+    "ssdd_residual_scale075_seed0",
+    "yellow_river_full_seed0",
+    "yellow_river_matched_scale075_seed0",
+    "yellow_river_original_seed0"
+  ],
+  "global_seed0_unverified_in_this_snapshot": [
+    "farmland_full_seed0",
+    "farmland_matched_scale075_seed0",
+    "farmland_original_seed0",
+    "ottawa_full_seed0",
+    "ottawa_matched_scale075_seed0",
+    "ottawa_original_seed0",
+    "sadd_cnn_yolov8n_seed0",
+    "sadd_full_seed0",
+    "sadd_local_energy_seed0",
+    "sadd_matched_identity_seed0",
+    "sadd_matched_scale075_seed0",
+    "sadd_original_seed0",
+    "sample_full_seed0",
+    "sample_matched_scale075_seed0",
+    "sample_original_seed0",
+    "sar_acd_full_seed0",
+    "sar_acd_matched_scale075_seed0",
+    "sar_acd_original_seed0",
+    "sar_aircraft10_full_seed0",
+    "sar_aircraft10_matched_scale075_seed0",
+    "sar_aircraft10_original_seed0",
+    "sar_shipdataset_full_seed0",
+    "sar_shipdataset_matched_scale075_seed0",
+    "sar_shipdataset_original_seed0",
+    "ssdd_cnn_yolov8n_seed0",
+    "ssdd_energy_only_seed0",
+    "ssdd_full_d32_seed0",
+    "ssdd_full_d8_seed0",
+    "ssdd_full_fixed_half_seed0",
+    "ssdd_full_p2_seed0",
+    "ssdd_full_p4_seed0",
+    "ssdd_full_stats5_seed0",
+    "ssdd_full_stats7_seed0",
+    "ssdd_full_trend5_seed0",
+    "ssdd_full_trend7_seed0",
+    "ssdd_global_seed0",
+    "ssdd_guidance_only_seed0",
+    "ssdd_local_energy_delta_seed0",
+    "ssdd_local_energy_input_seed0",
+    "ssdd_local_energy_seed0",
+    "ssdd_lsgm_point_only_seed0",
+    "ssdd_lsgm_std_only_seed0",
+    "ssdd_lsgm_trend_only_seed0",
+    "ssdd_matched_identity_seed0",
+    "ssdd_matched_scale075_seed0",
+    "ssdd_original_seed0",
+    "ssdd_post_gate_seed0",
+    "ssdd_residual_scale075_seed0",
+    "yellow_river_full_seed0",
+    "yellow_river_matched_scale075_seed0",
+    "yellow_river_original_seed0"
+  ],
+  "host_key": "b",
+  "hostname": "powerleader-a6000-b",
+  "lane": "b_seed0",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "requested_count": 27,
+  "requested_trial_ids": [
+    "ssdd_full_seed0",
+    "sadd_full_no_lrc_seed0",
+    "ssdd_full_no_lrc_seed0",
+    "sadd_const_guidance_seed0",
+    "ssdd_const_guidance_seed0",
+    "sadd_post_gate_seed0",
+    "ssdd_post_gate_seed0",
+    "sadd_original_seed0",
+    "ssdd_matched_scale075_seed0",
+    "ssdd_local_energy_input_seed0",
+    "ssdd_local_energy_delta_seed0",
+    "ssdd_full_fixed_half_seed0",
+    "ssdd_residual_scale075_seed0",
+    "ssdd_energy_only_seed0",
+    "ssdd_guidance_only_seed0",
+    "ssdd_global_seed0",
+    "ssdd_lsgm_trend_only_seed0",
+    "ssdd_lsgm_std_only_seed0",
+    "ssdd_lsgm_point_only_seed0",
+    "ssdd_full_d8_seed0",
+    "ssdd_full_d32_seed0",
+    "ssdd_full_trend5_seed0",
+    "ssdd_full_stats5_seed0",
+    "ssdd_full_trend7_seed0",
+    "ssdd_full_stats7_seed0",
+    "ssdd_cnn_yolov8n_seed0",
+    "sar_aircraft10_matched_scale075_seed0"
+  ],
+  "rows": [
+    {
+      "artifacts_verified": 8,
+      "kind": "detection",
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/provenance.json",
+            "sha256": "a2ce26618167f26a4d9fc6cd97d6de9d6bc42b0ca8d96cedc2d3344a682fe89c"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/train_complete.json",
+            "sha256": "555224da2a33952bf7c2983355cec95169eb03aa1305986d6ec397814e73d67f"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/eval_test.json",
+            "sha256": "dcfe1dc3b1ed9065f8f6b21b07367b699de203168cbeebd79f7032cffaae623a"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/evaluation_complete.json",
+            "sha256": "bcf5c8d20c2e785edba6f9610e906cf2586434e01468a54a44e31fcbc78ead71"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/weights/best.pt",
+            "sha256": "ab774d4c46e0862ef981364e48347e8422522774a31d81bd50851ee1f4525529"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/weights/raw_fp32_last.pt",
+            "sha256": "a82cd303bdf7f3a2e598fbb4254b56427735d7ac7f73aa99fae633363384f669"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/controls_by_epoch.jsonl",
+            "sha256": "6a051a6b19dc0fae7daabaccdbac2e689030967372d3e797849abe6f20d0e2bd"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/trial_complete.json",
+            "sha256": "37b97ea2b230c41fcdd387331509c85b2eabfec01195fd46429ab04b07990f5f"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.8774102291361389,
+            "ap50_95": 0.42688051353889944,
+            "ap75": 0.3273940334120583,
+            "precision": 0.9391065395293668,
+            "recall": 0.7857142857142857
+          },
+          "resumed": false,
+          "smoke_only": false
+        },
+        "finished_utc": "2026-10-09T04:34:08.182904+00:00",
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_full_seed0",
+        "trial_sha256": "d81f37cb14256f64397892f0cd8442ef45e1907b25ba32ee77baaf22cde8963f"
+      },
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_seed0.json",
+      "receipt_sha256": "a0ebea6c767f7035a15c43c9bcf07743e164b197155987ec7e82d11941124d1f",
+      "seed": 0,
+      "status": "verified",
+      "trial_id": "ssdd_full_seed0"
+    },
+    {
+      "artifacts_verified": 8,
+      "kind": "detection",
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/provenance.json",
+            "sha256": "dd2ddd8e41c931c8ebe7c4bfc830be158ad82cd0ce5acd9eee7a599491d236d7"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/train_complete.json",
+            "sha256": "82dbc460fc80ba374741af424e88d2d8f89d14be5e80c918bdc3fe50420b4c7b"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/eval_test.json",
+            "sha256": "0fd531d2a8b066776face2f3f8b5e8ec66824bae297a3e75be4dd9e021489d70"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/evaluation_complete.json",
+            "sha256": "d82ce04f6a26c4bafc476f67864e1de8438aedeb6dbb491af14faa03ce80bdb9"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/weights/best.pt",
+            "sha256": "9d2f5b6c8ec8e61fb43015162eab3b6073d370343803045cbe3e3934e48545f0"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/weights/raw_fp32_last.pt",
+            "sha256": "f142c43a48c79c7284e05199ca84c6b34fae91c3ef210a200245189670b55a3f"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/controls_by_epoch.jsonl",
+            "sha256": "6efd3ca9f4b74bbf72296a33c6519b079f5b2b4fd46250557480690a7dffc3a0"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/trial_complete.json",
+            "sha256": "b2b4c7c16ca551b91b7569e101bb57d076868674de17986b4d7f86b508342bfd"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.9797801948914814,
+            "ap50_95": 0.5245058637503413,
+            "ap75": 0.4844410175340926,
+            "precision": 0.9379126819025441,
+            "recall": 0.9534313725490197
+          },
+          "resumed": false,
+          "smoke_only": false
+        },
+        "finished_utc": "2026-10-09T06:01:10.321534+00:00",
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "sadd_full_no_lrc_seed0",
+        "trial_sha256": "19e19f834e1164f7acd1ad965614cd0ce9bc8c54827cbb011dd11c95f397c650"
+      },
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/sadd_full_no_lrc_seed0.json",
+      "receipt_sha256": "59057d9dd04a55e84a0cbde38c9caf81c1dbaa282d2020c5c11e9c9226be153b",
+      "seed": 0,
+      "status": "verified",
+      "trial_id": "sadd_full_no_lrc_seed0"
+    },
+    {
+      "artifacts_verified": 8,
+      "kind": "detection",
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/provenance.json",
+            "sha256": "9e3591d9aa134262104e87b3cfd47e692de3885377dda2ecad70d2b217759440"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/train_complete.json",
+            "sha256": "9e2993555ac1fa700b0430af49bedb917a7c60a9ce125b065d56a6ab56696506"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/eval_test.json",
+            "sha256": "a5254636881ad6abefef7a78f9dd833b0912493e139743642f19f2fde693dff6"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/evaluation_complete.json",
+            "sha256": "c3440a23a98eec3b0833844514c73aca80bf4421a0f4c38352ddf3873d3fba42"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/weights/best.pt",
+            "sha256": "aa56812089050c20e76ca8c7e69df6d8f024096577c9c0aa8a9c775dc396e34f"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/weights/raw_fp32_last.pt",
+            "sha256": "c0f3bb6993513cc505e87ca401c6c576e2dc12706a3963ba774dc469748797a9"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/controls_by_epoch.jsonl",
+            "sha256": "86359b0aea67362bf15e14175786e75eca83a77fced384e6ffb23be0ad8a82ec"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/trial_complete.json",
+            "sha256": "1581faaf6f3c951502ab7d02623c2b5140e8ddc3a3abf6f71b215aaeabf233e8"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.8796313614360944,
+            "ap50_95": 0.44363551363163767,
+            "ap75": 0.3818535376768491,
+            "precision": 0.9330272470106943,
+            "recall": 0.7948717948717948
+          },
+          "resumed": false,
+          "smoke_only": false
+        },
+        "finished_utc": "2026-10-09T07:06:26.579807+00:00",
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_full_no_lrc_seed0",
+        "trial_sha256": "108e17d5fee4ee41d26b009ad81d4ab9fe97b21899755d3ed6f7b5f73f5f6b1e"
+      },
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_no_lrc_seed0.json",
+      "receipt_sha256": "73ccff480e5e5a2dd70a9baa6f04c6e51cd4ead3d753bc6567b6bdbad7b400b2",
+      "seed": 0,
+      "status": "verified",
+      "trial_id": "ssdd_full_no_lrc_seed0"
+    },
+    {
+      "artifacts_verified": 8,
+      "kind": "detection",
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/provenance.json",
+            "sha256": "02a7b61994ccebae7b69515b0f6a895a1816c92f40de7de7dc2857205369c1db"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/train_complete.json",
+            "sha256": "f0aa66662f0de991a9441d302365be07791adee114be93ea853ebb85ad7e9746"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/eval_test.json",
+            "sha256": "ef08f019a70a7eb58c2b8e6c65f2ac3de345c7f9683db51efc7ed0c5e4c2ea10"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/evaluation_complete.json",
+            "sha256": "e4d9509e9d9e3c41d04734eddabafc9f5f97cc67aa08066f3c182db9516eb582"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/weights/best.pt",
+            "sha256": "67f29688251147637ef7f80c6d821ffb1730a1cda5785ec67d54f50b888bcd72"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/weights/raw_fp32_last.pt",
+            "sha256": "ce471145fdf5f8a95f2fe9d1108e8dcd4bc41cfa65275a786481be94f1f69977"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/controls_by_epoch.jsonl",
+            "sha256": "b9117df8052390028c916ae8d2bcd0b2f62969d16219493ff8d649fedf798ad7"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/trial_complete.json",
+            "sha256": "f05d51a8ac42b1cc6041845ba4da21e0c83206543d4c462f0d7174ab9258a814"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.968066605871388,
+            "ap50_95": 0.5221103118883532,
+            "ap75": 0.5133248615778256,
+            "precision": 0.9488019151097251,
+            "recall": 0.9538527912161272
+          },
+          "resumed": false,
+          "smoke_only": false
+        },
+        "finished_utc": "2026-10-09T08:33:12.912232+00:00",
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "sadd_const_guidance_seed0",
+        "trial_sha256": "582c330e63170480f6ed41ebf9caaaa3ae20504327cf18a8abaaeee8bb5db5f9"
+      },
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/sadd_const_guidance_seed0.json",
+      "receipt_sha256": "76b100cc8393fe5260968eca22d56f901255a9cd9af35676ea4521e592ad7503",
+      "seed": 0,
+      "status": "verified",
+      "trial_id": "sadd_const_guidance_seed0"
+    },
+    {
+      "artifacts_verified": 8,
+      "kind": "detection",
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/provenance.json",
+            "sha256": "7087d8a51d608d8a36a21b0bca1e89ec79ee64408a1bdd5fb05ab08e3e666c89"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/train_complete.json",
+            "sha256": "8a4d0467ad08089e375ada2d85e2830d3a3fec4313462022e9b2fd128f04331b"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/eval_test.json",
+            "sha256": "0ab44cd66269b66eca9236281c935b72b33395adde98da06c8e29bfffc811d97"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/evaluation_complete.json",
+            "sha256": "f9b3c67ff6782d1469a100fba63ba1a94ebe6fa6e0a4e18fd60ef926fbc09909"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/weights/best.pt",
+            "sha256": "b9e93b54839a93937052b51c5a0614c904589cf5e66b9089daee7958a2315f94"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/weights/raw_fp32_last.pt",
+            "sha256": "4c49510072c98236ca4f84ee98f111f1ee4e3dbccd3d03c6766a91db5cd34734"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/controls_by_epoch.jsonl",
+            "sha256": "44715bc0ca23a0574b187d728149d4eb59920b73f84734c1208de2f48e14fe2c"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/trial_complete.json",
+            "sha256": "9ddb865fb24fe8f702c066ceb08c42f65353ad3e0200e1e2117050d80227da2d"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.856757189901149,
+            "ap50_95": 0.40446998889770674,
+            "ap75": 0.3228228330507964,
+            "precision": 0.9119702794783159,
+            "recall": 0.7969080561108007
+          },
+          "resumed": false,
+          "smoke_only": false
+        },
+        "finished_utc": "2026-10-09T09:38:03.479283+00:00",
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_const_guidance_seed0",
+        "trial_sha256": "20834fa337258238f64287f9690201ba6afd4f2ccce28cb0ac56b9c6a11bb502"
+      },
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_const_guidance_seed0.json",
+      "receipt_sha256": "215ef0f3663b3c259884a0689ea34a6d6330bc9a87369ff1c5137af009eaca9a",
+      "seed": 0,
+      "status": "verified",
+      "trial_id": "ssdd_const_guidance_seed0"
+    },
+    {
+      "artifacts_verified": 8,
+      "kind": "detection",
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/provenance.json",
+            "sha256": "4b59a4a505b19799ed0988a36e6bfaafa8900b2cb1ca0a340af3999b57fab901"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/train_complete.json",
+            "sha256": "766234f30a9527dae1e8c3dd1fc1f520b7493d2c8a95bab691e5ffa014e6813d"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/eval_test.json",
+            "sha256": "0fcbf486f02a305e9b62d2f036e5928396a4efd04dec66cea03866dc3c89069e"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/evaluation_complete.json",
+            "sha256": "cc1e90c47a4a771315fe0c65ed93a808ede6869ff1a728de1bbc487468154384"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/weights/best.pt",
+            "sha256": "871aca35f6907b3a17242058a5e58b28c1e97d5de7e007f379b54af9497be580"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/weights/raw_fp32_last.pt",
+            "sha256": "f2ff43246d3a06540d089a823c963d42603b2dbd437cef9b88616c4f1cbbe09e"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/controls_by_epoch.jsonl",
+            "sha256": "e76376084debd8bf6fb68b269dc44342cc5aac46262607ce98a2340ea905d1a5"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/trial_complete.json",
+            "sha256": "46eaf9afb62304fb225ee9adae375bfa2575fadf92c439bf1df9c818e2833e21"
+          }
+        ],
+        "details": {
+          "kind": "detection",
+          "overall": {
+            "ap50": 0.9831955917655713,
+            "ap50_95": 0.5428213122423993,
+            "ap75": 0.5810265304809438,
+            "precision": 0.9382218756584646,
+            "recall": 0.9583333333333334
+          },
+          "resumed": false,
+          "smoke_only": false
+        },
+        "finished_utc": "2026-10-09T11:10:06.111448+00:00",
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "sadd_post_gate_seed0",
+        "trial_sha256": "cf845d3abc351fd7246f56e639eb4ff8079b541f9070c54c1712959d6a867415"
+      },
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/sadd_post_gate_seed0.json",
+      "receipt_sha256": "2aae5b2e279d2061a1e2e64e10837b9d4fcb6dc6be5d0ba8e76ab573f4b78c69",
+      "seed": 0,
+      "status": "verified",
+      "trial_id": "sadd_post_gate_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_post_gate_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_post_gate_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/sadd_original_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "sadd_original_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_matched_scale075_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_matched_scale075_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_local_energy_input_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_local_energy_input_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_local_energy_delta_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_local_energy_delta_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_fixed_half_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_full_fixed_half_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_residual_scale075_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_residual_scale075_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_energy_only_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_energy_only_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_guidance_only_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_guidance_only_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_global_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_global_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_lsgm_trend_only_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_lsgm_trend_only_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_lsgm_std_only_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_lsgm_std_only_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_lsgm_point_only_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_lsgm_point_only_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_d8_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_full_d8_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_d32_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_full_d32_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_trend5_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_full_trend5_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_stats5_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_full_stats5_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_trend7_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_full_trend7_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_stats7_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_full_stats7_seed0"
+    },
+    {
+      "kind": "detection",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_cnn_yolov8n_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "ssdd_cnn_yolov8n_seed0"
+    },
+    {
+      "kind": "command",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/sar_aircraft10_matched_scale075_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "sar_aircraft10_matched_scale075_seed0"
+    }
+  ],
+  "schema": "rgsp-verified-receipt-snapshot-v1",
+  "scope": "Read-only verification of the full explicit local lane subset; combine producing-host snapshots before a trusted global barrier",
+  "seed": 0,
+  "verified_count": 6,
+  "verified_receipts": {
+    "sadd_const_guidance_seed0": {
+      "artifacts": [
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/provenance.json",
+          "sha256": "02a7b61994ccebae7b69515b0f6a895a1816c92f40de7de7dc2857205369c1db"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/train_complete.json",
+          "sha256": "f0aa66662f0de991a9441d302365be07791adee114be93ea853ebb85ad7e9746"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/eval_test.json",
+          "sha256": "ef08f019a70a7eb58c2b8e6c65f2ac3de345c7f9683db51efc7ed0c5e4c2ea10"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/evaluation_complete.json",
+          "sha256": "e4d9509e9d9e3c41d04734eddabafc9f5f97cc67aa08066f3c182db9516eb582"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/weights/best.pt",
+          "sha256": "67f29688251147637ef7f80c6d821ffb1730a1cda5785ec67d54f50b888bcd72"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/weights/raw_fp32_last.pt",
+          "sha256": "ce471145fdf5f8a95f2fe9d1108e8dcd4bc41cfa65275a786481be94f1f69977"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/controls_by_epoch.jsonl",
+          "sha256": "b9117df8052390028c916ae8d2bcd0b2f62969d16219493ff8d649fedf798ad7"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/trial_complete.json",
+          "sha256": "f05d51a8ac42b1cc6041845ba4da21e0c83206543d4c462f0d7174ab9258a814"
+        }
+      ],
+      "details": {
+        "kind": "detection",
+        "overall": {
+          "ap50": 0.968066605871388,
+          "ap50_95": 0.5221103118883532,
+          "ap75": 0.5133248615778256,
+          "precision": 0.9488019151097251,
+          "recall": 0.9538527912161272
+        },
+        "resumed": false,
+        "smoke_only": false
+      },
+      "finished_utc": "2026-10-09T08:33:12.912232+00:00",
+      "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+      "schema": "rgsp-seedwise-v1",
+      "seed": 0,
+      "status": "complete",
+      "trial_id": "sadd_const_guidance_seed0",
+      "trial_sha256": "582c330e63170480f6ed41ebf9caaaa3ae20504327cf18a8abaaeee8bb5db5f9"
+    },
+    "sadd_full_no_lrc_seed0": {
+      "artifacts": [
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/provenance.json",
+          "sha256": "dd2ddd8e41c931c8ebe7c4bfc830be158ad82cd0ce5acd9eee7a599491d236d7"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/train_complete.json",
+          "sha256": "82dbc460fc80ba374741af424e88d2d8f89d14be5e80c918bdc3fe50420b4c7b"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/eval_test.json",
+          "sha256": "0fd531d2a8b066776face2f3f8b5e8ec66824bae297a3e75be4dd9e021489d70"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/evaluation_complete.json",
+          "sha256": "d82ce04f6a26c4bafc476f67864e1de8438aedeb6dbb491af14faa03ce80bdb9"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/weights/best.pt",
+          "sha256": "9d2f5b6c8ec8e61fb43015162eab3b6073d370343803045cbe3e3934e48545f0"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/weights/raw_fp32_last.pt",
+          "sha256": "f142c43a48c79c7284e05199ca84c6b34fae91c3ef210a200245189670b55a3f"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/controls_by_epoch.jsonl",
+          "sha256": "6efd3ca9f4b74bbf72296a33c6519b079f5b2b4fd46250557480690a7dffc3a0"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/trial_complete.json",
+          "sha256": "b2b4c7c16ca551b91b7569e101bb57d076868674de17986b4d7f86b508342bfd"
+        }
+      ],
+      "details": {
+        "kind": "detection",
+        "overall": {
+          "ap50": 0.9797801948914814,
+          "ap50_95": 0.5245058637503413,
+          "ap75": 0.4844410175340926,
+          "precision": 0.9379126819025441,
+          "recall": 0.9534313725490197
+        },
+        "resumed": false,
+        "smoke_only": false
+      },
+      "finished_utc": "2026-10-09T06:01:10.321534+00:00",
+      "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+      "schema": "rgsp-seedwise-v1",
+      "seed": 0,
+      "status": "complete",
+      "trial_id": "sadd_full_no_lrc_seed0",
+      "trial_sha256": "19e19f834e1164f7acd1ad965614cd0ce9bc8c54827cbb011dd11c95f397c650"
+    },
+    "sadd_post_gate_seed0": {
+      "artifacts": [
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/provenance.json",
+          "sha256": "4b59a4a505b19799ed0988a36e6bfaafa8900b2cb1ca0a340af3999b57fab901"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/train_complete.json",
+          "sha256": "766234f30a9527dae1e8c3dd1fc1f520b7493d2c8a95bab691e5ffa014e6813d"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/eval_test.json",
+          "sha256": "0fcbf486f02a305e9b62d2f036e5928396a4efd04dec66cea03866dc3c89069e"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/evaluation_complete.json",
+          "sha256": "cc1e90c47a4a771315fe0c65ed93a808ede6869ff1a728de1bbc487468154384"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/weights/best.pt",
+          "sha256": "871aca35f6907b3a17242058a5e58b28c1e97d5de7e007f379b54af9497be580"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/weights/raw_fp32_last.pt",
+          "sha256": "f2ff43246d3a06540d089a823c963d42603b2dbd437cef9b88616c4f1cbbe09e"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/controls_by_epoch.jsonl",
+          "sha256": "e76376084debd8bf6fb68b269dc44342cc5aac46262607ce98a2340ea905d1a5"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/trial_complete.json",
+          "sha256": "46eaf9afb62304fb225ee9adae375bfa2575fadf92c439bf1df9c818e2833e21"
+        }
+      ],
+      "details": {
+        "kind": "detection",
+        "overall": {
+          "ap50": 0.9831955917655713,
+          "ap50_95": 0.5428213122423993,
+          "ap75": 0.5810265304809438,
+          "precision": 0.9382218756584646,
+          "recall": 0.9583333333333334
+        },
+        "resumed": false,
+        "smoke_only": false
+      },
+      "finished_utc": "2026-10-09T11:10:06.111448+00:00",
+      "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+      "schema": "rgsp-seedwise-v1",
+      "seed": 0,
+      "status": "complete",
+      "trial_id": "sadd_post_gate_seed0",
+      "trial_sha256": "cf845d3abc351fd7246f56e639eb4ff8079b541f9070c54c1712959d6a867415"
+    },
+    "ssdd_const_guidance_seed0": {
+      "artifacts": [
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/provenance.json",
+          "sha256": "7087d8a51d608d8a36a21b0bca1e89ec79ee64408a1bdd5fb05ab08e3e666c89"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/train_complete.json",
+          "sha256": "8a4d0467ad08089e375ada2d85e2830d3a3fec4313462022e9b2fd128f04331b"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/eval_test.json",
+          "sha256": "0ab44cd66269b66eca9236281c935b72b33395adde98da06c8e29bfffc811d97"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/evaluation_complete.json",
+          "sha256": "f9b3c67ff6782d1469a100fba63ba1a94ebe6fa6e0a4e18fd60ef926fbc09909"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/weights/best.pt",
+          "sha256": "b9e93b54839a93937052b51c5a0614c904589cf5e66b9089daee7958a2315f94"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/weights/raw_fp32_last.pt",
+          "sha256": "4c49510072c98236ca4f84ee98f111f1ee4e3dbccd3d03c6766a91db5cd34734"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/controls_by_epoch.jsonl",
+          "sha256": "44715bc0ca23a0574b187d728149d4eb59920b73f84734c1208de2f48e14fe2c"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/trial_complete.json",
+          "sha256": "9ddb865fb24fe8f702c066ceb08c42f65353ad3e0200e1e2117050d80227da2d"
+        }
+      ],
+      "details": {
+        "kind": "detection",
+        "overall": {
+          "ap50": 0.856757189901149,
+          "ap50_95": 0.40446998889770674,
+          "ap75": 0.3228228330507964,
+          "precision": 0.9119702794783159,
+          "recall": 0.7969080561108007
+        },
+        "resumed": false,
+        "smoke_only": false
+      },
+      "finished_utc": "2026-10-09T09:38:03.479283+00:00",
+      "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+      "schema": "rgsp-seedwise-v1",
+      "seed": 0,
+      "status": "complete",
+      "trial_id": "ssdd_const_guidance_seed0",
+      "trial_sha256": "20834fa337258238f64287f9690201ba6afd4f2ccce28cb0ac56b9c6a11bb502"
+    },
+    "ssdd_full_no_lrc_seed0": {
+      "artifacts": [
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/provenance.json",
+          "sha256": "9e3591d9aa134262104e87b3cfd47e692de3885377dda2ecad70d2b217759440"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/train_complete.json",
+          "sha256": "9e2993555ac1fa700b0430af49bedb917a7c60a9ce125b065d56a6ab56696506"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/eval_test.json",
+          "sha256": "a5254636881ad6abefef7a78f9dd833b0912493e139743642f19f2fde693dff6"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/evaluation_complete.json",
+          "sha256": "c3440a23a98eec3b0833844514c73aca80bf4421a0f4c38352ddf3873d3fba42"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/weights/best.pt",
+          "sha256": "aa56812089050c20e76ca8c7e69df6d8f024096577c9c0aa8a9c775dc396e34f"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/weights/raw_fp32_last.pt",
+          "sha256": "c0f3bb6993513cc505e87ca401c6c576e2dc12706a3963ba774dc469748797a9"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/controls_by_epoch.jsonl",
+          "sha256": "86359b0aea67362bf15e14175786e75eca83a77fced384e6ffb23be0ad8a82ec"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/trial_complete.json",
+          "sha256": "1581faaf6f3c951502ab7d02623c2b5140e8ddc3a3abf6f71b215aaeabf233e8"
+        }
+      ],
+      "details": {
+        "kind": "detection",
+        "overall": {
+          "ap50": 0.8796313614360944,
+          "ap50_95": 0.44363551363163767,
+          "ap75": 0.3818535376768491,
+          "precision": 0.9330272470106943,
+          "recall": 0.7948717948717948
+        },
+        "resumed": false,
+        "smoke_only": false
+      },
+      "finished_utc": "2026-10-09T07:06:26.579807+00:00",
+      "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+      "schema": "rgsp-seedwise-v1",
+      "seed": 0,
+      "status": "complete",
+      "trial_id": "ssdd_full_no_lrc_seed0",
+      "trial_sha256": "108e17d5fee4ee41d26b009ad81d4ab9fe97b21899755d3ed6f7b5f73f5f6b1e"
+    },
+    "ssdd_full_seed0": {
+      "artifacts": [
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/provenance.json",
+          "sha256": "a2ce26618167f26a4d9fc6cd97d6de9d6bc42b0ca8d96cedc2d3344a682fe89c"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/train_complete.json",
+          "sha256": "555224da2a33952bf7c2983355cec95169eb03aa1305986d6ec397814e73d67f"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/eval_test.json",
+          "sha256": "dcfe1dc3b1ed9065f8f6b21b07367b699de203168cbeebd79f7032cffaae623a"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/evaluation_complete.json",
+          "sha256": "bcf5c8d20c2e785edba6f9610e906cf2586434e01468a54a44e31fcbc78ead71"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/weights/best.pt",
+          "sha256": "ab774d4c46e0862ef981364e48347e8422522774a31d81bd50851ee1f4525529"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/weights/raw_fp32_last.pt",
+          "sha256": "a82cd303bdf7f3a2e598fbb4254b56427735d7ac7f73aa99fae633363384f669"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/controls_by_epoch.jsonl",
+          "sha256": "6a051a6b19dc0fae7daabaccdbac2e689030967372d3e797849abe6f20d0e2bd"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/trial_complete.json",
+          "sha256": "37b97ea2b230c41fcdd387331509c85b2eabfec01195fd46429ab04b07990f5f"
+        }
+      ],
+      "details": {
+        "kind": "detection",
+        "overall": {
+          "ap50": 0.8774102291361389,
+          "ap50_95": 0.42688051353889944,
+          "ap75": 0.3273940334120583,
+          "precision": 0.9391065395293668,
+          "recall": 0.7857142857142857
+        },
+        "resumed": false,
+        "smoke_only": false
+      },
+      "finished_utc": "2026-10-09T04:34:08.182904+00:00",
+      "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+      "schema": "rgsp-seedwise-v1",
+      "seed": 0,
+      "status": "complete",
+      "trial_id": "ssdd_full_seed0",
+      "trial_sha256": "d81f37cb14256f64397892f0cd8442ef45e1907b25ba32ee77baaf22cde8963f"
+    }
+  }
+}

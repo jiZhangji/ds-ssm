@@ -1,0 +1,4033 @@
+{
+  "read_at": "2026-10-13 09:20:56–09:20:59 +0800",
+  "scope": "Completed run result hash matched completion; deep validation at09:15 for metrics; profiles from same result/complexity; no new training",
+  "runs": [
+    {
+      "job": "farmland-full",
+      "seed": 0,
+      "parameters": 3717631,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-full/run0",
+      "result_sha256": "a2f82c2ae5965b7968a75fa6bb9cb0db8f22149c665444d2530b71744a4c0770",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.22384428223844285,
+        "fn": 319,
+        "fp": 0,
+        "iou": 0.12602739726027398,
+        "kappa": 0.21690183464049329,
+        "oa": 0.9653862847222222,
+        "precision": 1,
+        "recall": 0.12602739726027398,
+        "tn": 8851,
+        "tp": 46
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3717631,
+        "covered_flops_g": 3.575262304,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "farmland-full",
+      "seed": 2,
+      "parameters": 3717631,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-full/run2",
+      "result_sha256": "abb52b613bafc42427675281b2696fc8ba86e913393d62378a32ac572f31e5f5",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.6810035842293907,
+        "fn": 175,
+        "fp": 3,
+        "iou": 0.5163043478260869,
+        "kappa": 0.672017846953337,
+        "oa": 0.9806857638888888,
+        "precision": 0.9844559585492227,
+        "recall": 0.5205479452054794,
+        "tn": 8848,
+        "tp": 190
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3717631,
+        "covered_flops_g": 3.575262304,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "farmland-full",
+      "seed": 1,
+      "parameters": 3717631,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-full/run1",
+      "result_sha256": "f64a7a832d6126166706ec55f43011e7803ef196f46eb0a979d0416f29b4634b",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.18223234624145787,
+        "fn": 325,
+        "fp": 34,
+        "iou": 0.10025062656641603,
+        "kappa": 0.17116571855732338,
+        "oa": 0.9610460069444444,
+        "precision": 0.5405405405405406,
+        "recall": 0.1095890410958904,
+        "tn": 8817,
+        "tp": 40
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3717631,
+        "covered_flops_g": 3.575262304,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "yellow_river-original",
+      "seed": 0,
+      "parameters": 3782737,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-original/run0",
+      "result_sha256": "d93f5426baadc753473c98087f47caf0ba8f43a0bd8e43255c0f4d3d10711a6e",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.8248394004282655,
+        "fn": 363,
+        "fp": 46,
+        "iou": 0.7018950437317785,
+        "kappa": 0.7999657388343944,
+        "oa": 0.9556206597222222,
+        "precision": 0.9544103072348861,
+        "recall": 0.7262443438914027,
+        "tn": 7844,
+        "tp": 963
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3782737,
+        "covered_flops_g": 3.758204512,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "yellow_river-original",
+      "seed": 2,
+      "parameters": 3782737,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-original/run2",
+      "result_sha256": "a24bfd94210e08b5058d4764520f7c343df2c871609224c2aa0538e8487f60a0",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.8082673702726473,
+        "fn": 407,
+        "fp": 29,
+        "iou": 0.6782287822878229,
+        "kappa": 0.7821310617831461,
+        "oa": 0.9526909722222222,
+        "precision": 0.9694092827004219,
+        "recall": 0.6930618401206636,
+        "tn": 7861,
+        "tp": 919
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3782737,
+        "covered_flops_g": 3.758204512,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "yellow_river-original",
+      "seed": 1,
+      "parameters": 3782737,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-original/run1",
+      "result_sha256": "2345820558c746d8667c7decd43c897618d98992c6629488142cea892f2f5ba3",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.4253554502369668,
+        "fn": 967,
+        "fp": 3,
+        "iou": 0.27012791572610984,
+        "kappa": 0.38756081559904687,
+        "oa": 0.8947482638888888,
+        "precision": 0.9917127071823204,
+        "recall": 0.2707390648567119,
+        "tn": 7887,
+        "tp": 359
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3782737,
+        "covered_flops_g": 3.758204512,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "farmland-matched075",
+      "seed": 0,
+      "parameters": 3715097,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-matched075/run0",
+      "result_sha256": "3990566919c89952d03caec4935dfa17194cf3da5307d35573e2a7e14f1e7554",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.5049701789264415,
+        "fn": 238,
+        "fp": 11,
+        "iou": 0.3377659574468085,
+        "kappa": 0.49397341688078433,
+        "oa": 0.9729817708333334,
+        "precision": 0.9202898550724637,
+        "recall": 0.34794520547945207,
+        "tn": 8840,
+        "tp": 127
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3715097,
+        "covered_flops_g": 3.5693272,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "farmland-matched075",
+      "seed": 2,
+      "parameters": 3715097,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-matched075/run2",
+      "result_sha256": "af36df815104804a925c532a3752e11f1cd247699c48c403e51b0a084c58dbaf",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.7031802120141342,
+        "fn": 166,
+        "fp": 2,
+        "iou": 0.5422343324250681,
+        "kappa": 0.6945891982800767,
+        "oa": 0.9817708333333334,
+        "precision": 0.9900497512437811,
+        "recall": 0.5452054794520548,
+        "tn": 8849,
+        "tp": 199
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3715097,
+        "covered_flops_g": 3.5693272,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "farmland-matched075",
+      "seed": 1,
+      "parameters": 3715097,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-matched075/run1",
+      "result_sha256": "8a2e38ce5c68f68894f113c1ccc5d4afe9aebf512e389d23f1dc9d5fe2a43a94",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.12037037037037036,
+        "fn": 339,
+        "fp": 41,
+        "iou": 0.06403940886699508,
+        "kappa": 0.1094298090581799,
+        "oa": 0.9587673611111112,
+        "precision": 0.3880597014925373,
+        "recall": 0.07123287671232877,
+        "tn": 8810,
+        "tp": 26
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3715097,
+        "covered_flops_g": 3.5693272,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ottawa-original",
+      "seed": 0,
+      "parameters": 3782737,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-original/run0",
+      "result_sha256": "43fa061610ba27c61309836747656756a4ea1db33fa96724d3137ecdcd436269",
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9590517241379309,
+        "fn": 118,
+        "fp": 110,
+        "iou": 0.9213250517598344,
+        "kappa": 0.9517664657793051,
+        "oa": 0.9876302083333334,
+        "precision": 0.960431654676259,
+        "recall": 0.9576757532281205,
+        "tn": 15534,
+        "tp": 2670
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3782737,
+        "covered_flops_g": 3.758204512,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ottawa-original",
+      "seed": 2,
+      "parameters": 3782737,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-original/run2",
+      "result_sha256": "2a581f24ac2c665e04373ea241ca4d12ab00e57d7b9f16557b07612255018467",
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9538029158615844,
+        "fn": 73,
+        "fp": 190,
+        "iou": 0.9116856950973808,
+        "kappa": 0.9453698004676753,
+        "oa": 0.9857313368055556,
+        "precision": 0.9345955249569707,
+        "recall": 0.973816355810617,
+        "tn": 15454,
+        "tp": 2715
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3782737,
+        "covered_flops_g": 3.758204512,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ottawa-original",
+      "seed": 1,
+      "parameters": 3782737,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-original/run1",
+      "result_sha256": "9711d1cbc8ca940dc3cd9bb849e08b1b65feb7be1f80329e490dd944c644be1b",
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9622030237580993,
+        "fn": 115,
+        "fp": 95,
+        "iou": 0.927159209157128,
+        "kappa": 0.9554955753124068,
+        "oa": 0.9886067708333334,
+        "precision": 0.965679190751445,
+        "recall": 0.9587517934002869,
+        "tn": 15549,
+        "tp": 2673
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3782737,
+        "covered_flops_g": 3.758204512,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "yellow_river-full",
+      "seed": 0,
+      "parameters": 3717631,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-full/run0",
+      "result_sha256": "07e5dcfd805f48f4c458bedf53ac76f373c94de0880ad1f736c90fa21f368e9e",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.8713889988128215,
+        "fn": 225,
+        "fp": 100,
+        "iou": 0.7720897615708275,
+        "kappa": 0.8510130930601112,
+        "oa": 0.9647352430555556,
+        "precision": 0.9167360532889259,
+        "recall": 0.830316742081448,
+        "tn": 7790,
+        "tp": 1101
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3717631,
+        "covered_flops_g": 3.575262304,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "yellow_river-full",
+      "seed": 2,
+      "parameters": 3717631,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-full/run2",
+      "result_sha256": "ee8a68e505a038437d0c092a26022cb2b5b7f63731ca04787c7f3d688e34e2c4",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.8632686084142395,
+        "fn": 259,
+        "fp": 79,
+        "iou": 0.7594306049822064,
+        "kappa": 0.8422202366842326,
+        "oa": 0.9633246527777778,
+        "precision": 0.931064572425829,
+        "recall": 0.8046757164404224,
+        "tn": 7811,
+        "tp": 1067
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3717631,
+        "covered_flops_g": 3.575262304,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "yellow_river-full",
+      "seed": 1,
+      "parameters": 3717631,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-full/run1",
+      "result_sha256": "6b481b1d486a89c941f62f7a3fee3a4f56cbfc6530a5ba9ada858b84bd84f113",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.7005321722302853,
+        "fn": 602,
+        "fp": 17,
+        "iou": 0.5390915860014892,
+        "kappa": 0.6660857838230798,
+        "oa": 0.9328342013888888,
+        "precision": 0.9770580296896086,
+        "recall": 0.5460030165912518,
+        "tn": 7873,
+        "tp": 724
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3717631,
+        "covered_flops_g": 3.575262304,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "yellow_river-matched075",
+      "seed": 0,
+      "parameters": 3715097,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-matched075/run0",
+      "result_sha256": "9b3c19713e3f9c6c7160218d71d0d7f7bb17c7ee8bb3dc385c5f913b1718ea47",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.8574840764331211,
+        "fn": 249,
+        "fp": 109,
+        "iou": 0.7505226480836237,
+        "kappa": 0.8350774693931412,
+        "oa": 0.9611545138888888,
+        "precision": 0.9080944350758853,
+        "recall": 0.8122171945701357,
+        "tn": 7781,
+        "tp": 1077
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3715097,
+        "covered_flops_g": 3.5693272,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "yellow_river-matched075",
+      "seed": 2,
+      "parameters": 3715097,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-matched075/run2",
+      "result_sha256": "6e4352dd240c70fd80ea98d572d7b68640736ebacd4d5e0dfe29e2ea3e3050e6",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.8777656873413131,
+        "fn": 116,
+        "fp": 221,
+        "iou": 0.7821590174531351,
+        "kappa": 0.8563031438684156,
+        "oa": 0.9634331597222222,
+        "precision": 0.8455625436757512,
+        "recall": 0.9125188536953243,
+        "tn": 7669,
+        "tp": 1210
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3715097,
+        "covered_flops_g": 3.5693272,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "yellow_river-matched075",
+      "seed": 1,
+      "parameters": 3715097,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-matched075/run1",
+      "result_sha256": "8fe347072ddcf9ee90bb675857646baba308024367fc074fbeab371b26926837",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.6111400312337324,
+        "fn": 739,
+        "fp": 8,
+        "iou": 0.44002998500749624,
+        "kappa": 0.5730898110107431,
+        "oa": 0.9189453125,
+        "precision": 0.9865546218487395,
+        "recall": 0.44268476621417796,
+        "tn": 7882,
+        "tp": 587
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3715097,
+        "covered_flops_g": 3.5693272,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ottawa-full",
+      "seed": 0,
+      "parameters": 3717631,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-full/run0",
+      "result_sha256": "43486e203a3b3cef995e297fd18ec95393a883309df714f3dfd9ab319f5ffb9e",
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9512324880297925,
+        "fn": 106,
+        "fp": 169,
+        "iou": 0.9070003381805885,
+        "kappa": 0.942426740162228,
+        "oa": 0.9850802951388888,
+        "precision": 0.9407225534900036,
+        "recall": 0.9619799139167863,
+        "tn": 15475,
+        "tp": 2682
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3717631,
+        "covered_flops_g": 3.575262304,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ottawa-full",
+      "seed": 2,
+      "parameters": 3717631,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-full/run2",
+      "result_sha256": "1173b70ada1116e232249a69c86db01dab4606d047d43f3f1dd75e0bcea76f98",
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9458981612446958,
+        "fn": 113,
+        "fp": 193,
+        "iou": 0.897349882589735,
+        "kappa": 0.9360953001460784,
+        "oa": 0.9833984375,
+        "precision": 0.9327057182705718,
+        "recall": 0.9594691535150646,
+        "tn": 15451,
+        "tp": 2675
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3717631,
+        "covered_flops_g": 3.575262304,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ottawa-full",
+      "seed": 1,
+      "parameters": 3717631,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-full/run1",
+      "result_sha256": "f76d013df940e51a63f4b6a294602ea3ed025870fa3290ae4faeabbebcbf6fbc",
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9560923999294657,
+        "fn": 77,
+        "fp": 172,
+        "iou": 0.9158783783783784,
+        "kappa": 0.9481124869794174,
+        "oa": 0.9864908854166666,
+        "precision": 0.9403399236906,
+        "recall": 0.9723816355810617,
+        "tn": 15472,
+        "tp": 2711
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3717631,
+        "covered_flops_g": 3.575262304,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "farmland-original",
+      "seed": 0,
+      "parameters": 3782737,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-original/run0",
+      "result_sha256": "f420d73bc319c497623929eec0369bd89df79f6636bfc5550416fc8927e6f3b6",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0,
+        "fn": 365,
+        "fp": 0,
+        "iou": 0,
+        "kappa": 0,
+        "oa": 0.9603949652777778,
+        "precision": 0,
+        "recall": 0,
+        "tn": 8851,
+        "tp": 0
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3782737,
+        "covered_flops_g": 3.758204512,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "farmland-original",
+      "seed": 2,
+      "parameters": 3782737,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-original/run2",
+      "result_sha256": "318c8377470d38ceb9b2edbd0fe4cf15407816c684d19b7f7f3a569476807d12",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.7406143344709897,
+        "fn": 148,
+        "fp": 4,
+        "iou": 0.5880758807588076,
+        "kappa": 0.7326271757424634,
+        "oa": 0.9835069444444444,
+        "precision": 0.9819004524886877,
+        "recall": 0.5945205479452055,
+        "tn": 8847,
+        "tp": 217
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3782737,
+        "covered_flops_g": 3.758204512,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "farmland-original",
+      "seed": 1,
+      "parameters": 3782737,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-original/run1",
+      "result_sha256": "9b60438c953389a36de696e08e1d60bf0e652c2733449c48e3e89e1cfeee3573",
+      "metrics": {
+        "evaluated_native_unique_pixels": 9216,
+        "f1": 0.683076923076923,
+        "fn": 143,
+        "fp": 63,
+        "iou": 0.5186915887850467,
+        "kappa": 0.6716739733845234,
+        "oa": 0.9776475694444444,
+        "precision": 0.7789473684210526,
+        "recall": 0.6082191780821918,
+        "tn": 8788,
+        "tp": 222
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3782737,
+        "covered_flops_g": 3.758204512,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ottawa-matched075",
+      "seed": 0,
+      "parameters": 3715097,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-matched075/run0",
+      "result_sha256": "2e769522edcd6d805008a05cf4744c26e06f8c3d2ae35d6723683f0940e21031",
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9541836193171769,
+        "fn": 91,
+        "fp": 168,
+        "iou": 0.9123815967523681,
+        "kappa": 0.9458870813949027,
+        "oa": 0.9859483506944444,
+        "precision": 0.9413612565445026,
+        "recall": 0.9673601147776184,
+        "tn": 15476,
+        "tp": 2697
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3715097,
+        "covered_flops_g": 3.5693272,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ottawa-matched075",
+      "seed": 2,
+      "parameters": 3715097,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-matched075/run2",
+      "result_sha256": "cd2d83370acf4fbae475da5771a47fc1973cb721a68985c646af381517d55f4c",
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9574239713774597,
+        "fn": 112,
+        "fp": 126,
+        "iou": 0.9183253260123542,
+        "kappa": 0.9498138722426104,
+        "oa": 0.9870876736111112,
+        "precision": 0.9550321199143469,
+        "recall": 0.9598278335724534,
+        "tn": 15518,
+        "tp": 2676
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3715097,
+        "covered_flops_g": 3.5693272,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ottawa-matched075",
+      "seed": 1,
+      "parameters": 3715097,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-matched075/run1",
+      "result_sha256": "713ef95fbbc47caa78510d919d81f70e658d4ea5fc92aca54edcf592731b2b37",
+      "metrics": {
+        "evaluated_native_unique_pixels": 18432,
+        "f1": 0.9601275917065392,
+        "fn": 79,
+        "fp": 146,
+        "iou": 0.9233128834355828,
+        "kappa": 0.9529221034266152,
+        "oa": 0.98779296875,
+        "precision": 0.9488616462346761,
+        "recall": 0.9716642754662841,
+        "tn": 15498,
+        "tp": 2709
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3715097,
+        "covered_flops_g": 3.5693272,
+        "input_shapes": [
+          [
+            1,
+            3,
+            192,
+            192
+          ],
+          [
+            1,
+            3,
+            192,
+            192
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.dropout.Dropout2d",
+          "torch.nn.modules.linear.Identity",
+          "torch.nn.modules.normalization.GroupNorm"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "sample-matched075",
+      "seed": 0,
+      "parameters": 2785826,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-matched075/run0",
+      "result_sha256": "2c1a5f7b95f68f7b8e8b7fe7ec94ed8a5b8c6141de9f6ebbfa4ff3ff8fc596f3",
+      "metrics": {
+        "accuracy": 0.012987012987012988,
+        "confusion_matrix": [
+          [
+            0,
+            31,
+            1,
+            0,
+            0,
+            0,
+            26,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            49,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            34,
+            10,
+            0,
+            0,
+            0,
+            7,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            13,
+            0,
+            0,
+            0,
+            0,
+            40,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            38,
+            14,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            14,
+            34,
+            0,
+            0,
+            0,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            38,
+            20,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            28,
+            3,
+            0,
+            0,
+            0,
+            21,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            27,
+            8,
+            0,
+            0,
+            20,
+            2,
+            0,
+            0,
+            1
+          ]
+        ],
+        "macro_f1": 0.008020718189633996,
+        "macro_precision": 0.1029094827586207,
+        "macro_recall": 0.013081177118262349,
+        "per_class_recall": [
+          0,
+          0.019230769230769232,
+          0,
+          0,
+          0,
+          0,
+          0.09433962264150944,
+          0,
+          0,
+          0.017241379310344827
+        ]
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 2785826,
+        "covered_flops_g": 1.011933804,
+        "input_shapes": [
+          [
+            1,
+            3,
+            224,
+            224
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.linear.Identity"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "sample-matched075",
+      "seed": 1,
+      "parameters": 2785826,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-matched075/run1",
+      "result_sha256": "d8476af44c6f53cfdcfacaa4d0d6cba89f4dac6deacd96069a1d361ceaeb0e87",
+      "metrics": {
+        "accuracy": 0.022263450834879406,
+        "confusion_matrix": [
+          [
+            0,
+            29,
+            13,
+            6,
+            0,
+            0,
+            10,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            48,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            47,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            47,
+            3,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            22,
+            0,
+            0,
+            0,
+            0,
+            31,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            13,
+            40,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            17,
+            36,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            46,
+            14,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            49,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            31,
+            7,
+            0,
+            0,
+            12,
+            0,
+            0,
+            0,
+            8
+          ]
+        ],
+        "macro_f1": 0.026806526806526804,
+        "macro_precision": 0.10153846153846154,
+        "macro_recall": 0.021485411140583555,
+        "per_class_recall": [
+          0,
+          0.07692307692307693,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.13793103448275862
+        ]
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 2785826,
+        "covered_flops_g": 1.011933804,
+        "input_shapes": [
+          [
+            1,
+            3,
+            224,
+            224
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.linear.Identity"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "sample-matched075",
+      "seed": 2,
+      "parameters": 2785826,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-matched075/run2",
+      "result_sha256": "09590331468bfddc021a167f16da4ff4af36219980a2b72bac3679bf3e825e00",
+      "metrics": {
+        "accuracy": 0.07235621521335807,
+        "confusion_matrix": [
+          [
+            0,
+            56,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            39,
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            21,
+            0,
+            0,
+            0,
+            0,
+            28,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            38,
+            11,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            45,
+            6,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            28,
+            25,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            49,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            24,
+            36,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            52,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            15,
+            0,
+            0,
+            11,
+            32,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.021727019498607242,
+        "macro_precision": 0.012703583061889252,
+        "macro_recall": 0.075,
+        "per_class_recall": [
+          0,
+          0.75,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 2785826,
+        "covered_flops_g": 1.011933804,
+        "input_shapes": [
+          [
+            1,
+            3,
+            224,
+            224
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.linear.Identity"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "sample-full",
+      "seed": 0,
+      "parameters": 2788360,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-full/run0",
+      "result_sha256": "517ae2c55a9ffb24aa9a829d0ca5062025a787544e659ad165bb5d2d92a49ffb",
+      "metrics": {
+        "accuracy": 0.0037105751391465678,
+        "confusion_matrix": [
+          [
+            0,
+            14,
+            22,
+            0,
+            0,
+            0,
+            22,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            49,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            36,
+            10,
+            0,
+            0,
+            0,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            16,
+            0,
+            0,
+            0,
+            0,
+            37,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            16,
+            37,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            23,
+            29,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            18,
+            40,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            40,
+            1,
+            0,
+            0,
+            0,
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            17,
+            31,
+            0,
+            0,
+            10,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.0017279343161037506,
+        "macro_precision": 0.0011174579392577333,
+        "macro_recall": 0.0038098693759071114,
+        "per_class_recall": [
+          0,
+          0.019230769230769232,
+          0,
+          0,
+          0,
+          0,
+          0.018867924528301886,
+          0,
+          0,
+          0
+        ]
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 2788360,
+        "covered_flops_g": 1.015972972,
+        "input_shapes": [
+          [
+            1,
+            3,
+            224,
+            224
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.linear.Identity"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "sample-full",
+      "seed": 1,
+      "parameters": 2788360,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-full/run1",
+      "result_sha256": "0ba196827f6381075bc2f880440ff03856d97b1399eca301359a55ae13e36785",
+      "metrics": {
+        "accuracy": 0.00927643784786642,
+        "confusion_matrix": [
+          [
+            0,
+            36,
+            3,
+            0,
+            0,
+            0,
+            19,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            48,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            47,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            48,
+            1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            22,
+            0,
+            0,
+            0,
+            0,
+            31,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            36,
+            17,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            27,
+            26,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            59,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            46,
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            56,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.0041079997890629116,
+        "macro_precision": 0.003234846177276881,
+        "macro_recall": 0.009733124018838305,
+        "per_class_recall": [
+          0,
+          0.07692307692307693,
+          0.02040816326530612,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 2788360,
+        "covered_flops_g": 1.015972972,
+        "input_shapes": [
+          [
+            1,
+            3,
+            224,
+            224
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.linear.Identity"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "sample-full",
+      "seed": 2,
+      "parameters": 2788360,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-full/run2",
+      "result_sha256": "f75a5fec03bf3b9bc717d49065c6c2634a1ef833cacc3b78ac292d25c64038c8",
+      "metrics": {
+        "accuracy": 0.11688311688311688,
+        "confusion_matrix": [
+          [
+            0,
+            58,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            50,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            32,
+            13,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            39,
+            12,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            53,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            46,
+            7,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            21,
+            32,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            31,
+            29,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            52,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            11,
+            0,
+            0,
+            15,
+            24,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.039617898441427844,
+        "macro_precision": 0.02532051282051282,
+        "macro_recall": 0.12268445839874412,
+        "per_class_recall": [
+          0,
+          0.9615384615384616,
+          0.2653061224489796,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 2788360,
+        "covered_flops_g": 1.015972972,
+        "input_shapes": [
+          [
+            1,
+            3,
+            224,
+            224
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.linear.Identity"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "sample-original",
+      "seed": 0,
+      "parameters": 2853466,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-original/run0",
+      "result_sha256": "ef4b45a8dc3d56949a3046e9df611a9ce8d2d89ded1bf1ec0ff5addb786d0f28",
+      "metrics": {
+        "accuracy": 0.00927643784786642,
+        "confusion_matrix": [
+          [
+            0,
+            29,
+            0,
+            2,
+            0,
+            0,
+            27,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            49,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            43,
+            0,
+            1,
+            0,
+            0,
+            7,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            9,
+            0,
+            4,
+            0,
+            0,
+            40,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            33,
+            19,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            20,
+            25,
+            5,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            51,
+            8,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            23,
+            1,
+            2,
+            0,
+            0,
+            26,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            57,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.006031435289881977,
+        "macro_precision": 0.008982211626627544,
+        "macro_recall": 0.00954423859529298,
+        "per_class_recall": [
+          0,
+          0.019230769230769232,
+          0,
+          0.0196078431372549,
+          0,
+          0,
+          0.05660377358490566,
+          0,
+          0,
+          0
+        ]
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 2853466,
+        "covered_flops_g": 1.140475308,
+        "input_shapes": [
+          [
+            1,
+            3,
+            224,
+            224
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.linear.Identity"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "sample-original",
+      "seed": 1,
+      "parameters": 2853466,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-original/run1",
+      "result_sha256": "b0a6b999502410c128809b140a77393e0c9b1155c959b881038bf8830f02d1fa",
+      "metrics": {
+        "accuracy": 0.04823747680890538,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            56,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            12,
+            0,
+            0,
+            0,
+            40,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            9,
+            0,
+            0,
+            0,
+            40,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            45,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            35,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            51,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            53,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            54,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            7,
+            45,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            33,
+            0,
+            0,
+            3,
+            2,
+            0,
+            0,
+            17
+          ]
+        ],
+        "macro_f1": 0.047662141779788836,
+        "macro_precision": 0.08729007633587786,
+        "macro_recall": 0.04767769176636172,
+        "per_class_recall": [
+          0,
+          0,
+          0.1836734693877551,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.29310344827586204
+        ]
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 2853466,
+        "covered_flops_g": 1.140475308,
+        "input_shapes": [
+          [
+            1,
+            3,
+            224,
+            224
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.linear.Identity"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "sample-original",
+      "seed": 2,
+      "parameters": 2853466,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-original/run2",
+      "result_sha256": "2d0db3f98e21113fd6f2ffa0ec87fdda3bde706d3e456dd2267b1b3501fb6c88",
+      "metrics": {
+        "accuracy": 0.061224489795918366,
+        "confusion_matrix": [
+          [
+            0,
+            54,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            30,
+            2,
+            0,
+            0,
+            0,
+            20,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            13,
+            3,
+            0,
+            0,
+            0,
+            33,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            45,
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            50,
+            1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            38,
+            15,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            29,
+            24,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            54,
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            52,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            52,
+            0,
+            0,
+            0,
+            2,
+            4,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_f1": 0.0182477224268269,
+        "macro_precision": 0.012112277391201793,
+        "macro_recall": 0.06381475667189952,
+        "per_class_recall": [
+          0,
+          0.5769230769230769,
+          0.061224489795918366,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 2853466,
+        "covered_flops_g": 1.140475308,
+        "input_shapes": [
+          [
+            1,
+            3,
+            224,
+            224
+          ]
+        ],
+        "unregistered_leaf_module_types": [
+          "timm.layers.drop.DropPath",
+          "torch.nn.modules.activation.GELU",
+          "torch.nn.modules.activation.SiLU",
+          "torch.nn.modules.linear.Identity"
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "sample-resnet50",
+      "seed": 0,
+      "parameters": 23528522,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-resnet50/run0",
+      "result_sha256": "fccbd70b8e8b228dfe6fe37c4b141a0fec09aa5e504c62aa73d6ca67ef0a3e7c",
+      "metrics": {
+        "accuracy": 0.03710575139146568,
+        "confusion_matrix": [
+          [
+            0,
+            27,
+            14,
+            0,
+            0,
+            0,
+            17,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            7,
+            0,
+            0,
+            0,
+            41,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            46,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            50,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            3,
+            0,
+            0,
+            0,
+            25,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            46,
+            5,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            17,
+            34,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            31,
+            29,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            42,
+            9,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            47,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            9
+          ]
+        ],
+        "macro_f1": 0.04250594534658088,
+        "macro_precision": 0.20571803112272424,
+        "macro_recall": 0.036879167862530635,
+        "per_class_recall": [
+          0,
+          0.07692307692307693,
+          0.061224489795918366,
+          0,
+          0,
+          0.03773584905660377,
+          0.03773584905660377,
+          0,
+          0,
+          0.15517241379310345
+        ]
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 23528522,
+        "covered_flops_g": 8.263430144,
+        "input_shapes": [
+          [
+            1,
+            3,
+            224,
+            224
+          ]
+        ],
+        "unregistered_leaf_module_types": [],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "sample-resnet50",
+      "seed": 1,
+      "parameters": 23528522,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-resnet50/run1",
+      "result_sha256": "9c6311ca10c74fe7a8de34dc98aaf50240241399ae48df73bdc4a44a7fcbf06c",
+      "metrics": {
+        "accuracy": 0.027829313543599257,
+        "confusion_matrix": [
+          [
+            0,
+            33,
+            0,
+            0,
+            0,
+            0,
+            25,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            51,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            48,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            47,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            16,
+            0,
+            0,
+            0,
+            0,
+            37,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            51,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            38,
+            12,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            48,
+            12,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            44,
+            0,
+            0,
+            0,
+            0,
+            8,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            46,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            11
+          ]
+        ],
+        "macro_f1": 0.035034649286038874,
+        "macro_precision": 0.10201223776223775,
+        "macro_recall": 0.026548971522946795,
+        "per_class_recall": [
+          0,
+          0.019230769230769232,
+          0,
+          0,
+          0,
+          0,
+          0.05660377358490566,
+          0,
+          0,
+          0.1896551724137931
+        ]
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 23528522,
+        "covered_flops_g": 8.263430144,
+        "input_shapes": [
+          [
+            1,
+            3,
+            224,
+            224
+          ]
+        ],
+        "unregistered_leaf_module_types": [],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "sample-resnet50",
+      "seed": 2,
+      "parameters": 23528522,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-resnet50/run2",
+      "result_sha256": "585aea7e1be5599dab6a5f8d43b84bec2799115b24a07783650ceb7f8debddd6",
+      "metrics": {
+        "accuracy": 0.07606679035250463,
+        "confusion_matrix": [
+          [
+            0,
+            16,
+            20,
+            1,
+            0,
+            0,
+            19,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            13,
+            37,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            11,
+            37,
+            0,
+            0
+          ],
+          [
+            0,
+            43,
+            0,
+            5,
+            0,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            18,
+            0,
+            3,
+            0,
+            0,
+            28,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            11,
+            36,
+            0,
+            0,
+            3,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            13,
+            38,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            42,
+            15,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            38,
+            7,
+            2,
+            0,
+            0,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            29,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            29
+          ]
+        ],
+        "macro_f1": 0.09523001734502626,
+        "macro_precision": 0.23328372760366137,
+        "macro_recall": 0.07320177708238593,
+        "per_class_recall": [
+          0,
+          0.019230769230769232,
+          0.02040816326530612,
+          0.09803921568627451,
+          0,
+          0.05660377358490566,
+          0.03773584905660377,
+          0,
+          0,
+          0.5
+        ]
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 23528522,
+        "covered_flops_g": 8.263430144,
+        "input_shapes": [
+          [
+            1,
+            3,
+            224,
+            224
+          ]
+        ],
+        "unregistered_leaf_module_types": [],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ottawa-author-camixer",
+      "seed": 1,
+      "parameters": 34214,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run1",
+      "result_sha256": "8b104201361352dd193b1d6bb9a71312b5d60c0d6d77663b9fce45a1ea884de8",
+      "metrics": {
+        "TP": 14637,
+        "FP": 428,
+        "FN": 1412,
+        "TN": 85023,
+        "pixels": 101500,
+        "precision": 0.9715897776302689,
+        "recall": 0.9120194404635803,
+        "f1": 0.9408626341839686,
+        "iou": 0.8883291861382533,
+        "overall_accuracy": 0.981871921182266,
+        "kappa": 0.9301705072370456,
+        "percent_error": 1.812807881773399
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-camixer",
+      "seed": 0,
+      "parameters": 34214,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run0",
+      "result_sha256": "491ac5dd07c2f3e349b11922bffc2ac5d995ccd4b3627983736c3320e65a2a1e",
+      "metrics": {
+        "TP": 14963,
+        "FP": 634,
+        "FN": 1086,
+        "TN": 84817,
+        "pixels": 101500,
+        "precision": 0.9593511572738347,
+        "recall": 0.9323322325378528,
+        "f1": 0.9456487391771472,
+        "iou": 0.8969010369837559,
+        "overall_accuracy": 0.9830541871921182,
+        "kappa": 0.9356134652659875,
+        "percent_error": 1.6945812807881773
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-camixer",
+      "seed": 2,
+      "parameters": 34214,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run2",
+      "result_sha256": "731f10c38ed37a8df6bc6246abf14581b2d4f8a02ac27d20040535b14bc0fb4a",
+      "metrics": {
+        "TP": 14939,
+        "FP": 622,
+        "FN": 1110,
+        "TN": 84829,
+        "pixels": 101500,
+        "precision": 0.9600282758177495,
+        "recall": 0.9308368122624463,
+        "f1": 0.9452072129073078,
+        "iou": 0.896107012176834,
+        "overall_accuracy": 0.982935960591133,
+        "kappa": 0.9351044584363694,
+        "percent_error": 1.7064039408866996
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-wasnet",
+      "seed": 1,
+      "parameters": 7360,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run1",
+      "result_sha256": "c944f84a84100c3de345f4b4059988dc45ac398b8513b952b2530624a47f147b",
+      "metrics": {
+        "TP": 14658,
+        "FP": 601,
+        "FN": 1391,
+        "TN": 84850,
+        "pixels": 101500,
+        "precision": 0.9606134084802411,
+        "recall": 0.9133279332045611,
+        "f1": 0.9363740896895362,
+        "iou": 0.8803603603603604,
+        "overall_accuracy": 0.9803743842364532,
+        "kappa": 0.9247806516591865,
+        "percent_error": 1.9625615763546798
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-wasnet",
+      "seed": 0,
+      "parameters": 7360,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run0",
+      "result_sha256": "d4083e560e5dca49cc7095783ff13f6d1b1063151904bea46d6fc8378b3f5687",
+      "metrics": {
+        "TP": 14919,
+        "FP": 705,
+        "FN": 1130,
+        "TN": 84746,
+        "pixels": 101500,
+        "precision": 0.9548771121351767,
+        "recall": 0.9295906286996074,
+        "f1": 0.9420642187352003,
+        "iou": 0.8904739166766146,
+        "overall_accuracy": 0.9819211822660099,
+        "kappa": 0.9313559909808004,
+        "percent_error": 1.8078817733990147
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-wasnet",
+      "seed": 2,
+      "parameters": 7360,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run2",
+      "result_sha256": "b9c19073307ce78881d3834ed9288767c16ee6e0b25a6cd847e5599ed67e10d2",
+      "metrics": {
+        "TP": 14798,
+        "FP": 655,
+        "FN": 1251,
+        "TN": 84796,
+        "pixels": 101500,
+        "precision": 0.9576134083996635,
+        "recall": 0.9220512181444327,
+        "f1": 0.9394959050219034,
+        "iou": 0.8858955938697318,
+        "overall_accuracy": 0.9812216748768473,
+        "kappa": 0.9283867813551469,
+        "percent_error": 1.8778325123152708
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-lantnet",
+      "seed": 1,
+      "parameters": 24956,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run1",
+      "result_sha256": "49907c81bb3b7c076bba89f28f6b4c046a679226f7fe5130e442df6cb955c62e",
+      "metrics": {
+        "TP": 14911,
+        "FP": 628,
+        "FN": 1138,
+        "TN": 84823,
+        "pixels": 101500,
+        "precision": 0.9595855589162752,
+        "recall": 0.929092155274472,
+        "f1": 0.944092693427884,
+        "iou": 0.8941056544942136,
+        "overall_accuracy": 0.9826009852216748,
+        "kappa": 0.9337932112209073,
+        "percent_error": 1.7399014778325124
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-lantnet",
+      "seed": 0,
+      "parameters": 24956,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run0",
+      "result_sha256": "f3782cf67eab6dd0247a69797ecce01b1ecb8e3feec776eca47f999c29d81593",
+      "metrics": {
+        "TP": 14769,
+        "FP": 486,
+        "FN": 1280,
+        "TN": 84965,
+        "pixels": 101500,
+        "precision": 0.968141592920354,
+        "recall": 0.9202442519783164,
+        "f1": 0.9435854842831587,
+        "iou": 0.8931962503779861,
+        "overall_accuracy": 0.9826009852216748,
+        "kappa": 0.9333076858872779,
+        "percent_error": 1.7399014778325124
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-lantnet",
+      "seed": 2,
+      "parameters": 24956,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run2",
+      "result_sha256": "3cebd8f7529b1e5c77fe9ea6d469a6f687b191d489157f5ba4ed8f80262b9970",
+      "metrics": {
+        "TP": 14948,
+        "FP": 578,
+        "FN": 1101,
+        "TN": 84873,
+        "pixels": 101500,
+        "precision": 0.9627721241787969,
+        "recall": 0.9313975948657237,
+        "f1": 0.9468250197941409,
+        "iou": 0.8990196668070006,
+        "overall_accuracy": 0.9834581280788177,
+        "kappa": 0.9370338310264713,
+        "percent_error": 1.6541871921182265
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-ddnet",
+      "seed": 1,
+      "parameters": 6712,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run1",
+      "result_sha256": "210a7dd1081fedfa1180ae4d8c2bb288382c493bc13c43587948a3be8107099a",
+      "metrics": {
+        "TP": 14677,
+        "FP": 539,
+        "FN": 1372,
+        "TN": 84912,
+        "pixels": 101500,
+        "precision": 0.9645767613038907,
+        "recall": 0.9145118075892579,
+        "f1": 0.9388773388773389,
+        "iou": 0.8847962382445141,
+        "overall_accuracy": 0.9811724137931035,
+        "kappa": 0.9277590653774238,
+        "percent_error": 1.8827586206896552
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-ddnet",
+      "seed": 0,
+      "parameters": 6712,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run0",
+      "result_sha256": "854bd3ee844be6eb61d66cabbb87e1a6c7cb6737edcda93fcb397a10800fb002",
+      "metrics": {
+        "TP": 14948,
+        "FP": 680,
+        "FN": 1101,
+        "TN": 84771,
+        "pixels": 101500,
+        "precision": 0.9564883542359867,
+        "recall": 0.9313975948657237,
+        "f1": 0.9437762414370048,
+        "iou": 0.8935381672544683,
+        "overall_accuracy": 0.9824532019704434,
+        "kappa": 0.9333828484902077,
+        "percent_error": 1.7546798029556652
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-ddnet",
+      "seed": 2,
+      "parameters": 6712,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run2",
+      "result_sha256": "9e5a71965f6b3383f659d8cbaa53a78e0d576cd57cc07fb92020c46031b5bb27",
+      "metrics": {
+        "TP": 15063,
+        "FP": 654,
+        "FN": 986,
+        "TN": 84797,
+        "pixels": 101500,
+        "precision": 0.9583890055354075,
+        "recall": 0.9385631503520468,
+        "f1": 0.9483724737140339,
+        "iou": 0.9018140453810692,
+        "overall_accuracy": 0.9838423645320197,
+        "kappa": 0.9387961767725457,
+        "percent_error": 1.6157635467980298
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-wbanet",
+      "seed": 1,
+      "parameters": 7159,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run1",
+      "result_sha256": "30229e74de4860e8355589474425efb35b2645327af78f15ca91091ec3fbc7e8",
+      "metrics": {
+        "TP": 14657,
+        "FP": 591,
+        "FN": 1392,
+        "TN": 84860,
+        "pixels": 101500,
+        "precision": 0.9612408184679958,
+        "recall": 0.9132656240264191,
+        "f1": 0.9366392945010704,
+        "iou": 0.8808293269230769,
+        "overall_accuracy": 0.9804630541871922,
+        "kappa": 0.9250992252873522,
+        "percent_error": 1.9536945812807884
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-wbanet",
+      "seed": 0,
+      "parameters": 7159,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run0",
+      "result_sha256": "23f6aef329afa74d9a4e9e812662ae34a7a8a0705d1559780fff7d97f2968f9f",
+      "metrics": {
+        "TP": 14776,
+        "FP": 545,
+        "FN": 1273,
+        "TN": 84906,
+        "pixels": 101500,
+        "precision": 0.9644279094053912,
+        "recall": 0.9206804162253099,
+        "f1": 0.9420465412814791,
+        "iou": 0.8904423285524888,
+        "overall_accuracy": 0.982088669950739,
+        "kappa": 0.9314607342800705,
+        "percent_error": 1.7911330049261085
+      },
+      "complexity": null
+    },
+    {
+      "job": "ottawa-author-wbanet",
+      "seed": 2,
+      "parameters": 7159,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run2",
+      "result_sha256": "36db8d2930897ef091d6d43d550d00070426b68bb18ee6e84cb66d15be9249c8",
+      "metrics": {
+        "TP": 14632,
+        "FP": 523,
+        "FN": 1417,
+        "TN": 84928,
+        "pixels": 101500,
+        "precision": 0.9654899373144177,
+        "recall": 0.9117078945728706,
+        "f1": 0.9378284835277528,
+        "iou": 0.8829350712044413,
+        "overall_accuracy": 0.9808866995073892,
+        "kappa": 0.9265469715666278,
+        "percent_error": 1.9113300492610836
+      },
+      "complexity": null
+    },
+    {
+      "job": "sadd-full",
+      "seed": 0,
+      "parameters": 5920441,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-full/run0",
+      "result_sha256": "972524c16812810789a6d35ba58d3081243ab4c08f4c0113ce16adf98b09c410",
+      "metrics": {
+        "AP50": 0.9697306865640686,
+        "AP50_95": 0.5288278551805604,
+        "AP75": 0.5206870642296147,
+        "P": 0.9410593609166427,
+        "R": 0.938148536117968
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 5920441,
+        "covered_flops_g": 16.8984768,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true
+      }
+    },
+    {
+      "job": "sadd-matched075",
+      "seed": 0,
+      "parameters": 5917907,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-matched075/run0",
+      "result_sha256": "e297e729bee1d47453a7fce4239af163a28fff66a25e83d72dcea82c82e5d58f",
+      "metrics": {
+        "AP50": 0.9718484798944667,
+        "AP50_95": 0.5359649563147174,
+        "AP75": 0.5303826283402764,
+        "P": 0.949142916864502,
+        "R": 0.9356984478935698
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 5917907,
+        "covered_flops_g": 16.865504,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true
+      }
+    },
+    {
+      "job": "sadd-yolov8n",
+      "seed": 0,
+      "parameters": 3011043,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-yolov8n/run0",
+      "result_sha256": "ef2c13019e019bad246eaf6c4cfa8de597b56c57d3535cccadcbeb0fe3283477",
+      "metrics": {
+        "AP50": 0.9721137225940194,
+        "AP50_95": 0.5420072884615491,
+        "AP75": 0.5479661223302197,
+        "P": 0.9566291990642454,
+        "R": 0.9047767606142012
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3011043,
+        "covered_flops_g": 8.1941504,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true
+      }
+    },
+    {
+      "job": "sadd-yolov8s",
+      "seed": 0,
+      "parameters": 11135987,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-yolov8s/run0",
+      "result_sha256": "c464526890fa3a558670258b00524bdc98e825b7171e80fcdd4f7ae087fbf036",
+      "metrics": {
+        "AP50": 0.9885423822933403,
+        "AP50_95": 0.5706316013230638,
+        "AP75": 0.6121654205938418,
+        "P": 0.9719529410943419,
+        "R": 0.9604870465380194
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 11135987,
+        "covered_flops_g": 28.6469632,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true
+      }
+    },
+    {
+      "job": "ssdd-yolov8n",
+      "seed": 2,
+      "parameters": 3011043,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-yolov8n/run2",
+      "result_sha256": "406d468a6084a4c39464e82490404b2b4c83ccd20c7e1040599895a0086d1471",
+      "metrics": {
+        "AP50": 0.8562658084529795,
+        "AP50_95": 0.39130768928438486,
+        "AP75": 0.2742834210541887,
+        "P": 0.9125218683763223,
+        "R": 0.7833132285203132
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3011043,
+        "covered_flops_g": 8.1941504,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ssdd-yolov8n",
+      "seed": 1,
+      "parameters": 3011043,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-yolov8n/run1",
+      "result_sha256": "87ad8798cbe28235a2fb1c13c3131349203adf7ce6274c86043ee098ddf7761f",
+      "metrics": {
+        "AP50": 0.8425011890924525,
+        "AP50_95": 0.3809893781260671,
+        "AP75": 0.28766815317047023,
+        "P": 0.8753303709411243,
+        "R": 0.7802197802197802
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3011043,
+        "covered_flops_g": 8.1941504,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ssdd-yolov8n",
+      "seed": 0,
+      "parameters": 3011043,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-yolov8n/run0",
+      "result_sha256": "d21806fc1932535d3c23dfcb874d97a84036100a8fe2b26292a61384eac7be26",
+      "metrics": {
+        "AP50": 0.8323355847064412,
+        "AP50_95": 0.39175859260113394,
+        "AP75": 0.3029887994757052,
+        "P": 0.8983610562607071,
+        "R": 0.7545787545787546
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 3011043,
+        "covered_flops_g": 8.1941504,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ssdd-original",
+      "seed": 1,
+      "parameters": 5985547,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-original/run1",
+      "result_sha256": "eb2d84fe7f98fcd9dc23bdb3d77ed5ee592450826993a57acdaa559bdc8d6095",
+      "metrics": {
+        "AP50": 0.8446613933542485,
+        "AP50_95": 0.39941178075473055,
+        "AP75": 0.3228960601669791,
+        "P": 0.8893179299127606,
+        "R": 0.7652279265521919
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 5985547,
+        "covered_flops_g": 17.9148224,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ssdd-original",
+      "seed": 0,
+      "parameters": 5985547,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/ssdd-original/run0",
+      "result_sha256": "0c820e672ca1366f796455989bfbca2bf4d99de5be706693b163a41c748ac73e",
+      "metrics": {
+        "AP50": 0.8727905115239611,
+        "AP50_95": 0.4371379259532346,
+        "AP75": 0.3982832986633547,
+        "P": 0.9107657570324837,
+        "R": 0.7655677655677655
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 5985547,
+        "covered_flops_g": 17.9148224,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ssdd-full",
+      "seed": 1,
+      "parameters": 5920441,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f1/jobs/ssdd-full/run1",
+      "result_sha256": "5285fc1e94d8f2c55e9b72b526e65819d81c3c480377371f82f75337f51bd5ec",
+      "metrics": {
+        "AP50": 0.866750322344553,
+        "AP50_95": 0.42702589721347417,
+        "AP75": 0.33768811708296076,
+        "P": 0.9217570083408401,
+        "R": 0.776749653477744
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 5920441,
+        "covered_flops_g": 16.8984768,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ssdd-full",
+      "seed": 0,
+      "parameters": 5920441,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f1/jobs/ssdd-full/run0",
+      "result_sha256": "d3b23695ef1e54e7c606452418dcfe2fdcbfe7c4e4963214faf203f32c6bc6a3",
+      "metrics": {
+        "AP50": 0.8552259754643378,
+        "AP50_95": 0.41727055659235174,
+        "AP75": 0.3286050090471538,
+        "P": 0.8961146025617859,
+        "R": 0.7741283368735788
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 5920441,
+        "covered_flops_g": 16.8984768,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ssdd-matched075",
+      "seed": 1,
+      "parameters": 5917907,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f1/jobs/ssdd-matched075/run1",
+      "result_sha256": "46853033c69d37d5fe4ad05c2e74b57986daeefd3fafbcc0b8006938502af0b0",
+      "metrics": {
+        "AP50": 0.8606077831863267,
+        "AP50_95": 0.4259739757607017,
+        "AP75": 0.3711868266836301,
+        "P": 0.8869628982535632,
+        "R": 0.7728937728937729
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 5917907,
+        "covered_flops_g": 16.865504,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    },
+    {
+      "job": "ssdd-matched075",
+      "seed": 0,
+      "parameters": 5917907,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f1/jobs/ssdd-matched075/run0",
+      "result_sha256": "f2277a8ec3eeaa1d7feadff6cf7879a08eb6f0f742b9d4da91554da40964181d",
+      "metrics": {
+        "AP50": 0.8675713667563578,
+        "AP50_95": 0.433977405179366,
+        "AP75": 0.3513125086031944,
+        "P": 0.9211955102063182,
+        "R": 0.7417582417582418
+      },
+      "complexity": {
+        "status": "PASS",
+        "parameters": 5917907,
+        "covered_flops_g": 16.865504,
+        "input_shapes": [
+          [
+            1,
+            3,
+            640,
+            640
+          ]
+        ],
+        "finite_forward": true,
+        "error": null
+      }
+    }
+  ]
+}

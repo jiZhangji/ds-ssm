@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "host_label": "F",
+  "hostname": "powerleader-a6000-f",
+  "started_at": "2026-10-13T12:21:14.847246+08:00",
+  "source_root": "/home/powerleader/ig-ds-ssm",
+  "mode": "read_only_snapshot",
+  "limitations": [
+    "Not an atomic cross-server snapshot.",
+    "Live files may be prefixes of running logs.",
+    "Model binaries and dataset payloads are inventoried, not uploaded.",
+    "Snapshot existence does not verify experiment completion."
+  ],
+  "gpu": "0, NVIDIA RTX A6000, 17779 MiB, 100 %\n1, NVIDIA RTX A6000, 16290 MiB, 100 %",
+  "disk": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/nvme0n1p2  1.8T  1.6T  197G  89% /",
+  "roots": [
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1945_f/audited_rows.json",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/lanes/f0_seed0/logs/sar_shipdataset_original_seed0.log",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/lanes/f1_seed0/logs/sar_shipdataset_matched_scale075_seed0.log",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f0/jobs/sar_ship-original/run0/verified_data_records.json",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f1/jobs/sar_ship-matched075/run0/verified_data_records.json"
+  ],
+  "excluded_dirs": [],
+  "excluded_counts": {},
+  "included_count": 5,
+  "supplement_of": "/home/powerleader/codex_tasks/mamba_github_backup_20261013_v1/snapshot/warnings.json",
+  "finished_at": "2026-10-13T12:21:37.088733+08:00",
+  "included_bytes": 270610102,
+  "model_inventory_count": 0,
+  "model_inventory_bytes": 0,
+  "live_changed_count": 0
+}

@@ -1,0 +1,193 @@
+{
+  "key": "f0",
+  "host": "powerleader-a6000-f",
+  "dataset": "SSDD",
+  "seed": 0,
+  "gpu_index": 0,
+  "gpu_uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+  "source_lane": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0",
+  "code": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code",
+  "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed0",
+  "predecessor_state": "/home/powerleader/codex_sar_agent_final_v1p1_20261008/results/final/study_v1_1/model_runs_dist/a6000_f_gpu0/frozen_queue_state.json",
+  "variants": [
+    "original",
+    "matched_identity",
+    "matched_scale075",
+    "local_energy",
+    "local_energy_input",
+    "local_energy_delta",
+    "full",
+    "full_fixed_half",
+    "residual_scale075",
+    "energy_only",
+    "guidance_only",
+    "global"
+  ],
+  "epochs": 150,
+  "patience": 30,
+  "predecessor_signature": "14de300c33b89607fa2b859015020180064a3c289a7b3600e9ca91c4f14b1608",
+  "pending": [
+    "matched_scale075",
+    "local_energy",
+    "local_energy_input",
+    "local_energy_delta",
+    "full",
+    "full_fixed_half",
+    "residual_scale075",
+    "energy_only",
+    "guidance_only",
+    "global"
+  ],
+  "source_completed": [
+    {
+      "variant": "original",
+      "seed": 0,
+      "precision": 0.9299375697662661,
+      "recall": 0.7765567765567766,
+      "ap50": 0.8608423679429338,
+      "ap75": 0.3819614681597156,
+      "ap50_95": 0.4381124085462885,
+      "weights_sha256": "9cdeb017197f755471eb38f191a2cb02704ecc414f4c72754c5edf0471bbe3b1",
+      "evidence": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/eval_test.json"
+    },
+    {
+      "variant": "matched_identity",
+      "seed": 0,
+      "precision": 0.8980150759210106,
+      "recall": 0.7902265354206068,
+      "ap50": 0.8566719468579562,
+      "ap75": 0.29514895976486777,
+      "ap50_95": 0.4071742064238097,
+      "weights_sha256": "e39aa2e33704f95772a1a15b21f7afa9442f832204dbb099150690deda5ace03",
+      "evidence": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity/eval_test.json"
+    }
+  ],
+  "checkpoint": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_scale075/weights/last.pt",
+    "sha256": "3b781196effbc1e7579d21cbb44af4d1328e0df506ce7e574e295ba1bbdb3bf1",
+    "completed_epoch": 31,
+    "optimizer_present": true,
+    "controls": [
+      {
+        "name": "model.3",
+        "control": "matched_scale075",
+        "lambda_s": 0.0,
+        "alpha": 0.0,
+        "beta_i": 1.0,
+        "rho_i": 1.0,
+        "eta_i": 0.0999755859375,
+        "buffer_scalars": [
+          "lambda_s",
+          "alpha",
+          "beta_i",
+          "rho_i",
+          "eta_i"
+        ],
+        "min_retain": 0.5,
+        "input_path": false,
+        "delta_path": false,
+        "fixed_importance": null
+      }
+    ],
+    "zip_crc": "PASS",
+    "resume_semantics": "legacy EMA/FP16 optimizer; no bitwise/RNG replay guarantee",
+    "variant": "matched_scale075",
+    "best": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_scale075/weights/best.pt",
+      "sha256": "197259cb0e21880020d6822512415faf5a1f01ef4b6fbcc42d595e5461eb8bb2",
+      "completed_epoch": 23,
+      "optimizer_present": true,
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "matched_scale075",
+          "lambda_s": 0.0,
+          "alpha": 0.0,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.0999755859375,
+          "buffer_scalars": [
+            "lambda_s",
+            "alpha",
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "min_retain": 0.5,
+          "input_path": false,
+          "delta_path": false,
+          "fixed_importance": null
+        }
+      ],
+      "zip_crc": "PASS",
+      "resume_semantics": "legacy EMA/FP16 optimizer; no bitwise/RNG replay guarantee"
+    }
+  },
+  "record_cleanup": [
+    {
+      "file": "controls_by_epoch.jsonl",
+      "source_sha256": "67dc3c0272387c5a59a1737cf4e4323db5a0348cb3948719c6790eb39b850334",
+      "derived_sha256": "ba27c3e6069a7335c512b2df426f906676c8c05bccb79b8238b3d1bd575e77db",
+      "trailing_nul_bytes": 396,
+      "retained_through_epoch": 31
+    },
+    {
+      "file": "results.csv",
+      "source_sha256": "f8e51de6c63cef587b8afba4ecafde3db1b97124c6f65af7924809c919b626f9",
+      "derived_sha256": "567a1a4b1bca31e78acf3ed58b90ab5a38b98daab094ec0da540e88eac4c8b5a",
+      "trailing_nul_bytes": 336,
+      "retained_through_epoch": 31
+    }
+  ],
+  "protocol_sha256": "f527dc1084569e85bc2f4e16c8b5843a272f453515a0f53665a9bcc863db3e0c",
+  "prepared_unix": 1791461087.7454858,
+  "original_artifacts": {
+    "runs/matched_identity/args.yaml": "d9e9a2f486ce96d232093d4475bb0a4834e3b1542b806e50fac21f2dd7d60b63",
+    "runs/matched_identity/eval_test.per_class.csv": "db9df37587977a3820a6585b737c39d5966bc9a13a1870f004eba176297ab7c0",
+    "runs/matched_identity/controls_by_epoch.jsonl": "4ebbe7bc361a346a9d76f00b1f25d1f17409f37779cc51879bd7e52a49268051",
+    "runs/matched_identity/train_complete.json": "99eb6f5ac5b0f3f1707a53c601e5c96d83a406d401b17efa69d27dc35000a18f",
+    "runs/matched_identity/results.csv": "0d3cd2960645281d86af72639d348b9d2d60f8de56dfde460d4065feb0f26b51",
+    "runs/matched_identity/eval_test.json": "bbbac3397c212d3564bd1a1830898b192e363b75aa9172a5218bfec5e92a686a",
+    "runs/matched_identity/runtime_audit.json": "c2e2e43f474ee4343df93ae4f54c34c5edff0f27f5dd3fd794d1326a997a2d0e",
+    "runs/matched_identity/weights/last.pt": "e1445322dd4811aa5228355f7d33f1410f17a20ab849446b54b030a6dc874973",
+    "runs/matched_identity/weights/best.pt": "e39aa2e33704f95772a1a15b21f7afa9442f832204dbb099150690deda5ace03",
+    "runs/original/args.yaml": "e3bdcab451bef5aea6f9af08763d9470b5e9d594f4df7fc16808faf036d00543",
+    "runs/original/eval_test.per_class.csv": "b19cd5ba89591492534a852c6b457701f9c6e69dddce31ee9b0e3aa312387121",
+    "runs/original/controls_by_epoch.jsonl": "e1fdadcfd2559c11a93b359f0b750ab3394c93cfa24e2b6395487333c5ec4570",
+    "runs/original/train_complete.json": "6d2e129c255b385f412ed508ed66d936f57d24683fe14f01206b5a994907b0f9",
+    "runs/original/results.csv": "d9b53e011bb60b14f9e3b8a77a53d62e537303525eaa38d7ed98cc8a58a202ce",
+    "runs/original/eval_test.json": "75f11b851fb46602481df46d3e416354a3d8a69597cc3a4caa6cac67983243ac",
+    "runs/original/runtime_audit.json": "0baf985eb55b8c178e0f46c5abf887a62aba6aa4e998a3e6de9abad458f004ab",
+    "runs/original/weights/last.pt": "2e6c731eb3fe7d614d5c7c453606c6d25428626a83af09e6dce24b99b8e6a2ba",
+    "runs/original/weights/best.pt": "9cdeb017197f755471eb38f191a2cb02704ecc414f4c72754c5edf0471bbe3b1",
+    "runs/matched_scale075/args.yaml": "a05aa7678c3450355bcad7529433d5ab8e77a8b9ebbe2d24bb1b7f4dc3b0d0fe",
+    "runs/matched_scale075/controls_by_epoch.jsonl": "67dc3c0272387c5a59a1737cf4e4323db5a0348cb3948719c6790eb39b850334",
+    "runs/matched_scale075/results.csv": "f8e51de6c63cef587b8afba4ecafde3db1b97124c6f65af7924809c919b626f9",
+    "runs/matched_scale075/runtime_audit.json": "f8fc3a041e8754356df57efebd2260962f6f3bb29a375cc4b3bd2edec9463df4",
+    "runs/matched_scale075/weights/last.pt": "3b781196effbc1e7579d21cbb44af4d1328e0df506ce7e574e295ba1bbdb3bf1",
+    "runs/matched_scale075/weights/best.pt": "197259cb0e21880020d6822512415faf5a1f01ef4b6fbcc42d595e5461eb8bb2"
+  },
+  "runner_sha256": "e20d0205b7803525e147dccccdb476a34f7b0bf54740804c21524ab46bce8ec1",
+  "redirect_sha256": "3afdc6f6ce4099836d837969b253ff763dc07fb5101dd2dc599ebf4b03bb2920",
+  "csv_reconstruction": {
+    "status": "PASS",
+    "key": "f0",
+    "checked_unix": 1791461197.6456337,
+    "original_artifacts_unchanged": 24,
+    "frozen_code_files_verified": 248,
+    "optimizer_tensors_finite": 1167,
+    "checkpoint_epoch": 31,
+    "csv_source": "checkpoint.train_results",
+    "previous_csv_rows": 30,
+    "restored_csv_rows": 31,
+    "csv_before_sha256": "567a1a4b1bca31e78acf3ed58b90ab5a38b98daab094ec0da540e88eac4c8b5a",
+    "csv_after_sha256": "775963fb64c69ecbc8e840423ad7256c802fbfb781a78b3e631f6b8d9359b109",
+    "missing_historical_control_epochs": [
+      31
+    ],
+    "missing_audit_policy": "No synthetic values; retain explicit gap, continue future real audits",
+    "gpu_training_executed": false,
+    "verifier_sha256": "ed0cb71e71818dfb0d61610d9f944a8d875370cc9e1d53f28d15abcef37191c8"
+  },
+  "wrapper_fix_20261009": "Respect frozen SSDD CLI: fixed internal epochs=150/patience=30/batch=16"
+}

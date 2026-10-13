@@ -1,0 +1,92 @@
+
+ _   .-')                _ .-') _     ('-.             .-')                              _ (`-.    ('-.
+( '.( OO )_             ( (  OO) )  _(  OO)           ( OO ).                           ( (OO  ) _(  OO)
+ ,--.   ,--.).-'),-----. \     .'_ (,------.,--.     (_)---\_)   .-----.  .-'),-----.  _.`     \(,------.
+ |   `.'   |( OO'  .-.  ',`'--..._) |  .---'|  |.-') /    _ |   '  .--./ ( OO'  .-.  '(__...--'' |  .---'
+ |         |/   |  | |  ||  |  \  ' |  |    |  | OO )\  :` `.   |  |('-. /   |  | |  | |  /  | | |  |
+ |  |'.'|  |\_) |  |\|  ||  |   ' |(|  '--. |  |`-' | '..`''.) /_) |OO  )\_) |  |\|  | |  |_.' |(|  '--.
+ |  |   |  |  \ |  | |  ||  |   / : |  .--'(|  '---.'.-._)   \ ||  |`-'|   \ |  | |  | |  .___.' |  .--'
+ |  |   |  |   `'  '-'  '|  '--'  / |  `---.|      | \       /(_'  '--'\    `'  '-'  ' |  |      |  `---.
+ `--'   `--'     `-----' `-------'  `------'`------'  `-----'    `-----'      `-----'  `--'      `------'
+
+2026-08-26 23:26:45,941 | INFO    | modelscope_hub.download | Downloading 7 files from shimian123/ds-ssm-workspace-backup@master
+Downloading snapshot of shimian123/ds-ssm-workspace-backup (dataset)…
+Downloading:   0%|          | 0/7 [00:00<?, ?file/s]
+Farmland_data.zip:   0%|          | 0.00/262k [00:00<?, ?B/s][A
+                                                             [ADownloading:  14%|█▍        | 1/7 [00:03<00:23,  3.98s/file]
+Ottawa_data.zip:   0%|          | 0.00/254k [00:00<?, ?B/s][A
+                                                           [ADownloading:  29%|██▊       | 2/7 [00:05<00:13,  2.80s/file]
+SAMPLE_dataset_public.zip:   0%|          | 0.00/71.8M [00:00<?, ?B/s][A
+SAMPLE_dataset_public.zip:   1%|▏         | 1.05M/71.8M [00:00<00:11, 6.29MB/s][A
+SAMPLE_dataset_public.zip:   4%|▍         | 3.15M/71.8M [00:00<00:05, 11.6MB/s][A
+SAMPLE_dataset_public.zip:   7%|▋         | 5.24M/71.8M [00:00<00:07, 8.62MB/s][A
+SAMPLE_dataset_public.zip:  10%|█         | 7.34M/71.8M [00:00<00:06, 10.5MB/s][A
+SAMPLE_dataset_public.zip:  13%|█▎        | 9.44M/71.8M [00:01<00:07, 8.45MB/s][A
+SAMPLE_dataset_public.zip:  16%|█▌        | 11.5M/71.8M [00:01<00:06, 9.89MB/s][A
+SAMPLE_dataset_public.zip:  19%|█▉        | 13.6M/71.8M [00:01<00:07, 7.99MB/s][A
+SAMPLE_dataset_public.zip:  22%|██▏       | 15.7M/71.8M [00:01<00:05, 9.45MB/s][A
+SAMPLE_dataset_public.zip:  25%|██▍       | 17.8M/71.8M [00:01<00:05, 9.24MB/s][A
+SAMPLE_dataset_public.zip:  28%|██▊       | 19.9M/71.8M [00:02<00:06, 7.64MB/s][A
+SAMPLE_dataset_public.zip:  29%|██▉       | 21.0M/71.8M [00:02<00:07, 6.89MB/s][A
+SAMPLE_dataset_public.zip:  31%|███       | 22.0M/71.8M [00:02<00:06, 7.35MB/s][A
+SAMPLE_dataset_public.zip:  32%|███▏      | 23.1M/71.8M [00:02<00:07, 6.60MB/s][A
+SAMPLE_dataset_public.zip:  34%|███▎      | 24.1M/71.8M [00:03<00:07, 6.65MB/s][A
+SAMPLE_dataset_public.zip:  35%|███▌      | 25.2M/71.8M [00:03<00:07, 6.42MB/s][A
+SAMPLE_dataset_public.zip:  37%|███▋      | 26.2M/71.8M [00:03<00:07, 6.40MB/s][A
+SAMPLE_dataset_public.zip:  38%|███▊      | 27.3M/71.8M [00:03<00:07, 5.87MB/s][A
+SAMPLE_dataset_public.zip:  39%|███▉      | 28.3M/71.8M [00:03<00:07, 5.96MB/s][A
+SAMPLE_dataset_public.zip:  41%|████      | 29.4M/71.8M [00:03<00:07, 5.86MB/s][A
+SAMPLE_dataset_public.zip:  42%|████▏     | 30.4M/71.8M [00:04<00:07, 5.71MB/s][A
+SAMPLE_dataset_public.zip:  44%|████▍     | 31.5M/71.8M [00:04<00:06, 6.23MB/s][A
+SAMPLE_dataset_public.zip:  45%|████▌     | 32.5M/71.8M [00:04<00:06, 6.30MB/s][A
+SAMPLE_dataset_public.zip:  47%|████▋     | 33.6M/71.8M [00:04<00:06, 5.94MB/s][A
+SAMPLE_dataset_public.zip:  48%|████▊     | 34.6M/71.8M [00:04<00:06, 5.69MB/s][A
+SAMPLE_dataset_public.zip:  50%|████▉     | 35.7M/71.8M [00:05<00:06, 5.77MB/s][A
+SAMPLE_dataset_public.zip:  51%|█████     | 36.7M/71.8M [00:05<00:05, 5.88MB/s][A
+SAMPLE_dataset_public.zip:  53%|█████▎    | 37.7M/71.8M [00:05<00:05, 6.25MB/s][A
+SAMPLE_dataset_public.zip:  54%|█████▍    | 38.8M/71.8M [00:05<00:05, 6.06MB/s][A
+SAMPLE_dataset_public.zip:  55%|█████▌    | 39.8M/71.8M [00:05<00:05, 6.02MB/s][A
+SAMPLE_dataset_public.zip:  57%|█████▋    | 40.9M/71.8M [00:05<00:05, 5.86MB/s][A
+SAMPLE_dataset_public.zip:  58%|█████▊    | 41.9M/71.8M [00:06<00:05, 5.78MB/s][A
+SAMPLE_dataset_public.zip:  60%|█████▉    | 43.0M/71.8M [00:06<00:05, 5.76MB/s][A
+SAMPLE_dataset_public.zip:  61%|██████▏   | 44.0M/71.8M [00:06<00:04, 5.82MB/s][A
+SAMPLE_dataset_public.zip:  63%|██████▎   | 45.1M/71.8M [00:06<00:04, 5.87MB/s][A
+SAMPLE_dataset_public.zip:  64%|██████▍   | 46.1M/71.8M [00:06<00:04, 5.98MB/s][A
+SAMPLE_dataset_public.zip:  66%|██████▌   | 47.2M/71.8M [00:06<00:04, 6.12MB/s][A
+SAMPLE_dataset_public.zip:  67%|██████▋   | 48.2M/71.8M [00:07<00:03, 6.25MB/s][A
+SAMPLE_dataset_public.zip:  69%|██████▊   | 49.3M/71.8M [00:07<00:03, 5.73MB/s][A
+SAMPLE_dataset_public.zip:  70%|███████   | 50.3M/71.8M [00:07<00:03, 5.95MB/s][A
+SAMPLE_dataset_public.zip:  72%|███████▏  | 51.4M/71.8M [00:07<00:03, 6.18MB/s][A
+SAMPLE_dataset_public.zip:  73%|███████▎  | 52.4M/71.8M [00:07<00:03, 5.07MB/s][A
+SAMPLE_dataset_public.zip:  74%|███████▍  | 53.5M/71.8M [00:08<00:03, 5.16MB/s][A
+SAMPLE_dataset_public.zip:  76%|███████▌  | 54.5M/71.8M [00:08<00:03, 5.23MB/s][A
+SAMPLE_dataset_public.zip:  77%|███████▋  | 55.6M/71.8M [00:08<00:03, 5.29MB/s][A
+SAMPLE_dataset_public.zip:  79%|███████▉  | 56.6M/71.8M [00:08<00:02, 5.35MB/s][A
+SAMPLE_dataset_public.zip:  80%|████████  | 57.7M/71.8M [00:08<00:02, 5.46MB/s][A
+SAMPLE_dataset_public.zip:  82%|████████▏ | 58.7M/71.8M [00:09<00:02, 5.60MB/s][A
+SAMPLE_dataset_public.zip:  83%|████████▎ | 59.8M/71.8M [00:09<00:02, 5.74MB/s][A
+SAMPLE_dataset_public.zip:  85%|████████▍ | 60.8M/71.8M [00:09<00:01, 5.84MB/s][A
+SAMPLE_dataset_public.zip:  86%|████████▌ | 61.9M/71.8M [00:09<00:01, 5.88MB/s][A
+SAMPLE_dataset_public.zip:  88%|████████▊ | 62.9M/71.8M [00:09<00:01, 6.02MB/s][A
+SAMPLE_dataset_public.zip:  89%|████████▉ | 64.0M/71.8M [00:09<00:01, 6.21MB/s][A
+SAMPLE_dataset_public.zip:  91%|█████████ | 65.0M/71.8M [00:10<00:01, 6.40MB/s][A
+SAMPLE_dataset_public.zip:  92%|█████████▏| 66.1M/71.8M [00:10<00:00, 6.54MB/s][A
+SAMPLE_dataset_public.zip:  93%|█████████▎| 67.1M/71.8M [00:10<00:00, 6.43MB/s][A
+SAMPLE_dataset_public.zip:  95%|█████████▍| 68.2M/71.8M [00:10<00:00, 5.87MB/s][A
+SAMPLE_dataset_public.zip:  96%|█████████▋| 69.2M/71.8M [00:10<00:00, 6.26MB/s][A
+SAMPLE_dataset_public.zip:  98%|█████████▊| 70.3M/71.8M [00:10<00:00, 6.54MB/s][A
+SAMPLE_dataset_public.zip:  99%|█████████▉| 71.3M/71.8M [00:10<00:00, 6.89MB/s][A
+                                                                               [ADownloading:  43%|████▎     | 3/7 [00:18<00:28,  7.20s/file]
+SAR_ACD.zip:   0%|          | 0.00/4.53M [00:00<?, ?B/s][A
+SAR_ACD.zip:  23%|██▎       | 1.05M/4.53M [00:00<00:00, 4.46MB/s][A
+SAR_ACD.zip:  46%|████▋     | 2.10M/4.53M [00:00<00:00, 5.22MB/s][A
+SAR_ACD.zip:  69%|██████▉   | 3.15M/4.53M [00:00<00:00, 5.61MB/s][A
+SAR_ACD.zip:  93%|█████████▎| 4.19M/4.53M [00:00<00:00, 5.87MB/s][A
+                                                                 [ADownloading:  57%|█████▋    | 4/7 [00:21<00:16,  5.45s/file]
+SHA256SUMS.txt:   0%|          | 0.00/515 [00:00<?, ?B/s][A
+                                                         [ADownloading:  71%|███████▏  | 5/7 [00:23<00:08,  4.35s/file]
+Sulzberger_data.zip:   0%|          | 0.00/157k [00:00<?, ?B/s][A
+                                                               [ADownloading:  86%|████████▌ | 6/7 [00:26<00:03,  3.79s/file]
+Yellowriver_data.zip:   0%|          | 0.00/148k [00:00<?, ?B/s][A
+                                                                [ADownloading: 100%|██████████| 7/7 [00:27<00:00,  2.95s/file]Downloading: 100%|██████████| 7/7 [00:27<00:00,  3.93s/file]
+Snapshot ready at /home/powerleader/ig-ds-ssm/data/cross_task_ms_cache

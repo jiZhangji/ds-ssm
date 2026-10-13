@@ -1,0 +1,58 @@
+{
+  "dataset": "FUSAR-Map-Count-Aligned",
+  "task": "segmentation",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "initialization": "scratch",
+  "protocol": "deterministic-count-aligned-530-train-80-test-four-class-ignore-unknown",
+  "selection_policy": "fixed-last-epoch",
+  "class_names": [
+    "building",
+    "vegetation",
+    "water",
+    "road"
+  ],
+  "split_sizes": {
+    "train": 8480,
+    "val": 0,
+    "test": 1280
+  },
+  "imgsz": 256,
+  "batch": 32,
+  "epochs_requested": 80,
+  "best_epoch": 80,
+  "threshold": null,
+  "metric": {
+    "miou_all": 0.5413649095862741,
+    "miou_foreground": 0.5580403526072392,
+    "mpa": 0.6807321469259169,
+    "dice": 0.6756402178252997,
+    "oa": 0.7414171174380191,
+    "fwiou": 0.6188537451656386,
+    "per_class_iou": [
+      0.49133858052337914,
+      0.599840986116618,
+      0.8384770141407403,
+      0.23580305756435913
+    ],
+    "per_class_pa": [
+      0.7709756974168829,
+      0.6929754015358527,
+      0.8828768777528833,
+      0.37610061099804876
+    ],
+    "per_class_dice": [
+      0.658922912529958,
+      0.7498757580559866,
+      0.9121430485032462,
+      0.38161915221200815
+    ]
+  },
+  "params": 2138438,
+  "gflops": 1.701025408,
+  "latency_ms": 3.4117847681045532,
+  "fps": 293.1017247478828,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/fusar_count_aligned_sd16_20260828/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/segmentation/FUSAR_Map_Count_Aligned/manifest.json"
+}

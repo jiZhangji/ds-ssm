@@ -1,0 +1,41 @@
+{
+  "batch": 16,
+  "conf": 0.001,
+  "data": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/data.yaml",
+  "data_manifest_sha256": "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78",
+  "data_yaml_sha256": "d41830bc75db60353c19250a857815af787d40c9d5c8e6da7e2662c89d700386",
+  "imgsz": 640,
+  "iou": 0.6,
+  "overall": {
+    "ap50": 0.9501204630953047,
+    "ap50_95": 0.5037957360636945,
+    "ap75": 0.4714381781209085,
+    "precision": 0.9202419903761926,
+    "recall": 0.8963682319945468
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "precision_mode": "fp32",
+  "result_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_matched_scale075_seed0/evaluation/test",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "smoke_only": false,
+  "spec": {
+    "control": "matched_scale075",
+    "placement": "p3",
+    "state_dim": 16,
+    "stats_kernel_size": 3,
+    "trend_kernel_size": 3
+  },
+  "speed_ms": {
+    "inference": 8.215542348353901,
+    "loss": 0.0003696267906000822,
+    "postprocess": 0.18647914563943588,
+    "preprocess": 0.13923063071816785
+  },
+  "split": "test",
+  "subset": "sar_shipdataset",
+  "trial_id": "sar_shipdataset_matched_scale075_seed0",
+  "trial_sha256": "bab5cd89eaf90389422715d475aa7faa07fa3e004e75ca06db4c12c71a342c78",
+  "weights": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_matched_scale075_seed0/weights/best.pt",
+  "weights_sha256": "dc9259a8fda9fd9ff9b8b5e911147c0393988c04002dfc001b290c8358991505"
+}

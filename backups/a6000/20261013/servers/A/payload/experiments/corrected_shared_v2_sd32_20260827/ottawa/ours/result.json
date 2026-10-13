@@ -1,0 +1,33 @@
+{
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 32,
+  "initialization": "scratch",
+  "protocol": "dense-spatial-macroblocks",
+  "split_sizes": {
+    "train": 112,
+    "val": 24,
+    "test": 32
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "epochs_requested": 150,
+  "best_epoch": 105,
+  "threshold": 0.6000000000000002,
+  "metric": {
+    "precision": 0.9006121057388877,
+    "recall": 0.9425368428040362,
+    "f1": 0.9210976588791487,
+    "iou": 0.8537358978406128,
+    "oa": 0.9835035536024306,
+    "kappa": 0.9118918527311476
+  },
+  "params": 2144291,
+  "gflops": 1.137371472,
+  "latency_ms": 441.23758050069836,
+  "fps": 2.266352741000077,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd32_20260827/ottawa/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Ottawa/manifest.json"
+}

@@ -1,0 +1,20 @@
+\begin{table*}[tp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{SSDD 历史模块消融：三种子均值$\pm$样本标准差（\%），旧 742/186/232 轨道。}\label{tab:component_ablation}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrr}
+\toprule
+Configuration & Precision & Recall & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$\\
+\midrule
+Original & $89.55\pm1.83$ & $79.24\pm1.70$ & $86.52\pm2.56$ & $34.05\pm5.25$ & $42.03\pm3.47$ \\
+LocalEnergy & $89.89\pm0.96$ & $79.67\pm0.26$ & $86.70\pm1.01$ & $37.58\pm3.78$ & $43.98\pm1.44$ \\
+Legacy-PFIM & $90.13\pm1.27$ & $81.39\pm2.20$ & $88.23\pm1.61$ & $34.83\pm3.94$ & $43.12\pm1.70$ \\
+Full & $91.91\pm1.49$ & $79.85\pm1.02$ & $87.97\pm0.11$ & $34.10\pm3.12$ & $42.91\pm1.13$ \\
+Global & $91.76\pm0.85$ & $78.45\pm0.90$ & $86.41\pm0.66$ & $36.87\pm3.89$ & $43.77\pm1.65$ \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+LocalEnergy 是旧 DS-only，含残差修正与能量调制；Legacy-PFIM 是旧 PFIM-only，关闭参数实际漂移，不是严格仅引导控制。
+\end{minipage}
+\end{table*}

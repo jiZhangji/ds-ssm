@@ -1,0 +1,56 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_matched_scale075_seed0/provenance.json",
+      "sha256": "b47389f05cb5f8982677c83b105fe5f2e08fb982ace68af8bc003ac06faed48b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_matched_scale075_seed0/train_complete.json",
+      "sha256": "623373b0e45b2fcce8752cc4a507ffdcbaf6159dd2de8eb459d84100d2076760"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_matched_scale075_seed0/eval_test.json",
+      "sha256": "8828fd340fab9ac0d1603e2e3797704c17e6dc13a7ebb20854f1ef6505f15375"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_matched_scale075_seed0/evaluation_complete.json",
+      "sha256": "8336ed66b1c7df10cb320077732654474319b33b444af096dbbb5d6a114046de"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_matched_scale075_seed0/weights/best.pt",
+      "sha256": "dc9259a8fda9fd9ff9b8b5e911147c0393988c04002dfc001b290c8358991505"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_matched_scale075_seed0/weights/raw_fp32_last.pt",
+      "sha256": "ff014d5a373cbe532eeacfc114ff5e8d95d1766a60fdf9c1558133cbbb7f4970"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_matched_scale075_seed0/controls_by_epoch.jsonl",
+      "sha256": "82c0a7011b40cf26cd9f2d2d68b96d48af792de20317f374da9c0963e44fa771"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_matched_scale075_seed0/trial_complete.json",
+      "sha256": "45f51909fa7fb5d2ebea2a8cecf60f5dff56b2f87f32ce8657f0a39acbebe45a"
+    }
+  ],
+  "details": {
+    "kind": "command",
+    "overall": {
+      "ap50": 0.9501204630953047,
+      "ap50_95": 0.5037957360636945,
+      "ap75": 0.4714381781209085,
+      "precision": 0.9202419903761926,
+      "recall": 0.8963682319945468
+    },
+    "resumed": false,
+    "runner_kind": "deferred_detection",
+    "smoke_only": false
+  },
+  "finished_utc": "2026-10-11T08:29:26.220991+00:00",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "sar_shipdataset_matched_scale075_seed0",
+  "trial_sha256": "bab5cd89eaf90389422715d475aa7faa07fa3e004e75ca06db4c12c71a342c78"
+}

@@ -1,0 +1,27 @@
+{
+  "audit": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/reuse/sadd_matched_scale075_seed1/audit.json",
+    "sha256": "cbefdd82af5394de15b04458833c9f2b8753fa0742a8dda5bf0faf09c5112d73"
+  },
+  "best": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/matched_scale075/weights/best.pt",
+    "sha256": "1a4ee34ae64f91f8e009ef9bc1d10b26e6401b14bab75577ab5247fd660fad6c"
+  },
+  "eval_test": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/matched_scale075/eval_test.json",
+    "sha256": "09127d5a8c63502ffc1cba62f8758962210c33c13a138b2ccd919882c866e19c"
+  },
+  "evaluation_complete": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/reuse/sadd_matched_scale075_seed1/evaluation_complete.json",
+    "sha256": "c4658f7786aef2ede56a89bde2533ad79e297939f07799a61460fb9493e57f27"
+  },
+  "origin": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/matched_scale075",
+  "protocol": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/seed1/manifest/protocol.json",
+    "sha256": "11b8dfe44de780de558aa99a6d61374ab14c1dbd79d5f6ff02d1c58879864003"
+  },
+  "train_complete": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed1/runs/matched_scale075/train_complete.json",
+    "sha256": "5a4f59678e2eba02a14389462e3135cb4cf2928e4e80882cc81b1538f8ee59b9"
+  }
+}

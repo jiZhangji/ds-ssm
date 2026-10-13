@@ -1,0 +1,19 @@
+
+2026-10-08T06:09:08.739032+00:00
+['/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python', '-u', '/home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/code/tools/evaluate_sarmix.py', '--weights', '/home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/local_energy/weights/best.pt', '--data', '/home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/smoke/manifest/data.yaml', '--experiment', 'rgsp_sadd_controls_20261008_v1_seed2_local_energy', '--placement', 'p3', '--variant', 'local_energy', '--state-dim', '16', '--seed', '2', '--subset', 'SADD', '--split', 'val', '--output-json', '/home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/local_energy/eval_smoke_val.json', '--imgsz', '640', '--batch', '16', '--device', '0', '--workers', '0', '--conf', '0.001', '--iou', '0.6', '--project', '/home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/smoke/evaluations', '--name', 'local_energy']
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+local_energy summary: 380 layers, 5916757 parameters, 0 gradients, 13.1 GFLOPs
+[34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/smoke/data/labels/val.cache... 16 images, 0 backgrounds, 0 corrupt: 100%|██████████| 16/16 [00:00<?, ?it/s][34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/smoke/data/labels/val.cache... 16 images, 0 backgrounds, 0 corrupt: 100%|██████████| 16/16 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:00<00:00,  4.69it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:00<00:00,  4.69it/s]
+                   all         16         79    0.00604      0.367    0.00706    0.00191
+Speed: 0.1ms preprocess, 8.1ms inference, 0.0ms loss, 2.4ms postprocess per image
+experiment: rgsp_sadd_controls_20261008_v1_seed2_local_energy
+subset:     SADD
+P/R:        0.006042/0.367089
+AP50:       0.007059
+AP75:       0.000691
+AP50-95:    0.001911
+JSON:       /home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/local_energy/eval_smoke_val.json

@@ -1,0 +1,17 @@
+{
+  "run_name": "verify_p4",
+  "variant": "p4",
+  "imgsz": 640,
+  "config": "D:\\A-\u4e3b\u673a\u6587\u4ef6\\Codex\\Mamba-YOLO-ds-ssm\\source_code\\work_train_single\\output_dir\\_codex_ssdd_sweep_verify\\codex_ssdd_sweep_verify-manifest\\configs\\p4_sd16.yaml",
+  "config_sha256": "29417c400f546b1ba62587f46f920168ab9ab324be570dc8698d51e3b2a5a22d",
+  "data": "D:\\A-\u4e3b\u673a\u6587\u4ef6\\Codex\\Mamba-YOLO-ds-ssm\\source_code\\work_train_single\\ultralytics\\cfg\\datasets\\SSDD_HF.yaml",
+  "data_yaml_sha256": "c69a8b14cd990a4dc3026207ae0c356c688f9472fe1436aba68d7f519608b605",
+  "nc": 1,
+  "scale": "T",
+  "parameters": 5777365,
+  "trainable_parameters": 5777349,
+  "parameter_tensors": 402,
+  "module_instances": 395,
+  "flops": null,
+  "flops_note": "Not computed by parse-only snapshot. Profile the frozen server model separately; custom selective-scan operations are not fully handled by generic profilers."
+}

@@ -1,0 +1,322 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_shared_sar_tasks_v2.py:565: UserWarning: _bincount_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  return torch.bincount(index, minlength=classes * classes).reshape(classes, classes).cpu()
+SAR-ACD matched_scale075 seed0 epoch=1/200 loss=1.562977 val=0.131281
+SAR-ACD matched_scale075 seed0 epoch=2/200 loss=1.371547 val=0.343479
+SAR-ACD matched_scale075 seed0 epoch=3/200 loss=1.270767 val=0.441835
+SAR-ACD matched_scale075 seed0 epoch=4/200 loss=1.227819 val=0.538465
+SAR-ACD matched_scale075 seed0 epoch=5/200 loss=1.196135 val=0.374770
+SAR-ACD matched_scale075 seed0 epoch=6/200 loss=1.159084 val=0.432273
+SAR-ACD matched_scale075 seed0 epoch=7/200 loss=1.134677 val=0.541648
+SAR-ACD matched_scale075 seed0 epoch=8/200 loss=1.083791 val=0.335271
+SAR-ACD matched_scale075 seed0 epoch=9/200 loss=1.061918 val=0.507383
+SAR-ACD matched_scale075 seed0 epoch=10/200 loss=1.039250 val=0.558105
+SAR-ACD matched_scale075 seed0 epoch=11/200 loss=1.012997 val=0.585707
+SAR-ACD matched_scale075 seed0 epoch=12/200 loss=0.983062 val=0.522339
+SAR-ACD matched_scale075 seed0 epoch=13/200 loss=0.941805 val=0.605611
+SAR-ACD matched_scale075 seed0 epoch=14/200 loss=0.935319 val=0.518447
+SAR-ACD matched_scale075 seed0 epoch=15/200 loss=0.917111 val=0.643081
+SAR-ACD matched_scale075 seed0 epoch=16/200 loss=0.898113 val=0.673951
+SAR-ACD matched_scale075 seed0 epoch=17/200 loss=0.886239 val=0.427507
+SAR-ACD matched_scale075 seed0 epoch=18/200 loss=0.839958 val=0.652417
+SAR-ACD matched_scale075 seed0 epoch=19/200 loss=0.837223 val=0.679078
+SAR-ACD matched_scale075 seed0 epoch=20/200 loss=0.812455 val=0.664055
+SAR-ACD matched_scale075 seed0 epoch=21/200 loss=0.809159 val=0.722361
+SAR-ACD matched_scale075 seed0 epoch=22/200 loss=0.775825 val=0.743092
+SAR-ACD matched_scale075 seed0 epoch=23/200 loss=0.773491 val=0.619806
+SAR-ACD matched_scale075 seed0 epoch=24/200 loss=0.744445 val=0.774285
+SAR-ACD matched_scale075 seed0 epoch=25/200 loss=0.727766 val=0.767021
+SAR-ACD matched_scale075 seed0 epoch=26/200 loss=0.716312 val=0.778784
+SAR-ACD matched_scale075 seed0 epoch=27/200 loss=0.707336 val=0.796498
+SAR-ACD matched_scale075 seed0 epoch=28/200 loss=0.706479 val=0.638024
+SAR-ACD matched_scale075 seed0 epoch=29/200 loss=0.683270 val=0.836653
+SAR-ACD matched_scale075 seed0 epoch=30/200 loss=0.687896 val=0.757101
+SAR-ACD matched_scale075 seed0 epoch=31/200 loss=0.673492 val=0.720781
+SAR-ACD matched_scale075 seed0 epoch=32/200 loss=0.646299 val=0.861496
+SAR-ACD matched_scale075 seed0 epoch=33/200 loss=0.640217 val=0.820344
+SAR-ACD matched_scale075 seed0 epoch=34/200 loss=0.646672 val=0.731307
+SAR-ACD matched_scale075 seed0 epoch=35/200 loss=0.623545 val=0.803084
+SAR-ACD matched_scale075 seed0 epoch=36/200 loss=0.616778 val=0.751405
+SAR-ACD matched_scale075 seed0 epoch=37/200 loss=0.613358 val=0.876342
+SAR-ACD matched_scale075 seed0 epoch=38/200 loss=0.622568 val=0.873015
+SAR-ACD matched_scale075 seed0 epoch=39/200 loss=0.596080 val=0.593938
+SAR-ACD matched_scale075 seed0 epoch=40/200 loss=0.601552 val=0.876659
+SAR-ACD matched_scale075 seed0 epoch=41/200 loss=0.595621 val=0.837856
+SAR-ACD matched_scale075 seed0 epoch=42/200 loss=0.576643 val=0.886858
+SAR-ACD matched_scale075 seed0 epoch=43/200 loss=0.570310 val=0.885335
+SAR-ACD matched_scale075 seed0 epoch=44/200 loss=0.565808 val=0.837658
+SAR-ACD matched_scale075 seed0 epoch=45/200 loss=0.571614 val=0.837240
+SAR-ACD matched_scale075 seed0 epoch=46/200 loss=0.565101 val=0.919904
+SAR-ACD matched_scale075 seed0 epoch=47/200 loss=0.566403 val=0.871157
+SAR-ACD matched_scale075 seed0 epoch=48/200 loss=0.551531 val=0.852024
+SAR-ACD matched_scale075 seed0 epoch=49/200 loss=0.547745 val=0.906188
+SAR-ACD matched_scale075 seed0 epoch=50/200 loss=0.542716 val=0.902501
+SAR-ACD matched_scale075 seed0 epoch=51/200 loss=0.524259 val=0.891712
+SAR-ACD matched_scale075 seed0 epoch=52/200 loss=0.523890 val=0.747279
+SAR-ACD matched_scale075 seed0 epoch=53/200 loss=0.527717 val=0.839799
+SAR-ACD matched_scale075 seed0 epoch=54/200 loss=0.509302 val=0.894986
+SAR-ACD matched_scale075 seed0 epoch=55/200 loss=0.510168 val=0.809743
+SAR-ACD matched_scale075 seed0 epoch=56/200 loss=0.500533 val=0.884166
+SAR-ACD matched_scale075 seed0 epoch=57/200 loss=0.512297 val=0.926402
+SAR-ACD matched_scale075 seed0 epoch=58/200 loss=0.502052 val=0.847399
+SAR-ACD matched_scale075 seed0 epoch=59/200 loss=0.507878 val=0.669964
+SAR-ACD matched_scale075 seed0 epoch=60/200 loss=0.499224 val=0.879145
+SAR-ACD matched_scale075 seed0 epoch=61/200 loss=0.493860 val=0.912248
+SAR-ACD matched_scale075 seed0 epoch=62/200 loss=0.501891 val=0.857074
+SAR-ACD matched_scale075 seed0 epoch=63/200 loss=0.490687 val=0.890548
+SAR-ACD matched_scale075 seed0 epoch=64/200 loss=0.508804 val=0.906995
+SAR-ACD matched_scale075 seed0 epoch=65/200 loss=0.489975 val=0.942782
+SAR-ACD matched_scale075 seed0 epoch=66/200 loss=0.487152 val=0.922927
+SAR-ACD matched_scale075 seed0 epoch=67/200 loss=0.487926 val=0.895023
+SAR-ACD matched_scale075 seed0 epoch=68/200 loss=0.491992 val=0.937913
+SAR-ACD matched_scale075 seed0 epoch=69/200 loss=0.476794 val=0.931569
+SAR-ACD matched_scale075 seed0 epoch=70/200 loss=0.477275 val=0.928443
+SAR-ACD matched_scale075 seed0 epoch=71/200 loss=0.476734 val=0.881714
+SAR-ACD matched_scale075 seed0 epoch=72/200 loss=0.468458 val=0.913569
+SAR-ACD matched_scale075 seed0 epoch=73/200 loss=0.463930 val=0.890701
+SAR-ACD matched_scale075 seed0 epoch=74/200 loss=0.469670 val=0.938042
+SAR-ACD matched_scale075 seed0 epoch=75/200 loss=0.463556 val=0.923302
+SAR-ACD matched_scale075 seed0 epoch=76/200 loss=0.468552 val=0.951385
+SAR-ACD matched_scale075 seed0 epoch=77/200 loss=0.474498 val=0.943329
+SAR-ACD matched_scale075 seed0 epoch=78/200 loss=0.464481 val=0.942391
+SAR-ACD matched_scale075 seed0 epoch=79/200 loss=0.465903 val=0.786780
+SAR-ACD matched_scale075 seed0 epoch=80/200 loss=0.461999 val=0.959568
+SAR-ACD matched_scale075 seed0 epoch=81/200 loss=0.456936 val=0.902233
+SAR-ACD matched_scale075 seed0 epoch=82/200 loss=0.460297 val=0.926877
+SAR-ACD matched_scale075 seed0 epoch=83/200 loss=0.459709 val=0.935844
+SAR-ACD matched_scale075 seed0 epoch=84/200 loss=0.467129 val=0.931006
+SAR-ACD matched_scale075 seed0 epoch=85/200 loss=0.460421 val=0.951259
+SAR-ACD matched_scale075 seed0 epoch=86/200 loss=0.457751 val=0.895285
+SAR-ACD matched_scale075 seed0 epoch=87/200 loss=0.451222 val=0.931232
+SAR-ACD matched_scale075 seed0 epoch=88/200 loss=0.458802 val=0.927063
+SAR-ACD matched_scale075 seed0 epoch=89/200 loss=0.454128 val=0.943523
+SAR-ACD matched_scale075 seed0 epoch=90/200 loss=0.451970 val=0.931514
+SAR-ACD matched_scale075 seed0 epoch=91/200 loss=0.453744 val=0.910847
+SAR-ACD matched_scale075 seed0 epoch=92/200 loss=0.443219 val=0.867831
+SAR-ACD matched_scale075 seed0 epoch=93/200 loss=0.451026 val=0.943396
+SAR-ACD matched_scale075 seed0 epoch=94/200 loss=0.444014 val=0.928134
+SAR-ACD matched_scale075 seed0 epoch=95/200 loss=0.445266 val=0.939481
+SAR-ACD matched_scale075 seed0 epoch=96/200 loss=0.442310 val=0.927609
+SAR-ACD matched_scale075 seed0 epoch=97/200 loss=0.438933 val=0.916546
+SAR-ACD matched_scale075 seed0 epoch=98/200 loss=0.440975 val=0.882814
+SAR-ACD matched_scale075 seed0 epoch=99/200 loss=0.453450 val=0.951403
+SAR-ACD matched_scale075 seed0 epoch=100/200 loss=0.445473 val=0.955605
+SAR-ACD matched_scale075 seed0 epoch=101/200 loss=0.438292 val=0.939569
+SAR-ACD matched_scale075 seed0 epoch=102/200 loss=0.445689 val=0.904419
+SAR-ACD matched_scale075 seed0 epoch=103/200 loss=0.443849 val=0.907516
+SAR-ACD matched_scale075 seed0 epoch=104/200 loss=0.437317 val=0.939008
+SAR-ACD matched_scale075 seed0 epoch=105/200 loss=0.437584 val=0.912329
+SAR-ACD matched_scale075 seed0 epoch=106/200 loss=0.436024 val=0.931378
+SAR-ACD matched_scale075 seed0 epoch=107/200 loss=0.439781 val=0.934709
+SAR-ACD matched_scale075 seed0 epoch=108/200 loss=0.435649 val=0.926747
+SAR-ACD matched_scale075 seed0 epoch=109/200 loss=0.434972 val=0.910352
+SAR-ACD matched_scale075 seed0 epoch=110/200 loss=0.428034 val=0.939236
+SAR-ACD matched_scale075 seed0 epoch=111/200 loss=0.425552 val=0.932133
+SAR-ACD matched_scale075 seed0 epoch=112/200 loss=0.429934 val=0.943105
+SAR-ACD matched_scale075 seed0 epoch=113/200 loss=0.435271 val=0.916503
+SAR-ACD matched_scale075 seed0 epoch=114/200 loss=0.430486 val=0.943352
+SAR-ACD matched_scale075 seed0 epoch=115/200 loss=0.426446 val=0.910920
+SAR-ACD matched_scale075 seed0 epoch=116/200 loss=0.425371 val=0.935142
+SAR-ACD matched_scale075 seed0 epoch=117/200 loss=0.429956 val=0.931545
+SAR-ACD matched_scale075 seed0 epoch=118/200 loss=0.424837 val=0.939142
+SAR-ACD matched_scale075 seed0 epoch=119/200 loss=0.431255 val=0.955227
+SAR-ACD matched_scale075 seed0 epoch=120/200 loss=0.428869 val=0.963663
+SAR-ACD matched_scale075 seed0 epoch=121/200 loss=0.423716 val=0.943669
+SAR-ACD matched_scale075 seed0 epoch=122/200 loss=0.421746 val=0.943706
+SAR-ACD matched_scale075 seed0 epoch=123/200 loss=0.429139 val=0.951711
+SAR-ACD matched_scale075 seed0 epoch=124/200 loss=0.423121 val=0.951578
+SAR-ACD matched_scale075 seed0 epoch=125/200 loss=0.425920 val=0.927486
+SAR-ACD matched_scale075 seed0 epoch=126/200 loss=0.421826 val=0.935092
+SAR-ACD matched_scale075 seed0 epoch=127/200 loss=0.430254 val=0.926936
+SAR-ACD matched_scale075 seed0 epoch=128/200 loss=0.428735 val=0.943440
+SAR-ACD matched_scale075 seed0 epoch=129/200 loss=0.419278 val=0.951330
+SAR-ACD matched_scale075 seed0 epoch=130/200 loss=0.421331 val=0.931496
+SAR-ACD matched_scale075 seed0 epoch=131/200 loss=0.424349 val=0.947226
+SAR-ACD matched_scale075 seed0 epoch=132/200 loss=0.424882 val=0.963663
+SAR-ACD matched_scale075 seed0 epoch=133/200 loss=0.422616 val=0.975419
+SAR-ACD matched_scale075 seed0 epoch=134/200 loss=0.413131 val=0.951587
+SAR-ACD matched_scale075 seed0 epoch=135/200 loss=0.419659 val=0.926978
+SAR-ACD matched_scale075 seed0 epoch=136/200 loss=0.421905 val=0.951497
+SAR-ACD matched_scale075 seed0 epoch=137/200 loss=0.420853 val=0.967704
+SAR-ACD matched_scale075 seed0 epoch=138/200 loss=0.420190 val=0.955227
+SAR-ACD matched_scale075 seed0 epoch=139/200 loss=0.419632 val=0.967669
+SAR-ACD matched_scale075 seed0 epoch=140/200 loss=0.419335 val=0.935684
+SAR-ACD matched_scale075 seed0 epoch=141/200 loss=0.419760 val=0.951337
+SAR-ACD matched_scale075 seed0 epoch=142/200 loss=0.420340 val=0.963594
+SAR-ACD matched_scale075 seed0 epoch=143/200 loss=0.418243 val=0.947464
+SAR-ACD matched_scale075 seed0 epoch=144/200 loss=0.420445 val=0.919408
+SAR-ACD matched_scale075 seed0 epoch=145/200 loss=0.416020 val=0.927863
+SAR-ACD matched_scale075 seed0 epoch=146/200 loss=0.416851 val=0.943688
+SAR-ACD matched_scale075 seed0 epoch=147/200 loss=0.416538 val=0.951726
+SAR-ACD matched_scale075 seed0 epoch=148/200 loss=0.417512 val=0.939646
+SAR-ACD matched_scale075 seed0 epoch=149/200 loss=0.415352 val=0.951933
+SAR-ACD matched_scale075 seed0 epoch=150/200 loss=0.418876 val=0.959584
+SAR-ACD matched_scale075 seed0 epoch=151/200 loss=0.418121 val=0.939875
+SAR-ACD matched_scale075 seed0 epoch=152/200 loss=0.417965 val=0.963844
+SAR-ACD matched_scale075 seed0 epoch=153/200 loss=0.414169 val=0.951584
+SAR-ACD matched_scale075 seed0 epoch=154/200 loss=0.416910 val=0.963561
+SAR-ACD matched_scale075 seed0 epoch=155/200 loss=0.416397 val=0.959675
+SAR-ACD matched_scale075 seed0 epoch=156/200 loss=0.413547 val=0.951842
+SAR-ACD matched_scale075 seed0 epoch=157/200 loss=0.414966 val=0.927785
+SAR-ACD matched_scale075 seed0 epoch=158/200 loss=0.415919 val=0.951556
+SAR-ACD matched_scale075 seed0 epoch=159/200 loss=0.414209 val=0.951578
+SAR-ACD matched_scale075 seed0 epoch=160/200 loss=0.412080 val=0.951584
+SAR-ACD matched_scale075 seed0 epoch=161/200 loss=0.412544 val=0.939843
+SAR-ACD matched_scale075 seed0 epoch=162/200 loss=0.413598 val=0.947600
+SAR-ACD matched_scale075 seed0 epoch=163/200 loss=0.410451 val=0.951556
+SAR-ACD matched_scale075 seed0 epoch=164/200 loss=0.414282 val=0.955415
+SAR-ACD matched_scale075 seed0 epoch=165/200 loss=0.411288 val=0.943787
+SAR-ACD matched_scale075 seed0 epoch=166/200 loss=0.411540 val=0.943787
+SAR-ACD matched_scale075 seed0 epoch=167/200 loss=0.415492 val=0.959517
+SAR-ACD matched_scale075 seed0 epoch=168/200 loss=0.414536 val=0.947718
+SAR-ACD matched_scale075 seed0 epoch=169/200 loss=0.412148 val=0.963528
+SAR-ACD matched_scale075 seed0 epoch=170/200 loss=0.410236 val=0.955415
+SAR-ACD matched_scale075 seed0 epoch=171/200 loss=0.414300 val=0.955415
+SAR-ACD matched_scale075 seed0 epoch=172/200 loss=0.410139 val=0.955415
+SAR-ACD matched_scale075 seed0 epoch=173/200 loss=0.410094 val=0.943685
+{
+  "schema": "rgsp-cross-trial-v1",
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "matched_scale075",
+  "seed": 0,
+  "protocol": {
+    "schema": "rgsp-cross-trial-v1",
+    "dataset": "SAR-ACD",
+    "task": "classification",
+    "logical_data_sha256": "d93e468ba4ae5172cc74a9689a276ddafd2d3a2f9ad0e67d91ec83b942aacb8c",
+    "split_counts": {
+      "test": 254,
+      "train": 2003,
+      "val": 251
+    },
+    "annotation_policy": "preserve-heldout-exclude-ambiguous-training",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "epochs": 200,
+    "patience": 40,
+    "imgsz": 224,
+    "batch": 64,
+    "eval_batch": 64,
+    "optimizer": "AdamW",
+    "lr": 0.0002,
+    "weight_decay": 0.0005,
+    "scheduler": "cosine to 1% initial lr",
+    "module_warmup_epochs": 0,
+    "precision": "FP32 (AMP/TF32 off)",
+    "gradient_clip_l2": 5.0,
+    "grad_accum": 1,
+    "classification_label_smoothing": 0.1,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "selection_metric": "macro_f1",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "historical_results_comparable": false
+  },
+  "protocol_sha256": "b36c263075758abc1ee3ad0ad6954b28e5ce2dc368e7371a9fd944909bb18f6d",
+  "data": {
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/SAR_ACD/manifest.json",
+    "manifest_sha256": "16259205a8c8e0677631e37e23bba036311ea87cef8cf6f833b0f626a303c259",
+    "logical_manifest_sha256": "d93e468ba4ae5172cc74a9689a276ddafd2d3a2f9ad0e67d91ec83b942aacb8c",
+    "counts": {
+      "test": 254,
+      "train": 2003,
+      "val": 251
+    },
+    "audit_sha256": "5fcd4daa8afdfedd6f519de4d4c2e7ec797f90f6904fa2a61af964f111205b93",
+    "files_sha256": "567b09e122db10024e281b047e79417ba142a8ddf90bae2754bc640959dd6db4",
+    "annotation_policy": "preserve-heldout-exclude-ambiguous-training"
+  },
+  "initialization_common_tensor_sha256": "293e570309a7490d451201a68a58a6afbc8f233dca743f683d8adced7855ec83",
+  "checkpoint": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_matched_scale075_seed0/best.pt",
+  "best_sha256": "2c1ac6842121045b1519c312ff8a83dc8da143be74ac893878ede6b4de094963",
+  "best_epoch": 133,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.9212598425196851,
+    "macro_precision": 0.92199376114082,
+    "macro_recall": 0.9212402658620809,
+    "macro_f1": 0.920511182242372,
+    "per_class_recall": [
+      0.8936170212765957,
+      1.0,
+      0.8846153846153846,
+      0.8867924528301887,
+      0.9411764705882353
+    ],
+    "confusion_matrix": [
+      [
+        42,
+        1,
+        2,
+        1,
+        1
+      ],
+      [
+        0,
+        51,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        46,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        2,
+        47,
+        1
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        48
+      ]
+    ]
+  },
+  "reloaded_controls": {
+    "variant": "matched_scale075",
+    "controlled_blocks": 1,
+    "placement": "internal P3/8, 64 channels",
+    "scalars": {
+      "lambda_s": 0.0,
+      "alpha": 0.0,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612
+    },
+    "buffer_scalars": [
+      "lambda_s",
+      "alpha",
+      "beta_i",
+      "rho_i",
+      "eta_i"
+    ],
+    "min_retain": 0.5,
+    "use_pfim": false
+  },
+  "parameters": 2784541,
+  "trainable_parameters": 2784541,
+  "buffers": 6999,
+  "efficiency_status": "Params only here; matched-hardware latency and scan-aware FLOPs require the separate efficiency lane. No undercounted THOP GFLOPs claimed.",
+  "historical_negative_results_preserved": true,
+  "finished_utc": "2026-10-09T12:21:52.568575+00:00"
+}
+{"compatibility_launcher": "PASS", "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/sar_acd_matched_scale075_seed0/cuda_compatibility.json"}

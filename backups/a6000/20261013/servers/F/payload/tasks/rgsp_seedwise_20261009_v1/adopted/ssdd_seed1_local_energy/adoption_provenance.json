@@ -1,0 +1,55 @@
+{
+  "best_sha256": "5c0fb3797593d61fae99659b76a1a1782ca6a56ec00f7946dbe72d5dca09e7c9",
+  "child_exit_code": 0,
+  "copies": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed1_local_energy/train_complete.json",
+      "sha256": "b9d52d31d61cc5b9e4ff960e46a202eba0474dbf2d5226bac43678096bb125d9",
+      "source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed1/runs/local_energy/train_complete.json"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed1_local_energy/weights/best.pt",
+      "sha256": "5c0fb3797593d61fae99659b76a1a1782ca6a56ec00f7946dbe72d5dca09e7c9",
+      "source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed1/runs/local_energy/weights/best.pt"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed1_local_energy/protocol.json",
+      "sha256": "6b7e8893b4b99c4818bf649281daa7d5bc0c5974ed83bcdcaa46459bd59fbae7",
+      "source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed1/manifest/protocol.json"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed1_local_energy/data_manifest.json",
+      "sha256": "6a41b3d0910e70279dd65b2f5218feaa317fa740b000da7f4340aec3197cf452",
+      "source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed1/manifest/data_content.json"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed1_local_energy/source_training/runtime_audit.json",
+      "sha256": "524759d17c21bd1cd201f5fffbcbf6279402ff7a1439a213305b5012dd6e81a6",
+      "source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed1/runs/local_energy/runtime_audit.json"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed1_local_energy/source_training/controls_by_epoch.jsonl",
+      "sha256": "4dc628d080a9a75b48c9ffc6a33259cd3eb57b8f1d791c6820a1873e1935aabe",
+      "source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed1/runs/local_energy/controls_by_epoch.jsonl"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed1_local_energy/source_training/results.csv",
+      "sha256": "48988d65d2cae0b2f503077c0ba755ca855c857a7c4a8c4bc8ed3d9fc4c41675",
+      "source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed1/runs/local_energy/results.csv"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed1_local_energy/source_training/args.yaml",
+      "sha256": "fc241b8014f79b8030abb94fa788ad75b8999eb15b4025bd568942f1f7a03b93",
+      "source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed1/runs/local_energy/args.yaml"
+    }
+  ],
+  "grandfathered_started_seed1": true,
+  "lane": "f1",
+  "limitations": "Already-running legacy frozen-code trial; same seed is not cross-architecture tensor alignment. Seed1 began before the global seedwise policy and does not authorize any additional seed1.",
+  "schema": "rgsp-legacy-handoff-v1",
+  "seed": 1,
+  "source_train_complete_sha256": "b9d52d31d61cc5b9e4ff960e46a202eba0474dbf2d5226bac43678096bb125d9",
+  "source_training_not_signaled": true,
+  "spec_sha256": "d1f589aa41f341171ea6e15378565a2c594af5281eb96974f343d78e3c45c1ca",
+  "variant": "local_energy"
+}

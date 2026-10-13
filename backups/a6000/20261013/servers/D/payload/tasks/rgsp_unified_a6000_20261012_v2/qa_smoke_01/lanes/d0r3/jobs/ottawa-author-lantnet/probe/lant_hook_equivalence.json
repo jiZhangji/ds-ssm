@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "forward_equal": true,
+      "all_gradients_equal": true
+    },
+    {
+      "forward_equal": true,
+      "all_gradients_equal": true
+    },
+    {
+      "forward_equal": true,
+      "all_gradients_equal": true
+    }
+  ],
+  "ground_truth_used": false,
+  "hardware": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1"
+}

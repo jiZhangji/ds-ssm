@@ -1,0 +1,33 @@
+{
+  "experiment_id": "ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1",
+  "records": [
+    {
+      "dataset": "SADD",
+      "experiment": "ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline",
+      "variant": "baseline",
+      "placement": "baseline",
+      "state_dim": 0,
+      "precision": 0.9428439685029409,
+      "recall": 0.9527186761229315,
+      "ap50": 0.9719067676561689,
+      "ap75": 0.5450890719888817,
+      "ap50_95": 0.5431676978856741,
+      "inference_ms": 9.461354727696891,
+      "weights": "/home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/best.pt"
+    },
+    {
+      "dataset": "SADD",
+      "experiment": "ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3",
+      "variant": "full",
+      "placement": "p3",
+      "state_dim": 16,
+      "precision": 0.9569140088059119,
+      "recall": 0.9450811986818645,
+      "ap50": 0.969248598011632,
+      "ap75": 0.5359503052614727,
+      "ap50_95": 0.5349446272028854,
+      "inference_ms": 8.769704837991734,
+      "weights": "/home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/best.pt"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/recovery_queue.py", line 362, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/recovery_queue.py", line 358, in main
+    (prepare if args.mode == "prepare" else queue)(cfg)
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/recovery_queue.py", line 322, in queue
+    execute(cmd, output / "logs" / (variant + ".train.log"))
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/recovery_queue.py", line 307, in execute
+    subprocess.run(command, cwd=cfg["code"], env=env, stdout=f, stderr=subprocess.STDOUT, check=True)
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python', '/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/train_redirect.py', '--code', '/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code', '--output', '/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed0', '--variant', 'matched_scale075', '--seed', '0', '--epochs', '150', '--patience', '30', '--resume']' returned non-zero exit status 2.

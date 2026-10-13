@@ -1,0 +1,19 @@
+{
+  "status": "INSTALLED",
+  "hostname": "a6000-c",
+  "utc": "2026-10-12T02:44:08.753404+00:00",
+  "archives": [
+    {
+      "archive": "runner_deploy_v2.tar.gz",
+      "sha256": "d098c5425db2120cc4fa6f5731d52c14363d5502a83138863577f9da7220e9fe",
+      "destination": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training",
+      "members": 535
+    },
+    {
+      "archive": "ssdd_official_928_232_v1.tar.gz",
+      "sha256": "ecf9ad32302e97ba6fbc477722b5d8f9f7fc95f58f421cbc70d6e9d5b596cc02",
+      "destination": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/data/SSDD",
+      "members": 2324
+    }
+  ]
+}

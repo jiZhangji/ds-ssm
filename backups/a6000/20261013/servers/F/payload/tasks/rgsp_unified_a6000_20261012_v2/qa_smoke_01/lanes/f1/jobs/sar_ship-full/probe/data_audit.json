@@ -1,0 +1,31 @@
+{
+  "actual_records_sha256": "d4b607793704814accd90e8669b1b0482f1c7a5dd760e62a926a84e6a2b222a6",
+  "cache_location": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/f1/jobs/sar_ship-full/probe/data",
+  "counts_verified": {
+    "train": 31735
+  },
+  "data_yaml": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/data.yaml",
+    "sha256": "d41830bc75db60353c19250a857815af787d40c9d5c8e6da7e2662c89d700386"
+  },
+  "dataset_id": "sar_ship",
+  "expected_counts": {
+    "test": 3974,
+    "train": 31735,
+    "val": 3970
+  },
+  "files_verified": 63470,
+  "heldout_image_or_label_files_opened": false,
+  "input_manifest": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/data_content.json",
+    "sha256": "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78"
+  },
+  "location_records_sha256": "58e317de74606f64ebc082720a978831433076bfea9641300ade99ae99ed96a0",
+  "names": [
+    "ship"
+  ],
+  "probe_only": true,
+  "source_data_protocol": null,
+  "source_images_repaired": false,
+  "source_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/data"
+}

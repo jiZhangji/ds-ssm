@@ -1,0 +1,13 @@
+{
+  "host": "powerleader-a6000-f",
+  "pid": 2274058,
+  "seed": 0,
+  "cuda_visible_devices": "0",
+  "started_utc": "2026-10-08T04:30:15.261006+00:00",
+  "state": "running",
+  "completed": [
+    "original",
+    "matched_identity"
+  ],
+  "current": "matched_scale075"
+}

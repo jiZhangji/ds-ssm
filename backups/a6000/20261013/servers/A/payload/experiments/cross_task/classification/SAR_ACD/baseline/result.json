@@ -1,0 +1,13 @@
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "baseline",
+  "state_dim": 0,
+  "metric": {
+    "accuracy": 0.9921875
+  },
+  "latency_ms": 1.6753479686574828,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/classification/SAR_ACD/baseline/best.pt",
+  "epochs": 100,
+  "params": 1975133
+}

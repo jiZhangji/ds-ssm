@@ -1,0 +1,18 @@
+[2026-08-26T18:49:03+08:00] queued ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1 on a6000-d
+datasets=SRSDD-v1.0 state_dim=16 batch=16
+[2026-08-26T18:49:03+08:00] GPU is idle; starting ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1
+Experiment: ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1
+Runs:       2
+Scratch:    True
+Placement:  P3 for Full; original Mamba-YOLO for Baseline
+Eval split: test
+START: SRSDD-v1.0 / baseline; epochs=0
+
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/mbyolo_train_sarair.py --task train --data /home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SRSDD_v1/SRSDD_v1.yaml --config /home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1-manifest/configs/srsdd_v10_baseline.yaml --weights none --imgsz 640 --batch_size 16 --device 0 --epochs 150 --workers 8 --optimizer AdamW --lr0 0.0002 --lrf 0.01 --weight_decay 0.0005 --nbs 64 --warmup_epochs 3.0 --module_warmup_epochs 0 --patience 30 --cos_lr --mosaic 0.3 --close_mosaic 15 --degrees 180 --translate 0.1 --scale 0.3 --flipud 0.5 --fliplr 0.5 --seed 0 --deterministic --project /home/powerleader/ig-ds-ssm/experiments/cross_task_detection --name ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1_srsdd_v10_baseline
+FAILED SRSDD-v1.0 / baseline: Command failed (1); inspect /home/powerleader/ig-ds-ssm/work_train_single/logs/ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1/ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1_srsdd_v10_baseline.train.log
+START: SRSDD-v1.0 / full_p3; epochs=0
+
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/mbyolo_train_sarair.py --task train --data /home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SRSDD_v1/SRSDD_v1.yaml --config /home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1-manifest/configs/srsdd_v10_full_p3.yaml --weights none --imgsz 640 --batch_size 16 --device 0 --epochs 150 --workers 8 --optimizer AdamW --lr0 0.0002 --lrf 0.01 --weight_decay 0.0005 --nbs 64 --warmup_epochs 3.0 --module_warmup_epochs 0 --patience 30 --cos_lr --mosaic 0.3 --close_mosaic 15 --degrees 180 --translate 0.1 --scale 0.3 --flipud 0.5 --fliplr 0.5 --seed 0 --deterministic --project /home/powerleader/ig-ds-ssm/experiments/cross_task_detection --name ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1_srsdd_v10_full_p3
+FAILED SRSDD-v1.0 / full_p3: Command failed (1); inspect /home/powerleader/ig-ds-ssm/work_train_single/logs/ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1/ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1_srsdd_v10_full_p3.train.log
+Queue finished: ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1
+[2026-08-26T18:49:14+08:00] queue finished: ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1

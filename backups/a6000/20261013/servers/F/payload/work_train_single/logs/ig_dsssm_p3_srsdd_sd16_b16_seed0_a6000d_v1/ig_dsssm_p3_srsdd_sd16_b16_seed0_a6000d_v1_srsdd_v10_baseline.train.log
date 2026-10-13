@@ -1,0 +1,33 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+New https://pypi.org/project/ultralytics/8.4.129 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+WARNING ⚠️ Upgrade to torch>=2.0.0 for deterministic training.
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=/home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1-manifest/configs/srsdd_v10_baseline.yaml, data=/home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SRSDD_v1/SRSDD_v1.yaml, epochs=150, time=None, patience=30, batch=16, imgsz=640, save=True, save_period=10, cache=False, device=0, workers=8, project=/home/powerleader/ig-ds-ssm/experiments/cross_task_detection, name=ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1_srsdd_v10_baseline, exist_ok=True, pretrained=False, optimizer=AdamW, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=True, close_mosaic=15, resume=False, amp=False, fraction=1.0, profile=False, freeze=None, module_warmup_epochs=0, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=None, workspace=4, nms=False, lr0=0.0002, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, label_smoothing=0.0, nbs=64, hsv_h=0.0, hsv_s=0.0, hsv_v=0.1, degrees=180.0, translate=0.1, scale=0.3, shear=0.0, perspective=0.0, flipud=0.5, fliplr=0.5, bgr=0.0, mosaic=0.3, mixup=0.0, copy_paste=0.0, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=/home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1_srsdd_v10_baseline
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/engine/trainer.py", line 532, in get_dataset
+    data = check_det_dataset(self.args.data)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/data/utils.py", line 329, in check_det_dataset
+    raise FileNotFoundError(m)
+FileNotFoundError: 
+Dataset '/home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SRSDD_v1/SRSDD_v1.yaml' images not found ⚠️, missing path '/mnt/disk1/zhangji/ig_dsssm_cross_task/data/cross_task_prepared/detection/SRSDD_v1/images/val'
+Note dataset download directory is '/home/powerleader/ig-ds-ssm/work_train_single/datasets'. You can update this in '/home/powerleader/.config/Ultralytics/settings.yaml'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/mbyolo_train_sarair.py", line 221, in <module>
+    model.train(**train_args)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/engine/model.py", line 655, in train
+    self.trainer = (trainer or self._smart_load("trainer"))(overrides=args, _callbacks=self.callbacks)
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/engine/trainer.py", line 130, in __init__
+    self.trainset, self.testset = self.get_dataset()
+  File "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/engine/trainer.py", line 536, in get_dataset
+    raise RuntimeError(emojis(f"Dataset '{clean_url(self.args.data)}' error ❌ {e}")) from e
+RuntimeError: Dataset '/home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SRSDD_v1/SRSDD_v1.yaml' error ❌ 
+Dataset '/home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SRSDD_v1/SRSDD_v1.yaml' images not found ⚠️, missing path '/mnt/disk1/zhangji/ig_dsssm_cross_task/data/cross_task_prepared/detection/SRSDD_v1/images/val'
+Note dataset download directory is '/home/powerleader/ig-ds-ssm/work_train_single/datasets'. You can update this in '/home/powerleader/.config/Ultralytics/settings.yaml'
+
+===== 2026-08-26T18:49:03.551944 =====
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/mbyolo_train_sarair.py --task train --data /home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SRSDD_v1/SRSDD_v1.yaml --config /home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1-manifest/configs/srsdd_v10_baseline.yaml --weights none --imgsz 640 --batch_size 16 --device 0 --epochs 150 --workers 8 --optimizer AdamW --lr0 0.0002 --lrf 0.01 --weight_decay 0.0005 --nbs 64 --warmup_epochs 3.0 --module_warmup_epochs 0 --patience 30 --cos_lr --mosaic 0.3 --close_mosaic 15 --degrees 180 --translate 0.1 --scale 0.3 --flipud 0.5 --fliplr 0.5 --seed 0 --deterministic --project /home/powerleader/ig-ds-ssm/experiments/cross_task_detection --name ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1_srsdd_v10_baseline

@@ -1,0 +1,50 @@
+{
+  "amp": false,
+  "augmentation": {
+    "close_mosaic": 10,
+    "degrees": 0.0,
+    "fliplr": 0.5,
+    "flipud": 0.0,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "mosaic": 1.0,
+    "scale": 0.5,
+    "translate": 0.1
+  },
+  "batch": 32,
+  "code": {
+    "mbyolo_train_sarair.py": "f72b958563074a3a1664020f864e06f7447b2f0804fc6504f3567041633689be",
+    "tools/evaluate_sarmix.py": "b618852403eeda8737cadd847ac5193848325141eb6666dac10fa8185d67c50d",
+    "tools/run_sar4_full_suite.py": "f820edbd1e13aa9bcb40dad252a6909979126925e5aad52e58115696e7dbe12c",
+    "ultralytics/nn/modules/mamba_yolo.py": "6abc3a657f7925c076e84f890500e56d4fe00106f4e02edbfea4cf7dea93819d"
+  },
+  "configs": {
+    "SSDD:baseline": "74dcda6fcbd55daea5dbb87026787d41886d0104c58b2bf5c805dca0077d5f44",
+    "SSDD:full_p3": "ec287ccce00023599bda0a916fcad804e20e07a12e0b4b5aec57d2bfbc4ebc79"
+  },
+  "cos_lr": false,
+  "datasets": {
+    "SSDD": {
+      "path": "/home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1-manifest/datasets/SSDD.yaml",
+      "sha256": "5608b98c250353ad9782866f02ff3698685a7c3926da8e00df976ba3f0693dce"
+    }
+  },
+  "epochs": 300,
+  "eval_batch": 64,
+  "experiment_id": "det_histcfg_p3_d16_fp32_v1",
+  "imgsz": 640,
+  "lr0": 0.001,
+  "lrf": 0.01,
+  "module_warmup_epochs": 20,
+  "nbs": 64,
+  "optimizer": "AdamW",
+  "optimizer_warmup_epochs": 5.0,
+  "patience": 100,
+  "seed": 0,
+  "ssdd_full_train": true,
+  "state_dim": 16,
+  "warmup_bias_lr": 0.001,
+  "weight_decay": 0.0005,
+  "weights": "/home/powerleader/ig-ds-ssm/yolov8n.pt"
+}

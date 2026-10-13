@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "idle_seconds": 900,
+  "idle_memory_mib": 2048,
+  "idle_utilization_percent": 10,
+  "max_attempts": 3,
+  "hosts": {
+    "A": {
+      "enabled": true,
+      "local": true,
+      "root": "/home/powerleader/ig-ds-ssm"
+    },
+    "B": {
+      "enabled": true,
+      "ssh": "powerleader@10.6.2.3",
+      "identity_file": "/home/powerleader/.ssh/id_ed25519_ig_scheduler",
+      "root": "/home/powerleader/ig-ds-ssm"
+    },
+    "C": {
+      "enabled": true,
+      "ssh": "powerleader@10.6.2.1",
+      "identity_file": "/home/powerleader/.ssh/id_ed25519_ig_scheduler",
+      "root": "/home/powerleader/ig-ds-ssm"
+    },
+    "D": {
+      "enabled": true,
+      "ssh": "powerleader@10.6.2.2",
+      "identity_file": "/home/powerleader/.ssh/id_ed25519_ig_scheduler",
+      "root": "/home/powerleader/ig-ds-ssm"
+    },
+    "E": {
+      "enabled": false,
+      "ssh": "admin0@10.6.2.10",
+      "root": "/home/admin0/ig-ds-ssm",
+      "note": "No verified SSH access; never dispatch automatically."
+    }
+  },
+  "jobs": [
+    {
+      "id": "det_ssdd_baseline_b16",
+      "priority": 10,
+      "task": "detection",
+      "dataset": "SSDD",
+      "variant": "baseline",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SSDD/SSDD.yaml", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/eval_test.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_sar4_full_suite.py --data-root {root}/data/cross_task_prepared_v2/detection --project {root}/experiments/sar4 --experiment-id sar4_scratch_p3_sd16_v1 --datasets SSDD --variants baseline --state-dim 16 --epochs 150 --patience 30 --imgsz 640 --batch 16 --eval-batch 16 --device 0 --workers 8 --seed 0 --cache --continue-on-error"
+    },
+    {
+      "id": "det_ssdd_p3_d16_b16",
+      "priority": 11,
+      "task": "detection",
+      "dataset": "SSDD",
+      "variant": "P3-d16",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SSDD/SSDD.yaml", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/eval_test.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_sar4_full_suite.py --data-root {root}/data/cross_task_prepared_v2/detection --project {root}/experiments/sar4 --experiment-id sar4_scratch_p3_sd16_v1 --datasets SSDD --variants full_p3 --state-dim 16 --epochs 150 --patience 30 --imgsz 640 --batch 16 --eval-batch 16 --device 0 --workers 8 --seed 0 --cache --continue-on-error"
+    },
+    {
+      "id": "det_aircraft_baseline_b32",
+      "priority": 20,
+      "task": "detection",
+      "dataset": "SAR-AIRcraft1.0",
+      "variant": "baseline",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SAR_AIRcraft/SAR_AIRcraft.yaml", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/scheduled_detection_d16/scheduled_aircraft_sd16_b32_seed0_sar_aircraft10_baseline/eval_test.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_sar4_full_suite.py --data-root {root}/data/cross_task_prepared_v2/detection --project {root}/experiments/scheduled_detection_d16 --experiment-id scheduled_aircraft_sd16_b32_seed0 --datasets SAR-AIRcraft1.0 --variants baseline --state-dim 16 --epochs 150 --patience 30 --imgsz 640 --batch 32 --eval-batch 32 --device 0 --workers 8 --seed 0 --cache --continue-on-error"
+    },
+    {
+      "id": "det_aircraft_p3_d16_b32",
+      "priority": 21,
+      "task": "detection",
+      "dataset": "SAR-AIRcraft1.0",
+      "variant": "P3-d16",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SAR_AIRcraft/SAR_AIRcraft.yaml", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/scheduled_detection_d16/scheduled_aircraft_sd16_b32_seed0_sar_aircraft10_full_p3/eval_test.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_sar4_full_suite.py --data-root {root}/data/cross_task_prepared_v2/detection --project {root}/experiments/scheduled_detection_d16 --experiment-id scheduled_aircraft_sd16_b32_seed0 --datasets SAR-AIRcraft1.0 --variants full_p3 --state-dim 16 --epochs 150 --patience 30 --imgsz 640 --batch 32 --eval-batch 32 --device 0 --workers 8 --seed 0 --cache --continue-on-error"
+    },
+    {
+      "id": "det_sadd_baseline_b32",
+      "priority": 30,
+      "task": "detection",
+      "dataset": "SADD",
+      "variant": "baseline",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SADD/SADD.yaml", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/eval_test.json", "/home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_baseline/eval_test.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_sar4_full_suite.py --data-root {root}/data/cross_task_prepared_v2/detection --project {root}/experiments/corrected_detection_v2 --experiment-id corrected_v2_sadd_sd16_b32_seed0 --datasets SADD --variants baseline --state-dim 16 --epochs 200 --patience 40 --imgsz 640 --batch 32 --eval-batch 32 --device 0 --workers 8 --seed 0 --cache --continue-on-error"
+    },
+    {
+      "id": "det_sadd_p3_d16_b32",
+      "priority": 31,
+      "task": "detection",
+      "dataset": "SADD",
+      "variant": "P3-d16",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SADD/SADD.yaml", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/eval_test.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_sar4_full_suite.py --data-root {root}/data/cross_task_prepared_v2/detection --project {root}/experiments/corrected_detection_v2 --experiment-id corrected_v2_sadd_sd16_b32_seed0 --datasets SADD --variants full_p3 --state-dim 16 --epochs 200 --patience 40 --imgsz 640 --batch 32 --eval-batch 32 --device 0 --workers 8 --seed 0 --cache --continue-on-error"
+    },
+    {
+      "id": "det_airship_baseline_b32",
+      "priority": 40,
+      "task": "detection",
+      "dataset": "AIR-SARShip-2.0",
+      "variant": "baseline",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/AIR_SARShip_2/AIR_SARShip_2.yaml", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/eval_test.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_sar4_full_suite.py --data-root {root}/data/cross_task_prepared_v2/detection --project {root}/experiments/corrected_detection_v2 --experiment-id corrected_v2_airship_tiles_sd16_b32 --datasets AIR-SARShip-2.0 --variants baseline --state-dim 16 --epochs 200 --patience 40 --imgsz 640 --batch 32 --eval-batch 32 --device 0 --workers 8 --seed 0 --cache --continue-on-error"
+    },
+    {
+      "id": "det_airship_p3_d16_b32",
+      "priority": 41,
+      "task": "detection",
+      "dataset": "AIR-SARShip-2.0",
+      "variant": "P3-d16",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/AIR_SARShip_2/AIR_SARShip_2.yaml", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/eval_test.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_sar4_full_suite.py --data-root {root}/data/cross_task_prepared_v2/detection --project {root}/experiments/corrected_detection_v2 --experiment-id corrected_v2_airship_tiles_sd16_b32 --datasets AIR-SARShip-2.0 --variants full_p3 --state-dim 16 --epochs 200 --patience 40 --imgsz 640 --batch 32 --eval-batch 32 --device 0 --workers 8 --seed 0 --cache --continue-on-error"
+    },
+    {
+      "id": "det_srsdd_baseline_b32",
+      "priority": 50,
+      "task": "detection",
+      "dataset": "SRSDD-v1.0",
+      "variant": "baseline",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SRSDD_v1/SRSDD_v1.yaml", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_srsdd_hbb_clipped_sd16_b32_srsdd_v10_baseline/eval_test.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_sar4_full_suite.py --data-root {root}/data/cross_task_prepared_v2/detection --project {root}/experiments/corrected_detection_v2 --experiment-id corrected_v2_srsdd_hbb_clipped_sd16_b32 --datasets SRSDD-v1.0 --variants baseline --state-dim 16 --epochs 200 --patience 40 --imgsz 640 --batch 32 --eval-batch 32 --device 0 --workers 8 --seed 0 --cache --continue-on-error"
+    },
+    {
+      "id": "det_srsdd_p3_d16_b32",
+      "priority": 51,
+      "task": "detection",
+      "dataset": "SRSDD-v1.0",
+      "variant": "P3-d16",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SRSDD_v1/SRSDD_v1.yaml", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_srsdd_hbb_clipped_sd16_b32_srsdd_v10_full_p3/eval_test.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_sar4_full_suite.py --data-root {root}/data/cross_task_prepared_v2/detection --project {root}/experiments/corrected_detection_v2 --experiment-id corrected_v2_srsdd_hbb_clipped_sd16_b32 --datasets SRSDD-v1.0 --variants full_p3 --state-dim 16 --epochs 200 --patience 40 --imgsz 640 --batch 32 --eval-batch 32 --device 0 --workers 8 --seed 0 --cache --continue-on-error"
+    },
+    {
+      "id": "cls_sar_acd_baseline",
+      "priority": 60,
+      "task": "classification",
+      "dataset": "SAR-ACD",
+      "variant": "baseline",
+      "hosts": ["C"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd32_20260827/sar-acd/baseline/result.json", "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/sar-acd/baseline/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json --dataset SAR-ACD --variant baseline --output {root}/experiments/corrected_shared_v2_sd16_20260828/sar-acd/baseline --epochs 200 --patience 35 --batch 64 --imgsz 224 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "cls_sar_acd_p3_d16",
+      "priority": 61,
+      "task": "classification",
+      "dataset": "SAR-ACD",
+      "variant": "P3-d16",
+      "hosts": ["A"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/sar-acd/ours/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json --dataset SAR-ACD --variant ours --output {root}/experiments/corrected_shared_v2_sd16_20260828/sar-acd/ours --epochs 200 --patience 35 --batch 64 --imgsz 224 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "cls_sample_baseline",
+      "priority": 62,
+      "task": "classification",
+      "dataset": "SAMPLE",
+      "variant": "baseline",
+      "hosts": ["D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAMPLE/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd32_20260827/sample/baseline/result.json", "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/sample/baseline/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/classification/SAMPLE/manifest.json --dataset SAMPLE --variant baseline --output {root}/experiments/corrected_shared_v2_sd16_20260828/sample/baseline --epochs 200 --patience 35 --batch 64 --imgsz 224 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "cls_sample_p3_d16",
+      "priority": 63,
+      "task": "classification",
+      "dataset": "SAMPLE",
+      "variant": "P3-d16",
+      "hosts": ["D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAMPLE/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/sample/ours/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/classification/SAMPLE/manifest.json --dataset SAMPLE --variant ours --output {root}/experiments/corrected_shared_v2_sd16_20260828/sample/ours --epochs 200 --patience 35 --batch 64 --imgsz 224 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "seg_fusar_map_baseline",
+      "priority": 70,
+      "task": "segmentation",
+      "dataset": "FUSAR-Map",
+      "variant": "baseline",
+      "hosts": ["B"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/segmentation/FUSAR_Map/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd32_20260827/fusar-map/baseline/result.json", "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/fusar-map/baseline/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/segmentation/FUSAR_Map/manifest.json --dataset FUSAR-Map --variant baseline --output {root}/experiments/corrected_shared_v2_sd16_20260828/fusar-map/baseline --epochs 160 --patience 30 --batch 4 --imgsz 512 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "seg_fusar_map_p3_d16",
+      "priority": 71,
+      "task": "segmentation",
+      "dataset": "FUSAR-Map",
+      "variant": "P3-d16",
+      "hosts": ["B"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/segmentation/FUSAR_Map/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/fusar-map/ours/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/segmentation/FUSAR_Map/manifest.json --dataset FUSAR-Map --variant ours --output {root}/experiments/corrected_shared_v2_sd16_20260828/fusar-map/ours --epochs 160 --patience 30 --batch 4 --imgsz 512 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "cd_ottawa_baseline",
+      "priority": 80,
+      "task": "change_detection",
+      "dataset": "Ottawa",
+      "variant": "baseline",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Ottawa/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd32_20260827/ottawa/baseline/result.json", "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/ottawa/baseline/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/change_detection/Ottawa/manifest.json --dataset Ottawa --variant baseline --output {root}/experiments/corrected_shared_v2_sd16_20260828/ottawa/baseline --epochs 150 --patience 25 --batch 16 --imgsz 192 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "cd_ottawa_p3_d16",
+      "priority": 81,
+      "task": "change_detection",
+      "dataset": "Ottawa",
+      "variant": "P3-d16",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Ottawa/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/ottawa/ours/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/change_detection/Ottawa/manifest.json --dataset Ottawa --variant ours --output {root}/experiments/corrected_shared_v2_sd16_20260828/ottawa/ours --epochs 150 --patience 25 --batch 16 --imgsz 192 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "cd_yellow_river_baseline",
+      "priority": 82,
+      "task": "change_detection",
+      "dataset": "Yellow River",
+      "variant": "baseline",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Yellow_River/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd32_20260827/yellow_river/baseline/result.json", "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/yellow_river/baseline/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/change_detection/Yellow_River/manifest.json --dataset 'Yellow River' --variant baseline --output {root}/experiments/corrected_shared_v2_sd16_20260828/yellow_river/baseline --epochs 150 --patience 25 --batch 16 --imgsz 192 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "cd_yellow_river_p3_d16",
+      "priority": 83,
+      "task": "change_detection",
+      "dataset": "Yellow River",
+      "variant": "P3-d16",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Yellow_River/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/yellow_river/ours/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/change_detection/Yellow_River/manifest.json --dataset 'Yellow River' --variant ours --output {root}/experiments/corrected_shared_v2_sd16_20260828/yellow_river/ours --epochs 150 --patience 25 --batch 16 --imgsz 192 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "cd_farmland_baseline",
+      "priority": 84,
+      "task": "change_detection",
+      "dataset": "Farmland",
+      "variant": "baseline",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Farmland/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd32_20260827/farmland/baseline/result.json", "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/farmland/baseline/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/change_detection/Farmland/manifest.json --dataset Farmland --variant baseline --output {root}/experiments/corrected_shared_v2_sd16_20260828/farmland/baseline --epochs 150 --patience 25 --batch 16 --imgsz 192 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "cd_farmland_p3_d16",
+      "priority": 85,
+      "task": "change_detection",
+      "dataset": "Farmland",
+      "variant": "P3-d16",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Farmland/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/farmland/ours/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/change_detection/Farmland/manifest.json --dataset Farmland --variant ours --output {root}/experiments/corrected_shared_v2_sd16_20260828/farmland/ours --epochs 150 --patience 25 --batch 16 --imgsz 192 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "cd_sulzberger_baseline",
+      "priority": 86,
+      "task": "change_detection",
+      "dataset": "Sulzberger",
+      "variant": "baseline",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Sulzberger/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd32_20260827/sulzberger/baseline/result.json", "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/sulzberger/baseline/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/change_detection/Sulzberger/manifest.json --dataset Sulzberger --variant baseline --output {root}/experiments/corrected_shared_v2_sd16_20260828/sulzberger/baseline --epochs 150 --patience 25 --batch 16 --imgsz 192 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    },
+    {
+      "id": "cd_sulzberger_p3_d16",
+      "priority": 87,
+      "task": "change_detection",
+      "dataset": "Sulzberger",
+      "variant": "P3-d16",
+      "hosts": ["A", "B", "C", "D"],
+      "requires": ["/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Sulzberger/manifest.json", "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"],
+      "completion_paths": ["/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/sulzberger/ours/result.json"],
+      "command": "{root}/envs/ig-ds-ssm-env/bin/python -u {root}/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest {root}/data/cross_task_prepared_v2/change_detection/Sulzberger/manifest.json --dataset Sulzberger --variant ours --output {root}/experiments/corrected_shared_v2_sd16_20260828/sulzberger/ours --epochs 150 --patience 25 --batch 16 --imgsz 192 --workers 6 --lr 0.0002 --state-dim 16 --seed 0 --device cuda:0 --amp"
+    }
+  ]
+}

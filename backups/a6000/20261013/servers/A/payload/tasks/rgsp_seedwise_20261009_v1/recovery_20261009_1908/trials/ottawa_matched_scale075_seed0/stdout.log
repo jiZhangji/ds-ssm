@@ -1,0 +1,217 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py:197: UserWarning: upsample_bilinear2d_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py:197: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Ottawa matched_scale075 seed0 epoch=1/150 loss=1.591989 val=0.891831
+Ottawa matched_scale075 seed0 epoch=2/150 loss=1.221965 val=0.887124
+Ottawa matched_scale075 seed0 epoch=3/150 loss=0.994189 val=0.943372
+Ottawa matched_scale075 seed0 epoch=4/150 loss=0.976963 val=0.926718
+Ottawa matched_scale075 seed0 epoch=5/150 loss=0.868252 val=0.913025
+Ottawa matched_scale075 seed0 epoch=6/150 loss=0.790248 val=0.946026
+Ottawa matched_scale075 seed0 epoch=7/150 loss=0.753014 val=0.935276
+Ottawa matched_scale075 seed0 epoch=8/150 loss=0.711193 val=0.950182
+Ottawa matched_scale075 seed0 epoch=9/150 loss=0.686452 val=0.942954
+Ottawa matched_scale075 seed0 epoch=10/150 loss=0.640344 val=0.953503
+Ottawa matched_scale075 seed0 epoch=11/150 loss=0.719292 val=0.937743
+Ottawa matched_scale075 seed0 epoch=12/150 loss=0.600368 val=0.960293
+Ottawa matched_scale075 seed0 epoch=13/150 loss=0.632077 val=0.957789
+Ottawa matched_scale075 seed0 epoch=14/150 loss=0.581301 val=0.960529
+Ottawa matched_scale075 seed0 epoch=15/150 loss=0.585561 val=0.948564
+Ottawa matched_scale075 seed0 epoch=16/150 loss=0.643229 val=0.958487
+Ottawa matched_scale075 seed0 epoch=17/150 loss=0.514081 val=0.958406
+Ottawa matched_scale075 seed0 epoch=18/150 loss=0.554590 val=0.956559
+Ottawa matched_scale075 seed0 epoch=19/150 loss=0.569614 val=0.959762
+Ottawa matched_scale075 seed0 epoch=20/150 loss=0.474879 val=0.964316
+Ottawa matched_scale075 seed0 epoch=21/150 loss=0.495947 val=0.960276
+Ottawa matched_scale075 seed0 epoch=22/150 loss=0.484422 val=0.959639
+Ottawa matched_scale075 seed0 epoch=23/150 loss=0.448637 val=0.963948
+Ottawa matched_scale075 seed0 epoch=24/150 loss=0.455353 val=0.963428
+Ottawa matched_scale075 seed0 epoch=25/150 loss=0.433369 val=0.963985
+Ottawa matched_scale075 seed0 epoch=26/150 loss=0.413104 val=0.963504
+Ottawa matched_scale075 seed0 epoch=27/150 loss=0.422117 val=0.963010
+Ottawa matched_scale075 seed0 epoch=28/150 loss=0.424064 val=0.962095
+Ottawa matched_scale075 seed0 epoch=29/150 loss=0.389232 val=0.965415
+Ottawa matched_scale075 seed0 epoch=30/150 loss=0.378886 val=0.965400
+Ottawa matched_scale075 seed0 epoch=31/150 loss=0.391146 val=0.968923
+Ottawa matched_scale075 seed0 epoch=32/150 loss=0.353857 val=0.965989
+Ottawa matched_scale075 seed0 epoch=33/150 loss=0.370285 val=0.966879
+Ottawa matched_scale075 seed0 epoch=34/150 loss=0.346462 val=0.968281
+Ottawa matched_scale075 seed0 epoch=35/150 loss=0.360352 val=0.967908
+Ottawa matched_scale075 seed0 epoch=36/150 loss=0.389929 val=0.968186
+Ottawa matched_scale075 seed0 epoch=37/150 loss=0.335165 val=0.968322
+Ottawa matched_scale075 seed0 epoch=38/150 loss=0.324075 val=0.968524
+Ottawa matched_scale075 seed0 epoch=39/150 loss=0.336350 val=0.967576
+Ottawa matched_scale075 seed0 epoch=40/150 loss=0.325903 val=0.968275
+Ottawa matched_scale075 seed0 epoch=41/150 loss=0.300526 val=0.969072
+Ottawa matched_scale075 seed0 epoch=42/150 loss=0.308911 val=0.970021
+Ottawa matched_scale075 seed0 epoch=43/150 loss=0.291876 val=0.968663
+Ottawa matched_scale075 seed0 epoch=44/150 loss=0.290658 val=0.968240
+Ottawa matched_scale075 seed0 epoch=45/150 loss=0.281593 val=0.968784
+Ottawa matched_scale075 seed0 epoch=46/150 loss=0.274016 val=0.969267
+Ottawa matched_scale075 seed0 epoch=47/150 loss=0.291220 val=0.968770
+Ottawa matched_scale075 seed0 epoch=48/150 loss=0.273980 val=0.969204
+Ottawa matched_scale075 seed0 epoch=49/150 loss=0.330109 val=0.967210
+Ottawa matched_scale075 seed0 epoch=50/150 loss=0.318302 val=0.967660
+Ottawa matched_scale075 seed0 epoch=51/150 loss=0.283887 val=0.969138
+Ottawa matched_scale075 seed0 epoch=52/150 loss=0.274016 val=0.970475
+Ottawa matched_scale075 seed0 epoch=53/150 loss=0.276979 val=0.972031
+Ottawa matched_scale075 seed0 epoch=54/150 loss=0.268176 val=0.970034
+Ottawa matched_scale075 seed0 epoch=55/150 loss=0.257754 val=0.970493
+Ottawa matched_scale075 seed0 epoch=56/150 loss=0.276563 val=0.969503
+Ottawa matched_scale075 seed0 epoch=57/150 loss=0.245311 val=0.971662
+Ottawa matched_scale075 seed0 epoch=58/150 loss=0.265671 val=0.970538
+Ottawa matched_scale075 seed0 epoch=59/150 loss=0.263957 val=0.970670
+Ottawa matched_scale075 seed0 epoch=60/150 loss=0.241165 val=0.969178
+Ottawa matched_scale075 seed0 epoch=61/150 loss=0.239565 val=0.970557
+Ottawa matched_scale075 seed0 epoch=62/150 loss=0.231499 val=0.970949
+Ottawa matched_scale075 seed0 epoch=63/150 loss=0.255099 val=0.970803
+Ottawa matched_scale075 seed0 epoch=64/150 loss=0.253979 val=0.969174
+Ottawa matched_scale075 seed0 epoch=65/150 loss=0.225238 val=0.971049
+Ottawa matched_scale075 seed0 epoch=66/150 loss=0.254153 val=0.971526
+Ottawa matched_scale075 seed0 epoch=67/150 loss=0.215700 val=0.971330
+Ottawa matched_scale075 seed0 epoch=68/150 loss=0.217103 val=0.970760
+Ottawa matched_scale075 seed0 epoch=69/150 loss=0.206852 val=0.969710
+Ottawa matched_scale075 seed0 epoch=70/150 loss=0.241020 val=0.970525
+Ottawa matched_scale075 seed0 epoch=71/150 loss=0.234933 val=0.969762
+Ottawa matched_scale075 seed0 epoch=72/150 loss=0.215430 val=0.971392
+Ottawa matched_scale075 seed0 epoch=73/150 loss=0.218936 val=0.971098
+Ottawa matched_scale075 seed0 epoch=74/150 loss=0.218333 val=0.969157
+Ottawa matched_scale075 seed0 epoch=75/150 loss=0.207192 val=0.969865
+Ottawa matched_scale075 seed0 epoch=76/150 loss=0.276153 val=0.971146
+Ottawa matched_scale075 seed0 epoch=77/150 loss=0.223064 val=0.974678
+Ottawa matched_scale075 seed0 epoch=78/150 loss=0.225692 val=0.973054
+Ottawa matched_scale075 seed0 epoch=79/150 loss=0.205079 val=0.972880
+Ottawa matched_scale075 seed0 epoch=80/150 loss=0.198260 val=0.969645
+Ottawa matched_scale075 seed0 epoch=81/150 loss=0.205136 val=0.973379
+Ottawa matched_scale075 seed0 epoch=82/150 loss=0.210645 val=0.969994
+Ottawa matched_scale075 seed0 epoch=83/150 loss=0.193597 val=0.973112
+Ottawa matched_scale075 seed0 epoch=84/150 loss=0.203406 val=0.971882
+Ottawa matched_scale075 seed0 epoch=85/150 loss=0.193901 val=0.972751
+Ottawa matched_scale075 seed0 epoch=86/150 loss=0.189868 val=0.971967
+Ottawa matched_scale075 seed0 epoch=87/150 loss=0.194272 val=0.972857
+Ottawa matched_scale075 seed0 epoch=88/150 loss=0.196524 val=0.970677
+Ottawa matched_scale075 seed0 epoch=89/150 loss=0.188068 val=0.968830
+Ottawa matched_scale075 seed0 epoch=90/150 loss=0.188416 val=0.970733
+Ottawa matched_scale075 seed0 epoch=91/150 loss=0.178402 val=0.972115
+Ottawa matched_scale075 seed0 epoch=92/150 loss=0.194360 val=0.970620
+Ottawa matched_scale075 seed0 epoch=93/150 loss=0.192807 val=0.971810
+Ottawa matched_scale075 seed0 epoch=94/150 loss=0.172501 val=0.969632
+Ottawa matched_scale075 seed0 epoch=95/150 loss=0.196331 val=0.971674
+Ottawa matched_scale075 seed0 epoch=96/150 loss=0.217745 val=0.971971
+Ottawa matched_scale075 seed0 epoch=97/150 loss=0.189802 val=0.970394
+Ottawa matched_scale075 seed0 epoch=98/150 loss=0.180145 val=0.972210
+Ottawa matched_scale075 seed0 epoch=99/150 loss=0.182686 val=0.970690
+Ottawa matched_scale075 seed0 epoch=100/150 loss=0.175685 val=0.970690
+Ottawa matched_scale075 seed0 epoch=101/150 loss=0.200911 val=0.971306
+Ottawa matched_scale075 seed0 epoch=102/150 loss=0.177088 val=0.971046
+{
+  "schema": "rgsp-cross-trial-v1",
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "matched_scale075",
+  "seed": 0,
+  "protocol": {
+    "schema": "rgsp-cross-trial-v1",
+    "dataset": "Ottawa",
+    "task": "change_detection",
+    "logical_data_sha256": "af42e4de932e50b34e768e0a4d1f0bb690edc62390ce939d4285fb347075ec33",
+    "split_counts": {
+      "test": 32,
+      "train": 112,
+      "val": 24
+    },
+    "annotation_policy": "fail",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "epochs": 150,
+    "patience": 25,
+    "imgsz": 192,
+    "batch": 16,
+    "eval_batch": 16,
+    "optimizer": "AdamW",
+    "lr": 0.0002,
+    "weight_decay": 0.0005,
+    "scheduler": "cosine to 1% initial lr",
+    "module_warmup_epochs": 0,
+    "precision": "FP32 (AMP/TF32 off)",
+    "gradient_clip_l2": 5.0,
+    "grad_accum": 1,
+    "classification_label_smoothing": 0.1,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "selection_metric": "f1",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "historical_results_comparable": false
+  },
+  "protocol_sha256": "65e6c9f98f6084b2d5c3c94ef662510777176ce306a3205a0f02df59d2db57e0",
+  "data": {
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/Ottawa/manifest.json",
+    "manifest_sha256": "7cfc014e6c6e94a670b692382c1fe5328404035e3ceb29941f62aef4209721d7",
+    "logical_manifest_sha256": "af42e4de932e50b34e768e0a4d1f0bb690edc62390ce939d4285fb347075ec33",
+    "counts": {
+      "test": 32,
+      "train": 112,
+      "val": 24
+    },
+    "audit_sha256": "5935f8221f4c420c908ee2b67be062ac706bfc881051f5ecdfe0081676d4a8cd",
+    "files_sha256": "f487199e1d2f4ee9fc7150a1614a670ecbf2fd1e31aa993f1e688dfba28086fc",
+    "annotation_policy": "fail"
+  },
+  "initialization_common_tensor_sha256": "d258a21c11bddf3824e3377acf6401654d52d5ccbadee72d7ec597e3fa046067",
+  "checkpoint": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_matched_scale075_seed0/best.pt",
+  "best_sha256": "1d3054243c4f8134e22a520399bfecb1c96a52b548732b41b02aa18e912fa855",
+  "best_epoch": 77,
+  "threshold": 0.65,
+  "metric": {
+    "precision": 0.9627240143369176,
+    "recall": 0.9634146341463414,
+    "f1": 0.9630692004302617,
+    "iou": 0.9287690179806363,
+    "oa": 0.9888237847222222,
+    "kappa": 0.9564847866734658,
+    "tp": 2686,
+    "fp": 104,
+    "fn": 102,
+    "tn": 15540,
+    "evaluated_native_unique_pixels": 18432,
+    "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities"
+  },
+  "reloaded_controls": {
+    "variant": "matched_scale075",
+    "controlled_blocks": 1,
+    "placement": "internal P3/8, 64 channels",
+    "scalars": {
+      "lambda_s": 0.0,
+      "alpha": 0.0,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612
+    },
+    "buffer_scalars": [
+      "lambda_s",
+      "alpha",
+      "beta_i",
+      "rho_i",
+      "eta_i"
+    ],
+    "min_retain": 0.5,
+    "use_pfim": false
+  },
+  "parameters": 3715097,
+  "trainable_parameters": 3715097,
+  "buffers": 7964,
+  "efficiency_status": "Params only here; matched-hardware latency and scan-aware FLOPs require the separate efficiency lane. No undercounted THOP GFLOPs claimed.",
+  "historical_negative_results_preserved": true,
+  "finished_utc": "2026-10-09T13:14:03.895234+00:00"
+}
+{"compatibility_launcher": "PASS", "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/ottawa_matched_scale075_seed0/cuda_compatibility.json"}

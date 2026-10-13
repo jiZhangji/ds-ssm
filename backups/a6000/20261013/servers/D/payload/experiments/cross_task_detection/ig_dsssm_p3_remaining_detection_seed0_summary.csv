@@ -1,0 +1,2 @@
+dataset,experiment,variant,placement,state_dim,precision,recall,ap50,ap75,ap50_95,inference_ms,weights
+SADD,ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3,full,p3,32,0.9069275313169205,0.91725768321513,0.9445971094744444,0.4482611980438998,0.47854469601108357,8.300373449871435,/home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/best.pt

@@ -1,0 +1,15 @@
+... ... 1st round clustering ... ...
+... ... 2nd round clustering ... ...
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py", line 590, in <module>
+    execute(parse_args())
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py", line 349, in execute
+    model = build_model(args.method, allow_fp32_adaptation=True)
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/author_models.py", line 179, in build_model
+    namespace.update(Rearrange=Rearrange, pywt=importlib.import_module("pywt"),
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'pywt'

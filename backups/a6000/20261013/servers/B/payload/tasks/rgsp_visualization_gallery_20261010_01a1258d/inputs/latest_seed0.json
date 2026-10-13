@@ -1,0 +1,1453 @@
+{
+  "schema": "rgsp-seed0-results-review-v1",
+  "plan_canonical_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "snapshot_is_global_barrier_candidate": false,
+  "coverage": {
+    "requested": 57,
+    "verified": 44,
+    "missing": 13,
+    "invalid": []
+  },
+  "producers": [
+    {
+      "host_key": "a",
+      "checked_utc": "2026-10-10T02:07:54.897361+00:00",
+      "requested": 22,
+      "verified": 20,
+      "missing_trial_ids": [
+        "sar_aircraft10_original_seed0",
+        "sar_aircraft10_full_seed0"
+      ]
+    },
+    {
+      "host_key": "b",
+      "checked_utc": "2026-10-10T02:07:57.052709+00:00",
+      "requested": 27,
+      "verified": 19,
+      "missing_trial_ids": [
+        "ssdd_full_d8_seed0",
+        "ssdd_full_d32_seed0",
+        "ssdd_full_trend5_seed0",
+        "ssdd_full_stats5_seed0",
+        "ssdd_full_trend7_seed0",
+        "ssdd_full_stats7_seed0",
+        "ssdd_cnn_yolov8n_seed0",
+        "sar_aircraft10_matched_scale075_seed0"
+      ]
+    },
+    {
+      "host_key": "c",
+      "checked_utc": "2026-10-10T02:07:55.932806+00:00",
+      "requested": 2,
+      "verified": 1,
+      "missing_trial_ids": [
+        "sar_shipdataset_full_seed0"
+      ]
+    },
+    {
+      "host_key": "f0",
+      "checked_utc": "2026-10-10T02:07:56.276246+00:00",
+      "requested": 4,
+      "verified": 3,
+      "missing_trial_ids": [
+        "sar_shipdataset_original_seed0"
+      ]
+    },
+    {
+      "host_key": "f1",
+      "checked_utc": "2026-10-10T02:07:55.492352+00:00",
+      "requested": 2,
+      "verified": 1,
+      "missing_trial_ids": [
+        "sar_shipdataset_matched_scale075_seed0"
+      ]
+    }
+  ],
+  "detection_audit": {
+    "unique_trials": 29,
+    "captured_file_metadata_matched_to_receipts": 96,
+    "seed0_test_finite_metrics": 29,
+    "best_hash_bindings": 29,
+    "regular_evaluation_completion_bindings": 28,
+    "adoption_content_not_captured": [
+      "ssdd_local_energy_seed0"
+    ],
+    "source_bytes_note": "Captured JSON values are complete structured copies, not byte-identical copies of source JSON files. The producing-host reported hashes identify original artifacts."
+  },
+  "cross_scope": "15 producer receipts reverified 2026-10-10. Existing 15/15 recursive deep audits are from 2026-10-09; fresh inner-artifact capture and 14/15 final metric contents unavailable due subsequent SSH connection denial. Do not infer metric values or fresh full deep-verification.",
+  "contrasts_ap50_95_percentage_points": {
+    "combined_RE_guidance": 0.20822642996297702,
+    "LRC_energy": -5.862623208659983,
+    "input_delta": -6.670049010816342,
+    "post_vs_input": 1.3519433141969728,
+    "ssdd_full_minus_original": -1.1231895007389028,
+    "ssdd_full_minus_matched": 1.3368576560944518,
+    "ssdd_post_minus_original": 2.8043405162449346,
+    "ssdd_no_lrc_minus_full": 1.6755000092738186,
+    "sadd_full_minus_original": -5.084243767064422,
+    "sadd_full_minus_matched": -3.088410118194524,
+    "sadd_post_minus_original": 0.19491236552774183,
+    "sadd_no_lrc_minus_full": 3.4476112833863652
+  },
+  "records": [
+    {
+      "trial_id": "sadd_matched_scale075_seed0",
+      "dataset": "SADD",
+      "host_key": "a",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "matched_scale075",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "reuse",
+      "receipt_verified_utc": "2026-10-10T02:07:54.897361+00:00",
+      "receipt_sha256": "1f99fecb53e009db1578202175da6a48626aeb044a4a2600ddc71e202bed34d9",
+      "metrics_raw": {
+        "precision": 0.9418250560599121,
+        "recall": 0.9583333333333334,
+        "ap50": 0.975739159988451,
+        "ap75": 0.4959616436074145,
+        "ap50_95": 0.5209138520984229
+      },
+      "metrics_percent": {
+        "precision": 94.18250560599121,
+        "recall": 95.83333333333334,
+        "ap50": 97.5739159988451,
+        "ap75": 49.596164360741454,
+        "ap50_95": 52.09138520984229
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/matched_scale075/eval_test.json",
+        "sha256": "591b17ec8021eefd74dbc9938acde8c51ad2d8b428bcf665add6d3619de941fe"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/matched_scale075/weights/best.pt",
+        "sha256": "6ee521b62baa3f9f5b48961f82c164b5d2cb9181284a1ef016f13fe76db697ce"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/matched_scale075/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/matched_scale075/train_complete.json",
+      "last_epoch_observed": 200,
+      "resumed": null,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": [
+        "Historical continuous seeded-scratch trial, not rerun under the new launcher.",
+        "Same-shape RGSP controls share initialized tensors; different architecture/state/position do not guarantee tensor-matched initialization.",
+        "Dataset remains exact-content-cleaned image split, not a verified unseen-scene split.",
+        "Legacy EMA/FP16 checkpoint storage and test metric protocol retained."
+      ]
+    },
+    {
+      "trial_id": "sadd_full_seed0",
+      "dataset": "SADD",
+      "host_key": "a",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "full",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "reuse",
+      "receipt_verified_utc": "2026-10-10T02:07:54.897361+00:00",
+      "receipt_sha256": "7a8e828936735e95eed2ff5645d9ac4d6be1c711f199561b203a9336a9ae0e2f",
+      "metrics_raw": {
+        "precision": 0.9259446578514321,
+        "recall": 0.9193692884404394,
+        "ap50": 0.9709435762067388,
+        "ap75": 0.43555819065521945,
+        "ap50_95": 0.4900297509164776
+      },
+      "metrics_percent": {
+        "precision": 92.59446578514321,
+        "recall": 91.93692884404395,
+        "ap50": 97.09435762067388,
+        "ap75": 43.555819065521945,
+        "ap50_95": 49.00297509164776
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/full/eval_test.json",
+        "sha256": "ca05110c84736dad5feb1cd3706924b46d1dce0da515599c15162d6146f6f015"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/full/weights/best.pt",
+        "sha256": "fdc803161e531f1f36afba151c03c007cd05b8a4e98adc9f9ff210a54709ccb0"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/full/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/full/train_complete.json",
+      "last_epoch_observed": 156,
+      "resumed": null,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": [
+        "Historical continuous seeded-scratch trial, not rerun under the new launcher.",
+        "Same-shape RGSP controls share initialized tensors; different architecture/state/position do not guarantee tensor-matched initialization.",
+        "Dataset remains exact-content-cleaned image split, not a verified unseen-scene split.",
+        "Legacy EMA/FP16 checkpoint storage and test metric protocol retained."
+      ]
+    },
+    {
+      "trial_id": "sadd_local_energy_seed0",
+      "dataset": "SADD",
+      "host_key": "a",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "local_energy",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "reuse",
+      "receipt_verified_utc": "2026-10-10T02:07:54.897361+00:00",
+      "receipt_sha256": "abce46fbe46aa2118a286fc3577aac392a713b4b01fb9244d57c56b03e985317",
+      "metrics_raw": {
+        "precision": 0.9329000039630873,
+        "recall": 0.946078431372549,
+        "ap50": 0.9759411939763697,
+        "ap75": 0.48102885252608474,
+        "ap50_95": 0.519478647276534
+      },
+      "metrics_percent": {
+        "precision": 93.29000039630873,
+        "recall": 94.6078431372549,
+        "ap50": 97.59411939763697,
+        "ap75": 48.10288525260847,
+        "ap50_95": 51.9478647276534
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/local_energy/eval_test.json",
+        "sha256": "700581a7b4c280983cd3c0921c83b8877d447043878e1407f93b07489ea810ca"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/local_energy/weights/best.pt",
+        "sha256": "f223bbba1023545ee7b0b06ddd0c851a529dd46695f2d84e7b5e59b4ee3a973f"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/local_energy/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/local_energy/train_complete.json",
+      "last_epoch_observed": 168,
+      "resumed": null,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": [
+        "Historical continuous seeded-scratch trial, not rerun under the new launcher.",
+        "Same-shape RGSP controls share initialized tensors; different architecture/state/position do not guarantee tensor-matched initialization.",
+        "Dataset remains exact-content-cleaned image split, not a verified unseen-scene split.",
+        "Legacy EMA/FP16 checkpoint storage and test metric protocol retained."
+      ]
+    },
+    {
+      "trial_id": "sadd_matched_identity_seed0",
+      "dataset": "SADD",
+      "host_key": "a",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "matched_identity",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:54.897361+00:00",
+      "receipt_sha256": "0d8cf81dc869cdb092c0298ceec39d859fad2b794f03a2dffa84d50eee02837f",
+      "metrics_raw": {
+        "ap50": 0.9861941173013712,
+        "ap50_95": 0.526018219509452,
+        "ap75": 0.5252641501261656,
+        "precision": 0.9358851757180108,
+        "recall": 0.9754901960784313
+      },
+      "metrics_percent": {
+        "ap50": 98.61941173013712,
+        "ap50_95": 52.60182195094521,
+        "ap75": 52.52641501261655,
+        "precision": 93.58851757180108,
+        "recall": 97.54901960784314
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_matched_identity_seed0/eval_test.json",
+        "sha256": "0860d42c9914506ab0cfa9a32fd9364dfd46573ecbbd776a17e7b7b99e532384"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_matched_identity_seed0/weights/best.pt",
+        "sha256": "4994036b07f1f6a1da01b95c212d76d155305e05aa4adf16cb730656a7b6f9fa"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_matched_identity_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_matched_identity_seed0/train_complete.json",
+      "last_epoch_observed": 191,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "sadd_cnn_yolov8n_seed0",
+      "dataset": "SADD",
+      "host_key": "a",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "cnn_yolov8n",
+        "placement": "baseline",
+        "state_dim": 0,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:54.897361+00:00",
+      "receipt_sha256": "11fff026a498b2a46f56201f40b2c5565459ae67d5a0cc896b8601f3d1beb6ac",
+      "metrics_raw": {
+        "ap50": 0.9703386463392649,
+        "ap50_95": 0.5273038909649512,
+        "ap75": 0.50737686846808,
+        "precision": 0.9369929915828464,
+        "recall": 0.9476790606872947
+      },
+      "metrics_percent": {
+        "ap50": 97.0338646339265,
+        "ap50_95": 52.730389096495124,
+        "ap75": 50.737686846807996,
+        "precision": 93.69929915828465,
+        "recall": 94.76790606872947
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_cnn_yolov8n_seed0/eval_test.json",
+        "sha256": "b83a0c2913978de11685b4e3dd1be3cf1cf64738a8de3f2962cc7ecc69061b3d"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_cnn_yolov8n_seed0/weights/best.pt",
+        "sha256": "1a05fa7df9d3befea0c8819146a66b8183537549356a3327fe805fb88fa1bcd4"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_cnn_yolov8n_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_cnn_yolov8n_seed0/train_complete.json",
+      "last_epoch_observed": 191,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_full_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "full",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "a0ebea6c767f7035a15c43c9bcf07743e164b197155987ec7e82d11941124d1f",
+      "metrics_raw": {
+        "ap50": 0.8774102291361389,
+        "ap50_95": 0.42688051353889944,
+        "ap75": 0.3273940334120583,
+        "precision": 0.9391065395293668,
+        "recall": 0.7857142857142857
+      },
+      "metrics_percent": {
+        "ap50": 87.74102291361389,
+        "ap50_95": 42.688051353889946,
+        "ap75": 32.73940334120583,
+        "precision": 93.91065395293668,
+        "recall": 78.57142857142857
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/eval_test.json",
+        "sha256": "dcfe1dc3b1ed9065f8f6b21b07367b699de203168cbeebd79f7032cffaae623a"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/weights/best.pt",
+        "sha256": "ab774d4c46e0862ef981364e48347e8422522774a31d81bd50851ee1f4525529"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "sadd_full_no_lrc_seed0",
+      "dataset": "SADD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "full_no_lrc",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "59057d9dd04a55e84a0cbde38c9caf81c1dbaa282d2020c5c11e9c9226be153b",
+      "metrics_raw": {
+        "ap50": 0.9797801948914814,
+        "ap50_95": 0.5245058637503413,
+        "ap75": 0.4844410175340926,
+        "precision": 0.9379126819025441,
+        "recall": 0.9534313725490197
+      },
+      "metrics_percent": {
+        "ap50": 97.97801948914814,
+        "ap50_95": 52.45058637503413,
+        "ap75": 48.44410175340926,
+        "precision": 93.79126819025441,
+        "recall": 95.34313725490196
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/eval_test.json",
+        "sha256": "0fd531d2a8b066776face2f3f8b5e8ec66824bae297a3e75be4dd9e021489d70"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/weights/best.pt",
+        "sha256": "9d2f5b6c8ec8e61fb43015162eab3b6073d370343803045cbe3e3934e48545f0"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_full_no_lrc_seed0/train_complete.json",
+      "last_epoch_observed": 191,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_full_no_lrc_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "full_no_lrc",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "73ccff480e5e5a2dd70a9baa6f04c6e51cd4ead3d753bc6567b6bdbad7b400b2",
+      "metrics_raw": {
+        "ap50": 0.8796313614360944,
+        "ap50_95": 0.44363551363163767,
+        "ap75": 0.3818535376768491,
+        "precision": 0.9330272470106943,
+        "recall": 0.7948717948717948
+      },
+      "metrics_percent": {
+        "ap50": 87.96313614360945,
+        "ap50_95": 44.363551363163765,
+        "ap75": 38.18535376768491,
+        "precision": 93.30272470106942,
+        "recall": 79.48717948717949
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/eval_test.json",
+        "sha256": "a5254636881ad6abefef7a78f9dd833b0912493e139743642f19f2fde693dff6"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/weights/best.pt",
+        "sha256": "aa56812089050c20e76ca8c7e69df6d8f024096577c9c0aa8a9c775dc396e34f"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_no_lrc_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "sadd_const_guidance_seed0",
+      "dataset": "SADD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "const_guidance",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "76b100cc8393fe5260968eca22d56f901255a9cd9af35676ea4521e592ad7503",
+      "metrics_raw": {
+        "ap50": 0.968066605871388,
+        "ap50_95": 0.5221103118883532,
+        "ap75": 0.5133248615778256,
+        "precision": 0.9488019151097251,
+        "recall": 0.9538527912161272
+      },
+      "metrics_percent": {
+        "ap50": 96.80666058713881,
+        "ap50_95": 52.21103118883532,
+        "ap75": 51.33248615778256,
+        "precision": 94.88019151097251,
+        "recall": 95.38527912161273
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/eval_test.json",
+        "sha256": "ef08f019a70a7eb58c2b8e6c65f2ac3de345c7f9683db51efc7ed0c5e4c2ea10"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/weights/best.pt",
+        "sha256": "67f29688251147637ef7f80c6d821ffb1730a1cda5785ec67d54f50b888bcd72"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_const_guidance_seed0/train_complete.json",
+      "last_epoch_observed": 191,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_const_guidance_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "const_guidance",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "215ef0f3663b3c259884a0689ea34a6d6330bc9a87369ff1c5137af009eaca9a",
+      "metrics_raw": {
+        "ap50": 0.856757189901149,
+        "ap50_95": 0.40446998889770674,
+        "ap75": 0.3228228330507964,
+        "precision": 0.9119702794783159,
+        "recall": 0.7969080561108007
+      },
+      "metrics_percent": {
+        "ap50": 85.6757189901149,
+        "ap50_95": 40.446998889770676,
+        "ap75": 32.28228330507964,
+        "precision": 91.19702794783159,
+        "recall": 79.69080561108008
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/eval_test.json",
+        "sha256": "0ab44cd66269b66eca9236281c935b72b33395adde98da06c8e29bfffc811d97"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/weights/best.pt",
+        "sha256": "b9e93b54839a93937052b51c5a0614c904589cf5e66b9089daee7958a2315f94"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_const_guidance_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "sadd_post_gate_seed0",
+      "dataset": "SADD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "post_gate",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "2aae5b2e279d2061a1e2e64e10837b9d4fcb6dc6be5d0ba8e76ab573f4b78c69",
+      "metrics_raw": {
+        "ap50": 0.9831955917655713,
+        "ap50_95": 0.5428213122423993,
+        "ap75": 0.5810265304809438,
+        "precision": 0.9382218756584646,
+        "recall": 0.9583333333333334
+      },
+      "metrics_percent": {
+        "ap50": 98.31955917655712,
+        "ap50_95": 54.282131224239926,
+        "ap75": 58.102653048094375,
+        "precision": 93.82218756584646,
+        "recall": 95.83333333333334
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/eval_test.json",
+        "sha256": "0fcbf486f02a305e9b62d2f036e5928396a4efd04dec66cea03866dc3c89069e"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/weights/best.pt",
+        "sha256": "871aca35f6907b3a17242058a5e58b28c1e97d5de7e007f379b54af9497be580"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_post_gate_seed0/train_complete.json",
+      "last_epoch_observed": 200,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_post_gate_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "post_gate",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "ee961e85c035c38b0ca017d39810d6f7cfd719261fcb6ae508dfcd4d7d68bdc0",
+      "metrics_raw": {
+        "ap50": 0.8884052254625405,
+        "ap50_95": 0.4661558137087378,
+        "ap75": 0.42731391021844584,
+        "precision": 0.9224678173999235,
+        "recall": 0.8062665663838706
+      },
+      "metrics_percent": {
+        "ap50": 88.84052254625405,
+        "ap50_95": 46.615581370873784,
+        "ap75": 42.73139102184459,
+        "precision": 92.24678173999234,
+        "recall": 80.62665663838706
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_post_gate_seed0/eval_test.json",
+        "sha256": "1a21aa430ab2259eff64a659ea9ea3fdf699367a62dabe9244762376bb8fbeb6"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_post_gate_seed0/weights/best.pt",
+        "sha256": "0ec52ed68d22e9437d29b4d3c34f450ff8f23ed65eba9092cab602c4e72bd718"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_post_gate_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_post_gate_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "sadd_original_seed0",
+      "dataset": "SADD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "original",
+        "placement": "baseline",
+        "state_dim": 0,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "134d82da11ce14cf5f55f1c5605f44a4f65f61de2a526ea9dafb4d75acc61d06",
+      "metrics_raw": {
+        "ap50": 0.985262180547326,
+        "ap50_95": 0.5408721885871218,
+        "ap75": 0.5376590166144535,
+        "precision": 0.9451792520753685,
+        "recall": 0.9719357182676198
+      },
+      "metrics_percent": {
+        "ap50": 98.5262180547326,
+        "ap50_95": 54.087218858712184,
+        "ap75": 53.76590166144535,
+        "precision": 94.51792520753685,
+        "recall": 97.19357182676198
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_original_seed0/eval_test.json",
+        "sha256": "f45b8b2f7b60c81f44175601df65a4d4c424fab046334d488b40e2c85c6c7453"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_original_seed0/weights/best.pt",
+        "sha256": "4ccb24d7a53950e36a1d004530f4bd227e1bacbf5f46d15fdb16e5147480c3f2"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_original_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sadd_original_seed0/train_complete.json",
+      "last_epoch_observed": 200,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_matched_scale075_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "matched_scale075",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "32f33c93d3f4d171fe6ec3bf5e4ac0eba0d899dc9166db50d72072e54988116f",
+      "metrics_raw": {
+        "ap50": 0.8728609409622106,
+        "ap50_95": 0.41351193697795496,
+        "ap75": 0.29689304251304327,
+        "precision": 0.9217396847056736,
+        "recall": 0.7981345930427614
+      },
+      "metrics_percent": {
+        "ap50": 87.28609409622106,
+        "ap50_95": 41.351193697795495,
+        "ap75": 29.68930425130433,
+        "precision": 92.17396847056736,
+        "recall": 79.81345930427614
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_matched_scale075_seed0/eval_test.json",
+        "sha256": "7f3cc42214ebfdc12e19365f9d50e0c7880afedc08ec6d5bd7b4f32350d8e6e9"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_matched_scale075_seed0/weights/best.pt",
+        "sha256": "199c977234001287d689d817e33c63a1d2923159c46c398ea8392570f8521258"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_matched_scale075_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_matched_scale075_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_local_energy_input_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "local_energy_input",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "7cfcb802a6a05ce3887ead20d8f532947e096ef9a728058966842bc9734845da",
+      "metrics_raw": {
+        "ap50": 0.8749535000953477,
+        "ap50_95": 0.4526363805667681,
+        "ap75": 0.3983645727222496,
+        "precision": 0.8997970441898387,
+        "recall": 0.815018315018315
+      },
+      "metrics_percent": {
+        "ap50": 87.49535000953476,
+        "ap50_95": 45.26363805667681,
+        "ap75": 39.83645727222496,
+        "precision": 89.97970441898387,
+        "recall": 81.5018315018315
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/eval_test.json",
+        "sha256": "a8678e8f2f91104d264df95d76289ef67b264dcea0d316eb615fd61ba497214e"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/weights/best.pt",
+        "sha256": "88a40e413851e591a95c20747ecd31f379122999d03fe15ba06dc1c70c0341c0"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_input_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_local_energy_delta_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "local_energy_delta",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "e25984c01ec7ba1b31326bd83d2a6783f344a4da5b92934a43ca4b9bc01bd81a",
+      "metrics_raw": {
+        "ap50": 0.875727891244633,
+        "ap50_95": 0.43432681972338105,
+        "ap75": 0.3794983189484829,
+        "precision": 0.9360907643412161,
+        "recall": 0.7779650610043699
+      },
+      "metrics_percent": {
+        "ap50": 87.5727891244633,
+        "ap50_95": 43.4326819723381,
+        "ap75": 37.94983189484829,
+        "precision": 93.6090764341216,
+        "recall": 77.79650610043699
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/eval_test.json",
+        "sha256": "d9aa8e612ce27ef7c641e2b363f7d18ebaeba4554e22858f7cf1bd51011b8412"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/weights/best.pt",
+        "sha256": "772eebaf3f8be0090850a34d8808ee14f35a2cd0500ea31edcbb38aabe0e4912"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_full_fixed_half_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "full_fixed_half",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "8bc1c0d764f1b1c464ce519090fb6339c8934f9157a6c8fe3f44e880f0435378",
+      "metrics_raw": {
+        "ap50": 0.8663224384686689,
+        "ap50_95": 0.42378726345131457,
+        "ap75": 0.3391807543138986,
+        "precision": 0.9025776822567025,
+        "recall": 0.7967032967032966
+      },
+      "metrics_percent": {
+        "ap50": 86.63224384686688,
+        "ap50_95": 42.378726345131454,
+        "ap75": 33.91807543138986,
+        "precision": 90.25776822567025,
+        "recall": 79.67032967032966
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_fixed_half_seed0/eval_test.json",
+        "sha256": "470647aa3224b7942ba49cd4106e82aba5c902ca2fae8a1130732c27396b93e5"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_fixed_half_seed0/weights/best.pt",
+        "sha256": "f78f040ee0850bcfcb83be7c548e07d762cdb107e3e901d72ddbbb5dd02f552a"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_fixed_half_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_fixed_half_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_residual_scale075_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "residual_scale075",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "7863fa6ed9335dd5b3bed10c99afea1dbeca6bf04dfa0e97ca748fd80fa36c39",
+      "metrics_raw": {
+        "ap50": 0.855415415453138,
+        "ap50_95": 0.41061205299673614,
+        "ap75": 0.3191692833711293,
+        "precision": 0.897229959357842,
+        "recall": 0.7835036529908325
+      },
+      "metrics_percent": {
+        "ap50": 85.5415415453138,
+        "ap50_95": 41.06120529967362,
+        "ap75": 31.91692833711293,
+        "precision": 89.7229959357842,
+        "recall": 78.35036529908325
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_residual_scale075_seed0/eval_test.json",
+        "sha256": "414e007fdc652e7e404467edb7a644ec705f08b046bfb0f698570dadd7251744"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_residual_scale075_seed0/weights/best.pt",
+        "sha256": "27a7054ba6e675471fc405d5444c3ab5d15f1a8b026580e8bb6d9a83429776a0"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_residual_scale075_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_residual_scale075_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_energy_only_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "energy_only",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "469b348fbbdf84862698898f3f148ba2049c4aa4f777d9af42c662642f58e4ad",
+      "metrics_raw": {
+        "ap50": 0.87559038551895,
+        "ap50_95": 0.4549083127109048,
+        "ap75": 0.4282819764033987,
+        "precision": 0.893681339329601,
+        "recall": 0.7985347985347986
+      },
+      "metrics_percent": {
+        "ap50": 87.559038551895,
+        "ap50_95": 45.490831271090485,
+        "ap75": 42.82819764033987,
+        "precision": 89.3681339329601,
+        "recall": 79.85347985347985
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_energy_only_seed0/eval_test.json",
+        "sha256": "94020146d8a5ceebe8b6c5fea85fc1210d601f8643dc2b653aeb2e8addf83681"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_energy_only_seed0/weights/best.pt",
+        "sha256": "d8c986790511fa1dc09ccdf7c06ddebb8628c944dd189685993da1f0ba9d516c"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_energy_only_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_energy_only_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_guidance_only_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "guidance_only",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "d1cabf31c7d04acc8b76e2c46c3751616d7e861f308d7b5539d7e5d8d81b00a7",
+      "metrics_raw": {
+        "ap50": 0.8667225674618666,
+        "ap50_95": 0.44492798957413837,
+        "ap75": 0.39617719016414416,
+        "precision": 0.9100247888128781,
+        "recall": 0.7780138928587192
+      },
+      "metrics_percent": {
+        "ap50": 86.67225674618666,
+        "ap50_95": 44.49279895741384,
+        "ap75": 39.61771901641441,
+        "precision": 91.0024788812878,
+        "recall": 77.80138928587192
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_guidance_only_seed0/eval_test.json",
+        "sha256": "f352bfa935b939d0e13aa2ddfcbc54a1ed2be74381539950a2ccdada04248a17"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_guidance_only_seed0/weights/best.pt",
+        "sha256": "1733e3ee0477a0b0e526497e1dfdb69e255ef785c2b164136781d06920509040"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_guidance_only_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_guidance_only_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_global_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "global",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "4a8398525bda3fbf0bd4aacfb65628693463651be724bcbecd71fc88f2e083fe",
+      "metrics_raw": {
+        "ap50": 0.8745193201994954,
+        "ap50_95": 0.43300117280174766,
+        "ap75": 0.35490822503950115,
+        "precision": 0.9253644231584482,
+        "recall": 0.7765567765567766
+      },
+      "metrics_percent": {
+        "ap50": 87.45193201994954,
+        "ap50_95": 43.30011728017477,
+        "ap75": 35.49082250395011,
+        "precision": 92.53644231584482,
+        "recall": 77.65567765567766
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_global_seed0/eval_test.json",
+        "sha256": "0215ecb0e842b97a885ac88887fa34e279cb114ade4de1638a39d53830def4e5"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_global_seed0/weights/best.pt",
+        "sha256": "e6d63749fb3dc7b41d44610a071c77b24a0a5fcd672e9332ba53550bb2a6b061"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_global_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_global_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_lsgm_trend_only_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "lsgm_trend_only",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "d403ef8b446e2e73a4479bcbd73f21d047e51fd084b65fd1a2c3eea68d41f472",
+      "metrics_raw": {
+        "ap50": 0.8593674692979356,
+        "ap50_95": 0.4195611212856233,
+        "ap75": 0.35700629300012093,
+        "precision": 0.9129611410080481,
+        "recall": 0.7875457875457875
+      },
+      "metrics_percent": {
+        "ap50": 85.93674692979356,
+        "ap50_95": 41.95611212856233,
+        "ap75": 35.700629300012096,
+        "precision": 91.29611410080481,
+        "recall": 78.75457875457876
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/eval_test.json",
+        "sha256": "c67cbe103bb5b742422efc2044a17c4a5e60f82828b7cfef081a8e455283080b"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/weights/best.pt",
+        "sha256": "7f2431c0ec621c0ef328f01f268fbc4d691ffae720d6a5a4cad19bab45dd8c39"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_lsgm_std_only_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "lsgm_std_only",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "d6eea4a0892de5d5e4e6d77ebb772b34d2bd15cd55a1675d12e9808015dc203f",
+      "metrics_raw": {
+        "ap50": 0.8628984046459598,
+        "ap50_95": 0.45148395041666356,
+        "ap75": 0.426429092919166,
+        "precision": 0.8767945884532845,
+        "recall": 0.7820359213766879
+      },
+      "metrics_percent": {
+        "ap50": 86.28984046459598,
+        "ap50_95": 45.148395041666355,
+        "ap75": 42.642909291916595,
+        "precision": 87.67945884532845,
+        "recall": 78.20359213766879
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_std_only_seed0/eval_test.json",
+        "sha256": "ad216460f37b225e4ab131e354b92dc2d03a0421693382f7f1565827394ab76e"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_std_only_seed0/weights/best.pt",
+        "sha256": "2f1cf9e295ce0e8a5d4db06f69a55e2804b927ee8ec832ea4d9191e3d614d1f9"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_std_only_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_std_only_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_lsgm_point_only_seed0",
+      "dataset": "SSDD",
+      "host_key": "b",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "lsgm_point_only",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:57.052709+00:00",
+      "receipt_sha256": "4144281dc4a3aaabefb7ccd00e3a782a63723b281a0f9e006d278fe10fbcf97a",
+      "metrics_raw": {
+        "ap50": 0.8625639318244332,
+        "ap50_95": 0.40186483515094296,
+        "ap75": 0.28373102781023574,
+        "precision": 0.8833389046673847,
+        "recall": 0.7904674988300027
+      },
+      "metrics_percent": {
+        "ap50": 86.25639318244332,
+        "ap50_95": 40.186483515094295,
+        "ap75": 28.373102781023572,
+        "precision": 88.33389046673847,
+        "recall": 79.04674988300027
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_point_only_seed0/eval_test.json",
+        "sha256": "d206769f0d719eec80a8fb3ba087c8ede54468803eae5574e1c1d5ab96b2c614"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_point_only_seed0/weights/best.pt",
+        "sha256": "4e0c449b9b7feac9514b9a363b23fccbfec78030bbdf92c492ea3358c43a9a4a"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_point_only_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_point_only_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_full_p2_seed0",
+      "dataset": "SSDD",
+      "host_key": "c",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "full",
+        "placement": "p2",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:55.932806+00:00",
+      "receipt_sha256": "a19bbb472b2ad7c3197b414e3b881c157d50810f6b0cdc9ef2e606eb00eadb5a",
+      "metrics_raw": {
+        "ap50": 0.828971283482047,
+        "ap50_95": 0.3882031145352034,
+        "ap75": 0.2949078491695247,
+        "precision": 0.8853937242496781,
+        "recall": 0.7640635471915084
+      },
+      "metrics_percent": {
+        "ap50": 82.8971283482047,
+        "ap50_95": 38.82031145352034,
+        "ap75": 29.49078491695247,
+        "precision": 88.53937242496781,
+        "recall": 76.40635471915084
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p2_seed0/eval_test.json",
+        "sha256": "c53df880123a1855507c6b1c766c05c1cb25a2e4cc0e5a9f998a4ccd833e99b4"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p2_seed0/weights/best.pt",
+        "sha256": "c1f88a3ad13feafefe1ca7c77bf181488b46d94ca8e758f4bef9079fce97a602"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p2_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p2_seed0/train_complete.json",
+      "last_epoch_observed": 105,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_original_seed0",
+      "dataset": "SSDD",
+      "host_key": "f0",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "original",
+        "placement": "baseline",
+        "state_dim": 0,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "reuse",
+      "receipt_verified_utc": "2026-10-10T02:07:56.276246+00:00",
+      "receipt_sha256": "148a911f437c2db14b867a3f163ddc2890f993dad8a1fc25b8c1abbbfeb4c2e8",
+      "metrics_raw": {
+        "precision": 0.9299375697662661,
+        "recall": 0.7765567765567766,
+        "ap50": 0.8608423679429338,
+        "ap75": 0.3819614681597156,
+        "ap50_95": 0.4381124085462885
+      },
+      "metrics_percent": {
+        "precision": 92.99375697662661,
+        "recall": 77.65567765567766,
+        "ap50": 86.08423679429337,
+        "ap75": 38.19614681597156,
+        "ap50_95": 43.81124085462885
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/eval_test.json",
+        "sha256": "75f11b851fb46602481df46d3e416354a3d8a69597cc3a4caa6cac67983243ac"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/weights/best.pt",
+        "sha256": "9cdeb017197f755471eb38f191a2cb02704ecc414f4c72754c5edf0471bbe3b1"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": null,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": [
+        "Historical continuous seeded-scratch trial, not rerun under the new launcher.",
+        "Same-shape RGSP controls share initialized tensors; different architecture/state/position do not guarantee tensor-matched initialization.",
+        "Dataset remains exact-content-cleaned image split, not a verified unseen-scene split.",
+        "Legacy EMA/FP16 checkpoint storage and test metric protocol retained."
+      ]
+    },
+    {
+      "trial_id": "ssdd_matched_identity_seed0",
+      "dataset": "SSDD",
+      "host_key": "f0",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "matched_identity",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "reuse",
+      "receipt_verified_utc": "2026-10-10T02:07:56.276246+00:00",
+      "receipt_sha256": "298d0ef232a5cc17a085e99ee98d3dda2be12efddc9bb9e6cf9ee16fdac27ff4",
+      "metrics_raw": {
+        "precision": 0.8980150759210106,
+        "recall": 0.7902265354206068,
+        "ap50": 0.8566719468579562,
+        "ap75": 0.29514895976486777,
+        "ap50_95": 0.4071742064238097
+      },
+      "metrics_percent": {
+        "precision": 89.80150759210106,
+        "recall": 79.02265354206068,
+        "ap50": 85.66719468579562,
+        "ap75": 29.514895976486777,
+        "ap50_95": 40.71742064238097
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity/eval_test.json",
+        "sha256": "bbbac3397c212d3564bd1a1830898b192e363b75aa9172a5218bfec5e92a686a"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity/weights/best.pt",
+        "sha256": "e39aa2e33704f95772a1a15b21f7afa9442f832204dbb099150690deda5ace03"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": null,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": [
+        "Historical continuous seeded-scratch trial, not rerun under the new launcher.",
+        "Same-shape RGSP controls share initialized tensors; different architecture/state/position do not guarantee tensor-matched initialization.",
+        "Dataset remains exact-content-cleaned image split, not a verified unseen-scene split.",
+        "Legacy EMA/FP16 checkpoint storage and test metric protocol retained."
+      ]
+    },
+    {
+      "trial_id": "ssdd_local_energy_seed0",
+      "dataset": "SSDD",
+      "host_key": "f0",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "local_energy",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "command",
+      "receipt_verified_utc": "2026-10-10T02:07:56.276246+00:00",
+      "receipt_sha256": "ee707d206e76ef83e601708d2ebb81872b4b56d9f66f5605b8947fba98f6106d",
+      "metrics_raw": {
+        "precision": 0.900831378977486,
+        "recall": 0.7819420477558379,
+        "ap50": 0.8529099232665254,
+        "ap75": 0.26408327040160706,
+        "ap50_95": 0.3933821966430862
+      },
+      "metrics_percent": {
+        "precision": 90.0831378977486,
+        "recall": 78.19420477558378,
+        "ap50": 85.29099232665254,
+        "ap75": 26.408327040160707,
+        "ap50_95": 39.338219664308625
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/eval_test.json",
+        "sha256": "1ceb872c9335a38a11f84e15cae5f76fd8f06edc23ec78c4f28211bf300c7506"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/weights/best.pt",
+        "sha256": "ac60ad4c7bcbdf99c59db2596671a8db5ce591e1437575d114eccc72a915af29"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed0_local_energy/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": null,
+      "evaluation_complete_bound": false,
+      "review_scope": "Metrics/train/best bound; adoption and completion content not captured in this review.",
+      "legacy_limitations": []
+    },
+    {
+      "trial_id": "ssdd_full_p4_seed0",
+      "dataset": "SSDD",
+      "host_key": "f1",
+      "seed": 0,
+      "split": "test",
+      "spec": {
+        "control": "full",
+        "placement": "p4",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "receipt_kind": "detection",
+      "receipt_verified_utc": "2026-10-10T02:07:55.492352+00:00",
+      "receipt_sha256": "25792e7a816af446801f44240a98fc10fe648fa2ad8d296b97a47ca250f72de1",
+      "metrics_raw": {
+        "ap50": 0.8582540154841388,
+        "ap50_95": 0.43149162502588456,
+        "ap75": 0.3588323002805714,
+        "precision": 0.9388117897768538,
+        "recall": 0.7587214548150778
+      },
+      "metrics_percent": {
+        "ap50": 85.82540154841388,
+        "ap50_95": 43.14916250258845,
+        "ap75": 35.88323002805714,
+        "precision": 93.88117897768538,
+        "recall": 75.87214548150779
+      },
+      "evaluation_source": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/eval_test.json",
+        "sha256": "8cc1cef74f31eef233a1c8766b18ef8f0125ebccf81534f4ba76270b2842ece2"
+      },
+      "best_artifact": {
+        "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/weights/best.pt",
+        "sha256": "14b5c46296c1ea63ae3674d41f3d309f429b207caac6bf8458e4d9d38f503fa6"
+      },
+      "evaluation_weights_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/weights/best.pt",
+      "train_complete_source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_p4_seed0/train_complete.json",
+      "last_epoch_observed": 150,
+      "resumed": false,
+      "evaluation_complete_bound": true,
+      "review_scope": "Captured evaluation/train/completion fields are hash-bound to producing-host verified receipt.",
+      "legacy_limitations": []
+    }
+  ]
+}

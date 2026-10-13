@@ -1,0 +1,286 @@
+{
+  "trial_id": "sadd_cnn_yolov8n_seed0",
+  "variant": "cnn_yolov8n",
+  "parameters": 3011043,
+  "config_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/configs/sadd_cnn_yolov8n_seed0.yaml",
+  "config_sha256": "516cd599b12e0bd3d56edd3bcd3c2b520f59a10267397956df3312b40b10ad65",
+  "config": {
+    "nc": 1,
+    "scales": {
+      "n": [
+        0.33,
+        0.25,
+        1024
+      ]
+    },
+    "scale": "n",
+    "backbone": [
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          64,
+          3,
+          2
+        ]
+      ],
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          128,
+          3,
+          2
+        ]
+      ],
+      [
+        -1,
+        3,
+        "C2f",
+        [
+          128,
+          true
+        ]
+      ],
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          256,
+          3,
+          2
+        ]
+      ],
+      [
+        -1,
+        6,
+        "C2f",
+        [
+          256,
+          true
+        ]
+      ],
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          512,
+          3,
+          2
+        ]
+      ],
+      [
+        -1,
+        6,
+        "C2f",
+        [
+          512,
+          true
+        ]
+      ],
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          1024,
+          3,
+          2
+        ]
+      ],
+      [
+        -1,
+        3,
+        "C2f",
+        [
+          1024,
+          true
+        ]
+      ],
+      [
+        -1,
+        1,
+        "SPPF",
+        [
+          1024,
+          5
+        ]
+      ]
+    ],
+    "head": [
+      [
+        -1,
+        1,
+        "nn.Upsample",
+        [
+          null,
+          2,
+          "nearest"
+        ]
+      ],
+      [
+        [
+          -1,
+          6
+        ],
+        1,
+        "Concat",
+        [
+          1
+        ]
+      ],
+      [
+        -1,
+        3,
+        "C2f",
+        [
+          512
+        ]
+      ],
+      [
+        -1,
+        1,
+        "nn.Upsample",
+        [
+          null,
+          2,
+          "nearest"
+        ]
+      ],
+      [
+        [
+          -1,
+          4
+        ],
+        1,
+        "Concat",
+        [
+          1
+        ]
+      ],
+      [
+        -1,
+        3,
+        "C2f",
+        [
+          256
+        ]
+      ],
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          256,
+          3,
+          2
+        ]
+      ],
+      [
+        [
+          -1,
+          12
+        ],
+        1,
+        "Concat",
+        [
+          1
+        ]
+      ],
+      [
+        -1,
+        3,
+        "C2f",
+        [
+          512
+        ]
+      ],
+      [
+        -1,
+        1,
+        "Conv",
+        [
+          512,
+          3,
+          2
+        ]
+      ],
+      [
+        [
+          -1,
+          9
+        ],
+        1,
+        "Concat",
+        [
+          1
+        ]
+      ],
+      [
+        -1,
+        3,
+        "C2f",
+        [
+          1024
+        ]
+      ],
+      [
+        [
+          15,
+          18,
+          21
+        ],
+        1,
+        "Detect",
+        [
+          1
+        ]
+      ]
+    ],
+    "ch": 3
+  },
+  "trial_spec": {
+    "control": "cnn_yolov8n",
+    "placement": "baseline",
+    "state_dim": 0,
+    "stats_kernel_size": 3,
+    "trend_kernel_size": 3
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "config_binding": "Exact frozen-plan equality after making omitted default=3 window options explicit for audited reused configurations",
+  "checkpoint_loaded": false,
+  "initialization": "random seed0; config-bound dense forward with no value-dependent pruning",
+  "source_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+  "source_inventory_verified_count": 360,
+  "input_shapes": [
+    [
+      1,
+      3,
+      640,
+      640
+    ]
+  ],
+  "dense_output_shape": [
+    1,
+    5,
+    8400
+  ],
+  "controls": [],
+  "thop_legacy_x2_flops": 8194150400.0,
+  "scan_basic_arithmetic_flops": 0,
+  "functional_einsum_mac2_flops": 0,
+  "cross_merge_add_flops": 0,
+  "covered_flops_g": 8.1941504,
+  "scan_calls": [],
+  "einsum_calls": [],
+  "unregistered_leaf_module_types": [
+    "torch.nn.modules.activation.SiLU",
+    "ultralytics.nn.modules.conv.Concat"
+  ],
+  "finite_forward": true,
+  "scope": "full registered single-class 640x640 detector including dense head; excludes preprocessing/NMS"
+}

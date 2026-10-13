@@ -1,0 +1,16 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+ssdd_full_p3 summary: 380 layers, 5919097 parameters, 0 gradients, 13.1 GFLOPs
+[34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/sar4_prepared/SSDD/labels/test.cache... 232 images, 0 backgrounds, 0 corrupt: 100%|██████████| 232/232 [00:00<?, ?it/s][34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/sar4_prepared/SSDD/labels/test.cache... 232 images, 0 backgrounds, 0 corrupt: 100%|██████████| 232/232 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/8 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  12%|█▎        | 1/8 [00:00<00:02,  2.97it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  25%|██▌       | 2/8 [00:00<00:01,  3.50it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  38%|███▊      | 3/8 [00:00<00:01,  3.79it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 4/8 [00:01<00:01,  3.97it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  62%|██████▎   | 5/8 [00:01<00:00,  4.10it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  75%|███████▌  | 6/8 [00:01<00:00,  4.02it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  88%|████████▊ | 7/8 [00:01<00:00,  3.80it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 8/8 [00:01<00:00,  4.18it/s]
+                   all        232        546      0.927      0.905       0.96       0.58
+Speed: 0.1ms preprocess, 6.8ms inference, 0.0ms loss, 0.3ms postprocess per image
+experiment: ssdd_p3_d16_from_historical_ex27_b32_e150
+subset:     SSDD
+P/R:        0.926914/0.904762
+AP50:       0.959612
+AP75:       0.647899
+AP50-95:    0.579924
+JSON:       /home/powerleader/ig-ds-ssm/experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/eval_test.json

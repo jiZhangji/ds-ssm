@@ -1,0 +1,6 @@
+path: /home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/SADD
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: aircraft

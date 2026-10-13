@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "recorded_at": "2026-10-09T20:15:02.7920379+08:00",
+  "scope": "Local document-only validation and two-pass compilation from the preserved static ZIP. Final delivery ZIP roundtrip is reported separately in verification.json.",
+  "authorization": "User explicitly approved local document compilation/validation only after project-server connection failures. No installation, model tests, training, inference, service changes or experiment-queue operations.",
+  "pdf_sha256": "3ae0914cbd50e779cd1cd53569c16152d780fefe926eb09fec66bd08a81a00bd",
+  "compile_inputs": {
+    "figures/fig1_motivation_20261009.pdf": "41596b6cff2e3aabfdcba24f685691d38d09560d4e471a554b806c46f02a608f",
+    "figures/fig2_architecture_20261009.pdf": "f62a2704abd07707b1b7974cdcc25aa80c81829ce42ba9800491de720be4a3d7",
+    "IEEEtran.cls": "da751920a317ed318b7b5cd7fa585a6cc7d28502d457856382e9be24b10a3bd7",
+    "main.tex": "b6dd4049cb72236156731c99af25e86e377fc3dbb7be5f672c924d1da000ce1c",
+    "sections/ablation.tex": "f2b821cddca6af8e45524c64d323817bffd47051eb0499517169b8b0f71cf403",
+    "sections/experimental_settings.tex": "f713c88b26a26af69915d446ccc47db6d34f3eb9efc51d2e3d28945adea76841",
+    "sections/limitations.tex": "d00045872dd8c8fdcedd8a2c9b1f6d744a7945971a907be5d91dbabbc5d1e152",
+    "sections/sadd_individual.tex": "7d5fda4baeff0ae21f36cf3c0100ff58f52e0cd80e0521434806420599e7c10f",
+    "sections/sadd_paired.tex": "075509c64a0169fefa250520a7374845954ada9d73ddb8e0457f00f32586c132",
+    "sections/sadd_summary.tex": "ca7a1ef88031396097a665faf1ff945d4e7331bba5c829d0a26ad79f831cc0d4",
+    "sections/ssdd_individual.tex": "da75888f80eb83cb7c0f18e313ad122a2c1dc09bed92102e5dc7e452b38d6ec7",
+    "sections/ssdd_paired.tex": "180cef9aeb6f9c1d963011565515073852f9922535cebf771a6da341c755513d",
+    "sections/ssdd_summary.tex": "29b0b92ac8c6742b80e9579679e5cc51f71bd722615253aeef93af0b2c7235f6"
+  },
+  "compiler": {
+    "engine": "XeLaTeX",
+    "distribution": "TeX Live 2026",
+    "executable": "D:/texlive/2026/bin/windows/xelatex.exe",
+    "passes": 2,
+    "completed_passes": 2,
+    "shell_escape": false
+  },
+  "source": {
+    "static_zip": "output/pdf/rgsp_full_experiments_20261009/rgsp_full_experiments_20261009_editable.zip",
+    "static_zip_sha256": "71ea5eb1422724637e24af487622e9bb4c18682382e1c3ffdfda471aeb801144",
+    "extraction": "tmp/pdfs/rgsp_local_validation_20261009_01a12069/from_static_zip",
+    "hashed_payload_entries": 83,
+    "all_extracted_payload_hashes_match": true
+  },
+  "artifacts": {
+    "pdf": "tmp/pdfs/rgsp_local_validation_20261009_01a12069/build/main.pdf",
+    "final_pass_log": "tmp/pdfs/rgsp_local_validation_20261009_01a12069/build/main.log",
+    "final_pass_log_sha256": "3e54d94d6d3e9769eb96bd40d90cda44a29fe269112426b0329098f2f6b46cd3"
+  },
+  "document_validation": {
+    "pypdf": "PASS",
+    "pdfinfo_pdftotext": "PASS",
+    "text_tools_directory": "D:/texlive/2026/bin/windows",
+    "pdf_pages": 14,
+    "page_dimensions_pt": [
+      612,
+      792
+    ],
+    "legacy_tables": 9,
+    "original_archive_files": 27,
+    "ssdd_runs": 15,
+    "sadd_runs": 12,
+    "metric_cells": 135
+  },
+  "inherited_pdf_comparison": {
+    "pdf_sha256": "6ee5f38a6fb1af0d1f98d23ca35fb14c011db23cbe0290f77817f17f39871cfb",
+    "compile_inputs_unchanged": true,
+    "all_page_text_hashes_match": true,
+    "text_sha256": "e0f9934c92c8c7ab5a8a288652277d2e1c9a454a2664d1b1a838d667890db524",
+    "render_dpi": 115,
+    "rendered_pages": 14,
+    "all_page_png_hashes_match": true,
+    "pages": [
+      {
+        "page": 1,
+        "compiled_sha256": "c68351dd7758b75449c747c8e27f3249e5186fda1e90e07217183daf903a5139",
+        "inherited_sha256": "c68351dd7758b75449c747c8e27f3249e5186fda1e90e07217183daf903a5139",
+        "match": true
+      },
+      {
+        "page": 2,
+        "compiled_sha256": "fc4b76ba169eb1dbd2c1392d0b74879bd12802dbf5048195e513817f0da7b6ce",
+        "inherited_sha256": "fc4b76ba169eb1dbd2c1392d0b74879bd12802dbf5048195e513817f0da7b6ce",
+        "match": true
+      },
+      {
+        "page": 3,
+        "compiled_sha256": "6ad1786ba4f25f9a3750538762301fe9bb4bef9fab82d73c52613df78a4af0e9",
+        "inherited_sha256": "6ad1786ba4f25f9a3750538762301fe9bb4bef9fab82d73c52613df78a4af0e9",
+        "match": true
+      },
+      {
+        "page": 4,
+        "compiled_sha256": "8a0ef9e471ae51e8395fbba82805947ac472fcf702f85a28d9d9b409fb8471a8",
+        "inherited_sha256": "8a0ef9e471ae51e8395fbba82805947ac472fcf702f85a28d9d9b409fb8471a8",
+        "match": true
+      },
+      {
+        "page": 5,
+        "compiled_sha256": "29606390859af53561f5af561825d28d70d7bc896ee01c64df11f1722a4b79ce",
+        "inherited_sha256": "29606390859af53561f5af561825d28d70d7bc896ee01c64df11f1722a4b79ce",
+        "match": true
+      },
+      {
+        "page": 6,
+        "compiled_sha256": "4667d3959145b210f47cda31f9b0660e4d8b0a743cc5208419053e278d1dba11",
+        "inherited_sha256": "4667d3959145b210f47cda31f9b0660e4d8b0a743cc5208419053e278d1dba11",
+        "match": true
+      },
+      {
+        "page": 7,
+        "compiled_sha256": "68f2ae024097a504f8b2fb25af94b087ec1ca95d6b2b7f644ee20a0672750579",
+        "inherited_sha256": "68f2ae024097a504f8b2fb25af94b087ec1ca95d6b2b7f644ee20a0672750579",
+        "match": true
+      },
+      {
+        "page": 8,
+        "compiled_sha256": "7c52a4d7d75ac3b9af56a7683dfc7a5e62ff584dd9e8f9b9d6bac61c4ad3d483",
+        "inherited_sha256": "7c52a4d7d75ac3b9af56a7683dfc7a5e62ff584dd9e8f9b9d6bac61c4ad3d483",
+        "match": true
+      },
+      {
+        "page": 9,
+        "compiled_sha256": "83542bb39506dec51be7b5ef55a00c4a923ce2e18473b235d918ec5f009ea6fe",
+        "inherited_sha256": "83542bb39506dec51be7b5ef55a00c4a923ce2e18473b235d918ec5f009ea6fe",
+        "match": true
+      },
+      {
+        "page": 10,
+        "compiled_sha256": "9a8da4f4330c884333552a5077bac3e5d447ab1d2be3e17748f26cc7acaff0a8",
+        "inherited_sha256": "9a8da4f4330c884333552a5077bac3e5d447ab1d2be3e17748f26cc7acaff0a8",
+        "match": true
+      },
+      {
+        "page": 11,
+        "compiled_sha256": "f470056560d106f36dda9ac2692172d8186e10c59d9aa2824f8c49c6fc065038",
+        "inherited_sha256": "f470056560d106f36dda9ac2692172d8186e10c59d9aa2824f8c49c6fc065038",
+        "match": true
+      },
+      {
+        "page": 12,
+        "compiled_sha256": "9965152bc3a683e9456bd1c32008e4cee926291976804be6227fd12eeb16764a",
+        "inherited_sha256": "9965152bc3a683e9456bd1c32008e4cee926291976804be6227fd12eeb16764a",
+        "match": true
+      },
+      {
+        "page": 13,
+        "compiled_sha256": "7d64dd165e1fbe53e8a1b24d249394e2a67fe3992c237127a516f6b32fc8be66",
+        "inherited_sha256": "7d64dd165e1fbe53e8a1b24d249394e2a67fe3992c237127a516f6b32fc8be66",
+        "match": true
+      },
+      {
+        "page": 14,
+        "compiled_sha256": "111e7da328206ec015e8a27a10acecf10fc273d29cdf258346d73f24bfb3972c",
+        "inherited_sha256": "111e7da328206ec015e8a27a10acecf10fc273d29cdf258346d73f24bfb3972c",
+        "match": true
+      }
+    ]
+  },
+  "log_review": {
+    "overfull_warnings": 0,
+    "missing_character_warnings": 0,
+    "unresolved_reference_warnings": 0,
+    "retained_warnings": [
+      "Font-shape substitutions",
+      "Underfull bibliography hboxes"
+    ]
+  },
+  "limitations": [
+    "PDF binary hashes can differ due to compilation metadata; equality is checked by source inputs, every page's text and dimensions, and rendered PNG hashes.",
+    "Bundled Poppler lacks pdftotext.exe; the independent optional text check passed with existing TeX Live pdfinfo.exe/pdftotext.exe. Rendering uses bundled pdftoppm.exe.",
+    "Research-experiment completion and external-paper numerical claims are outside this receipt."
+  ]
+}

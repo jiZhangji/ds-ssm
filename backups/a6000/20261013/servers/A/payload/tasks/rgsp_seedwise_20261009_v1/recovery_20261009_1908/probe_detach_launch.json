@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "nohup",
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/operator_cross_recover.py",
+    "probe"
+  ],
+  "identity": {
+    "argv": [
+      "nohup",
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "-B",
+      "-u",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/operator_cross_recover.py",
+      "probe"
+    ],
+    "pid": 161966,
+    "ppid": 161960,
+    "session": 161966,
+    "start_ticks": 10238665,
+    "state": "R"
+  },
+  "pid": 161966,
+  "started_utc": "2026-10-09T11:30:57.178710+00:00"
+}

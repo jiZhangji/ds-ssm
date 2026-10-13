@@ -1,0 +1,1657 @@
+{
+  "copied_files": [
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-camixer/probe/protocol.json",
+      "sha256": "f1afc805b6de51ca2e39a816b2dc74cf2f103327a11858b94e9ae6b39bf21f9f"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-camixer/probe/result.json",
+      "sha256": "621bcf528cce7b359923302e2dc38ae2fd7332a263c9641b02db50f65ddc0194"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-camixer/probe/run_metadata.json",
+      "sha256": "fcc24600eb20042c041263d91f2b795f52ed3285b5c3299b145bfb8716d5ede4"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-camixer/run0/failure.json",
+      "sha256": "fae89d5fff012abb123fd5a58c6a04195ce2bc9e833356b8bd1ae0919135128a"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-camixer/run0/protocol.json",
+      "sha256": "f1afc805b6de51ca2e39a816b2dc74cf2f103327a11858b94e9ae6b39bf21f9f"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-camixer/run0/run_metadata.json",
+      "sha256": "bf28e42f6558aa93456a75ced57dcc4f18a8a6bbe18390f83ff9df8dda23d72a"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-ddnet/probe/protocol.json",
+      "sha256": "36064e021b040288678c807fadfabf9ac0a386f9849800d3518bb537b695582b"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-ddnet/probe/result.json",
+      "sha256": "82d6ea0710bc94a11a07216bb972a3d5481788178a1ae45d5044786b0fad8356"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-ddnet/probe/run_metadata.json",
+      "sha256": "0f359baa36247e60ea6c8fe84ed055ccec6ff8e8099411ce19f7f50721fe7bed"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-ddnet/run0/failure.json",
+      "sha256": "68bd63a304cad25136d1944fbcae84519e349d7a364be31458a999dfd0bf8567"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-ddnet/run0/protocol.json",
+      "sha256": "36064e021b040288678c807fadfabf9ac0a386f9849800d3518bb537b695582b"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-ddnet/run0/run_metadata.json",
+      "sha256": "7d87a775af77e310b8cfe447b4f98b82df9dcbec4491071c3500dc3209dc2aee"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-lantnet/probe/protocol.json",
+      "sha256": "cf76a08db48566444486656a9d0d58a4c166e5459749bcea7b4b2f05fc9f8fa5"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-lantnet/probe/result.json",
+      "sha256": "435e4a08f6728fba47eaf4881e98d2e8ca0343e77b0acf31d609ae47a4830b1d"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-lantnet/probe/run_metadata.json",
+      "sha256": "33d05c324135e0c0ad6dc1a2e65610d3be4c333262c43c22d4540dee08064e92"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-lantnet/run0/failure.json",
+      "sha256": "0c52cdc10d7ec2b282c9927c284d04691214ffb356ad31ff4da1bde26cf670f1"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-lantnet/run0/protocol.json",
+      "sha256": "cf76a08db48566444486656a9d0d58a4c166e5459749bcea7b4b2f05fc9f8fa5"
+    },
+    {
+      "path": "lanes/d0r2/jobs/ottawa-author-lantnet/run0/run_metadata.json",
+      "sha256": "88cbbbdc52a5ce4eb7f8b91dfced878afdfc15ce13ab34433e028b4bf01bf235"
+    },
+    {
+      "path": "lanes/d0r2/state.json",
+      "sha256": "a0a29218ddfc1fafa3d6fa71ebfe3b149107aa179c590f5c892b13c9a2ba908c"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/probe/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/probe/protocol.json",
+      "sha256": "31e6db5cbb4cef271ffc853467dd7639d8901c1e88291c82f1887a98c10ae47e"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/probe/result.json",
+      "sha256": "2b760a12343dd874f174503bb3277d0826d6e1e0faa8588acaa14d29e1609d24"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/probe/run_metadata.json",
+      "sha256": "97d961172beb4d203d737a75acf216c7cee00e7953a3a29455fa542bfa510edf"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run0/completion.json",
+      "sha256": "eb3e354da4bc37b24cfe218e1be9359be06748d2bd9569f16602c07c19849a77"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run0/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run0/protocol.json",
+      "sha256": "31e6db5cbb4cef271ffc853467dd7639d8901c1e88291c82f1887a98c10ae47e"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run0/result.json",
+      "sha256": "491ac5dd07c2f3e349b11922bffc2ac5d995ccd4b3627983736c3320e65a2a1e"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run0/run_metadata.json",
+      "sha256": "1000b88ef4891244ab4924bada470d3455a2af4e01c93d06450aca44c19dc385"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run1/completion.json",
+      "sha256": "e36e7c966079229df20a29e31abab3dc67d89da0e7ebe86ed015fe27a8ddbd2a"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run1/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run1/protocol.json",
+      "sha256": "31e6db5cbb4cef271ffc853467dd7639d8901c1e88291c82f1887a98c10ae47e"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run1/result.json",
+      "sha256": "8b104201361352dd193b1d6bb9a71312b5d60c0d6d77663b9fce45a1ea884de8"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run1/run_metadata.json",
+      "sha256": "8fc30716e1f1b7b937e6eab1e78e7636f5dee34ee01e20ae250c599286fad7df"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run2/completion.json",
+      "sha256": "6a3a17254aa4a0258a5e2ab5bd97700d7a5a8910c9f446c051426335ad45e0fe"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run2/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run2/protocol.json",
+      "sha256": "31e6db5cbb4cef271ffc853467dd7639d8901c1e88291c82f1887a98c10ae47e"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run2/result.json",
+      "sha256": "731f10c38ed37a8df6bc6246abf14581b2d4f8a02ac27d20040535b14bc0fb4a"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-camixer/run2/run_metadata.json",
+      "sha256": "1675c1b2c52df30f88d4eb81c93120f7a2f1ed01bd35c740a07655523d08ec12"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/probe/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/probe/protocol.json",
+      "sha256": "8e74c56b4f61e1c424f5a413a86913290f55ce5cc07dfc62a2774b33d380ad1a"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/probe/result.json",
+      "sha256": "3a90173864b7e7850b21cfe6d912872bc95a5933e1802721cbb32a45179dd95c"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/probe/run_metadata.json",
+      "sha256": "c49c9cb11e634f4599749541999f51b86ed521873d8963764ce6ed10be375301"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run0/completion.json",
+      "sha256": "ffcf7f4cfde115a095d736a7d1429dcb31a0a2f34a82a545ff1ca03916dd216c"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run0/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run0/protocol.json",
+      "sha256": "8e74c56b4f61e1c424f5a413a86913290f55ce5cc07dfc62a2774b33d380ad1a"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run0/result.json",
+      "sha256": "854bd3ee844be6eb61d66cabbb87e1a6c7cb6737edcda93fcb397a10800fb002"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run0/run_metadata.json",
+      "sha256": "ad5e036e2e91ca7b34cefe6f3c00cb0ed27ce4173e3fe6c8213b75555374babe"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run1/completion.json",
+      "sha256": "706ffd6d43fa81eb95cd9a3970e02787778e2635f4bd8485531f8fc711a22498"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run1/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run1/protocol.json",
+      "sha256": "8e74c56b4f61e1c424f5a413a86913290f55ce5cc07dfc62a2774b33d380ad1a"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run1/result.json",
+      "sha256": "210a7dd1081fedfa1180ae4d8c2bb288382c493bc13c43587948a3be8107099a"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run1/run_metadata.json",
+      "sha256": "50daa640fa47b536b630c9000cb23fb375f10dbd74fec4f8d3894087004f9988"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run2/completion.json",
+      "sha256": "c18f5c0c82fd6c7aca1731914c51af1ebabaf6369d71b3304b39fae3ddacc1df"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run2/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run2/protocol.json",
+      "sha256": "8e74c56b4f61e1c424f5a413a86913290f55ce5cc07dfc62a2774b33d380ad1a"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run2/result.json",
+      "sha256": "9e5a71965f6b3383f659d8cbaa53a78e0d576cd57cc07fb92020c46031b5bb27"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-ddnet/run2/run_metadata.json",
+      "sha256": "8f1532534bd5a8a98960538a6a1575f209d3c8717fc36e76f361d3421ad004ec"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/probe/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/probe/protocol.json",
+      "sha256": "eb200567313e158a1997613daf14c6f7b655e695fa5b64ed9cae4f575cf83622"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/probe/result.json",
+      "sha256": "c199a4cfc9025e799d5917df2d10afe4b7d9a1aca54ff74c5ba133afd3b286b5"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/probe/run_metadata.json",
+      "sha256": "e6a354e6c8f57706e60cc57c0f0b6f0ddd5f4978a17ccc2c783f68c79bf9a1eb"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run0/completion.json",
+      "sha256": "36b7ca75226ade9ce89e7345598908884bea33abfd51c02a955f3a3e329a8c32"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run0/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run0/protocol.json",
+      "sha256": "eb200567313e158a1997613daf14c6f7b655e695fa5b64ed9cae4f575cf83622"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run0/result.json",
+      "sha256": "f3782cf67eab6dd0247a69797ecce01b1ecb8e3feec776eca47f999c29d81593"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run0/run_metadata.json",
+      "sha256": "ec8a8bcdc2a954184afefb7391655a0ddf9fc1e8b1bf008aaed283cbf27e150c"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run1/completion.json",
+      "sha256": "f6b07e01507d9d38ee71a2c58e0cec9420f12095aed6609c06cb6da4cde29889"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run1/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run1/protocol.json",
+      "sha256": "eb200567313e158a1997613daf14c6f7b655e695fa5b64ed9cae4f575cf83622"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run1/result.json",
+      "sha256": "49907c81bb3b7c076bba89f28f6b4c046a679226f7fe5130e442df6cb955c62e"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run1/run_metadata.json",
+      "sha256": "6f6d17db771393c3ff62bf522a33c846289a6063e52182167c41a2f7a026ef00"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run2/completion.json",
+      "sha256": "6d4e47dee45794c666ab15eb58f2893b0b2d82a2af6e693e1d3aefe2d3629e49"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run2/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run2/protocol.json",
+      "sha256": "eb200567313e158a1997613daf14c6f7b655e695fa5b64ed9cae4f575cf83622"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run2/result.json",
+      "sha256": "3cebd8f7529b1e5c77fe9ea6d469a6f687b191d489157f5ba4ed8f80262b9970"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-lantnet/run2/run_metadata.json",
+      "sha256": "c911fa1531086310f36a3c1e32cc6d28926510121b683378c9904961de978302"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/probe/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/probe/protocol.json",
+      "sha256": "a3d8790be403d3d8e24b90fd27626dcb904da0a02ab9c116f68864ceee2f4edc"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/probe/result.json",
+      "sha256": "39b9e5db404c5d9f8305a5a4ffd7709356d3f4a46b4f0b1464d0c0bce659fc78"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/probe/run_metadata.json",
+      "sha256": "fe024bb0f875ac04419b8e2de4cc8279cf4841ef7076be1c149eecf76278fc7e"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run0/completion.json",
+      "sha256": "10ecac89e1ce83d7bafc47a09a78ce00a3b828aa83d788bd8e25a4be0f42bbda"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run0/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run0/protocol.json",
+      "sha256": "a3d8790be403d3d8e24b90fd27626dcb904da0a02ab9c116f68864ceee2f4edc"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run0/result.json",
+      "sha256": "d4083e560e5dca49cc7095783ff13f6d1b1063151904bea46d6fc8378b3f5687"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run0/run_metadata.json",
+      "sha256": "4c4ffa40716c23836c57d2f17c1b0a29242ea4dd4503b1b4bf6720b3bf1a278e"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run1/completion.json",
+      "sha256": "e8ecb7e38dc311ea9ec19d006e258ebec47a7832810230269460b1cfb71ebc12"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run1/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run1/protocol.json",
+      "sha256": "a3d8790be403d3d8e24b90fd27626dcb904da0a02ab9c116f68864ceee2f4edc"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run1/result.json",
+      "sha256": "c944f84a84100c3de345f4b4059988dc45ac398b8513b952b2530624a47f147b"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run1/run_metadata.json",
+      "sha256": "3d3bbb62bafd205b76ce419042219dc0f257604a448519d2a8af9bdf7d5270ea"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run2/completion.json",
+      "sha256": "823cc15475841be2493c731bae5e4e34582fcd22528f699a430764c9e75b3271"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run2/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run2/protocol.json",
+      "sha256": "a3d8790be403d3d8e24b90fd27626dcb904da0a02ab9c116f68864ceee2f4edc"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run2/result.json",
+      "sha256": "b9c19073307ce78881d3834ed9288767c16ee6e0b25a6cd847e5599ed67e10d2"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wasnet/run2/run_metadata.json",
+      "sha256": "a50ce5ae7be6d2c6988ef429e5ec2b2daef861b3417de7bfb3dd02a6605251fa"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/probe/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/probe/protocol.json",
+      "sha256": "38c87f6c5fdb04842dcf15b5c312cb684a39378e7b5bb2d29be147467e9c496b"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/probe/result.json",
+      "sha256": "390ef0c232f587e577b1cda3b28f1077a03859ec65f01ab69e7448522f9e7bcf"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/probe/run_metadata.json",
+      "sha256": "bea78381b537d7419480f081038ce0d56537702433616f737761e320cbdf9305"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run0/completion.json",
+      "sha256": "ab0c13a51067c553eb0241111c0103466101687faa481ebbeff7c6df0d3c5806"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run0/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run0/protocol.json",
+      "sha256": "38c87f6c5fdb04842dcf15b5c312cb684a39378e7b5bb2d29be147467e9c496b"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run0/result.json",
+      "sha256": "23f6aef329afa74d9a4e9e812662ae34a7a8a0705d1559780fff7d97f2968f9f"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run0/run_metadata.json",
+      "sha256": "d81ae63e773f76052347c2585fcae72cdc986c195987b9bf578992f998e4c13b"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run1/completion.json",
+      "sha256": "56691ba66a8c768955fdfa0b10316990ccceb4ff3f4e8a7d295124012d0e7538"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run1/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run1/protocol.json",
+      "sha256": "38c87f6c5fdb04842dcf15b5c312cb684a39378e7b5bb2d29be147467e9c496b"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run1/result.json",
+      "sha256": "30229e74de4860e8355589474425efb35b2645327af78f15ca91091ec3fbc7e8"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run1/run_metadata.json",
+      "sha256": "908c6fe7a23543d49c1510a474f114028bec8972e363cc7da9e9c7d6ada0ec46"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run2/completion.json",
+      "sha256": "e2e26ba6e3609670298ec7a6e0f9c41b2d4f7ef6c77b499af87e28e44e40511c"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run2/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run2/protocol.json",
+      "sha256": "38c87f6c5fdb04842dcf15b5c312cb684a39378e7b5bb2d29be147467e9c496b"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run2/result.json",
+      "sha256": "36db8d2930897ef091d6d43d550d00070426b68bb18ee6e84cb66d15be9249c8"
+    },
+    {
+      "path": "lanes/d0r3/jobs/ottawa-author-wbanet/run2/run_metadata.json",
+      "sha256": "d970767efb12fdaaf8e24f6611493d695e62138b70c0a718a276851a7e390cf1"
+    },
+    {
+      "path": "lanes/d0r3/state.json",
+      "sha256": "00a836dfeed0a4092487e9e6f53e1e7e0500af5868b30241d5e4c43d957d8a92"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-full/probe/attempt.json",
+      "sha256": "6c650d426f0ff33937d8d2ab887b674a73c734122d3250e1425887b568f33951"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-full/probe/protocol.json",
+      "sha256": "1e4582420d0b6a9ca3ad733ace48919d85fedee7d54e0626c8c0ff31b886cae0"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-full/probe/result.json",
+      "sha256": "bd117faf84d0c087e87162ccad90395e20d8540f37540959f38abbaca758ef0e"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-full/run0/attempt.json",
+      "sha256": "51424e08aa4b0cee0c03398f9dea674ad079381d8178ec00e672775080bf47ba"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-full/run0/completion.json",
+      "sha256": "a951cb8c20638d8568948a15bfc3c7ec993dd79bad784cc10d7c60b4be9e1901"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-full/run0/protocol.json",
+      "sha256": "1e4582420d0b6a9ca3ad733ace48919d85fedee7d54e0626c8c0ff31b886cae0"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-full/run0/result.json",
+      "sha256": "972524c16812810789a6d35ba58d3081243ab4c08f4c0113ce16adf98b09c410"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-matched075/probe/attempt.json",
+      "sha256": "e8e10772682723b09443a6aef243205d67569a6e63a698f82b0500206b8dacf2"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-matched075/probe/protocol.json",
+      "sha256": "9a3e33deb7cb486b35fe7d7bb69919c3bb288f4d1b083385a5915be423aa04d2"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-matched075/probe/result.json",
+      "sha256": "35bde9c5016718623f9906f204c4fe1b35cee07bf64092383f948284798743c2"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-matched075/run0/attempt.json",
+      "sha256": "2a855775223c2f331b7fb15bd5ba2f2566115b18da03e50b56d93e312c728090"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-matched075/run0/completion.json",
+      "sha256": "4eeffa20f0882eeefaddbb51c44e0a64e84580b96558acb29f58d148f42f57a2"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-matched075/run0/protocol.json",
+      "sha256": "9a3e33deb7cb486b35fe7d7bb69919c3bb288f4d1b083385a5915be423aa04d2"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-matched075/run0/result.json",
+      "sha256": "e297e729bee1d47453a7fce4239af163a28fff66a25e83d72dcea82c82e5d58f"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-original/probe/attempt.json",
+      "sha256": "b6fe37d30be722e8175a1ec594fd957002bd49f582f0cf96ce5481f48651cd64"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-original/probe/protocol.json",
+      "sha256": "f47c8e71da077b730aa6d5267c380d5ae44596c590eba3782cdcf5a7854d7512"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-original/probe/result.json",
+      "sha256": "94673498668785bbbad7b395334b54f6aa53da83b6c02ef6bbbf4a07de1b65fe"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-original/run0/attempt.json",
+      "sha256": "35ad773212d1093dfd59e8684aab93acd1553d26ec9b14a58370778b9a6f0948"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-original/run0/protocol.json",
+      "sha256": "f47c8e71da077b730aa6d5267c380d5ae44596c590eba3782cdcf5a7854d7512"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8n/probe/attempt.json",
+      "sha256": "bbfdd6e19cef56c47c1478202eb98433094df1d525fc8cb3082169ee5df629fa"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8n/probe/protocol.json",
+      "sha256": "c0325fd1efddd564bad4d70f3be75dd465936e841143937a3cf6d34087d3f539"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8n/probe/result.json",
+      "sha256": "ce4baaa7d4f1ab3dcb1c0484657ef1da455559d5e4b6fc38c77a9458862cb6a9"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8n/run0/attempt.json",
+      "sha256": "a768f315a97b76787e374e45349ebbb8d3e363173b5d15868dbac1a4614352a5"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8n/run0/completion.json",
+      "sha256": "74eabb7a49f97ef1c91caf48ce91c086f964eb80395c848365239271c1c3e7c2"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8n/run0/protocol.json",
+      "sha256": "c0325fd1efddd564bad4d70f3be75dd465936e841143937a3cf6d34087d3f539"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8n/run0/result.json",
+      "sha256": "ef2c13019e019bad246eaf6c4cfa8de597b56c57d3535cccadcbeb0fe3283477"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8s/probe/attempt.json",
+      "sha256": "e1dafc6cb948e3dfa8058ecd7622b8b0c1e09147bbcb93fe214c4133274c713f"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8s/probe/protocol.json",
+      "sha256": "2732ddc4569770051d9bfa132831763811c3bbd42aef4c3dd7a5a5c38a0803b4"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8s/probe/result.json",
+      "sha256": "10b7d6b90817ab091aef4c1e844247be40f418254eee7514fe64168d1f363046"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8s/run0/attempt.json",
+      "sha256": "d7a071ac11a1b6258960fd8dd4747f8b95a644e5cd08599a4b9e0fd2de3ce99b"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8s/run0/completion.json",
+      "sha256": "7789c090892d48b2dcbe30ab252547398a121ad76326c92ee5698acbeb083adf"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8s/run0/protocol.json",
+      "sha256": "2732ddc4569770051d9bfa132831763811c3bbd42aef4c3dd7a5a5c38a0803b4"
+    },
+    {
+      "path": "lanes/d0sadd2/jobs/sadd-yolov8s/run0/result.json",
+      "sha256": "c464526890fa3a558670258b00524bdc98e825b7171e80fcdd4f7ae087fbf036"
+    },
+    {
+      "path": "lanes/d0sadd2/state.json",
+      "sha256": "19138d7ac123ade76353ad06fa43b8a14cfc82521cf25b19f33045b32b80d4a3"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0/jobs/ottawa-author-ddnet/probe/failure.json",
+      "sha256": "9a2562292521cb34e121c2c5a61ce181eee8fe0f437e2fcf2f963c60d8f74d89"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0/jobs/ottawa-author-lantnet/probe/failure.json",
+      "sha256": "2179b3d6b9696b03c248dfd86eeed38cee09c2ebb44e92d2b42eef34ec4a10ca"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0/state.json",
+      "sha256": "2dd89b9389812b7283e25bdf271327a113b6c35f20f8361a63c76dd40bd0e250"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-camixer/probe/protocol.json",
+      "sha256": "f1afc805b6de51ca2e39a816b2dc74cf2f103327a11858b94e9ae6b39bf21f9f"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-camixer/probe/result.json",
+      "sha256": "bc355722c3fff3f887a7406f2fcab6a97eae71b8af6a7ea26d1e128e853d5cb8"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-camixer/probe/run_metadata.json",
+      "sha256": "c235ec2e95a6ffd556609ecca33cc0e0d3d95edaf9d43bad309cbb1a487193bc"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-ddnet/probe/protocol.json",
+      "sha256": "36064e021b040288678c807fadfabf9ac0a386f9849800d3518bb537b695582b"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-ddnet/probe/result.json",
+      "sha256": "5bc4b0992e6405f92000cac718be52953c0d19d908139ba0a2f43b73837a7372"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-ddnet/probe/run_metadata.json",
+      "sha256": "9b77d0e5ad8a3dd40cff64e234f3064d640c8fee336b5995c2b528c273b8d3a7"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-lantnet/probe/protocol.json",
+      "sha256": "cf76a08db48566444486656a9d0d58a4c166e5459749bcea7b4b2f05fc9f8fa5"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-lantnet/probe/result.json",
+      "sha256": "8462b98b4a518103a98ddf04bac5cbba64b76f507e77d9d79d52857e752eed95"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-lantnet/probe/run_metadata.json",
+      "sha256": "e008451193ddb9a6d71325f52cac8cb2fcca93ddf193264353af00d2ae6dc3dc"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-wasnet/probe/failure.json",
+      "sha256": "b7cf1291a308b21c8cfc6b54d4b0cd1abe2c3fd4935cf171599fcb31b248c3b1"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-wasnet/probe/protocol.json",
+      "sha256": "c4823d24fd791cbe6a7a6d36b7f0ecab979d470c388b888080f258a6617e6647"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-wasnet/probe/run_metadata.json",
+      "sha256": "03f46bda4475793c861afc6c1825852f1e2505aaf4e6effc826e0a767e932c4f"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-wbanet/probe/failure.json",
+      "sha256": "a4e7af67d59e5bd6e46bdb385927ba432c8a53b3e05eeeae3718c719bef9f213"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-wbanet/probe/protocol.json",
+      "sha256": "89a3fbbf65e56f21e70e54a11d9c7da6de73f76ff17eb8acef3338b915e116d8"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/jobs/ottawa-author-wbanet/probe/run_metadata.json",
+      "sha256": "fb58aa05294f6d3720c86e99f72887e52548b64daa6a8798483a35ae2ac64f31"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r2/state.json",
+      "sha256": "5817a45f882e307dd23b5886053bd73b33d5b599128e08823cac5a2183740cde"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-camixer/probe/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-camixer/probe/protocol.json",
+      "sha256": "31e6db5cbb4cef271ffc853467dd7639d8901c1e88291c82f1887a98c10ae47e"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-camixer/probe/result.json",
+      "sha256": "0bb1ade9cb0b26981d0d445ba943bcfcaf99db4cd6874b4dc517c0e75f2a7349"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-camixer/probe/run_metadata.json",
+      "sha256": "7bc17e48e4fb99daaf09c30b46f5f2b151d964e37948aebf678b4516772caaab"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-ddnet/probe/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-ddnet/probe/protocol.json",
+      "sha256": "8e74c56b4f61e1c424f5a413a86913290f55ce5cc07dfc62a2774b33d380ad1a"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-ddnet/probe/result.json",
+      "sha256": "f793cea9ce44684b2d276aee885434a8b955eb9b11dd77bb2244b8f1c552e547"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-ddnet/probe/run_metadata.json",
+      "sha256": "f135c5b9d8b05f83c2084cc659dc8641dcd048d8aefcfba85189633374648f42"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-lantnet/probe/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-lantnet/probe/protocol.json",
+      "sha256": "eb200567313e158a1997613daf14c6f7b655e695fa5b64ed9cae4f575cf83622"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-lantnet/probe/result.json",
+      "sha256": "f33f800ba822334eb6adc131b6fd566c0031c2de40340ee7beeae0f28450b26e"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-lantnet/probe/run_metadata.json",
+      "sha256": "4987c1dbe114f0d1b1888eea79dbbf2a6a97faaa29d24306b3ccfa326d7df5af"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-wasnet/probe/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-wasnet/probe/protocol.json",
+      "sha256": "a3d8790be403d3d8e24b90fd27626dcb904da0a02ab9c116f68864ceee2f4edc"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-wasnet/probe/result.json",
+      "sha256": "bee76cc9fb30d6d3486250ae903fc6432347404ff2686955a0219f8f2e820d6f"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-wasnet/probe/run_metadata.json",
+      "sha256": "7c8ae5bdc4f6fe0b71b28606a12fca76f0bd7fbe84716cdb0a093d20dbef0cc4"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-wbanet/probe/dependency_audit.json",
+      "sha256": "9a40dd65a7e66d6bb17fb3cd34aca71ea14bc8fe288cc10f0fa05a204708ba05"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-wbanet/probe/protocol.json",
+      "sha256": "38c87f6c5fdb04842dcf15b5c312cb684a39378e7b5bb2d29be147467e9c496b"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-wbanet/probe/result.json",
+      "sha256": "e186711dff5f63242b69a4b3d3c83fb88f3ce312a4cc314771e02dcc71402abc"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/jobs/ottawa-author-wbanet/probe/run_metadata.json",
+      "sha256": "e281807698e44590d37c3b2a6a7f0b95b5ede043e86e2b5b2f3d656bc41bbae2"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0r3/state.json",
+      "sha256": "2d1530aa6d08460dbe318b7a824897f68ea10adbff602f63687c91d812ae1343"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-full/probe/attempt.json",
+      "sha256": "34a8e04c023b27e2ce3467fc62435e9de8a6c7a317a6b5674cfef8f9152a513b"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-full/probe/protocol.json",
+      "sha256": "1e4582420d0b6a9ca3ad733ace48919d85fedee7d54e0626c8c0ff31b886cae0"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-full/probe/result.json",
+      "sha256": "2cca967bd12a7994304bc5220ee347989bf865858c10b3f411cf2b61ada6f6b0"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-matched075/probe/attempt.json",
+      "sha256": "cd5a8008fa1b104a2931c396ccbb85c3132faf146421f4c1d5cb57a266633ae8"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-matched075/probe/protocol.json",
+      "sha256": "9a3e33deb7cb486b35fe7d7bb69919c3bb288f4d1b083385a5915be423aa04d2"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-matched075/probe/result.json",
+      "sha256": "9dc0a50248559b87d33a9be798beb9245a07e8759f8f45072627df4715478f1d"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-original/probe/attempt.json",
+      "sha256": "59f5c913125eec65db7af86db6807c284be0350bfc74a118603486873f7503a6"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-original/probe/protocol.json",
+      "sha256": "f47c8e71da077b730aa6d5267c380d5ae44596c590eba3782cdcf5a7854d7512"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-original/probe/result.json",
+      "sha256": "c7b875665c6870d580418da8e0424dad2bcb52e150539686f1555523fdbba459"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-yolov8n/probe/attempt.json",
+      "sha256": "e921de965a82065fb19d4272ad315aa744f5b3c74e24c2d58a5616526c94f527"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-yolov8n/probe/protocol.json",
+      "sha256": "c0325fd1efddd564bad4d70f3be75dd465936e841143937a3cf6d34087d3f539"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-yolov8n/probe/result.json",
+      "sha256": "9124f39e8975396493074b5451641210ac271b14a84fea14b08bda12e25ee6c6"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-yolov8s/probe/attempt.json",
+      "sha256": "bc5b05864815fa1f31b8eb0131f14d22b5bf882b22d02230d4abed398545f873"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-yolov8s/probe/protocol.json",
+      "sha256": "2732ddc4569770051d9bfa132831763811c3bbd42aef4c3dd7a5a5c38a0803b4"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/jobs/sadd-yolov8s/probe/result.json",
+      "sha256": "7c4ba72d26fa7f481992da2ef5e825faedb1b56589d0a059a5a3b0da8eb7e140"
+    },
+    {
+      "path": "qa_smoke_01/lanes/d0sadd2/state.json",
+      "sha256": "0f1cfa4bc2d65ad11e949456dc0e458f7799d1378e10ac60826ca3cde109c19d"
+    },
+    {
+      "path": "plans/d0.json",
+      "sha256": "80b35434437faec993294da96e547ba4f324d82ecbeddef5ad50dd8d80438618"
+    },
+    {
+      "path": "plans/d0r2.json",
+      "sha256": "4ae30a8cc645b891340892d4fd6693f728ae2c67feec61586660f8b54fb19486"
+    },
+    {
+      "path": "plans/d0r2.production.json",
+      "sha256": "12acbbec2aeeda4e12a9bbc6bce51f344424b0f36868ec8b37f30d05c7969ef0"
+    },
+    {
+      "path": "plans/d0r3.json",
+      "sha256": "910117e66474e885aedfa542302fbbce09ea7ba145e3b57d9e45a56333f6eba3"
+    },
+    {
+      "path": "plans/d0r3.production.json",
+      "sha256": "44b2d8bbef1fab0611c3cdfa1595170b34c9b24333ef634662093e87e83782a6"
+    },
+    {
+      "path": "plans/d0sadd.json",
+      "sha256": "e23459aacd40d24949926e8e69271d42fbbf49901080ca3c4c90ac0da5d27f43"
+    },
+    {
+      "path": "plans/d0sadd2.json",
+      "sha256": "63cffba49a82f7784c6d66b6ef7485bc2fbd0e0ecf6687ca7e46c092529b3ab0"
+    },
+    {
+      "path": "plans/d0sadd2.production.json",
+      "sha256": "7fc70519ededa6cab32a692165bed17afe0a234abd7e64a76c4d6d8a0a75218d"
+    },
+    {
+      "path": "launch/d0.probe01.json",
+      "sha256": "9eefdfe253d6cdc69996252d878328023aa5b8fff6fa711ed66519a645bdf237"
+    },
+    {
+      "path": "launch/d0.probe01.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "launch/d0r2.json",
+      "sha256": "e2ce6b2d08774bb6b0a17e7a15901cce329cfb5238a62073761ebdaf27d5a017"
+    },
+    {
+      "path": "launch/d0r2.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "launch/d0r2.probe01.json",
+      "sha256": "70cedd56a936cc901ebd98881e88230ae8b9ce779a0bf16c413dc59cf1617632"
+    },
+    {
+      "path": "launch/d0r2.probe01.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "launch/d0r3.json",
+      "sha256": "3381b528fcd8880c174044cf9edd26b4c52088fe03fd6bff81e6800648670949"
+    },
+    {
+      "path": "launch/d0r3.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "launch/d0r3.probe01.json",
+      "sha256": "7a79c9edd4d92ca931cf2e11eb578330af2e90f026028dd7b1077b4e52b2f665"
+    },
+    {
+      "path": "launch/d0r3.probe01.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "launch/d0sadd2.json",
+      "sha256": "fc9dbd0dc3aa1544bb4d61ab1e4d0db630261a336798a835f19b7c15ed70375c"
+    },
+    {
+      "path": "launch/d0sadd2.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "launch/d0sadd2.probe01.json",
+      "sha256": "1c9552928297677e6aeec87d2f85549e1bda3c250af661e284a9b1d7247e020a"
+    },
+    {
+      "path": "launch/d0sadd2.probe01.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "dispatch/d0r2.admission.json",
+      "sha256": "ac238174080a768f1317521a5d082d9e64278df5df9b157e2c70a6d6e90b3777"
+    },
+    {
+      "path": "dispatch/d0r2.launch.json",
+      "sha256": "c0f3f92374358ea010a8a74bcd01c231c24c522a83ac0d913466c4ee13162d35"
+    },
+    {
+      "path": "dispatch/d0r2.log",
+      "sha256": "ef1407e51766b32d020e9c51057e857739793b9ba119189b61e2809c90dea68f"
+    },
+    {
+      "path": "dispatch/d0r2.state.json",
+      "sha256": "af0aa5bc29ab73e88fda0ddead9bfbc214b41aea2257f04cd5bea4e841cb6612"
+    },
+    {
+      "path": "dispatch/d0r3.admission.json",
+      "sha256": "545b0ef1e1f8eaa05ef3318da741fa101e0e304d6d3f04b414ee00b6a5364d13"
+    },
+    {
+      "path": "dispatch/d0r3.gate.launch.json",
+      "sha256": "9d97ca6609c398cbe520b741f13d7eeafd72c3be38ba02b8b5d8df442f5ec843"
+    },
+    {
+      "path": "dispatch/d0r3.gate.log",
+      "sha256": "0ffbbbfca1bc19e00ec30f522f97e0d183ffdbce498fc411bec8f0b069acf2c1"
+    },
+    {
+      "path": "dispatch/d0r3.gate.state.json",
+      "sha256": "7319a133bca329c9bba1a6ce9a81e9be989caadf13409aed385f4744920fdac9"
+    },
+    {
+      "path": "dispatch/d0r3.launch.json",
+      "sha256": "f58f49ad1b4443e1b51498a2cb87c9d170fbbe9dd3a3affa03975f289722c5e7"
+    },
+    {
+      "path": "dispatch/d0r3.log",
+      "sha256": "886b4a816a18ee252b50cf1319700570472d025bcc2c7565c44b4e2b635b5f4f"
+    },
+    {
+      "path": "dispatch/d0r3.state.json",
+      "sha256": "b21d49472d7997a2e87976f84b135cc7181fcd7457b0f425715562283344a5d2"
+    },
+    {
+      "path": "dispatch/d0sadd.gate.launch.json",
+      "sha256": "3063448afbd74a72a2a6734537794d7f69413d18466405c709aa11161a7a76d4"
+    },
+    {
+      "path": "dispatch/d0sadd.gate.log",
+      "sha256": "21e1309da308dfba0548275af4d29e0abb9498014bd7dda295ec96dffc930369"
+    },
+    {
+      "path": "dispatch/d0sadd2.admission.json",
+      "sha256": "0759e7bd26c4af1d672ce427d3cc958d1c567ef7a6ec0c8eb3f9a03d7cfa9d5c"
+    },
+    {
+      "path": "dispatch/d0sadd2.gate.launch.json",
+      "sha256": "bac0acf97f3a2d72fd774f64bd49231db62660957e06a6850adc073986beba38"
+    },
+    {
+      "path": "dispatch/d0sadd2.gate.log",
+      "sha256": "23f5be4a5fa34878132c6c911cba641600bad08f4b254c9998d5c6a3f359fb80"
+    },
+    {
+      "path": "dispatch/d0sadd2.gate.state.json",
+      "sha256": "07a4e27a49484d4a3a0b4f94a6663fc29421aea50b779ee244257f94b2145acf"
+    },
+    {
+      "path": "dispatch/d0sadd2.launch.json",
+      "sha256": "0a9bcd8892987849023f75e34ec58dcdef0b7cb03f24f330a5f9fabd2d81595a"
+    },
+    {
+      "path": "dispatch/d0sadd2.log",
+      "sha256": "5fd2b7859318c997d6115ff2960e51be1c3b72e1cb2e093c57e830efa142b96a"
+    },
+    {
+      "path": "dispatch/d0sadd2.state.json",
+      "sha256": "61756ea96b9344aade38018a0ad6200e3d3b1dde1198bf5a0f404d61904555a2"
+    },
+    {
+      "path": "dependency_audit/install01.json",
+      "sha256": "47a737005ba099f7a57ec47c6ba93d9049a8d174848c1c05463b9527fa90eed8"
+    },
+    {
+      "path": "taskdata/Ottawa/audit.json",
+      "sha256": "30bb93acf5d8776fcd18b607d078c66ec5a9681cc4f6a8f9a3ca224078f7b59f"
+    },
+    {
+      "path": "taskdata/Ottawa/readiness.json",
+      "sha256": "00586b0485b4328fdbeb4619e4ff8f23821390b5253177643ba370c0f54b92c9"
+    },
+    {
+      "path": "taskdata/SADD_full/preparation_failed.json",
+      "sha256": "638272e248b66482af844958795297fd29ee22098427b37bf966d9d29b610fac"
+    },
+    {
+      "path": "taskdata_native/SADD_full/audit.json",
+      "sha256": "b4142ecd4a3a12ee88f779c9e55f4fc64507a57a66fdca4d2918d131bfcd291d"
+    },
+    {
+      "path": "taskdata_native/SADD_full/readiness.json",
+      "sha256": "9dd1783733456ac29d320c64590d6256cc5e5b4f350197bc3115df0b40f26efe"
+    }
+  ],
+  "hostname": "a6000-d",
+  "lanes": [
+    {
+      "lane": "d0r2",
+      "status": "COMPLETE_WITH_BLOCKERS",
+      "updated_at": 1791811910.4143682
+    },
+    {
+      "lane": "d0r3",
+      "status": "COMPLETE",
+      "updated_at": 1791817071.0440972
+    },
+    {
+      "lane": "d0sadd2",
+      "status": "RUNNING",
+      "updated_at": 1791851810.1091354
+    }
+  ],
+  "scope": "Sequential snapshot; only terminal state-marked results verified; weights remain on server.",
+  "snapshot": "resume_20261013_1006_d",
+  "time": "2026-10-13T02:04:09.182408+00:00",
+  "verified_complete_results": [
+    {
+      "best_epoch": 16,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 82.79149435198633,
+      "epochs": 46,
+      "id": "ottawa-author-camixer",
+      "lane": "d0r3",
+      "method": "camixer",
+      "metric_unit": null,
+      "params": 34214,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run0/best.pt",
+        "checkpoint_sha256": "6e1deb71c1c19e8aa4ab8017bb5bebf21f41b01cbc7b6d51a39c86133556d70a",
+        "completion_sha256": "eb3e354da4bc37b24cfe218e1be9359be06748d2bd9569f16602c07c19849a77",
+        "metrics": {
+          "FN": 1086,
+          "FP": 634,
+          "TN": 84817,
+          "TP": 14963,
+          "f1": 0.9456487391771472,
+          "iou": 0.8969010369837559,
+          "kappa": 0.9356134652659875,
+          "overall_accuracy": 0.9830541871921182,
+          "percent_error": 1.6945812807881773,
+          "pixels": 101500,
+          "precision": 0.9593511572738347,
+          "recall": 0.9323322325378528
+        },
+        "protocol_sha256": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5",
+        "result_sha256": "491ac5dd07c2f3e349b11922bffc2ac5d995ccd4b3627983736c3320e65a2a1e"
+      }
+    },
+    {
+      "best_epoch": 21,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 93.11265512398677,
+      "epochs": 51,
+      "id": "ottawa-author-camixer",
+      "lane": "d0r3",
+      "method": "camixer",
+      "metric_unit": null,
+      "params": 34214,
+      "seed": 1,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run1/best.pt",
+        "checkpoint_sha256": "bafd77ad26fc9c70ac7fbe1f25f4452f00ee4ec68c91cdfa899ba569075dee4d",
+        "completion_sha256": "e36e7c966079229df20a29e31abab3dc67d89da0e7ebe86ed015fe27a8ddbd2a",
+        "metrics": {
+          "FN": 1412,
+          "FP": 428,
+          "TN": 85023,
+          "TP": 14637,
+          "f1": 0.9408626341839686,
+          "iou": 0.8883291861382533,
+          "kappa": 0.9301705072370456,
+          "overall_accuracy": 0.981871921182266,
+          "percent_error": 1.812807881773399,
+          "pixels": 101500,
+          "precision": 0.9715897776302689,
+          "recall": 0.9120194404635803
+        },
+        "protocol_sha256": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5",
+        "result_sha256": "8b104201361352dd193b1d6bb9a71312b5d60c0d6d77663b9fce45a1ea884de8"
+      }
+    },
+    {
+      "best_epoch": 27,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 100.26861517300131,
+      "epochs": 57,
+      "id": "ottawa-author-camixer",
+      "lane": "d0r3",
+      "method": "camixer",
+      "metric_unit": null,
+      "params": 34214,
+      "seed": 2,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run2/best.pt",
+        "checkpoint_sha256": "307222ec0682bf72a1a4372db536fa5d528641b445c9990b436ff3cfd4e56cda",
+        "completion_sha256": "6a3a17254aa4a0258a5e2ab5bd97700d7a5a8910c9f446c051426335ad45e0fe",
+        "metrics": {
+          "FN": 1110,
+          "FP": 622,
+          "TN": 84829,
+          "TP": 14939,
+          "f1": 0.9452072129073078,
+          "iou": 0.896107012176834,
+          "kappa": 0.9351044584363694,
+          "overall_accuracy": 0.982935960591133,
+          "percent_error": 1.7064039408866996,
+          "pixels": 101500,
+          "precision": 0.9600282758177495,
+          "recall": 0.9308368122624463
+        },
+        "protocol_sha256": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5",
+        "result_sha256": "731f10c38ed37a8df6bc6246abf14581b2d4f8a02ac27d20040535b14bc0fb4a"
+      }
+    },
+    {
+      "best_epoch": 26,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 227.06158788496396,
+      "epochs": 56,
+      "id": "ottawa-author-ddnet",
+      "lane": "d0r3",
+      "method": "ddnet",
+      "metric_unit": null,
+      "params": 6712,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run0/best.pt",
+        "checkpoint_sha256": "d92cd2a10190ca7b38ca6b0519171a144ad4b3917d6ed9060a0dc48473dc3f65",
+        "completion_sha256": "ffcf7f4cfde115a095d736a7d1429dcb31a0a2f34a82a545ff1ca03916dd216c",
+        "metrics": {
+          "FN": 1101,
+          "FP": 680,
+          "TN": 84771,
+          "TP": 14948,
+          "f1": 0.9437762414370048,
+          "iou": 0.8935381672544683,
+          "kappa": 0.9333828484902077,
+          "overall_accuracy": 0.9824532019704434,
+          "percent_error": 1.7546798029556652,
+          "pixels": 101500,
+          "precision": 0.9564883542359867,
+          "recall": 0.9313975948657237
+        },
+        "protocol_sha256": "777013c652ed47960bd1877c4f33e910088a6941e15c08ac69172ee141e5344e",
+        "result_sha256": "854bd3ee844be6eb61d66cabbb87e1a6c7cb6737edcda93fcb397a10800fb002"
+      }
+    },
+    {
+      "best_epoch": 20,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 203.8002243199735,
+      "epochs": 50,
+      "id": "ottawa-author-ddnet",
+      "lane": "d0r3",
+      "method": "ddnet",
+      "metric_unit": null,
+      "params": 6712,
+      "seed": 1,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run1/best.pt",
+        "checkpoint_sha256": "8757f4f8ab14db635f71bc524f4e916f4021150e4419f8b6c2dee883420e4545",
+        "completion_sha256": "706ffd6d43fa81eb95cd9a3970e02787778e2635f4bd8485531f8fc711a22498",
+        "metrics": {
+          "FN": 1372,
+          "FP": 539,
+          "TN": 84912,
+          "TP": 14677,
+          "f1": 0.9388773388773389,
+          "iou": 0.8847962382445141,
+          "kappa": 0.9277590653774238,
+          "overall_accuracy": 0.9811724137931035,
+          "percent_error": 1.8827586206896552,
+          "pixels": 101500,
+          "precision": 0.9645767613038907,
+          "recall": 0.9145118075892579
+        },
+        "protocol_sha256": "777013c652ed47960bd1877c4f33e910088a6941e15c08ac69172ee141e5344e",
+        "result_sha256": "210a7dd1081fedfa1180ae4d8c2bb288382c493bc13c43587948a3be8107099a"
+      }
+    },
+    {
+      "best_epoch": 38,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 272.9169154409901,
+      "epochs": 68,
+      "id": "ottawa-author-ddnet",
+      "lane": "d0r3",
+      "method": "ddnet",
+      "metric_unit": null,
+      "params": 6712,
+      "seed": 2,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run2/best.pt",
+        "checkpoint_sha256": "452b549c79db8599334ab9fea449069c115019c4a472e54b5b33c18439191390",
+        "completion_sha256": "c18f5c0c82fd6c7aca1731914c51af1ebabaf6369d71b3304b39fae3ddacc1df",
+        "metrics": {
+          "FN": 986,
+          "FP": 654,
+          "TN": 84797,
+          "TP": 15063,
+          "f1": 0.9483724737140339,
+          "iou": 0.9018140453810692,
+          "kappa": 0.9387961767725457,
+          "overall_accuracy": 0.9838423645320197,
+          "percent_error": 1.6157635467980298,
+          "pixels": 101500,
+          "precision": 0.9583890055354075,
+          "recall": 0.9385631503520468
+        },
+        "protocol_sha256": "777013c652ed47960bd1877c4f33e910088a6941e15c08ac69172ee141e5344e",
+        "result_sha256": "9e5a71965f6b3383f659d8cbaa53a78e0d576cd57cc07fb92020c46031b5bb27"
+      }
+    },
+    {
+      "best_epoch": 36,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 118.41294043703238,
+      "epochs": 66,
+      "id": "ottawa-author-lantnet",
+      "lane": "d0r3",
+      "method": "lantnet",
+      "metric_unit": null,
+      "params": 24956,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run0/best.pt",
+        "checkpoint_sha256": "0c86c22f601fb0c9cdabb707a2c2dd2c39957ce48115ad523dafa81218790b70",
+        "completion_sha256": "36b7ca75226ade9ce89e7345598908884bea33abfd51c02a955f3a3e329a8c32",
+        "metrics": {
+          "FN": 1280,
+          "FP": 486,
+          "TN": 84965,
+          "TP": 14769,
+          "f1": 0.9435854842831587,
+          "iou": 0.8931962503779861,
+          "kappa": 0.9333076858872779,
+          "overall_accuracy": 0.9826009852216748,
+          "percent_error": 1.7399014778325124,
+          "pixels": 101500,
+          "precision": 0.968141592920354,
+          "recall": 0.9202442519783164
+        },
+        "protocol_sha256": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe",
+        "result_sha256": "f3782cf67eab6dd0247a69797ecce01b1ecb8e3feec776eca47f999c29d81593"
+      }
+    },
+    {
+      "best_epoch": 45,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 132.54252929898212,
+      "epochs": 75,
+      "id": "ottawa-author-lantnet",
+      "lane": "d0r3",
+      "method": "lantnet",
+      "metric_unit": null,
+      "params": 24956,
+      "seed": 1,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run1/best.pt",
+        "checkpoint_sha256": "0e2926bc64835213fdd0dc0a14da8aff6d74f06b05b26cd17f086913f7c9bffc",
+        "completion_sha256": "f6b07e01507d9d38ee71a2c58e0cec9420f12095aed6609c06cb6da4cde29889",
+        "metrics": {
+          "FN": 1138,
+          "FP": 628,
+          "TN": 84823,
+          "TP": 14911,
+          "f1": 0.944092693427884,
+          "iou": 0.8941056544942136,
+          "kappa": 0.9337932112209073,
+          "overall_accuracy": 0.9826009852216748,
+          "percent_error": 1.7399014778325124,
+          "pixels": 101500,
+          "precision": 0.9595855589162752,
+          "recall": 0.929092155274472
+        },
+        "protocol_sha256": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe",
+        "result_sha256": "49907c81bb3b7c076bba89f28f6b4c046a679226f7fe5130e442df6cb955c62e"
+      }
+    },
+    {
+      "best_epoch": 70,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 173.35034107597312,
+      "epochs": 100,
+      "id": "ottawa-author-lantnet",
+      "lane": "d0r3",
+      "method": "lantnet",
+      "metric_unit": null,
+      "params": 24956,
+      "seed": 2,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run2/best.pt",
+        "checkpoint_sha256": "297bc99fe2ff262779dd5e4bd23b7aa330b775f4bfe593cf0cacbeefad56d55d",
+        "completion_sha256": "6d4e47dee45794c666ab15eb58f2893b0b2d82a2af6e693e1d3aefe2d3629e49",
+        "metrics": {
+          "FN": 1101,
+          "FP": 578,
+          "TN": 84873,
+          "TP": 14948,
+          "f1": 0.9468250197941409,
+          "iou": 0.8990196668070006,
+          "kappa": 0.9370338310264713,
+          "overall_accuracy": 0.9834581280788177,
+          "percent_error": 1.6541871921182265,
+          "pixels": 101500,
+          "precision": 0.9627721241787969,
+          "recall": 0.9313975948657237
+        },
+        "protocol_sha256": "5b6b5fcc4f7856bbdf7c1c934e60e5fce679dd49035b5e5740dc5e4940559bfe",
+        "result_sha256": "3cebd8f7529b1e5c77fe9ea6d469a6f687b191d489157f5ba4ed8f80262b9970"
+      }
+    },
+    {
+      "best_epoch": 144,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 317.10244663001504,
+      "epochs": 150,
+      "id": "ottawa-author-wasnet",
+      "lane": "d0r3",
+      "method": "wasnet",
+      "metric_unit": null,
+      "params": 7360,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run0/best.pt",
+        "checkpoint_sha256": "8e0b855aec529d9cfa982e8b287f705efb9a329c6ee388874db9f696eebe5fc6",
+        "completion_sha256": "10ecac89e1ce83d7bafc47a09a78ce00a3b828aa83d788bd8e25a4be0f42bbda",
+        "metrics": {
+          "FN": 1130,
+          "FP": 705,
+          "TN": 84746,
+          "TP": 14919,
+          "f1": 0.9420642187352003,
+          "iou": 0.8904739166766146,
+          "kappa": 0.9313559909808004,
+          "overall_accuracy": 0.9819211822660099,
+          "percent_error": 1.8078817733990147,
+          "pixels": 101500,
+          "precision": 0.9548771121351767,
+          "recall": 0.9295906286996074
+        },
+        "protocol_sha256": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74",
+        "result_sha256": "d4083e560e5dca49cc7095783ff13f6d1b1063151904bea46d6fc8378b3f5687"
+      }
+    },
+    {
+      "best_epoch": 148,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 313.96382566395914,
+      "epochs": 150,
+      "id": "ottawa-author-wasnet",
+      "lane": "d0r3",
+      "method": "wasnet",
+      "metric_unit": null,
+      "params": 7360,
+      "seed": 1,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run1/best.pt",
+        "checkpoint_sha256": "798dbc230c3af8e59390c92065ea2eb969a3f36f1a21835a788d5eebfd1742a2",
+        "completion_sha256": "e8ecb7e38dc311ea9ec19d006e258ebec47a7832810230269460b1cfb71ebc12",
+        "metrics": {
+          "FN": 1391,
+          "FP": 601,
+          "TN": 84850,
+          "TP": 14658,
+          "f1": 0.9363740896895362,
+          "iou": 0.8803603603603604,
+          "kappa": 0.9247806516591865,
+          "overall_accuracy": 0.9803743842364532,
+          "percent_error": 1.9625615763546798,
+          "pixels": 101500,
+          "precision": 0.9606134084802411,
+          "recall": 0.9133279332045611
+        },
+        "protocol_sha256": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74",
+        "result_sha256": "c944f84a84100c3de345f4b4059988dc45ac398b8513b952b2530624a47f147b"
+      }
+    },
+    {
+      "best_epoch": 148,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 316.4930145040271,
+      "epochs": 150,
+      "id": "ottawa-author-wasnet",
+      "lane": "d0r3",
+      "method": "wasnet",
+      "metric_unit": null,
+      "params": 7360,
+      "seed": 2,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run2/best.pt",
+        "checkpoint_sha256": "4a20d8f22910ac0043ff2a335b22dc33860f5546f44eae2967d078156d13d546",
+        "completion_sha256": "823cc15475841be2493c731bae5e4e34582fcd22528f699a430764c9e75b3271",
+        "metrics": {
+          "FN": 1251,
+          "FP": 655,
+          "TN": 84796,
+          "TP": 14798,
+          "f1": 0.9394959050219034,
+          "iou": 0.8858955938697318,
+          "kappa": 0.9283867813551469,
+          "overall_accuracy": 0.9812216748768473,
+          "percent_error": 1.8778325123152708,
+          "pixels": 101500,
+          "precision": 0.9576134083996635,
+          "recall": 0.9220512181444327
+        },
+        "protocol_sha256": "8a39fbc3f40cdfac101d83971a01d8ec82534f5ca7bcf08287e24711152dfb74",
+        "result_sha256": "b9c19073307ce78881d3834ed9288767c16ee6e0b25a6cd847e5599ed67e10d2"
+      }
+    },
+    {
+      "best_epoch": 26,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 124.80556582298595,
+      "epochs": 56,
+      "id": "ottawa-author-wbanet",
+      "lane": "d0r3",
+      "method": "wbanet",
+      "metric_unit": null,
+      "params": 7159,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run0/best.pt",
+        "checkpoint_sha256": "a7396411bdc3617b46517bc119359f331cd30882ec2add61bf2f5ea63e09fdf5",
+        "completion_sha256": "ab0c13a51067c553eb0241111c0103466101687faa481ebbeff7c6df0d3c5806",
+        "metrics": {
+          "FN": 1273,
+          "FP": 545,
+          "TN": 84906,
+          "TP": 14776,
+          "f1": 0.9420465412814791,
+          "iou": 0.8904423285524888,
+          "kappa": 0.9314607342800705,
+          "overall_accuracy": 0.982088669950739,
+          "percent_error": 1.7911330049261085,
+          "pixels": 101500,
+          "precision": 0.9644279094053912,
+          "recall": 0.9206804162253099
+        },
+        "protocol_sha256": "4d1bb67e58ffcd025240c1b13e2e472d7fde90cd16f5f2e7e73258b29bc68b89",
+        "result_sha256": "23f6aef329afa74d9a4e9e812662ae34a7a8a0705d1559780fff7d97f2968f9f"
+      }
+    },
+    {
+      "best_epoch": 62,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 200.49391535902396,
+      "epochs": 92,
+      "id": "ottawa-author-wbanet",
+      "lane": "d0r3",
+      "method": "wbanet",
+      "metric_unit": null,
+      "params": 7159,
+      "seed": 1,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run1/best.pt",
+        "checkpoint_sha256": "efcde2f7852ffdfc080138dcbfa72c5c2a2d416666ab5156d316e515c1902200",
+        "completion_sha256": "56691ba66a8c768955fdfa0b10316990ccceb4ff3f4e8a7d295124012d0e7538",
+        "metrics": {
+          "FN": 1392,
+          "FP": 591,
+          "TN": 84860,
+          "TP": 14657,
+          "f1": 0.9366392945010704,
+          "iou": 0.8808293269230769,
+          "kappa": 0.9250992252873522,
+          "overall_accuracy": 0.9804630541871922,
+          "percent_error": 1.9536945812807884,
+          "pixels": 101500,
+          "precision": 0.9612408184679958,
+          "recall": 0.9132656240264191
+        },
+        "protocol_sha256": "4d1bb67e58ffcd025240c1b13e2e472d7fde90cd16f5f2e7e73258b29bc68b89",
+        "result_sha256": "30229e74de4860e8355589474425efb35b2645327af78f15ca91091ec3fbc7e8"
+      }
+    },
+    {
+      "best_epoch": 52,
+      "dataset": "Ottawa",
+      "elapsed_seconds": 178.89160309702856,
+      "epochs": 82,
+      "id": "ottawa-author-wbanet",
+      "lane": "d0r3",
+      "method": "wbanet",
+      "metric_unit": null,
+      "params": 7159,
+      "seed": 2,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run2/best.pt",
+        "checkpoint_sha256": "d9e8e8ddd22a06ea0fc7fa9517bb78a7d58aafada7c92dc4afd475dadac4b08c",
+        "completion_sha256": "e2e26ba6e3609670298ec7a6e0f9c41b2d4f7ef6c77b499af87e28e44e40511c",
+        "metrics": {
+          "FN": 1417,
+          "FP": 523,
+          "TN": 84928,
+          "TP": 14632,
+          "f1": 0.9378284835277528,
+          "iou": 0.8829350712044413,
+          "kappa": 0.9265469715666278,
+          "overall_accuracy": 0.9808866995073892,
+          "percent_error": 1.9113300492610836,
+          "pixels": 101500,
+          "precision": 0.9654899373144177,
+          "recall": 0.9117078945728706
+        },
+        "protocol_sha256": "4d1bb67e58ffcd025240c1b13e2e472d7fde90cd16f5f2e7e73258b29bc68b89",
+        "result_sha256": "36db8d2930897ef091d6d43d550d00070426b68bb18ee6e84cb66d15be9249c8"
+      }
+    },
+    {
+      "best_epoch": 138,
+      "dataset": "sadd",
+      "elapsed_seconds": 13391.415807742043,
+      "epochs": 150,
+      "id": "sadd-full",
+      "lane": "d0sadd2",
+      "method": "Full",
+      "metric_unit": "fraction_0_to_1",
+      "params": 5920441,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-full/run0/weights/best.pt",
+        "checkpoint_sha256": "ce33854356b336cc7efe37ee02acbb4eb447b6f2932c3b3a062929b99ae1b62c",
+        "completion_sha256": "a951cb8c20638d8568948a15bfc3c7ec993dd79bad784cc10d7c60b4be9e1901",
+        "metrics": {
+          "AP50": 0.9697306865640686,
+          "AP50_95": 0.5288278551805604,
+          "AP75": 0.5206870642296147,
+          "P": 0.9410593609166427,
+          "R": 0.938148536117968
+        },
+        "protocol_sha256": "1e4582420d0b6a9ca3ad733ace48919d85fedee7d54e0626c8c0ff31b886cae0",
+        "result_sha256": "972524c16812810789a6d35ba58d3081243ab4c08f4c0113ce16adf98b09c410"
+      }
+    },
+    {
+      "best_epoch": 145,
+      "dataset": "sadd",
+      "elapsed_seconds": 13226.158325165976,
+      "epochs": 150,
+      "id": "sadd-matched075",
+      "lane": "d0sadd2",
+      "method": "Matched075",
+      "metric_unit": "fraction_0_to_1",
+      "params": 5917907,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-matched075/run0/weights/best.pt",
+        "checkpoint_sha256": "f7b0ca757e26d5d63e1a10bb7cb50275c0988f3717655d8a37f3a4552b662df2",
+        "completion_sha256": "4eeffa20f0882eeefaddbb51c44e0a64e84580b96558acb29f58d148f42f57a2",
+        "metrics": {
+          "AP50": 0.9718484798944667,
+          "AP50_95": 0.5359649563147174,
+          "AP75": 0.5303826283402764,
+          "P": 0.949142916864502,
+          "R": 0.9356984478935698
+        },
+        "protocol_sha256": "9a3e33deb7cb486b35fe7d7bb69919c3bb288f4d1b083385a5915be423aa04d2",
+        "result_sha256": "e297e729bee1d47453a7fce4239af163a28fff66a25e83d72dcea82c82e5d58f"
+      }
+    },
+    {
+      "best_epoch": 136,
+      "dataset": "sadd",
+      "elapsed_seconds": 2411.1991236099857,
+      "epochs": 150,
+      "id": "sadd-yolov8n",
+      "lane": "d0sadd2",
+      "method": "YOLOv8n",
+      "metric_unit": "fraction_0_to_1",
+      "params": 3011043,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-yolov8n/run0/weights/best.pt",
+        "checkpoint_sha256": "7629288a2d05b26a1993fec6187aa9d30deae6bcd7ab4d4f887af9b474d5abc9",
+        "completion_sha256": "74eabb7a49f97ef1c91caf48ce91c086f964eb80395c848365239271c1c3e7c2",
+        "metrics": {
+          "AP50": 0.9721137225940194,
+          "AP50_95": 0.5420072884615491,
+          "AP75": 0.5479661223302197,
+          "P": 0.9566291990642454,
+          "R": 0.9047767606142012
+        },
+        "protocol_sha256": "c0325fd1efddd564bad4d70f3be75dd465936e841143937a3cf6d34087d3f539",
+        "result_sha256": "ef2c13019e019bad246eaf6c4cfa8de597b56c57d3535cccadcbeb0fe3283477"
+      }
+    },
+    {
+      "best_epoch": 145,
+      "dataset": "sadd",
+      "elapsed_seconds": 4516.124626257981,
+      "epochs": 150,
+      "id": "sadd-yolov8s",
+      "lane": "d0sadd2",
+      "method": "YOLOv8s",
+      "metric_unit": "fraction_0_to_1",
+      "params": 11135987,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-yolov8s/run0/weights/best.pt",
+        "checkpoint_sha256": "3777854dad04ff1960466697f45258a948ab42cc54b1632eef01943a89bc5fe5",
+        "completion_sha256": "7789c090892d48b2dcbe30ab252547398a121ad76326c92ee5698acbeb083adf",
+        "metrics": {
+          "AP50": 0.9885423822933403,
+          "AP50_95": 0.5706316013230638,
+          "AP75": 0.6121654205938418,
+          "P": 0.9719529410943419,
+          "R": 0.9604870465380194
+        },
+        "protocol_sha256": "2732ddc4569770051d9bfa132831763811c3bbd42aef4c3dd7a5a5c38a0803b4",
+        "result_sha256": "c464526890fa3a558670258b00524bdc98e825b7171e80fcdd4f7ae087fbf036"
+      }
+    }
+  ]
+}

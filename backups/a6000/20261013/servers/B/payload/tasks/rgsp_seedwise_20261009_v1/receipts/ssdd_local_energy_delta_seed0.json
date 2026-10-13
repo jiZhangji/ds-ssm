@@ -1,0 +1,55 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/provenance.json",
+      "sha256": "b710726b424da3e94b74f5bb50274416c38ddcaaadfaf3d130fe2b94418b2ff1"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/train_complete.json",
+      "sha256": "a215f1ec81a0d3512d6687a28907528e641d61460054260b9eb3d17e0c6024bd"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/eval_test.json",
+      "sha256": "d9aa8e612ce27ef7c641e2b363f7d18ebaeba4554e22858f7cf1bd51011b8412"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/evaluation_complete.json",
+      "sha256": "ab7efe991b72acedfeee6fe1eed631e23bd062b30b08c14018da67b69e0ac0c9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/weights/best.pt",
+      "sha256": "772eebaf3f8be0090850a34d8808ee14f35a2cd0500ea31edcbb38aabe0e4912"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/weights/raw_fp32_last.pt",
+      "sha256": "b98274794f1da8ad1ac7804adec147be83d5d0e002d8b7532815d4aa63cf8d1e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/controls_by_epoch.jsonl",
+      "sha256": "23349f63cbf93fd70df05f7e4017597dfefe14e98dd59a8044a228c7881391e6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_delta_seed0/trial_complete.json",
+      "sha256": "4c0133e4e6522260b84c857a7f6c40276e876db37bf5accfcf5e99353b8df0d3"
+    }
+  ],
+  "details": {
+    "kind": "detection",
+    "overall": {
+      "ap50": 0.875727891244633,
+      "ap50_95": 0.43432681972338105,
+      "ap75": 0.3794983189484829,
+      "precision": 0.9360907643412161,
+      "recall": 0.7779650610043699
+    },
+    "resumed": false,
+    "smoke_only": false
+  },
+  "finished_utc": "2026-10-09T17:11:52.902947+00:00",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "ssdd_local_energy_delta_seed0",
+  "trial_sha256": "b8e43fed729b999aac8479fc9e3df9a002c452f9e64d8f3ae624ca672c80ea0d"
+}

@@ -1,0 +1,530 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+{
+  "historical_pfim_only": [
+    {
+      "seed": 0,
+      "path": "/home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0_ssdd_pfim_only_p3/weights/best.pt",
+      "sha256": "b87da6e0f4b9a7132432ed4d755d2153842c5df0cfb5426c34db56ff900ca052",
+      "scalars": [
+        {
+          "module": "model.3.ds_ssm",
+          "lambda_s": 0.0219879150390625,
+          "alpha": -0.01085662841796875
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "path": "/home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed1_ssdd_pfim_only_p3/weights/best.pt",
+      "sha256": "112c52861758eaf2b86750902f7a86bccd104caf6bc1de42019d5ce3b6607880",
+      "scalars": [
+        {
+          "module": "model.3.ds_ssm",
+          "lambda_s": 0.0011110305786132812,
+          "alpha": -0.01264190673828125
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "path": "/home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed2_ssdd_pfim_only_p3/weights/best.pt",
+      "sha256": "36ed5cf6e783ec60bf4eac3034bdef0e9f5c70158235d51d2791faae78664afd",
+      "scalars": [
+        {
+          "module": "model.3.ds_ssm",
+          "lambda_s": -9.191036224365234e-05,
+          "alpha": -0.0191802978515625
+        }
+      ]
+    }
+  ],
+  "backend": "ultralytics.nn.modules.mamba_yolo",
+  "gpu": "NVIDIA RTX A6000",
+  "module_fast_reference": {
+    "output_max_abs": 0.0,
+    "gradient_max_abs": 8.731149137020111e-11
+  },
+  "controls": [
+    {
+      "name": "",
+      "control": "matched_identity",
+      "lambda_s": 0.0,
+      "alpha": 0.0,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "min_retain": 1.0,
+      "input_path": false,
+      "delta_path": false,
+      "fixed_importance": null,
+      "parameters": 2416,
+      "buffer_elements": 662,
+      "status": "PASS"
+    },
+    {
+      "name": "",
+      "control": "matched_scale075",
+      "lambda_s": 0.0,
+      "alpha": 0.0,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "min_retain": 0.5,
+      "input_path": false,
+      "delta_path": false,
+      "fixed_importance": null,
+      "parameters": 2416,
+      "buffer_elements": 662,
+      "status": "PASS"
+    },
+    {
+      "name": "",
+      "control": "local_energy",
+      "lambda_s": 0.5015878677368164,
+      "alpha": 0.49857470393180847,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "min_retain": 0.5,
+      "input_path": false,
+      "delta_path": false,
+      "fixed_importance": null,
+      "parameters": 2466,
+      "buffer_elements": 612,
+      "status": "PASS"
+    },
+    {
+      "name": "",
+      "control": "local_energy_input",
+      "lambda_s": 0.5015877485275269,
+      "alpha": 0.4985746145248413,
+      "beta_i": 1.0000052452087402,
+      "rho_i": 1.0000401735305786,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "eta_i"
+      ],
+      "min_retain": 0.5,
+      "input_path": true,
+      "delta_path": false,
+      "fixed_importance": null,
+      "parameters": 3077,
+      "buffer_elements": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "",
+      "control": "local_energy_delta",
+      "lambda_s": 0.5015857815742493,
+      "alpha": 0.49856165051460266,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10196315497159958,
+      "buffer_scalars": [
+        "beta_i",
+        "rho_i"
+      ],
+      "min_retain": 0.5,
+      "input_path": false,
+      "delta_path": true,
+      "fixed_importance": null,
+      "parameters": 3076,
+      "buffer_elements": 2,
+      "status": "PASS"
+    },
+    {
+      "name": "",
+      "control": "full",
+      "lambda_s": 0.5015856623649597,
+      "alpha": 0.4985615313053131,
+      "beta_i": 1.0000061988830566,
+      "rho_i": 1.0000423192977905,
+      "eta_i": 0.101963110268116,
+      "buffer_scalars": [],
+      "min_retain": 0.5,
+      "input_path": true,
+      "delta_path": true,
+      "fixed_importance": null,
+      "parameters": 3078,
+      "buffer_elements": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "",
+      "control": "full_fixed_half",
+      "lambda_s": 0.5015857815742493,
+      "alpha": 0.49856168031692505,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "min_retain": 0.5,
+      "input_path": true,
+      "delta_path": true,
+      "fixed_importance": 0.5,
+      "parameters": 2466,
+      "buffer_elements": 612,
+      "status": "PASS"
+    },
+    {
+      "name": "",
+      "control": "residual_scale075",
+      "lambda_s": 0.5015873312950134,
+      "alpha": 0.0,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "min_retain": 0.5,
+      "input_path": false,
+      "delta_path": false,
+      "fixed_importance": null,
+      "parameters": 2465,
+      "buffer_elements": 613,
+      "status": "PASS"
+    },
+    {
+      "name": "",
+      "control": "energy_only",
+      "lambda_s": 0.0,
+      "alpha": 0.498271644115448,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "lambda_s",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "min_retain": 0.5,
+      "input_path": false,
+      "delta_path": false,
+      "fixed_importance": null,
+      "parameters": 2465,
+      "buffer_elements": 613,
+      "status": "PASS"
+    },
+    {
+      "name": "",
+      "control": "guidance_only",
+      "lambda_s": 0.0,
+      "alpha": 0.0,
+      "beta_i": 1.0000603199005127,
+      "rho_i": 1.00015389919281,
+      "eta_i": 0.10190576314926147,
+      "buffer_scalars": [
+        "lambda_s",
+        "alpha"
+      ],
+      "min_retain": 0.5,
+      "input_path": true,
+      "delta_path": true,
+      "fixed_importance": null,
+      "parameters": 3076,
+      "buffer_elements": 2,
+      "status": "PASS"
+    },
+    {
+      "name": "",
+      "control": "global",
+      "lambda_s": 0.5015856623649597,
+      "alpha": 0.4985615611076355,
+      "beta_i": 0.9999995231628418,
+      "rho_i": 1.000027060508728,
+      "eta_i": 0.10196313261985779,
+      "buffer_scalars": [],
+      "min_retain": 0.5,
+      "input_path": true,
+      "delta_path": true,
+      "fixed_importance": null,
+      "parameters": 3078,
+      "buffer_elements": 0,
+      "status": "PASS"
+    }
+  ],
+  "detector_parser_and_initialization": [
+    {
+      "variant": "original",
+      "controls": []
+    },
+    {
+      "variant": "matched_identity",
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "matched_identity",
+          "lambda_s": 0.0,
+          "alpha": 0.0,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [
+            "lambda_s",
+            "alpha",
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "min_retain": 1.0,
+          "input_path": false,
+          "delta_path": false,
+          "fixed_importance": null
+        }
+      ]
+    },
+    {
+      "variant": "matched_scale075",
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "matched_scale075",
+          "lambda_s": 0.0,
+          "alpha": 0.0,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [
+            "lambda_s",
+            "alpha",
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "min_retain": 0.5,
+          "input_path": false,
+          "delta_path": false,
+          "fixed_importance": null
+        }
+      ]
+    },
+    {
+      "variant": "local_energy",
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "local_energy",
+          "lambda_s": 0.5,
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "min_retain": 0.5,
+          "input_path": false,
+          "delta_path": false,
+          "fixed_importance": null
+        }
+      ]
+    },
+    {
+      "variant": "local_energy_input",
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "local_energy_input",
+          "lambda_s": 0.5,
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [
+            "eta_i"
+          ],
+          "min_retain": 0.5,
+          "input_path": true,
+          "delta_path": false,
+          "fixed_importance": null
+        }
+      ]
+    },
+    {
+      "variant": "local_energy_delta",
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "local_energy_delta",
+          "lambda_s": 0.5,
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [
+            "beta_i",
+            "rho_i"
+          ],
+          "min_retain": 0.5,
+          "input_path": false,
+          "delta_path": true,
+          "fixed_importance": null
+        }
+      ]
+    },
+    {
+      "variant": "full",
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "full",
+          "lambda_s": 0.5,
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [],
+          "min_retain": 0.5,
+          "input_path": true,
+          "delta_path": true,
+          "fixed_importance": null
+        }
+      ]
+    },
+    {
+      "variant": "full_fixed_half",
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "full_fixed_half",
+          "lambda_s": 0.5,
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "min_retain": 0.5,
+          "input_path": true,
+          "delta_path": true,
+          "fixed_importance": 0.5
+        }
+      ]
+    },
+    {
+      "variant": "residual_scale075",
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "residual_scale075",
+          "lambda_s": 0.5,
+          "alpha": 0.0,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [
+            "alpha",
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "min_retain": 0.5,
+          "input_path": false,
+          "delta_path": false,
+          "fixed_importance": null
+        }
+      ]
+    },
+    {
+      "variant": "energy_only",
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "energy_only",
+          "lambda_s": 0.0,
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [
+            "lambda_s",
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "min_retain": 0.5,
+          "input_path": false,
+          "delta_path": false,
+          "fixed_importance": null
+        }
+      ]
+    },
+    {
+      "variant": "guidance_only",
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "guidance_only",
+          "lambda_s": 0.0,
+          "alpha": 0.0,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [
+            "lambda_s",
+            "alpha"
+          ],
+          "min_retain": 0.5,
+          "input_path": true,
+          "delta_path": true,
+          "fixed_importance": null
+        }
+      ]
+    },
+    {
+      "variant": "global",
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "global",
+          "lambda_s": 0.5,
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [],
+          "min_retain": 0.5,
+          "input_path": true,
+          "delta_path": true,
+          "fixed_importance": null
+        }
+      ]
+    }
+  ],
+  "status": "PASS"
+}

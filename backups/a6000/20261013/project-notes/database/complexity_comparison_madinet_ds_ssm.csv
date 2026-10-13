@@ -1,0 +1,5 @@
+﻿method,scope,params_M,GFLOPs,latency_ms,fps,device,source,note
+Mamba-YOLO-T-SSDD,full Mamba-YOLO detector,5.9855,13.6116,26.3284,37.9817,NVIDIA GeForce RTX 3090,server measured,"640 input, batch=1, fp32"
+Mamba-YOLO-T-DS-SSM_Backbone-SSDD-ex7,full Mamba-YOLO detector,5.9648,13.2079,28.7546,34.777,NVIDIA GeForce RTX 3090,server measured,"640 input, batch=1, fp32"
+Mamba-YOLO-T-DG-DSSSM-SSDD-ex34-erase-write-delta,full Mamba-YOLO detector,5.9632,13.1554,29.0699,34.3998,NVIDIA GeForce RTX 3090,server measured,"640 input, batch=1, fp32"
+MaDiNet official MambaSAR res4+res5,official core module only; not full detector,223.2648,345.283,27.2921,,NVIDIA GeForce RTX 3090,official code measured,Official MambaSAR.py res4/res5 block; full detector requires Detectron2 config/environment.

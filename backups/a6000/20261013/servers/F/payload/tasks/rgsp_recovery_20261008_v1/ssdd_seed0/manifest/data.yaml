@@ -1,0 +1,6 @@
+path: /home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed0/data
+train: images/train
+val: images/val
+names:
+  0: ship
+test: images/test

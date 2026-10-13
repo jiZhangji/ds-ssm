@@ -1,0 +1,537 @@
+{
+  "schema": "rgsp-figure-visual-review-v1",
+  "status": "VISUAL_PASS",
+  "reviewer": "Codex (root, final_historical_visual, final_qualitative_visual)",
+  "reviewed_at": "2026-10-10T20:14:03.144498+08:00",
+  "gallery_manifest_sha256": "a71aef46cb4cb794f8761b18d57736291fb0a6a7f86b8d1fafc4de060219b250",
+  "structural_report_sha256": "b89644e1c98b1d18e4247df157df699586e07765551236a8b164be12c1b5b593",
+  "booklet_sha256": "c7d3a83e5623e8414d17ab1abce7134da204cbce7b16905563d85f73e0bc09c1",
+  "final_structural_run_id": "20261010T121012Z_2726d0c45c",
+  "review_provenance": {
+    "previous_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+    "previous_downloaded_renders_sha256_verified": 50,
+    "unchanged_pdf_and_rgb_pixel_pairs": 48,
+    "final_changed_renders_reviewed": [
+      "C01",
+      "C02"
+    ],
+    "method": "All 50 individual PDF renders were visually inspected. The final C01/C02 renders were inspected again; the other 48 final PDFs and decoded RGB pixel hashes are identical to the inspected previous build. The final booklet was independently rendered and matched to all 50 individual renders."
+  },
+  "figures": [
+    {
+      "id": "C01",
+      "status": "PASS",
+      "notes": "20个SSDD配置、百分数坐标与Original虚线完整；最终版白底数值标签已复核，不被虚线贯穿。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "013122e82c25c892552c42fcc7b3bbfdf889dc7bcff1e671f9201e310a48cb7c",
+      "final_render_pixels_sha256": "6324f08f7814aca7f73647ed690c55a879abbd72efe0d06f4a02491cf2f529a0",
+      "visually_observed_run_id": "20261010T121012Z_2726d0c45c"
+    },
+    {
+      "id": "C02",
+      "status": "PASS",
+      "notes": "9个SADD配置与Original参考值完整；最终版标签白底与点标记间距清晰。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "e33047970d0e32026d0e927ff2f887d827289f2735c05be3a674233afdc4ce90",
+      "final_render_pixels_sha256": "c626c3d4a3676d7e789186b2b4ea1b6e0bc2370477126c15818b1d15ff33f1a6",
+      "visually_observed_run_id": "20261010T121012Z_2726d0c45c"
+    },
+    {
+      "id": "C03",
+      "status": "PASS",
+      "notes": "20行三指标热图及0–100共用色标完整，所有数字可读，无行名裁切。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "283c85bfd93ab1dd99e97d7852ffdc7ffadb8b11b57f89404fed68555f4651ca",
+      "final_render_pixels_sha256": "6511434bd0be7686658f10077234710f3cd14ce7b060f121404cb48bc0418746",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C04",
+      "status": "PASS",
+      "notes": "SADD九行三指标热图对齐，百分数单位和色标均完整。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "239d239a0fad0ead5737c454aa22c989ec93b210db4072187e9d5c02b7aeb612",
+      "final_render_pixels_sha256": "39807be0b3546059334fb004b699b6f28cd528390f475d1805d3dfb2d39424f5",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C05",
+      "status": "PASS",
+      "notes": "SSDD/SADD分面柱轴从0开始，五配置标签和柱末数值清晰，无跨数据集合并。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "ae03b40147486e2b8295cf01eea659d836e15b422acf1edf9378aaa4962de846",
+      "final_render_pixels_sha256": "275d2e74882daf2ef3a600581d76fcdd46c415164f135281bee08df4605b4f5d",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C06",
+      "status": "PASS",
+      "notes": "两数据集圆点/方块图例位于数据区上方，正负差值及零线清楚。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "c2dde48850fced8a59017d5b701315eebe2a3b0dea5dd430216df52ffe6cf335",
+      "final_render_pixels_sha256": "f65b69ee58d17721bec457c5dd5a40f9f241a955625891966152c304d3e5c39f",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C07",
+      "status": "PASS",
+      "notes": "以Matched075为锚的正负差值完整，图例不遮数据，点线不伪装为置信区间。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "655094bf77c89ad1e1380588fc0d62b5bc050cc722a45ee0fa9532e5bc1a9458",
+      "final_render_pixels_sha256": "469c99985d85d0ae7f6050838d3080b07065098e85306c370cf40a935c39d7d1",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C08",
+      "status": "PASS",
+      "notes": "P/R工作点分面、图例和标签清楚，页脚明确不是PR曲线。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "debb3724441b3e191cb49c23986b4e0aafcd61340c879015676fa7de5c95e363",
+      "final_render_pixels_sha256": "4bf32725a6aa445f0ae594aeb91cac92ce937d81fa5c9013a52c7ca90b4e3c1b",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C09",
+      "status": "PASS",
+      "notes": "AP50与AP50:95的散点位置和关键配置标注可辨，坐标与页脚无裁切。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "583edcd91e56698d7597e28c9b03afc364089e9b75a86bc9cce3bfc5c32a4671",
+      "final_render_pixels_sha256": "0f9c732a3ada1724223a5d621dfd37bf190c4a2e41da757c066d27d71e5cb777",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C10",
+      "status": "PASS",
+      "notes": "三套四格的行列语义、原值和有符号交互差清晰；描述性单seed边界明示。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "adfec5064234ae4e72647f628ecfa4d3515303fbb05769298a5c7edac0147e2e",
+      "final_render_pixels_sha256": "1ebcced27e6a0c4613857ccf4af19b4f096f3cbfbcc598fcf6616009edfff8b1",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C11",
+      "status": "PASS",
+      "notes": "三条带符号的四格差值完整，正负轴及percentage points单位明确。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "a30772f626eff1c0095b67fa030cd663202df6559663ffa1f95c4311319cb696",
+      "final_render_pixels_sha256": "857b1d9f52fb47968eba9d96cda735f41d6b93a53a7144d91545b4803fba4e98",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C12",
+      "status": "PASS",
+      "notes": "五种指导位置的水平柱从0开始，末端数值和完整配置名可读。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "c456fb92d3d0258fada074c834660a5a891b8a4db710fa5c67b6c84c4dea558c",
+      "final_render_pixels_sha256": "3f73d7f0698ddbebf3f13910b6d2d6fc7bf6a73a4cfc690658f90f503284a874",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C13",
+      "status": "PASS",
+      "notes": "局部统计替代配置名称、柱长及末端数值完整。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "a70386ba458248aa13a5e3d5c767dcaa23e37858302021212e070901f0addd24",
+      "final_render_pixels_sha256": "e05c47be5503450b02c037faf9c1cc0322b1bc6742d0d90ec95d3f15e59b124b",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C14",
+      "status": "PASS",
+      "notes": "P2/P3/P4三个独立配置数值及标签完整，没有暗示P3单seed最优。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "f8e63fd63b97da3e797e80703648a7d0eddcce3b4bd8e9165daf503159927d6c",
+      "final_render_pixels_sha256": "c324b97aa30f78f705bced1fcd2ad41fb98d1ec7d53d096cc5e2266b280e74ba",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C15",
+      "status": "PASS",
+      "notes": "五指标的成对点和连接线已对齐；底部图例不遮挡，no-LRC边界说明完整。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "99dd10d634bd42e0f2842f4571fced1db53dd17381a43e4254620de3698eb980",
+      "final_render_pixels_sha256": "9c72cd16915e3d82d119cff1b5ee60df74fa9a7ccfc8f9491916f5e976e87532",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "C16",
+      "status": "PASS",
+      "notes": "全部29行与5列百分数指标完整，交替底色和列对齐清晰，末行及页脚无裁切。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "0b7eb2438f8380fd2f4b068a4d4638f69caea3c0ef9b8ceb79d215c6650fadd5",
+      "final_render_pixels_sha256": "92c361495a3ea96b48e8b0f15f229db68c70dd417ff3157738116aefce06f3d1",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "H01",
+      "status": "PASS",
+      "notes": "Seed 0圆、1方、2三角及均值菱形图例清楚，右侧均值±样本SD不遮挡。",
+      "reviewer": "Codex / final_historical_visual",
+      "reviewed_pdf_sha256": "3f3c02220c822a8c54fc6e0a367304dcd27c3db1e72281362d69bc548666e572",
+      "final_render_pixels_sha256": "5450126c6317fdf03cd4fa619af5695f43d23375c117fea74a25731f8756d065",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "H02",
+      "status": "PASS",
+      "notes": "均值黑刻线位于seed组下方；图例独立，-4.71等负差值完整。",
+      "reviewer": "Codex / final_historical_visual",
+      "reviewed_pdf_sha256": "13e176d0063d536bec17d7cfb69b2663d639449b605ba2993399805a21e02c48",
+      "final_render_pixels_sha256": "b14bf62ed80f6e437b4c237d3fa32e163b64da380be34261f8bcceb583ca8878",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "H03",
+      "status": "PASS",
+      "notes": "五指标均值与SD两行清晰，0–100色标及Mean (%)单位完整。",
+      "reviewer": "Codex / final_historical_visual",
+      "reviewed_pdf_sha256": "7f5c71fe26ac87f22953844fdb451c459a60d0ddb864977bf5ee0b312f0c4a02",
+      "final_render_pixels_sha256": "161d53872eebc800c2c22ee129e3d4c891d5054ad75d29d6d085eeea5612dfb0",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "H04",
+      "status": "PASS",
+      "notes": "三seed曲线及图例明确，Full seed0下降完整保留。",
+      "reviewer": "Codex / final_historical_visual",
+      "reviewed_pdf_sha256": "88b890903d8ffb75f22a2698bade79402fad2c5423a1796bacdd26a210594ae2",
+      "final_render_pixels_sha256": "0b621ae8397eee2f6b5f8e7fbcb838f86c57b8ac329b23ffbfee27c5b62348c1",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "H05",
+      "status": "PASS",
+      "notes": "Seed形状图例可辨，均值误差条、右侧数值和旧SSDD限制脚注完整。",
+      "reviewer": "Codex / final_historical_visual",
+      "reviewed_pdf_sha256": "2502a44dd8888809ee14fa7af7d0fef08fd6ba347a3ec32d6c5177a4dd761494",
+      "final_render_pixels_sha256": "a83a48ee86a57876caff1e6bfec1e5bbb1a8f527884ff10521b272b4e59e3ebb",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "H06",
+      "status": "PASS",
+      "notes": "均值刻线不压点或标签，四组seed2负值及Full seed0负值可读。",
+      "reviewer": "Codex / final_historical_visual",
+      "reviewed_pdf_sha256": "078f892870a11d32f88056783b562f0e882be87f1b1e00a1d2f9e54e58cf2b5c",
+      "final_render_pixels_sha256": "cc25847d8a4f5a24adc97555d6d9fadf47ce01820565706b4a48b95d5e02959a",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "H07",
+      "status": "PASS",
+      "notes": "五行五列文字未溢出，统一色标和历史PFIM限制脚注明确。",
+      "reviewer": "Codex / final_historical_visual",
+      "reviewed_pdf_sha256": "b34a08ad265b69f3bf7a02a9e587a8f7b06470d8461392840fe06690005c7507",
+      "final_render_pixels_sha256": "33d1beb313a64ddc579e548a727f051ae7b205011984ab28757d99b5e9debfe4",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "H08",
+      "status": "PASS",
+      "notes": "两行配置标签、类别横轴说明与底部脚注间距足够，无裁切。",
+      "reviewer": "Codex / final_historical_visual",
+      "reviewed_pdf_sha256": "2eddc74cf6612900eb6d5cc7220cd659c88f04cfdccfca160ffabde01d13850b",
+      "final_render_pixels_sha256": "9a7812ff2e69996d180175021b3755ecc027b336fd0b75f9d3050228f5b3a5b1",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "H09",
+      "status": "PASS",
+      "notes": "参数量million与profiler GFLOPs分面单位明确，柱末数值完整。",
+      "reviewer": "Codex / final_historical_visual",
+      "reviewed_pdf_sha256": "6bc11839b9038eb82466f1300472c31cd60c603baddd5b77d7f85b023c14eb76",
+      "final_render_pixels_sha256": "81ba6cb0518122cec94ce259fea9d2b1891e3916094a777482c96fdad1ddcdea",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "H10",
+      "status": "PASS",
+      "notes": "五项图例及误差条完整；13.15 GFLOPs处叠加是相同真实成本坐标，未人为抖动。",
+      "reviewer": "Codex / final_historical_visual",
+      "reviewed_pdf_sha256": "95ea17c7bfb345f10783cf81bd74005fde8d0268ffaab3ad01955b262b09988d",
+      "final_render_pixels_sha256": "0d6145bb4f97fe8cda27760970f2d0aa4200ef5b8822f01bfc07ed4b600bd782",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "H11",
+      "status": "PASS",
+      "notes": "历史验证AP双曲线、0–300 epoch和图例清晰，非当前实验说明完整。",
+      "reviewer": "Codex / final_historical_visual",
+      "reviewed_pdf_sha256": "4431b6f7e44014a23d810c38d92a6c6c7d97dfc5a896c30f14137b4ad92ede54",
+      "final_render_pixels_sha256": "d293ebd807f70954acee418cc06827626227e648c3ee518bb9597d4837355d4a",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "H12",
+      "status": "PASS",
+      "notes": "三分面独立纵轴可读，早期尖峰保留，train/val线型与尺度说明清楚。",
+      "reviewer": "Codex / final_historical_visual",
+      "reviewed_pdf_sha256": "bfc82ae17b4a04a47f789f20e65587c3b4015bdedb42ebd9975fa0d5b9dcce8e",
+      "final_render_pixels_sha256": "57a7342c3b7b3b5ed1b9040ab21e49205590a9bb273a9743f70e9a8d7f5e234b",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "Q01",
+      "status": "PASS",
+      "notes": "单框目标与特征空间位置对应，输入/修正RMS色标一致，历史block0边界完整。",
+      "reviewer": "Codex / final_qualitative_visual",
+      "reviewed_pdf_sha256": "5e260cedcd76a88e05825451f212f699fb4abcfa57ef5850c1db000df9029c09",
+      "final_render_pixels_sha256": "cabb2786b9f12d67dce6cdf2c8d7bc0fd45701cc6b9f9177cd9563820589af59",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "Q02",
+      "status": "PASS",
+      "notes": "竖向目标与特征位置一致，七条色标和八面板标题完整。",
+      "reviewer": "Codex / final_qualitative_visual",
+      "reviewed_pdf_sha256": "1a35ff2884faccdd8521bf1c7542f254daf35d52cf6071bea22ee99f0c90e11b",
+      "final_render_pixels_sha256": "26a0a91f15c668afc9337cc5d2bd7644be4037a8f796f17c80a1b334259b8f0d",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "Q03",
+      "status": "PASS",
+      "notes": "左侧目标框与特征位置可辨，灰度图和热图比例自然、标签完整。",
+      "reviewer": "Codex / final_qualitative_visual",
+      "reviewed_pdf_sha256": "2ba77ddcb61e52694a82c037664368f2b79a848a7f6878d97ac42f9dce749541",
+      "final_render_pixels_sha256": "06eaa5a91149bde9ca64de3191cd50c4e7efe13dc0833f34e9b31ef0801d224d",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "Q04",
+      "status": "PASS",
+      "notes": "斜向河道与两框目标在各图中对应，色标、标题和页脚无重叠。",
+      "reviewer": "Codex / final_qualitative_visual",
+      "reviewed_pdf_sha256": "89afa1f75962f532942263365d7fed2d88ba747c781e47a9ac0b0fba8124984e",
+      "final_render_pixels_sha256": "f991273627c68425c2bedf731692382a5e6882f3cf53260323630cc1aece1cad",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "Q05",
+      "status": "PASS",
+      "notes": "七个目标框清晰，线状结构在多种特征中对应，共享色标完整。",
+      "reviewer": "Codex / final_qualitative_visual",
+      "reviewed_pdf_sha256": "aee191d88ea45d336f00f036e381536c1d6f9a2787602fc4bd6e0f82d0d14400",
+      "final_render_pixels_sha256": "323391d52546227c0668993fb8eb079c5f7874b0efbfe02666ea5ba529719606",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "Q06",
+      "status": "PASS",
+      "notes": "密集小框保留，底部亮结构与特征对齐，未把无框亮区称为噪声。",
+      "reviewer": "Codex / final_qualitative_visual",
+      "reviewed_pdf_sha256": "b8144682816cf39b86f8fac628b6fed93b32951a8b45c5078f82bb69347a8887",
+      "final_render_pixels_sha256": "577e3efb4518a5e089b42b9f2caab2273c2cd4260f7986c1c8ac072607ee331c",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "Q07",
+      "status": "PASS",
+      "notes": "六样本全部展示，统一I色标和固定alpha=0.56明示，叠图不作目标掩膜。",
+      "reviewer": "Codex / final_qualitative_visual",
+      "reviewed_pdf_sha256": "7fbc5f05041372018584a350455be0ad5ed463a3ce666358bdc8fc484a0852c3",
+      "final_render_pixels_sha256": "63540472620e1b3db14b37537473d984549b873e8edf27a9ddbc28f46b86e92d",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "Q08",
+      "status": "PASS",
+      "notes": "六组框内/框外点与正负差值清晰，4/6负差保留，没有伪误差条。",
+      "reviewer": "Codex / final_qualitative_visual",
+      "reviewed_pdf_sha256": "c3bcfe5701f2d2419c7aa94ca0aa204c29c682b5e54f8f4395e49f3ba88a1e03",
+      "final_render_pixels_sha256": "7ae8de522c9e2145ce48a83ebfb4295feaa750446a7a900002e4ae3e2fc62266",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "Q09",
+      "status": "PASS",
+      "notes": "框内外使用一致RMS坐标，能量升高与降低均保留，明确下降不等于去噪。",
+      "reviewer": "Codex / final_qualitative_visual",
+      "reviewed_pdf_sha256": "337d11b1a24f9ff84ae3111ebb4d0e34186796086b2e168c20977c179e3700d9",
+      "final_render_pixels_sha256": "c61e277076512a0a2fb3c96ae7f9887ea4d3500cce2c05e7677b0affbbc6377f",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "Q10",
+      "status": "PASS",
+      "notes": "六条累计曲线、图例和0–1纵轴完整，注明token不是独立实验。",
+      "reviewer": "Codex / final_qualitative_visual",
+      "reviewed_pdf_sha256": "68680490f09e00609fb0af7603183416c99bc2af520726f4331c0f0f54f8c94b",
+      "final_render_pixels_sha256": "73f56f2eca1aa2edac6c27a17b5a081f256105b5c924234ba694b674a50a9eb5",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "Q11",
+      "status": "PASS",
+      "notes": "零线两侧能量变化可辨，六曲线完整，注明非噪声去除校准度量。",
+      "reviewer": "Codex / final_qualitative_visual",
+      "reviewed_pdf_sha256": "3dbe41d2dfe926110ba9a99580e95cd694d10a76fa3a3d1133573cc988bf1a92",
+      "final_render_pixels_sha256": "c91f7f9233c9eb1b7e2f0c3e345825cf800db4544bf702413a15342967a2abf0",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "Q12",
+      "status": "PASS",
+      "notes": "六幅原图与GT框完整，固定灰度映射说明清楚，不从亮度推断噪声。",
+      "reviewer": "Codex / final_qualitative_visual",
+      "reviewed_pdf_sha256": "412cfc3922bf367c19bdf13ac9d9c8af7eb236d5c5197fc1363db94f5da1285c",
+      "final_render_pixels_sha256": "0e8b323590554e3a36e85b6be6fd10ce9fd7f94927ae70851639dec1b7adaefe",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "M01",
+      "status": "PASS",
+      "notes": "P3单块替换、P3/P4/P5颈部与检测尺度及独立P2/P3/P4对照清楚，连线无穿字。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "0b5bd10ebd253eedb926cdde4fb5dc1f76376f8f1f6e409ed987e2f7014fea1c",
+      "final_render_pixels_sha256": "73b53b6420de2b1d697a1fbc18972a4950be8655589bd8b2880348259a3706a6",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "M02",
+      "status": "PASS",
+      "notes": "两次残差路径、U连续回接和FFN输出均可追踪，尺寸公式与说明无裁切。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "54695373dfd8692d6699983cad010809c49324674ab02cc51c1c325fba7776c1",
+      "final_render_pixels_sha256": "d2d8f31be8f2df6a8db63601c72260e06142b6c630e48d572100b3534bcfde40",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "M03",
+      "status": "PASS",
+      "notes": "原始x两分支、减法、可学习趋势及趋势RMS路径清楚，非必然去噪限制明确。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "6228079fadafa6fad42ae69302d4959e2f7985485a4b85f6d89148aaa602ba3b",
+      "final_render_pixels_sha256": "42738b1b21d48ebb968369cc06d776d6213b3128aa7d1b4857441c0989a26896",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "M04",
+      "status": "PASS",
+      "notes": "趋势/二维标准差接入2C预测器的路径完整，四个描述子控制和初始化说明清晰。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "3d6b3aba64516c450d5825d9051a08b1a24de3c94ef3f2a25d7d8a71713404d6",
+      "final_render_pixels_sha256": "cd7a59489b1aa6932348b8e8e5092532db022d0ec1d5c9a08f731e496c6090b3",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "M05",
+      "status": "PASS",
+      "notes": "调制前B/C来源、scan drive与步长两处控制、读出旁路和z门控连线清楚。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "4ea6991748eaafdea5340c9ca45eb075788000e3c09d89a1c908548be9434699",
+      "final_render_pixels_sha256": "cbad7f18106d573fa695ef338c99dde576664d6c00d3a6efe516d7ea82b54231",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "M06",
+      "status": "PASS",
+      "notes": "同壳层控制及两套四格定义清晰，比较公式、关闭参数和非交互提醒完整。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "634db985d614e82357d56960f9420b9cb4839bef5934f9c0e7870174f60c82af",
+      "final_render_pixels_sha256": "4314c5c4a875c05c327f79e0436fa421631e32a84dcb0b1e4bfa8a9bf3539109",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "P01",
+      "status": "PASS",
+      "notes": "比例条与右侧数量表共享行坐标，四套split逐行对齐，历史与新SSDD分开。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "7ed96658393c84ec5c70e67f345a5e61957e24dc12425c7184056b516490e3b2",
+      "final_render_pixels_sha256": "e2c4cd2a2d6ea8508d4c315f9626f675894bb2accfa367d8d9548a22fd78a116",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "P02",
+      "status": "PASS",
+      "notes": "回执/指标已捕获/缺项三类分开，20+9检测及跨任务1+14分解清晰。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "0e4917f1c49de57d8cb2d469808f201a54e6476995f2435f8d5f96204abcb919",
+      "final_render_pixels_sha256": "51d1157dced1aa3d638aeb45183496bb56c204742242163f1e85315064057afd",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "P03",
+      "status": "PASS",
+      "notes": "29项来源按campaign/reused/historical分解，17+2+1与6+3完整可读。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "b87d80d11da02a9fadd45762addb54bb60264154921d39fb0367a0ec069543eb",
+      "final_render_pixels_sha256": "298c87841eb8fd1716fbb37c2315a5d76a82bb9812a41f873bfff4ff398801de",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    },
+    {
+      "id": "P04",
+      "status": "PASS",
+      "notes": "历史与当前两条证据流程分开，连接箭头和报告边界说明完整。",
+      "reviewer": "Codex / root",
+      "reviewed_pdf_sha256": "38aece6a3d929da586e91e4309985cb883024b0d40540261156f771610ad53dc",
+      "final_render_pixels_sha256": "c4cd32f75d1088b8c72032b02ed50ac117cc43822e44f134ab1fc1571ebb5ef6",
+      "visually_observed_run_id": "20261010T115859Z_b6cdfa02a2",
+      "final_pdf_and_pixels_equal_observed_render": true
+    }
+  ],
+  "booklet_review": {
+    "status": "PASS",
+    "pages_reviewed": 50,
+    "method": "The final 50-page booklet was rendered page by page at 110 dpi; all page dimensions and decoded RGB pixel hashes match the corresponding individually rendered and visually reviewed figure. C01/C02 use final-run inspection; the other 48 use verified identical PDF bytes and rendered RGB pixels from the reviewed preceding run."
+  },
+  "overview_review": {
+    "status": "PASS",
+    "file": "contact_sheets/START_HERE.png",
+    "sha256": "0c61a69c99102b38c4fe3a89001af56aefcbb91647a16f7c92514589c4a0a029",
+    "notes": "12-panel overview inspected: distinct use cases, readable figure IDs and intact thumbnails. This is a navigation overview, not a replacement for individual visual review."
+  },
+  "limitations": {
+    "browser_interaction_tested": false,
+    "research_experiment_validation": false,
+    "new_training_runs": 0,
+    "new_inference_runs": 0
+  }
+}

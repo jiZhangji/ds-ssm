@@ -1,0 +1,90 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+FUSAR-Map ours epoch=1/100 score=0.17146
+FUSAR-Map ours epoch=2/100 score=0.15248
+FUSAR-Map ours epoch=3/100 score=0.16681
+FUSAR-Map ours epoch=4/100 score=0.14399
+FUSAR-Map ours epoch=5/100 score=0.18354
+FUSAR-Map ours epoch=6/100 score=0.16703
+FUSAR-Map ours epoch=7/100 score=0.16312
+FUSAR-Map ours epoch=8/100 score=0.18008
+FUSAR-Map ours epoch=9/100 score=0.16760
+FUSAR-Map ours epoch=10/100 score=0.19698
+FUSAR-Map ours epoch=11/100 score=0.18503
+FUSAR-Map ours epoch=12/100 score=0.18804
+FUSAR-Map ours epoch=13/100 score=0.16798
+FUSAR-Map ours epoch=14/100 score=0.15904
+FUSAR-Map ours epoch=15/100 score=0.17978
+FUSAR-Map ours epoch=16/100 score=0.16859
+FUSAR-Map ours epoch=17/100 score=0.18496
+FUSAR-Map ours epoch=18/100 score=0.16678
+FUSAR-Map ours epoch=19/100 score=0.19701
+FUSAR-Map ours epoch=20/100 score=0.19067
+FUSAR-Map ours epoch=21/100 score=0.19194
+FUSAR-Map ours epoch=22/100 score=0.19142
+FUSAR-Map ours epoch=23/100 score=0.19224
+FUSAR-Map ours epoch=24/100 score=0.19257
+FUSAR-Map ours epoch=25/100 score=0.17802
+FUSAR-Map ours epoch=26/100 score=0.19128
+FUSAR-Map ours epoch=27/100 score=0.19530
+FUSAR-Map ours epoch=28/100 score=0.16645
+FUSAR-Map ours epoch=29/100 score=0.18418
+FUSAR-Map ours epoch=30/100 score=0.17809
+FUSAR-Map ours epoch=31/100 score=0.19674
+FUSAR-Map ours epoch=32/100 score=0.19474
+FUSAR-Map ours epoch=33/100 score=0.18999
+FUSAR-Map ours epoch=34/100 score=0.18396
+FUSAR-Map ours epoch=35/100 score=0.19587
+FUSAR-Map ours epoch=36/100 score=0.19768
+FUSAR-Map ours epoch=37/100 score=0.19177
+FUSAR-Map ours epoch=38/100 score=0.18824
+FUSAR-Map ours epoch=39/100 score=0.18444
+FUSAR-Map ours epoch=40/100 score=0.18878
+FUSAR-Map ours epoch=41/100 score=0.18494
+FUSAR-Map ours epoch=42/100 score=0.19627
+FUSAR-Map ours epoch=43/100 score=0.19484
+FUSAR-Map ours epoch=44/100 score=0.18841
+FUSAR-Map ours epoch=45/100 score=0.19251
+FUSAR-Map ours epoch=46/100 score=0.19305
+FUSAR-Map ours epoch=47/100 score=0.19314
+FUSAR-Map ours epoch=48/100 score=0.18590
+FUSAR-Map ours epoch=49/100 score=0.17835
+FUSAR-Map ours epoch=50/100 score=0.19274
+FUSAR-Map ours epoch=51/100 score=0.19901
+FUSAR-Map ours epoch=52/100 score=0.18339
+FUSAR-Map ours epoch=53/100 score=0.19756
+FUSAR-Map ours epoch=54/100 score=0.19305
+FUSAR-Map ours epoch=55/100 score=0.18806
+FUSAR-Map ours epoch=56/100 score=0.18563
+FUSAR-Map ours epoch=57/100 score=0.17291
+FUSAR-Map ours epoch=58/100 score=0.18757
+FUSAR-Map ours epoch=59/100 score=0.19141
+FUSAR-Map ours epoch=60/100 score=0.19393
+FUSAR-Map ours epoch=61/100 score=0.18734
+FUSAR-Map ours epoch=62/100 score=0.19745
+FUSAR-Map ours epoch=63/100 score=0.17963
+FUSAR-Map ours epoch=64/100 score=0.19676
+FUSAR-Map ours epoch=65/100 score=0.18378
+FUSAR-Map ours epoch=66/100 score=0.18237
+FUSAR-Map ours epoch=67/100 score=0.17690
+FUSAR-Map ours epoch=68/100 score=0.18292
+FUSAR-Map ours epoch=69/100 score=0.18272
+FUSAR-Map ours epoch=70/100 score=0.17286
+FUSAR-Map ours epoch=71/100 score=0.18327
+EARLY STOP: FUSAR-Map ours after 20 stale epochs
+{
+  "dataset": "FUSAR-Map",
+  "task": "segmentation",
+  "variant": "ours",
+  "state_dim": 16,
+  "metric": {
+    "miou": 0.2148853696562626,
+    "mpa": 0.2863716192149095,
+    "dice": 0.2749064308446857
+  },
+  "latency_ms": 7.666271524866432,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/segmentation/FUSAR_Map/ours/best.pt",
+  "epochs": 100,
+  "params": 1839783
+}

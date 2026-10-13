@@ -1,0 +1,10 @@
+{
+  "disconnected_trainable_parameters": [],
+  "nonfinite_gradients": [],
+  "required_stage_gradient_l2": {
+    "backbone.p3": 0.09226284383688839,
+    "backbone.p4": 5.95980175413837,
+    "backbone.p5": 4.353393481179406,
+    "decoder": 5.843640716311205
+  }
+}

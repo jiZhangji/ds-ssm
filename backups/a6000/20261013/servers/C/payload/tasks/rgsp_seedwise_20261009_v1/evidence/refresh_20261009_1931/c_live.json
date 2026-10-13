@@ -1,0 +1,123 @@
+{
+  "checked_utc": "2026-10-09T11:33:45.357561+00:00",
+  "cpu_load": [
+    0.14,
+    0.15,
+    0.14
+  ],
+  "disk_free_gib": 788.34,
+  "hostname": "a6000-c",
+  "hosts": {
+    "c": {
+      "dispatch": {
+        "attempt_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/c/attempt_2026-10-09T033438.035978_0000_547f4d71",
+        "child": {
+          "argv": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py",
+            "--plan",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+            "--lane",
+            "c_seed0"
+          ],
+          "pid": 3599939,
+          "ppid": 3599938,
+          "session": 3599938,
+          "start_ticks": 16430263,
+          "state": "R"
+        },
+        "child_log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/c/attempt_2026-10-09T033438.035978_0000_547f4d71/seed0.log",
+        "completed_seeds": [],
+        "dependency_evidence": {
+          "verified": []
+        },
+        "gpu_uuid": "GPU-e5f8a5d2-306d-582e-c926-f795df943b1b",
+        "host_key": "c",
+        "hostname": "a6000-c",
+        "owner": {
+          "argv": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py",
+            "--plan",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+            "--host-key",
+            "c",
+            "--inherited-lock-fd",
+            "3",
+            "--attempt-dir",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/c/attempt_2026-10-09T033438.035978_0000_547f4d71"
+          ],
+          "pid": 3599938,
+          "ppid": 3599935,
+          "session": 3599938,
+          "start_ticks": 16430251,
+          "state": "R"
+        },
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-campaign-dispatch-v1",
+        "seed": 0,
+        "started_utc": "2026-10-09T03:34:38.091270+00:00",
+        "state": "running_seed0",
+        "updated_utc": "2026-10-09T03:34:38.164615+00:00"
+      },
+      "dispatcher_alive": true,
+      "gpu": {
+        "checked_utc": "2026-10-09T11:33:45.449114+00:00",
+        "compute_processes": [],
+        "memory_total_mib": 49140,
+        "memory_used_mib": 1308,
+        "name": "NVIDIA RTX A6000",
+        "utilization_percent": 0,
+        "uuid": "GPU-e5f8a5d2-306d-582e-c926-f795df943b1b"
+      },
+      "lanes": {
+        "c_seed0": {
+          "assigned_count": 2,
+          "deferred_readiness": {
+            "status": "not_published"
+          },
+          "receipt_files_present": [
+            "ssdd_full_p2_seed0"
+          ],
+          "status": {
+            "completed": [
+              "ssdd_full_p2_seed0"
+            ],
+            "current": "sar_shipdataset_full_seed0",
+            "gpu": {
+              "checked_utc": "2026-10-09T04:10:54.275524+00:00",
+              "compute_processes": [],
+              "memory_total_mib": 49140,
+              "memory_used_mib": 1308,
+              "name": "NVIDIA RTX A6000",
+              "utilization_percent": 0,
+              "uuid": "GPU-e5f8a5d2-306d-582e-c926-f795df943b1b"
+            },
+            "gpu_uuid": "GPU-e5f8a5d2-306d-582e-c926-f795df943b1b",
+            "host": "a6000-c",
+            "lane": "c_seed0",
+            "pid": 3599939,
+            "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+            "schema": "rgsp-seedwise-v1",
+            "started_utc": "2026-10-09T03:34:38.210904+00:00",
+            "state": "running",
+            "updated_utc": "2026-10-09T04:10:54.297107+00:00"
+          }
+        },
+        "c_seed1": {
+          "assigned_count": 3,
+          "receipt_files_present": [],
+          "status": null
+        }
+      }
+    }
+  },
+  "plan_file_sha256": "37e1e2254643541118e4bab29d11cb93f1483847fc73aa69be8d63be4907cbe0",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-live-snapshot-v1",
+  "warning": "Receipt presence and last epoch are progress only; verify_receipts is required for completion."
+}

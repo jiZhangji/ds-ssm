@@ -1,0 +1,400 @@
+{
+  "trial_id": "sar_acd_full_seed0",
+  "dataset": "sar_acd",
+  "task": "classification",
+  "variant": "full",
+  "parameters": 2787075,
+  "trainable_parameters": 2787075,
+  "input_shapes": [
+    [
+      1,
+      3,
+      224,
+      224
+    ]
+  ],
+  "output_shape": [
+    1,
+    5
+  ],
+  "checkpoint_sha256": "3c73a8c0b741e95349490813f9ce3d923c708fcf83f78e93d187500f469820b9",
+  "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_full_seed0/best.pt",
+  "result_sha256": "052e28a6358b7aa9ed53a7c611e1df856f61eb60c95af2a27292c929246eb124",
+  "config_sha256": "b72915e3976ed0b77697439db72badd265023a91f5755735bc1379e76873254c",
+  "control_audit": {
+    "variant": "full",
+    "controlled_blocks": 1,
+    "placement": "internal P3/8, 64 channels",
+    "scalars": {
+      "lambda_s": 0.496133953332901,
+      "alpha": 0.48876193165779114,
+      "beta_i": 1.008074164390564,
+      "rho_i": 1.007952332496643,
+      "eta_i": 0.10677842795848846
+    },
+    "buffer_scalars": [],
+    "min_retain": 0.5,
+    "use_pfim": true
+  },
+  "thop_legacy_x2_flops": 731045996.0,
+  "scan_basic_arithmetic_flops": 155344896,
+  "functional_einsum_mac2_flops": 128450560,
+  "cross_merge_add_flops": 1128960,
+  "covered_flops_g": 1.015970412,
+  "scan_calls": [
+    {
+      "backend": "core",
+      "u_shape": [
+        1,
+        256,
+        3136
+      ],
+      "a_shape": [
+        256,
+        16
+      ],
+      "b_shape": [
+        1,
+        4,
+        16,
+        3136
+      ],
+      "c_shape": [
+        1,
+        4,
+        16,
+        3136
+      ],
+      "has_D": true,
+      "has_delta_bias": true,
+      "delta_softplus": true,
+      "basic_arithmetic_flops": 80281600,
+      "special_function_evaluations_symbolic_upper_bound": 14450688
+    },
+    {
+      "backend": "core",
+      "u_shape": [
+        1,
+        64,
+        784
+      ],
+      "a_shape": [
+        64,
+        16
+      ],
+      "b_shape": [
+        1,
+        1,
+        16,
+        784
+      ],
+      "c_shape": [
+        1,
+        1,
+        16,
+        784
+      ],
+      "has_D": false,
+      "has_delta_bias": false,
+      "delta_softplus": false,
+      "basic_arithmetic_flops": 4816896,
+      "special_function_evaluations_symbolic_upper_bound": 802816
+    },
+    {
+      "backend": "core",
+      "u_shape": [
+        1,
+        1024,
+        196
+      ],
+      "a_shape": [
+        1024,
+        16
+      ],
+      "b_shape": [
+        1,
+        4,
+        16,
+        196
+      ],
+      "c_shape": [
+        1,
+        4,
+        16,
+        196
+      ],
+      "has_D": true,
+      "has_delta_bias": true,
+      "delta_softplus": true,
+      "basic_arithmetic_flops": 20070400,
+      "special_function_evaluations_symbolic_upper_bound": 3612672
+    },
+    {
+      "backend": "core",
+      "u_shape": [
+        1,
+        1024,
+        196
+      ],
+      "a_shape": [
+        1024,
+        16
+      ],
+      "b_shape": [
+        1,
+        4,
+        16,
+        196
+      ],
+      "c_shape": [
+        1,
+        4,
+        16,
+        196
+      ],
+      "has_D": true,
+      "has_delta_bias": true,
+      "delta_softplus": true,
+      "basic_arithmetic_flops": 20070400,
+      "special_function_evaluations_symbolic_upper_bound": 3612672
+    },
+    {
+      "backend": "core",
+      "u_shape": [
+        1,
+        1024,
+        196
+      ],
+      "a_shape": [
+        1024,
+        16
+      ],
+      "b_shape": [
+        1,
+        4,
+        16,
+        196
+      ],
+      "c_shape": [
+        1,
+        4,
+        16,
+        196
+      ],
+      "has_D": true,
+      "has_delta_bias": true,
+      "delta_softplus": true,
+      "basic_arithmetic_flops": 20070400,
+      "special_function_evaluations_symbolic_upper_bound": 3612672
+    },
+    {
+      "backend": "core",
+      "u_shape": [
+        1,
+        2048,
+        49
+      ],
+      "a_shape": [
+        2048,
+        16
+      ],
+      "b_shape": [
+        1,
+        4,
+        16,
+        49
+      ],
+      "c_shape": [
+        1,
+        4,
+        16,
+        49
+      ],
+      "has_D": true,
+      "has_delta_bias": true,
+      "delta_softplus": true,
+      "basic_arithmetic_flops": 10035200,
+      "special_function_evaluations_symbolic_upper_bound": 1806336
+    }
+  ],
+  "einsum_calls": [
+    {
+      "equation": "b k d l, k c d -> b k c l",
+      "shapes": [
+        [
+          1,
+          4,
+          64,
+          3136
+        ],
+        [
+          4,
+          34,
+          64
+        ]
+      ],
+      "flops": 54591488
+    },
+    {
+      "equation": "b k r l, k d r -> b k d l",
+      "shapes": [
+        [
+          1,
+          4,
+          2,
+          3136
+        ],
+        [
+          4,
+          64,
+          2
+        ]
+      ],
+      "flops": 3211264
+    },
+    {
+      "equation": "b k d l, k c d -> b k c l",
+      "shapes": [
+        [
+          1,
+          4,
+          256,
+          196
+        ],
+        [
+          4,
+          40,
+          256
+        ]
+      ],
+      "flops": 16056320
+    },
+    {
+      "equation": "b k r l, k d r -> b k d l",
+      "shapes": [
+        [
+          1,
+          4,
+          8,
+          196
+        ],
+        [
+          4,
+          256,
+          8
+        ]
+      ],
+      "flops": 3211264
+    },
+    {
+      "equation": "b k d l, k c d -> b k c l",
+      "shapes": [
+        [
+          1,
+          4,
+          256,
+          196
+        ],
+        [
+          4,
+          40,
+          256
+        ]
+      ],
+      "flops": 16056320
+    },
+    {
+      "equation": "b k r l, k d r -> b k d l",
+      "shapes": [
+        [
+          1,
+          4,
+          8,
+          196
+        ],
+        [
+          4,
+          256,
+          8
+        ]
+      ],
+      "flops": 3211264
+    },
+    {
+      "equation": "b k d l, k c d -> b k c l",
+      "shapes": [
+        [
+          1,
+          4,
+          256,
+          196
+        ],
+        [
+          4,
+          40,
+          256
+        ]
+      ],
+      "flops": 16056320
+    },
+    {
+      "equation": "b k r l, k d r -> b k d l",
+      "shapes": [
+        [
+          1,
+          4,
+          8,
+          196
+        ],
+        [
+          4,
+          256,
+          8
+        ]
+      ],
+      "flops": 3211264
+    },
+    {
+      "equation": "b k d l, k c d -> b k c l",
+      "shapes": [
+        [
+          1,
+          4,
+          512,
+          49
+        ],
+        [
+          4,
+          48,
+          512
+        ]
+      ],
+      "flops": 9633792
+    },
+    {
+      "equation": "b k r l, k d r -> b k d l",
+      "shapes": [
+        [
+          1,
+          4,
+          16,
+          49
+        ],
+        [
+          4,
+          512,
+          16
+        ]
+      ],
+      "flops": 3211264
+    }
+  ],
+  "unregistered_leaf_module_types": [
+    "timm.layers.drop.DropPath",
+    "torch.nn.modules.activation.GELU",
+    "torch.nn.modules.activation.SiLU",
+    "torch.nn.modules.linear.Identity"
+  ],
+  "finite_forward": true,
+  "scope": "full registered task model; paired CD encoders counted twice, shared parameters once"
+}

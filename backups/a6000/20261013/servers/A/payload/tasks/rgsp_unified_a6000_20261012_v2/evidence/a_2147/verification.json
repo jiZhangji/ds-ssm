@@ -1,0 +1,506 @@
+{
+  "copied_files": [
+    {
+      "path": "lanes/a0/jobs/farmland-full/probe/protocol.json",
+      "sha256": "54667b16d5ec2569ddc50dab33a709cf73a01bd17b167d12d18a1c9b90a4c101"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-full/probe/result.json",
+      "sha256": "48cd41deab29d839f85e79fe41ebc394ec36b233679d68d3be483a729cd06850"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-full/run0/completion.json",
+      "sha256": "ab59424d4009c221527673816715101ddb89bc499ed4107aeaba8785e3ce087b"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-full/run0/progress.json",
+      "sha256": "7b1a362c473a34fe24695f2dc5687cc1090e7dda58752af6382f9ad46d043f9b"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-full/run0/protocol.json",
+      "sha256": "54667b16d5ec2569ddc50dab33a709cf73a01bd17b167d12d18a1c9b90a4c101"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-full/run0/result.json",
+      "sha256": "a2f82c2ae5965b7968a75fa6bb9cb0db8f22149c665444d2530b71744a4c0770"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-full/run0/test.json",
+      "sha256": "c7b1aeb626294fba8498a80893a4e94e0625dce914d66b0438e2b8c879d14ea3"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-matched075/probe/protocol.json",
+      "sha256": "ed06d3e0526eb4b153be4c2ad44f3a62e87a0d5ddb42ba11d56bc4b568b69d4a"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-matched075/probe/result.json",
+      "sha256": "94e21635142be7a92ce5fcda201f75c25959ededa005be85823c10881ce9b224"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-matched075/run0/completion.json",
+      "sha256": "23b380ef94c70971bbb2619907b2fe6a2591b300e8740e2bd2cd6498c62d7c52"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-matched075/run0/progress.json",
+      "sha256": "e09cea806f8809e16328664ec95150e5a50c87c08cd0c8c4a8a89083f67adfc0"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-matched075/run0/protocol.json",
+      "sha256": "ed06d3e0526eb4b153be4c2ad44f3a62e87a0d5ddb42ba11d56bc4b568b69d4a"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-matched075/run0/result.json",
+      "sha256": "3990566919c89952d03caec4935dfa17194cf3da5307d35573e2a7e14f1e7554"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-matched075/run0/test.json",
+      "sha256": "0e8f565dd1209959330123502bb04ed0c0b4c499e7c2d75ad1146da3a67ff9d2"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-original/probe/protocol.json",
+      "sha256": "84f13a43dcdd72f1edef2823771c570d58254ceb64ecf9d3ba179881f01bd5a6"
+    },
+    {
+      "path": "lanes/a0/jobs/farmland-original/probe/result.json",
+      "sha256": "82878ac9782cb46176344074526669fa9db088a8cc032984771d26c962fb7f45"
+    },
+    {
+      "path": "lanes/a0/jobs/ottawa-full/probe/protocol.json",
+      "sha256": "c11a7d1d1ed1bed4488aeca7b46fd883fa27314cca28403486e2a3525951389f"
+    },
+    {
+      "path": "lanes/a0/jobs/ottawa-full/probe/result.json",
+      "sha256": "43d8504fb9829733422bac7e7a41ab04919c935d9c8475480fc6c1b5748e9aa0"
+    },
+    {
+      "path": "lanes/a0/jobs/ottawa-matched075/probe/protocol.json",
+      "sha256": "f24bfe68061364360857a16704d24abf8bf15013bf0c6d9477a4700b48a76162"
+    },
+    {
+      "path": "lanes/a0/jobs/ottawa-matched075/probe/result.json",
+      "sha256": "61233ead0e34626e95ee687a540fcd3f595299edc5b90fcb6355d6dc27fb5558"
+    },
+    {
+      "path": "lanes/a0/jobs/ottawa-matched075/run0/progress.json",
+      "sha256": "5100a6a862fdd4456cd38bf5574a96518557a10a5928d06e64947374b681a254"
+    },
+    {
+      "path": "lanes/a0/jobs/ottawa-matched075/run0/protocol.json",
+      "sha256": "f24bfe68061364360857a16704d24abf8bf15013bf0c6d9477a4700b48a76162"
+    },
+    {
+      "path": "lanes/a0/jobs/ottawa-original/probe/protocol.json",
+      "sha256": "e534fabf7a3f966e88d7520dd13f235cdd56f18c083eadf47a622ec66a94d478"
+    },
+    {
+      "path": "lanes/a0/jobs/ottawa-original/probe/result.json",
+      "sha256": "81d71086981ff88964d7db7c494a7ff70e03d7972788b4c01950178db2452713"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-full/probe/protocol.json",
+      "sha256": "c241026a6bdd51e2aa1731afa7059961381f134e05b00466d1c7e64a23677b6a"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-full/probe/result.json",
+      "sha256": "cca7f08e611fa33a4cbddb0e965144117e4549e8452abbbe9c395c5335d11a17"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-full/run0/completion.json",
+      "sha256": "7823167a7a0f8b6d4f8563b6c8027c500e1d33b0e44d04bde71eec68e684f562"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-full/run0/progress.json",
+      "sha256": "0c44093d1e79c7d5751d84b886937e41dcd3db6d4617ea8f732860991febaccc"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-full/run0/protocol.json",
+      "sha256": "c241026a6bdd51e2aa1731afa7059961381f134e05b00466d1c7e64a23677b6a"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-full/run0/result.json",
+      "sha256": "07e5dcfd805f48f4c458bedf53ac76f373c94de0880ad1f736c90fa21f368e9e"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-full/run0/test.json",
+      "sha256": "ee0e9ed7ec1e7216319274cc6c94f4c23c91d18453999e83be91be869ea37f9d"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-matched075/probe/protocol.json",
+      "sha256": "17cb46a603b381eb51e3e8b037a17dbfb9257479287f3e3cb7dd35e033ca4a57"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-matched075/probe/result.json",
+      "sha256": "04c573b98e510a63e2f6711685d22b68e164724e778a90e2e13a22d6a8a06660"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-matched075/run0/completion.json",
+      "sha256": "73c59a5df5b05e0b577bbf6236ec057985893f22f14213c4a01c50f3cce74a30"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-matched075/run0/progress.json",
+      "sha256": "8258b2e144ed6304187a7755c8cb88a78926594ee7b9abb38e41e9d0d4821090"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-matched075/run0/protocol.json",
+      "sha256": "17cb46a603b381eb51e3e8b037a17dbfb9257479287f3e3cb7dd35e033ca4a57"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-matched075/run0/result.json",
+      "sha256": "9b3c19713e3f9c6c7160218d71d0d7f7bb17c7ee8bb3dc385c5f913b1718ea47"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-matched075/run0/test.json",
+      "sha256": "434ed11b0f0644bb3c213b0203ff45c5d210fcc55ca1ef47c87c3fe1ad6b49ba"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-original/probe/protocol.json",
+      "sha256": "c77f6f918a0f67ba249436c576623c51a4083baee12c073724b30cf2bd3ab1d7"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-original/probe/result.json",
+      "sha256": "a45122bd8ac73bb04a2e919a86efd51ba7b0d947323877d8338067e0c757a6ff"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-original/run0/completion.json",
+      "sha256": "73432cb514b1f8a9fe06584bb76b1f25e5b9d01499f04d79be15d39194763a87"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-original/run0/progress.json",
+      "sha256": "d4e6aa74a10c9408ac48c884804dd52cca85ae9c821c1a5e6af3a852b1f043b7"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-original/run0/protocol.json",
+      "sha256": "c77f6f918a0f67ba249436c576623c51a4083baee12c073724b30cf2bd3ab1d7"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-original/run0/result.json",
+      "sha256": "d93f5426baadc753473c98087f47caf0ba8f43a0bd8e43255c0f4d3d10711a6e"
+    },
+    {
+      "path": "lanes/a0/jobs/yellow_river-original/run0/test.json",
+      "sha256": "eb264cbf3ba5bbf68a02a41788b4964f66460532976495797e4a8d20b0127c6a"
+    },
+    {
+      "path": "lanes/a0/state.json",
+      "sha256": "08bb10278a13d62efa54d90cdc19baab6938f20e39a4207de035ae1230b7f5c7"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/farmland-full/probe/protocol.json",
+      "sha256": "54667b16d5ec2569ddc50dab33a709cf73a01bd17b167d12d18a1c9b90a4c101"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/farmland-full/probe/result.json",
+      "sha256": "b5a68720023ce5c902cdd6eb1cb1092476bd6e51faba738176bc0ddecefaf5d1"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/farmland-matched075/probe/protocol.json",
+      "sha256": "ed06d3e0526eb4b153be4c2ad44f3a62e87a0d5ddb42ba11d56bc4b568b69d4a"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/farmland-matched075/probe/result.json",
+      "sha256": "9083f2b277304065b4a176c838069a4ffd5f2934634897ef83f0be8e14d6199e"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/farmland-original/probe/protocol.json",
+      "sha256": "84f13a43dcdd72f1edef2823771c570d58254ceb64ecf9d3ba179881f01bd5a6"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/farmland-original/probe/result.json",
+      "sha256": "aa26399f45b92a1c6929e157a6c4370096d573bb137a220ba565b19c3a18246c"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/ottawa-full/probe/protocol.json",
+      "sha256": "c11a7d1d1ed1bed4488aeca7b46fd883fa27314cca28403486e2a3525951389f"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/ottawa-full/probe/result.json",
+      "sha256": "4ab7ba36b15afcc393f573cc9e0e6e2559d45a248c60ce13cf9b33627f54beab"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/ottawa-matched075/probe/protocol.json",
+      "sha256": "f24bfe68061364360857a16704d24abf8bf15013bf0c6d9477a4700b48a76162"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/ottawa-matched075/probe/result.json",
+      "sha256": "70b1449f2b4a4b923d4a45839b6f9975d06b87b0dc49c51d27ca3623ec00d2f3"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/ottawa-original/probe/protocol.json",
+      "sha256": "e534fabf7a3f966e88d7520dd13f235cdd56f18c083eadf47a622ec66a94d478"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/ottawa-original/probe/result.json",
+      "sha256": "4960e6273aff7a863f0bd2c8b787713366bd564f247d09d2c0863f1370b30fe8"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/yellow_river-full/probe/protocol.json",
+      "sha256": "c241026a6bdd51e2aa1731afa7059961381f134e05b00466d1c7e64a23677b6a"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/yellow_river-full/probe/result.json",
+      "sha256": "268dfc08545014fba61999881de0698a97e277c2d832ea0a76f6eb78f9658071"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/yellow_river-matched075/probe/protocol.json",
+      "sha256": "17cb46a603b381eb51e3e8b037a17dbfb9257479287f3e3cb7dd35e033ca4a57"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/yellow_river-matched075/probe/result.json",
+      "sha256": "be74c8647d5a166f257f16a318eff38db0a8d0f9519988f5b11a2c325c7410f5"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/yellow_river-original/probe/protocol.json",
+      "sha256": "c77f6f918a0f67ba249436c576623c51a4083baee12c073724b30cf2bd3ab1d7"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/jobs/yellow_river-original/probe/result.json",
+      "sha256": "8c6fac4f41a9997ebe7e40054f31ea7041164efcf511be4dab404931e829391d"
+    },
+    {
+      "path": "qa_smoke_01/lanes/a0/state.json",
+      "sha256": "362f84ce1e5eb1d7115aaf71af99badfa9b024a6a096963a6b983fd136ac6ec2"
+    },
+    {
+      "path": "plans/a0.json",
+      "sha256": "5abd697eefafeb82f5e78b765bb3a0e99d0f0385834d86d53a76c51795f21c0a"
+    },
+    {
+      "path": "plans/a0.production.json",
+      "sha256": "717c3df6340403c243fb56610bc2fbbb4c8adc5c673191448cfdc7a03b4239d3"
+    },
+    {
+      "path": "launch/a0.json",
+      "sha256": "dcc9c09c9896db35af83aa0962f1c3e9802f35ef13d7f44b8f01e1e15baba697"
+    },
+    {
+      "path": "launch/a0.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "launch/a0.probe01.json",
+      "sha256": "73d89cc313c413f7b4e779ba8361659dcfde5677ac55158531f92bdb5a85e1e3"
+    },
+    {
+      "path": "launch/a0.probe01.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "dispatch/a0.admission.json",
+      "sha256": "962e9662f2a6e39098c90c52b56ac54df0a78fc1e5e6d0bd46bb9791d1190969"
+    },
+    {
+      "path": "dispatch/a0.launch.json",
+      "sha256": "9c85e70352e5c0674987cc662663e635fce6b5de37ff4c80eab27589df901058"
+    },
+    {
+      "path": "dispatch/a0.log",
+      "sha256": "9773629d615e78ed0bee0ee74e666ba680f44d90edaa08b1cbe9169fcf980cfc"
+    },
+    {
+      "path": "dispatch/a0.state.json",
+      "sha256": "fea15832593131437d4595587e71b6a04040e7c03dcbee1c73243f0a2921f90c"
+    },
+    {
+      "path": "taskdata/Farmland/audit.json",
+      "sha256": "2afec04e064386ca18d471a457b2f95618282f11a0ea2f1091f3073c4c996a32"
+    },
+    {
+      "path": "taskdata/Farmland/readiness.json",
+      "sha256": "91b59c3d96d1f66e9d235406076d57419c18d85bf8c0f212df70732fcad9a573"
+    },
+    {
+      "path": "taskdata/Ottawa/audit.json",
+      "sha256": "8f189848a27a86ae25ea66b251c177d1e54dcad80532d57049710c77912564c8"
+    },
+    {
+      "path": "taskdata/Ottawa/readiness.json",
+      "sha256": "479345d24cefd04177112300d799bd14ddab094c7ce4b225ec34a63e1e1265b0"
+    },
+    {
+      "path": "taskdata/Yellow_River/audit.json",
+      "sha256": "1fc527e2f365518375b4e860d4fc02946fb9614ba71dfb2d5a43db51b027a646"
+    },
+    {
+      "path": "taskdata/Yellow_River/readiness.json",
+      "sha256": "a46cf6b1ddf301668ad1348df0bd11db3be5107b972639d03ed0c377714f48af"
+    }
+  ],
+  "hostname": "powerleader-PT6620W",
+  "lanes": [
+    {
+      "lane": "a0",
+      "status": "RUNNING",
+      "updated_at": 1791812674.430918
+    }
+  ],
+  "scope": "Sequential snapshot; only terminal state-marked results verified; weights remain on server.",
+  "snapshot": "a_2147",
+  "time": "2026-10-12T13:46:57.407827+00:00",
+  "verified_complete_results": [
+    {
+      "best_epoch": 92,
+      "dataset": "Farmland",
+      "elapsed_seconds": 124.23629669501679,
+      "epochs": 122,
+      "id": "farmland-full",
+      "lane": "a0",
+      "method": "Full",
+      "metric_unit": null,
+      "params": 3717631,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-full/run0/best.pt",
+        "checkpoint_sha256": "6b6ac5d8cdd5de85f4bafdd8b59fa663fceaf11c1a5df15f9f67934ba1e61fb5",
+        "completion_sha256": "ab59424d4009c221527673816715101ddb89bc499ed4107aeaba8785e3ce087b",
+        "metrics": {
+          "evaluated_native_unique_pixels": 9216,
+          "f1": 0.22384428223844285,
+          "fn": 319,
+          "fp": 0,
+          "iou": 0.12602739726027398,
+          "kappa": 0.21690183464049329,
+          "oa": 0.9653862847222222,
+          "precision": 1.0,
+          "recall": 0.12602739726027398,
+          "tn": 8851,
+          "tp": 46
+        },
+        "protocol_sha256": "24f609da2f3144dad63d546acc98cb9621042d84476e7915daedd0a754fabe76",
+        "result_sha256": "a2f82c2ae5965b7968a75fa6bb9cb0db8f22149c665444d2530b71744a4c0770"
+      }
+    },
+    {
+      "best_epoch": 15,
+      "dataset": "Farmland",
+      "elapsed_seconds": 46.250968163018115,
+      "epochs": 45,
+      "id": "farmland-matched075",
+      "lane": "a0",
+      "method": "Matched075",
+      "metric_unit": null,
+      "params": 3715097,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-matched075/run0/best.pt",
+        "checkpoint_sha256": "4f966b14b55bf4892bad1fcebf2dd5eec091fbc90080cefb39edcadcf6697fdc",
+        "completion_sha256": "23b380ef94c70971bbb2619907b2fe6a2591b300e8740e2bd2cd6498c62d7c52",
+        "metrics": {
+          "evaluated_native_unique_pixels": 9216,
+          "f1": 0.5049701789264415,
+          "fn": 238,
+          "fp": 11,
+          "iou": 0.3377659574468085,
+          "kappa": 0.49397341688078433,
+          "oa": 0.9729817708333334,
+          "precision": 0.9202898550724637,
+          "recall": 0.34794520547945207,
+          "tn": 8840,
+          "tp": 127
+        },
+        "protocol_sha256": "cbf852242e1fde515c9516c90476f294d0c035d926f2aa1a94f413cea0bdb943",
+        "result_sha256": "3990566919c89952d03caec4935dfa17194cf3da5307d35573e2a7e14f1e7554"
+      }
+    },
+    {
+      "best_epoch": 78,
+      "dataset": "Yellow_River",
+      "elapsed_seconds": 103.9830757289892,
+      "epochs": 108,
+      "id": "yellow_river-full",
+      "lane": "a0",
+      "method": "Full",
+      "metric_unit": null,
+      "params": 3717631,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-full/run0/best.pt",
+        "checkpoint_sha256": "97eaf5d2614e2964ec127cae1c7e4729feb88484f621d29d8a9caa5e3ba535c0",
+        "completion_sha256": "7823167a7a0f8b6d4f8563b6c8027c500e1d33b0e44d04bde71eec68e684f562",
+        "metrics": {
+          "evaluated_native_unique_pixels": 9216,
+          "f1": 0.8713889988128215,
+          "fn": 225,
+          "fp": 100,
+          "iou": 0.7720897615708275,
+          "kappa": 0.8510130930601112,
+          "oa": 0.9647352430555556,
+          "precision": 0.9167360532889259,
+          "recall": 0.830316742081448,
+          "tn": 7790,
+          "tp": 1101
+        },
+        "protocol_sha256": "1abdd0511054b5364e6a0c98d87f83e1dafe3e5cbd251175498ed129eb07d038",
+        "result_sha256": "07e5dcfd805f48f4c458bedf53ac76f373c94de0880ad1f736c90fa21f368e9e"
+      }
+    },
+    {
+      "best_epoch": 68,
+      "dataset": "Yellow_River",
+      "elapsed_seconds": 93.3140606689849,
+      "epochs": 98,
+      "id": "yellow_river-matched075",
+      "lane": "a0",
+      "method": "Matched075",
+      "metric_unit": null,
+      "params": 3715097,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-matched075/run0/best.pt",
+        "checkpoint_sha256": "fed5c8dd17667e321c9f8ac57c190de8e18075f1b1dd0c282c8b644f480775f4",
+        "completion_sha256": "73c59a5df5b05e0b577bbf6236ec057985893f22f14213c4a01c50f3cce74a30",
+        "metrics": {
+          "evaluated_native_unique_pixels": 9216,
+          "f1": 0.8574840764331211,
+          "fn": 249,
+          "fp": 109,
+          "iou": 0.7505226480836237,
+          "kappa": 0.8350774693931412,
+          "oa": 0.9611545138888888,
+          "precision": 0.9080944350758853,
+          "recall": 0.8122171945701357,
+          "tn": 7781,
+          "tp": 1077
+        },
+        "protocol_sha256": "7acdbd746951f86dfb53f615ed5c36957e2a47f029fafa1ea08e28bb0c9d84d8",
+        "result_sha256": "9b3c19713e3f9c6c7160218d71d0d7f7bb17c7ee8bb3dc385c5f913b1718ea47"
+      }
+    },
+    {
+      "best_epoch": 50,
+      "dataset": "Yellow_River",
+      "elapsed_seconds": 84.04360852198442,
+      "epochs": 80,
+      "id": "yellow_river-original",
+      "lane": "a0",
+      "method": "Original",
+      "metric_unit": null,
+      "params": 3782737,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-original/run0/best.pt",
+        "checkpoint_sha256": "ff3aea2ae01bddef3df6d2e17be776436385a2476899807ef27981952ed6a941",
+        "completion_sha256": "73432cb514b1f8a9fe06584bb76b1f25e5b9d01499f04d79be15d39194763a87",
+        "metrics": {
+          "evaluated_native_unique_pixels": 9216,
+          "f1": 0.8248394004282655,
+          "fn": 363,
+          "fp": 46,
+          "iou": 0.7018950437317785,
+          "kappa": 0.7999657388343944,
+          "oa": 0.9556206597222222,
+          "precision": 0.9544103072348861,
+          "recall": 0.7262443438914027,
+          "tn": 7844,
+          "tp": 963
+        },
+        "protocol_sha256": "8781cae2f9aa0e24f4179dee8a0e059ba082a9728e251f632b51d2d26ca7b1b0",
+        "result_sha256": "d93f5426baadc753473c98087f47caf0ba8f43a0bd8e43255c0f4d3d10711a6e"
+      }
+    }
+  ]
+}

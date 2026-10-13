@@ -1,0 +1,29 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/train_complete.json",
+      "sha256": "afd77238a6113b8bf50180d7de98ac8df254b125eefb0aa7da91e9436306eaab",
+      "source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed0_local_energy/train_complete.json"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/eval_test.json",
+      "sha256": "1ceb872c9335a38a11f84e15cae5f76fd8f06edc23ec78c4f28211bf300c7506",
+      "source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed0_local_energy/eval_test.json"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/weights/best.pt",
+      "sha256": "ac60ad4c7bcbdf99c59db2596671a8db5ce591e1437575d114eccc72a915af29",
+      "source": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed0_local_energy/weights/best.pt"
+    }
+  ],
+  "continuous_epochs_verified": 150,
+  "limitations": "Uninterrupted legacy-code training preserved; isolated frozen-code test after parent-only scheduler handoff. Not a newly trained run.",
+  "origin": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed0_local_energy",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "source_completion": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f0.complete.json",
+    "sha256": "f0ab41496ada918d54783a77bf528060517d7bbeb0de529e7f63e22b6110b85e"
+  },
+  "status": "verified",
+  "trial_sha256": "67798b00fec728b408b4f893dc00a36a17160cc0a74e1f7518c291afe0e0734f"
+}

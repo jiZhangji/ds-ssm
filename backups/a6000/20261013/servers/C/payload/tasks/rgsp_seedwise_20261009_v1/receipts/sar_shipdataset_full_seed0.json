@@ -1,0 +1,56 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_full_seed0/provenance.json",
+      "sha256": "a4ab9487973f28558a6dccbb1cf00b2afe6b7d5cd36d2fbacf23702535fe3be9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_full_seed0/train_complete.json",
+      "sha256": "1145c0bd25f651e61d5d10b340f0fd58da3f25276e1287c3de04b7e7a745a3f8"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_full_seed0/eval_test.json",
+      "sha256": "8394f6ccf52260cb7fc246cd31d15a0d9a9d5c5e9b9f706ae22bafe0d32a9640"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_full_seed0/evaluation_complete.json",
+      "sha256": "051dee1ec83bb7a08fc20fb6eccee94e4bb55f5fefcb08ba9db264f712f24bb0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_full_seed0/weights/best.pt",
+      "sha256": "baba5a41c048f98e94f1e8f0bfcc48cc3e50a0caf226d8fb4940528698b2a7e2"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_full_seed0/weights/raw_fp32_last.pt",
+      "sha256": "485000edc27cf91d4257e00cde45670ece68542fcd45d2e0b938bf1bf0cb9621"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_full_seed0/controls_by_epoch.jsonl",
+      "sha256": "a17b2a90691cf87fa81aa68eaf1437a67922c861c1354cdc627282f6f4945a27"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_full_seed0/trial_complete.json",
+      "sha256": "b00dbebb07983376533f1fa02e1118a20597e7b40d01f514a4c8624d7e0a717c"
+    }
+  ],
+  "details": {
+    "kind": "command",
+    "overall": {
+      "ap50": 0.9525718701781106,
+      "ap50_95": 0.5116952805576359,
+      "ap75": 0.48526129960909076,
+      "precision": 0.917575132437425,
+      "recall": 0.9083125330764642
+    },
+    "resumed": false,
+    "runner_kind": "deferred_detection",
+    "smoke_only": false
+  },
+  "finished_utc": "2026-10-11T10:09:47.891042+00:00",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "sar_shipdataset_full_seed0",
+  "trial_sha256": "fcf8470b309aa621be37edf6ebc865c91b0f939292f0b4dc42e3723125e88a4b"
+}

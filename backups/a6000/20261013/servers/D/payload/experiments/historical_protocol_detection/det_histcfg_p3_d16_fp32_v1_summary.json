@@ -1,0 +1,19 @@
+{
+  "experiment_id": "det_histcfg_p3_d16_fp32_v1",
+  "records": [
+    {
+      "dataset": "SSDD",
+      "experiment": "det_histcfg_p3_d16_fp32_v1_ssdd_full_p3",
+      "variant": "full",
+      "placement": "p3",
+      "state_dim": 16,
+      "precision": 0.9730181885032014,
+      "recall": 0.9542124542124543,
+      "ap50": 0.9854859585551101,
+      "ap75": 0.8555155066678402,
+      "ap50_95": 0.7226077921400423,
+      "inference_ms": 7.099180385984224,
+      "weights": "/home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/best.pt"
+    }
+  ]
+}

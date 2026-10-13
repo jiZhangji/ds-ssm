@@ -1,0 +1,27 @@
+{
+  "best_epoch": 35,
+  "best_score": 0.9451476793248945,
+  "epoch": 65,
+  "epoch_seconds": 0.8778233470511623,
+  "lr": 0.00011648979591836735,
+  "microbatches": 7,
+  "optimizer_updates": 130,
+  "samples": 100,
+  "threshold": 0.25,
+  "timestamp_utc": "2026-10-12T14:27:50.388005+00:00",
+  "train_loss": 0.6715661334991455,
+  "validation": {
+    "evaluated_native_unique_pixels": 9216,
+    "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+    "f1": 0.9261932479627474,
+    "fn": 145,
+    "fp": 172,
+    "iou": 0.8625325238508239,
+    "kappa": 0.9037709754274534,
+    "oa": 0.9656032986111112,
+    "precision": 0.9204072188801481,
+    "recall": 0.9320524835988754,
+    "tn": 6910,
+    "tp": 1989
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "independent_test": false,
+  "protocol_group": "old300epoch_TEST_as_VAL",
+  "results": [
+    {
+      "audit_scope": "Live checkpoint/data hashes and300-row ledger/CSV; no new model evaluation.",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/ssdd_cnn_yolov8n_seed0/run/weights/best.pt",
+      "checkpoint_sha256": "263192d557642b47d8d316d06dfe8a7ce54819327b5645d0113861f135641d41",
+      "hashes": {
+        "data_manifest.json": "8c8db821f87451251bc670b4b69f1a70a55ceeb1ffd8ba91f7f6bf70447eef05",
+        "optimizer_ledger.jsonl": "e6d5aa60f6fbde089b2db6ef79af94fb5f946110d5ed41fe1a1669dc4e80f5e3",
+        "protocol.json": "97c6ec33a0b8e2424c2b812f4404ac874d79d312a699d02fa2e6ea37a447ac3d",
+        "result.json": "11f877c9855b16e953c12056c80c190ea2fb0c51d6f94c7667291b08d5876ef3",
+        "run/results.csv": "305c83e1aa443b3fabc9ecff5411906745c3a4beb590e44576a02821453e280a",
+        "runtime_audit.json": "a45c3e1744bf1666ed22f0e03eb73ae9505a3c0d9085284c5cd5b4a25baf7023"
+      },
+      "producer_fp32_reload_attestation": true,
+      "result": {
+        "AP50": 95.44687563663868,
+        "AP50_95": 68.18355716324238,
+        "AP75": 80.97720265860197,
+        "best_epoch": 168,
+        "best_sha256": "263192d557642b47d8d316d06dfe8a7ce54819327b5645d0113861f135641d41",
+        "epoch": 300,
+        "optimizer_updates": 8700,
+        "paper_eligible": true,
+        "precision": 95.00048191724925,
+        "protocol": {
+          "accumulation": 8,
+          "augmentation": "letterbox640; horizontal+vertical flip p0.5; all other generic augmentations off",
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "code_sha256": "d01faeb54cd93935fe795d8d1cf84263e9c3b2c6212fcef950327148940b010e",
+          "data_manifest_sha256": "8c8db821f87451251bc670b4b69f1a70a55ceeb1ffd8ba91f7f6bf70447eef05",
+          "detection_loss": {
+            "box": 7.5,
+            "cls": 0.5,
+            "dfl": 1.5
+          },
+          "early_stopping": false,
+          "effective_batch": 32,
+          "ema": "original ModelEMA policy",
+          "epochs": 300,
+          "eps": 1e-08,
+          "evaluation": {
+            "P_R": "maximum-F1 curve summary; not fixed deployment threshold",
+            "conf": 0.001,
+            "iou_nms": 0.7,
+            "max_det": 300
+          },
+          "gradient_clip_l2": 10.0,
+          "identity": {
+            "compatibility_applied": true,
+            "cuda_runtime_count": 1,
+            "cuda_visible_devices": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+            "gpu_mask_changed": false,
+            "hostname": "a6000-d",
+            "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+            "physical_gpu_index": 0,
+            "physical_gpu_name": "NVIDIA RTX A6000",
+            "physical_gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+            "reported_count_after": 1,
+            "reported_count_before": 0,
+            "torch": "1.13.1+cu117",
+            "torch_installation_modified": false
+          },
+          "input": [
+            3,
+            640,
+            640
+          ],
+          "loss_normalization": "native summed microbatch loss; divide accumulated gradients by actual samples",
+          "lr0": 0.001,
+          "module_warmup": 0,
+          "optimizer": "AdamW",
+          "physical_batch": 4,
+          "precision": "FP32 training/checkpoints/evaluation; AMP and TF32 off",
+          "schedule": "5 full epochs linear warmup at optimizer updates, then cosine to lr0*0.01",
+          "schema": "rgsp-ssdd-table-completion-v1",
+          "seed": 0,
+          "selection": "EMA best 0.1*AP50+0.9*AP50:95; earliest tie",
+          "smoke_only": false,
+          "source_manifest_sha256": "149133bdfefb969279040921719bfb79b5d307e0a8c350d9f8214867b465c502",
+          "split": "928 train / official232 TEST-as-VAL; no independent test claim",
+          "variant": "cnn_yolov8n",
+          "weight_decay": {
+            "bias_and_norm": 0.0,
+            "weights": 0.0005
+          }
+        },
+        "recall": 89.01098901098901,
+        "selection_warning": "Official test used for repeated validation/selection; not independent test",
+        "serialized_best_controls": [],
+        "serialized_best_fp32_verified": true,
+        "status": "TRAINING_COMPLETE"
+      },
+      "variant": "cnn_yolov8n"
+    }
+  ]
+}

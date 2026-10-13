@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/prepare_cross_task_v2.py", line 355, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/prepare_cross_task_v2.py", line 349, in main
+    report[dataset] = functions[dataset]()
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/prepare_cross_task_v2.py", line 336, in <lambda>
+    "AIR-SARShip-2.0": lambda: prepare_airship(raw, output / "detection" / "AIR_SARShip_2", args.seed),
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/prepare_cross_task_v2.py", line 145, in prepare_airship
+    data = extract_once(raw_root / "AIR-SARShip-2.0-data.zip", output.parent / "_raw_airship_data")
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/prepare_cross_task_v2.py", line 30, in extract_once
+    with zipfile.ZipFile(archive) as handle:
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/zipfile.py", line 1272, in __init__
+    self._RealGetContents()
+  File "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/zipfile.py", line 1339, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file

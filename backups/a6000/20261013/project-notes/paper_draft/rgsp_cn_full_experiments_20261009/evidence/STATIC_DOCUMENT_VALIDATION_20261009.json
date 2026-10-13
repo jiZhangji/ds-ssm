@@ -1,0 +1,64 @@
+{
+  "status": "STATIC_PASS_RUNTIME_PENDING",
+  "recorded_at": "2026-10-09T19:53:26.0616186+08:00",
+  "scope": "Local file-only checks and source/visual review; no fresh Python verifier, TeX compiler or model run.",
+  "pdf_sha256": "6ee5f38a6fb1af0d1f98d23ca35fb14c011db23cbe0290f77817f17f39871cfb",
+  "inherited_pdf_pages": 14,
+  "inherited_document_validation": {
+    "source_thread_id": "01a11ebd-72fd-7411-a94c-e563d4180aba",
+    "status": "PASS",
+    "same_pdf_bytes": true
+  },
+  "archive": {
+    "zip_sha256": "d8458610b2329c279e372b920a13e11bc3706d74e5284ae460121aac44a94699",
+    "entries": 27,
+    "all_bytes_identical": true
+  },
+  "legacy_tables": {
+    "sar_acd": "IDENTICAL_NUMERIC_SEQUENCE",
+    "sample": "IDENTICAL_NUMERIC_SEQUENCE",
+    "ssdd": "IDENTICAL_NUMERIC_SEQUENCE",
+    "sar_ship": "IDENTICAL_NUMERIC_SEQUENCE",
+    "sadd": "IDENTICAL_NUMERIC_SEQUENCE",
+    "air_sarship": "IDENTICAL_NUMERIC_SEQUENCE",
+    "openearthmap_sar": "IDENTICAL_NUMERIC_SEQUENCE",
+    "ottawa": "IDENTICAL_NUMERIC_SEQUENCE",
+    "yellow_river": "IDENTICAL_NUMERIC_SEQUENCE"
+  },
+  "compile_inputs": {
+    "figures/fig1_motivation_20261009.pdf": "41596b6cff2e3aabfdcba24f685691d38d09560d4e471a554b806c46f02a608f",
+    "figures/fig2_architecture_20261009.pdf": "f62a2704abd07707b1b7974cdcc25aa80c81829ce42ba9800491de720be4a3d7",
+    "IEEEtran.cls": "da751920a317ed318b7b5cd7fa585a6cc7d28502d457856382e9be24b10a3bd7",
+    "main.tex": "b6dd4049cb72236156731c99af25e86e377fc3dbb7be5f672c924d1da000ce1c",
+    "sections/ablation.tex": "f2b821cddca6af8e45524c64d323817bffd47051eb0499517169b8b0f71cf403",
+    "sections/experimental_settings.tex": "f713c88b26a26af69915d446ccc47db6d34f3eb9efc51d2e3d28945adea76841",
+    "sections/limitations.tex": "d00045872dd8c8fdcedd8a2c9b1f6d744a7945971a907be5d91dbabbc5d1e152",
+    "sections/sadd_individual.tex": "7d5fda4baeff0ae21f36cf3c0100ff58f52e0cd80e0521434806420599e7c10f",
+    "sections/sadd_paired.tex": "075509c64a0169fefa250520a7374845954ada9d73ddb8e0457f00f32586c132",
+    "sections/sadd_summary.tex": "ca7a1ef88031396097a665faf1ff945d4e7331bba5c829d0a26ad79f831cc0d4",
+    "sections/ssdd_individual.tex": "da75888f80eb83cb7c0f18e313ad122a2c1dc09bed92102e5dc7e452b38d6ec7",
+    "sections/ssdd_paired.tex": "180cef9aeb6f9c1d963011565515073852f9922535cebf771a6da341c755513d",
+    "sections/ssdd_summary.tex": "29b0b92ac8c6742b80e9579679e5cc51f71bd722615253aeef93af0b2c7235f6"
+  },
+  "compile_inputs_unchanged": true,
+  "independent_static_content_review": {
+    "discrepancies": 0,
+    "summary_rows": 9,
+    "paired_comparisons": 12,
+    "ssdd_runs": 15,
+    "metric_cells": 135,
+    "sadd_runs": 12
+  },
+  "visual_review": {
+    "pages": 14,
+    "render_set": "rgsp_full_experiments_resume_20261009/final-01.png through final-14.png",
+    "blocking_layout_defects": 0
+  },
+  "runtime_verifier": "NOT_RUN_THIS_HANDOFF",
+  "roundtrip_compilation": "NOT_RUN_THIS_HANDOFF",
+  "blockers": [
+    "No existing TeX environment found on project servers",
+    "SCP and subsequent SSH connections timed out",
+    "Local execution fallback has not been authorized"
+  ]
+}

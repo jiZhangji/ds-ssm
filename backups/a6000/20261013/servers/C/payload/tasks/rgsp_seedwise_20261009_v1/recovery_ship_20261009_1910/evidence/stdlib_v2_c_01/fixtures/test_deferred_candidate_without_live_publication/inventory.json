@@ -1,0 +1,20 @@
+[
+  {
+    "image_sha256": "57a6b8974355f904e199b3cc589667dac90d2ba559513e7ca7ac52183042cf01",
+    "label_sha256": "7ff50fc25f752fdd6e6a1b6d262c2f509bdcc1896965d8b22956679599f3e05c",
+    "name": "fixture.jpg",
+    "split": "train"
+  },
+  {
+    "image_sha256": "ce176550f1596cf6fa60218d76dfe039962bb81b321efdce0dbb2c691353f829",
+    "label_sha256": "7ff50fc25f752fdd6e6a1b6d262c2f509bdcc1896965d8b22956679599f3e05c",
+    "name": "fixture.jpg",
+    "split": "val"
+  },
+  {
+    "image_sha256": "40307270bbbb94edcc7002b7a2407f9b79815bcb962fbeb7e66136619f370d2a",
+    "label_sha256": "7ff50fc25f752fdd6e6a1b6d262c2f509bdcc1896965d8b22956679599f3e05c",
+    "name": "fixture.jpg",
+    "split": "test"
+  }
+]

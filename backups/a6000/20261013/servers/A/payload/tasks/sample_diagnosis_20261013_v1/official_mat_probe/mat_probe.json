@@ -1,0 +1,236 @@
+{
+  "commit": "1bae4156afcba7ad9c9f2eb743ed20675ed14fb1",
+  "scope": "Two-file source format preflight, no model execution; not a full-dataset verification",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/benjaminlewis-afrl/SAMPLE_dataset_public/1bae4156afcba7ad9c9f2eb743ed20675ed14fb1/mat_files/synth/2s1/2s1_synth_A_elevDeg_015_azCenter_010_22_serial_b01.mat",
+      "filename": "2s1_synth_A_elevDeg_015_azCenter_010_22_serial_b01.mat",
+      "bytes": 526376,
+      "sha256": "02be1d0d45176583108d4377013bd657f16724d75b7d29e7a2a3e8ab98db9691",
+      "fields": {
+        "aligned": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "uint8"
+        },
+        "azimuth": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "bandwidth": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "int32"
+        },
+        "center_freq": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "complex_img": {
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "complex128",
+          "complex": true,
+          "finite": true,
+          "amplitude_min": 8.381522761319341e-05,
+          "amplitude_max": 1.3185724709734612,
+          "amplitude_mean": 0.01672143404699747
+        },
+        "complex_img_unshifted": {
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "complex128"
+        },
+        "elevation": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "explanation": {
+          "shape": [
+            1
+          ],
+          "dtype": "<U663"
+        },
+        "range_pixel_spacing": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "range_resolution": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "source_mstar_file": {
+          "shape": [
+            1
+          ],
+          "dtype": "<U107"
+        },
+        "target_name": {
+          "shape": [
+            1
+          ],
+          "dtype": "<U7"
+        },
+        "taylor_weights": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "int16"
+        },
+        "xrange_pixel_spacing": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "xrange_resolution": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/benjaminlewis-afrl/SAMPLE_dataset_public/1bae4156afcba7ad9c9f2eb743ed20675ed14fb1/mat_files/real/2s1/2s1_real_A_elevDeg_017_azCenter_010_22_serial_b01.mat",
+      "filename": "2s1_real_A_elevDeg_017_azCenter_010_22_serial_b01.mat",
+      "bytes": 636458,
+      "sha256": "5a83fe5682af10ef829b7334d05f6a57facbf0ea69f8d066bd42a6856fcff5d6",
+      "fields": {
+        "aligned": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "uint8"
+        },
+        "azimuth": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "bandwidth": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "int32"
+        },
+        "center_freq": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "complex_img": {
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "complex128",
+          "complex": true,
+          "finite": true,
+          "amplitude_min": 0.0,
+          "amplitude_max": 2.7216572761535645,
+          "amplitude_mean": 0.06061743213165016
+        },
+        "complex_img_unshifted": {
+          "shape": [
+            158,
+            158
+          ],
+          "dtype": "complex128"
+        },
+        "elevation": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "explanation": {
+          "shape": [
+            1
+          ],
+          "dtype": "<U663"
+        },
+        "range_pixel_spacing": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "range_resolution": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "source_mstar_file": {
+          "shape": [
+            1
+          ],
+          "dtype": "<U107"
+        },
+        "target_name": {
+          "shape": [
+            1
+          ],
+          "dtype": "<U7"
+        },
+        "taylor_weights": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "int16"
+        },
+        "xrange_pixel_spacing": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "xrange_resolution": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "epoch": 1,
+  "state_sha256": {
+    "ema": "9565fb255a89c6f2b038b7e973042e5d35e1ea9b80c2ad7158dd47dc33d2a973",
+    "model": "e705e45b13b9501ec046a180a0cb99f510a75c6e6dd8600caa8337b7dfdd1271",
+    "optimizer": "5e6ba45a1bad947c0580457ecb0d9ea6fab3e5adaacf67be240c33fddd2d954f",
+    "rng": "483e1c8ff65f303f2366ce3b2fd96bb8552d54111cabbf0ed25c587587ae4133",
+    "scaler": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "scheduler": "afea72f5eb73eb7ee831a9ccbbd16585c6c10df5fb776e0f6a359289e9b30e4d"
+  },
+  "status": "verified"
+}

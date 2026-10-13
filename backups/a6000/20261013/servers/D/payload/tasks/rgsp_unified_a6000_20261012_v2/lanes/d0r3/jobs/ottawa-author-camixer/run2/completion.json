@@ -1,0 +1,23 @@
+{
+  "status": "TRAINING_COMPLETE",
+  "method": "camixer",
+  "result_sha256": "731f10c38ed37a8df6bc6246abf14581b2d4f8a02ac27d20040535b14bc0fb4a",
+  "protocol_sha256": "f61264769573d5633cdae9daa4f52aebbebbf750f3070a6f1f4c7b7b5ff0c0a5",
+  "source_manifest": {
+    "author_models.py": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+    "run_cd_author.py": "e75db7e9e7a1f04ec5e1bff1f66860c702a873401ea83cb601a9d242033bc41d",
+    "source_registry.json": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a"
+  },
+  "outputs": {
+    "protocol.json": "31e6db5cbb4cef271ffc853467dd7639d8901c1e88291c82f1887a98c10ae47e",
+    "model_source_audit.json": "389879d317eb414a9e5c77366d6f77ff49f2e4515fe0e0cce6445675d2f26800",
+    "image_only_protocol_arrays.npz": "660e6753fdfce69c73bce31b4a7a635788c5009ffa9b031144b983cf7eb9e6b6",
+    "epochs.jsonl": "f9917c78c2f5c079cbadd5c7e879c0d199da1b68cfefaf53d2c77bd0b9d72f3a",
+    "best.pt": "307222ec0682bf72a1a4372db536fa5d528641b445c9990b436ff3cfd4e56cda",
+    "last.pt": "ffaaf6f1950b39c49a93e0227a89302d516b113a41a18317b5fee677883271d5",
+    "prediction.png": "e999e8bf5d657c04660b5b25836371a3b8b7d73260f83a275189963717e1bf79",
+    "prediction_before_postprocess.png": "596d3791d585f75449d9658b84c294cacd739eae89900aebd5d69e101f695b7e",
+    "result.json": "731f10c38ed37a8df6bc6246abf14581b2d4f8a02ac27d20040535b14bc0fb4a"
+  },
+  "completed_at": "2026-10-12T14:41:47.598878+00:00"
+}

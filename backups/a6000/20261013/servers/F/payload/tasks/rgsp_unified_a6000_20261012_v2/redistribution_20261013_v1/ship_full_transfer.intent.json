@@ -1,0 +1,59 @@
+{
+  "action": "SIGTERM scheduling worker only; handler finishes active child then exits without starting pending jobs",
+  "active_child": {
+    "argv": [
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "-B",
+      "-u",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/detection/run_detection.py",
+      "--source-root",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+      "--dataset-manifest",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/data_content.json",
+      "--data",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/data.yaml",
+      "--dataset-id",
+      "sar_ship",
+      "--method",
+      "Matched075",
+      "--seed",
+      "0",
+      "--output",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/f1/jobs/sar_ship-matched075/run0",
+      "--gpu-uuid",
+      "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40",
+      "--mode",
+      "train"
+    ],
+    "pid": 247821,
+    "start_ticks": "38588342"
+  },
+  "created_at": 1791856193.7538264,
+  "from_host": "F",
+  "from_lane": "f1",
+  "job": "sar_ship-full",
+  "new_probe_protocol_sha256": "caed014dc9803c4aa888caa8330ee4d7b5528aa0f95ed5a2990c0a1b40e2ed82",
+  "old_state_sha256": "644fd8bc40178aeaa7651d2f6998c012653ac8f8dacf363ee09574f35672d216",
+  "reason": "Use idle C A6000; preserve current Matched075 child",
+  "schema": "rgsp-scheduling-transfer-v1",
+  "to_host": "C",
+  "to_lane": "c0shipfull",
+  "worker": {
+    "command": [
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "-B",
+      "-u",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/worker.py",
+      "--root",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2",
+      "--plan",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/plans/f1.production.json",
+      "--lane",
+      "f1"
+    ],
+    "lane": "f1",
+    "pid": 218379,
+    "plan_sha256": "09b035fbffb8d9055543334aac4c816de89391ac932e9a9f326081a9912c3b5d",
+    "start_ticks": "36805740"
+  }
+}

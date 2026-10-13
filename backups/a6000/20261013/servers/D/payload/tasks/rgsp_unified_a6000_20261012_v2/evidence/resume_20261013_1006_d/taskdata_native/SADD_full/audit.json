@@ -1,0 +1,133 @@
+{
+  "boundary_overhang_box_count": 1296,
+  "box_counts": {
+    "test": 902,
+    "train": 6239,
+    "val": 694
+  },
+  "checks": {
+    "all_2966_source_pairs_present_exactly_once": true,
+    "all_labels_valid_and_semantically_rechecked": true,
+    "all_output_links_have_exact_absolute_source_targets": true,
+    "all_raw_image_and_label_hashes_rechecked_through_links": true,
+    "all_source_images_verified_and_decoded_twice": true,
+    "no_cross_split_exact_byte_or_rgb_groups": true,
+    "no_semantic_conflicts_within_exact_content_groups": true,
+    "positive_negative_strata_and_exact_split_quotas": true,
+    "saved_yaml_manifest_and_files_readback": true,
+    "source_inventory_unchanged": true
+  },
+  "common_helper_sha256": "0aadb6910958e33934717c657751e519bf1aaae16b44dd5418a7152fcac48808",
+  "content_identity_sha256": "0bca7e1bf58f0abd8abfc537df559cfc85ef45e313381f2da86c04e6d3ca0fe6",
+  "counts": {
+    "test": 298,
+    "train": 2372,
+    "val": 296
+  },
+  "data_yaml_sha256": "058288d1222086aa528ffd41184f6525f17466f43baee9e45f6643f810b9ae46",
+  "dataset": "SADD",
+  "duplicates": {
+    "image_sha256": {
+      "duplicate_group_count": 0,
+      "duplicate_groups": [],
+      "duplicate_member_count": 0,
+      "unique_groups": 2966
+    },
+    "pixel_sha256": {
+      "duplicate_group_count": 0,
+      "duplicate_groups": [],
+      "duplicate_member_count": 0,
+      "unique_groups": 2966
+    }
+  },
+  "files_sha256": "55332cce4fa5d39274c2f3aac17af93e37982d41ea0e309c25fdd10ce974bc2e",
+  "images_discarded": 0,
+  "labels_rewritten": 0,
+  "manifest_sha256": "3440521e8920f8043e13fe43b4f31b5fb12310ed854497ee9756f086d5a81b09",
+  "preparer_sha256": "da8195cc5f7d2c79125f25b8af59b3c6d8dcbf57f868aceb1d1b2de943dfae31",
+  "protocol": "sadd-full2966-posneg-stratified-80-10-10-rgbgroup-v1",
+  "protocol_details": {
+    "dataset": "SADD",
+    "id": "sadd-full2966-posneg-stratified-80-10-10-rgbgroup-v1",
+    "infeasible_quota_policy": "fail; never split a group, delete, or resample images",
+    "integer_rule": "within each stratum: floor(0.8*N), floor(0.1*N), remainder",
+    "labels": {
+      "classes": {
+        "0": "aircraft"
+      },
+      "conflicting_rgb_group_policy": "fail, including positive/negative conflicts",
+      "empty_label_policy": "retain; every image must still have a source TXT file",
+      "format": "YOLO normalized class x_center y_center width height",
+      "semantic_comparison": "sorted exact rational-valued boxes; numeric spelling, whitespace, line endings and row order do not matter; no rounding or clipping",
+      "source_mutation": "none, including no newline or coordinate normalization",
+      "validation": "ASCII numeric text; exactly five finite numeric values per nonblank line; integer class 0; centers in [0,1]; widths/heights in (0,1]; valid normalized xywh edge boxes may have corners beyond [0,1]; raw extents retained, native Ultralytics augmentation clipping unchanged; duplicate semantic/float32 boxes, float32-degenerate boxes and loader-incompatible internal whitespace-only lines rejected"
+    },
+    "limitations": [
+      "Image-level content grouping is not proof of scene/source independence.",
+      "No near-duplicate or scene mapping is inferred from numeric filenames.",
+      "This full-data protocol is separate from the historical positive-only 795/44/44.",
+      "Readiness is a point-in-time audit; consumers must revalidate mutable sources."
+    ],
+    "near_duplicate_audit_performed": false,
+    "official_split": false,
+    "ordering": "SHA256 rank of [20261012, namespace, pixel_sha256]; no training seed",
+    "pixel_sha256": "SHA256(canonical JSON of RGB mode/width/height + PIL-decoded RGB bytes)",
+    "quota_solver": "preparation_common.fixed_group_split exact bounded subset-sum",
+    "scene_disjoint": false,
+    "scene_ids_available": false,
+    "scope": "all 2966 source images, including 2083 negative images",
+    "split_ratios": {
+      "test": 0.1,
+      "train": 0.8,
+      "val": 0.1
+    },
+    "split_seed": 20261012,
+    "split_unit": "complete exact decoded RGB content group within each stratum",
+    "storage": "absolute symlinks to original image/label files; no source writes",
+    "stratification": "positive iff a valid source label contains at least one box",
+    "stratified_targets": {
+      "negative": {
+        "test": 209,
+        "train": 1666,
+        "val": 208
+      },
+      "positive": {
+        "test": 89,
+        "train": 706,
+        "val": 88
+      }
+    },
+    "task": "detection"
+  },
+  "root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata_native/SADD_full",
+  "schema": "rgsp-unified-data-v1",
+  "source_files_deleted": 0,
+  "source_files_modified": 0,
+  "source_inventory_sha256": "20d44dd72a1b110b7eca4cc86d03e63901aff788c2a4106367d066f3baf4a5c3",
+  "source_root": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/detection/_raw_sadd/SAR-aircraft",
+  "split_seed": 20261012,
+  "started_at": "2026-10-12T13:20:17.122977+00:00",
+  "status": "verified",
+  "stratification": "positive/negative by validated box_count",
+  "stratified_counts": {
+    "negative": {
+      "test": 209,
+      "train": 1666,
+      "val": 208
+    },
+    "positive": {
+      "test": 89,
+      "train": 706,
+      "val": 88
+    }
+  },
+  "task": "detection",
+  "total_counts": {
+    "boxes": 7835,
+    "images": 2966,
+    "negative": 2083,
+    "positive": 883
+  },
+  "verified_at": "2026-10-12T13:20:23.099684+00:00",
+  "zero_byte_label_count": 2083
+}

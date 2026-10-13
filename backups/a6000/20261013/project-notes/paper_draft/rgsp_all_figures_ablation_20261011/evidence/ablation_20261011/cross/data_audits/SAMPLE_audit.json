@@ -1,0 +1,102 @@
+{
+  "all_referenced_files_exist_and_decode": true,
+  "annotation_policy": "fail",
+  "conflicting_content_groups": [],
+  "counts": {
+    "test": 135,
+    "train": 1075,
+    "val": 135
+  },
+  "dataset": "SAMPLE",
+  "duplicate_content_groups": [],
+  "excluded_records": [],
+  "instance_or_scene_disjoint": false,
+  "limitation": "Decoded-exact-content isolation only, not a near-duplicate, multi-view, instance or scene independence guarantee.",
+  "ready": true,
+  "retained_annotation_conflict_records": [],
+  "sample_serial_split_membership": {
+    "2s1": {
+      "b01": [
+        "test",
+        "train",
+        "val"
+      ]
+    },
+    "bmp2": {
+      "9563": [
+        "test",
+        "train",
+        "val"
+      ]
+    },
+    "btr70": {
+      "c71": [
+        "test",
+        "train",
+        "val"
+      ]
+    },
+    "m1": {
+      "0ap00n": [
+        "test",
+        "train",
+        "val"
+      ]
+    },
+    "m2": {
+      "mv02gx": [
+        "test",
+        "train",
+        "val"
+      ]
+    },
+    "m35": {
+      "t839": [
+        "test",
+        "train",
+        "val"
+      ]
+    },
+    "m548": {
+      "c245hab": [
+        "test",
+        "train",
+        "val"
+      ]
+    },
+    "m60": {
+      "3336": [
+        "test",
+        "train",
+        "val"
+      ]
+    },
+    "t72": {
+      "812": [
+        "test",
+        "train",
+        "val"
+      ]
+    },
+    "zsu23": {
+      "d08": [
+        "test",
+        "train",
+        "val"
+      ]
+    }
+  },
+  "schema": "rgsp-cross-data-v1",
+  "source_counts": {
+    "test": 135,
+    "train": 1075,
+    "val": 135
+  },
+  "source_files_modified": false,
+  "source_manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAMPLE/manifest.json",
+  "source_manifest_sha256": "a8c6b261001a3424b2073aa75877c82c6a17ae439d35342db3b8056a03b8c103",
+  "source_records": 1345,
+  "task": "classification",
+  "test_policy": "Preserve original test rows/labels; val has priority over train; retain ambiguous heldout annotations and disclose them.",
+  "unique_staged_files": 1345
+}

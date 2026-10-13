@@ -1,0 +1,177 @@
+Waiting for existing experiment PID 138945: Farmland Sulzberger
+Starting shared SAR tasks: Farmland Sulzberger
+[ready] Farmland: {'format': 'two-date BMP + binary GT', 'images': 1, 'manifest': '/home/powerleader/ig-ds-ssm/data/cross_task_prepared/change_detection/Farmland/manifest.json'}
+[ready] Sulzberger: {'format': 'two-date BMP + binary GT', 'images': 1, 'manifest': '/home/powerleader/ig-ds-ssm/data/cross_task_prepared/change_detection/Sulzberger/manifest.json'}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Farmland baseline epoch=1/100 score=0.00000
+Farmland baseline epoch=2/100 score=0.00000
+Farmland baseline epoch=3/100 score=0.00000
+Farmland baseline epoch=4/100 score=0.00000
+Farmland baseline epoch=5/100 score=0.00000
+Farmland baseline epoch=6/100 score=0.00000
+Farmland baseline epoch=7/100 score=0.00000
+Farmland baseline epoch=8/100 score=0.00000
+Farmland baseline epoch=9/100 score=0.00000
+Farmland baseline epoch=10/100 score=0.00000
+Farmland baseline epoch=11/100 score=0.00000
+Farmland baseline epoch=12/100 score=0.00000
+Farmland baseline epoch=13/100 score=0.00000
+Farmland baseline epoch=14/100 score=0.00000
+Farmland baseline epoch=15/100 score=0.00000
+Farmland baseline epoch=16/100 score=0.00000
+Farmland baseline epoch=17/100 score=0.00000
+Farmland baseline epoch=18/100 score=0.00000
+Farmland baseline epoch=19/100 score=0.00000
+Farmland baseline epoch=20/100 score=0.00000
+Farmland baseline epoch=21/100 score=0.00000
+EARLY STOP: Farmland baseline after 20 stale epochs
+{
+  "dataset": "Farmland",
+  "task": "change_detection",
+  "variant": "baseline",
+  "state_dim": 0,
+  "metric": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "iou": 0.0,
+    "oa": 0.9473876953124855
+  },
+  "latency_ms": 159.8571990034543,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/change_detection/Farmland/baseline/best.pt",
+  "epochs": 100,
+  "params": 2047705
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Farmland ours epoch=1/100 score=0.00000
+Farmland ours epoch=2/100 score=0.00000
+Farmland ours epoch=3/100 score=0.00000
+Farmland ours epoch=4/100 score=0.00000
+Farmland ours epoch=5/100 score=0.00000
+Farmland ours epoch=6/100 score=0.00000
+Farmland ours epoch=7/100 score=0.00000
+Farmland ours epoch=8/100 score=0.00000
+Farmland ours epoch=9/100 score=0.00000
+Farmland ours epoch=10/100 score=0.00000
+Farmland ours epoch=11/100 score=0.00000
+Farmland ours epoch=12/100 score=0.00000
+Farmland ours epoch=13/100 score=0.00000
+Farmland ours epoch=14/100 score=0.00000
+Farmland ours epoch=15/100 score=0.00000
+Farmland ours epoch=16/100 score=0.00000
+Farmland ours epoch=17/100 score=0.00000
+Farmland ours epoch=18/100 score=0.00000
+Farmland ours epoch=19/100 score=0.00000
+Farmland ours epoch=20/100 score=0.00000
+Farmland ours epoch=21/100 score=0.00000
+EARLY STOP: Farmland ours after 20 stale epochs
+{
+  "dataset": "Farmland",
+  "task": "change_detection",
+  "variant": "ours",
+  "state_dim": 16,
+  "metric": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "iou": 0.0,
+    "oa": 0.9473876953124855
+  },
+  "latency_ms": 145.33080300316215,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/change_detection/Farmland/ours/best.pt",
+  "epochs": 100,
+  "params": 1839523
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Sulzberger baseline epoch=1/100 score=0.00000
+Sulzberger baseline epoch=2/100 score=0.00000
+Sulzberger baseline epoch=3/100 score=0.00000
+Sulzberger baseline epoch=4/100 score=0.00000
+Sulzberger baseline epoch=5/100 score=0.00000
+Sulzberger baseline epoch=6/100 score=0.00000
+Sulzberger baseline epoch=7/100 score=0.00000
+Sulzberger baseline epoch=8/100 score=0.00000
+Sulzberger baseline epoch=9/100 score=0.00000
+Sulzberger baseline epoch=10/100 score=0.00000
+Sulzberger baseline epoch=11/100 score=0.00000
+Sulzberger baseline epoch=12/100 score=0.00000
+Sulzberger baseline epoch=13/100 score=0.00000
+Sulzberger baseline epoch=14/100 score=0.00000
+Sulzberger baseline epoch=15/100 score=0.00000
+Sulzberger baseline epoch=16/100 score=0.00000
+Sulzberger baseline epoch=17/100 score=0.00000
+Sulzberger baseline epoch=18/100 score=0.00000
+Sulzberger baseline epoch=19/100 score=0.00000
+Sulzberger baseline epoch=20/100 score=0.00000
+Sulzberger baseline epoch=21/100 score=0.00000
+EARLY STOP: Sulzberger baseline after 20 stale epochs
+{
+  "dataset": "Sulzberger",
+  "task": "change_detection",
+  "variant": "baseline",
+  "state_dim": 0,
+  "metric": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "iou": 0.0,
+    "oa": 0.33605957031249484
+  },
+  "latency_ms": 143.9722339855507,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/change_detection/Sulzberger/baseline/best.pt",
+  "epochs": 100,
+  "params": 2047705
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Sulzberger ours epoch=1/100 score=0.11570
+Sulzberger ours epoch=2/100 score=0.11570
+Sulzberger ours epoch=3/100 score=0.11570
+Sulzberger ours epoch=4/100 score=0.11570
+Sulzberger ours epoch=5/100 score=0.19489
+Sulzberger ours epoch=6/100 score=0.00000
+Sulzberger ours epoch=7/100 score=0.00000
+Sulzberger ours epoch=8/100 score=0.00000
+Sulzberger ours epoch=9/100 score=0.00000
+Sulzberger ours epoch=10/100 score=0.00000
+Sulzberger ours epoch=11/100 score=0.00000
+Sulzberger ours epoch=12/100 score=0.00000
+Sulzberger ours epoch=13/100 score=0.00000
+Sulzberger ours epoch=14/100 score=0.00000
+Sulzberger ours epoch=15/100 score=0.00000
+Sulzberger ours epoch=16/100 score=0.00000
+Sulzberger ours epoch=17/100 score=0.00000
+Sulzberger ours epoch=18/100 score=0.00000
+Sulzberger ours epoch=19/100 score=0.00000
+Sulzberger ours epoch=20/100 score=0.00000
+Sulzberger ours epoch=21/100 score=0.00000
+Sulzberger ours epoch=22/100 score=0.00000
+Sulzberger ours epoch=23/100 score=0.00000
+Sulzberger ours epoch=24/100 score=0.00000
+Sulzberger ours epoch=25/100 score=0.00000
+EARLY STOP: Sulzberger ours after 20 stale epochs
+{
+  "dataset": "Sulzberger",
+  "task": "change_detection",
+  "variant": "ours",
+  "state_dim": 16,
+  "metric": {
+    "precision": 0.679683715406362,
+    "recall": 0.9996093031807088,
+    "f1": 0.8091716664341118,
+    "iou": 0.6795032026245793,
+    "oa": 0.686965942382802
+  },
+  "latency_ms": 155.93357000034302,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/change_detection/Sulzberger/ours/best.pt",
+  "epochs": 100,
+  "params": 1839523
+}
+Wrote /home/powerleader/ig-ds-ssm/experiments/cross_task/final_results.json

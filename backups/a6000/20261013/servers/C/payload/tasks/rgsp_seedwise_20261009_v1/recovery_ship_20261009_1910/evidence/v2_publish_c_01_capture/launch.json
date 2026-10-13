@@ -1,0 +1,42 @@
+{
+  "schema": "rgsp-independent-capture-launch-v1",
+  "mode": "publish",
+  "pid": 3628873,
+  "hostname": "a6000-c",
+  "gate_argv": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/ship_gate_v2.py",
+    "--publish",
+    "--expected-hostname",
+    "a6000-c",
+    "--audit",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1949_c/archive_audit.json",
+    "--reviewed-audit-sha256",
+    "a4b42255677feac2173652ec870130a89c647c57e677eb98613551c11c4794ac",
+    "--reviewed-stage-complete-sha256",
+    "d15725872cd253f23f00f0d143633f4b2fa35d25b94235beff24356a6fed0ebc",
+    "--expected-manifest-sha256",
+    "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78",
+    "--evidence-dir",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/v2_publish_c_01"
+  ],
+  "capture_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/v2_publish_c_01_capture",
+  "reviewed_stage_complete_sha256": "d15725872cd253f23f00f0d143633f4b2fa35d25b94235beff24356a6fed0ebc",
+  "reviewed_stage_gate_sha256": "c7ea45dd5850c0d1f3f1291df783c27af95b76113382b7e1da7cf31aff05468c",
+  "selected_manifest_sha256": "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78",
+  "launched_utc": "2026-10-09T12:16:10.746502+00:00",
+  "resources": {
+    "hostname": "a6000-c",
+    "utc": "2026-10-09T12:16:10.650012+00:00",
+    "cpus": 32,
+    "load": [
+      0.25,
+      0.2,
+      0.18
+    ],
+    "disk_free_bytes": 844606586880,
+    "gpus": "0, GPU-e5f8a5d2-306d-582e-c926-f795df943b1b, 1308, 0",
+    "compute": ""
+  }
+}

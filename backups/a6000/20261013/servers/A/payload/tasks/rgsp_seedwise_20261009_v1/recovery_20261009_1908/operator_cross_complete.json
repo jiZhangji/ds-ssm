@@ -1,0 +1,29 @@
+{
+  "completed_cross_ids": [
+    "sar_acd_original_seed0",
+    "sar_acd_matched_scale075_seed0",
+    "sar_acd_full_seed0",
+    "sample_original_seed0",
+    "sample_matched_scale075_seed0",
+    "sample_full_seed0",
+    "ottawa_original_seed0",
+    "ottawa_matched_scale075_seed0",
+    "ottawa_full_seed0",
+    "farmland_original_seed0",
+    "farmland_matched_scale075_seed0",
+    "farmland_full_seed0",
+    "yellow_river_original_seed0",
+    "yellow_river_matched_scale075_seed0",
+    "yellow_river_full_seed0"
+  ],
+  "entire_lane_complete": false,
+  "finished_utc": "2026-10-09T13:29:16.630884+00:00",
+  "global_seed0_complete": false,
+  "pending_air_ids": [
+    "sar_aircraft10_original_seed0",
+    "sar_aircraft10_full_seed0"
+  ],
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-operator-cross-recovery-v1",
+  "seed1_started": false
+}

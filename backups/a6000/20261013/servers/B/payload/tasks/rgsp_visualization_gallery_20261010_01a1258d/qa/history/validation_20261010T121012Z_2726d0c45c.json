@@ -1,0 +1,2384 @@
+{
+  "schema": "rgsp-figure-artifact-validation-v2",
+  "status": "STRUCTURAL_PASS",
+  "run_id": "20261010T115859Z_b6cdfa02a2",
+  "started_at_utc": "2026-10-10T11:58:59.219516+00:00",
+  "render_dpi": 110,
+  "figure_count": 50,
+  "pdf_booklet_pages": 50,
+  "all_individual_pdf_pages_rendered": true,
+  "all_booklet_pages_rendered": true,
+  "all_pdf_pages_rendered": true,
+  "failures": [],
+  "figures": [
+    {
+      "id": "C01",
+      "files_sha256": {
+        "png": "828d3828041cca6ec6fd3d060228d44e6f6235f5065b84c62452e2e75ef22c20",
+        "svg": "9eea2be0cb0031c86d47920f49f85defe5f7ed10858d0a61d2f3e88f63afaf22",
+        "pdf": "25c6a9e23dbc78ef2521aa5d3c45809d8032760b89fec40f532f5e7331c1dc0a"
+      },
+      "png_size": [
+        2447,
+        2499
+      ],
+      "svg_editable_text_nodes": 51,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     16  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C01.png",
+        "sha256": "8d2eae8fabea3cb30ca355d9b34f9ec9c2be951333b53122fc346b57b823e364",
+        "size": [
+          898,
+          917
+        ],
+        "pixels_sha256": "57cee86e0824e649b988ab8478ca7a63c7193561dc75f825b673cd9897f2cdae"
+      }
+    },
+    {
+      "id": "C02",
+      "files_sha256": {
+        "png": "88ac73e710afb6dd917508cf0a3e75e02e67e0d1706a874cb75c5d900a460943",
+        "svg": "94aee743d91c96d427001cb7777e626a55e61181575b2f399c7aa637eb84fc1a",
+        "pdf": "09f8d163d689eeeac33c93b8733d9475cc4d170b253306b9ae76c50a7236e24d"
+      },
+      "png_size": [
+        2447,
+        1649
+      ],
+      "svg_editable_text_nodes": 32,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     16  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C02.png",
+        "sha256": "b3c7ad20f0ecb04938914ef1165889872ad9bf70a8d0a30272753bf5678664cb",
+        "size": [
+          898,
+          605
+        ],
+        "pixels_sha256": "a2ec962aea120a36dce84f99e7bfa50eb146856afbfcbb13d9baad935fc3763d"
+      }
+    },
+    {
+      "id": "C03",
+      "files_sha256": {
+        "png": "dff96a52b79d857292c7b56236f47b113272580cce2c74886020dade1f892606",
+        "svg": "e40e22fb4663983642b13e216d9d5458df1e733b1a0db331eb79f526fa636bb0",
+        "pdf": "283c85bfd93ab1dd99e97d7852ffdc7ffadb8b11b57f89404fed68555f4651ca"
+      },
+      "png_size": [
+        2515,
+        2470
+      ],
+      "svg_editable_text_nodes": 93,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     17  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C03.png",
+        "sha256": "05527158e338e3670fdaec3956efe128137e7f0300fd7b0373da1fe6ac918269",
+        "size": [
+          922,
+          906
+        ],
+        "pixels_sha256": "6511434bd0be7686658f10077234710f3cd14ce7b060f121404cb48bc0418746"
+      }
+    },
+    {
+      "id": "C04",
+      "files_sha256": {
+        "png": "afdc54116cf18c3d96ef12d647227742a770d06efeb76028ca6d785afb3749c6",
+        "svg": "6218e087cc236875d4214b46f60df4093aa80a43e76ec12042dd319ba43c090c",
+        "pdf": "239d239a0fad0ead5737c454aa22c989ec93b210db4072187e9d5c02b7aeb612"
+      },
+      "png_size": [
+        2515,
+        1571
+      ],
+      "svg_editable_text_nodes": 49,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     17  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C04.png",
+        "sha256": "47f7cc3b130e51c320c3dd77cfcccc3108187f8c3601a65219c54e378d2484d0",
+        "size": [
+          922,
+          577
+        ],
+        "pixels_sha256": "39807be0b3546059334fb004b699b6f28cd528390f475d1805d3dfb2d39424f5"
+      }
+    },
+    {
+      "id": "C05",
+      "files_sha256": {
+        "png": "1823dcf2467accb9f2f74faadc2f66ce51d9d5c7d36f6be2bcef9254013fc509",
+        "svg": "7ea670a6a6f987132c14589460cffb56f0d7be3fe8a68e39408b2936d1452ef8",
+        "pdf": "ae03b40147486e2b8295cf01eea659d836e15b422acf1edf9378aaa4962de846"
+      },
+      "png_size": [
+        3077,
+        1565
+      ],
+      "svg_editable_text_nodes": 41,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C05.png",
+        "sha256": "2739d6f1c45c4172408636e9df24ae4f747fc0a640565b4596a9dd9fadcb7b40",
+        "size": [
+          1128,
+          575
+        ],
+        "pixels_sha256": "275d2e74882daf2ef3a600581d76fcdd46c415164f135281bee08df4605b4f5d"
+      }
+    },
+    {
+      "id": "C06",
+      "files_sha256": {
+        "png": "956f2923222dc5e59ba3bd3c577b59554dcbcb2eb22292c168684700bc331b04",
+        "svg": "8c46e87233227c4db0f60da4216f14eca03200c5ca413ab5a29dd557322c8351",
+        "pdf": "c2dde48850fced8a59017d5b701315eebe2a3b0dea5dd430216df52ffe6cf335"
+      },
+      "png_size": [
+        2670,
+        1653
+      ],
+      "svg_editable_text_nodes": 34,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     17  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C06.png",
+        "sha256": "621535c8437aecc858183a63cec911c225dfba5134741d31d34865903530eebb",
+        "size": [
+          980,
+          607
+        ],
+        "pixels_sha256": "f65b69ee58d17721bec457c5dd5a40f9f241a955625891966152c304d3e5c39f"
+      }
+    },
+    {
+      "id": "C07",
+      "files_sha256": {
+        "png": "11c44ad30f31f8273573e7a5731da5f213c82525c14a2f1ab0a04b1a68d52616",
+        "svg": "eb7ebab91ad87af1f80761b2578720abd82b9dc7b378cb6ff118277d2f146c81",
+        "pdf": "655094bf77c89ad1e1380588fc0d62b5bc050cc722a45ee0fa9532e5bc1a9458"
+      },
+      "png_size": [
+        2670,
+        1653
+      ],
+      "svg_editable_text_nodes": 34,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     17  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C07.png",
+        "sha256": "58d9d2a0413eb3d4c86cca3d36fcf9a4bad506fcecbdeaa1eb370f361b92fa77",
+        "size": [
+          980,
+          607
+        ],
+        "pixels_sha256": "469c99985d85d0ae7f6050838d3080b07065098e85306c370cf40a935c39d7d1"
+      }
+    },
+    {
+      "id": "C08",
+      "files_sha256": {
+        "png": "e7ea27f07d78f2a03494c3baf7f9c0c862fa1a625301f6ead8e02116a9525dee",
+        "svg": "7f3b24805fdb2120c16ae1d3af9c329487b865443275c18ffc1e359c2304ffc9",
+        "pdf": "debb3724441b3e191cb49c23986b4e0aafcd61340c879015676fa7de5c95e363"
+      },
+      "png_size": [
+        3061,
+        1565
+      ],
+      "svg_editable_text_nodes": 45,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C08.png",
+        "sha256": "636a05be05775249f75f0320dd934233213e32025389dd56b19cc62473185b3a",
+        "size": [
+          1122,
+          575
+        ],
+        "pixels_sha256": "4bf32725a6aa445f0ae594aeb91cac92ce937d81fa5c9013a52c7ca90b4e3c1b"
+      }
+    },
+    {
+      "id": "C09",
+      "files_sha256": {
+        "png": "479525032c812e26b4ebae3c0077c7f0b45db57c8371b9c6b630b8e8707fa821",
+        "svg": "c88839f9e859df9a91fee3ca3d0de9f430fd04d10981ac458a92f25e745ba967",
+        "pdf": "583edcd91e56698d7597e28c9b03afc364089e9b75a86bc9cce3bfc5c32a4671"
+      },
+      "png_size": [
+        3007,
+        1595
+      ],
+      "svg_editable_text_nodes": 40,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C09.png",
+        "sha256": "3ee1e1275f4bd12db7664cf7e0f1515e6517ce81e182140dfede94ef2b11afce",
+        "size": [
+          1103,
+          585
+        ],
+        "pixels_sha256": "0f9c732a3ada1724223a5d621dfd37bf190c4a2e41da757c066d27d71e5cb777"
+      }
+    },
+    {
+      "id": "C10",
+      "files_sha256": {
+        "png": "263c1c0a290222a15b4684668e3590d4656f58d9350992910c33fe6b361e878c",
+        "svg": "708902254b60fb49d7fbc105ecb7eb6d28b017d3c1deba46be72f2e00726a3e9",
+        "pdf": "adfec5064234ae4e72647f628ecfa4d3515303fbb05769298a5c7edac0147e2e"
+      },
+      "png_size": [
+        3499,
+        1682
+      ],
+      "svg_editable_text_nodes": 34,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     18  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C10.png",
+        "sha256": "5f4e8a400bd91633942b6ecefb624ca49e981e08c621a28772b6d910f884deb8",
+        "size": [
+          1283,
+          617
+        ],
+        "pixels_sha256": "1ebcced27e6a0c4613857ccf4af19b4f096f3cbfbcc598fcf6616009edfff8b1"
+      }
+    },
+    {
+      "id": "C11",
+      "files_sha256": {
+        "png": "b4a8c49b288912ed4dcc16160fe3826cc4ac0957c563b832cf8f50d665af442c",
+        "svg": "8c5df9bd300dc3339ff7ea12efd7d67b61dd1dd4333dd99b19e7807a06b3a85e",
+        "pdf": "a30772f626eff1c0095b67fa030cd663202df6559663ffa1f95c4311319cb696"
+      },
+      "png_size": [
+        2559,
+        1449
+      ],
+      "svg_editable_text_nodes": 16,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C11.png",
+        "sha256": "9a6e050243a248f2d970aaf0dc8ab6b88386a334eb68ccb8cc68051e6ed35314",
+        "size": [
+          939,
+          532
+        ],
+        "pixels_sha256": "857b1d9f52fb47968eba9d96cda735f41d6b93a53a7144d91545b4803fba4e98"
+      }
+    },
+    {
+      "id": "C12",
+      "files_sha256": {
+        "png": "0964a53d89cc03f6c564f4ee97e6e7e4b407c1d35aecc440e57803299fa65bff",
+        "svg": "31f96933a4d328faf1274aae7c2217c1f5c1b6511990635f27600f3ade264a5b",
+        "pdf": "c456fb92d3d0258fada074c834660a5a891b8a4db710fa5c67b6c84c4dea558c"
+      },
+      "png_size": [
+        2559,
+        1449
+      ],
+      "svg_editable_text_nodes": 20,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C12.png",
+        "sha256": "3195baed29535ad9fd23362caaa2d78008206f53d0d5884ca9acd01075ca2114",
+        "size": [
+          939,
+          532
+        ],
+        "pixels_sha256": "3f73d7f0698ddbebf3f13910b6d2d6fc7bf6a73a4cfc690658f90f503284a874"
+      }
+    },
+    {
+      "id": "C13",
+      "files_sha256": {
+        "png": "b9f58af8bd4deb6800d518238304c0f0ec3024a8fab55dc0132427f622e11589",
+        "svg": "9d9e9905c208d9bc2ae2f4201f31d126dc0a9fca4a0f41705715a5f1b09ac2d1",
+        "pdf": "a70386ba458248aa13a5e3d5c767dcaa23e37858302021212e070901f0addd24"
+      },
+      "png_size": [
+        2559,
+        1449
+      ],
+      "svg_editable_text_nodes": 20,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C13.png",
+        "sha256": "6934b866c955923eaa5ac99dcefdba97a6d6d0022cb66bc91cc545bca019510a",
+        "size": [
+          939,
+          532
+        ],
+        "pixels_sha256": "e05c47be5503450b02c037faf9c1cc0322b1bc6742d0d90ec95d3f15e59b124b"
+      }
+    },
+    {
+      "id": "C14",
+      "files_sha256": {
+        "png": "aa3d8f76ed408a0cc48aaa4b34864d60063f6f49008d444e94d3fbda8e212b84",
+        "svg": "e76486545a417cb638df6768b6e9be4be79ed4633fdf88035ade1a0df7b40dd2",
+        "pdf": "f8e63fd63b97da3e797e80703648a7d0eddcce3b4bd8e9165daf503159927d6c"
+      },
+      "png_size": [
+        2559,
+        1449
+      ],
+      "svg_editable_text_nodes": 16,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C14.png",
+        "sha256": "f7a1984950b2d8aad563a83cfcff70e74503b0ba1f67ae06858e5180e1e9cfcb",
+        "size": [
+          939,
+          532
+        ],
+        "pixels_sha256": "c324b97aa30f78f705bced1fcd2ad41fb98d1ec7d53d096cc5e2266b280e74ba"
+      }
+    },
+    {
+      "id": "C15",
+      "files_sha256": {
+        "png": "6d15f1cff8ec2607bf5cbc89c1fdff5c1042082474284187aab3aa40a409a093",
+        "svg": "1f1767cc15d9481654392fdcd711d9b241e2945c442aaba74cd9e7a578cf31d5",
+        "pdf": "99dd10d634bd42e0f2842f4571fced1db53dd17381a43e4254620de3698eb980"
+      },
+      "png_size": [
+        2963,
+        1565
+      ],
+      "svg_editable_text_nodes": 38,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     19  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C15.png",
+        "sha256": "0e4d07b8f8e29cb0c8977fe1186fe257b7866a659eecf2a57e529ade8ddea0df",
+        "size": [
+          1087,
+          575
+        ],
+        "pixels_sha256": "9c72cd16915e3d82d119cff1b5ee60df74fa9a7ccfc8f9491916f5e976e87532"
+      }
+    },
+    {
+      "id": "C16",
+      "files_sha256": {
+        "png": "d45f1a7cf7b4a29056c900225610b3e357e51885d5e3c65946d151a3b459a333",
+        "svg": "d809f492a3a9f6971db3fcd5e343fddf8f4b05c16fa89062a213caca9f210c97",
+        "pdf": "0b7eb2438f8380fd2f4b068a4d4638f69caea3c0ef9b8ceb79d215c6650fadd5"
+      },
+      "png_size": [
+        3142,
+        3638
+      ],
+      "svg_editable_text_nodes": 184,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/C16.png",
+        "sha256": "fc39a8d61dcd2ddbe6552591ea5db2316765efadf0a3f4325ea88f4d124e6291",
+        "size": [
+          1153,
+          1335
+        ],
+        "pixels_sha256": "92c361495a3ea96b48e8b0f15f229db68c70dd417ff3157738116aefce06f3d1"
+      }
+    },
+    {
+      "id": "H01",
+      "files_sha256": {
+        "png": "7784cc71786930540d5e73d215ac7b950677f5e5805a3d218d74552165b0f061",
+        "svg": "a6344e05b6f969821e3051a540f54403af62d26169382b780cb2a5574a8322a9",
+        "pdf": "3f3c02220c822a8c54fc6e0a367304dcd27c3db1e72281362d69bc548666e572"
+      },
+      "png_size": [
+        2513,
+        1507
+      ],
+      "svg_editable_text_nodes": 22,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/H01.png",
+        "sha256": "e27bcb787716b616c0c48c5300399e37867a6aff53841dcc304d2586edfe5daf",
+        "size": [
+          922,
+          553
+        ],
+        "pixels_sha256": "5450126c6317fdf03cd4fa619af5695f43d23375c117fea74a25731f8756d065"
+      }
+    },
+    {
+      "id": "H02",
+      "files_sha256": {
+        "png": "a80f3751ea41a6ae79e2502c8914cacd465014a8ea448017a76e76c4ac50533b",
+        "svg": "ac63da53aea85170329b121277b413cccb747540d513ec6f40795e92035bb098",
+        "pdf": "13e176d0063d536bec17d7cfb69b2663d639449b605ba2993399805a21e02c48"
+      },
+      "png_size": [
+        2614,
+        1682
+      ],
+      "svg_editable_text_nodes": 29,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/H02.png",
+        "sha256": "b96b0f69e1499d2dfcbe290299f8996a8bcd36311bd2815940c89a533b5217a8",
+        "size": [
+          959,
+          617
+        ],
+        "pixels_sha256": "b14bf62ed80f6e437b4c237d3fa32e163b64da380be34261f8bcceb583ca8878"
+      }
+    },
+    {
+      "id": "H03",
+      "files_sha256": {
+        "png": "6b8acb0cca7fbf2bac0f33b10aa42602c4ab6e0e15b644cafc1a9918a8f0fa6b",
+        "svg": "209b36a8411058132c3a6346401761c59426da783c94406d83aa1791056fe34a",
+        "pdf": "7f5c71fe26ac87f22953844fdb451c459a60d0ddb864977bf5ee0b312f0c4a02"
+      },
+      "png_size": [
+        3025,
+        1449
+      ],
+      "svg_editable_text_nodes": 59,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     17  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/H03.png",
+        "sha256": "be1c69e447069eb0724404f08aad1cd4c4ba54865f9a0def3b77c85366a722ef",
+        "size": [
+          1109,
+          532
+        ],
+        "pixels_sha256": "161d53872eebc800c2c22ee129e3d4c891d5054ad75d29d6d085eeea5612dfb0"
+      }
+    },
+    {
+      "id": "H04",
+      "files_sha256": {
+        "png": "bb4917e694dc3eba403361472dc17284d4b257f7c1969a261a7379666ce38238",
+        "svg": "fff7487f883f54fce2621e455cd9ab4b8d442a106d351e5fd2e872ec00b92ea5",
+        "pdf": "88b890903d8ffb75f22a2698bade79402fad2c5423a1796bacdd26a210594ae2"
+      },
+      "png_size": [
+        2626,
+        1595
+      ],
+      "svg_editable_text_nodes": 18,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     18  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/H04.png",
+        "sha256": "f19c9f81b55ab019832470c71f2bfefd68ea61356765a4dc92d846f201ec4814",
+        "size": [
+          963,
+          585
+        ],
+        "pixels_sha256": "0b621ae8397eee2f6b5f8e7fbcb838f86c57b8ac329b23ffbfee27c5b62348c1"
+      }
+    },
+    {
+      "id": "H05",
+      "files_sha256": {
+        "png": "a1ba342ff475943e023acd844df985351dd91931f25f2c4b9f56f05420c0bc02",
+        "svg": "799936ad00061c969017700469a621aba0bfd5bb5f21d15497d2d811cc8a45c3",
+        "pdf": "2502a44dd8888809ee14fa7af7d0fef08fd6ba347a3ec32d6c5177a4dd761494"
+      },
+      "png_size": [
+        2503,
+        1507
+      ],
+      "svg_editable_text_nodes": 28,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/H05.png",
+        "sha256": "989288ed5ed2126c59eb0756718d99472567950ec963b921ed91db7fb468ac9f",
+        "size": [
+          918,
+          553
+        ],
+        "pixels_sha256": "a83a48ee86a57876caff1e6bfec1e5bbb1a8f527884ff10521b272b4e59e3ebb"
+      }
+    },
+    {
+      "id": "H06",
+      "files_sha256": {
+        "png": "be7a2f2f707925cbf31f5878aa98a97e3214d7645bdd791b179f4f336d50f896",
+        "svg": "b5dba9d2dbc0445e141ddb596e8e0c9401cd24aa9f040cf65ede478f5a9f2323",
+        "pdf": "078f892870a11d32f88056783b562f0e882be87f1b1e00a1d2f9e54e58cf2b5c"
+      },
+      "png_size": [
+        2614,
+        1682
+      ],
+      "svg_editable_text_nodes": 35,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/H06.png",
+        "sha256": "c779e554b14651b1055f63a62daf02d52fac6c6872163e45d09a51b9d8c3d66d",
+        "size": [
+          959,
+          617
+        ],
+        "pixels_sha256": "cc25847d8a4f5a24adc97555d6d9fadf47ce01820565706b4a48b95d5e02959a"
+      }
+    },
+    {
+      "id": "H07",
+      "files_sha256": {
+        "png": "f49fcf0de9ea9995040446afb5263384cd1d06084a42247744cc7284a61a8397",
+        "svg": "d9cdc0871fc702cd8d10a9e0104eb4398094463003e5fe48a0f179b90e68a824",
+        "pdf": "b34a08ad265b69f3bf7a02a9e587a8f7b06470d8461392840fe06690005c7507"
+      },
+      "png_size": [
+        3025,
+        1449
+      ],
+      "svg_editable_text_nodes": 72,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     17  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/H07.png",
+        "sha256": "d72adf592e97c84d8bd8136b912be7d1792572e4270c3da103def13ef175649b",
+        "size": [
+          1109,
+          532
+        ],
+        "pixels_sha256": "33d1beb313a64ddc579e548a727f051ae7b205011984ab28757d99b5e9debfe4"
+      }
+    },
+    {
+      "id": "H08",
+      "files_sha256": {
+        "png": "4a087013bb49a3226aaee80dfe00f6bdbce65bbaf5459a90e35047d7be2e3ba6",
+        "svg": "0cc37b5a09fda0c0a5d5a33a0295953290991267d5bcb5e33aa42a64c86ed81e",
+        "pdf": "2eddc74cf6612900eb6d5cc7220cd659c88f04cfdccfca160ffabde01d13850b"
+      },
+      "png_size": [
+        2626,
+        1595
+      ],
+      "svg_editable_text_nodes": 27,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     18  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/H08.png",
+        "sha256": "51131358f1ea4ca477894f5991742553c9ef93b7b8e7d38b4e095dc638047a9e",
+        "size": [
+          963,
+          585
+        ],
+        "pixels_sha256": "9a7812ff2e69996d180175021b3755ecc027b336fd0b75f9d3050228f5b3a5b1"
+      }
+    },
+    {
+      "id": "H09",
+      "files_sha256": {
+        "png": "9a2e0e1fb4ec81ad703db8e04c5940ff5f558178db4bb48ef4ea66aace512916",
+        "svg": "9e049830a3cb5875636118078e4bbc61804c5267decc8df35c4ebf511022242f",
+        "pdf": "6bc11839b9038eb82466f1300472c31cd60c603baddd5b77d7f85b023c14eb76"
+      },
+      "png_size": [
+        3061,
+        1507
+      ],
+      "svg_editable_text_nodes": 40,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/H09.png",
+        "sha256": "069dfd578ffab24f0bddde9d222f3d4452166b50774ab5a0a242bd4aaff27870",
+        "size": [
+          1123,
+          553
+        ],
+        "pixels_sha256": "81ba6cb0518122cec94ce259fea9d2b1891e3916094a777482c96fdad1ddcdea"
+      }
+    },
+    {
+      "id": "H10",
+      "files_sha256": {
+        "png": "ca143366f127ebaa67bf3fea21aafaeaa8debc492de3006b30b41cde2acbf066",
+        "svg": "4d7d45e9122506a846cba0fc4ff65bd496563b8acf718e6e244905a52d7a906f",
+        "pdf": "95ea17c7bfb345f10783cf81bd74005fde8d0268ffaab3ad01955b262b09988d"
+      },
+      "png_size": [
+        2785,
+        1711
+      ],
+      "svg_editable_text_nodes": 26,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/H10.png",
+        "sha256": "f488d794bf5bedb7e90b356cf1dbe0a1e8a3e7dcd09ee48e7bd86736f89ea54d",
+        "size": [
+          1021,
+          628
+        ],
+        "pixels_sha256": "0d6145bb4f97fe8cda27760970f2d0aa4200ef5b8822f01bfc07ed4b600bd782"
+      }
+    },
+    {
+      "id": "H11",
+      "files_sha256": {
+        "png": "27e599f3ce0cb0bbac475aa7392faf0e7a38ab4362e1fbafdce10270d8fb127c",
+        "svg": "c0856538e0819e7688b6d6c1c438c5ce67fe496ce8084298a1d892ce22e4551f",
+        "pdf": "4431b6f7e44014a23d810c38d92a6c6c7d97dfc5a896c30f14137b4ad92ede54"
+      },
+      "png_size": [
+        2698,
+        1478
+      ],
+      "svg_editable_text_nodes": 20,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/H11.png",
+        "sha256": "9b1c18ed14075fff3e147c224399de3e6a167b3ed9ad78a7afc8e178733e0184",
+        "size": [
+          990,
+          543
+        ],
+        "pixels_sha256": "d293ebd807f70954acee418cc06827626227e648c3ee518bb9597d4837355d4a"
+      }
+    },
+    {
+      "id": "H12",
+      "files_sha256": {
+        "png": "7c2e08361d09c64d002995176fcdc568e07f395feb61ee14d22fb1ce3cb82ab2",
+        "svg": "dc4e45cb931fd9d596e3052ceabe2e8c093d58e0a114cd5f6dce45c9cb47b880",
+        "pdf": "bfc82ae17b4a04a47f789f20e65587c3b4015bdedb42ebd9975fa0d5b9dcce8e"
+      },
+      "png_size": [
+        3371,
+        1361
+      ],
+      "svg_editable_text_nodes": 54,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/H12.png",
+        "sha256": "8a91b7a3264bfb926c30fadbd7f8e151fcdc51e7cdbf35dc928c0d5b682fba3c",
+        "size": [
+          1236,
+          500
+        ],
+        "pixels_sha256": "57a7342c3b7b3b5ed1b9040ab21e49205590a9bb273a9743f70e9a8d7f5e234b"
+      }
+    },
+    {
+      "id": "Q01",
+      "files_sha256": {
+        "png": "645ae088155a33be3b57da08b1982d73efc707ffb62d6edf24e32113c9f3be1b",
+        "svg": "20e37b9ef36816276d0b9f817d9a2381f8403bb5270a4d7eca89c26a24ac4c71",
+        "pdf": "5e260cedcd76a88e05825451f212f699fb4abcfa57ef5850c1db000df9029c09"
+      },
+      "png_size": [
+        3545,
+        2032
+      ],
+      "svg_editable_text_nodes": 45,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     30  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/Q01.png",
+        "sha256": "e32c08ef383edb2a79f6f4e5e2c95728762bc3546c3866408de5cd5c7d0e5b2b",
+        "size": [
+          1301,
+          746
+        ],
+        "pixels_sha256": "cabb2786b9f12d67dce6cdf2c8d7bc0fd45701cc6b9f9177cd9563820589af59"
+      }
+    },
+    {
+      "id": "Q02",
+      "files_sha256": {
+        "png": "90751a70a63f71eb8882931b845b91c5f928be2a93c83ad513f587891c5e6d06",
+        "svg": "62337ee4ca16f698243a6bb6a84680bb513a533a52021ecdb7b2043122b3c736",
+        "pdf": "1a35ff2884faccdd8521bf1c7542f254daf35d52cf6071bea22ee99f0c90e11b"
+      },
+      "png_size": [
+        3545,
+        2032
+      ],
+      "svg_editable_text_nodes": 45,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     30  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/Q02.png",
+        "sha256": "8e47109d61b60806d3720e2d65024f74b9b2ed31bcbee90eeca50dda284c26e9",
+        "size": [
+          1301,
+          746
+        ],
+        "pixels_sha256": "26a0a91f15c668afc9337cc5d2bd7644be4037a8f796f17c80a1b334259b8f0d"
+      }
+    },
+    {
+      "id": "Q03",
+      "files_sha256": {
+        "png": "9ff37e84c1807730ad67fb50315895b860ba4e2281d690e5bea3b7cfb2d7ce31",
+        "svg": "a1e25e69a7adf0b36cfea0a8a547b67ae8e22f8c9edb3c3840eb77a32dcbdd13",
+        "pdf": "2ba77ddcb61e52694a82c037664368f2b79a848a7f6878d97ac42f9dce749541"
+      },
+      "png_size": [
+        3545,
+        2032
+      ],
+      "svg_editable_text_nodes": 45,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     30  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/Q03.png",
+        "sha256": "130619da276a207e7231e803a22e2dbb0bdb4bfbbb254cf1439681a5d8910372",
+        "size": [
+          1301,
+          746
+        ],
+        "pixels_sha256": "06eaa5a91149bde9ca64de3191cd50c4e7efe13dc0833f34e9b31ef0801d224d"
+      }
+    },
+    {
+      "id": "Q04",
+      "files_sha256": {
+        "png": "e3ebb9f963a2f5064a1d5f278ca89d2dbcf75a824f588c13772d4ac535b0e238",
+        "svg": "2eb5fb7773d719d65e61db2985c3bf3604f1f4c88fab59f870a535cb797bfcee",
+        "pdf": "89afa1f75962f532942263365d7fed2d88ba747c781e47a9ac0b0fba8124984e"
+      },
+      "png_size": [
+        3545,
+        2032
+      ],
+      "svg_editable_text_nodes": 45,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     30  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/Q04.png",
+        "sha256": "3e65112e5ee0316aa566a642fb71bbda88588ffe2cdf902f6bacc5992477758d",
+        "size": [
+          1301,
+          746
+        ],
+        "pixels_sha256": "f991273627c68425c2bedf731692382a5e6882f3cf53260323630cc1aece1cad"
+      }
+    },
+    {
+      "id": "Q05",
+      "files_sha256": {
+        "png": "47b5e4689388415fd3274cbd5d0951e2c6109cd324773a7b211141c66e749010",
+        "svg": "6312379005921fa4337dcb562147efa971cb87543d36bbcd4f40d478d75999de",
+        "pdf": "aee191d88ea45d336f00f036e381536c1d6f9a2787602fc4bd6e0f82d0d14400"
+      },
+      "png_size": [
+        3545,
+        2032
+      ],
+      "svg_editable_text_nodes": 45,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     30  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/Q05.png",
+        "sha256": "00cc6a3d663ba3850c5ebc44c5662f0a54f7eb24d5d0faf73d6a61968850be54",
+        "size": [
+          1301,
+          746
+        ],
+        "pixels_sha256": "323391d52546227c0668993fb8eb079c5f7874b0efbfe02666ea5ba529719606"
+      }
+    },
+    {
+      "id": "Q06",
+      "files_sha256": {
+        "png": "b2a50fae4f8a7d730832711b3e01a073980f5b2dc955de87d550bbbe0fe95b20",
+        "svg": "26722ec22fb441108813e09e77cbebf7fa694fae30bfa81a1d32c63401c632f5",
+        "pdf": "b8144682816cf39b86f8fac628b6fed93b32951a8b45c5078f82bb69347a8887"
+      },
+      "png_size": [
+        3545,
+        2032
+      ],
+      "svg_editable_text_nodes": 45,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     30  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/Q06.png",
+        "sha256": "5e6930a1f072494cd94ee0dfc18c4e86b921d2b75ac36b7c30d5e7c128f64349",
+        "size": [
+          1301,
+          746
+        ],
+        "pixels_sha256": "577e3efb4518a5e089b42b9f2caab2273c2cd4260f7986c1c8ac072607ee331c"
+      }
+    },
+    {
+      "id": "Q07",
+      "files_sha256": {
+        "png": "af50c30eb75c7c64899793ff2822a6b2b7775b15015f8f57d2a41b1fb3d0185d",
+        "svg": "1bf2334f650fed6fa4a645f5ef463de54ef3c2748a1c14e755f3137b9af874f2",
+        "pdf": "7fbc5f05041372018584a350455be0ad5ed463a3ce666358bdc8fc484a0852c3"
+      },
+      "png_size": [
+        3150,
+        2266
+      ],
+      "svg_editable_text_nodes": 16,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     22  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/Q07.png",
+        "sha256": "932275509ba25344bd165a1cc50bffced174af72b6ee692cae0db3d001023d54",
+        "size": [
+          1155,
+          832
+        ],
+        "pixels_sha256": "63540472620e1b3db14b37537473d984549b873e8edf27a9ddbc28f46b86e92d"
+      }
+    },
+    {
+      "id": "Q08",
+      "files_sha256": {
+        "png": "011070d6eeb54f5d95ca5ef1f58e8656221b43a2484f3b4589f734a8d514d30e",
+        "svg": "b68461e7019c54047f4fbf875b59b5a64fca8d9b72286d4eb6c834c2df3cc3ff",
+        "pdf": "c3bcfe5701f2d2419c7aa94ca0aa204c29c682b5e54f8f4395e49f3ba88a1e03"
+      },
+      "png_size": [
+        2714,
+        1653
+      ],
+      "svg_editable_text_nodes": 26,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/Q08.png",
+        "sha256": "0fbb3750ed2763c3816acdfdf56cc9763423b31a9298995d07ebab67807a4e13",
+        "size": [
+          996,
+          607
+        ],
+        "pixels_sha256": "7ae8de522c9e2145ce48a83ebfb4295feaa750446a7a900002e4ae3e2fc62266"
+      }
+    },
+    {
+      "id": "Q09",
+      "files_sha256": {
+        "png": "58608b6aaa59d42f689640ec89608b3e784223fdc43e674e52d6a475788e9c74",
+        "svg": "4b04d6837447ceab26450a2ea5f1126c5a6ff239b718421f51164a1a95435421",
+        "pdf": "337d11b1a24f9ff84ae3111ebb4d0e34186796086b2e168c20977c179e3700d9"
+      },
+      "png_size": [
+        3157,
+        1565
+      ],
+      "svg_editable_text_nodes": 36,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/Q09.png",
+        "sha256": "8dcfc877aab10b1e40d189a88f13543c30766da702033d59b70d5bdb4b4aedc9",
+        "size": [
+          1158,
+          575
+        ],
+        "pixels_sha256": "c61e277076512a0a2fb3c96ae7f9887ea4d3500cce2c05e7677b0affbbc6377f"
+      }
+    },
+    {
+      "id": "Q10",
+      "files_sha256": {
+        "png": "51a3301563d716fc615188f181a2be0901478e2b82da270c7fac6728e3382452",
+        "svg": "8e8c461eba99ab43c3a8942226a0963533b86315a35da6c3f6fb0db3ee7087fa",
+        "pdf": "68680490f09e00609fb0af7603183416c99bc2af520726f4331c0f0f54f8c94b"
+      },
+      "png_size": [
+        2670,
+        1536
+      ],
+      "svg_editable_text_nodes": 23,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/Q10.png",
+        "sha256": "95b5febfeb66665dafb037a2c300e4e0df7f309f2f2f4bb14a9582b02cdc3cb3",
+        "size": [
+          980,
+          564
+        ],
+        "pixels_sha256": "73f56f2eca1aa2edac6c27a17b5a081f256105b5c924234ba694b674a50a9eb5"
+      }
+    },
+    {
+      "id": "Q11",
+      "files_sha256": {
+        "png": "950bbfe0cc703cba104a54ae4bc702a95e3c4a1f8ec943c55f3f934fc075aa7a",
+        "svg": "52e1732171bcd740536aae2ef1ba08c30a3877ff1dd05dcda206dc400ec12d63",
+        "pdf": "3dbe41d2dfe926110ba9a99580e95cd694d10a76fa3a3d1133573cc988bf1a92"
+      },
+      "png_size": [
+        2670,
+        1536
+      ],
+      "svg_editable_text_nodes": 27,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/Q11.png",
+        "sha256": "6e782334879a7095a4686f4f468dae7ae95cfa662e15479f59809b938b224c13",
+        "size": [
+          980,
+          564
+        ],
+        "pixels_sha256": "c91f7f9233c9eb1b7e2f0c3e345825cf800db4544bf702413a15342967a2abf0"
+      }
+    },
+    {
+      "id": "Q12",
+      "files_sha256": {
+        "png": "c675e47ff4fc695557286ae47cfcd1cc27beed1a5ab4df1a83d6a09377ae3ca1",
+        "svg": "602eb132c5f619915125790ad259d19510b00db68a7b83e88238b413e8ff6382",
+        "pdf": "412cfc3922bf367c19bdf13ac9d9c8af7eb236d5c5197fc1363db94f5da1285c"
+      },
+      "png_size": [
+        3142,
+        2120
+      ],
+      "svg_editable_text_nodes": 10,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     21  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/Q12.png",
+        "sha256": "4505ed4a3e595a88b19f37c175571170836aa6cf058c507ade9823481e41c79d",
+        "size": [
+          1153,
+          778
+        ],
+        "pixels_sha256": "0e8b323590554e3a36e85b6be6fd10ce9fd7f94927ae70851639dec1b7adaefe"
+      }
+    },
+    {
+      "id": "M01",
+      "files_sha256": {
+        "png": "2ab4bf1f1a317351203a18cc96b67fadd4fd4df907f47bd8588a83aa86c57716",
+        "svg": "7e4001a0a808cf329a38150811ccf1bc5eebe9d76c731898418122b768bbee0f",
+        "pdf": "0b5bd10ebd253eedb926cdde4fb5dc1f76376f8f1f6e409ed987e2f7014fea1c"
+      },
+      "png_size": [
+        2898,
+        2223
+      ],
+      "svg_editable_text_nodes": 40,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes     15  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     22  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/M01.png",
+        "sha256": "fae897a73f6632db733af82630a99fef04b699dc253de10d532559690143625d",
+        "size": [
+          1063,
+          816
+        ],
+        "pixels_sha256": "73b53b6420de2b1d697a1fbc18972a4950be8655589bd8b2880348259a3706a6"
+      }
+    },
+    {
+      "id": "M02",
+      "files_sha256": {
+        "png": "2fa3f90b58075d3d04bd732bcbb73349eb86c93f1bb7146c4a96e40da98cb632",
+        "svg": "183fd159352a38a56fe94087b46eab19c444a0116a509e8b4e2540d06434e7f7",
+        "pdf": "54695373dfd8692d6699983cad010809c49324674ab02cc51c1c325fba7776c1"
+      },
+      "png_size": [
+        2898,
+        2339
+      ],
+      "svg_editable_text_nodes": 32,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes     15  0\nGCWXDV+DejaVuSans-Oblique            CID TrueType      Identity-H       yes yes yes     22  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     29  0\nFTXWZA+STIXGeneral-Italic            CID TrueType      Identity-H       yes yes yes     36  0\nEUPODS+STIXNonUnicode-Italic         CID TrueType      Identity-H       yes yes yes     43  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/M02.png",
+        "sha256": "282ee4c5e69400c4c25b58eed629789c63ef4047a930132bec729bd7c4c9ff23",
+        "size": [
+          1063,
+          858
+        ],
+        "pixels_sha256": "d2d8f31be8f2df6a8db63601c72260e06142b6c630e48d572100b3534bcfde40"
+      }
+    },
+    {
+      "id": "M03",
+      "files_sha256": {
+        "png": "c4e42233cf6e21e5ca65362861e24eea4059a7725f53899de4709a9cb154ad6a",
+        "svg": "3f8513c65467f683f9fc4ffea61626fce918a39e56d70761c1dcb460132354cc",
+        "pdf": "6228079fadafa6fad42ae69302d4959e2f7985485a4b85f6d89148aaa602ba3b"
+      },
+      "png_size": [
+        2898,
+        2281
+      ],
+      "svg_editable_text_nodes": 32,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes     15  0\nGCWXDV+DejaVuSans-Oblique            CID TrueType      Identity-H       yes yes yes     22  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     29  0\nJYHTGI+STIXSizeOneSym-Regular        CID TrueType      Identity-H       yes yes yes     36  0\nGYKUUQ+STIXSizeTwoSym-Regular        CID TrueType      Identity-H       yes yes yes     43  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/M03.png",
+        "sha256": "54ceff4ba9c772f7837a38f05feaba0912d1c20bb5d19a865f777c94903bf0d7",
+        "size": [
+          1063,
+          837
+        ],
+        "pixels_sha256": "42738b1b21d48ebb968369cc06d776d6213b3128aa7d1b4857441c0989a26896"
+      }
+    },
+    {
+      "id": "M04",
+      "files_sha256": {
+        "png": "0a329911bbea742833c0a4a5c95bee9f19b6c488b222f1f117b77d207e55583e",
+        "svg": "5624a05bdb559ceeadf48e224c42ac2796fe300a80abef613e156dcf87debc77",
+        "pdf": "3d6b3aba64516c450d5825d9051a08b1a24de3c94ef3f2a25d7d8a71713404d6"
+      },
+      "png_size": [
+        2898,
+        2368
+      ],
+      "svg_editable_text_nodes": 33,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes     15  0\nGCWXDV+DejaVuSans-Oblique            CID TrueType      Identity-H       yes yes yes     22  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     29  0\nEUPODS+STIXNonUnicode-Italic         CID TrueType      Identity-H       yes yes yes     36  0\nJYHTGI+STIXSizeOneSym-Regular        CID TrueType      Identity-H       yes yes yes     43  0\nGYKUUQ+STIXSizeTwoSym-Regular        CID TrueType      Identity-H       yes yes yes     50  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/M04.png",
+        "sha256": "1bda749c9bab53b8dd8d09aa48215d448d0b1e1fd2624d00d1f7bc9bbc868d1f",
+        "size": [
+          1063,
+          869
+        ],
+        "pixels_sha256": "cd7a59489b1aa6932348b8e8e5092532db022d0ec1d5c9a08f731e496c6090b3"
+      }
+    },
+    {
+      "id": "M05",
+      "files_sha256": {
+        "png": "36d259c57e40c56a997ad53243aa1f157aa5b244b570b5e5911e671341270166",
+        "svg": "8c62cf4fdce63303e5d5219fb5686486a6d5c67609d493222ba47a5f8fabc33d",
+        "pdf": "4ea6991748eaafdea5340c9ca45eb075788000e3c09d89a1c908548be9434699"
+      },
+      "png_size": [
+        2898,
+        2803
+      ],
+      "svg_editable_text_nodes": 40,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes     15  0\nGCWXDV+DejaVuSans-Oblique            CID TrueType      Identity-H       yes yes yes     22  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     29  0\nEGWXSV+DejaVuSansDisplay             CID TrueType      Identity-H       yes yes yes     36  0\nJYHTGI+STIXSizeOneSym-Regular        CID TrueType      Identity-H       yes yes yes     43  0\nGYKUUQ+STIXSizeTwoSym-Regular        CID TrueType      Identity-H       yes yes yes     50  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/M05.png",
+        "sha256": "3d88b98ff6718c5d82f4302d3e301b068e50eb2d29e767f8833022525c08f0ac",
+        "size": [
+          1063,
+          1029
+        ],
+        "pixels_sha256": "cbad7f18106d573fa695ef338c99dde576664d6c00d3a6efe516d7ea82b54231"
+      }
+    },
+    {
+      "id": "M06",
+      "files_sha256": {
+        "png": "a08724e832ae33d6d50da61ccf0911f39b80154ae1fc6d26ec350848d1f64537",
+        "svg": "2074992dab55d1872e054866cceb84994fdc992952aeca4e18c78722f695def0",
+        "pdf": "634db985d614e82357d56960f9420b9cb4839bef5934f9c0e7870174f60c82af"
+      },
+      "png_size": [
+        2898,
+        2658
+      ],
+      "svg_editable_text_nodes": 52,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes     15  0\nGCWXDV+DejaVuSans-Oblique            CID TrueType      Identity-H       yes yes yes     22  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     29  0\nEUPODS+STIXNonUnicode-Italic         CID TrueType      Identity-H       yes yes yes     36  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/M06.png",
+        "sha256": "35f433b3db2b6114102d03dd093eb4510f07751b174cd3b0461c2542fc4007f8",
+        "size": [
+          1063,
+          975
+        ],
+        "pixels_sha256": "4314c5c4a875c05c327f79e0436fa421631e32a84dcb0b1e4bfa8a9bf3539109"
+      }
+    },
+    {
+      "id": "P01",
+      "files_sha256": {
+        "png": "ad5f58976fe68a894bc3eda11de4e88f3281fec901cfcfbd629eb64588ab7489",
+        "svg": "73c49552e76f1d668c24426ba01f664e71f18292661f2b6a8c2082346758be89",
+        "pdf": "7ed96658393c84ec5c70e67f345a5e61957e24dc12425c7184056b516490e3b2"
+      },
+      "png_size": [
+        3117,
+        1595
+      ],
+      "svg_editable_text_nodes": 41,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/P01.png",
+        "sha256": "3383c54b37b2a9678e886fd284bf8850382c7d36fc5e7a272dc5bc4a295c0291",
+        "size": [
+          1143,
+          585
+        ],
+        "pixels_sha256": "e2c4cd2a2d6ea8508d4c315f9626f675894bb2accfa367d8d9548a22fd78a116"
+      }
+    },
+    {
+      "id": "P02",
+      "files_sha256": {
+        "png": "d0c40e26b142d4bc61d76caacd6df284e75484c9b8c552beb9905d1c8b1f9104",
+        "svg": "1a56426458022af1ad561b72bff8367c3ffe60ed239ff2fc83eacfd5dfc7613f",
+        "pdf": "0e4917f1c49de57d8cb2d469808f201a54e6476995f2435f8d5f96204abcb919"
+      },
+      "png_size": [
+        2838,
+        1653
+      ],
+      "svg_editable_text_nodes": 32,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/P02.png",
+        "sha256": "a502e92c3ca404964bf6e08472fdefce004c1329fd7c551c8c5ebfc3def9c7a5",
+        "size": [
+          1041,
+          607
+        ],
+        "pixels_sha256": "51d1157dced1aa3d638aeb45183496bb56c204742242163f1e85315064057afd"
+      }
+    },
+    {
+      "id": "P03",
+      "files_sha256": {
+        "png": "b0333f5e25e2cd740c3a10bd8620545cb06892b10968ad24554a16f98972bd3b",
+        "svg": "2fb293e2efab33763110ab3949d92435754d60fb962b5c9b54a7a5e39151bee6",
+        "pdf": "b87d80d11da02a9fadd45762addb54bb60264154921d39fb0367a0ec069543eb"
+      },
+      "png_size": [
+        2475,
+        1390
+      ],
+      "svg_editable_text_nodes": 19,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/P03.png",
+        "sha256": "3213a7f3eb4f7c3217344e2ad0ca08fb949131d77410f60099ebb885c18ccd7b",
+        "size": [
+          908,
+          510
+        ],
+        "pixels_sha256": "298c87841eb8fd1716fbb37c2315a5d76a82bb9812a41f873bfff4ff398801de"
+      }
+    },
+    {
+      "id": "P04",
+      "files_sha256": {
+        "png": "ab78b5202abcf3e87384c82b9477b938108083124d8e7ed4518607a19aba082f",
+        "svg": "e16bbb2e379a9864974ea9099087e2c196efea01f733d3ba13e20f0b701f79c9",
+        "pdf": "38aece6a3d929da586e91e4309985cb883024b0d40540261156f771610ad53dc"
+      },
+      "png_size": [
+        3319,
+        1741
+      ],
+      "svg_editable_text_nodes": 22,
+      "pdf_pages": 1,
+      "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes     15  0\n",
+      "pdf_render": {
+        "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/individual/P04.png",
+        "sha256": "149ef26c4c3147419cce3ce2c6f0cd947d0a9304634b0c906d97513d2db337e1",
+        "size": [
+          1218,
+          639
+        ],
+        "pixels_sha256": "c4cd32f75d1088b8c72032b02ed50ac117cc43822e44f134ab1fc1571ebb5ef6"
+      }
+    }
+  ],
+  "qa_contact_sheets": [
+    {
+      "category": "current",
+      "file": "contact_sheets/PDF_QA_current_20261010T115859Z_b6cdfa02a2.png",
+      "sha256": "4627c2daafdb27e4a76ea5a1379f4807551ac668605e6814be11fd811dccab29"
+    },
+    {
+      "category": "multiseed",
+      "file": "contact_sheets/PDF_QA_multiseed_20261010T115859Z_b6cdfa02a2.png",
+      "sha256": "ad311fba38f122f71402963be68f6a614187a1fd659e0ff6550f9cd713e80458"
+    },
+    {
+      "category": "efficiency",
+      "file": "contact_sheets/PDF_QA_efficiency_20261010T115859Z_b6cdfa02a2.png",
+      "sha256": "10d45d862f570c1636caf9e423abc0389ed2cbd0468ff032e32ae53d0a78c81d"
+    },
+    {
+      "category": "training",
+      "file": "contact_sheets/PDF_QA_training_20261010T115859Z_b6cdfa02a2.png",
+      "sha256": "d965c03046cc833c8b3dd760ac92466adfeea990523c65e2a5aa493920aec0df"
+    },
+    {
+      "category": "qualitative",
+      "file": "contact_sheets/PDF_QA_qualitative_20261010T115859Z_b6cdfa02a2.png",
+      "sha256": "ac5d83441dd3863b2380fc08b1809cf6af331dcafa1e21fa8becede3edb9070f"
+    },
+    {
+      "category": "mechanism",
+      "file": "contact_sheets/PDF_QA_mechanism_20261010T115859Z_b6cdfa02a2.png",
+      "sha256": "ae4eff1ec6fe452865b0dc5daafb36ec0f043ac6104679a53cc9259f2e5c7604"
+    },
+    {
+      "category": "protocol",
+      "file": "contact_sheets/PDF_QA_protocol_20261010T115859Z_b6cdfa02a2.png",
+      "sha256": "86ed5140d9e7ca95218d31516f1a868fe29c9bd66e4d16413aa11efcfceb7439"
+    }
+  ],
+  "visual_review": {
+    "status": "not_performed_by_this_script",
+    "required_record": "qa/visual_review.json"
+  },
+  "research_validation": false,
+  "new_inference_runs": 0,
+  "bindings": {
+    "manifest.json": "623c1328428b1945232b644d0e2cd4165be18f4aabe51c72bd6a6c3b1034e5b3",
+    "inputs/source_manifest.json": "4013658531193d773d33d475530123889fa39c211ea278e309f186385c297f89",
+    "png/C01.png": "828d3828041cca6ec6fd3d060228d44e6f6235f5065b84c62452e2e75ef22c20",
+    "svg/C01.svg": "9eea2be0cb0031c86d47920f49f85defe5f7ed10858d0a61d2f3e88f63afaf22",
+    "pdf/C01.pdf": "25c6a9e23dbc78ef2521aa5d3c45809d8032760b89fec40f532f5e7331c1dc0a",
+    "png/C02.png": "88ac73e710afb6dd917508cf0a3e75e02e67e0d1706a874cb75c5d900a460943",
+    "svg/C02.svg": "94aee743d91c96d427001cb7777e626a55e61181575b2f399c7aa637eb84fc1a",
+    "pdf/C02.pdf": "09f8d163d689eeeac33c93b8733d9475cc4d170b253306b9ae76c50a7236e24d",
+    "png/C03.png": "dff96a52b79d857292c7b56236f47b113272580cce2c74886020dade1f892606",
+    "svg/C03.svg": "e40e22fb4663983642b13e216d9d5458df1e733b1a0db331eb79f526fa636bb0",
+    "pdf/C03.pdf": "283c85bfd93ab1dd99e97d7852ffdc7ffadb8b11b57f89404fed68555f4651ca",
+    "png/C04.png": "afdc54116cf18c3d96ef12d647227742a770d06efeb76028ca6d785afb3749c6",
+    "svg/C04.svg": "6218e087cc236875d4214b46f60df4093aa80a43e76ec12042dd319ba43c090c",
+    "pdf/C04.pdf": "239d239a0fad0ead5737c454aa22c989ec93b210db4072187e9d5c02b7aeb612",
+    "png/C05.png": "1823dcf2467accb9f2f74faadc2f66ce51d9d5c7d36f6be2bcef9254013fc509",
+    "svg/C05.svg": "7ea670a6a6f987132c14589460cffb56f0d7be3fe8a68e39408b2936d1452ef8",
+    "pdf/C05.pdf": "ae03b40147486e2b8295cf01eea659d836e15b422acf1edf9378aaa4962de846",
+    "png/C06.png": "956f2923222dc5e59ba3bd3c577b59554dcbcb2eb22292c168684700bc331b04",
+    "svg/C06.svg": "8c46e87233227c4db0f60da4216f14eca03200c5ca413ab5a29dd557322c8351",
+    "pdf/C06.pdf": "c2dde48850fced8a59017d5b701315eebe2a3b0dea5dd430216df52ffe6cf335",
+    "png/C07.png": "11c44ad30f31f8273573e7a5731da5f213c82525c14a2f1ab0a04b1a68d52616",
+    "svg/C07.svg": "eb7ebab91ad87af1f80761b2578720abd82b9dc7b378cb6ff118277d2f146c81",
+    "pdf/C07.pdf": "655094bf77c89ad1e1380588fc0d62b5bc050cc722a45ee0fa9532e5bc1a9458",
+    "png/C08.png": "e7ea27f07d78f2a03494c3baf7f9c0c862fa1a625301f6ead8e02116a9525dee",
+    "svg/C08.svg": "7f3b24805fdb2120c16ae1d3af9c329487b865443275c18ffc1e359c2304ffc9",
+    "pdf/C08.pdf": "debb3724441b3e191cb49c23986b4e0aafcd61340c879015676fa7de5c95e363",
+    "png/C09.png": "479525032c812e26b4ebae3c0077c7f0b45db57c8371b9c6b630b8e8707fa821",
+    "svg/C09.svg": "c88839f9e859df9a91fee3ca3d0de9f430fd04d10981ac458a92f25e745ba967",
+    "pdf/C09.pdf": "583edcd91e56698d7597e28c9b03afc364089e9b75a86bc9cce3bfc5c32a4671",
+    "png/C10.png": "263c1c0a290222a15b4684668e3590d4656f58d9350992910c33fe6b361e878c",
+    "svg/C10.svg": "708902254b60fb49d7fbc105ecb7eb6d28b017d3c1deba46be72f2e00726a3e9",
+    "pdf/C10.pdf": "adfec5064234ae4e72647f628ecfa4d3515303fbb05769298a5c7edac0147e2e",
+    "png/C11.png": "b4a8c49b288912ed4dcc16160fe3826cc4ac0957c563b832cf8f50d665af442c",
+    "svg/C11.svg": "8c5df9bd300dc3339ff7ea12efd7d67b61dd1dd4333dd99b19e7807a06b3a85e",
+    "pdf/C11.pdf": "a30772f626eff1c0095b67fa030cd663202df6559663ffa1f95c4311319cb696",
+    "png/C12.png": "0964a53d89cc03f6c564f4ee97e6e7e4b407c1d35aecc440e57803299fa65bff",
+    "svg/C12.svg": "31f96933a4d328faf1274aae7c2217c1f5c1b6511990635f27600f3ade264a5b",
+    "pdf/C12.pdf": "c456fb92d3d0258fada074c834660a5a891b8a4db710fa5c67b6c84c4dea558c",
+    "png/C13.png": "b9f58af8bd4deb6800d518238304c0f0ec3024a8fab55dc0132427f622e11589",
+    "svg/C13.svg": "9d9e9905c208d9bc2ae2f4201f31d126dc0a9fca4a0f41705715a5f1b09ac2d1",
+    "pdf/C13.pdf": "a70386ba458248aa13a5e3d5c767dcaa23e37858302021212e070901f0addd24",
+    "png/C14.png": "aa3d8f76ed408a0cc48aaa4b34864d60063f6f49008d444e94d3fbda8e212b84",
+    "svg/C14.svg": "e76486545a417cb638df6768b6e9be4be79ed4633fdf88035ade1a0df7b40dd2",
+    "pdf/C14.pdf": "f8e63fd63b97da3e797e80703648a7d0eddcce3b4bd8e9165daf503159927d6c",
+    "png/C15.png": "6d15f1cff8ec2607bf5cbc89c1fdff5c1042082474284187aab3aa40a409a093",
+    "svg/C15.svg": "1f1767cc15d9481654392fdcd711d9b241e2945c442aaba74cd9e7a578cf31d5",
+    "pdf/C15.pdf": "99dd10d634bd42e0f2842f4571fced1db53dd17381a43e4254620de3698eb980",
+    "png/C16.png": "d45f1a7cf7b4a29056c900225610b3e357e51885d5e3c65946d151a3b459a333",
+    "svg/C16.svg": "d809f492a3a9f6971db3fcd5e343fddf8f4b05c16fa89062a213caca9f210c97",
+    "pdf/C16.pdf": "0b7eb2438f8380fd2f4b068a4d4638f69caea3c0ef9b8ceb79d215c6650fadd5",
+    "png/H01.png": "7784cc71786930540d5e73d215ac7b950677f5e5805a3d218d74552165b0f061",
+    "svg/H01.svg": "a6344e05b6f969821e3051a540f54403af62d26169382b780cb2a5574a8322a9",
+    "pdf/H01.pdf": "3f3c02220c822a8c54fc6e0a367304dcd27c3db1e72281362d69bc548666e572",
+    "png/H02.png": "a80f3751ea41a6ae79e2502c8914cacd465014a8ea448017a76e76c4ac50533b",
+    "svg/H02.svg": "ac63da53aea85170329b121277b413cccb747540d513ec6f40795e92035bb098",
+    "pdf/H02.pdf": "13e176d0063d536bec17d7cfb69b2663d639449b605ba2993399805a21e02c48",
+    "png/H03.png": "6b8acb0cca7fbf2bac0f33b10aa42602c4ab6e0e15b644cafc1a9918a8f0fa6b",
+    "svg/H03.svg": "209b36a8411058132c3a6346401761c59426da783c94406d83aa1791056fe34a",
+    "pdf/H03.pdf": "7f5c71fe26ac87f22953844fdb451c459a60d0ddb864977bf5ee0b312f0c4a02",
+    "png/H04.png": "bb4917e694dc3eba403361472dc17284d4b257f7c1969a261a7379666ce38238",
+    "svg/H04.svg": "fff7487f883f54fce2621e455cd9ab4b8d442a106d351e5fd2e872ec00b92ea5",
+    "pdf/H04.pdf": "88b890903d8ffb75f22a2698bade79402fad2c5423a1796bacdd26a210594ae2",
+    "png/H05.png": "a1ba342ff475943e023acd844df985351dd91931f25f2c4b9f56f05420c0bc02",
+    "svg/H05.svg": "799936ad00061c969017700469a621aba0bfd5bb5f21d15497d2d811cc8a45c3",
+    "pdf/H05.pdf": "2502a44dd8888809ee14fa7af7d0fef08fd6ba347a3ec32d6c5177a4dd761494",
+    "png/H06.png": "be7a2f2f707925cbf31f5878aa98a97e3214d7645bdd791b179f4f336d50f896",
+    "svg/H06.svg": "b5dba9d2dbc0445e141ddb596e8e0c9401cd24aa9f040cf65ede478f5a9f2323",
+    "pdf/H06.pdf": "078f892870a11d32f88056783b562f0e882be87f1b1e00a1d2f9e54e58cf2b5c",
+    "png/H07.png": "f49fcf0de9ea9995040446afb5263384cd1d06084a42247744cc7284a61a8397",
+    "svg/H07.svg": "d9cdc0871fc702cd8d10a9e0104eb4398094463003e5fe48a0f179b90e68a824",
+    "pdf/H07.pdf": "b34a08ad265b69f3bf7a02a9e587a8f7b06470d8461392840fe06690005c7507",
+    "png/H08.png": "4a087013bb49a3226aaee80dfe00f6bdbce65bbaf5459a90e35047d7be2e3ba6",
+    "svg/H08.svg": "0cc37b5a09fda0c0a5d5a33a0295953290991267d5bcb5e33aa42a64c86ed81e",
+    "pdf/H08.pdf": "2eddc74cf6612900eb6d5cc7220cd659c88f04cfdccfca160ffabde01d13850b",
+    "png/H09.png": "9a2e0e1fb4ec81ad703db8e04c5940ff5f558178db4bb48ef4ea66aace512916",
+    "svg/H09.svg": "9e049830a3cb5875636118078e4bbc61804c5267decc8df35c4ebf511022242f",
+    "pdf/H09.pdf": "6bc11839b9038eb82466f1300472c31cd60c603baddd5b77d7f85b023c14eb76",
+    "png/H10.png": "ca143366f127ebaa67bf3fea21aafaeaa8debc492de3006b30b41cde2acbf066",
+    "svg/H10.svg": "4d7d45e9122506a846cba0fc4ff65bd496563b8acf718e6e244905a52d7a906f",
+    "pdf/H10.pdf": "95ea17c7bfb345f10783cf81bd74005fde8d0268ffaab3ad01955b262b09988d",
+    "png/H11.png": "27e599f3ce0cb0bbac475aa7392faf0e7a38ab4362e1fbafdce10270d8fb127c",
+    "svg/H11.svg": "c0856538e0819e7688b6d6c1c438c5ce67fe496ce8084298a1d892ce22e4551f",
+    "pdf/H11.pdf": "4431b6f7e44014a23d810c38d92a6c6c7d97dfc5a896c30f14137b4ad92ede54",
+    "png/H12.png": "7c2e08361d09c64d002995176fcdc568e07f395feb61ee14d22fb1ce3cb82ab2",
+    "svg/H12.svg": "dc4e45cb931fd9d596e3052ceabe2e8c093d58e0a114cd5f6dce45c9cb47b880",
+    "pdf/H12.pdf": "bfc82ae17b4a04a47f789f20e65587c3b4015bdedb42ebd9975fa0d5b9dcce8e",
+    "png/Q01.png": "645ae088155a33be3b57da08b1982d73efc707ffb62d6edf24e32113c9f3be1b",
+    "svg/Q01.svg": "20e37b9ef36816276d0b9f817d9a2381f8403bb5270a4d7eca89c26a24ac4c71",
+    "pdf/Q01.pdf": "5e260cedcd76a88e05825451f212f699fb4abcfa57ef5850c1db000df9029c09",
+    "png/Q02.png": "90751a70a63f71eb8882931b845b91c5f928be2a93c83ad513f587891c5e6d06",
+    "svg/Q02.svg": "62337ee4ca16f698243a6bb6a84680bb513a533a52021ecdb7b2043122b3c736",
+    "pdf/Q02.pdf": "1a35ff2884faccdd8521bf1c7542f254daf35d52cf6071bea22ee99f0c90e11b",
+    "png/Q03.png": "9ff37e84c1807730ad67fb50315895b860ba4e2281d690e5bea3b7cfb2d7ce31",
+    "svg/Q03.svg": "a1e25e69a7adf0b36cfea0a8a547b67ae8e22f8c9edb3c3840eb77a32dcbdd13",
+    "pdf/Q03.pdf": "2ba77ddcb61e52694a82c037664368f2b79a848a7f6878d97ac42f9dce749541",
+    "png/Q04.png": "e3ebb9f963a2f5064a1d5f278ca89d2dbcf75a824f588c13772d4ac535b0e238",
+    "svg/Q04.svg": "2eb5fb7773d719d65e61db2985c3bf3604f1f4c88fab59f870a535cb797bfcee",
+    "pdf/Q04.pdf": "89afa1f75962f532942263365d7fed2d88ba747c781e47a9ac0b0fba8124984e",
+    "png/Q05.png": "47b5e4689388415fd3274cbd5d0951e2c6109cd324773a7b211141c66e749010",
+    "svg/Q05.svg": "6312379005921fa4337dcb562147efa971cb87543d36bbcd4f40d478d75999de",
+    "pdf/Q05.pdf": "aee191d88ea45d336f00f036e381536c1d6f9a2787602fc4bd6e0f82d0d14400",
+    "png/Q06.png": "b2a50fae4f8a7d730832711b3e01a073980f5b2dc955de87d550bbbe0fe95b20",
+    "svg/Q06.svg": "26722ec22fb441108813e09e77cbebf7fa694fae30bfa81a1d32c63401c632f5",
+    "pdf/Q06.pdf": "b8144682816cf39b86f8fac628b6fed93b32951a8b45c5078f82bb69347a8887",
+    "png/Q07.png": "af50c30eb75c7c64899793ff2822a6b2b7775b15015f8f57d2a41b1fb3d0185d",
+    "svg/Q07.svg": "1bf2334f650fed6fa4a645f5ef463de54ef3c2748a1c14e755f3137b9af874f2",
+    "pdf/Q07.pdf": "7fbc5f05041372018584a350455be0ad5ed463a3ce666358bdc8fc484a0852c3",
+    "png/Q08.png": "011070d6eeb54f5d95ca5ef1f58e8656221b43a2484f3b4589f734a8d514d30e",
+    "svg/Q08.svg": "b68461e7019c54047f4fbf875b59b5a64fca8d9b72286d4eb6c834c2df3cc3ff",
+    "pdf/Q08.pdf": "c3bcfe5701f2d2419c7aa94ca0aa204c29c682b5e54f8f4395e49f3ba88a1e03",
+    "png/Q09.png": "58608b6aaa59d42f689640ec89608b3e784223fdc43e674e52d6a475788e9c74",
+    "svg/Q09.svg": "4b04d6837447ceab26450a2ea5f1126c5a6ff239b718421f51164a1a95435421",
+    "pdf/Q09.pdf": "337d11b1a24f9ff84ae3111ebb4d0e34186796086b2e168c20977c179e3700d9",
+    "png/Q10.png": "51a3301563d716fc615188f181a2be0901478e2b82da270c7fac6728e3382452",
+    "svg/Q10.svg": "8e8c461eba99ab43c3a8942226a0963533b86315a35da6c3f6fb0db3ee7087fa",
+    "pdf/Q10.pdf": "68680490f09e00609fb0af7603183416c99bc2af520726f4331c0f0f54f8c94b",
+    "png/Q11.png": "950bbfe0cc703cba104a54ae4bc702a95e3c4a1f8ec943c55f3f934fc075aa7a",
+    "svg/Q11.svg": "52e1732171bcd740536aae2ef1ba08c30a3877ff1dd05dcda206dc400ec12d63",
+    "pdf/Q11.pdf": "3dbe41d2dfe926110ba9a99580e95cd694d10a76fa3a3d1133573cc988bf1a92",
+    "png/Q12.png": "c675e47ff4fc695557286ae47cfcd1cc27beed1a5ab4df1a83d6a09377ae3ca1",
+    "svg/Q12.svg": "602eb132c5f619915125790ad259d19510b00db68a7b83e88238b413e8ff6382",
+    "pdf/Q12.pdf": "412cfc3922bf367c19bdf13ac9d9c8af7eb236d5c5197fc1363db94f5da1285c",
+    "png/M01.png": "2ab4bf1f1a317351203a18cc96b67fadd4fd4df907f47bd8588a83aa86c57716",
+    "svg/M01.svg": "7e4001a0a808cf329a38150811ccf1bc5eebe9d76c731898418122b768bbee0f",
+    "pdf/M01.pdf": "0b5bd10ebd253eedb926cdde4fb5dc1f76376f8f1f6e409ed987e2f7014fea1c",
+    "png/M02.png": "2fa3f90b58075d3d04bd732bcbb73349eb86c93f1bb7146c4a96e40da98cb632",
+    "svg/M02.svg": "183fd159352a38a56fe94087b46eab19c444a0116a509e8b4e2540d06434e7f7",
+    "pdf/M02.pdf": "54695373dfd8692d6699983cad010809c49324674ab02cc51c1c325fba7776c1",
+    "png/M03.png": "c4e42233cf6e21e5ca65362861e24eea4059a7725f53899de4709a9cb154ad6a",
+    "svg/M03.svg": "3f8513c65467f683f9fc4ffea61626fce918a39e56d70761c1dcb460132354cc",
+    "pdf/M03.pdf": "6228079fadafa6fad42ae69302d4959e2f7985485a4b85f6d89148aaa602ba3b",
+    "png/M04.png": "0a329911bbea742833c0a4a5c95bee9f19b6c488b222f1f117b77d207e55583e",
+    "svg/M04.svg": "5624a05bdb559ceeadf48e224c42ac2796fe300a80abef613e156dcf87debc77",
+    "pdf/M04.pdf": "3d6b3aba64516c450d5825d9051a08b1a24de3c94ef3f2a25d7d8a71713404d6",
+    "png/M05.png": "36d259c57e40c56a997ad53243aa1f157aa5b244b570b5e5911e671341270166",
+    "svg/M05.svg": "8c62cf4fdce63303e5d5219fb5686486a6d5c67609d493222ba47a5f8fabc33d",
+    "pdf/M05.pdf": "4ea6991748eaafdea5340c9ca45eb075788000e3c09d89a1c908548be9434699",
+    "png/M06.png": "a08724e832ae33d6d50da61ccf0911f39b80154ae1fc6d26ec350848d1f64537",
+    "svg/M06.svg": "2074992dab55d1872e054866cceb84994fdc992952aeca4e18c78722f695def0",
+    "pdf/M06.pdf": "634db985d614e82357d56960f9420b9cb4839bef5934f9c0e7870174f60c82af",
+    "png/P01.png": "ad5f58976fe68a894bc3eda11de4e88f3281fec901cfcfbd629eb64588ab7489",
+    "svg/P01.svg": "73c49552e76f1d668c24426ba01f664e71f18292661f2b6a8c2082346758be89",
+    "pdf/P01.pdf": "7ed96658393c84ec5c70e67f345a5e61957e24dc12425c7184056b516490e3b2",
+    "png/P02.png": "d0c40e26b142d4bc61d76caacd6df284e75484c9b8c552beb9905d1c8b1f9104",
+    "svg/P02.svg": "1a56426458022af1ad561b72bff8367c3ffe60ed239ff2fc83eacfd5dfc7613f",
+    "pdf/P02.pdf": "0e4917f1c49de57d8cb2d469808f201a54e6476995f2435f8d5f96204abcb919",
+    "png/P03.png": "b0333f5e25e2cd740c3a10bd8620545cb06892b10968ad24554a16f98972bd3b",
+    "svg/P03.svg": "2fb293e2efab33763110ab3949d92435754d60fb962b5c9b54a7a5e39151bee6",
+    "pdf/P03.pdf": "b87d80d11da02a9fadd45762addb54bb60264154921d39fb0367a0ec069543eb",
+    "png/P04.png": "ab78b5202abcf3e87384c82b9477b938108083124d8e7ed4518607a19aba082f",
+    "svg/P04.svg": "e16bbb2e379a9864974ea9099087e2c196efea01f733d3ba13e20f0b701f79c9",
+    "pdf/P04.pdf": "38aece6a3d929da586e91e4309985cb883024b0d40540261156f771610ad53dc",
+    "gallery_booklet.pdf": "4c8972f2afc0e309eb1e0b177d38e7e19964461f15379a0ae7592b0dcd5818b1",
+    "inputs/latest_seed0.json": "61fb0ab3c75d1b8b51a1c8328d82a29ebcaa9c8df4184cb67caac089ecf20f1a",
+    "inputs/ssdd_legacy_individual.csv": "4632e57fdc9ff5e1a3abb771471d05bef82504d4e0c6e5a183e64c5735975036",
+    "inputs/ssdd_legacy_summary.csv": "64d4b908455dba4b5fe3f17279cd11c032e10b5586f9361122816ad418b223b3",
+    "inputs/ssdd_legacy_protocol.md": "b82e24a51cbe230b016783197bdce731da6b12e06462cf5b885834365890bcb8",
+    "inputs/sadd_3seed.csv": "33e118f5e4f321c8b38726cc0a68b41abc68e9a03494dc5d55a29a4d63729ea7",
+    "inputs/seed0_review.md": "6129b5556e3cf75b4597def0c17c6a7961ad06a28c4ec9c1e1720582ae54c6e2",
+    "inputs/project_state_snapshot.md": "e52bddbad36c7e781e0c5b3164a06413bf61437317b095135c4a63ac9f591839",
+    "inputs/historical_maps_summary.csv": "098499630ed4980d50de96ff502db32a88dab021a62f5553973fb573404d634b",
+    "inputs/historical_maps_manifest.json": "9d99fa4ccb2c47552f6575d60d515b19a7c26532e2602a08b017b44ac4f11bf1",
+    "inputs/historical_capture_source.py": "dbb9a5f7faa40dabfa9d9bf59bf63d6e3066f0fa815ab246e55cb637682a857b",
+    "inputs/frozen_mamba_yolo.py": "05d1900840474e068aec65bc30ca81501fce55a464ca0dc3fbe60054885aade3",
+    "inputs/frozen_campaign_manifest.py": "ff1f6708e735d5bd91d9c341edfcfdcc714829c5ab5ee0c6110df263d5b6fed7",
+    "inputs/method_manuscript_snapshot.tex": "b6dd4049cb72236156731c99af25e86e377fc3dbb7be5f672c924d1da000ce1c",
+    "inputs/ablation_manuscript_snapshot.tex": "f2b821cddca6af8e45524c64d323817bffd47051eb0499517169b8b0f71cf403",
+    "inputs/historical_training.csv": "ddb218073bc79567df8224d6012484b57c0008250c9e7dad314ef83695e52d08",
+    "inputs/historical_training_args.yaml": "ddeaf739a34f98151e26b596c5238634dfa935e2e20fcdcbeab75e2d403e1c33",
+    "inputs/arrays/000099/raw_importance.npy": "b4e7b014133dbf3e84347884fbfb92808fbbe1d7c803075cb36b83f8a5155acc",
+    "inputs/arrays/000099/raw_input_energy.npy": "d0d3c1ac746f7160b228ff4c7adbaf18b80228c090be2e5d412918dd4b91784c",
+    "inputs/arrays/000099/raw_corrected_energy.npy": "082dbc3e433325a858cb49f429f6494b3cff3a15e02602256a680c04e373bf4b",
+    "inputs/arrays/000099/raw_residual.npy": "5b316270efa8700b9b12548bef34317568dd4052cf02b8d8f697e3ebc7f17777",
+    "inputs/arrays/000099/raw_correction.npy": "06c086708e3268fcbd28ddb50b15c3f0926f535a4567003d8c5e275c0e581929",
+    "inputs/arrays/000099/raw_drive_gate.npy": "8f983af320fda9e660848ae8ea7a4fdcb0d41f1486e9f8f56336489b4fe6e082",
+    "inputs/arrays/000099/raw_delta_bias.npy": "602c74d136d90999983a167d5502273ec4bb31b61483941b4987d2893000d02c",
+    "inputs/arrays/000531/raw_importance.npy": "9780e2510531aa22bb66cb25ef720dc0194df4d1c1d1b87e8aab07e0b398bc7a",
+    "inputs/arrays/000531/raw_input_energy.npy": "3ec0712765ce227efb6368c81aa1f69e8df39a507c9749dc058aa6ec849bbd6e",
+    "inputs/arrays/000531/raw_corrected_energy.npy": "5cd1b112b349bb44b0a38ecf63fbeb185f2712657c4fdeabf0848d6de4a73e73",
+    "inputs/arrays/000531/raw_residual.npy": "da9e14423c6736f4697aa4752fdf4efae46fea7916950e793a3e001506f691cb",
+    "inputs/arrays/000531/raw_correction.npy": "a037ff5997caafc5eb220fe4a8f969635a50fa7efbe9f507f85e477288b21f00",
+    "inputs/arrays/000531/raw_drive_gate.npy": "35c113fc4da4e86a1c2590c31bbb12ce07d83a26973da1129f526a1eb9119de3",
+    "inputs/arrays/000531/raw_delta_bias.npy": "d8842aa530f358f7745c5a843381899118bb7ed46633391f1372660710e9b129",
+    "inputs/arrays/000929/raw_importance.npy": "320a35dc6871ac6b69d876aefe86a7dbd8041c351d4ba708951d19ba0df97e11",
+    "inputs/arrays/000929/raw_input_energy.npy": "17cb7aa76d812ae0cd411fb8e34a7bf2fc296559ddf5830e345d11da1306346d",
+    "inputs/arrays/000929/raw_corrected_energy.npy": "015e7fdab50712648045e704af71f9d859f460cdd594e6410757d299965d0184",
+    "inputs/arrays/000929/raw_residual.npy": "6f3fda97f621ae64e4da2d9f4b5da8b58fdbca0e02cc3078b5c053a84f483e78",
+    "inputs/arrays/000929/raw_correction.npy": "08025d24da1a468e19318699593dd466471995b4f868cec1d0ac13d7e5d91642",
+    "inputs/arrays/000929/raw_drive_gate.npy": "a0014f006a15849a25e2e302c78d643909ef857e549d120585f5bba49d5ad50b",
+    "inputs/arrays/000929/raw_delta_bias.npy": "49c3f37e5a8228c7112e5ed9d8ad6d39c4d2a1d18962c2348d1910f4084282e3",
+    "inputs/arrays/001081/raw_importance.npy": "8fb179665eabb1b8cb90837b825e73a9207b35bfce8eacdfcf3198597ee6c983",
+    "inputs/arrays/001081/raw_input_energy.npy": "8e6fd4830a8a70555190dee21a070cd73f4bf563dd5504e6c184865b07879433",
+    "inputs/arrays/001081/raw_corrected_energy.npy": "25a188fc35c11a6b638dc9b690cd65ae52076d4ab9066c9ed96b7037e77de0c8",
+    "inputs/arrays/001081/raw_residual.npy": "0b32621c613fa7ed93e01b8d4d027a2d6ce9936533cd2ef56a311123b8e2090a",
+    "inputs/arrays/001081/raw_correction.npy": "2a2533a30955ece7739ae5784d971b30b9795939856d0bb2913fd643353b97be",
+    "inputs/arrays/001081/raw_drive_gate.npy": "952950a2032a515387481b578045949caaebdec7463b6ab472d9f2cb1acb8511",
+    "inputs/arrays/001081/raw_delta_bias.npy": "4c6387ffdcb68b04a0f5a429dbefcf58d0147f17ea9586623e9f1d24633a6cb3",
+    "inputs/arrays/001131/raw_importance.npy": "34bf162642ca34b979c3f71c5b3fdbce6b67a4c11579c391f96274bf2eeedcfd",
+    "inputs/arrays/001131/raw_input_energy.npy": "166f5811a51b453d0fae4c37f8402a2c415c487b19e5cf309d82df012da19953",
+    "inputs/arrays/001131/raw_corrected_energy.npy": "798094ec6a970d07a0af97953cf09597049e2bc24a1688dd1069d16aed6143f8",
+    "inputs/arrays/001131/raw_residual.npy": "879303134ea538db066b29bad4affde542d411114f7e949727369c941e0686ef",
+    "inputs/arrays/001131/raw_correction.npy": "f2008ec5ca493ce147b4c236780cbf84a6f3a939da70f59b4c5fd6f71e54a011",
+    "inputs/arrays/001131/raw_drive_gate.npy": "1291e739f59ed19c45e93a7c32baf949887357c489edb861cd2a45217d4b6507",
+    "inputs/arrays/001131/raw_delta_bias.npy": "c6029a9e319c29ddf395089fa610d98b037ec22be0f84c9f207004a1d05749a5",
+    "inputs/arrays/001111/raw_importance.npy": "166eac037b804445de2c46a470c517bb2b18caedae2b5efbf0f36eeb480f4f7a",
+    "inputs/arrays/001111/raw_input_energy.npy": "c92a7e00fe8452388058a6c0f027edad7470c493062a4559079bd06049b1b05c",
+    "inputs/arrays/001111/raw_corrected_energy.npy": "9c615bde5f0e6c518c4b8fd55b4911ae6caf8075cf0f2893d203b7f676e617b9",
+    "inputs/arrays/001111/raw_residual.npy": "0b68f7a67dbfc9770ba25b2639dc76a4bb6f60bd05c8802292777bd915f5ef23",
+    "inputs/arrays/001111/raw_correction.npy": "ca5f0c706ee0805a4d1827a9542b36715a92638768f7d818ef1bf86fc1412829",
+    "inputs/arrays/001111/raw_drive_gate.npy": "ae402c3c3bf50f179e8d8d4d56c733e08b67ee10a2914224e6b30823efe4a756",
+    "inputs/arrays/001111/raw_delta_bias.npy": "81af481ff4e5f3a35fa30e22496e5d418b5e6ae5218f9a75f54994e5797b37f3",
+    "inputs/images/000099.jpg": "94dea1bfb9ff265d3874d26ed0496bcefa7828c1afb8ea8a1c4faa00b9fc8c8b",
+    "inputs/images/000531.jpg": "43f18920a8ac6b92791182ed0a37dc2496eb74877c60d2a9529f2b28184b8c9a",
+    "inputs/images/000929.jpg": "72a5f13049d9ba48abee2ad7167254f1539f1fb48bf65494ad32f6bab048dc25",
+    "inputs/images/001081.jpg": "68090f86990afb3d1b6e41ab69bfd7c0889706951ed3de9383074534cef2dbd5",
+    "inputs/images/001131.jpg": "b4aa358d6fec34ed3f1ba41ca4f3ed0b6a5a855a2e84a8120aae832051da80fb",
+    "inputs/images/001111.jpg": "79b41940970c9ea12c7a966f995b27fd28db8545b69f40da9824c51eeecf2383",
+    "inputs/ssdd_test_coco.json": "021d52858ffa3fda9a2d28ee21f1ca114800554edf08007704f6d06a412d50bf",
+    "index.html": "245dd1abf7b1c2e6c819b0d05abeb71c383c78bef0f37786181d9cf86d96bfcf",
+    "code/build_gallery.py": "03478d8ba7b82760fe132846da11f835e7146cb860adef351b22c485941d11c9",
+    "code/common.py": "aaf80656d42f48b86305ef83698c2ba2212072eb2d216fb6fe02fd87ec0d4b21",
+    "code/method_diagrams.py": "369f30497bdf0683b6a15c4e4bef8cb0ad51e37508a9947e6661ed83f6578193",
+    "code/plot_current.py": "0710e87a4248cdc591e190694b543023f58795292cda09bbd140e723aa7dc15a",
+    "code/plot_historical.py": "f586196f971d011461f3bb461f8e9ef26ada5469013af62b864a73c219d12695",
+    "code/plot_protocol.py": "fd1d5c1f52c85e67c173bd30c313a085b56ffe7e23e2bf25d96903444abdf922",
+    "code/plot_qualitative.py": "b27d9334fdd46dc4d38cf790dde7958cee281fe3328434bfebe9a06c7ce6d272",
+    "code/verify_outputs.py": "eeffb2701c4495f65a23588b7e25f0d46ecfff79c0c67e6df35b39e2a02fdbf8",
+    "code/package_gallery.py": "ef11186f041b626895e538cd257b95e67c24f946615a301880ec96a57fb89863",
+    "code/stage_inputs.ps1": "15b2aff881a4dd86577ef0b0ccf50ebdf04170515eb3ffc5c2923f4a3ed0925c",
+    "contact_sheets/PDF_QA_current_20261010T115859Z_b6cdfa02a2.png": "4627c2daafdb27e4a76ea5a1379f4807551ac668605e6814be11fd811dccab29",
+    "contact_sheets/PDF_QA_multiseed_20261010T115859Z_b6cdfa02a2.png": "ad311fba38f122f71402963be68f6a614187a1fd659e0ff6550f9cd713e80458",
+    "contact_sheets/PDF_QA_efficiency_20261010T115859Z_b6cdfa02a2.png": "10d45d862f570c1636caf9e423abc0389ed2cbd0468ff032e32ae53d0a78c81d",
+    "contact_sheets/PDF_QA_training_20261010T115859Z_b6cdfa02a2.png": "d965c03046cc833c8b3dd760ac92466adfeea990523c65e2a5aa493920aec0df",
+    "contact_sheets/PDF_QA_qualitative_20261010T115859Z_b6cdfa02a2.png": "ac5d83441dd3863b2380fc08b1809cf6af331dcafa1e21fa8becede3edb9070f",
+    "contact_sheets/PDF_QA_mechanism_20261010T115859Z_b6cdfa02a2.png": "ae4eff1ec6fe452865b0dc5daafb36ec0f043ac6104679a53cc9259f2e5c7604",
+    "contact_sheets/PDF_QA_protocol_20261010T115859Z_b6cdfa02a2.png": "86ed5140d9e7ca95218d31516f1a868fe29c9bd66e4d16413aa11efcfceb7439"
+  },
+  "html": {
+    "cards": 50,
+    "local_links_checked": [
+      "README.md",
+      "code/method_diagrams.py",
+      "code/plot_current.py",
+      "code/plot_historical.py",
+      "code/plot_protocol.py",
+      "code/plot_qualitative.py",
+      "contact_sheets/START_HERE.png",
+      "gallery_booklet.pdf",
+      "manifest.json",
+      "notes/conversation_audit.md",
+      "pdf/C01.pdf",
+      "pdf/C02.pdf",
+      "pdf/C03.pdf",
+      "pdf/C04.pdf",
+      "pdf/C05.pdf",
+      "pdf/C06.pdf",
+      "pdf/C07.pdf",
+      "pdf/C08.pdf",
+      "pdf/C09.pdf",
+      "pdf/C10.pdf",
+      "pdf/C11.pdf",
+      "pdf/C12.pdf",
+      "pdf/C13.pdf",
+      "pdf/C14.pdf",
+      "pdf/C15.pdf",
+      "pdf/C16.pdf",
+      "pdf/H01.pdf",
+      "pdf/H02.pdf",
+      "pdf/H03.pdf",
+      "pdf/H04.pdf",
+      "pdf/H05.pdf",
+      "pdf/H06.pdf",
+      "pdf/H07.pdf",
+      "pdf/H08.pdf",
+      "pdf/H09.pdf",
+      "pdf/H10.pdf",
+      "pdf/H11.pdf",
+      "pdf/H12.pdf",
+      "pdf/M01.pdf",
+      "pdf/M02.pdf",
+      "pdf/M03.pdf",
+      "pdf/M04.pdf",
+      "pdf/M05.pdf",
+      "pdf/M06.pdf",
+      "pdf/P01.pdf",
+      "pdf/P02.pdf",
+      "pdf/P03.pdf",
+      "pdf/P04.pdf",
+      "pdf/Q01.pdf",
+      "pdf/Q02.pdf",
+      "pdf/Q03.pdf",
+      "pdf/Q04.pdf",
+      "pdf/Q05.pdf",
+      "pdf/Q06.pdf",
+      "pdf/Q07.pdf",
+      "pdf/Q08.pdf",
+      "pdf/Q09.pdf",
+      "pdf/Q10.pdf",
+      "pdf/Q11.pdf",
+      "pdf/Q12.pdf",
+      "png/C01.png",
+      "png/C02.png",
+      "png/C03.png",
+      "png/C04.png",
+      "png/C05.png",
+      "png/C06.png",
+      "png/C07.png",
+      "png/C08.png",
+      "png/C09.png",
+      "png/C10.png",
+      "png/C11.png",
+      "png/C12.png",
+      "png/C13.png",
+      "png/C14.png",
+      "png/C15.png",
+      "png/C16.png",
+      "png/H01.png",
+      "png/H02.png",
+      "png/H03.png",
+      "png/H04.png",
+      "png/H05.png",
+      "png/H06.png",
+      "png/H07.png",
+      "png/H08.png",
+      "png/H09.png",
+      "png/H10.png",
+      "png/H11.png",
+      "png/H12.png",
+      "png/M01.png",
+      "png/M02.png",
+      "png/M03.png",
+      "png/M04.png",
+      "png/M05.png",
+      "png/M06.png",
+      "png/P01.png",
+      "png/P02.png",
+      "png/P03.png",
+      "png/P04.png",
+      "png/Q01.png",
+      "png/Q02.png",
+      "png/Q03.png",
+      "png/Q04.png",
+      "png/Q05.png",
+      "png/Q06.png",
+      "png/Q07.png",
+      "png/Q08.png",
+      "png/Q09.png",
+      "png/Q10.png",
+      "png/Q11.png",
+      "png/Q12.png",
+      "svg/C01.svg",
+      "svg/C02.svg",
+      "svg/C03.svg",
+      "svg/C04.svg",
+      "svg/C05.svg",
+      "svg/C06.svg",
+      "svg/C07.svg",
+      "svg/C08.svg",
+      "svg/C09.svg",
+      "svg/C10.svg",
+      "svg/C11.svg",
+      "svg/C12.svg",
+      "svg/C13.svg",
+      "svg/C14.svg",
+      "svg/C15.svg",
+      "svg/C16.svg",
+      "svg/H01.svg",
+      "svg/H02.svg",
+      "svg/H03.svg",
+      "svg/H04.svg",
+      "svg/H05.svg",
+      "svg/H06.svg",
+      "svg/H07.svg",
+      "svg/H08.svg",
+      "svg/H09.svg",
+      "svg/H10.svg",
+      "svg/H11.svg",
+      "svg/H12.svg",
+      "svg/M01.svg",
+      "svg/M02.svg",
+      "svg/M03.svg",
+      "svg/M04.svg",
+      "svg/M05.svg",
+      "svg/M06.svg",
+      "svg/P01.svg",
+      "svg/P02.svg",
+      "svg/P03.svg",
+      "svg/P04.svg",
+      "svg/Q01.svg",
+      "svg/Q02.svg",
+      "svg/Q03.svg",
+      "svg/Q04.svg",
+      "svg/Q05.svg",
+      "svg/Q06.svg",
+      "svg/Q07.svg",
+      "svg/Q08.svg",
+      "svg/Q09.svg",
+      "svg/Q10.svg",
+      "svg/Q11.svg",
+      "svg/Q12.svg"
+    ],
+    "external_references": [],
+    "browser_interaction_tested": false
+  },
+  "booklet": {
+    "file": "gallery_booklet.pdf",
+    "sha256": "4c8972f2afc0e309eb1e0b177d38e7e19964461f15379a0ae7592b0dcd5818b1",
+    "render_dpi": 110,
+    "pages": [
+      {
+        "page": 1,
+        "id": "C01",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-001-C01.png",
+          "sha256": "8d2eae8fabea3cb30ca355d9b34f9ec9c2be951333b53122fc346b57b823e364",
+          "size": [
+            898,
+            917
+          ],
+          "pixels_sha256": "57cee86e0824e649b988ab8478ca7a63c7193561dc75f825b673cd9897f2cdae"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 2,
+        "id": "C02",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-002-C02.png",
+          "sha256": "b3c7ad20f0ecb04938914ef1165889872ad9bf70a8d0a30272753bf5678664cb",
+          "size": [
+            898,
+            605
+          ],
+          "pixels_sha256": "a2ec962aea120a36dce84f99e7bfa50eb146856afbfcbb13d9baad935fc3763d"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 3,
+        "id": "C03",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-003-C03.png",
+          "sha256": "05527158e338e3670fdaec3956efe128137e7f0300fd7b0373da1fe6ac918269",
+          "size": [
+            922,
+            906
+          ],
+          "pixels_sha256": "6511434bd0be7686658f10077234710f3cd14ce7b060f121404cb48bc0418746"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 4,
+        "id": "C04",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-004-C04.png",
+          "sha256": "47f7cc3b130e51c320c3dd77cfcccc3108187f8c3601a65219c54e378d2484d0",
+          "size": [
+            922,
+            577
+          ],
+          "pixels_sha256": "39807be0b3546059334fb004b699b6f28cd528390f475d1805d3dfb2d39424f5"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 5,
+        "id": "C05",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-005-C05.png",
+          "sha256": "2739d6f1c45c4172408636e9df24ae4f747fc0a640565b4596a9dd9fadcb7b40",
+          "size": [
+            1128,
+            575
+          ],
+          "pixels_sha256": "275d2e74882daf2ef3a600581d76fcdd46c415164f135281bee08df4605b4f5d"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 6,
+        "id": "C06",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-006-C06.png",
+          "sha256": "621535c8437aecc858183a63cec911c225dfba5134741d31d34865903530eebb",
+          "size": [
+            980,
+            607
+          ],
+          "pixels_sha256": "f65b69ee58d17721bec457c5dd5a40f9f241a955625891966152c304d3e5c39f"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 7,
+        "id": "C07",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-007-C07.png",
+          "sha256": "58d9d2a0413eb3d4c86cca3d36fcf9a4bad506fcecbdeaa1eb370f361b92fa77",
+          "size": [
+            980,
+            607
+          ],
+          "pixels_sha256": "469c99985d85d0ae7f6050838d3080b07065098e85306c370cf40a935c39d7d1"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 8,
+        "id": "C08",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-008-C08.png",
+          "sha256": "636a05be05775249f75f0320dd934233213e32025389dd56b19cc62473185b3a",
+          "size": [
+            1122,
+            575
+          ],
+          "pixels_sha256": "4bf32725a6aa445f0ae594aeb91cac92ce937d81fa5c9013a52c7ca90b4e3c1b"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 9,
+        "id": "C09",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-009-C09.png",
+          "sha256": "3ee1e1275f4bd12db7664cf7e0f1515e6517ce81e182140dfede94ef2b11afce",
+          "size": [
+            1103,
+            585
+          ],
+          "pixels_sha256": "0f9c732a3ada1724223a5d621dfd37bf190c4a2e41da757c066d27d71e5cb777"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 10,
+        "id": "C10",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-010-C10.png",
+          "sha256": "5f4e8a400bd91633942b6ecefb624ca49e981e08c621a28772b6d910f884deb8",
+          "size": [
+            1283,
+            617
+          ],
+          "pixels_sha256": "1ebcced27e6a0c4613857ccf4af19b4f096f3cbfbcc598fcf6616009edfff8b1"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 11,
+        "id": "C11",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-011-C11.png",
+          "sha256": "9a6e050243a248f2d970aaf0dc8ab6b88386a334eb68ccb8cc68051e6ed35314",
+          "size": [
+            939,
+            532
+          ],
+          "pixels_sha256": "857b1d9f52fb47968eba9d96cda735f41d6b93a53a7144d91545b4803fba4e98"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 12,
+        "id": "C12",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-012-C12.png",
+          "sha256": "3195baed29535ad9fd23362caaa2d78008206f53d0d5884ca9acd01075ca2114",
+          "size": [
+            939,
+            532
+          ],
+          "pixels_sha256": "3f73d7f0698ddbebf3f13910b6d2d6fc7bf6a73a4cfc690658f90f503284a874"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 13,
+        "id": "C13",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-013-C13.png",
+          "sha256": "6934b866c955923eaa5ac99dcefdba97a6d6d0022cb66bc91cc545bca019510a",
+          "size": [
+            939,
+            532
+          ],
+          "pixels_sha256": "e05c47be5503450b02c037faf9c1cc0322b1bc6742d0d90ec95d3f15e59b124b"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 14,
+        "id": "C14",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-014-C14.png",
+          "sha256": "f7a1984950b2d8aad563a83cfcff70e74503b0ba1f67ae06858e5180e1e9cfcb",
+          "size": [
+            939,
+            532
+          ],
+          "pixels_sha256": "c324b97aa30f78f705bced1fcd2ad41fb98d1ec7d53d096cc5e2266b280e74ba"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 15,
+        "id": "C15",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-015-C15.png",
+          "sha256": "0e4d07b8f8e29cb0c8977fe1186fe257b7866a659eecf2a57e529ade8ddea0df",
+          "size": [
+            1087,
+            575
+          ],
+          "pixels_sha256": "9c72cd16915e3d82d119cff1b5ee60df74fa9a7ccfc8f9491916f5e976e87532"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 16,
+        "id": "C16",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-016-C16.png",
+          "sha256": "fc39a8d61dcd2ddbe6552591ea5db2316765efadf0a3f4325ea88f4d124e6291",
+          "size": [
+            1153,
+            1335
+          ],
+          "pixels_sha256": "92c361495a3ea96b48e8b0f15f229db68c70dd417ff3157738116aefce06f3d1"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 17,
+        "id": "H01",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-017-H01.png",
+          "sha256": "e27bcb787716b616c0c48c5300399e37867a6aff53841dcc304d2586edfe5daf",
+          "size": [
+            922,
+            553
+          ],
+          "pixels_sha256": "5450126c6317fdf03cd4fa619af5695f43d23375c117fea74a25731f8756d065"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 18,
+        "id": "H02",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-018-H02.png",
+          "sha256": "b96b0f69e1499d2dfcbe290299f8996a8bcd36311bd2815940c89a533b5217a8",
+          "size": [
+            959,
+            617
+          ],
+          "pixels_sha256": "b14bf62ed80f6e437b4c237d3fa32e163b64da380be34261f8bcceb583ca8878"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 19,
+        "id": "H03",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-019-H03.png",
+          "sha256": "be1c69e447069eb0724404f08aad1cd4c4ba54865f9a0def3b77c85366a722ef",
+          "size": [
+            1109,
+            532
+          ],
+          "pixels_sha256": "161d53872eebc800c2c22ee129e3d4c891d5054ad75d29d6d085eeea5612dfb0"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 20,
+        "id": "H04",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-020-H04.png",
+          "sha256": "f19c9f81b55ab019832470c71f2bfefd68ea61356765a4dc92d846f201ec4814",
+          "size": [
+            963,
+            585
+          ],
+          "pixels_sha256": "0b621ae8397eee2f6b5f8e7fbcb838f86c57b8ac329b23ffbfee27c5b62348c1"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 21,
+        "id": "H05",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-021-H05.png",
+          "sha256": "989288ed5ed2126c59eb0756718d99472567950ec963b921ed91db7fb468ac9f",
+          "size": [
+            918,
+            553
+          ],
+          "pixels_sha256": "a83a48ee86a57876caff1e6bfec1e5bbb1a8f527884ff10521b272b4e59e3ebb"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 22,
+        "id": "H06",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-022-H06.png",
+          "sha256": "c779e554b14651b1055f63a62daf02d52fac6c6872163e45d09a51b9d8c3d66d",
+          "size": [
+            959,
+            617
+          ],
+          "pixels_sha256": "cc25847d8a4f5a24adc97555d6d9fadf47ce01820565706b4a48b95d5e02959a"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 23,
+        "id": "H07",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-023-H07.png",
+          "sha256": "d72adf592e97c84d8bd8136b912be7d1792572e4270c3da103def13ef175649b",
+          "size": [
+            1109,
+            532
+          ],
+          "pixels_sha256": "33d1beb313a64ddc579e548a727f051ae7b205011984ab28757d99b5e9debfe4"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 24,
+        "id": "H08",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-024-H08.png",
+          "sha256": "51131358f1ea4ca477894f5991742553c9ef93b7b8e7d38b4e095dc638047a9e",
+          "size": [
+            963,
+            585
+          ],
+          "pixels_sha256": "9a7812ff2e69996d180175021b3755ecc027b336fd0b75f9d3050228f5b3a5b1"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 25,
+        "id": "H09",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-025-H09.png",
+          "sha256": "069dfd578ffab24f0bddde9d222f3d4452166b50774ab5a0a242bd4aaff27870",
+          "size": [
+            1123,
+            553
+          ],
+          "pixels_sha256": "81ba6cb0518122cec94ce259fea9d2b1891e3916094a777482c96fdad1ddcdea"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 26,
+        "id": "H10",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-026-H10.png",
+          "sha256": "f488d794bf5bedb7e90b356cf1dbe0a1e8a3e7dcd09ee48e7bd86736f89ea54d",
+          "size": [
+            1021,
+            628
+          ],
+          "pixels_sha256": "0d6145bb4f97fe8cda27760970f2d0aa4200ef5b8822f01bfc07ed4b600bd782"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 27,
+        "id": "H11",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-027-H11.png",
+          "sha256": "9b1c18ed14075fff3e147c224399de3e6a167b3ed9ad78a7afc8e178733e0184",
+          "size": [
+            990,
+            543
+          ],
+          "pixels_sha256": "d293ebd807f70954acee418cc06827626227e648c3ee518bb9597d4837355d4a"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 28,
+        "id": "H12",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-028-H12.png",
+          "sha256": "8a91b7a3264bfb926c30fadbd7f8e151fcdc51e7cdbf35dc928c0d5b682fba3c",
+          "size": [
+            1236,
+            500
+          ],
+          "pixels_sha256": "57a7342c3b7b3b5ed1b9040ab21e49205590a9bb273a9743f70e9a8d7f5e234b"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 29,
+        "id": "Q01",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-029-Q01.png",
+          "sha256": "e32c08ef383edb2a79f6f4e5e2c95728762bc3546c3866408de5cd5c7d0e5b2b",
+          "size": [
+            1301,
+            746
+          ],
+          "pixels_sha256": "cabb2786b9f12d67dce6cdf2c8d7bc0fd45701cc6b9f9177cd9563820589af59"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 30,
+        "id": "Q02",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-030-Q02.png",
+          "sha256": "8e47109d61b60806d3720e2d65024f74b9b2ed31bcbee90eeca50dda284c26e9",
+          "size": [
+            1301,
+            746
+          ],
+          "pixels_sha256": "26a0a91f15c668afc9337cc5d2bd7644be4037a8f796f17c80a1b334259b8f0d"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 31,
+        "id": "Q03",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-031-Q03.png",
+          "sha256": "130619da276a207e7231e803a22e2dbb0bdb4bfbbb254cf1439681a5d8910372",
+          "size": [
+            1301,
+            746
+          ],
+          "pixels_sha256": "06eaa5a91149bde9ca64de3191cd50c4e7efe13dc0833f34e9b31ef0801d224d"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 32,
+        "id": "Q04",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-032-Q04.png",
+          "sha256": "3e65112e5ee0316aa566a642fb71bbda88588ffe2cdf902f6bacc5992477758d",
+          "size": [
+            1301,
+            746
+          ],
+          "pixels_sha256": "f991273627c68425c2bedf731692382a5e6882f3cf53260323630cc1aece1cad"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 33,
+        "id": "Q05",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-033-Q05.png",
+          "sha256": "00cc6a3d663ba3850c5ebc44c5662f0a54f7eb24d5d0faf73d6a61968850be54",
+          "size": [
+            1301,
+            746
+          ],
+          "pixels_sha256": "323391d52546227c0668993fb8eb079c5f7874b0efbfe02666ea5ba529719606"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 34,
+        "id": "Q06",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-034-Q06.png",
+          "sha256": "5e6930a1f072494cd94ee0dfc18c4e86b921d2b75ac36b7c30d5e7c128f64349",
+          "size": [
+            1301,
+            746
+          ],
+          "pixels_sha256": "577e3efb4518a5e089b42b9f2caab2273c2cd4260f7986c1c8ac072607ee331c"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 35,
+        "id": "Q07",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-035-Q07.png",
+          "sha256": "932275509ba25344bd165a1cc50bffced174af72b6ee692cae0db3d001023d54",
+          "size": [
+            1155,
+            832
+          ],
+          "pixels_sha256": "63540472620e1b3db14b37537473d984549b873e8edf27a9ddbc28f46b86e92d"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 36,
+        "id": "Q08",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-036-Q08.png",
+          "sha256": "0fbb3750ed2763c3816acdfdf56cc9763423b31a9298995d07ebab67807a4e13",
+          "size": [
+            996,
+            607
+          ],
+          "pixels_sha256": "7ae8de522c9e2145ce48a83ebfb4295feaa750446a7a900002e4ae3e2fc62266"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 37,
+        "id": "Q09",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-037-Q09.png",
+          "sha256": "8dcfc877aab10b1e40d189a88f13543c30766da702033d59b70d5bdb4b4aedc9",
+          "size": [
+            1158,
+            575
+          ],
+          "pixels_sha256": "c61e277076512a0a2fb3c96ae7f9887ea4d3500cce2c05e7677b0affbbc6377f"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 38,
+        "id": "Q10",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-038-Q10.png",
+          "sha256": "95b5febfeb66665dafb037a2c300e4e0df7f309f2f2f4bb14a9582b02cdc3cb3",
+          "size": [
+            980,
+            564
+          ],
+          "pixels_sha256": "73f56f2eca1aa2edac6c27a17b5a081f256105b5c924234ba694b674a50a9eb5"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 39,
+        "id": "Q11",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-039-Q11.png",
+          "sha256": "6e782334879a7095a4686f4f468dae7ae95cfa662e15479f59809b938b224c13",
+          "size": [
+            980,
+            564
+          ],
+          "pixels_sha256": "c91f7f9233c9eb1b7e2f0c3e345825cf800db4544bf702413a15342967a2abf0"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 40,
+        "id": "Q12",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-040-Q12.png",
+          "sha256": "4505ed4a3e595a88b19f37c175571170836aa6cf058c507ade9823481e41c79d",
+          "size": [
+            1153,
+            778
+          ],
+          "pixels_sha256": "0e8b323590554e3a36e85b6be6fd10ce9fd7f94927ae70851639dec1b7adaefe"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 41,
+        "id": "M01",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-041-M01.png",
+          "sha256": "fae897a73f6632db733af82630a99fef04b699dc253de10d532559690143625d",
+          "size": [
+            1063,
+            816
+          ],
+          "pixels_sha256": "73b53b6420de2b1d697a1fbc18972a4950be8655589bd8b2880348259a3706a6"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 42,
+        "id": "M02",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-042-M02.png",
+          "sha256": "282ee4c5e69400c4c25b58eed629789c63ef4047a930132bec729bd7c4c9ff23",
+          "size": [
+            1063,
+            858
+          ],
+          "pixels_sha256": "d2d8f31be8f2df6a8db63601c72260e06142b6c630e48d572100b3534bcfde40"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 43,
+        "id": "M03",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-043-M03.png",
+          "sha256": "54ceff4ba9c772f7837a38f05feaba0912d1c20bb5d19a865f777c94903bf0d7",
+          "size": [
+            1063,
+            837
+          ],
+          "pixels_sha256": "42738b1b21d48ebb968369cc06d776d6213b3128aa7d1b4857441c0989a26896"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 44,
+        "id": "M04",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-044-M04.png",
+          "sha256": "1bda749c9bab53b8dd8d09aa48215d448d0b1e1fd2624d00d1f7bc9bbc868d1f",
+          "size": [
+            1063,
+            869
+          ],
+          "pixels_sha256": "cd7a59489b1aa6932348b8e8e5092532db022d0ec1d5c9a08f731e496c6090b3"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 45,
+        "id": "M05",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-045-M05.png",
+          "sha256": "3d88b98ff6718c5d82f4302d3e301b068e50eb2d29e767f8833022525c08f0ac",
+          "size": [
+            1063,
+            1029
+          ],
+          "pixels_sha256": "cbad7f18106d573fa695ef338c99dde576664d6c00d3a6efe516d7ea82b54231"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 46,
+        "id": "M06",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-046-M06.png",
+          "sha256": "35f433b3db2b6114102d03dd093eb4510f07751b174cd3b0461c2542fc4007f8",
+          "size": [
+            1063,
+            975
+          ],
+          "pixels_sha256": "4314c5c4a875c05c327f79e0436fa421631e32a84dcb0b1e4bfa8a9bf3539109"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 47,
+        "id": "P01",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-047-P01.png",
+          "sha256": "3383c54b37b2a9678e886fd284bf8850382c7d36fc5e7a272dc5bc4a295c0291",
+          "size": [
+            1143,
+            585
+          ],
+          "pixels_sha256": "e2c4cd2a2d6ea8508d4c315f9626f675894bb2accfa367d8d9548a22fd78a116"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 48,
+        "id": "P02",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-048-P02.png",
+          "sha256": "a502e92c3ca404964bf6e08472fdefce004c1329fd7c551c8c5ebfc3def9c7a5",
+          "size": [
+            1041,
+            607
+          ],
+          "pixels_sha256": "51d1157dced1aa3d638aeb45183496bb56c204742242163f1e85315064057afd"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 49,
+        "id": "P03",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-049-P03.png",
+          "sha256": "3213a7f3eb4f7c3217344e2ad0ca08fb949131d77410f60099ebb885c18ccd7b",
+          "size": [
+            908,
+            510
+          ],
+          "pixels_sha256": "298c87841eb8fd1716fbb37c2315a5d76a82bb9812a41f873bfff4ff398801de"
+        },
+        "matches_individual": true
+      },
+      {
+        "page": 50,
+        "id": "P04",
+        "render": {
+          "file": "qa/pdf_renders/20261010T115859Z_b6cdfa02a2/booklet/page-050-P04.png",
+          "sha256": "149ef26c4c3147419cce3ce2c6f0cd947d0a9304634b0c906d97513d2db337e1",
+          "size": [
+            1218,
+            639
+          ],
+          "pixels_sha256": "c4cd32f75d1088b8c72032b02ed50ac117cc43822e44f134ab1fc1571ebb5ef6"
+        },
+        "matches_individual": true
+      }
+    ],
+    "all_pages_match": true,
+    "fonts_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEVICAO+DejaVuSans-Bold               CID TrueType      Identity-H       yes yes yes    341  0\nGCWXDV+DejaVuSans-Oblique            CID TrueType      Identity-H       yes yes yes    348  0\nBMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    355  0\nEGWXSV+DejaVuSansDisplay             CID TrueType      Identity-H       yes yes yes    362  0\nFTXWZA+STIXGeneral-Italic            CID TrueType      Identity-H       yes yes yes    369  0\nEUPODS+STIXNonUnicode-Italic         CID TrueType      Identity-H       yes yes yes    376  0\nJYHTGI+STIXSizeOneSym-Regular        CID TrueType      Identity-H       yes yes yes    383  0\nGYKUUQ+STIXSizeTwoSym-Regular        CID TrueType      Identity-H       yes yes yes    390  0\n"
+  },
+  "versions": {
+    "python": "3.10.16",
+    "pillow": "12.3.0",
+    "matplotlib": "3.10.9",
+    "numpy": "1.26.4",
+    "poppler": {
+      "pdfinfo": "pdfinfo version 0.86.1",
+      "pdffonts": "pdffonts version 0.86.1",
+      "pdftoppm": "pdftoppm version 0.86.1"
+    }
+  },
+  "finished_at_utc": "2026-10-10T11:59:18.157751+00:00"
+}

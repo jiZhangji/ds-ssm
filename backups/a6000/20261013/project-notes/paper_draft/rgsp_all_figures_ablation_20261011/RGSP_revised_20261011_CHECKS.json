@@ -1,0 +1,302 @@
+{
+  "status": "STATIC_PASS_RUNTIME_NOT_RUN",
+  "labels": 73,
+  "duplicateLabels": [],
+  "undefinedReferences": [],
+  "citedKeys": 29,
+  "bibitems": 29,
+  "missingCitations": [],
+  "unusedBibliography": [],
+  "environmentStackRemaining": [],
+  "environmentErrors": [],
+  "braceDepth": 0,
+  "braceMin": 0,
+  "tables": 15,
+  "figures": 7,
+  "figurePaths": [
+    "figures/fig1_motivation_20261009.pdf",
+    "figures/fig2_architecture_20261009.pdf",
+    "gallery/pdf/C12.pdf",
+    "gallery/pdf/C13.pdf",
+    "figures/fig1_motivation.pdf",
+    "figures/fig1_motivation_20261008.pdf",
+    "figures/fig2_method.pdf"
+  ],
+  "existingTableNumericTokensPreserved": 598,
+  "tableChecks": [
+    {
+      "label": "tab:training_settings",
+      "numericTokens": 20,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:ssdd_detection_comparison",
+      "numericTokens": 100,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:sadd_detection_comparison",
+      "numericTokens": 72,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:sarship_detection_comparison",
+      "numericTokens": 18,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:saracd_performance",
+      "numericTokens": 18,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:sample_performance",
+      "numericTokens": 29,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:ottawa_performance",
+      "numericTokens": 26,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:farmland_performance",
+      "numericTokens": 26,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:yellowriver_performance",
+      "numericTokens": 26,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:ssdd_matched_components",
+      "numericTokens": 64,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:sadd_matched_components",
+      "numericTokens": 41,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:ssdd_guidance_descriptors",
+      "numericTokens": 48,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:sadd_guidance_variants",
+      "numericTokens": 16,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:ssdd_design_sensitivity",
+      "numericTokens": 57,
+      "existingNumericTokensUnchanged": true
+    },
+    {
+      "label": "tab:rgsp_complexity_efficiency",
+      "numericTokens": 37,
+      "existingNumericTokensUnchanged": true
+    }
+  ],
+  "compilation": "not_run",
+  "visualLayout": "not_verified",
+  "staleStatements": {
+    "removedExperimentClaims": false,
+    "allIndividualSeedPromise": false,
+    "kappaPromise": false,
+    "old11FigureClaim": false,
+    "twocolumn": false
+  },
+  "appendixPresent": true,
+  "mainSections": [
+    "引言",
+    "相关工作",
+    "方法",
+    "实验",
+    "结论"
+  ],
+  "source": "C:/Users/13207/.codex/attachments/1945e861-46d0-4fa5-aa4c-39f507df7639/已粘贴的文本.txt",
+  "sourceSha256": "4c22d60cee11e9fa87f918ea2e65a7fd434851b572fa2b941841c93a2cf2e256",
+  "revisedFile": "D:/A-主机文件/Codex/Mamba-YOLO-ds-ssm/paper_draft/rgsp_all_figures_ablation_20261011/RGSP_revised_20261011.tex",
+  "revisedSha256": "cb4873d3cc09bee63e3f11d260ca3ba9b5887efbfabccedf036e325e7e96cfe1",
+  "figureAssets": [
+    {
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\figures\\fig1_motivation_20261009.pdf",
+      "bytes": 291869,
+      "sha256": "41596b6cff2e3aabfdcba24f685691d38d09560d4e471a554b806c46f02a608f"
+    },
+    {
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\figures\\fig2_architecture_20261009.pdf",
+      "bytes": 122769,
+      "sha256": "f62a2704abd07707b1b7974cdcc25aa80c81829ce42ba9800491de720be4a3d7"
+    },
+    {
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\gallery\\pdf\\C12.pdf",
+      "bytes": 13874,
+      "sha256": "c456fb92d3d0258fada074c834660a5a891b8a4db710fa5c67b6c84c4dea558c"
+    },
+    {
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\gallery\\pdf\\C13.pdf",
+      "bytes": 13677,
+      "sha256": "a70386ba458248aa13a5e3d5c767dcaa23e37858302021212e070901f0addd24"
+    },
+    {
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\figures\\fig1_motivation.pdf",
+      "bytes": 142647,
+      "sha256": "4e137bab3221373badc5f9e044eadd163f43068f7a09c5a4e901705b3aba675b"
+    },
+    {
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\figures\\fig1_motivation_20261008.pdf",
+      "bytes": 296206,
+      "sha256": "5220b7024175a9ddcf7e33f6c0787d8ae99835e905692525ae3f1669b978dcfe"
+    },
+    {
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\figures\\fig2_method.pdf",
+      "bytes": 1819344,
+      "sha256": "b5db123bc0a42a77c0c974547a560c3b1fcf5d93fe2adc5b72cac4edc9e5015c"
+    }
+  ],
+  "addedMatched075Rows": 5,
+  "addedMatched075MetricCells": 19,
+  "crossTaskMetricCellsCheckedAgainstSavedRecords": 57,
+  "crossTaskRecords": [
+    {
+      "dataset": "sar_acd",
+      "variant": "original",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\sar_acd_original_seed0\\test_evaluation.json",
+      "sha256": "f766b288ed5390681b9c46bf61d64c6902fefd853d38bf2c2284c7c9d9cc8827"
+    },
+    {
+      "dataset": "sar_acd",
+      "variant": "matched_scale075",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\sar_acd_matched_scale075_seed0\\test_evaluation.json",
+      "sha256": "9e1a91b76e82d48477d1ff497f75ca99b32f33472006fd5c1895612d0c99456d"
+    },
+    {
+      "dataset": "sar_acd",
+      "variant": "full",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\sar_acd_full_seed0\\test_evaluation.json",
+      "sha256": "b6ce184aa021552c32534ca6ac8648ce51c3a78f0e0d25001e4a7c4656ad4b20"
+    },
+    {
+      "dataset": "sample",
+      "variant": "original",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\sample_original_seed0\\test_evaluation.json",
+      "sha256": "955e5603ff37ec76aef2f4d7a17b6f531bf3856781e25334a2b852d7a58c8b98"
+    },
+    {
+      "dataset": "sample",
+      "variant": "matched_scale075",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\sample_matched_scale075_seed0\\test_evaluation.json",
+      "sha256": "4a4cbca2087170d11041b0d64ba82ef4fc56327ee4f32c1b54263b1658b2188e"
+    },
+    {
+      "dataset": "sample",
+      "variant": "full",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\sample_full_seed0\\test_evaluation.json",
+      "sha256": "59cc7010208d29f1df061d38989d7a2522a32e4612ebfd618deaee2f18ee41ea"
+    },
+    {
+      "dataset": "ottawa",
+      "variant": "original",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\ottawa_original_seed0\\test_evaluation.json",
+      "sha256": "e15feffda8018062199a8b7b1e549dd0d72b34cf03e801fef608845c18a5b481"
+    },
+    {
+      "dataset": "ottawa",
+      "variant": "matched_scale075",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\ottawa_matched_scale075_seed0\\test_evaluation.json",
+      "sha256": "b8e864b7ac8e3e7404e8339a668d224aba78f44aaea223d7641df909f916adb6"
+    },
+    {
+      "dataset": "ottawa",
+      "variant": "full",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\ottawa_full_seed0\\test_evaluation.json",
+      "sha256": "cf786d512f01c4a8719254338373b7e580ac37cc2c48ae93b14398677b9250d7"
+    },
+    {
+      "dataset": "farmland",
+      "variant": "original",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\farmland_original_seed0\\test_evaluation.json",
+      "sha256": "62a50b04d07a9d1dad77581bef8f7e2b3bd040d1e631b5609f8d098b23bc7c2c"
+    },
+    {
+      "dataset": "farmland",
+      "variant": "matched_scale075",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\farmland_matched_scale075_seed0\\test_evaluation.json",
+      "sha256": "93a3bd85a8b99c5d6273613110ca3fa26e09447393b5210383cc566e0e5ec64e"
+    },
+    {
+      "dataset": "farmland",
+      "variant": "full",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\farmland_full_seed0\\test_evaluation.json",
+      "sha256": "edae6832c601e476c12e18db1b68b6403b336b523d52150fb99869648d9bd0fe"
+    },
+    {
+      "dataset": "yellow_river",
+      "variant": "original",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\yellow_river_original_seed0\\test_evaluation.json",
+      "sha256": "d3d644f663c4015a5c13f8f902937ebbc7c00b4507b45745f8e3eed47c50e2d3"
+    },
+    {
+      "dataset": "yellow_river",
+      "variant": "matched_scale075",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\yellow_river_matched_scale075_seed0\\test_evaluation.json",
+      "sha256": "f437a20b7b14ee58984106a3908b96f57d84100368bc40c6956848e87c4386d5"
+    },
+    {
+      "dataset": "yellow_river",
+      "variant": "full",
+      "path": "paper_draft\\rgsp_all_figures_ablation_20261011\\evidence\\ablation_20261011\\cross\\yellow_river_full_seed0\\test_evaluation.json",
+      "sha256": "cc076d0252e41c19be8de898a1118eab73a7f5141c96c47ba3621442a5e8571c"
+    }
+  ],
+  "independentReview": {
+    "agent": "trace_ship_labels",
+    "scope": "15 saved cross-task test_evaluation.json files; 5 tables, bold maxima, reported differences and conclusion",
+    "finding": "Yellow River external comparison was too broad; revised to F1 specifically.",
+    "status": "corrected"
+  },
+  "referencesAdded": [
+    {
+      "key": "sardetmim2026",
+      "doi": "10.3390/rs18040580",
+      "metadata": "verified against Crossref and publisher XML",
+      "source": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-18-00580/article_deploy/remotesensing-18-00580.xml",
+      "tables": "SSDD Table 1 and SADD Table 2 checked"
+    },
+    {
+      "key": "yolosad2024",
+      "doi": "10.3390/app14073025",
+      "metadata": "verified against Crossref and publisher XML",
+      "source": "https://mdpi-res.com/d_attachment/applsci/applsci-14-03025/article_deploy/applsci-14-03025.xml",
+      "tables": "listed YOLO rows and SADD protocol checked against Table 9 and text"
+    },
+    {
+      "key": "summit2025",
+      "doi": "10.1016/j.jag.2025.104624",
+      "metadata": "verified against Crossref, publisher reference and author repository",
+      "source": "https://api.crossref.org/works/10.1016/j.jag.2025.104624",
+      "tables": "Table 5 not independently rechecked this turn; existing manuscript values retained"
+    },
+    {
+      "key": "busip2025",
+      "arxiv": "2504.04780",
+      "metadata": "verified against arXiv original",
+      "source": "https://arxiv.org/html/2504.04780v1",
+      "tables": "Table 7 values and Table 3 training counts checked"
+    },
+    {
+      "key": "mlda2025",
+      "doi": "10.3390/rs17172966",
+      "metadata": "verified against Crossref and publisher XML",
+      "source": "https://mdpi-res.com/d_attachment/remotesensing/remotesensing-17-02966/article_deploy/remotesensing-17-02966.xml",
+      "tables": "5 rows of Table 2 and Table 1 protocol checked"
+    }
+  ],
+  "recordedAt": "2026-10-11T19:48:03.9079221+08:00",
+  "otherBibliography": "Existing bibliography was not exhaustively reverified; no claim of submission-ready review."
+}
+

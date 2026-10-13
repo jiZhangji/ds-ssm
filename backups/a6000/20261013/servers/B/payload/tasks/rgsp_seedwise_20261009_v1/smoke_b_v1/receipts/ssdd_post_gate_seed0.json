@@ -1,0 +1,55 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/provenance.json",
+      "sha256": "dc5542f4910cac30e6cde5818f224edd81722012ca72928c206f5cd04122ae61"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/train_complete.json",
+      "sha256": "0ed330e1ae71c3f237e3b6367e20c8329ced2de0b10b66132ddc5e3400b68902"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/eval_test.json",
+      "sha256": "d6a050e1d0aaf3abe55ed1ac68bc5b0b523dc2de488f4ec822366f4ba515698a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/evaluation_complete.json",
+      "sha256": "cc449357a909396e5f0d0154167597596845135c693308f664977e6716289b57"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/weights/best.pt",
+      "sha256": "c60adc4b05878e8e78f89e2fdc28102f2c460413bda7f7f6ccf837b9deb4a7a1"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/weights/raw_fp32_last.pt",
+      "sha256": "cbc6589c52617de8162dbec13e9938444edab000d69d2588efdb8803de618209"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/controls_by_epoch.jsonl",
+      "sha256": "33332dd4064f620d7047447b74622917aaddab909e40963e3425b58eaed398b5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/smoke_b_v1/runs/ssdd_post_gate_seed0/trial_complete.json",
+      "sha256": "5a0081ada374044041b6e12e2f4b5c3bfba101c7006280c7a1c1751c457e9c99"
+    }
+  ],
+  "details": {
+    "kind": "detection",
+    "overall": {
+      "ap50": 0.0,
+      "ap50_95": 0.0,
+      "ap75": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "resumed": false,
+    "smoke_only": true
+  },
+  "finished_utc": "2026-10-09T03:00:40.887678+00:00",
+  "plan_sha256": "6328e555e42d10869e756d5058fb914c4ba6b35712a4d9206b1f5f8e4f160971",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "ssdd_post_gate_seed0",
+  "trial_sha256": "dee49a7218d15e805e2a40fcbed325555246a7719ec3ee08579e4a3b6dcf6fee"
+}

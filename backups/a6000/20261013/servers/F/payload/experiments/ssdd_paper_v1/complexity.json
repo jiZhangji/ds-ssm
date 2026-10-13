@@ -1,0 +1,66 @@
+[
+  {
+    "experiment_id": "seed0",
+    "variant": "baseline",
+    "parameters": 5985547,
+    "layers": 404,
+    "gflops": 13.6115648,
+    "gflops_note": "thop profile",
+    "inference_ms": 6.61654205157839,
+    "fps": 151.14,
+    "ap50": 0.8718223913817755,
+    "ap50_95": 0.4269426784501997
+  },
+  {
+    "experiment_id": "seed0",
+    "variant": "full_p3",
+    "parameters": 5920441,
+    "layers": 396,
+    "gflops": 13.148179199999998,
+    "gflops_note": "thop profile",
+    "inference_ms": 6.088877546376196,
+    "fps": 164.23,
+    "ap50": 0.8808824040709504,
+    "ap50_95": 0.42339986046718686
+  },
+  {
+    "experiment_id": "seed0",
+    "variant": "ds_only_p3",
+    "parameters": 5918104,
+    "layers": 390,
+    "gflops": 13.115206400000002,
+    "gflops_note": "thop profile"
+  },
+  {
+    "experiment_id": "seed1",
+    "variant": "baseline",
+    "parameters": 5985547,
+    "layers": 404,
+    "gflops": 13.6115648,
+    "gflops_note": "thop profile",
+    "inference_ms": 6.595628014926253,
+    "fps": 151.62,
+    "ap50": 0.8369339999150014,
+    "ap50_95": 0.38274645943219987
+  },
+  {
+    "experiment_id": "seed1",
+    "variant": "full_p3",
+    "parameters": 5920441,
+    "layers": 396,
+    "gflops": 13.148179199999998,
+    "gflops_note": "thop profile",
+    "inference_ms": 6.045985838462566,
+    "fps": 165.4,
+    "ap50": 0.8786643045153943,
+    "ap50_95": 0.44209088497373694
+  },
+  {
+    "experiment_id": "seed1",
+    "variant": "ds_only_p3",
+    "parameters": 5918104,
+    "layers": 390,
+    "gflops": 13.115206400000002,
+    "gflops_note": "thop profile"
+  }
+]

@@ -1,0 +1,165 @@
+{
+  "gpus": {
+    "A:0": {
+      "idle_since": null,
+      "index": 0,
+      "last_snapshot": "2026-08-28T02:50:45.249882+00:00",
+      "memory_total": 49140,
+      "memory_used": 23388,
+      "name": "NVIDIA RTX A6000",
+      "utilization": 100
+    },
+    "B:0": {
+      "idle_since": null,
+      "index": 0,
+      "last_snapshot": "2026-08-28T02:50:45.249886+00:00",
+      "memory_total": 49140,
+      "memory_used": 22906,
+      "name": "NVIDIA RTX A6000",
+      "utilization": 100
+    },
+    "C:0": {
+      "idle_since": null,
+      "index": 0,
+      "last_snapshot": "2026-08-28T02:50:45.249889+00:00",
+      "memory_total": 49140,
+      "memory_used": 35413,
+      "name": "NVIDIA RTX A6000",
+      "utilization": 100
+    },
+    "D:0": {
+      "idle_since": null,
+      "index": 0,
+      "last_snapshot": "2026-08-28T02:50:45.249891+00:00",
+      "memory_total": 49140,
+      "memory_used": 31681,
+      "name": "NVIDIA RTX A6000",
+      "utilization": 100
+    }
+  },
+  "hosts": {
+    "A": {
+      "error": null,
+      "last_seen": "2026-08-28T02:50:44.513068+00:00"
+    },
+    "B": {
+      "error": null,
+      "last_seen": "2026-08-28T02:50:44.770121+00:00"
+    },
+    "C": {
+      "error": null,
+      "last_seen": "2026-08-28T02:50:45.000022+00:00"
+    },
+    "D": {
+      "error": null,
+      "last_seen": "2026-08-28T02:50:45.249805+00:00"
+    }
+  },
+  "jobs": {
+    "cd_farmland_baseline": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:50:45.249868+00:00",
+      "status": "complete"
+    },
+    "cd_farmland_p3_d16": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "cd_ottawa_baseline": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:50:45.249861+00:00",
+      "status": "complete"
+    },
+    "cd_ottawa_p3_d16": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:50:45.249863+00:00",
+      "status": "complete"
+    },
+    "cd_sulzberger_baseline": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "cd_sulzberger_p3_d16": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "cd_yellow_river_baseline": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:50:45.249865+00:00",
+      "status": "complete"
+    },
+    "cd_yellow_river_p3_d16": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "cls_sample_baseline": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "cls_sample_p3_d16": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "cls_sar_acd_baseline": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "cls_sar_acd_p3_d16": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "det_aircraft_baseline_b32": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "det_aircraft_p3_d16_b32": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "det_airship_baseline_b32": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "det_airship_p3_d16_b32": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "det_sadd_baseline_b32": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:50:45.249842+00:00",
+      "status": "complete"
+    },
+    "det_sadd_p3_d16_b32": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:50:45.249844+00:00",
+      "status": "complete"
+    },
+    "det_srsdd_baseline_b32": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "det_srsdd_p3_d16_b32": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "det_ssdd_baseline_b16": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:50:45.249828+00:00",
+      "status": "complete"
+    },
+    "det_ssdd_p3_d16_b16": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:50:45.249832+00:00",
+      "status": "complete"
+    },
+    "seg_fusar_map_baseline": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "seg_fusar_map_p3_d16": {
+      "attempts": 0,
+      "status": "pending"
+    }
+  },
+  "updated_at": "2026-08-28T02:50:45.249893+00:00"
+}

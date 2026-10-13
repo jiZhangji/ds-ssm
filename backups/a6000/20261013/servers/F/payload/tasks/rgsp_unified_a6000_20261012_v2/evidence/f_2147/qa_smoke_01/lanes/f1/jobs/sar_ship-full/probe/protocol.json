@@ -1,0 +1,83 @@
+{
+  "augmentation": {
+    "close_mosaic_last_epochs": 15,
+    "copy_paste": 0.0,
+    "degrees": 180.0,
+    "fliplr": 0.5,
+    "flipud": 0.5,
+    "hsv_h": 0.0,
+    "hsv_s": 0.0,
+    "hsv_v": 0.1,
+    "mixup": 0.0,
+    "mosaic": 0.3,
+    "multi_scale": false,
+    "perspective": 0.0,
+    "scale": 0.3,
+    "shear": 0.0,
+    "translate": 0.1
+  },
+  "batch_norm_policy": "physical microbatch statistics; not equivalent to physical batch64",
+  "betas": [
+    0.937,
+    0.999
+  ],
+  "budget": {
+    "microbatches_per_epoch": 1984,
+    "planned_total_updates": 74400,
+    "updates_per_epoch": 496,
+    "warmup_updates": 1488
+  },
+  "data_manifest_sha256": "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78",
+  "dataset_id": "sar_ship",
+  "determinism": "seeded workers and warn_only deterministic algorithms; custom CUDA kernels may not be bitwise deterministic",
+  "epochs": 150,
+  "epsilon": 1e-08,
+  "evaluation": {
+    "AP": "class-mean AP across IoU 0.50:0.05:0.95; AP75 is index5",
+    "P_R": "maximum-F1 curve summary, not fixed deployment threshold",
+    "batch": 16,
+    "confidence": 0.001,
+    "max_det": 300,
+    "nms_iou": 0.7,
+    "unfused": true
+  },
+  "gradient_accumulation": 4,
+  "gradient_clip_l2": 10.0,
+  "historical_performance_reuse": false,
+  "initialization": "scratch; same-seed Mamba common tensors outside model.3 paired; stride-probe BN reset",
+  "input": [
+    3,
+    640,
+    640
+  ],
+  "loss": {
+    "box": 7.5,
+    "cls": 0.5,
+    "dfl": 1.5
+  },
+  "lr0": 0.0002,
+  "lr_schedule": "3 actual full epochs of linear warmup 0->lr0, then linear to lr0*0.01 at planned epoch150 end",
+  "method": "Full",
+  "model_config_sha256": "000441298daf8d0d14997f1a79970806be398841d1bf9e404c000c625f0a3efb",
+  "module_warmup_epochs": 0,
+  "new_independent_protocol": true,
+  "nominal_effective_batch": 64,
+  "optimizer": "AdamW",
+  "optimizer_group_policy": "any local parameter name containing bias, plus norm parameters, have zero weight decay",
+  "patience": 30,
+  "physical_batch": 16,
+  "precision": "FP32 train/checkpoint/evaluation; AMP and TF32 off",
+  "runner_sha256": "8fd9862b7b7cc37c8219c85ea61e545cee1c02a471a9ea41894da01f07f48aad",
+  "schema": "rgsp-unified-detection-20261012-v1",
+  "selection": "validation EMA fitness=0.1*AP50+0.9*AP50_95; earliest exact tie",
+  "source_sha256": "19ae98a884ec902cf3e61dbe66b3f66e63243bc93b14233a781e8cb89d65ad4c",
+  "tail_policy": "flush each epoch; divide native summed-loss gradients by actual accumulated sample count",
+  "test_policy": "only selected best FP32 checkpoint; never used for training, threshold tuning or selection",
+  "train_workers": 4,
+  "warmup_bias_lr_special_case": false,
+  "warmup_minimum_steps": null,
+  "weight_decay": {
+    "bias_and_norm": 0.0,
+    "weights": 0.0005
+  }
+}

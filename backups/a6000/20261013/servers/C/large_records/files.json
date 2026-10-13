@@ -1,0 +1,26 @@
+[
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1949_c/audited_rows.json",
+    "bytes": 43737169,
+    "sha256": "3d7bc69c8e58f7d3341993a96f9c019544b40e4db375e4ef6734276492416adb",
+    "mode": 436,
+    "source_mtime_ns": 1791546577802578391,
+    "changed_during_read": false
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/lanes/c_seed0/logs/sar_shipdataset_full_seed0.log",
+    "bytes": 89865519,
+    "sha256": "446742e7b0824ff3ea9f42599c46bc120e90fb4cb37675ee43f961eeeea0493a",
+    "mode": 436,
+    "source_mtime_ns": 1791713388951358938,
+    "changed_during_read": false
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/c0shipfull/jobs/sar_ship-full/run0/verified_data_records.json",
+    "bytes": 23590413,
+    "sha256": "c86d9a59917ce0ad8c9287904b4869e83eca5b90e7e9bd0ad0a01b944865094f",
+    "mode": 436,
+    "source_mtime_ns": 1791856407583461310,
+    "changed_during_read": false
+  }
+]

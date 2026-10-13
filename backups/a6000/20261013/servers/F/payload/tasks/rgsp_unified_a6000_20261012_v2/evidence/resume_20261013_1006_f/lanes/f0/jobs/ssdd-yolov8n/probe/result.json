@@ -1,0 +1,98 @@
+{
+  "code_sha256": "8fd9862b7b7cc37c8219c85ea61e545cee1c02a471a9ea41894da01f07f48aad",
+  "complexity": {
+    "batch": 1,
+    "coverage": {
+      "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+      "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+      "exhaustive": false,
+      "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+      "not_included": [
+        "Scan exponentials and softplus special functions; symbolic counts are separate.",
+        "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+        "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+        "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+      ],
+      "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+      "scope": "Full unfused detector including dense head; eval, batch=1, FP32, no TF32, no NMS.",
+      "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+      "version": "rgsp-covered-operations-v1"
+    },
+    "covered_flops_g": 8.1941504,
+    "cross_merge_add_flops": 0,
+    "cross_merge_calls": [],
+    "dense_output_shape": [
+      1,
+      5,
+      8400
+    ],
+    "device": "cuda:0",
+    "einsum_calls": [],
+    "finite_forward": true,
+    "functional_einsum_mac2_flops": 0,
+    "fused": false,
+    "input_shapes": [
+      [
+        1,
+        3,
+        640,
+        640
+      ]
+    ],
+    "nms_included": false,
+    "output_shape": [
+      1,
+      5,
+      8400
+    ],
+    "output_shapes": [
+      [
+        1,
+        5,
+        8400
+      ]
+    ],
+    "parameters": 3011043,
+    "precision": "FP32",
+    "scan_basic_arithmetic_flops": 0,
+    "scan_calls": [],
+    "ssm_module_calls": [],
+    "status": "PASS",
+    "thop_legacy_x2_flops": 8194150400.0,
+    "thop_version": "2.0.16",
+    "torch_version": "1.13.1+cu117",
+    "trainable_parameters": 3011027,
+    "unregistered_leaf_module_types": [
+      "torch.nn.modules.activation.SiLU",
+      "ultralytics.nn.modules.conv.Concat"
+    ],
+    "unsupported": [
+      "Scan exponentials and softplus special functions; symbolic counts are separate.",
+      "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+      "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+      "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing.",
+      "Unregistered THOP leaf: torch.nn.modules.activation.SiLU",
+      "Unregistered THOP leaf: ultralytics.nn.modules.conv.Concat"
+    ]
+  },
+  "controls": [],
+  "data_sha256": "9b9207954510e1c4ef4f1899e2fc03821662665e775c806ec4e362ce43dc9b09",
+  "estimate_scope": "planned150-epoch training steps only; excludes validation/checkpoint/I/O overhead and early stopping",
+  "estimated_full_seconds": 676.536963286344,
+  "finished_utc": "2026-10-12T13:15:41.597066+00:00",
+  "images_per_second": 170.27894446506636,
+  "mean_update_seconds": 0.3758538684924133,
+  "measured_updates": 4,
+  "method": "YOLOv8n",
+  "paper_eligible": false,
+  "peak_allocated_gib": 3.3138818740844727,
+  "peak_reserved_gib": 3.640625,
+  "protocol_sha256": "1f1e38a6606f2b7000848fe2c8c0eb477a176965ee9ca8f7664b20d57415f13e",
+  "schema": "rgsp-unified-detection-20261012-v1",
+  "seed": 0,
+  "source_sha256": "19ae98a884ec902cf3e61dbe66b3f66e63243bc93b14233a781e8cb89d65ad4c",
+  "status": "PROBE_PASS",
+  "test_evaluated": false,
+  "timing_warmup_updates": 2,
+  "val_evaluated": false
+}

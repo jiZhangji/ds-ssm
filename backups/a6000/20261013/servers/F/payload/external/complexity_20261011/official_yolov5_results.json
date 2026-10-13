@@ -1,0 +1,41 @@
+[
+  {
+    "method": "YOLOv5n",
+    "params": 1765270,
+    "flops_g": 4.2242048,
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "source": "ultralytics/yolov5 v7.0"
+  },
+  {
+    "method": "YOLOv5s",
+    "params": 7022326,
+    "flops_g": 15.945728,
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "source": "ultralytics/yolov5 v7.0"
+  },
+  {
+    "method": "YOLOv3",
+    "params": 61523734,
+    "flops_g": 155.2596992,
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "source": "ultralytics/yolov5 v7.0"
+  }
+]

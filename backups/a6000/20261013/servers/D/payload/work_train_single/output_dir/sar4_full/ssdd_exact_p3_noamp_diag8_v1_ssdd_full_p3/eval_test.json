@@ -1,0 +1,43 @@
+{
+  "experiment": "ssdd_exact_p3_noamp_diag8_v1_ssdd_full_p3",
+  "placement": "p3",
+  "variant": "full",
+  "state_dim": 16,
+  "seed": 0,
+  "subset": "SSDD",
+  "weights": "/home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/ssdd_exact_p3_noamp_diag8_v1_ssdd_full_p3/weights/best.pt",
+  "weights_sha256": "d79cef6878b60a5c6a1444498f89c8d7fc49d8cb07dce77ac0042e41e02dd7b9",
+  "data": "/home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/ssdd_exact_p3_noamp_diag8_v1-manifest/datasets/SSDD.yaml",
+  "data_yaml_sha256": "5608b98c250353ad9782866f02ff3698685a7c3926da8e00df976ba3f0693dce",
+  "split": "test",
+  "imgsz": 640,
+  "batch": 64,
+  "conf": 0.001,
+  "iou": 0.6,
+  "precision_mode": "fp32",
+  "result_dir": "/home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/evaluations/ssdd_exact_p3_noamp_diag8_v1_ssdd_full_p3_test",
+  "speed_ms": {
+    "preprocess": 0.12706888133081895,
+    "inference": 7.101772160365663,
+    "loss": 0.00010584962779077991,
+    "postprocess": 0.4998712704099458
+  },
+  "overall": {
+    "precision": 0.001238415606730736,
+    "recall": 0.01098901098901099,
+    "ap50": 0.0011375862016166308,
+    "ap75": 1.1847932045424569e-05,
+    "ap50_95": 0.0004565085946993296
+  },
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "ship",
+      "precision": 0.001238415606730736,
+      "recall": 0.01098901098901099,
+      "ap50": 0.0011375862016166308,
+      "ap75": 1.1847932045424569e-05,
+      "ap50_95": 0.0004565085946993296
+    }
+  ]
+}

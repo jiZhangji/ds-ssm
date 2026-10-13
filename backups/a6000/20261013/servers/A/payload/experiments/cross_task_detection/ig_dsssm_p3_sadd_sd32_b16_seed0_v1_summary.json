@@ -1,0 +1,33 @@
+{
+  "experiment_id": "ig_dsssm_p3_sadd_sd32_b16_seed0_v1",
+  "records": [
+    {
+      "dataset": "SADD",
+      "experiment": "ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline",
+      "variant": "baseline",
+      "placement": "baseline",
+      "state_dim": 0,
+      "precision": 0.9395948589349047,
+      "recall": 0.9377059633615012,
+      "ap50": 0.9655978664799104,
+      "ap75": 0.43898052705033025,
+      "ap50_95": 0.5021076113049683,
+      "inference_ms": 8.988797865331374,
+      "weights": "/home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/best.pt"
+    },
+    {
+      "dataset": "SADD",
+      "experiment": "ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3",
+      "variant": "full",
+      "placement": "p3",
+      "state_dim": 32,
+      "precision": 0.9417678546729298,
+      "recall": 0.9349881796690307,
+      "ap50": 0.9630640987874166,
+      "ap75": 0.4614737248710641,
+      "ap50_95": 0.5116702875992992,
+      "inference_ms": 8.41482319815793,
+      "weights": "/home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/best.pt"
+    }
+  ]
+}

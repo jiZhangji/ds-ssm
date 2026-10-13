@@ -1,0 +1,28 @@
+{
+  "completed": [
+    "ssdd_original_seed0",
+    "ssdd_matched_identity_seed0",
+    "ssdd_local_energy_seed0",
+    "sar_shipdataset_original_seed0"
+  ],
+  "current": "sar_shipdataset_original_seed0",
+  "finished_utc": "2026-10-11T13:31:49.238259+00:00",
+  "gpu": {
+    "checked_utc": "2026-10-09T03:31:29.191235+00:00",
+    "compute_processes": [],
+    "memory_total_mib": 49140,
+    "memory_used_mib": 370,
+    "name": "NVIDIA RTX A6000",
+    "utilization_percent": 0,
+    "uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b"
+  },
+  "gpu_uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+  "host": "powerleader-a6000-f",
+  "lane": "f0_seed0",
+  "pid": 127345,
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "started_utc": "2026-10-09T03:30:48.039207+00:00",
+  "state": "complete",
+  "updated_utc": "2026-10-11T13:31:49.254370+00:00"
+}

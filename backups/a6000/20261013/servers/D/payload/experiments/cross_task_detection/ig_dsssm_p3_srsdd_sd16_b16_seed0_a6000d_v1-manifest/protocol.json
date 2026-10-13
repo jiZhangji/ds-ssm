@@ -1,0 +1,35 @@
+{
+  "amp": false,
+  "batch": 16,
+  "code": {
+    "mbyolo_train_sarair.py": "a09dbbe373d321eb2e776daf6dc18f5b9c0c15b603ba706285d74ddc335051be",
+    "tools/evaluate_sarmix.py": "b618852403eeda8737cadd847ac5193848325141eb6666dac10fa8185d67c50d",
+    "tools/run_sar4_full_suite.py": "9720ab7d48ee3ae6cc47e6515b7bad3fe32131e1b9e0f8bd56748db51d762e86",
+    "ultralytics/nn/modules/mamba_yolo.py": "6abc3a657f7925c076e84f890500e56d4fe00106f4e02edbfea4cf7dea93819d"
+  },
+  "configs": {
+    "SRSDD-v1.0:baseline": "4f313ed44ca017beacd747a1f340a947bf11e4f2549f7eeda90acc497171b9a1",
+    "SRSDD-v1.0:full_p3": "6caa117cafd5f65910b959519da8f0dac315c9c211b758b7935e6b90990caa7f"
+  },
+  "datasets": {
+    "SRSDD-v1.0": {
+      "path": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared/detection/SRSDD_v1/SRSDD_v1.yaml",
+      "sha256": "d74cb71751c1a47a688b58edeede44345f10f8ca3e719b29ebbdcd1672e9dbbd"
+    }
+  },
+  "epochs": 150,
+  "eval_batch": 16,
+  "experiment_id": "ig_dsssm_p3_srsdd_sd16_b16_seed0_a6000d_v1",
+  "imgsz": 640,
+  "lr0": 0.0002,
+  "lrf": 0.01,
+  "module_warmup_epochs": 0,
+  "nbs": 64,
+  "optimizer": "AdamW",
+  "optimizer_warmup_epochs": 3.0,
+  "patience": 30,
+  "seed": 0,
+  "state_dim": 16,
+  "weight_decay": 0.0005,
+  "weights": "none"
+}

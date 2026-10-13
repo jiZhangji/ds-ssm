@@ -1,0 +1,38 @@
+{
+  "all_referenced_files_exist_and_decode": true,
+  "annotation_policy": "fail",
+  "counts": {
+    "test": 16,
+    "train": 112,
+    "val": 16
+  },
+  "dataset": "Farmland",
+  "geometry": {
+    "buffer_zone_required_or_claimed": false,
+    "cross_split_intersection_count": 0,
+    "cross_split_touching_crop_pairs": 83,
+    "evaluation": "Resize predictions to native crop; mean overlapping probabilities; count each heldout source pixel once.",
+    "limitation": "One-scene spatial holdout, adjacent correlated regions; not unseen-scene generalization.",
+    "minimum_cross_split_rectangle_gap_pixels": 0.0,
+    "scene_disjoint": false,
+    "within_split_overlapping_crop_pairs": {
+      "test": 90,
+      "train": 630,
+      "val": 90
+    }
+  },
+  "ready": true,
+  "schema": "rgsp-cross-data-v1",
+  "source_counts": {
+    "test": 16,
+    "train": 112,
+    "val": 16
+  },
+  "source_files_modified": false,
+  "source_manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Farmland/manifest.json",
+  "source_manifest_sha256": "d4ddea1a0bbe3b0aa1f6fa94636330e8f11de2e68e386c098a0746b039d0ed41",
+  "source_records": 144,
+  "split_policy": "Preserve pre-existing label-balanced native 96px macroblocks; no split reoptimization.",
+  "task": "change_detection",
+  "unique_staged_files": 3
+}

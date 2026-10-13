@@ -1,0 +1,21 @@
+{
+  "compatibility_applied": true,
+  "cuda_runtime_count": 1,
+  "cuda_visible_devices": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "gpu_mask_changed": false,
+  "hostname": "powerleader-PT6620W",
+  "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+  "mode": "probe",
+  "physical_gpu_index": 0,
+  "physical_gpu_name": "NVIDIA RTX A6000",
+  "physical_gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "pid": 612921,
+  "protocol_sha256": "dda4d7adcbe5fda0ae2341cbc1a9e9fa0c0da0cb8ff02caa8348873720472c5d",
+  "reported_count_after": 1,
+  "reported_count_before": 0,
+  "seed": 0,
+  "started_utc": "2026-10-13T01:59:43.175175+00:00",
+  "test_evaluated": false,
+  "torch": "1.13.1+cu117",
+  "torch_installation_modified": false
+}

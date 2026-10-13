@@ -1,0 +1,58 @@
+{
+  "actual_head_nc": 7,
+  "class6_classifier_gradient_abs": 4.577140808105469,
+  "class_names": {
+    "0": "Boeing737",
+    "1": "Boeing787",
+    "2": "A330",
+    "3": "A220",
+    "4": "A320/321",
+    "5": "ARJ21",
+    "6": "other"
+  },
+  "constructor_nc": 1,
+  "control": "cnn_yolov8n",
+  "controls": [],
+  "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "gradient_tensors": 183,
+  "loss": 16.906185150146484,
+  "loss_components": [
+    3.481109380722046,
+    2.8666930198669434,
+    2.1052896976470947
+  ],
+  "no_optimizer_step_no_fit_loop": true,
+  "runtime_nc": 7,
+  "seconds": 0.13943300899700262,
+  "status": "PASS",
+  "synthetic_image_shape": [
+    2,
+    3,
+    128,
+    128
+  ],
+  "synthetic_target_class_ids": [
+    0,
+    6
+  ],
+  "training_feature_shapes": [
+    [
+      2,
+      71,
+      16,
+      16
+    ],
+    [
+      2,
+      71,
+      8,
+      8
+    ],
+    [
+      2,
+      71,
+      4,
+      4
+    ]
+  ]
+}

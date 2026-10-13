@@ -1,0 +1,41 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+MSTAR-SOC baseline epoch=1/100 loss=0.58427 score=-0.58427
+MSTAR-SOC baseline epoch=2/100 loss=0.07153 score=-0.07153
+MSTAR-SOC baseline epoch=3/100 loss=0.03636 score=-0.03636
+MSTAR-SOC baseline epoch=4/100 loss=0.02864 score=-0.02864
+MSTAR-SOC baseline epoch=5/100 loss=0.02161 score=-0.02161
+MSTAR-SOC baseline epoch=6/100 loss=0.02114 score=-0.02114
+MSTAR-SOC baseline epoch=7/100 loss=0.02044 score=-0.02044
+MSTAR-SOC baseline epoch=8/100 loss=0.01754 score=-0.01754
+MSTAR-SOC baseline epoch=9/100 loss=0.01758 score=-0.01758
+MSTAR-SOC baseline epoch=10/100 loss=0.01894 score=-0.01894
+MSTAR-SOC baseline epoch=11/100 loss=0.01817 score=-0.01817
+MSTAR-SOC baseline epoch=12/100 loss=0.01626 score=-0.01626
+MSTAR-SOC baseline epoch=13/100 loss=0.01858 score=-0.01858
+MSTAR-SOC baseline epoch=14/100 loss=0.01835 score=-0.01835
+MSTAR-SOC baseline epoch=15/100 loss=0.01750 score=-0.01750
+MSTAR-SOC baseline epoch=16/100 loss=0.01714 score=-0.01714
+MSTAR-SOC baseline epoch=17/100 loss=0.01903 score=-0.01903
+MSTAR-SOC baseline epoch=18/100 loss=0.01908 score=-0.01908
+MSTAR-SOC baseline epoch=19/100 loss=0.01839 score=-0.01839
+MSTAR-SOC baseline epoch=20/100 loss=0.02194 score=-0.02194
+MSTAR-SOC baseline epoch=21/100 loss=0.02067 score=-0.02067
+MSTAR-SOC baseline epoch=22/100 loss=0.02117 score=-0.02117
+MSTAR-SOC baseline epoch=23/100 loss=0.02282 score=-0.02282
+MSTAR-SOC baseline epoch=24/100 loss=0.02342 score=-0.02342
+MSTAR-SOC baseline epoch=25/100 loss=0.02250 score=-0.02250
+MSTAR-SOC baseline epoch=26/100 loss=0.02427 score=-0.02427
+MSTAR-SOC baseline epoch=27/100 loss=0.02397 score=-0.02397
+MSTAR-SOC baseline epoch=28/100 loss=0.02447 score=-0.02447
+MSTAR-SOC baseline epoch=29/100 loss=0.02628 score=-0.02628
+MSTAR-SOC baseline epoch=30/100 loss=0.02772 score=-0.02772
+MSTAR-SOC baseline epoch=31/100 loss=0.02596 score=-0.02596
+MSTAR-SOC baseline epoch=32/100 loss=0.02681 score=-0.02681
+MSTAR-SOC baseline epoch=33/100 loss=0.02607 score=-0.02607
+MSTAR-SOC baseline epoch=34/100 loss=0.02672 score=-0.02672
+MSTAR-SOC baseline epoch=35/100 loss=0.03046 score=-0.03046
+MSTAR-SOC baseline epoch=36/100 loss=0.02826 score=-0.02826
+MSTAR-SOC baseline epoch=37/100 loss=0.02688 score=-0.02688
+MSTAR-SOC baseline epoch=38/100 loss=0.02874 score=-0.02874

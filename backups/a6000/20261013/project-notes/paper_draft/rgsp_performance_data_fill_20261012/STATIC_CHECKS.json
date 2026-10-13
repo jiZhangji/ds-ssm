@@ -1,0 +1,16 @@
+{
+  "status": "STATIC_PASS",
+  "original_text_and_old_data_preserved": true,
+  "terminal_newline_added": true,
+  "only_three_tables_extended": true,
+  "added_groups": 4,
+  "scored_rows": 15,
+  "pending_full_ssdd_row": true,
+  "source_sha256": "CC50BFE9A849A38EE90C2D73C7A62C6CB4C10B05F0DCE0CBF16D11950BC6FD73",
+  "output_sha256": "9141969C4AFF8474EA84E31739E3B3E1EEC16F4A2BEA5E4BAAD8D3C8ACFA5AB2",
+  "compiled": false,
+  "table*_balanced": true,
+  "tabular*_balanced": true,
+  "minipage_balanced": true,
+  "braces_balanced": true
+}

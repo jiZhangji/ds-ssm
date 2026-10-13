@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "inverse_recovery_exact": true,
+  "non_table_prose_unchanged": true,
+  "labels_unique": true,
+  "table_count": 6,
+  "environment_balances": {
+    "table*": 0,
+    "tabular*": 0,
+    "minipage": 0
+  },
+  "braces_balance": 0,
+  "odd_math_delimiter_lines": [],
+  "operations": 42,
+  "runtime_compile": "NOT_RUN: section only, no parent document supplied"
+}

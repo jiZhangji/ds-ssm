@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "nohup",
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/operator_cross_recover.py",
+    "probe"
+  ],
+  "cwd": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908",
+  "gpu": {
+    "checked_utc": "2026-10-09T11:30:57.162434+00:00",
+    "compute_processes": [],
+    "memory_total_mib": 49140,
+    "memory_used_mib": 530,
+    "name": "NVIDIA RTX A6000",
+    "utilization_percent": 0,
+    "uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964"
+  },
+  "operator_sha256": "796528f8854ab0c246bdf2e7b19edd7cee11e3e2913d5731891a6735fe01e806",
+  "requested_utc": "2026-10-09T11:30:57.162504+00:00"
+}

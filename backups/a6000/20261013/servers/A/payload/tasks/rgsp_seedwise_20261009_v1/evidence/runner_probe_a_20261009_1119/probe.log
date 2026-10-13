@@ -1,0 +1,12 @@
+{"dataset_identity": "SAR-ShipDataset", "max_wait_seconds": 0, "readiness_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/synthetic_contract_fixture_not_training_data/readiness.json", "readiness_status": "not_published", "state": "waiting_deferred_dataset", "updated_utc": "2026-10-09T03:23:47.630246+00:00"}
+{"dataset_identity": "SAR-ShipDataset", "readiness": {"path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/synthetic_contract_fixture_not_training_data/readiness.json", "sha256": "acfb016484c4291694ec70bdd1031b32beab8b6ed409c25e3ce7c867fe03e232"}, "state": "deferred_dataset_verified", "verified_utc": "2026-10-09T03:23:47.709856+00:00"}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Overriding model.yaml nc=1 with nc=7
+{"case": "original", "status": "PASS", "seconds": 2.5810753269906854}
+Overriding model.yaml nc=1 with nc=7
+{"case": "full", "status": "PASS", "seconds": 1.335827065006015}
+Overriding model.yaml nc=1 with nc=7
+{"case": "cnn_yolov8n", "status": "PASS", "seconds": 0.13943300899700262}
+{"status": "PASS", "report": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/runner_probe_a_20261009_1119/probe_report.json"}

@@ -1,0 +1,194 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+SAMPLE ours epoch=1/200 loss=2.00776 score=0.03886
+SAMPLE ours epoch=2/200 loss=1.75312 score=0.07627
+SAMPLE ours epoch=3/200 loss=1.60011 score=0.26254
+SAMPLE ours epoch=4/200 loss=1.48727 score=0.57451
+SAMPLE ours epoch=5/200 loss=1.43435 score=0.57962
+SAMPLE ours epoch=6/200 loss=1.34768 score=0.58053
+SAMPLE ours epoch=7/200 loss=1.29536 score=0.66071
+SAMPLE ours epoch=8/200 loss=1.25805 score=0.64771
+SAMPLE ours epoch=9/200 loss=1.21624 score=0.64919
+SAMPLE ours epoch=10/200 loss=1.15879 score=0.61756
+SAMPLE ours epoch=11/200 loss=1.13829 score=0.78689
+SAMPLE ours epoch=12/200 loss=1.08067 score=0.73599
+SAMPLE ours epoch=13/200 loss=1.05034 score=0.70384
+SAMPLE ours epoch=14/200 loss=1.00428 score=0.56898
+SAMPLE ours epoch=15/200 loss=0.98990 score=0.77712
+SAMPLE ours epoch=16/200 loss=0.96790 score=0.53395
+SAMPLE ours epoch=17/200 loss=0.94247 score=0.75242
+SAMPLE ours epoch=18/200 loss=0.91354 score=0.82899
+SAMPLE ours epoch=19/200 loss=0.87706 score=0.72499
+SAMPLE ours epoch=20/200 loss=0.85041 score=0.79706
+SAMPLE ours epoch=21/200 loss=0.82084 score=0.78856
+SAMPLE ours epoch=22/200 loss=0.82649 score=0.70131
+SAMPLE ours epoch=23/200 loss=0.82091 score=0.80093
+SAMPLE ours epoch=24/200 loss=0.78500 score=0.88255
+SAMPLE ours epoch=25/200 loss=0.77439 score=0.76591
+SAMPLE ours epoch=26/200 loss=0.76218 score=0.81984
+SAMPLE ours epoch=27/200 loss=0.73672 score=0.79458
+SAMPLE ours epoch=28/200 loss=0.73523 score=0.82308
+SAMPLE ours epoch=29/200 loss=0.72487 score=0.84268
+SAMPLE ours epoch=30/200 loss=0.72918 score=0.79552
+SAMPLE ours epoch=31/200 loss=0.70588 score=0.82531
+SAMPLE ours epoch=32/200 loss=0.70144 score=0.74655
+SAMPLE ours epoch=33/200 loss=0.67117 score=0.79759
+SAMPLE ours epoch=34/200 loss=0.69351 score=0.85820
+SAMPLE ours epoch=35/200 loss=0.66337 score=0.86139
+SAMPLE ours epoch=36/200 loss=0.66462 score=0.81034
+SAMPLE ours epoch=37/200 loss=0.65575 score=0.83713
+SAMPLE ours epoch=38/200 loss=0.65058 score=0.87298
+SAMPLE ours epoch=39/200 loss=0.65288 score=0.81001
+SAMPLE ours epoch=40/200 loss=0.66325 score=0.85913
+SAMPLE ours epoch=41/200 loss=0.64062 score=0.80347
+SAMPLE ours epoch=42/200 loss=0.62969 score=0.82224
+SAMPLE ours epoch=43/200 loss=0.63862 score=0.92367
+SAMPLE ours epoch=44/200 loss=0.64157 score=0.86866
+SAMPLE ours epoch=45/200 loss=0.62921 score=0.89422
+SAMPLE ours epoch=46/200 loss=0.62105 score=0.81514
+SAMPLE ours epoch=47/200 loss=0.60909 score=0.84927
+SAMPLE ours epoch=48/200 loss=0.60376 score=0.84847
+SAMPLE ours epoch=49/200 loss=0.59678 score=0.86074
+SAMPLE ours epoch=50/200 loss=0.59869 score=0.94874
+SAMPLE ours epoch=51/200 loss=0.60111 score=0.86029
+SAMPLE ours epoch=52/200 loss=0.60361 score=0.83414
+SAMPLE ours epoch=53/200 loss=0.60670 score=0.87547
+SAMPLE ours epoch=54/200 loss=0.61720 score=0.90523
+SAMPLE ours epoch=55/200 loss=0.60215 score=0.90171
+SAMPLE ours epoch=56/200 loss=0.59291 score=0.84751
+SAMPLE ours epoch=57/200 loss=0.58619 score=0.85036
+SAMPLE ours epoch=58/200 loss=0.58142 score=0.88046
+SAMPLE ours epoch=59/200 loss=0.58420 score=0.91256
+SAMPLE ours epoch=60/200 loss=0.59020 score=0.88154
+SAMPLE ours epoch=61/200 loss=0.58300 score=0.89075
+SAMPLE ours epoch=62/200 loss=0.57614 score=0.89059
+SAMPLE ours epoch=63/200 loss=0.57773 score=0.89559
+SAMPLE ours epoch=64/200 loss=0.57406 score=0.84768
+SAMPLE ours epoch=65/200 loss=0.57481 score=0.92264
+SAMPLE ours epoch=66/200 loss=0.56703 score=0.93053
+SAMPLE ours epoch=67/200 loss=0.57012 score=0.91976
+SAMPLE ours epoch=68/200 loss=0.57202 score=0.93235
+SAMPLE ours epoch=69/200 loss=0.56578 score=0.93112
+SAMPLE ours epoch=70/200 loss=0.56216 score=0.90983
+SAMPLE ours epoch=71/200 loss=0.55945 score=0.85432
+SAMPLE ours epoch=72/200 loss=0.56420 score=0.92509
+SAMPLE ours epoch=73/200 loss=0.56187 score=0.93331
+SAMPLE ours epoch=74/200 loss=0.55458 score=0.90237
+SAMPLE ours epoch=75/200 loss=0.55634 score=0.89645
+SAMPLE ours epoch=76/200 loss=0.56391 score=0.92509
+SAMPLE ours epoch=77/200 loss=0.55638 score=0.95865
+SAMPLE ours epoch=78/200 loss=0.55656 score=0.96658
+SAMPLE ours epoch=79/200 loss=0.55777 score=0.96658
+SAMPLE ours epoch=80/200 loss=0.55718 score=0.90080
+SAMPLE ours epoch=81/200 loss=0.56042 score=0.90895
+SAMPLE ours epoch=82/200 loss=0.54951 score=0.96628
+SAMPLE ours epoch=83/200 loss=0.55022 score=0.94139
+SAMPLE ours epoch=84/200 loss=0.55456 score=0.88185
+SAMPLE ours epoch=85/200 loss=0.54876 score=0.92487
+SAMPLE ours epoch=86/200 loss=0.55044 score=0.92854
+SAMPLE ours epoch=87/200 loss=0.55153 score=0.93430
+SAMPLE ours epoch=88/200 loss=0.54629 score=0.96658
+SAMPLE ours epoch=89/200 loss=0.55314 score=0.92854
+SAMPLE ours epoch=90/200 loss=0.54480 score=0.93905
+SAMPLE ours epoch=91/200 loss=0.54155 score=0.91478
+SAMPLE ours epoch=92/200 loss=0.54493 score=0.89886
+SAMPLE ours epoch=93/200 loss=0.54144 score=0.86846
+SAMPLE ours epoch=94/200 loss=0.54276 score=0.89284
+SAMPLE ours epoch=95/200 loss=0.54367 score=0.94977
+SAMPLE ours epoch=96/200 loss=0.54106 score=0.96667
+SAMPLE ours epoch=97/200 loss=0.54439 score=0.92925
+SAMPLE ours epoch=98/200 loss=0.54036 score=0.96667
+SAMPLE ours epoch=99/200 loss=0.53627 score=0.93905
+SAMPLE ours epoch=100/200 loss=0.54247 score=0.93219
+SAMPLE ours epoch=101/200 loss=0.54099 score=0.90168
+SAMPLE ours epoch=102/200 loss=0.53975 score=0.94192
+SAMPLE ours epoch=103/200 loss=0.53974 score=0.91635
+SAMPLE ours epoch=104/200 loss=0.54303 score=0.91751
+SAMPLE ours epoch=105/200 loss=0.53422 score=0.94797
+SAMPLE ours epoch=106/200 loss=0.53451 score=0.94922
+SAMPLE ours epoch=107/200 loss=0.53899 score=0.96658
+SAMPLE ours epoch=108/200 loss=0.53819 score=0.95483
+SAMPLE ours epoch=109/200 loss=0.53416 score=0.93038
+SAMPLE ours epoch=110/200 loss=0.53656 score=0.94700
+SAMPLE ours epoch=111/200 loss=0.53554 score=0.95803
+SAMPLE ours epoch=112/200 loss=0.53872 score=0.95851
+SAMPLE ours epoch=113/200 loss=0.53377 score=0.98396
+SAMPLE ours epoch=114/200 loss=0.53573 score=0.94952
+SAMPLE ours epoch=115/200 loss=0.53497 score=0.96512
+SAMPLE ours epoch=116/200 loss=0.53153 score=0.95829
+SAMPLE ours epoch=117/200 loss=0.53179 score=0.95011
+SAMPLE ours epoch=118/200 loss=0.53096 score=0.98362
+SAMPLE ours epoch=119/200 loss=0.53075 score=0.94082
+SAMPLE ours epoch=120/200 loss=0.53165 score=0.95025
+SAMPLE ours epoch=121/200 loss=0.53088 score=0.96658
+SAMPLE ours epoch=122/200 loss=0.53137 score=0.95809
+SAMPLE ours epoch=123/200 loss=0.53273 score=0.96667
+SAMPLE ours epoch=124/200 loss=0.52793 score=0.99165
+SAMPLE ours epoch=125/200 loss=0.52996 score=0.95025
+SAMPLE ours epoch=126/200 loss=0.52912 score=0.96715
+SAMPLE ours epoch=127/200 loss=0.53001 score=0.95187
+SAMPLE ours epoch=128/200 loss=0.52972 score=0.95791
+SAMPLE ours epoch=129/200 loss=0.52870 score=0.94143
+SAMPLE ours epoch=130/200 loss=0.53275 score=0.97521
+SAMPLE ours epoch=131/200 loss=0.53045 score=0.95809
+SAMPLE ours epoch=132/200 loss=0.52672 score=0.98330
+SAMPLE ours epoch=133/200 loss=0.52717 score=0.94922
+SAMPLE ours epoch=134/200 loss=0.52820 score=0.98396
+SAMPLE ours epoch=135/200 loss=0.52761 score=0.96658
+SAMPLE ours epoch=136/200 loss=0.52694 score=0.95803
+SAMPLE ours epoch=137/200 loss=0.52721 score=0.96667
+SAMPLE ours epoch=138/200 loss=0.52562 score=0.98290
+SAMPLE ours epoch=139/200 loss=0.52936 score=0.95025
+SAMPLE ours epoch=140/200 loss=0.52879 score=0.94977
+SAMPLE ours epoch=141/200 loss=0.52734 score=0.97621
+SAMPLE ours epoch=142/200 loss=0.52714 score=0.94139
+SAMPLE ours epoch=143/200 loss=0.52593 score=0.98330
+SAMPLE ours epoch=144/200 loss=0.52557 score=0.95952
+SAMPLE ours epoch=145/200 loss=0.52990 score=0.96832
+SAMPLE ours epoch=146/200 loss=0.52663 score=0.93435
+SAMPLE ours epoch=147/200 loss=0.52848 score=0.94152
+SAMPLE ours epoch=148/200 loss=0.52583 score=0.94922
+SAMPLE ours epoch=149/200 loss=0.52399 score=0.95803
+SAMPLE ours epoch=150/200 loss=0.52219 score=0.95803
+SAMPLE ours epoch=151/200 loss=0.52346 score=0.96503
+SAMPLE ours epoch=152/200 loss=0.52484 score=0.93787
+SAMPLE ours epoch=153/200 loss=0.52594 score=0.93936
+SAMPLE ours epoch=154/200 loss=0.52571 score=0.95803
+SAMPLE ours epoch=155/200 loss=0.52222 score=0.97499
+SAMPLE ours epoch=156/200 loss=0.52283 score=0.95011
+SAMPLE ours epoch=157/200 loss=0.52446 score=0.97499
+SAMPLE ours epoch=158/200 loss=0.52486 score=0.97499
+SAMPLE ours epoch=159/200 loss=0.52358 score=0.97499
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "SAMPLE",
+  "task": "classification",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "initialization": "scratch",
+  "protocol": null,
+  "split_sizes": {
+    "train": 1075,
+    "val": 135,
+    "test": 135
+  },
+  "imgsz": 224,
+  "batch": 64,
+  "epochs_requested": 200,
+  "best_epoch": 124,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.9703703703703703,
+    "macro_precision": 0.9714285714285715,
+    "macro_recall": 0.9658119658119657,
+    "macro_f1": 0.9644075021312872
+  },
+  "params": 1768748,
+  "gflops": 0.24504249,
+  "latency_ms": 3.1298690339705595,
+  "fps": 319.50218655999083,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/sample/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAMPLE/manifest.json"
+}

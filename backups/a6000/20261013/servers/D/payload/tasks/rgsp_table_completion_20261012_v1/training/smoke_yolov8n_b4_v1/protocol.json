@@ -1,0 +1,65 @@
+{
+  "schema": "rgsp-ssdd-table-completion-v1",
+  "variant": "cnn_yolov8n",
+  "seed": 0,
+  "split": "928 train / official232 TEST-as-VAL; no independent test claim",
+  "selection": "EMA best 0.1*AP50+0.9*AP50:95; earliest tie",
+  "epochs": 300,
+  "physical_batch": 4,
+  "accumulation": 8,
+  "effective_batch": 32,
+  "loss_normalization": "native summed microbatch loss; divide accumulated gradients by actual samples",
+  "optimizer": "AdamW",
+  "lr0": 0.001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": {
+    "weights": 0.0005,
+    "bias_and_norm": 0.0
+  },
+  "schedule": "5 full epochs linear warmup at optimizer updates, then cosine to lr0*0.01",
+  "module_warmup": 0,
+  "early_stopping": false,
+  "input": [
+    3,
+    640,
+    640
+  ],
+  "precision": "FP32 training/checkpoints/evaluation; AMP and TF32 off",
+  "augmentation": "letterbox640; horizontal+vertical flip p0.5; all other generic augmentations off",
+  "detection_loss": {
+    "box": 7.5,
+    "cls": 0.5,
+    "dfl": 1.5
+  },
+  "ema": "original ModelEMA policy",
+  "gradient_clip_l2": 10.0,
+  "evaluation": {
+    "conf": 0.001,
+    "iou_nms": 0.7,
+    "max_det": 300,
+    "P_R": "maximum-F1 curve summary; not fixed deployment threshold"
+  },
+  "smoke_only": true,
+  "code_sha256": "d01faeb54cd93935fe795d8d1cf84263e9c3b2c6212fcef950327148940b010e",
+  "source_manifest_sha256": "149133bdfefb969279040921719bfb79b5d307e0a8c350d9f8214867b465c502",
+  "data_manifest_sha256": "8c8db821f87451251bc670b4b69f1a70a55ceeb1ffd8ba91f7f6bf70447eef05",
+  "identity": {
+    "hostname": "a6000-d",
+    "torch": "1.13.1+cu117",
+    "cuda_visible_devices": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+    "physical_gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+    "physical_gpu_index": 0,
+    "physical_gpu_name": "NVIDIA RTX A6000",
+    "reported_count_before": 0,
+    "cuda_runtime_count": 1,
+    "reported_count_after": 1,
+    "compatibility_applied": true,
+    "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+    "torch_installation_modified": false,
+    "gpu_mask_changed": false
+  }
+}

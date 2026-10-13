@@ -1,0 +1,43 @@
+{
+  "experiment": "seed0_ssdd_full_p3",
+  "placement": "p3",
+  "variant": "full",
+  "state_dim": 16,
+  "seed": 0,
+  "subset": "SSDD",
+  "weights": "/home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0_ssdd_full_p3/weights/best.pt",
+  "weights_sha256": "3273c45faaf77becb8f2b7ec7b9acd00c1450eaa5a85a560f48f812a21cf0a42",
+  "data": "/home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed0-manifest/datasets/SSDD.yaml",
+  "data_yaml_sha256": "43d80d00984551a7dc8bd6feaee3a7fb825b67c8fd8d7373a3f1b03a1a69b837",
+  "split": "test",
+  "imgsz": 640,
+  "batch": 16,
+  "conf": 0.001,
+  "iou": 0.6,
+  "precision_mode": "fp32",
+  "result_dir": "/home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/evaluations/seed0_ssdd_full_p3_test",
+  "speed_ms": {
+    "preprocess": 0.10590923243555529,
+    "inference": 6.088877546376196,
+    "loss": 0.0003905131899077317,
+    "postprocess": 0.3315755005540519
+  },
+  "overall": {
+    "precision": 0.9323179038538559,
+    "recall": 0.8076923076923077,
+    "ap50": 0.8808824040709504,
+    "ap75": 0.30718706271477436,
+    "ap50_95": 0.42339986046718686
+  },
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "ship",
+      "precision": 0.9323179038538559,
+      "recall": 0.8076923076923077,
+      "ap50": 0.8808824040709504,
+      "ap75": 0.30718706271477436,
+      "ap50_95": 0.42339986046718686
+    }
+  ]
+}

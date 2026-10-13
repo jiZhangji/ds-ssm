@@ -1,0 +1,413 @@
+{
+  "checked_utc": "2026-10-09T11:58:13.336311+00:00",
+  "child_process": {
+    "argv": [
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "-B",
+      "-u",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cuda_uuid_compat.py",
+      "--expected-uuid",
+      "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+      "--script",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_trial.py",
+      "--output",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/sar_acd_original_seed0/cuda_compatibility.json",
+      "--",
+      "--source-root",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+      "--manifest",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/SAR_ACD/manifest.json",
+      "--output",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_original_seed0",
+      "--dataset",
+      "SAR-ACD",
+      "--variant",
+      "original",
+      "--seed",
+      "0",
+      "--epochs",
+      "200",
+      "--patience",
+      "40",
+      "--batch",
+      "64",
+      "--imgsz",
+      "224",
+      "--device",
+      "cuda:0",
+      "--workers",
+      "4",
+      "--plan",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+      "--trial-id",
+      "sar_acd_original_seed0",
+      "--resume"
+    ],
+    "matching_identity_alive": true,
+    "pid": 162560,
+    "ppid": 162471,
+    "start_ticks": 10259332,
+    "state": "R"
+  },
+  "cross_deep_errors": [],
+  "cross_deep_reverification": [],
+  "current_metric_observation": {
+    "all_observed_rows_finite": true,
+    "complete_rows": 178,
+    "last_complete_row": {
+      "best_epoch": 164,
+      "best_score": 0.9755665686723429,
+      "controls": {
+        "controlled_blocks": 0,
+        "variant": "original"
+      },
+      "epoch": 178,
+      "gradients": null,
+      "loss": 0.4086917262195172,
+      "lr": 7.852803873531677e-06,
+      "val": {
+        "accuracy": 0.9482071713147411,
+        "confusion_matrix": [
+          [
+            43,
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            50,
+            0,
+            0,
+            1
+          ],
+          [
+            4,
+            0,
+            47,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            49,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            49
+          ]
+        ],
+        "macro_f1": 0.9476451834615375,
+        "macro_precision": 0.9486509878261898,
+        "macro_recall": 0.9482543389792341,
+        "per_class_recall": [
+          0.9347826086956522,
+          0.9803921568627451,
+          0.9215686274509803,
+          0.9245283018867925,
+          0.98
+        ]
+      },
+      "val_threshold": null
+    },
+    "observed_bytes_sha256": "fbdf4b245a817fbddff6fd2ae81fc8decc241dcfed3c810ba2a332c0da1715a9",
+    "observed_utc": "2026-10-09T11:58:13.338107+00:00",
+    "partial_tail_omitted": false
+  },
+  "current_operator_files": {
+    "cuda_compatibility.json": {
+      "exists": false,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/sar_acd_original_seed0/cuda_compatibility.json"
+    },
+    "deep_completion_audit.json": {
+      "exists": false,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/sar_acd_original_seed0/deep_completion_audit.json"
+    },
+    "exit.json": {
+      "exists": false,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/sar_acd_original_seed0/exit.json"
+    },
+    "launch_contract.json": {
+      "content": {
+        "actual_argv": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cuda_uuid_compat.py",
+          "--expected-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--script",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_trial.py",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/sar_acd_original_seed0/cuda_compatibility.json",
+          "--",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/SAR_ACD/manifest.json",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_original_seed0",
+          "--dataset",
+          "SAR-ACD",
+          "--variant",
+          "original",
+          "--seed",
+          "0",
+          "--epochs",
+          "200",
+          "--patience",
+          "40",
+          "--batch",
+          "64",
+          "--imgsz",
+          "224",
+          "--device",
+          "cuda:0",
+          "--workers",
+          "4",
+          "--plan",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+          "--trial-id",
+          "sar_acd_original_seed0",
+          "--resume"
+        ],
+        "child_inherits_all_locks": true,
+        "cross_trial_sha256": "e348f28b38c41a271fed5776510e2b44b241c20f8399eb86ee8aca5fad7d5e5f",
+        "cwd": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+        "environment_overrides": {
+          "CUDA_VISIBLE_DEVICES": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "MKL_NUM_THREADS": "4",
+          "MPLCONFIGDIR": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/matplotlib",
+          "OMP_NUM_THREADS": "4",
+          "OPENBLAS_NUM_THREADS": "4",
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONPATH": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "PYTHONUNBUFFERED": "1",
+          "WANDB_MODE": "disabled",
+          "YOLO_AUTOINSTALL": "false",
+          "YOLO_CONFIG_DIR": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/runtime-config"
+        },
+        "forwarded_args_exact": true,
+        "fresh_gpu": {
+          "checked_utc": "2026-10-09T11:34:23.834846+00:00",
+          "compute_processes": [],
+          "memory_total_mib": 49140,
+          "memory_used_mib": 530,
+          "name": "NVIDIA RTX A6000",
+          "utilization_percent": 0,
+          "uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964"
+        },
+        "idle_gate": {
+          "checked_utc": "2026-10-09T11:34:23.753082+00:00",
+          "compute_processes": [],
+          "memory_total_mib": 49140,
+          "memory_used_mib": 530,
+          "name": "NVIDIA RTX A6000",
+          "utilization_percent": 0,
+          "uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964"
+        },
+        "label": "sar_acd_original_seed0",
+        "lock_paths": [
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/a/dispatch.lock",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/lanes/a_seed0/lane.lock",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/locks/GPU-12cf4841-46b9-94d1-2715-9932134cf964.lock"
+        ],
+        "mode": "trials",
+        "operator_sha256": "796528f8854ab0c246bdf2e7b19edd7cee11e3e2913d5731891a6735fe01e806",
+        "owner": {
+          "argv": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/operator_cross_recover.py",
+            "run"
+          ],
+          "pid": 162471,
+          "ppid": 1,
+          "session": 162471,
+          "start_ticks": 10257234,
+          "state": "R"
+        },
+        "plan_file_sha256": "37e1e2254643541118e4bab29d11cb93f1483847fc73aa69be8d63be4907cbe0",
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "planned_argv": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_trial.py",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/SAR_ACD/manifest.json",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_original_seed0",
+          "--dataset",
+          "SAR-ACD",
+          "--variant",
+          "original",
+          "--seed",
+          "0",
+          "--epochs",
+          "200",
+          "--patience",
+          "40",
+          "--batch",
+          "64",
+          "--imgsz",
+          "224",
+          "--device",
+          "cuda:0",
+          "--workers",
+          "4",
+          "--plan",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+          "--trial-id",
+          "sar_acd_original_seed0",
+          "--resume"
+        ],
+        "schema": "rgsp-operator-cross-recovery-v1",
+        "started_utc": "2026-10-09T11:34:23.835159+00:00",
+        "wrapper_sha256": "3faa16696535c447d50a405799040e17ef7780bb9444c3f5b0c9d5310061b04d"
+      },
+      "exists": true,
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/sar_acd_original_seed0/launch_contract.json",
+      "sha256": "f3b6249ddb6b4ac57f44e0a4ee9d9e3c8b12fcd7454b8d802f1d5eab2c23b4c1",
+      "size": 4808
+    }
+  },
+  "current_run_status": {
+    "content": {
+      "best_epoch": 164,
+      "epoch": 178,
+      "epochs_requested": 200,
+      "seed": 0,
+      "stale": 14,
+      "status": "training",
+      "updated_utc": "2026-10-09T11:58:12.347781+00:00",
+      "variant": "original"
+    },
+    "exists": true,
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_original_seed0/status.json",
+    "sha256": "886c23ffe5aca5f9a72a73a600b27a2222d17b14d2a00190d42d58342cec3c88",
+    "size": 197
+  },
+  "host_key": "a",
+  "live_snapshot_checked_utc": "2026-10-09T11:58:13.005392+00:00",
+  "model_execution_performed": false,
+  "operator_process": {
+    "argv": [
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "-B",
+      "-u",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/operator_cross_recover.py",
+      "run"
+    ],
+    "matching_identity_alive": true,
+    "pid": 162471,
+    "ppid": 1,
+    "start_ticks": 10257234,
+    "state": "S"
+  },
+  "operator_state": {
+    "content": {
+      "child": {
+        "argv": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cuda_uuid_compat.py",
+          "--expected-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--script",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_trial.py",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/sar_acd_original_seed0/cuda_compatibility.json",
+          "--",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/SAR_ACD/manifest.json",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_original_seed0",
+          "--dataset",
+          "SAR-ACD",
+          "--variant",
+          "original",
+          "--seed",
+          "0",
+          "--epochs",
+          "200",
+          "--patience",
+          "40",
+          "--batch",
+          "64",
+          "--imgsz",
+          "224",
+          "--device",
+          "cuda:0",
+          "--workers",
+          "4",
+          "--plan",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+          "--trial-id",
+          "sar_acd_original_seed0",
+          "--resume"
+        ],
+        "pid": 162560,
+        "ppid": 162471,
+        "session": 162471,
+        "start_ticks": 10259332,
+        "state": "R"
+      },
+      "completed": [],
+      "current": "sar_acd_original_seed0",
+      "gpu": {
+        "checked_utc": "2026-10-09T11:34:23.753082+00:00",
+        "compute_processes": [],
+        "memory_total_mib": 49140,
+        "memory_used_mib": 530,
+        "name": "NVIDIA RTX A6000",
+        "utilization_percent": 0,
+        "uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964"
+      },
+      "launch_contract": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/sar_acd_original_seed0/launch_contract.json",
+      "mode": "trials",
+      "owner": {
+        "argv": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/operator_cross_recover.py",
+          "run"
+        ],
+        "pid": 162471,
+        "ppid": 1,
+        "session": 162471,
+        "start_ticks": 10257234,
+        "state": "R"
+      },
+      "phase": "trials",
+      "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+      "schema": "rgsp-operator-cross-recovery-v1",
+      "started_utc": "2026-10-09T11:34:03.066033+00:00",
+      "state": "running",
+      "updated_utc": "2026-10-09T11:34:23.842637+00:00"
+    },
+    "exists": true,
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials_status.json",
+    "sha256": "8834978135a1034ad938a61b2077b1d05774aebfc3a5bb5e509f73caf2eadfd7",
+    "size": 2623
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "receipt_snapshot_checked_utc": "2026-10-09T11:58:13.311503+00:00",
+  "schema": "rgsp-read-only-file-increment-v1",
+  "subprocess_exit_codes": {
+    "live": 0,
+    "receipts": 2
+  }
+}

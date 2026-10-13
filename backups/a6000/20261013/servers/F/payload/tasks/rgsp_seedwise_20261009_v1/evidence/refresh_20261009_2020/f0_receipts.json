@@ -1,0 +1,442 @@
+{
+  "all_global_seed0_verified_locally": false,
+  "all_requested_complete": false,
+  "checked_utc": "2026-10-09T12:24:57.381057+00:00",
+  "global_seed0_not_ready_ids": [],
+  "global_seed0_trial_ids": [
+    "farmland_full_seed0",
+    "farmland_matched_scale075_seed0",
+    "farmland_original_seed0",
+    "ottawa_full_seed0",
+    "ottawa_matched_scale075_seed0",
+    "ottawa_original_seed0",
+    "sadd_cnn_yolov8n_seed0",
+    "sadd_const_guidance_seed0",
+    "sadd_full_no_lrc_seed0",
+    "sadd_full_seed0",
+    "sadd_local_energy_seed0",
+    "sadd_matched_identity_seed0",
+    "sadd_matched_scale075_seed0",
+    "sadd_original_seed0",
+    "sadd_post_gate_seed0",
+    "sample_full_seed0",
+    "sample_matched_scale075_seed0",
+    "sample_original_seed0",
+    "sar_acd_full_seed0",
+    "sar_acd_matched_scale075_seed0",
+    "sar_acd_original_seed0",
+    "sar_aircraft10_full_seed0",
+    "sar_aircraft10_matched_scale075_seed0",
+    "sar_aircraft10_original_seed0",
+    "sar_shipdataset_full_seed0",
+    "sar_shipdataset_matched_scale075_seed0",
+    "sar_shipdataset_original_seed0",
+    "ssdd_cnn_yolov8n_seed0",
+    "ssdd_const_guidance_seed0",
+    "ssdd_energy_only_seed0",
+    "ssdd_full_d32_seed0",
+    "ssdd_full_d8_seed0",
+    "ssdd_full_fixed_half_seed0",
+    "ssdd_full_no_lrc_seed0",
+    "ssdd_full_p2_seed0",
+    "ssdd_full_p4_seed0",
+    "ssdd_full_seed0",
+    "ssdd_full_stats5_seed0",
+    "ssdd_full_stats7_seed0",
+    "ssdd_full_trend5_seed0",
+    "ssdd_full_trend7_seed0",
+    "ssdd_global_seed0",
+    "ssdd_guidance_only_seed0",
+    "ssdd_local_energy_delta_seed0",
+    "ssdd_local_energy_input_seed0",
+    "ssdd_local_energy_seed0",
+    "ssdd_lsgm_point_only_seed0",
+    "ssdd_lsgm_std_only_seed0",
+    "ssdd_lsgm_trend_only_seed0",
+    "ssdd_matched_identity_seed0",
+    "ssdd_matched_scale075_seed0",
+    "ssdd_original_seed0",
+    "ssdd_post_gate_seed0",
+    "ssdd_residual_scale075_seed0",
+    "yellow_river_full_seed0",
+    "yellow_river_matched_scale075_seed0",
+    "yellow_river_original_seed0"
+  ],
+  "global_seed0_unverified_in_this_snapshot": [
+    "farmland_full_seed0",
+    "farmland_matched_scale075_seed0",
+    "farmland_original_seed0",
+    "ottawa_full_seed0",
+    "ottawa_matched_scale075_seed0",
+    "ottawa_original_seed0",
+    "sadd_cnn_yolov8n_seed0",
+    "sadd_const_guidance_seed0",
+    "sadd_full_no_lrc_seed0",
+    "sadd_full_seed0",
+    "sadd_local_energy_seed0",
+    "sadd_matched_identity_seed0",
+    "sadd_matched_scale075_seed0",
+    "sadd_original_seed0",
+    "sadd_post_gate_seed0",
+    "sample_full_seed0",
+    "sample_matched_scale075_seed0",
+    "sample_original_seed0",
+    "sar_acd_full_seed0",
+    "sar_acd_matched_scale075_seed0",
+    "sar_acd_original_seed0",
+    "sar_aircraft10_full_seed0",
+    "sar_aircraft10_matched_scale075_seed0",
+    "sar_aircraft10_original_seed0",
+    "sar_shipdataset_full_seed0",
+    "sar_shipdataset_matched_scale075_seed0",
+    "sar_shipdataset_original_seed0",
+    "ssdd_cnn_yolov8n_seed0",
+    "ssdd_const_guidance_seed0",
+    "ssdd_energy_only_seed0",
+    "ssdd_full_d32_seed0",
+    "ssdd_full_d8_seed0",
+    "ssdd_full_fixed_half_seed0",
+    "ssdd_full_no_lrc_seed0",
+    "ssdd_full_p2_seed0",
+    "ssdd_full_p4_seed0",
+    "ssdd_full_seed0",
+    "ssdd_full_stats5_seed0",
+    "ssdd_full_stats7_seed0",
+    "ssdd_full_trend5_seed0",
+    "ssdd_full_trend7_seed0",
+    "ssdd_global_seed0",
+    "ssdd_guidance_only_seed0",
+    "ssdd_local_energy_delta_seed0",
+    "ssdd_local_energy_input_seed0",
+    "ssdd_lsgm_point_only_seed0",
+    "ssdd_lsgm_std_only_seed0",
+    "ssdd_lsgm_trend_only_seed0",
+    "ssdd_matched_scale075_seed0",
+    "ssdd_post_gate_seed0",
+    "ssdd_residual_scale075_seed0",
+    "yellow_river_full_seed0",
+    "yellow_river_matched_scale075_seed0",
+    "yellow_river_original_seed0"
+  ],
+  "host_key": "f0",
+  "hostname": "powerleader-a6000-f",
+  "lane": "f0_seed0",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "requested_count": 4,
+  "requested_trial_ids": [
+    "ssdd_original_seed0",
+    "ssdd_matched_identity_seed0",
+    "ssdd_local_energy_seed0",
+    "sar_shipdataset_original_seed0"
+  ],
+  "rows": [
+    {
+      "artifacts_verified": 6,
+      "kind": "reuse",
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/train_complete.json",
+            "sha256": "6d2e129c255b385f412ed508ed66d936f57d24683fe14f01206b5a994907b0f9"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/eval_test.json",
+            "sha256": "75f11b851fb46602481df46d3e416354a3d8a69597cc3a4caa6cac67983243ac"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/reuse/ssdd_original_seed0/evaluation_complete.json",
+            "sha256": "03a2258c323ce884f19b64f7d72ae68ec7c65295995589537b27076d223ff5b6"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/weights/best.pt",
+            "sha256": "9cdeb017197f755471eb38f191a2cb02704ecc414f4c72754c5edf0471bbe3b1"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/manifest/protocol.json",
+            "sha256": "f527dc1084569e85bc2f4e16c8b5843a272f453515a0f53665a9bcc863db3e0c"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/reuse/ssdd_original_seed0/audit.json",
+            "sha256": "931908cb1d8475d8328672e955362dbe483c10276a777cfdce23676475f50076"
+          }
+        ],
+        "details": {
+          "limitations": [
+            "Historical continuous seeded-scratch trial, not rerun under the new launcher.",
+            "Same-shape RGSP controls share initialized tensors; different architecture/state/position do not guarantee tensor-matched initialization.",
+            "Dataset remains exact-content-cleaned image split, not a verified unseen-scene split.",
+            "Legacy EMA/FP16 checkpoint storage and test metric protocol retained."
+          ],
+          "origin": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original",
+          "reused": true
+        },
+        "finished_utc": "2026-10-09T03:30:48.062590+00:00",
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_original_seed0",
+        "trial_sha256": "f37eb2f13548e0e4069eca41b202d3391cfd76187de0eb5b92da643af2bc60d6"
+      },
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_original_seed0.json",
+      "receipt_sha256": "148a911f437c2db14b867a3f163ddc2890f993dad8a1fc25b8c1abbbfeb4c2e8",
+      "seed": 0,
+      "status": "verified",
+      "trial_id": "ssdd_original_seed0"
+    },
+    {
+      "artifacts_verified": 6,
+      "kind": "reuse",
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity/train_complete.json",
+            "sha256": "99eb6f5ac5b0f3f1707a53c601e5c96d83a406d401b17efa69d27dc35000a18f"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity/eval_test.json",
+            "sha256": "bbbac3397c212d3564bd1a1830898b192e363b75aa9172a5218bfec5e92a686a"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/reuse/ssdd_matched_identity_seed0/evaluation_complete.json",
+            "sha256": "8664e1cfffbe477b23012ee61b288667396fee3678e9ccdccbcc6e9253ca3b5c"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity/weights/best.pt",
+            "sha256": "e39aa2e33704f95772a1a15b21f7afa9442f832204dbb099150690deda5ace03"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/manifest/protocol.json",
+            "sha256": "f527dc1084569e85bc2f4e16c8b5843a272f453515a0f53665a9bcc863db3e0c"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/reuse/ssdd_matched_identity_seed0/audit.json",
+            "sha256": "161981b80ee17cf2fd42b26b642369f9b73199a34f1d99eb5d7ece1e90df4218"
+          }
+        ],
+        "details": {
+          "limitations": [
+            "Historical continuous seeded-scratch trial, not rerun under the new launcher.",
+            "Same-shape RGSP controls share initialized tensors; different architecture/state/position do not guarantee tensor-matched initialization.",
+            "Dataset remains exact-content-cleaned image split, not a verified unseen-scene split.",
+            "Legacy EMA/FP16 checkpoint storage and test metric protocol retained."
+          ],
+          "origin": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity",
+          "reused": true
+        },
+        "finished_utc": "2026-10-09T03:30:48.107695+00:00",
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_matched_identity_seed0",
+        "trial_sha256": "ec2f851b7d7c07050fbcab139fe58c179174f9f90f6c8ec51437e193de2be183"
+      },
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_matched_identity_seed0.json",
+      "receipt_sha256": "298d0ef232a5cc17a085e99ee98d3dda2be12efddc9bb9e6cf9ee16fdac27ff4",
+      "seed": 0,
+      "status": "verified",
+      "trial_id": "ssdd_matched_identity_seed0"
+    },
+    {
+      "artifacts_verified": 5,
+      "kind": "command",
+      "receipt": {
+        "artifacts": [
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/adoption.json",
+            "sha256": "ee167bc992bcd945d9af5c3818ebc1446a1becbb48e4297946de6e1c6f7e7670"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/train_complete.json",
+            "sha256": "afd77238a6113b8bf50180d7de98ac8df254b125eefb0aa7da91e9436306eaab"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/eval_test.json",
+            "sha256": "1ceb872c9335a38a11f84e15cae5f76fd8f06edc23ec78c4f28211bf300c7506"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/weights/best.pt",
+            "sha256": "ac60ad4c7bcbdf99c59db2596671a8db5ce591e1437575d114eccc72a915af29"
+          },
+          {
+            "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/completion.json",
+            "sha256": "94d9b3046f2e2ed5f273ee0565f3b66f0fd14ab9c83a2778f4b846229a398706"
+          }
+        ],
+        "details": {
+          "argv": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopt_receipt.py",
+            "--plan",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+            "--trial",
+            "ssdd_local_energy_seed0",
+            "--legacy-completion",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f0.complete.json"
+          ],
+          "kind": "command"
+        },
+        "finished_utc": "2026-10-09T03:31:08.703848+00:00",
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-seedwise-v1",
+        "seed": 0,
+        "status": "complete",
+        "trial_id": "ssdd_local_energy_seed0",
+        "trial_sha256": "67798b00fec728b408b4f893dc00a36a17160cc0a74e1f7518c291afe0e0734f"
+      },
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_local_energy_seed0.json",
+      "receipt_sha256": "ee707d206e76ef83e601708d2ebb81872b4b56d9f66f5605b8947fba98f6106d",
+      "seed": 0,
+      "status": "verified",
+      "trial_id": "ssdd_local_energy_seed0"
+    },
+    {
+      "kind": "command",
+      "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/sar_shipdataset_original_seed0.json",
+      "seed": 0,
+      "status": "missing",
+      "trial_id": "sar_shipdataset_original_seed0"
+    }
+  ],
+  "schema": "rgsp-verified-receipt-snapshot-v1",
+  "scope": "Read-only verification of the full explicit local lane subset; combine producing-host snapshots before a trusted global barrier",
+  "seed": 0,
+  "verified_count": 3,
+  "verified_receipts": {
+    "ssdd_local_energy_seed0": {
+      "artifacts": [
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/adoption.json",
+          "sha256": "ee167bc992bcd945d9af5c3818ebc1446a1becbb48e4297946de6e1c6f7e7670"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/train_complete.json",
+          "sha256": "afd77238a6113b8bf50180d7de98ac8df254b125eefb0aa7da91e9436306eaab"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/eval_test.json",
+          "sha256": "1ceb872c9335a38a11f84e15cae5f76fd8f06edc23ec78c4f28211bf300c7506"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/weights/best.pt",
+          "sha256": "ac60ad4c7bcbdf99c59db2596671a8db5ce591e1437575d114eccc72a915af29"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_local_energy_seed0/completion.json",
+          "sha256": "94d9b3046f2e2ed5f273ee0565f3b66f0fd14ab9c83a2778f4b846229a398706"
+        }
+      ],
+      "details": {
+        "argv": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopt_receipt.py",
+          "--plan",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+          "--trial",
+          "ssdd_local_energy_seed0",
+          "--legacy-completion",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f0.complete.json"
+        ],
+        "kind": "command"
+      },
+      "finished_utc": "2026-10-09T03:31:08.703848+00:00",
+      "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+      "schema": "rgsp-seedwise-v1",
+      "seed": 0,
+      "status": "complete",
+      "trial_id": "ssdd_local_energy_seed0",
+      "trial_sha256": "67798b00fec728b408b4f893dc00a36a17160cc0a74e1f7518c291afe0e0734f"
+    },
+    "ssdd_matched_identity_seed0": {
+      "artifacts": [
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity/train_complete.json",
+          "sha256": "99eb6f5ac5b0f3f1707a53c601e5c96d83a406d401b17efa69d27dc35000a18f"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity/eval_test.json",
+          "sha256": "bbbac3397c212d3564bd1a1830898b192e363b75aa9172a5218bfec5e92a686a"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/reuse/ssdd_matched_identity_seed0/evaluation_complete.json",
+          "sha256": "8664e1cfffbe477b23012ee61b288667396fee3678e9ccdccbcc6e9253ca3b5c"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity/weights/best.pt",
+          "sha256": "e39aa2e33704f95772a1a15b21f7afa9442f832204dbb099150690deda5ace03"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/manifest/protocol.json",
+          "sha256": "f527dc1084569e85bc2f4e16c8b5843a272f453515a0f53665a9bcc863db3e0c"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/reuse/ssdd_matched_identity_seed0/audit.json",
+          "sha256": "161981b80ee17cf2fd42b26b642369f9b73199a34f1d99eb5d7ece1e90df4218"
+        }
+      ],
+      "details": {
+        "limitations": [
+          "Historical continuous seeded-scratch trial, not rerun under the new launcher.",
+          "Same-shape RGSP controls share initialized tensors; different architecture/state/position do not guarantee tensor-matched initialization.",
+          "Dataset remains exact-content-cleaned image split, not a verified unseen-scene split.",
+          "Legacy EMA/FP16 checkpoint storage and test metric protocol retained."
+        ],
+        "origin": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/matched_identity",
+        "reused": true
+      },
+      "finished_utc": "2026-10-09T03:30:48.107695+00:00",
+      "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+      "schema": "rgsp-seedwise-v1",
+      "seed": 0,
+      "status": "complete",
+      "trial_id": "ssdd_matched_identity_seed0",
+      "trial_sha256": "ec2f851b7d7c07050fbcab139fe58c179174f9f90f6c8ec51437e193de2be183"
+    },
+    "ssdd_original_seed0": {
+      "artifacts": [
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/train_complete.json",
+          "sha256": "6d2e129c255b385f412ed508ed66d936f57d24683fe14f01206b5a994907b0f9"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/eval_test.json",
+          "sha256": "75f11b851fb46602481df46d3e416354a3d8a69597cc3a4caa6cac67983243ac"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/reuse/ssdd_original_seed0/evaluation_complete.json",
+          "sha256": "03a2258c323ce884f19b64f7d72ae68ec7c65295995589537b27076d223ff5b6"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original/weights/best.pt",
+          "sha256": "9cdeb017197f755471eb38f191a2cb02704ecc414f4c72754c5edf0471bbe3b1"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/manifest/protocol.json",
+          "sha256": "f527dc1084569e85bc2f4e16c8b5843a272f453515a0f53665a9bcc863db3e0c"
+        },
+        {
+          "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/reuse/ssdd_original_seed0/audit.json",
+          "sha256": "931908cb1d8475d8328672e955362dbe483c10276a777cfdce23676475f50076"
+        }
+      ],
+      "details": {
+        "limitations": [
+          "Historical continuous seeded-scratch trial, not rerun under the new launcher.",
+          "Same-shape RGSP controls share initialized tensors; different architecture/state/position do not guarantee tensor-matched initialization.",
+          "Dataset remains exact-content-cleaned image split, not a verified unseen-scene split.",
+          "Legacy EMA/FP16 checkpoint storage and test metric protocol retained."
+        ],
+        "origin": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0/runs/original",
+        "reused": true
+      },
+      "finished_utc": "2026-10-09T03:30:48.062590+00:00",
+      "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+      "schema": "rgsp-seedwise-v1",
+      "seed": 0,
+      "status": "complete",
+      "trial_id": "ssdd_original_seed0",
+      "trial_sha256": "f37eb2f13548e0e4069eca41b202d3391cfd76187de0eb5b92da643af2bc60d6"
+    }
+  }
+}

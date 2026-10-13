@@ -1,0 +1,46 @@
+{
+  "run_id": "paper-table-fill-ssdd-ex27-val-iou07-20261012",
+  "status": "COMPLETED",
+  "started_at_utc": "2026-10-11T16:28:16.322141+00:00",
+  "host": "a6000-d",
+  "python": "3.10.16 | packaged by conda-forge | (main, Dec  5 2024, 14:16:10) [GCC 13.3.0]",
+  "torch": "1.13.1+cu117",
+  "cuda_available": true,
+  "cuda_version": "11.7",
+  "ultralytics": "8.2.29",
+  "source_path": "/home/powerleader/ig-ds-ssm/work_train_single/ultralytics",
+  "source_git_revision": null,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/weights/historical_ssdd/ex27_best.pt",
+  "checkpoint_sha256": "1cebf8735311e5f0461b079d4e50b8b5d957dd6f171532e832821857b240aa09",
+  "data_yaml": "/home/powerleader/ig-ds-ssm/experiments/ssdd_historical_checkpoint_diagnostic_20260828/SSDD_official_test_diagnostic.yaml",
+  "data_yaml_sha256": "5608b98c250353ad9782866f02ff3698685a7c3926da8e00df976ba3f0693dce",
+  "split": "val (maps to official images/test; historical TEST-as-VAL)",
+  "settings": {
+    "imgsz": 640,
+    "batch": 32,
+    "device": 0,
+    "half": false,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "workers": 0,
+    "plots": false,
+    "augment": false
+  },
+  "metrics_fraction": {
+    "precision": 0.9668714025266969,
+    "recall": 0.9578754578754579,
+    "AP50": 0.9858026302226535,
+    "AP75": 0.8421305410604778,
+    "AP50_95": 0.7129831975919221
+  },
+  "metrics_percent": {
+    "precision": 96.68714025266969,
+    "recall": 95.7875457875458,
+    "AP50": 98.58026302226534,
+    "AP75": 84.21305410604778,
+    "AP50_95": 71.29831975919221
+  },
+  "completed_at_utc": "2026-10-11T16:28:20.161699+00:00",
+  "error": null
+}

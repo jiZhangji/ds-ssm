@@ -1,0 +1,40 @@
+{
+  "controls": [],
+  "common_tensor_sha256": null,
+  "parameters": 3011043,
+  "accumulation": 8,
+  "train_batches": 232,
+  "optimizer_groups": [
+    {
+      "group_name": "decay",
+      "lr": 0.001,
+      "weight_decay": 0.0005,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08
+    },
+    {
+      "group_name": "norm",
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08
+    },
+    {
+      "group_name": "bias",
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08
+    }
+  ],
+  "initialization": "scratch, common layers matched, BN reset"
+}

@@ -1,0 +1,75 @@
+{
+  "batch": 1,
+  "coverage": {
+    "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+    "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+    "exhaustive": false,
+    "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+    "not_included": [
+      "Scan exponentials and softplus special functions; symbolic counts are separate.",
+      "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+      "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+      "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+    ],
+    "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+    "scope": "Full unfused detector including dense head; eval, batch=1, FP32, no TF32, no NMS.",
+    "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+    "version": "rgsp-covered-operations-v1"
+  },
+  "covered_flops_g": 28.6469632,
+  "cross_merge_add_flops": 0,
+  "cross_merge_calls": [],
+  "dense_output_shape": [
+    1,
+    5,
+    8400
+  ],
+  "device": "cuda:0",
+  "einsum_calls": [],
+  "finite_forward": true,
+  "functional_einsum_mac2_flops": 0,
+  "fused": false,
+  "input_shapes": [
+    [
+      1,
+      3,
+      640,
+      640
+    ]
+  ],
+  "nms_included": false,
+  "output_shape": [
+    1,
+    5,
+    8400
+  ],
+  "output_shapes": [
+    [
+      1,
+      5,
+      8400
+    ]
+  ],
+  "parameters": 11135987,
+  "precision": "FP32",
+  "scan_basic_arithmetic_flops": 0,
+  "scan_calls": [],
+  "ssm_module_calls": [],
+  "status": "PASS",
+  "thop_legacy_x2_flops": 28646963200.0,
+  "thop_version": "2.0.16",
+  "torch_version": "1.13.1+cu117",
+  "trainable_parameters": 11135971,
+  "unregistered_leaf_module_types": [
+    "torch.nn.modules.activation.SiLU",
+    "ultralytics.nn.modules.conv.Concat"
+  ],
+  "unsupported": [
+    "Scan exponentials and softplus special functions; symbolic counts are separate.",
+    "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+    "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+    "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing.",
+    "Unregistered THOP leaf: torch.nn.modules.activation.SiLU",
+    "Unregistered THOP leaf: ultralytics.nn.modules.conv.Concat"
+  ]
+}

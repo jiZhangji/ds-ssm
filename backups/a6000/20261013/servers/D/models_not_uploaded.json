@@ -1,0 +1,3390 @@
+[
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/best.pt",
+    "bytes": 12275853,
+    "mtime_ns": 1787889848126252519,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch10.pt",
+    "bytes": 36579527,
+    "mtime_ns": 1787883663048809916,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch100.pt",
+    "bytes": 36590279,
+    "mtime_ns": 1787886754228054829,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch110.pt",
+    "bytes": 36591431,
+    "mtime_ns": 1787887098062978012,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch120.pt",
+    "bytes": 36592647,
+    "mtime_ns": 1787887441609762559,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch130.pt",
+    "bytes": 36593799,
+    "mtime_ns": 1787887784972425243,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch140.pt",
+    "bytes": 36595015,
+    "mtime_ns": 1787888128574928099,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch150.pt",
+    "bytes": 36596231,
+    "mtime_ns": 1787888472329489321,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch160.pt",
+    "bytes": 36597383,
+    "mtime_ns": 1787888815996079123,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch170.pt",
+    "bytes": 36598599,
+    "mtime_ns": 1787889159582683252,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch180.pt",
+    "bytes": 36599751,
+    "mtime_ns": 1787889503481297386,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch190.pt",
+    "bytes": 36600967,
+    "mtime_ns": 1787889847438259811,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch20.pt",
+    "bytes": 36580743,
+    "mtime_ns": 1787884006288251031,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch30.pt",
+    "bytes": 36581895,
+    "mtime_ns": 1787884349618918171,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch40.pt",
+    "bytes": 36583111,
+    "mtime_ns": 1787884693103235382,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch50.pt",
+    "bytes": 36584327,
+    "mtime_ns": 1787885036576396203,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch60.pt",
+    "bytes": 36585479,
+    "mtime_ns": 1787885380033987974,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch70.pt",
+    "bytes": 36586695,
+    "mtime_ns": 1787885723632428579,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch80.pt",
+    "bytes": 36587847,
+    "mtime_ns": 1787886067025157030,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/epoch90.pt",
+    "bytes": 36589063,
+    "mtime_ns": 1787886410592866596,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/last.pt",
+    "bytes": 12280589,
+    "mtime_ns": 1787889847974254126,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/best.pt",
+    "bytes": 12143418,
+    "mtime_ns": 1787896131602184375,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch10.pt",
+    "bytes": 36181401,
+    "mtime_ns": 1787890213528039312,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch100.pt",
+    "bytes": 36192153,
+    "mtime_ns": 1787893029857435196,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch110.pt",
+    "bytes": 36193305,
+    "mtime_ns": 1787893342525208221,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch120.pt",
+    "bytes": 36194521,
+    "mtime_ns": 1787893655508723068,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch130.pt",
+    "bytes": 36195737,
+    "mtime_ns": 1787893968314678345,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch140.pt",
+    "bytes": 36196889,
+    "mtime_ns": 1787894281203069857,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch150.pt",
+    "bytes": 36198105,
+    "mtime_ns": 1787894594144528207,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch160.pt",
+    "bytes": 36199257,
+    "mtime_ns": 1787894907002564610,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch170.pt",
+    "bytes": 36200473,
+    "mtime_ns": 1787895220284918062,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch180.pt",
+    "bytes": 36201625,
+    "mtime_ns": 1787895534047445976,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch190.pt",
+    "bytes": 36202841,
+    "mtime_ns": 1787895848538072665,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch20.pt",
+    "bytes": 36182617,
+    "mtime_ns": 1787890526615874651,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch30.pt",
+    "bytes": 36183833,
+    "mtime_ns": 1787890839416541857,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch40.pt",
+    "bytes": 36184985,
+    "mtime_ns": 1787891152401660716,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch50.pt",
+    "bytes": 36186201,
+    "mtime_ns": 1787891465335024171,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch60.pt",
+    "bytes": 36187353,
+    "mtime_ns": 1787891778076519429,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch70.pt",
+    "bytes": 36188569,
+    "mtime_ns": 1787892090861230127,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch80.pt",
+    "bytes": 36189785,
+    "mtime_ns": 1787892403880024489,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/epoch90.pt",
+    "bytes": 36190937,
+    "mtime_ns": 1787892716897175722,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/last.pt",
+    "bytes": 12147194,
+    "mtime_ns": 1787896131446184386,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/best.pt",
+    "bytes": 12145018,
+    "mtime_ns": 1787855837988024316,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch10.pt",
+    "bytes": 36181337,
+    "mtime_ns": 1787850435628027018,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch100.pt",
+    "bytes": 36192089,
+    "mtime_ns": 1787853004142237652,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch110.pt",
+    "bytes": 36193241,
+    "mtime_ns": 1787853290149469665,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch120.pt",
+    "bytes": 36194457,
+    "mtime_ns": 1787853576253737132,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch130.pt",
+    "bytes": 36195609,
+    "mtime_ns": 1787853862370596785,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch140.pt",
+    "bytes": 36196825,
+    "mtime_ns": 1787854148827796478,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch150.pt",
+    "bytes": 36198041,
+    "mtime_ns": 1787854434921188124,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch160.pt",
+    "bytes": 36199193,
+    "mtime_ns": 1787854721178691144,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch170.pt",
+    "bytes": 36200409,
+    "mtime_ns": 1787855007293132081,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch180.pt",
+    "bytes": 36201561,
+    "mtime_ns": 1787855293303032200,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch190.pt",
+    "bytes": 36202777,
+    "mtime_ns": 1787855579927508035,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch20.pt",
+    "bytes": 36182553,
+    "mtime_ns": 1787850720964323879,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch30.pt",
+    "bytes": 36183769,
+    "mtime_ns": 1787851006014920316,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch40.pt",
+    "bytes": 36184921,
+    "mtime_ns": 1787851291303164046,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch50.pt",
+    "bytes": 36186137,
+    "mtime_ns": 1787851576204789175,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch60.pt",
+    "bytes": 36187289,
+    "mtime_ns": 1787851861524927173,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch70.pt",
+    "bytes": 36188505,
+    "mtime_ns": 1787852146756207277,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch80.pt",
+    "bytes": 36189721,
+    "mtime_ns": 1787852432343000309,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/epoch90.pt",
+    "bytes": 36190873,
+    "mtime_ns": 1787852718037512971,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd16_b32_seed0_sadd_full_p3/weights/last.pt",
+    "bytes": 12147130,
+    "mtime_ns": 1787855837836019821,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/best.pt",
+    "bytes": 12277325,
+    "mtime_ns": 1787823341508444057,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch10.pt",
+    "bytes": 36579463,
+    "mtime_ns": 1787817063977889601,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch100.pt",
+    "bytes": 36590151,
+    "mtime_ns": 1787819888991577020,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch110.pt",
+    "bytes": 36591367,
+    "mtime_ns": 1787820203277669613,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch120.pt",
+    "bytes": 36592519,
+    "mtime_ns": 1787820517737189937,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch130.pt",
+    "bytes": 36593735,
+    "mtime_ns": 1787821171781281356,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch140.pt",
+    "bytes": 36594951,
+    "mtime_ns": 1787821486132382727,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch150.pt",
+    "bytes": 36596103,
+    "mtime_ns": 1787821800294795651,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch160.pt",
+    "bytes": 36597319,
+    "mtime_ns": 1787822114148646754,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch170.pt",
+    "bytes": 36598535,
+    "mtime_ns": 1787822428565760379,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch180.pt",
+    "bytes": 36599687,
+    "mtime_ns": 1787822743089150088,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch190.pt",
+    "bytes": 36600903,
+    "mtime_ns": 1787823057963935843,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch20.pt",
+    "bytes": 36580615,
+    "mtime_ns": 1787817377183561451,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch30.pt",
+    "bytes": 36581831,
+    "mtime_ns": 1787817690685239155,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch40.pt",
+    "bytes": 36583047,
+    "mtime_ns": 1787818004414669933,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch50.pt",
+    "bytes": 36584199,
+    "mtime_ns": 1787818318375925179,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch60.pt",
+    "bytes": 36585415,
+    "mtime_ns": 1787818632665344324,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch70.pt",
+    "bytes": 36586567,
+    "mtime_ns": 1787818946778850627,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch80.pt",
+    "bytes": 36587783,
+    "mtime_ns": 1787819260600403042,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/epoch90.pt",
+    "bytes": 36588999,
+    "mtime_ns": 1787819574533981735,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_baseline/weights/last.pt",
+    "bytes": 12281549,
+    "mtime_ns": 1787823341352443500,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/best.pt",
+    "bytes": 12146234,
+    "mtime_ns": 1787828588962007328,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch10.pt",
+    "bytes": 36199769,
+    "mtime_ns": 1787823676534110976,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch100.pt",
+    "bytes": 36210457,
+    "mtime_ns": 1787826276778488851,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch110.pt",
+    "bytes": 36211673,
+    "mtime_ns": 1787826566025235336,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch120.pt",
+    "bytes": 36212889,
+    "mtime_ns": 1787826855388128094,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch130.pt",
+    "bytes": 36214041,
+    "mtime_ns": 1787827144271098349,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch140.pt",
+    "bytes": 36215257,
+    "mtime_ns": 1787827433086114619,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch150.pt",
+    "bytes": 36216409,
+    "mtime_ns": 1787827721973158199,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch160.pt",
+    "bytes": 36217625,
+    "mtime_ns": 1787828010944217776,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch170.pt",
+    "bytes": 36218777,
+    "mtime_ns": 1787828299427212765,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch180.pt",
+    "bytes": 36219993,
+    "mtime_ns": 1787828588266000458,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch20.pt",
+    "bytes": 36200985,
+    "mtime_ns": 1787823965476062637,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch30.pt",
+    "bytes": 36202137,
+    "mtime_ns": 1787824254443696637,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch40.pt",
+    "bytes": 36203353,
+    "mtime_ns": 1787824543316955824,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch50.pt",
+    "bytes": 36204505,
+    "mtime_ns": 1787824832173315107,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch60.pt",
+    "bytes": 36205721,
+    "mtime_ns": 1787825120941161847,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch70.pt",
+    "bytes": 36206937,
+    "mtime_ns": 1787825409492715378,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch80.pt",
+    "bytes": 36208089,
+    "mtime_ns": 1787825698512109247,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/epoch90.pt",
+    "bytes": 36209305,
+    "mtime_ns": 1787825987475408358,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_detection_v2/corrected_v2_sadd_sd32_b32_sadd_full_p3/weights/last.pt",
+    "bytes": 12150970,
+    "mtime_ns": 1787828588810005828,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/sample/baseline/best.pt",
+    "bytes": 23902192,
+    "mtime_ns": 1787915332879482383,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/sample/baseline/last.pt",
+    "bytes": 23902192,
+    "mtime_ns": 1787915415800458487,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/sample/ours/best.pt",
+    "bytes": 21397386,
+    "mtime_ns": 1787916666404893326,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/sample/ours/last.pt",
+    "bytes": 21397386,
+    "mtime_ns": 1787916745177857059,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/change_detection/Farmland/baseline/best.pt",
+    "bytes": 13257307,
+    "mtime_ns": 1787784141544901880,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/change_detection/Farmland/baseline/last.pt",
+    "bytes": 13257371,
+    "mtime_ns": 1787784150240755222,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/change_detection/Farmland/ours/best.pt",
+    "bytes": 10752501,
+    "mtime_ns": 1787784154220688706,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/change_detection/Farmland/ours/last.pt",
+    "bytes": 10752565,
+    "mtime_ns": 1787784162848545794,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/change_detection/Sulzberger/baseline/best.pt",
+    "bytes": 13257307,
+    "mtime_ns": 1787784166840480262,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/change_detection/Sulzberger/baseline/last.pt",
+    "bytes": 13257371,
+    "mtime_ns": 1787784175524338980,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/change_detection/Sulzberger/ours/best.pt",
+    "bytes": 10752501,
+    "mtime_ns": 1787784181248246792,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/change_detection/Sulzberger/ours/last.pt",
+    "bytes": 10752565,
+    "mtime_ns": 1787784189968107772,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_baseline/weights/best.pt",
+    "bytes": 36604728,
+    "mtime_ns": 1787713429458224033,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_baseline/weights/last.pt",
+    "bytes": 36604728,
+    "mtime_ns": 1787713036579185042,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/best.pt",
+    "bytes": 12146874,
+    "mtime_ns": 1787726403157788097,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch10.pt",
+    "bytes": 36199833,
+    "mtime_ns": 1787715413168127558,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch100.pt",
+    "bytes": 36210521,
+    "mtime_ns": 1787722530796285958,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch110.pt",
+    "bytes": 36211673,
+    "mtime_ns": 1787723321311593153,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch120.pt",
+    "bytes": 36212889,
+    "mtime_ns": 1787724111712363734,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch130.pt",
+    "bytes": 36214105,
+    "mtime_ns": 1787724901902220680,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch140.pt",
+    "bytes": 36215257,
+    "mtime_ns": 1787725692085225776,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch20.pt",
+    "bytes": 36200985,
+    "mtime_ns": 1787716205403493726,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch30.pt",
+    "bytes": 36202201,
+    "mtime_ns": 1787716996980957903,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch40.pt",
+    "bytes": 36203353,
+    "mtime_ns": 1787717787648844116,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch50.pt",
+    "bytes": 36204569,
+    "mtime_ns": 1787718578413755853,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch60.pt",
+    "bytes": 36205721,
+    "mtime_ns": 1787719368713631701,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch70.pt",
+    "bytes": 36206937,
+    "mtime_ns": 1787720159439093869,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch80.pt",
+    "bytes": 36208153,
+    "mtime_ns": 1787720949998006221,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/epoch90.pt",
+    "bytes": 36209305,
+    "mtime_ns": 1787721740261285142,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_remaining_detection_seed0_sadd_full_p3/weights/last.pt",
+    "bytes": 12147322,
+    "mtime_ns": 1787726403017783196,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/best.pt",
+    "bytes": 12273421,
+    "mtime_ns": 1787771357701532802,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch10.pt",
+    "bytes": 36579527,
+    "mtime_ns": 1787758410277686796,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch100.pt",
+    "bytes": 36590215,
+    "mtime_ns": 1787766793883426097,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch110.pt",
+    "bytes": 36591367,
+    "mtime_ns": 1787767724866186521,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch120.pt",
+    "bytes": 36592583,
+    "mtime_ns": 1787768655991647120,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch130.pt",
+    "bytes": 36593799,
+    "mtime_ns": 1787769587093226319,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch140.pt",
+    "bytes": 36594951,
+    "mtime_ns": 1787770518594437820,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch20.pt",
+    "bytes": 36580679,
+    "mtime_ns": 1787759340704102549,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch30.pt",
+    "bytes": 36581895,
+    "mtime_ns": 1787760272237166691,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch40.pt",
+    "bytes": 36583047,
+    "mtime_ns": 1787761203063686758,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch50.pt",
+    "bytes": 36584263,
+    "mtime_ns": 1787762135029177460,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch60.pt",
+    "bytes": 36585479,
+    "mtime_ns": 1787763066975117527,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch70.pt",
+    "bytes": 36586631,
+    "mtime_ns": 1787763998824173117,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch80.pt",
+    "bytes": 36587847,
+    "mtime_ns": 1787764930636499169,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/epoch90.pt",
+    "bytes": 36588999,
+    "mtime_ns": 1787765862714161732,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/last.pt",
+    "bytes": 12275661,
+    "mtime_ns": 1787771357549524174,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/best.pt",
+    "bytes": 12139066,
+    "mtime_ns": 1787784085129899458,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch10.pt",
+    "bytes": 36181401,
+    "mtime_ns": 1787772312128366122,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch100.pt",
+    "bytes": 36192089,
+    "mtime_ns": 1787779934644744195,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch110.pt",
+    "bytes": 36193305,
+    "mtime_ns": 1787780781545092166,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch120.pt",
+    "bytes": 36194457,
+    "mtime_ns": 1787781628608965299,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch130.pt",
+    "bytes": 36195673,
+    "mtime_ns": 1787782475410654965,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch140.pt",
+    "bytes": 36196825,
+    "mtime_ns": 1787783322449819875,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch20.pt",
+    "bytes": 36182553,
+    "mtime_ns": 1787773159034308779,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch30.pt",
+    "bytes": 36183769,
+    "mtime_ns": 1787774006469658504,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch40.pt",
+    "bytes": 36184985,
+    "mtime_ns": 1787774853487410948,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch50.pt",
+    "bytes": 36186137,
+    "mtime_ns": 1787775700508058184,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch60.pt",
+    "bytes": 36187353,
+    "mtime_ns": 1787776547498382948,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch70.pt",
+    "bytes": 36188505,
+    "mtime_ns": 1787777394207254378,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch80.pt",
+    "bytes": 36189721,
+    "mtime_ns": 1787778240679608648,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/epoch90.pt",
+    "bytes": 36190937,
+    "mtime_ns": 1787779087615997296,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/last.pt",
+    "bytes": 12141242,
+    "mtime_ns": 1787784084973902331,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_count_aligned_sd16_20260828/baseline/best.pt",
+    "bytes": 28351562,
+    "mtime_ns": 1787942664763443849,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_count_aligned_sd16_20260828/baseline/last.pt",
+    "bytes": 28351562,
+    "mtime_ns": 1787942664679443408,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_count_aligned_sd16_20260828/ours/best.pt",
+    "bytes": 25846756,
+    "mtime_ns": 1787940430163637848,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_count_aligned_sd16_20260828/ours/last.pt",
+    "bytes": 25846756,
+    "mtime_ns": 1787940430079637333,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/best.pt",
+    "bytes": 12157882,
+    "mtime_ns": 1788021974968081804,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch10.pt",
+    "bytes": 12270685,
+    "mtime_ns": 1788016349372594366,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch100.pt",
+    "bytes": 36195289,
+    "mtime_ns": 1788018060389900886,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch110.pt",
+    "bytes": 36196377,
+    "mtime_ns": 1788018256923713054,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch120.pt",
+    "bytes": 36197401,
+    "mtime_ns": 1788018453645500092,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch130.pt",
+    "bytes": 36198489,
+    "mtime_ns": 1788018650387269011,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch140.pt",
+    "bytes": 36199577,
+    "mtime_ns": 1788018847173025864,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch150.pt",
+    "bytes": 36200665,
+    "mtime_ns": 1788019043886773594,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch160.pt",
+    "bytes": 36201689,
+    "mtime_ns": 1788019240609458781,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch170.pt",
+    "bytes": 36202777,
+    "mtime_ns": 1788019437280032427,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch180.pt",
+    "bytes": 36203865,
+    "mtime_ns": 1788019634082402342,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch190.pt",
+    "bytes": 36204953,
+    "mtime_ns": 1788019830724630588,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch20.pt",
+    "bytes": 36183129,
+    "mtime_ns": 1788016484718008759,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch200.pt",
+    "bytes": 36205977,
+    "mtime_ns": 1788020027470764853,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch210.pt",
+    "bytes": 36207065,
+    "mtime_ns": 1788020224100833115,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch220.pt",
+    "bytes": 36208153,
+    "mtime_ns": 1788020420738857394,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch230.pt",
+    "bytes": 36209177,
+    "mtime_ns": 1788020617328851188,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch240.pt",
+    "bytes": 36210265,
+    "mtime_ns": 1788020813850823882,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch250.pt",
+    "bytes": 36211353,
+    "mtime_ns": 1788021010476783715,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch260.pt",
+    "bytes": 36212441,
+    "mtime_ns": 1788021207203587489,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch270.pt",
+    "bytes": 36213529,
+    "mtime_ns": 1788021403931854741,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch280.pt",
+    "bytes": 36214553,
+    "mtime_ns": 1788021600621657436,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch290.pt",
+    "bytes": 36215641,
+    "mtime_ns": 1788021797688503319,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch30.pt",
+    "bytes": 36184601,
+    "mtime_ns": 1788016682059941431,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch40.pt",
+    "bytes": 36186009,
+    "mtime_ns": 1788016879153762629,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch50.pt",
+    "bytes": 36189849,
+    "mtime_ns": 1788017076251705983,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch60.pt",
+    "bytes": 36191001,
+    "mtime_ns": 1788017273086013328,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch70.pt",
+    "bytes": 36192089,
+    "mtime_ns": 1788017469836135605,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch80.pt",
+    "bytes": 36193177,
+    "mtime_ns": 1788017666886135586,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/epoch90.pt",
+    "bytes": 36194201,
+    "mtime_ns": 1788017863668047526,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/last.pt",
+    "bytes": 12159930,
+    "mtime_ns": 1788021974812081977,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/best.pt",
+    "bytes": 12158330,
+    "mtime_ns": 1788014706633257848,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch10.pt",
+    "bytes": 12270685,
+    "mtime_ns": 1788007898602250404,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch100.pt",
+    "bytes": 36192153,
+    "mtime_ns": 1788009966841713791,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch110.pt",
+    "bytes": 36193369,
+    "mtime_ns": 1788010204892135725,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch120.pt",
+    "bytes": 36194521,
+    "mtime_ns": 1788010442818409274,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch130.pt",
+    "bytes": 36195737,
+    "mtime_ns": 1788010681260595112,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch140.pt",
+    "bytes": 36196953,
+    "mtime_ns": 1788010919778538170,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch150.pt",
+    "bytes": 36198105,
+    "mtime_ns": 1788011158037475317,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch160.pt",
+    "bytes": 36199321,
+    "mtime_ns": 1788011396230893503,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch170.pt",
+    "bytes": 36200473,
+    "mtime_ns": 1788011634495360817,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch180.pt",
+    "bytes": 36201689,
+    "mtime_ns": 1788011873011234059,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch190.pt",
+    "bytes": 36202905,
+    "mtime_ns": 1788012111218727060,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch20.pt",
+    "bytes": 36182617,
+    "mtime_ns": 1788008064998496770,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch200.pt",
+    "bytes": 36204057,
+    "mtime_ns": 1788012349505985794,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch210.pt",
+    "bytes": 36205273,
+    "mtime_ns": 1788012587637094737,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch220.pt",
+    "bytes": 36206425,
+    "mtime_ns": 1788012825512107813,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch230.pt",
+    "bytes": 36207641,
+    "mtime_ns": 1788013063358067567,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch240.pt",
+    "bytes": 36208793,
+    "mtime_ns": 1788013301377932487,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch250.pt",
+    "bytes": 36210009,
+    "mtime_ns": 1788013538912847446,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch260.pt",
+    "bytes": 36211225,
+    "mtime_ns": 1788013776845662180,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch270.pt",
+    "bytes": 36212441,
+    "mtime_ns": 1788014014775676723,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch280.pt",
+    "bytes": 36213593,
+    "mtime_ns": 1788014252982443640,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch290.pt",
+    "bytes": 36214809,
+    "mtime_ns": 1788014491877682939,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch30.pt",
+    "bytes": 36183833,
+    "mtime_ns": 1788008303171057128,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch40.pt",
+    "bytes": 36185049,
+    "mtime_ns": 1788008541167778595,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch50.pt",
+    "bytes": 36186201,
+    "mtime_ns": 1788008778985821886,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch60.pt",
+    "bytes": 36187417,
+    "mtime_ns": 1788009016751877192,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch70.pt",
+    "bytes": 36188569,
+    "mtime_ns": 1788009254452432661,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch80.pt",
+    "bytes": 36189785,
+    "mtime_ns": 1788009491644039959,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/epoch90.pt",
+    "bytes": 36191001,
+    "mtime_ns": 1788009729163061770,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/last.pt",
+    "bytes": 12159162,
+    "mtime_ns": 1788014706477258091,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/best.pt",
+    "bytes": 12255757,
+    "mtime_ns": 1788107535234510783,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch10.pt",
+    "bytes": 24329521,
+    "mtime_ns": 1788099504588493478,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch100.pt",
+    "bytes": 24335793,
+    "mtime_ns": 1788102659828883930,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch110.pt",
+    "bytes": 24336497,
+    "mtime_ns": 1788103002549799543,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch120.pt",
+    "bytes": 24337201,
+    "mtime_ns": 1788103357706152358,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch130.pt",
+    "bytes": 24337905,
+    "mtime_ns": 1788103703910454971,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch140.pt",
+    "bytes": 24338609,
+    "mtime_ns": 1788104059441836844,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch150.pt",
+    "bytes": 24339313,
+    "mtime_ns": 1788104406464626240,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch160.pt",
+    "bytes": 24340017,
+    "mtime_ns": 1788104759039200160,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch170.pt",
+    "bytes": 24340721,
+    "mtime_ns": 1788105106257605439,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch180.pt",
+    "bytes": 24341425,
+    "mtime_ns": 1788105463583078747,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch190.pt",
+    "bytes": 24342129,
+    "mtime_ns": 1788105810409266546,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch20.pt",
+    "bytes": 24330225,
+    "mtime_ns": 1788099850960248328,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch200.pt",
+    "bytes": 24342833,
+    "mtime_ns": 1788106162172557051,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch210.pt",
+    "bytes": 24343473,
+    "mtime_ns": 1788106522626431349,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch220.pt",
+    "bytes": 24344177,
+    "mtime_ns": 1788106870007326400,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch230.pt",
+    "bytes": 24344881,
+    "mtime_ns": 1788107220771785140,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch30.pt",
+    "bytes": 24330929,
+    "mtime_ns": 1788100204977960248,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch40.pt",
+    "bytes": 24331633,
+    "mtime_ns": 1788100558110534667,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch50.pt",
+    "bytes": 24332273,
+    "mtime_ns": 1788100910946543780,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch60.pt",
+    "bytes": 24332977,
+    "mtime_ns": 1788101258234057434,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch70.pt",
+    "bytes": 24333681,
+    "mtime_ns": 1788101600755659062,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch80.pt",
+    "bytes": 24334385,
+    "mtime_ns": 1788101955609027945,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/epoch90.pt",
+    "bytes": 24335089,
+    "mtime_ns": 1788102304544448346,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_baseline/weights/last.pt",
+    "bytes": 12255757,
+    "mtime_ns": 1788107535082513877,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/best.pt",
+    "bytes": 12121274,
+    "mtime_ns": 1788115347804296315,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch10.pt",
+    "bytes": 24063433,
+    "mtime_ns": 1788107911261480172,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch100.pt",
+    "bytes": 24069705,
+    "mtime_ns": 1788110840497430885,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch110.pt",
+    "bytes": 24070409,
+    "mtime_ns": 1788111159483975462,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch120.pt",
+    "bytes": 24071113,
+    "mtime_ns": 1788111489955199369,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch130.pt",
+    "bytes": 24071817,
+    "mtime_ns": 1788111811258455482,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch140.pt",
+    "bytes": 24072521,
+    "mtime_ns": 1788112140545403536,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch150.pt",
+    "bytes": 24073225,
+    "mtime_ns": 1788112461104072592,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch160.pt",
+    "bytes": 24073929,
+    "mtime_ns": 1788112787042678912,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch170.pt",
+    "bytes": 24074633,
+    "mtime_ns": 1788113107849187823,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch180.pt",
+    "bytes": 24075337,
+    "mtime_ns": 1788113438496693199,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch190.pt",
+    "bytes": 24076041,
+    "mtime_ns": 1788113758610179664,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch20.pt",
+    "bytes": 24064137,
+    "mtime_ns": 1788108232971888368,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch200.pt",
+    "bytes": 24076745,
+    "mtime_ns": 1788114083422627893,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch210.pt",
+    "bytes": 24077449,
+    "mtime_ns": 1788114415218555355,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch220.pt",
+    "bytes": 24078153,
+    "mtime_ns": 1788114735730036431,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch230.pt",
+    "bytes": 24078857,
+    "mtime_ns": 1788115058149374084,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch30.pt",
+    "bytes": 24064841,
+    "mtime_ns": 1788108561531578006,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch40.pt",
+    "bytes": 24065545,
+    "mtime_ns": 1788108888203966975,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch50.pt",
+    "bytes": 24066249,
+    "mtime_ns": 1788109215020723060,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch60.pt",
+    "bytes": 24066953,
+    "mtime_ns": 1788109537576584526,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch70.pt",
+    "bytes": 24067657,
+    "mtime_ns": 1788109855998688905,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch80.pt",
+    "bytes": 24068361,
+    "mtime_ns": 1788110185783133931,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/epoch90.pt",
+    "bytes": 24069065,
+    "mtime_ns": 1788110510226517388,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_detection_20260830/formal_air_p3_d16_v1_air_sarship_20_full_p3/weights/last.pt",
+    "bytes": 12121274,
+    "mtime_ns": 1788115347660294874,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_smoke_20260830/detection/smoke_air_air_sarship_20_baseline/weights/best.pt",
+    "bytes": 12227277,
+    "mtime_ns": 1788090230981514468,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_smoke_20260830/detection/smoke_air_air_sarship_20_baseline/weights/last.pt",
+    "bytes": 12227277,
+    "mtime_ns": 1788090230837513168,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_smoke_20260830/detection/smoke_air_air_sarship_20_full_p3/weights/best.pt",
+    "bytes": 12092858,
+    "mtime_ns": 1788090408531084825,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/paper_aligned_smoke_20260830/detection/smoke_air_air_sarship_20_full_p3/weights/last.pt",
+    "bytes": 12092858,
+    "mtime_ns": 1788090408391083610,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/best.pt",
+    "bytes": 12273165,
+    "mtime_ns": 1787679571915616181,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch10.pt",
+    "bytes": 36579399,
+    "mtime_ns": 1787675564471215943,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch100.pt",
+    "bytes": 36590087,
+    "mtime_ns": 1787678157376839256,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch110.pt",
+    "bytes": 36591303,
+    "mtime_ns": 1787678445595980421,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch120.pt",
+    "bytes": 36592455,
+    "mtime_ns": 1787678733896513871,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch130.pt",
+    "bytes": 36593671,
+    "mtime_ns": 1787679022217840140,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch140.pt",
+    "bytes": 36594887,
+    "mtime_ns": 1787679311271622509,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch20.pt",
+    "bytes": 36580615,
+    "mtime_ns": 1787675852360686161,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch30.pt",
+    "bytes": 36581767,
+    "mtime_ns": 1787676140030745683,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch40.pt",
+    "bytes": 36582983,
+    "mtime_ns": 1787676427832597611,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch50.pt",
+    "bytes": 36584135,
+    "mtime_ns": 1787676715596047125,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch60.pt",
+    "bytes": 36585351,
+    "mtime_ns": 1787677003706135530,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch70.pt",
+    "bytes": 36586567,
+    "mtime_ns": 1787677292139448870,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch80.pt",
+    "bytes": 36587719,
+    "mtime_ns": 1787677580723752118,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/epoch90.pt",
+    "bytes": 36588935,
+    "mtime_ns": 1787677869244142060,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_baseline/weights/last.pt",
+    "bytes": 12275533,
+    "mtime_ns": 1787679571759627307,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/best.pt",
+    "bytes": 12138618,
+    "mtime_ns": 1787683557076247216,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch10.pt",
+    "bytes": 36181273,
+    "mtime_ns": 1787679886162808282,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch100.pt",
+    "bytes": 36191961,
+    "mtime_ns": 1787682262879349465,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch110.pt",
+    "bytes": 36193177,
+    "mtime_ns": 1787682526961985823,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch120.pt",
+    "bytes": 36194329,
+    "mtime_ns": 1787682790676000198,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch130.pt",
+    "bytes": 36195545,
+    "mtime_ns": 1787683054633647104,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch140.pt",
+    "bytes": 36196761,
+    "mtime_ns": 1787683318847074731,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch20.pt",
+    "bytes": 36182425,
+    "mtime_ns": 1787680150254710634,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch30.pt",
+    "bytes": 36183641,
+    "mtime_ns": 1787680414405776551,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch40.pt",
+    "bytes": 36184857,
+    "mtime_ns": 1787680678398732777,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch50.pt",
+    "bytes": 36186009,
+    "mtime_ns": 1787680942584813853,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch60.pt",
+    "bytes": 36187225,
+    "mtime_ns": 1787681206555568510,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch70.pt",
+    "bytes": 36188377,
+    "mtime_ns": 1787681470638723739,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch80.pt",
+    "bytes": 36189593,
+    "mtime_ns": 1787681734574257394,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/epoch90.pt",
+    "bytes": 36190809,
+    "mtime_ns": 1787681998807675184,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd16_v1_ssdd_full_p3/weights/last.pt",
+    "bytes": 12141114,
+    "mtime_ns": 1787683556932246530,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/best.pt",
+    "bytes": 12143802,
+    "mtime_ns": 1787714473460513384,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch10.pt",
+    "bytes": 36199705,
+    "mtime_ns": 1787710795342789259,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch100.pt",
+    "bytes": 36210393,
+    "mtime_ns": 1787713175896378878,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch110.pt",
+    "bytes": 36211609,
+    "mtime_ns": 1787713440605879903,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch120.pt",
+    "bytes": 36212761,
+    "mtime_ns": 1787713705299182401,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch130.pt",
+    "bytes": 36213977,
+    "mtime_ns": 1787713969950503380,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch140.pt",
+    "bytes": 36215193,
+    "mtime_ns": 1787714234643026249,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch20.pt",
+    "bytes": 36200857,
+    "mtime_ns": 1787711059761737260,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch30.pt",
+    "bytes": 36202073,
+    "mtime_ns": 1787711323772431375,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch40.pt",
+    "bytes": 36203289,
+    "mtime_ns": 1787711588142868575,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch50.pt",
+    "bytes": 36204441,
+    "mtime_ns": 1787711852478237825,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch60.pt",
+    "bytes": 36205657,
+    "mtime_ns": 1787712117203865714,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch70.pt",
+    "bytes": 36206809,
+    "mtime_ns": 1787712381683861598,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch80.pt",
+    "bytes": 36208025,
+    "mtime_ns": 1787712646578698452,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/epoch90.pt",
+    "bytes": 36209241,
+    "mtime_ns": 1787712911101146088,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/last.pt",
+    "bytes": 12147258,
+    "mtime_ns": 1787714473308514849,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/best.pt",
+    "bytes": 12144442,
+    "mtime_ns": 1787734684396074680,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch10.pt",
+    "bytes": 36199769,
+    "mtime_ns": 1787730833805803693,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch100.pt",
+    "bytes": 36210457,
+    "mtime_ns": 1787733326901931386,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch110.pt",
+    "bytes": 36211673,
+    "mtime_ns": 1787733603775225808,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch120.pt",
+    "bytes": 36212825,
+    "mtime_ns": 1787733880629315193,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch130.pt",
+    "bytes": 36214041,
+    "mtime_ns": 1787734157325869682,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch140.pt",
+    "bytes": 36215193,
+    "mtime_ns": 1787734434653408019,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch20.pt",
+    "bytes": 36200921,
+    "mtime_ns": 1787731110686055834,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch30.pt",
+    "bytes": 36202137,
+    "mtime_ns": 1787731387609355296,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch40.pt",
+    "bytes": 36203289,
+    "mtime_ns": 1787731664632100830,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch50.pt",
+    "bytes": 36204505,
+    "mtime_ns": 1787731941623929615,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch60.pt",
+    "bytes": 36205721,
+    "mtime_ns": 1787732218599025104,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch70.pt",
+    "bytes": 36206873,
+    "mtime_ns": 1787732495515105810,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch80.pt",
+    "bytes": 36208089,
+    "mtime_ns": 1787732772727760566,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/epoch90.pt",
+    "bytes": 36209241,
+    "mtime_ns": 1787733049772748725,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_bs32/ssdd_scratch_p3_sd32_b32_v1_ssdd_full_p3/weights/last.pt",
+    "bytes": 12147258,
+    "mtime_ns": 1787734684252073242,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/best.pt",
+    "bytes": 12272269,
+    "mtime_ns": 1787938263582161533,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch10.pt",
+    "bytes": 36579527,
+    "mtime_ns": 1787934024891600076,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch100.pt",
+    "bytes": 36590279,
+    "mtime_ns": 1787936768360602284,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch110.pt",
+    "bytes": 36591431,
+    "mtime_ns": 1787937073043187198,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch120.pt",
+    "bytes": 36592647,
+    "mtime_ns": 1787937377859306509,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch130.pt",
+    "bytes": 36593799,
+    "mtime_ns": 1787937682940969140,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch140.pt",
+    "bytes": 36595015,
+    "mtime_ns": 1787937988443486110,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch20.pt",
+    "bytes": 36580743,
+    "mtime_ns": 1787934330109541782,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch30.pt",
+    "bytes": 36581959,
+    "mtime_ns": 1787934635627401130,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch40.pt",
+    "bytes": 36583111,
+    "mtime_ns": 1787934941081991917,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch50.pt",
+    "bytes": 36584327,
+    "mtime_ns": 1787935245692007520,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch60.pt",
+    "bytes": 36585479,
+    "mtime_ns": 1787935550677646974,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch70.pt",
+    "bytes": 36586695,
+    "mtime_ns": 1787935855016850382,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch80.pt",
+    "bytes": 36587847,
+    "mtime_ns": 1787936159274722005,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/epoch90.pt",
+    "bytes": 36589063,
+    "mtime_ns": 1787936463727863292,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_baseline_from_historical_baseline_b32_e150/weights/last.pt",
+    "bytes": 12275725,
+    "mtime_ns": 1787938263426159943,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/best.pt",
+    "bytes": 12136122,
+    "mtime_ns": 1787933668845134284,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch10.pt",
+    "bytes": 36181401,
+    "mtime_ns": 1787929812969846189,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch100.pt",
+    "bytes": 36192153,
+    "mtime_ns": 1787932308390549678,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch110.pt",
+    "bytes": 36193305,
+    "mtime_ns": 1787932585155834429,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch120.pt",
+    "bytes": 36194521,
+    "mtime_ns": 1787932862725294371,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch130.pt",
+    "bytes": 36195673,
+    "mtime_ns": 1787933140176581500,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch140.pt",
+    "bytes": 36196889,
+    "mtime_ns": 1787933418379166450,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch20.pt",
+    "bytes": 36182617,
+    "mtime_ns": 1787930090384021516,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch30.pt",
+    "bytes": 36183833,
+    "mtime_ns": 1787930367605879542,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch40.pt",
+    "bytes": 36184985,
+    "mtime_ns": 1787930645263556532,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch50.pt",
+    "bytes": 36186201,
+    "mtime_ns": 1787930922800784474,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch60.pt",
+    "bytes": 36187353,
+    "mtime_ns": 1787931200089743676,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch70.pt",
+    "bytes": 36188569,
+    "mtime_ns": 1787931477274849499,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch80.pt",
+    "bytes": 36189721,
+    "mtime_ns": 1787931754180039554,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/epoch90.pt",
+    "bytes": 36190937,
+    "mtime_ns": 1787932031293280199,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/ssdd_historical_warmstart_pair_20260828/ssdd_p3_d16_from_historical_ex27_b32_e150/weights/last.pt",
+    "bytes": 12141242,
+    "mtime_ns": 1787933668693133162,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed2/runs/full/weights/best.pt",
+    "bytes": 12146554,
+    "mtime_ns": 1791495281008320530,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed2/runs/full/weights/last.pt",
+    "bytes": 12147258,
+    "mtime_ns": 1791495280856318074,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed2/runs/local_energy/weights/best.pt",
+    "bytes": 12146426,
+    "mtime_ns": 1791489547781510002,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed2/runs/local_energy/weights/last.pt",
+    "bytes": 12147130,
+    "mtime_ns": 1791489547629505180,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed2/runs/matched_scale075/weights/best.pt",
+    "bytes": 12137658,
+    "mtime_ns": 1791483010921160017,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed2/runs/matched_scale075/weights/last.pt",
+    "bytes": 12142394,
+    "mtime_ns": 1791483010773161006,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed2/runs/original/weights/best.pt",
+    "bytes": 12278477,
+    "mtime_ns": 1791478402993667946,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed2/runs/original/weights/last.pt",
+    "bytes": 12281677,
+    "mtime_ns": 1791478402837688433,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/seed2/runs/original/weights/best.pt",
+    "bytes": 36590215,
+    "mtime_ns": 1791442900965751035,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/seed2/runs/original/weights/last.pt",
+    "bytes": 36590215,
+    "mtime_ns": 1791442900929750315,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/full/weights/best.pt",
+    "bytes": 12123578,
+    "mtime_ns": 1791439763813040297,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/full/weights/last.pt",
+    "bytes": 12123706,
+    "mtime_ns": 1791439763661040394,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/local_energy/weights/best.pt",
+    "bytes": 12123386,
+    "mtime_ns": 1791439747229051689,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/local_energy/weights/last.pt",
+    "bytes": 12123578,
+    "mtime_ns": 1791439747077051800,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/matched_scale075/weights/best.pt",
+    "bytes": 12123386,
+    "mtime_ns": 1791439730645064736,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/matched_scale075/weights/last.pt",
+    "bytes": 12123514,
+    "mtime_ns": 1791439730497064861,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/original/weights/best.pt",
+    "bytes": 12257997,
+    "mtime_ns": 1791439713945079603,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/original/weights/last.pt",
+    "bytes": 12258125,
+    "mtime_ns": 1791439713797079744,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/validation/cross_cd/preflight_full.pt",
+    "bytes": 15009885,
+    "mtime_ns": 1791514588622339576,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/validation/cross_cd/preflight_matched_scale075.pt",
+    "bytes": 15014197,
+    "mtime_ns": 1791514586690236990,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/validation/cross_cd/preflight_original.pt",
+    "bytes": 15276149,
+    "mtime_ns": 1791514586490226356,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/validation/cross_classification/preflight_full.pt",
+    "bytes": 11271797,
+    "mtime_ns": 1791513858410486120,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/validation/cross_classification/preflight_matched_scale075.pt",
+    "bytes": 11275621,
+    "mtime_ns": 1791513858250485972,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/validation/cross_classification/preflight_original.pt",
+    "bytes": 11537877,
+    "mtime_ns": 1791513858098485832,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_table_completion_20261012_v1/training/smoke_yolov8n_b4_v1/run/weights/best.pt",
+    "bytes": 48821154,
+    "mtime_ns": 1791772078081487610,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_table_completion_20261012_v1/training/smoke_yolov8n_b4_v1/run/weights/last.pt",
+    "bytes": 48821154,
+    "mtime_ns": 1791772077905486716,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_table_completion_20261012_v1/training/ssdd_cnn_yolov8n_seed0/run/weights/best.pt",
+    "bytes": 48821218,
+    "mtime_ns": 1791773521378322936,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_table_completion_20261012_v1/training/ssdd_cnn_yolov8n_seed0/run/weights/last.pt",
+    "bytes": 48821218,
+    "mtime_ns": 1791774469653749652,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_table_completion_20261012_v1/training/yolov8n_v1_v2_optimizer_audit_v1/checkpoint_snapshot.pt",
+    "bytes": 48821218,
+    "mtime_ns": 1791772695872956861,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-camixer/run0/best.pt",
+    "bytes": 437509,
+    "mtime_ns": 1791811559996998622,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-camixer/run0/last.pt",
+    "bytes": 437509,
+    "mtime_ns": 1791811609561632005,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-ddnet/run0/best.pt",
+    "bytes": 163489,
+    "mtime_ns": 1791811787491786890,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-ddnet/run0/last.pt",
+    "bytes": 163489,
+    "mtime_ns": 1791811905878790398,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-lantnet/run0/best.pt",
+    "bytes": 349611,
+    "mtime_ns": 1791811410505256521,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-lantnet/run0/last.pt",
+    "bytes": 349611,
+    "mtime_ns": 1791811459228879093,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run0/best.pt",
+    "bytes": 437509,
+    "mtime_ns": 1791813532996700189,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run0/last.pt",
+    "bytes": 437509,
+    "mtime_ns": 1791813581537024256,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run1/best.pt",
+    "bytes": 437509,
+    "mtime_ns": 1791814748611283215,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run1/last.pt",
+    "bytes": 437509,
+    "mtime_ns": 1791814798407272913,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run2/best.pt",
+    "bytes": 437509,
+    "mtime_ns": 1791816058916693979,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-camixer/run2/last.pt",
+    "bytes": 437509,
+    "mtime_ns": 1791816107189902014,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run0/best.pt",
+    "bytes": 163489,
+    "mtime_ns": 1791814327423183847,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run0/last.pt",
+    "bytes": 163489,
+    "mtime_ns": 1791814443899253058,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run1/best.pt",
+    "bytes": 163489,
+    "mtime_ns": 1791815590823540028,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run1/last.pt",
+    "bytes": 163489,
+    "mtime_ns": 1791815707292994137,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run2/best.pt",
+    "bytes": 163489,
+    "mtime_ns": 1791816951431706290,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-ddnet/run2/last.pt",
+    "bytes": 163489,
+    "mtime_ns": 1791817067933036648,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run0/best.pt",
+    "bytes": 349611,
+    "mtime_ns": 1791813385899478780,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run0/last.pt",
+    "bytes": 349611,
+    "mtime_ns": 1791813435883938144,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run1/best.pt",
+    "bytes": 349611,
+    "mtime_ns": 1791814591875290488,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run1/last.pt",
+    "bytes": 349611,
+    "mtime_ns": 1791814641539292753,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run2/best.pt",
+    "bytes": 349611,
+    "mtime_ns": 1791815893903929089,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-lantnet/run2/last.pt",
+    "bytes": 349611,
+    "mtime_ns": 1791815943949489534,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run0/best.pt",
+    "bytes": 126891,
+    "mtime_ns": 1791814140894974973,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run0/last.pt",
+    "bytes": 126891,
+    "mtime_ns": 1791814153078993052,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run1/best.pt",
+    "bytes": 126891,
+    "mtime_ns": 1791815437690599193,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run1/last.pt",
+    "bytes": 126891,
+    "mtime_ns": 1791815441722865159,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run2/best.pt",
+    "bytes": 126891,
+    "mtime_ns": 1791816726736898655,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wasnet/run2/last.pt",
+    "bytes": 126891,
+    "mtime_ns": 1791816730768952516,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run0/best.pt",
+    "bytes": 132915,
+    "mtime_ns": 1791813707685717962,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run0/last.pt",
+    "bytes": 132915,
+    "mtime_ns": 1791813769553990971,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run1/best.pt",
+    "bytes": 132915,
+    "mtime_ns": 1791814999927201009,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run1/last.pt",
+    "bytes": 132915,
+    "mtime_ns": 1791815061951170923,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run2/best.pt",
+    "bytes": 132915,
+    "mtime_ns": 1791816289045868554,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r3/jobs/ottawa-author-wbanet/run2/last.pt",
+    "bytes": 132915,
+    "mtime_ns": 1791816351835060737,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-full/run0/weights/best.pt",
+    "bytes": 95695568,
+    "mtime_ns": 1791850668765997729,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-full/run0/weights/last.pt",
+    "bytes": 95695568,
+    "mtime_ns": 1791851738528592146,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-matched075/run0/weights/best.pt",
+    "bytes": 95665204,
+    "mtime_ns": 1791837835093087600,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-matched075/run0/weights/last.pt",
+    "bytes": 95665204,
+    "mtime_ns": 1791838275726050492,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-original/run0/weights/best.pt",
+    "bytes": 96749941,
+    "mtime_ns": 1791863801485524313,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-original/run0/weights/last.pt",
+    "bytes": 96749941,
+    "mtime_ns": 1791864872725107823,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-yolov8n/run0/weights/best.pt",
+    "bytes": 48813862,
+    "mtime_ns": 1791820168865448584,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-yolov8n/run0/weights/last.pt",
+    "bytes": 48813926,
+    "mtime_ns": 1791820393119728114,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-yolov8s/run0/weights/best.pt",
+    "bytes": 178890726,
+    "mtime_ns": 1791824829949740543,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-yolov8s/run0/weights/last.pt",
+    "bytes": 178890790,
+    "mtime_ns": 1791824980207010404,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "weights/historical_ssdd/baseline_best.pt",
+    "bytes": 12315576,
+    "mtime_ns": 1787927754996504585,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "weights/historical_ssdd/ex27_best.pt",
+    "bytes": 12269861,
+    "mtime_ns": 1787927000028574307,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "weights_ex27_best.pt",
+    "bytes": 5308416,
+    "mtime_ns": 1787917945698974138,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/yolov8n.pt",
+    "bytes": 6534387,
+    "mtime_ns": 1787990559294852943,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/audit_ssdd_smoke2_noamp_v1_ssdd_baseline/weights/best.pt",
+    "bytes": 12257997,
+    "mtime_ns": 1787988961320328319,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/audit_ssdd_smoke2_noamp_v1_ssdd_baseline/weights/last.pt",
+    "bytes": 12257997,
+    "mtime_ns": 1787988961168326099,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_v1_ssdd_full_p3/weights/best.pt",
+    "bytes": 36180761,
+    "mtime_ns": 1787990668795916095,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_v1_ssdd_full_p3/weights/last.pt",
+    "bytes": 36180761,
+    "mtime_ns": 1787990668763915794,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/best.pt",
+    "bytes": 12282781,
+    "mtime_ns": 1787993968033259668,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/epoch10.pt",
+    "bytes": 12271517,
+    "mtime_ns": 1787991288740990380,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/epoch100.pt",
+    "bytes": 12280029,
+    "mtime_ns": 1787993298052393850,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/epoch110.pt",
+    "bytes": 12280989,
+    "mtime_ns": 1787993529218103232,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/epoch120.pt",
+    "bytes": 12281949,
+    "mtime_ns": 1787993760331776123,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/epoch20.pt",
+    "bytes": 12272413,
+    "mtime_ns": 1787991450586165680,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/epoch30.pt",
+    "bytes": 12273373,
+    "mtime_ns": 1787991681555789985,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/epoch40.pt",
+    "bytes": 12274333,
+    "mtime_ns": 1787991912553372800,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/epoch50.pt",
+    "bytes": 12275293,
+    "mtime_ns": 1787992143530928943,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/epoch60.pt",
+    "bytes": 12276253,
+    "mtime_ns": 1787992374856576299,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/epoch70.pt",
+    "bytes": 12277213,
+    "mtime_ns": 1787992605630786671,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/epoch80.pt",
+    "bytes": 12278109,
+    "mtime_ns": 1787992836316777335,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/epoch90.pt",
+    "bytes": 12279069,
+    "mtime_ns": 1787993067242630493,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_historical_p3_warmup20_v3_ssdd_full_p3/weights/last.pt",
+    "bytes": 12282781,
+    "mtime_ns": 1787993968017259553,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_p3_noamp_diag8_v1_ssdd_full_p3/weights/best.pt",
+    "bytes": 12124154,
+    "mtime_ns": 1788007371758959368,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_exact_p3_noamp_diag8_v1_ssdd_full_p3/weights/last.pt",
+    "bytes": 12124346,
+    "mtime_ns": 1788007371630959966,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_historical_protocol_repro_v1_ssdd_baseline/weights/best.pt",
+    "bytes": 36579079,
+    "mtime_ns": 1787989835640923913,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "work_train_single/output_dir/sar4_full/ssdd_historical_protocol_repro_v1_ssdd_baseline/weights/last.pt",
+    "bytes": 36579079,
+    "mtime_ns": 1787989835608923686,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "yolov8n.pt",
+    "bytes": 6534387,
+    "mtime_ns": 1787990472469951904,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  }
+]

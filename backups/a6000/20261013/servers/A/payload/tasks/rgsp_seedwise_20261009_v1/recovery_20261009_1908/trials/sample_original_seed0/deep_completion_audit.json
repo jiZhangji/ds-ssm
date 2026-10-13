@@ -1,0 +1,45 @@
+{
+  "actual_epochs": 126,
+  "best_epoch": 86,
+  "best_sha256": "46a101e3179eef1aedd76992bb67feca3138929b48a3216cab783e3479701faf",
+  "checked_utc": "2026-10-09T12:47:36.785530+00:00",
+  "finite_training_and_test": true,
+  "identity_sha256": "48eaa5f2c6d4adaac900c5c0c935ed6f692097c383cf2c9e092e17f82f57730f",
+  "internal_artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_original_seed0/config.json",
+      "sha256": "5823dd705474f8dd762107b4ea7d27e952a9c9c0886b1a40bd1e22d8d6395551"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_original_seed0/initialization.json",
+      "sha256": "593904b54cd0407c28586ea2a3b4b8a0aff4e1c25fc4d2ecf3a99a692e844abc"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_original_seed0/metrics.jsonl",
+      "sha256": "e16d4f6d2c6b53df76f700576e810ccf64220dafe4f9fd616a9bace91d2c48a6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_original_seed0/test_evaluation.json",
+      "sha256": "955e5603ff37ec76aef2f4d7a17b6f531bf3856781e25334a2b852d7a58c8b98"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_original_seed0/result.json",
+      "sha256": "161f3fc0dd2f035beb5e04518a400f6ab7bb3b77706d8e72705e12a88069bdb3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_original_seed0/best.pt",
+      "sha256": "46a101e3179eef1aedd76992bb67feca3138929b48a3216cab783e3479701faf"
+    }
+  ],
+  "last_checkpoint": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_original_seed0/last.pt",
+    "sha256": "37a1abbd96dcafbb5cef0dcb6eeb20db178b3f27bc5ff3555b234807f87f9283",
+    "size": 34553931
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "protocol_sha256": "251231b6f6ae9700aaf0240a56921b8b98fa7e556094016f53e3b7fae1cd1bb5",
+  "schema": "rgsp-operator-cross-recovery-v1",
+  "seed": 0,
+  "status": "deep_verified",
+  "trial_id": "sample_original_seed0"
+}

@@ -1,0 +1,173 @@
+Waiting for existing experiment PID 200597: Ottawa Yellow River
+Starting shared SAR tasks: Ottawa Yellow River
+[ready] Ottawa: {'format': 'two-date BMP + binary GT', 'images': 1, 'manifest': '/home/powerleader/ig-ds-ssm/data/cross_task_prepared/change_detection/Ottawa/manifest.json'}
+[ready] Yellow River: {'format': 'two-date BMP + binary GT', 'images': 1, 'manifest': '/home/powerleader/ig-ds-ssm/data/cross_task_prepared/change_detection/Yellow_River/manifest.json'}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Ottawa baseline epoch=1/100 score=0.00000
+Ottawa baseline epoch=2/100 score=0.00000
+Ottawa baseline epoch=3/100 score=0.00000
+Ottawa baseline epoch=4/100 score=0.00000
+Ottawa baseline epoch=5/100 score=0.00000
+Ottawa baseline epoch=6/100 score=0.00000
+Ottawa baseline epoch=7/100 score=0.00000
+Ottawa baseline epoch=8/100 score=0.00000
+Ottawa baseline epoch=9/100 score=0.00000
+Ottawa baseline epoch=10/100 score=0.00000
+Ottawa baseline epoch=11/100 score=0.00000
+Ottawa baseline epoch=12/100 score=0.00000
+Ottawa baseline epoch=13/100 score=0.00000
+Ottawa baseline epoch=14/100 score=0.00000
+Ottawa baseline epoch=15/100 score=0.00000
+Ottawa baseline epoch=16/100 score=0.00000
+Ottawa baseline epoch=17/100 score=0.00000
+Ottawa baseline epoch=18/100 score=0.00000
+Ottawa baseline epoch=19/100 score=0.00000
+Ottawa baseline epoch=20/100 score=0.00000
+Ottawa baseline epoch=21/100 score=0.00000
+EARLY STOP: Ottawa baseline after 20 stale epochs
+{
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "baseline",
+  "state_dim": 0,
+  "metric": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "iou": 0.0,
+    "oa": 0.8364257812499872
+  },
+  "latency_ms": 141.25763799529523,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/change_detection/Ottawa/baseline/best.pt",
+  "epochs": 100,
+  "params": 2047705
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Ottawa ours epoch=1/100 score=0.00000
+Ottawa ours epoch=2/100 score=0.00000
+Ottawa ours epoch=3/100 score=0.00000
+Ottawa ours epoch=4/100 score=0.00000
+Ottawa ours epoch=5/100 score=0.00000
+Ottawa ours epoch=6/100 score=0.00000
+Ottawa ours epoch=7/100 score=0.00000
+Ottawa ours epoch=8/100 score=0.00000
+Ottawa ours epoch=9/100 score=0.00000
+Ottawa ours epoch=10/100 score=0.00000
+Ottawa ours epoch=11/100 score=0.00000
+Ottawa ours epoch=12/100 score=0.00000
+Ottawa ours epoch=13/100 score=0.00000
+Ottawa ours epoch=14/100 score=0.00000
+Ottawa ours epoch=15/100 score=0.00000
+Ottawa ours epoch=16/100 score=0.00000
+Ottawa ours epoch=17/100 score=0.00000
+Ottawa ours epoch=18/100 score=0.00000
+Ottawa ours epoch=19/100 score=0.00000
+Ottawa ours epoch=20/100 score=0.00000
+Ottawa ours epoch=21/100 score=0.00000
+EARLY STOP: Ottawa ours after 20 stale epochs
+{
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "ours",
+  "state_dim": 16,
+  "metric": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "iou": 0.0,
+    "oa": 0.8364257812499872
+  },
+  "latency_ms": 138.500100991223,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/change_detection/Ottawa/ours/best.pt",
+  "epochs": 100,
+  "params": 1839523
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Yellow River baseline epoch=1/100 score=0.31640
+Yellow River baseline epoch=2/100 score=0.31640
+Yellow River baseline epoch=3/100 score=0.31640
+Yellow River baseline epoch=4/100 score=0.31640
+Yellow River baseline epoch=5/100 score=0.31640
+Yellow River baseline epoch=6/100 score=0.31636
+Yellow River baseline epoch=7/100 score=0.24117
+Yellow River baseline epoch=8/100 score=0.01358
+Yellow River baseline epoch=9/100 score=0.00000
+Yellow River baseline epoch=10/100 score=0.00000
+Yellow River baseline epoch=11/100 score=0.00000
+Yellow River baseline epoch=12/100 score=0.00000
+Yellow River baseline epoch=13/100 score=0.00000
+Yellow River baseline epoch=14/100 score=0.00000
+Yellow River baseline epoch=15/100 score=0.00000
+Yellow River baseline epoch=16/100 score=0.00000
+Yellow River baseline epoch=17/100 score=0.00929
+Yellow River baseline epoch=18/100 score=0.18048
+Yellow River baseline epoch=19/100 score=0.30573
+Yellow River baseline epoch=20/100 score=0.31640
+Yellow River baseline epoch=21/100 score=0.31640
+EARLY STOP: Yellow River baseline after 20 stale epochs
+{
+  "dataset": "Yellow River",
+  "task": "change_detection",
+  "variant": "baseline",
+  "state_dim": 0,
+  "metric": {
+    "precision": 0.2693481445312459,
+    "recall": 0.9999999999999434,
+    "f1": 0.4243881329037791,
+    "iou": 0.2693481445312459,
+    "oa": 0.2693481445312459
+  },
+  "latency_ms": 143.05671598413028,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/change_detection/Yellow_River/baseline/best.pt",
+  "epochs": 100,
+  "params": 2047705
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Yellow River ours epoch=1/100 score=0.32508
+Yellow River ours epoch=2/100 score=0.23633
+Yellow River ours epoch=3/100 score=0.00000
+Yellow River ours epoch=4/100 score=0.00000
+Yellow River ours epoch=5/100 score=0.00000
+Yellow River ours epoch=6/100 score=0.00000
+Yellow River ours epoch=7/100 score=0.00000
+Yellow River ours epoch=8/100 score=0.00000
+Yellow River ours epoch=9/100 score=0.00000
+Yellow River ours epoch=10/100 score=0.00000
+Yellow River ours epoch=11/100 score=0.00000
+Yellow River ours epoch=12/100 score=0.00000
+Yellow River ours epoch=13/100 score=0.00000
+Yellow River ours epoch=14/100 score=0.00000
+Yellow River ours epoch=15/100 score=0.00000
+Yellow River ours epoch=16/100 score=0.00000
+Yellow River ours epoch=17/100 score=0.00000
+Yellow River ours epoch=18/100 score=0.00000
+Yellow River ours epoch=19/100 score=0.00000
+Yellow River ours epoch=20/100 score=0.00000
+Yellow River ours epoch=21/100 score=0.00000
+EARLY STOP: Yellow River ours after 20 stale epochs
+{
+  "dataset": "Yellow River",
+  "task": "change_detection",
+  "variant": "ours",
+  "state_dim": 16,
+  "metric": {
+    "precision": 0.2596831402222707,
+    "recall": 0.9332087015635093,
+    "f1": 0.4063043397831908,
+    "iou": 0.2549447488160421,
+    "oa": 0.26542663574218345
+  },
+  "latency_ms": 150.67583200288936,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/change_detection/Yellow_River/ours/best.pt",
+  "epochs": 100,
+  "params": 1839523
+}
+Wrote /home/powerleader/ig-ds-ssm/experiments/cross_task/final_results.json

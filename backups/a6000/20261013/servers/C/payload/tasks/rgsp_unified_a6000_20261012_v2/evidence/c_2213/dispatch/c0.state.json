@@ -1,0 +1,14 @@
+{
+  "admitted": [
+    "sample-original",
+    "sample-matched075",
+    "sample-full",
+    "sample-resnet50"
+  ],
+  "blocked": [],
+  "lane": "c0",
+  "preflight_state_sha256": "461d768ad3e5beb125dd6d583839cc5db7eb5e693b95417398c638871adeb637",
+  "production_sha256": "eaa3ae5a570f7115ede77bd1da83e485ef65db941ef52735395769597c235a1f",
+  "state": "QUEUED",
+  "time": 1791810886.8097072
+}

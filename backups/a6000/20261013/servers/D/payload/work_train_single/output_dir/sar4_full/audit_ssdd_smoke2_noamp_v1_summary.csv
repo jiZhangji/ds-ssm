@@ -1,0 +1,2 @@
+dataset,experiment,variant,placement,state_dim,precision,recall,ap50,ap75,ap50_95,inference_ms,weights
+SSDD,audit_ssdd_smoke2_noamp_v1_ssdd_baseline,baseline,baseline,0,0.0,0.0,0.0,0.0,0.0,7.7790659049461635,/home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/audit_ssdd_smoke2_noamp_v1_ssdd_baseline/weights/best.pt

@@ -1,0 +1,19 @@
+{
+  "experiment_id": "sar4_scratch_p3_sd32_v1",
+  "records": [
+    {
+      "dataset": "SSDD",
+      "experiment": "sar4_scratch_p3_sd32_v1_ssdd_full_p3",
+      "variant": "full",
+      "placement": "p3",
+      "state_dim": 32,
+      "precision": 0.9051071777094397,
+      "recall": 0.8021978021978022,
+      "ap50": 0.86265536664531,
+      "ap75": 0.2864593231515249,
+      "ap50_95": 0.40596045155700394,
+      "inference_ms": 6.202177754763899,
+      "weights": "/home/powerleader/ig-ds-ssm/experiments/sar4/sar4_scratch_p3_sd32_v1_ssdd_full_p3/weights/best.pt"
+    }
+  ]
+}

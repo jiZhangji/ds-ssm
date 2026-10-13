@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/queue_after_campaign.py",
+    "--foreground"
+  ],
+  "pid": 618911,
+  "predecessor": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex",
+  "start_ticks": "41622549"
+}

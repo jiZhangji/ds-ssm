@@ -1,0 +1,6 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+{"status": "PROBE_PASS", "seed": 0, "task": "classification", "dataset": "SAMPLE", "method": "swin_b", "estimated_full_seconds": 1375.4534906516146, "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance", "timed_update_seconds": [0.7243625770206563, 0.7242408110178076, 0.7249017589492723, 0.7259745720075443], "updates_per_epoch": 11, "params": 86753474, "peak_gpu_allocated_bytes": 5433560064, "test_evaluated": false, "validation_evaluated": false, "protocol_sha256": "50204a440b86429702f19853d7aa1f1af89c4d40d90ee0d1d14408f696b25602"}

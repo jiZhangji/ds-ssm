@@ -1,0 +1,189 @@
+{
+  "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+  "jobs": {
+    "ottawa-author-camixer": {
+      "estimated_seconds": 900.0,
+      "probe": {
+        "status": "PENDING"
+      },
+      "protocol_sha256": null,
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": null,
+      "status": "PENDING"
+    },
+    "ottawa-author-ddnet": {
+      "estimated_seconds": 900.0,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "ddnet",
+          "--image1",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+          "--image2",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+          "--ground-truth",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+          "--cuda-compat",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cuda_uuid_compat.py",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/d0/jobs/ottawa-author-ddnet/probe",
+          "--gpu-uuid",
+          "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 5.03007825196255,
+        "ended_at": 1791810602.5060375,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/d0/jobs/ottawa-author-ddnet/probe",
+        "pid": 383400,
+        "reason": "process exit code 1",
+        "returncode": 1,
+        "started_at": 1791810597.4499986,
+        "status": "BLOCKED"
+      },
+      "protocol_sha256": null,
+      "reason": "process exit code 1",
+      "runs": {
+        "0": {
+          "reason": "job_blocked_no_automatic_retry",
+          "status": "SKIPPED"
+        },
+        "1": {
+          "reason": "job_blocked_no_automatic_retry",
+          "status": "SKIPPED"
+        },
+        "2": {
+          "reason": "job_blocked_no_automatic_retry",
+          "status": "SKIPPED"
+        }
+      },
+      "seed_limit": null,
+      "status": "BLOCKED"
+    },
+    "ottawa-author-lantnet": {
+      "estimated_seconds": 900.0,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "lantnet",
+          "--image1",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+          "--image2",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+          "--ground-truth",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+          "--cuda-compat",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cuda_uuid_compat.py",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/d0/jobs/ottawa-author-lantnet/probe",
+          "--gpu-uuid",
+          "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 5.027204614016227,
+        "ended_at": 1791810668.6597118,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/d0/jobs/ottawa-author-lantnet/probe",
+        "pid": 383611,
+        "reason": "process exit code 1",
+        "returncode": 1,
+        "started_at": 1791810663.6060407,
+        "status": "BLOCKED"
+      },
+      "protocol_sha256": null,
+      "reason": "process exit code 1",
+      "runs": {
+        "0": {
+          "reason": "job_blocked_no_automatic_retry",
+          "status": "SKIPPED"
+        },
+        "1": {
+          "reason": "job_blocked_no_automatic_retry",
+          "status": "SKIPPED"
+        },
+        "2": {
+          "reason": "job_blocked_no_automatic_retry",
+          "status": "SKIPPED"
+        }
+      },
+      "seed_limit": null,
+      "status": "BLOCKED"
+    },
+    "ottawa-author-wasnet": {
+      "estimated_seconds": 900.0,
+      "probe": {
+        "status": "PENDING"
+      },
+      "protocol_sha256": null,
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": null,
+      "status": "PENDING"
+    },
+    "ottawa-author-wbanet": {
+      "estimated_seconds": 900.0,
+      "probe": {
+        "status": "PENDING"
+      },
+      "protocol_sha256": null,
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": null,
+      "status": "PENDING"
+    }
+  },
+  "lane": "d0",
+  "plan_sha256": "3ea4f299a49782b135bc2cb0b6882a348c3c1f9222acda2c49dbab58138559f5",
+  "revision": 15,
+  "root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01",
+  "status": "STOPPED",
+  "updated_at": 1791810704.2808392,
+  "version": 1
+}

@@ -1,0 +1,177 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py:197: UserWarning: upsample_bilinear2d_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py:197: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Farmland original seed0 epoch=1/150 loss=2.054901 val=0.120143
+Farmland original seed0 epoch=2/150 loss=1.743378 val=0.392308
+Farmland original seed0 epoch=3/150 loss=1.609049 val=0.892086
+Farmland original seed0 epoch=4/150 loss=1.545335 val=0.894361
+Farmland original seed0 epoch=5/150 loss=1.379846 val=0.917136
+Farmland original seed0 epoch=6/150 loss=1.356120 val=0.878566
+Farmland original seed0 epoch=7/150 loss=1.220792 val=0.913808
+Farmland original seed0 epoch=8/150 loss=1.189649 val=0.892482
+Farmland original seed0 epoch=9/150 loss=1.187039 val=0.909976
+Farmland original seed0 epoch=10/150 loss=1.223376 val=0.904448
+Farmland original seed0 epoch=11/150 loss=1.224431 val=0.920165
+Farmland original seed0 epoch=12/150 loss=1.080328 val=0.908486
+Farmland original seed0 epoch=13/150 loss=1.026106 val=0.912489
+Farmland original seed0 epoch=14/150 loss=1.031228 val=0.917447
+Farmland original seed0 epoch=15/150 loss=1.085447 val=0.910774
+Farmland original seed0 epoch=16/150 loss=1.063129 val=0.912718
+Farmland original seed0 epoch=17/150 loss=1.041374 val=0.904924
+Farmland original seed0 epoch=18/150 loss=1.043188 val=0.895987
+Farmland original seed0 epoch=19/150 loss=1.029929 val=0.910180
+Farmland original seed0 epoch=20/150 loss=0.957288 val=0.886762
+Farmland original seed0 epoch=21/150 loss=0.947783 val=0.900489
+Farmland original seed0 epoch=22/150 loss=0.913425 val=0.911056
+Farmland original seed0 epoch=23/150 loss=1.009496 val=0.910299
+Farmland original seed0 epoch=24/150 loss=0.855099 val=0.924875
+Farmland original seed0 epoch=25/150 loss=0.849379 val=0.925021
+Farmland original seed0 epoch=26/150 loss=0.969493 val=0.913373
+Farmland original seed0 epoch=27/150 loss=0.870603 val=0.918005
+Farmland original seed0 epoch=28/150 loss=0.857699 val=0.918964
+Farmland original seed0 epoch=29/150 loss=0.799666 val=0.908940
+Farmland original seed0 epoch=30/150 loss=0.802179 val=0.915087
+Farmland original seed0 epoch=31/150 loss=0.770545 val=0.926458
+Farmland original seed0 epoch=32/150 loss=0.891772 val=0.922948
+Farmland original seed0 epoch=33/150 loss=0.798128 val=0.920204
+Farmland original seed0 epoch=34/150 loss=0.764353 val=0.917016
+Farmland original seed0 epoch=35/150 loss=0.734994 val=0.923336
+Farmland original seed0 epoch=36/150 loss=0.821642 val=0.923729
+Farmland original seed0 epoch=37/150 loss=0.730251 val=0.912718
+Farmland original seed0 epoch=38/150 loss=0.801393 val=0.931876
+Farmland original seed0 epoch=39/150 loss=0.724248 val=0.915903
+Farmland original seed0 epoch=40/150 loss=0.718174 val=0.918782
+Farmland original seed0 epoch=41/150 loss=0.724285 val=0.926298
+Farmland original seed0 epoch=42/150 loss=0.677894 val=0.914573
+Farmland original seed0 epoch=43/150 loss=0.671269 val=0.929482
+Farmland original seed0 epoch=44/150 loss=0.760833 val=0.928328
+Farmland original seed0 epoch=45/150 loss=0.658154 val=0.924935
+Farmland original seed0 epoch=46/150 loss=0.679915 val=0.933221
+Farmland original seed0 epoch=47/150 loss=0.659709 val=0.905449
+Farmland original seed0 epoch=48/150 loss=0.644609 val=0.921667
+Farmland original seed0 epoch=49/150 loss=0.662423 val=0.924242
+Farmland original seed0 epoch=50/150 loss=0.661749 val=0.910638
+Farmland original seed0 epoch=51/150 loss=0.585476 val=0.925620
+Farmland original seed0 epoch=52/150 loss=0.573469 val=0.932432
+Farmland original seed0 epoch=53/150 loss=0.604404 val=0.933669
+Farmland original seed0 epoch=54/150 loss=0.590161 val=0.934122
+Farmland original seed0 epoch=55/150 loss=0.632977 val=0.924768
+Farmland original seed0 epoch=56/150 loss=0.557852 val=0.917647
+Farmland original seed0 epoch=57/150 loss=0.536665 val=0.928082
+Farmland original seed0 epoch=58/150 loss=0.637663 val=0.923077
+Farmland original seed0 epoch=59/150 loss=0.611188 val=0.924217
+Farmland original seed0 epoch=60/150 loss=0.569277 val=0.922816
+Farmland original seed0 epoch=61/150 loss=0.509746 val=0.923077
+Farmland original seed0 epoch=62/150 loss=0.496894 val=0.927852
+Farmland original seed0 epoch=63/150 loss=0.506596 val=0.933921
+Farmland original seed0 epoch=64/150 loss=0.595682 val=0.931894
+Farmland original seed0 epoch=65/150 loss=0.479466 val=0.925771
+Farmland original seed0 epoch=66/150 loss=0.549167 val=0.923339
+Farmland original seed0 epoch=67/150 loss=0.445802 val=0.925424
+Farmland original seed0 epoch=68/150 loss=0.573379 val=0.922945
+Farmland original seed0 epoch=69/150 loss=0.476206 val=0.932409
+Farmland original seed0 epoch=70/150 loss=0.477286 val=0.925647
+Farmland original seed0 epoch=71/150 loss=0.571168 val=0.929839
+Farmland original seed0 epoch=72/150 loss=0.442328 val=0.925523
+Farmland original seed0 epoch=73/150 loss=0.479771 val=0.929174
+Farmland original seed0 epoch=74/150 loss=0.500948 val=0.930796
+Farmland original seed0 epoch=75/150 loss=0.526538 val=0.928696
+Farmland original seed0 epoch=76/150 loss=0.411049 val=0.928989
+Farmland original seed0 epoch=77/150 loss=0.387384 val=0.927511
+Farmland original seed0 epoch=78/150 loss=0.397159 val=0.930070
+Farmland original seed0 epoch=79/150 loss=0.509492 val=0.930796
+{
+  "schema": "rgsp-cross-trial-v1",
+  "dataset": "Farmland",
+  "task": "change_detection",
+  "variant": "original",
+  "seed": 0,
+  "protocol": {
+    "schema": "rgsp-cross-trial-v1",
+    "dataset": "Farmland",
+    "task": "change_detection",
+    "logical_data_sha256": "0e007ca873ae423733593f721beb54ae156eea45b68188e0fded5b69ddd51fb8",
+    "split_counts": {
+      "test": 16,
+      "train": 112,
+      "val": 16
+    },
+    "annotation_policy": "fail",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "epochs": 150,
+    "patience": 25,
+    "imgsz": 192,
+    "batch": 16,
+    "eval_batch": 16,
+    "optimizer": "AdamW",
+    "lr": 0.0002,
+    "weight_decay": 0.0005,
+    "scheduler": "cosine to 1% initial lr",
+    "module_warmup_epochs": 0,
+    "precision": "FP32 (AMP/TF32 off)",
+    "gradient_clip_l2": 5.0,
+    "grad_accum": 1,
+    "classification_label_smoothing": 0.1,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "selection_metric": "f1",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "historical_results_comparable": false
+  },
+  "protocol_sha256": "0a35cf65390feca192d2d8e7df423b46cea401b091ede0f8ab9690eac6bf7838",
+  "data": {
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/Farmland/manifest.json",
+    "manifest_sha256": "5c5e7521398ab6575e98eb986afdfb4dbb8c595726351b0d111d1ee333f7ba2b",
+    "logical_manifest_sha256": "0e007ca873ae423733593f721beb54ae156eea45b68188e0fded5b69ddd51fb8",
+    "counts": {
+      "test": 16,
+      "train": 112,
+      "val": 16
+    },
+    "audit_sha256": "6e30aa25bbf59ce5799dacdc93bf836f60bc03fb1438ed90b4681b7bafb2ec7b",
+    "files_sha256": "cfb05ae7d9b736534cc4a5bd95831fa14f73025e63dd4aeea704913e7f3af2d6",
+    "annotation_policy": "fail"
+  },
+  "initialization_common_tensor_sha256": "d258a21c11bddf3824e3377acf6401654d52d5ccbadee72d7ec597e3fa046067",
+  "checkpoint": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_original_seed0/best.pt",
+  "best_sha256": "e83ebeef789f7cebd2454bc1e1c439bf9bdaa79c559df91a49dfd8cde98870f5",
+  "best_epoch": 54,
+  "threshold": 0.9,
+  "metric": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "iou": 0.0,
+    "oa": 0.9603949652777778,
+    "kappa": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 365,
+    "tn": 8851,
+    "evaluated_native_unique_pixels": 9216,
+    "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities"
+  },
+  "reloaded_controls": {
+    "variant": "original",
+    "controlled_blocks": 0
+  },
+  "parameters": 3782737,
+  "trainable_parameters": 3782737,
+  "buffers": 5688,
+  "efficiency_status": "Params only here; matched-hardware latency and scan-aware FLOPs require the separate efficiency lane. No undercounted THOP GFLOPs claimed.",
+  "historical_negative_results_preserved": true,
+  "finished_utc": "2026-10-09T13:19:30.222856+00:00"
+}
+{"compatibility_launcher": "PASS", "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/farmland_original_seed0/cuda_compatibility.json"}

@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "parameters": 7159,
+  "trainable_parameters": 7159,
+  "covered_flops_g": 4.518e-05,
+  "coverage": {
+    "version": "rgsp-covered-operations-v1",
+    "scope": "Full unfused registered model; eval, batch=1, FP32, no TF32, no task postprocessing/NMS.",
+    "exhaustive": false,
+    "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+    "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+    "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+    "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+    "not_included": [
+      "Scan exponentials and softplus special functions; symbolic counts are separate.",
+      "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+      "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+      "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+    ],
+    "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+    "parameter_sharing": "Registered shared parameters counted once; repeated module forwards counted per actual execution."
+  },
+  "unsupported": [
+    "Scan exponentials and softplus special functions; symbolic counts are separate.",
+    "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+    "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+    "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing.",
+    "Unregistered THOP leaf: cd_author_wbanet.DWT_2D",
+    "Unregistered THOP leaf: cd_author_wbanet.IDWT_2D",
+    "Unregistered THOP leaf: einops.layers.torch.Rearrange",
+    "Unregistered THOP leaf: torch.nn.modules.activation.GELU",
+    "Unregistered THOP leaf: torch.nn.modules.activation.Sigmoid"
+  ],
+  "thop_legacy_x2_flops": 45180.0,
+  "scan_basic_arithmetic_flops": 0,
+  "functional_einsum_mac2_flops": 0,
+  "cross_merge_add_flops": 0,
+  "scan_calls": [],
+  "einsum_calls": [],
+  "cross_merge_calls": [],
+  "ssm_module_calls": [],
+  "unregistered_leaf_module_types": [
+    "cd_author_wbanet.DWT_2D",
+    "cd_author_wbanet.IDWT_2D",
+    "einops.layers.torch.Rearrange",
+    "torch.nn.modules.activation.GELU",
+    "torch.nn.modules.activation.Sigmoid"
+  ],
+  "finite_forward": true,
+  "input_shapes": [
+    [
+      1,
+      3,
+      8,
+      8
+    ]
+  ],
+  "device": "cuda:0",
+  "torch_version": "1.13.1+cu117",
+  "batch": 1,
+  "precision": "FP32",
+  "fused": false,
+  "nms_included": false,
+  "thop_version": "2.0.16",
+  "output_shapes": [
+    [
+      1,
+      2
+    ]
+  ],
+  "output_shape": [
+    1,
+    2
+  ],
+  "method": "wbanet",
+  "model_source_audit": {
+    "method": "wbanet",
+    "repository": "https://github.com/summitgao/WBANet",
+    "commit": "4a6e6a44a750ded84ac951eb995debf8428df7a5",
+    "definitions": [
+      {
+        "source": "vendor/wbanet/torch_wavelets.py",
+        "source_sha256": "98e0398c6ea6d1442abf11c66b1a15e37071965b95e260e62a1b26f11297f836",
+        "cell_source_sha256": {
+          "vendor/wbanet/torch_wavelets.py": "9d14e0717d2ad9e4fac39c11e8d4248c41511c49701a37f2e17256a04f010c1e"
+        },
+        "definitions": [
+          "DWT_2D",
+          "DWT_Function",
+          "IDWT_2D",
+          "IDWT_Function"
+        ],
+        "transformed_ast_sha256": "ade883d647c76c795480d82d8568efe683385bfd7dfaa02e8fedbfe1168ca147",
+        "precision_cast_rewrites": 5,
+        "hook_once_rewrites": 0
+      },
+      {
+        "source": "vendor/wbanet/wbanet.ipynb",
+        "source_sha256": "52173bdc1aee943ec3949623a4cc177bf935c5d377245b2b2c84bc69a798bfcc",
+        "cell_source_sha256": {
+          "vendor/wbanet/wbanet.ipynb:cell3": "703c4776bcb649a6084f8b3acfe5b6a90790f5f77c3fa007b279608715edffb4",
+          "vendor/wbanet/wbanet.ipynb:cell6": "55b57254ed1c8efaf96bd35cdfcecac46dc181361dfc37b77a95a6f03046eb8f",
+          "vendor/wbanet/wbanet.ipynb:cell7": "b5e3d7464950a5404c19a3d0658da178f8faa02e88cbf8b73d15f0278e69c218",
+          "vendor/wbanet/wbanet.ipynb:cell8": "755eda6388584b042a915318c031caa422099a8d15ea18a26ebb4dc4d8a93fb7"
+        },
+        "definitions": [
+          "BiAttn",
+          "ConcactFeature",
+          "WBANet",
+          "WSM",
+          "WaveAttention",
+          "pair"
+        ],
+        "transformed_ast_sha256": "f56d2de0c87db4c84821ed9b523bcd00684c66861d73987aa14b18b4e9fb7591",
+        "precision_cast_rewrites": 2,
+        "hook_once_rewrites": 0
+      }
+    ],
+    "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+    "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+    "author_source_unmodified": true,
+    "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+  },
+  "checkpoint_loaded": false,
+  "initialization": "random seed0, exact frozen author adapter",
+  "scope_limit": "One native center patch; not image-total FLOPs. Functional OpenCV DCT, wavelet convolutions, attention matmul, activations, pooling/statistics and image preprocessing/postprocessing are not exhaustively counted."
+}

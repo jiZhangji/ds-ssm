@@ -1,0 +1,19 @@
+{
+  "admitted": [
+    "ottawa-original",
+    "ottawa-matched075",
+    "ottawa-full",
+    "farmland-original",
+    "farmland-matched075",
+    "farmland-full",
+    "yellow_river-original",
+    "yellow_river-matched075",
+    "yellow_river-full"
+  ],
+  "blocked": [],
+  "lane": "a0",
+  "preflight_state_sha256": "362f84ce1e5eb1d7115aaf71af99badfa9b024a6a096963a6b983fd136ac6ec2",
+  "production_sha256": "717c3df6340403c243fb56610bc2fbbb4c8adc5c673191448cfdc7a03b4239d3",
+  "state": "QUEUED",
+  "time": 1791811181.4103515
+}

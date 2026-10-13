@@ -1,0 +1,305 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+VMAMBA PRETRAIN TRANSFER: {'path': '/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth', 'loaded_tensors': 272, 'model_tensors': 280, 'coverage': 0.9714285714285714, 'missing_tensors': 8, 'unexpected_tensors': 4}
+OpenEarthMap-SAR ours warmup 1/50 loss=2.93462 score=0.10251
+OpenEarthMap-SAR ours warmup 2/50 loss=2.74744 score=0.12117
+OpenEarthMap-SAR ours warmup 3/50 loss=2.70414 score=0.12404
+OpenEarthMap-SAR ours warmup 4/50 loss=2.68128 score=0.12117
+OpenEarthMap-SAR ours warmup 5/50 loss=2.65931 score=0.13001
+OpenEarthMap-SAR ours warmup 6/50 loss=2.63594 score=0.13058
+OpenEarthMap-SAR ours warmup 7/50 loss=2.61293 score=0.13058
+OpenEarthMap-SAR ours warmup 8/50 loss=2.59781 score=0.13142
+OpenEarthMap-SAR ours warmup 9/50 loss=2.58282 score=0.13569
+OpenEarthMap-SAR ours warmup 10/50 loss=2.57534 score=0.13660
+OpenEarthMap-SAR ours warmup 11/50 loss=2.56433 score=0.13688
+OpenEarthMap-SAR ours warmup 12/50 loss=2.55916 score=0.13459
+OpenEarthMap-SAR ours warmup 13/50 loss=2.54879 score=0.13097
+OpenEarthMap-SAR ours warmup 14/50 loss=2.53588 score=0.13592
+OpenEarthMap-SAR ours warmup 15/50 loss=2.52746 score=0.13821
+OpenEarthMap-SAR ours warmup 16/50 loss=2.53039 score=0.13532
+OpenEarthMap-SAR ours warmup 17/50 loss=2.51982 score=0.13821
+OpenEarthMap-SAR ours warmup 18/50 loss=2.51546 score=0.13630
+OpenEarthMap-SAR ours warmup 19/50 loss=2.50863 score=0.13914
+OpenEarthMap-SAR ours warmup 20/50 loss=2.50161 score=0.14130
+OpenEarthMap-SAR ours warmup 21/50 loss=2.49037 score=0.14113
+OpenEarthMap-SAR ours warmup 22/50 loss=2.48818 score=0.13893
+OpenEarthMap-SAR ours warmup 23/50 loss=2.47034 score=0.13905
+OpenEarthMap-SAR ours warmup 24/50 loss=2.46555 score=0.13848
+OpenEarthMap-SAR ours warmup 25/50 loss=2.46393 score=0.14180
+OpenEarthMap-SAR ours warmup 26/50 loss=2.46046 score=0.14534
+OpenEarthMap-SAR ours warmup 27/50 loss=2.45304 score=0.14727
+OpenEarthMap-SAR ours warmup 28/50 loss=2.45099 score=0.15080
+OpenEarthMap-SAR ours warmup 29/50 loss=2.44485 score=0.14883
+OpenEarthMap-SAR ours warmup 30/50 loss=2.43742 score=0.15077
+OpenEarthMap-SAR ours warmup 31/50 loss=2.43436 score=0.15054
+OpenEarthMap-SAR ours warmup 32/50 loss=2.43949 score=0.15320
+OpenEarthMap-SAR ours warmup 33/50 loss=2.42897 score=0.14405
+OpenEarthMap-SAR ours warmup 34/50 loss=2.42567 score=0.14847
+OpenEarthMap-SAR ours warmup 35/50 loss=2.42497 score=0.15053
+OpenEarthMap-SAR ours warmup 36/50 loss=2.41644 score=0.15351
+OpenEarthMap-SAR ours warmup 37/50 loss=2.41349 score=0.15060
+OpenEarthMap-SAR ours warmup 38/50 loss=2.41758 score=0.15902
+OpenEarthMap-SAR ours warmup 39/50 loss=2.41018 score=0.15898
+OpenEarthMap-SAR ours warmup 40/50 loss=2.40664 score=0.15424
+OpenEarthMap-SAR ours warmup 41/50 loss=2.40647 score=0.15864
+OpenEarthMap-SAR ours warmup 42/50 loss=2.40781 score=0.15535
+OpenEarthMap-SAR ours warmup 43/50 loss=2.40062 score=0.15967
+OpenEarthMap-SAR ours warmup 44/50 loss=2.40467 score=0.15901
+OpenEarthMap-SAR ours warmup 45/50 loss=2.40348 score=0.16030
+OpenEarthMap-SAR ours warmup 46/50 loss=2.39266 score=0.16005
+OpenEarthMap-SAR ours warmup 47/50 loss=2.38354 score=0.15424
+OpenEarthMap-SAR ours warmup 48/50 loss=2.39305 score=0.15845
+OpenEarthMap-SAR ours warmup 49/50 loss=2.38779 score=0.15915
+OpenEarthMap-SAR ours warmup 50/50 loss=2.38964 score=0.16142
+WARMUP COMPLETE: restored ImageNet backbone and started full fine-tuning
+OpenEarthMap-SAR ours finetune 1/150 loss=2.15368 score=0.20768
+OpenEarthMap-SAR ours finetune 2/150 loss=1.96573 score=0.22748
+OpenEarthMap-SAR ours finetune 3/150 loss=1.86681 score=0.25450
+OpenEarthMap-SAR ours finetune 4/150 loss=1.83254 score=0.25853
+OpenEarthMap-SAR ours finetune 5/150 loss=1.78159 score=0.26981
+OpenEarthMap-SAR ours finetune 6/150 loss=1.74402 score=0.26618
+OpenEarthMap-SAR ours finetune 7/150 loss=1.71683 score=0.24733
+OpenEarthMap-SAR ours finetune 8/150 loss=1.70144 score=0.28052
+OpenEarthMap-SAR ours finetune 9/150 loss=1.68546 score=0.27842
+OpenEarthMap-SAR ours finetune 10/150 loss=1.65956 score=0.28412
+OpenEarthMap-SAR ours finetune 11/150 loss=1.64861 score=0.27221
+OpenEarthMap-SAR ours finetune 12/150 loss=1.64190 score=0.28497
+OpenEarthMap-SAR ours finetune 13/150 loss=1.59475 score=0.29762
+OpenEarthMap-SAR ours finetune 14/150 loss=1.59199 score=0.28670
+OpenEarthMap-SAR ours finetune 15/150 loss=1.58703 score=0.28573
+OpenEarthMap-SAR ours finetune 16/150 loss=1.58691 score=0.28855
+OpenEarthMap-SAR ours finetune 17/150 loss=1.57313 score=0.28593
+OpenEarthMap-SAR ours finetune 18/150 loss=1.55480 score=0.30058
+OpenEarthMap-SAR ours finetune 19/150 loss=1.55248 score=0.29434
+OpenEarthMap-SAR ours finetune 20/150 loss=1.55581 score=0.29299
+OpenEarthMap-SAR ours finetune 21/150 loss=1.54334 score=0.29367
+OpenEarthMap-SAR ours finetune 22/150 loss=1.52090 score=0.29491
+OpenEarthMap-SAR ours finetune 23/150 loss=1.52236 score=0.29810
+OpenEarthMap-SAR ours finetune 24/150 loss=1.52345 score=0.29744
+OpenEarthMap-SAR ours finetune 25/150 loss=1.52736 score=0.29558
+OpenEarthMap-SAR ours finetune 26/150 loss=1.49738 score=0.29775
+OpenEarthMap-SAR ours finetune 27/150 loss=1.50721 score=0.29525
+OpenEarthMap-SAR ours finetune 28/150 loss=1.49485 score=0.29680
+OpenEarthMap-SAR ours finetune 29/150 loss=1.48592 score=0.30341
+OpenEarthMap-SAR ours finetune 30/150 loss=1.48771 score=0.30478
+OpenEarthMap-SAR ours finetune 31/150 loss=1.47401 score=0.29949
+OpenEarthMap-SAR ours finetune 32/150 loss=1.46818 score=0.30005
+OpenEarthMap-SAR ours finetune 33/150 loss=1.47433 score=0.29994
+OpenEarthMap-SAR ours finetune 34/150 loss=1.46093 score=0.28393
+OpenEarthMap-SAR ours finetune 35/150 loss=1.45992 score=0.30276
+OpenEarthMap-SAR ours finetune 36/150 loss=1.46452 score=0.29518
+OpenEarthMap-SAR ours finetune 37/150 loss=1.45466 score=0.30236
+OpenEarthMap-SAR ours finetune 38/150 loss=1.44537 score=0.30017
+OpenEarthMap-SAR ours finetune 39/150 loss=1.44045 score=0.30939
+OpenEarthMap-SAR ours finetune 40/150 loss=1.45236 score=0.30368
+OpenEarthMap-SAR ours finetune 41/150 loss=1.42154 score=0.30478
+OpenEarthMap-SAR ours finetune 42/150 loss=1.42137 score=0.30479
+OpenEarthMap-SAR ours finetune 43/150 loss=1.42397 score=0.30585
+OpenEarthMap-SAR ours finetune 44/150 loss=1.41044 score=0.30089
+OpenEarthMap-SAR ours finetune 45/150 loss=1.42038 score=0.30157
+OpenEarthMap-SAR ours finetune 46/150 loss=1.41393 score=0.30445
+OpenEarthMap-SAR ours finetune 47/150 loss=1.41534 score=0.30572
+OpenEarthMap-SAR ours finetune 48/150 loss=1.39594 score=0.30932
+OpenEarthMap-SAR ours finetune 49/150 loss=1.40049 score=0.30669
+OpenEarthMap-SAR ours finetune 50/150 loss=1.38668 score=0.30593
+OpenEarthMap-SAR ours finetune 51/150 loss=1.39558 score=0.30923
+OpenEarthMap-SAR ours finetune 52/150 loss=1.38846 score=0.30817
+OpenEarthMap-SAR ours finetune 53/150 loss=1.37807 score=0.29900
+OpenEarthMap-SAR ours finetune 54/150 loss=1.39546 score=0.30263
+OpenEarthMap-SAR ours finetune 55/150 loss=1.39440 score=0.31318
+OpenEarthMap-SAR ours finetune 56/150 loss=1.38324 score=0.30547
+OpenEarthMap-SAR ours finetune 57/150 loss=1.37693 score=0.30121
+OpenEarthMap-SAR ours finetune 58/150 loss=1.37239 score=0.31461
+OpenEarthMap-SAR ours finetune 59/150 loss=1.37589 score=0.30161
+OpenEarthMap-SAR ours finetune 60/150 loss=1.37050 score=0.31488
+OpenEarthMap-SAR ours finetune 61/150 loss=1.35707 score=0.30527
+OpenEarthMap-SAR ours finetune 62/150 loss=1.35829 score=0.30930
+OpenEarthMap-SAR ours finetune 63/150 loss=1.36659 score=0.30862
+OpenEarthMap-SAR ours finetune 64/150 loss=1.34719 score=0.30532
+OpenEarthMap-SAR ours finetune 65/150 loss=1.34831 score=0.30759
+OpenEarthMap-SAR ours finetune 66/150 loss=1.34799 score=0.30416
+OpenEarthMap-SAR ours finetune 67/150 loss=1.34519 score=0.31073
+OpenEarthMap-SAR ours finetune 68/150 loss=1.32287 score=0.30611
+OpenEarthMap-SAR ours finetune 69/150 loss=1.33402 score=0.31729
+OpenEarthMap-SAR ours finetune 70/150 loss=1.33003 score=0.30523
+OpenEarthMap-SAR ours finetune 71/150 loss=1.32451 score=0.30747
+OpenEarthMap-SAR ours finetune 72/150 loss=1.33187 score=0.31296
+OpenEarthMap-SAR ours finetune 73/150 loss=1.34574 score=0.31177
+OpenEarthMap-SAR ours finetune 74/150 loss=1.32143 score=0.30445
+OpenEarthMap-SAR ours finetune 75/150 loss=1.31806 score=0.30978
+OpenEarthMap-SAR ours finetune 76/150 loss=1.31893 score=0.31296
+OpenEarthMap-SAR ours finetune 77/150 loss=1.31789 score=0.31374
+OpenEarthMap-SAR ours finetune 78/150 loss=1.31434 score=0.30863
+OpenEarthMap-SAR ours finetune 79/150 loss=1.31503 score=0.31721
+OpenEarthMap-SAR ours finetune 80/150 loss=1.31242 score=0.31058
+OpenEarthMap-SAR ours finetune 81/150 loss=1.30296 score=0.31306
+OpenEarthMap-SAR ours finetune 82/150 loss=1.31811 score=0.31579
+OpenEarthMap-SAR ours finetune 83/150 loss=1.30726 score=0.31674
+OpenEarthMap-SAR ours finetune 84/150 loss=1.30692 score=0.31338
+OpenEarthMap-SAR ours finetune 85/150 loss=1.29715 score=0.31049
+OpenEarthMap-SAR ours finetune 86/150 loss=1.29947 score=0.31503
+OpenEarthMap-SAR ours finetune 87/150 loss=1.29477 score=0.31184
+OpenEarthMap-SAR ours finetune 88/150 loss=1.29237 score=0.31245
+OpenEarthMap-SAR ours finetune 89/150 loss=1.29614 score=0.31271
+OpenEarthMap-SAR ours finetune 90/150 loss=1.28185 score=0.32089
+OpenEarthMap-SAR ours finetune 91/150 loss=1.27295 score=0.31226
+OpenEarthMap-SAR ours finetune 92/150 loss=1.28363 score=0.30895
+OpenEarthMap-SAR ours finetune 93/150 loss=1.27966 score=0.32014
+OpenEarthMap-SAR ours finetune 94/150 loss=1.28644 score=0.31165
+OpenEarthMap-SAR ours finetune 95/150 loss=1.26826 score=0.31377
+OpenEarthMap-SAR ours finetune 96/150 loss=1.27101 score=0.31505
+OpenEarthMap-SAR ours finetune 97/150 loss=1.26040 score=0.31121
+OpenEarthMap-SAR ours finetune 98/150 loss=1.26641 score=0.31324
+OpenEarthMap-SAR ours finetune 99/150 loss=1.26760 score=0.31214
+OpenEarthMap-SAR ours finetune 100/150 loss=1.26341 score=0.31280
+OpenEarthMap-SAR ours finetune 101/150 loss=1.26602 score=0.31429
+OpenEarthMap-SAR ours finetune 102/150 loss=1.24965 score=0.31664
+OpenEarthMap-SAR ours finetune 103/150 loss=1.24755 score=0.31619
+OpenEarthMap-SAR ours finetune 104/150 loss=1.24715 score=0.31626
+OpenEarthMap-SAR ours finetune 105/150 loss=1.25328 score=0.30704
+OpenEarthMap-SAR ours finetune 106/150 loss=1.25475 score=0.30997
+OpenEarthMap-SAR ours finetune 107/150 loss=1.25020 score=0.31109
+OpenEarthMap-SAR ours finetune 108/150 loss=1.24661 score=0.31964
+OpenEarthMap-SAR ours finetune 109/150 loss=1.24430 score=0.31853
+OpenEarthMap-SAR ours finetune 110/150 loss=1.24640 score=0.31577
+OpenEarthMap-SAR ours finetune 111/150 loss=1.22919 score=0.31107
+OpenEarthMap-SAR ours finetune 112/150 loss=1.24804 score=0.31494
+OpenEarthMap-SAR ours finetune 113/150 loss=1.23408 score=0.31339
+OpenEarthMap-SAR ours finetune 114/150 loss=1.22027 score=0.31881
+OpenEarthMap-SAR ours finetune 115/150 loss=1.21970 score=0.31137
+OpenEarthMap-SAR ours finetune 116/150 loss=1.21940 score=0.31446
+OpenEarthMap-SAR ours finetune 117/150 loss=1.22708 score=0.31515
+OpenEarthMap-SAR ours finetune 118/150 loss=1.22830 score=0.32437
+OpenEarthMap-SAR ours finetune 119/150 loss=1.21935 score=0.31486
+OpenEarthMap-SAR ours finetune 120/150 loss=1.21535 score=0.32161
+OpenEarthMap-SAR ours finetune 121/150 loss=1.22132 score=0.32305
+OpenEarthMap-SAR ours finetune 122/150 loss=1.21404 score=0.31975
+OpenEarthMap-SAR ours finetune 123/150 loss=1.20827 score=0.32371
+OpenEarthMap-SAR ours finetune 124/150 loss=1.21392 score=0.32182
+OpenEarthMap-SAR ours finetune 125/150 loss=1.21517 score=0.32075
+OpenEarthMap-SAR ours finetune 126/150 loss=1.22661 score=0.31202
+OpenEarthMap-SAR ours finetune 127/150 loss=1.21219 score=0.32103
+OpenEarthMap-SAR ours finetune 128/150 loss=1.19328 score=0.31569
+OpenEarthMap-SAR ours finetune 129/150 loss=1.19959 score=0.31583
+OpenEarthMap-SAR ours finetune 130/150 loss=1.20512 score=0.31362
+OpenEarthMap-SAR ours finetune 131/150 loss=1.20542 score=0.31891
+OpenEarthMap-SAR ours finetune 132/150 loss=1.17822 score=0.31486
+OpenEarthMap-SAR ours finetune 133/150 loss=1.19916 score=0.31412
+OpenEarthMap-SAR ours finetune 134/150 loss=1.20682 score=0.31920
+OpenEarthMap-SAR ours finetune 135/150 loss=1.19704 score=0.31703
+OpenEarthMap-SAR ours finetune 136/150 loss=1.19547 score=0.31678
+OpenEarthMap-SAR ours finetune 137/150 loss=1.18527 score=0.31531
+OpenEarthMap-SAR ours finetune 138/150 loss=1.19187 score=0.32059
+OpenEarthMap-SAR ours finetune 139/150 loss=1.18581 score=0.32144
+OpenEarthMap-SAR ours finetune 140/150 loss=1.20165 score=0.31819
+OpenEarthMap-SAR ours finetune 141/150 loss=1.17162 score=0.32204
+OpenEarthMap-SAR ours finetune 142/150 loss=1.18799 score=0.31614
+OpenEarthMap-SAR ours finetune 143/150 loss=1.18220 score=0.32202
+OpenEarthMap-SAR ours finetune 144/150 loss=1.18185 score=0.32365
+OpenEarthMap-SAR ours finetune 145/150 loss=1.18141 score=0.31774
+OpenEarthMap-SAR ours finetune 146/150 loss=1.19072 score=0.31995
+OpenEarthMap-SAR ours finetune 147/150 loss=1.18252 score=0.31677
+OpenEarthMap-SAR ours finetune 148/150 loss=1.17286 score=0.31432
+EARLY STOP: 30 stale epochs
+{
+  "dataset": "OpenEarthMap-SAR",
+  "task": "segmentation",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "vmamba_tiny",
+  "decoder": "upernet_lite",
+  "initialization": "official_vmamba_tiny_backbone_plus_random_new_modules",
+  "pretrained": {
+    "path": "/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "loaded_tensors": 272,
+    "model_tensors": 280,
+    "coverage": 0.9714285714285714,
+    "missing_tensors": 8,
+    "unexpected_tensors": 4
+  },
+  "protocol": "SAR-only; train on 4,333 released pseudo labels (P); select on 210 released real validation labels; evaluate once on 280 released real test labels",
+  "selection_policy": "best validation mIoU; test evaluated once after selection",
+  "class_names": [
+    "bareland",
+    "rangeland",
+    "developed_space",
+    "road",
+    "tree",
+    "water",
+    "agriculture_land",
+    "building"
+  ],
+  "split_sizes": {
+    "train": 4333,
+    "val": 210,
+    "test": 490
+  },
+  "imgsz": 512,
+  "batch": 32,
+  "eval_imgsz": 1024,
+  "eval_batch": 1,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 50,
+  "fine_tune_epochs": 150,
+  "optimizer": "Adam",
+  "scheduler": "fixed",
+  "lr": 0.0001,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0,
+  "label_smoothing": 0.0,
+  "segmentation_loss": "weighted_cross_entropy_plus_dice",
+  "selection_metric": "miou_all",
+  "best_epoch": 168,
+  "threshold": null,
+  "metric": {
+    "miou_all": 0.35462464517159176,
+    "miou_foreground": 0.4051695128977952,
+    "mpa": 0.49526018233987584,
+    "dice": 0.4912293884542317,
+    "oa": 0.525648109733262,
+    "fwiou": 0.3627035918399807,
+    "per_class_iou": [
+      0.0008105710881675356,
+      0.2525362326677185,
+      0.24324693340198583,
+      0.27768597064407297,
+      0.40801744302646314,
+      0.656419414768125,
+      0.5636335331771268,
+      0.43464706259907376
+    ],
+    "per_class_pa": [
+      0.006174670249417431,
+      0.40345906675400606,
+      0.32835248023930713,
+      0.4506439403314647,
+      0.5857408206913005,
+      0.7519652315085277,
+      0.7315802742423381,
+      0.7041649747026448
+    ],
+    "per_class_dice": [
+      0.0016198291896261903,
+      0.4032398042966843,
+      0.39130912269595836,
+      0.4346701412148923,
+      0.5795630516472154,
+      0.7925763353359564,
+      0.7209279172107382,
+      0.6059289060427822
+    ]
+  },
+  "params": 31275086,
+  "gflops": 47.615878656,
+  "latency_ms": 38.936203900084365,
+  "fps": 25.683037888494137,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup50_bs32_v1/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/openearthmap_sar/sar_only_p/manifest.json"
+}

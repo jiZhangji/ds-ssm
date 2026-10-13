@@ -1,0 +1,98 @@
+{
+  "audit_gate": {
+    "archive_audit": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1949_c/archive_audit.json",
+      "sha256": "a4b42255677feac2173652ec870130a89c647c57e677eb98613551c11c4794ac",
+      "size": 51826
+    },
+    "byte_exclusion_counts": {
+      "test": 0,
+      "train": 48,
+      "val": 2
+    },
+    "counts": {
+      "test": 3974,
+      "train": 31735,
+      "val": 3970
+    },
+    "limitations": [
+      "This is a fixed local image split, not a verified official or acquisition-disjoint protocol.",
+      "Sensor/polarization/date filename groups are unverified proxies, not recovered scene IDs.",
+      "Cross-split exact byte/RGB duplicates are excluded from lower-priority splits only.",
+      "Within-split duplicate images and differing source annotations are preserved, not adjudicated.",
+      "No near-duplicate or geographic/acquisition-independence claim is made.",
+      "The audit is not a claim that every original label is correct."
+    ],
+    "original_counts": {
+      "test": 3974,
+      "train": 31783,
+      "val": 3972
+    },
+    "original_test_preserved": true,
+    "pixel_exclusion_counts": {
+      "test": 0,
+      "train": 48,
+      "val": 2
+    },
+    "pixel_verification_scope": "Duplicate rules independently recomputed from the reviewed SHA-bound full Pillow audit; every corresponding original image/label byte hash was rechecked, not a second decoded-pixel implementation.",
+    "predicted_manifest_sha256": "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78",
+    "status": "audit_gate_verified",
+    "test_internal_duplicate_groups": {
+      "byte": 0,
+      "pixel": 0
+    },
+    "test_internal_semantic_disagreement_groups": {
+      "byte": 0,
+      "pixel": 0
+    },
+    "union_exclusion_counts": {
+      "test": 0,
+      "train": 48,
+      "val": 2
+    },
+    "unknown_source_group_metadata": {
+      "counts": {
+        "test": 104,
+        "train": 773,
+        "val": 92
+      },
+      "hash_encoding": "SHA256 of UTF8 compact sorted-key JSON; ordinal unique name lists; no trailing newline",
+      "meaning": "Only existing missing sensor/polarization/date proxies in the fixed source are accepted; null is preserved, not converted into a scene or acquisition ID. No sample is excluded by this check.",
+      "name_family_counts": {
+        "test": {
+          "newship": 75,
+          "ship": 29
+        },
+        "train": {
+          "newship": 586,
+          "ship": 187
+        },
+        "val": {
+          "newship": 66,
+          "ship": 26
+        }
+      },
+      "name_family_pattern": "(newship|ship)[0-9]+\\.jpg",
+      "ordered_names_sha256": "3ae853c94d02fc793d8da6f35b75c25d23a90164bf0289131dc5f59240d4d40e",
+      "per_split_names_sha256": {
+        "test": "8ce32232d29d72780e9c5e0ba5d0fb8906f53d47c62008792f6b49690d460bdc",
+        "train": "9078bc56a143acc1cc8d4747c86a19b72cb84e7614cfbe09b42cb580d6c126d7",
+        "val": "4d995d9c09fc19b92ff7f348cabd81c05b92a65dba47018320f6c3de1488765a"
+      },
+      "source_manifest_sha256": "a69d2acf8fcf2d90cf691b15c007549002be5036c7155493e5cdcd809f25dc4a",
+      "status": "exact_known_unknown_source_proxies_preserved",
+      "total": 969
+    }
+  },
+  "helper": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/ship_gate_v2.py",
+    "sha256": "caabe5022a1d53d94747c0091f9899413b5a86b1fac21e700a343baed3be4806",
+    "size": 47887
+  },
+  "hostname": "a6000-c",
+  "mode": "stage",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "readiness_will_not_be_published": true,
+  "schema": "rgsp-ship-publication-gate-v2",
+  "started_utc": "2026-10-09T12:12:21.440939+00:00"
+}

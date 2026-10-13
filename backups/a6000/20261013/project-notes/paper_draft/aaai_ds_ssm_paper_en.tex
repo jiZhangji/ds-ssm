@@ -1,0 +1,482 @@
+\documentclass[letterpaper]{article}
+\usepackage{aaai26}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage[hyphens]{url}
+\urlstyle{rm}
+\def\UrlFont{\rm}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{placeins}
+\frenchspacing
+\setlength{\emergencystretch}{2em}
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+\newcommand{\method}{IG-DS-SSM}
+\newcommand{\methodfull}{Importance-Guided De-Speckle State Space Model}
+\newcommand{\apfifty}{AP$_{50}$}
+\newcommand{\apcoco}{AP$_{50:95}$}
+\newcommand{\pending}{\textcolor{gray}{TBD}}
+\newcommand{\figph}[1]{%
+  \fbox{\parbox[c][3.0cm][c]{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\centering\small #1}}%
+}
+
+\title{Importance-Guided De-Speckle State Space Modeling\\for Lightweight SAR Target Detection}
+
+\author{Anonymous Submission}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Synthetic aperture radar (SAR) target detection is difficult because weak target responses coexist with multiplicative speckle and strong background scattering. Visual state space models offer linear-complexity global modeling, but an unconstrained scan may also propagate clutter-dominated evidence across image tokens. We propose the \methodfull{} (\method), a lightweight SAR-aware module that modifies the input drive of a selective state space block. It attenuates local sequence residuals and uses a Perceptual Feature Importance Module (PFIM) to estimate token importance from local trend and two-dimensional variation. The estimate factorizes scan-drive control into energy-aware damping and importance-centered scaling, while separately adapting the transition step size. A numerically stable CUDA implementation performs selective scan in FP32 and replaces only one shallow Mamba-YOLO stage, yielding a 5.96M-parameter, 13.21-GFLOP T-scale detector. In one matched 300-epoch OGSOD-1.0 run per architecture, PFIM-T improves AP$_{75}$ by 0.760 and \apcoco{} by 1.300 percentage points over Mamba-YOLO-T, while changing \apfifty{} by only 0.090 points and slightly reducing model complexity. Recovered SSDD, SAR-ShipDataset, and SAR-AIRcraft experiments provide directionally compatible archive observations, but are not used to establish a cross-dataset trend because their baselines or splits are not fully controlled. Results on densely packed tanks also reveal a limitation: improved aggregate localization does not imply uniform class-wise gains. The evidence therefore supports \method{} as a compact localization-oriented SAR state controller for the reported matched setting, rather than a universally superior detector.
+\end{abstract}
+
+\section{Introduction}
+
+SAR sensors operate independently of daylight and are robust to adverse weather, making them important for maritime surveillance, airport monitoring, and emergency response. Their coherent imaging process, however, produces speckle and highly non-Gaussian background responses. Ships are often small and sparse, while aircraft are represented by disconnected scattering centers rather than stable optical contours. Metal buildings, coastlines, wakes, and airport infrastructure can therefore resemble true targets.
+
+Modern YOLO detectors provide attractive efficiency, but conventional convolution does not explicitly model long-range structure. State space models (SSMs), including Mamba, offer linear-time sequence modeling through input-dependent selective scans \citep{mamba,s4}. Mamba-YOLO adapts this idea to object detection and establishes a compact SSM-based detector \citep{mambayolo}. Yet applying a generic visual SSM directly to SAR features introduces a specific failure mode: local clutter can enter the recurrent drive and influence many later tokens along the scan order.
+
+Existing SAR-specific methods attack this problem from different directions. DiffusionDet generates boxes through iterative denoising \citep{diffusiondet}; DiffDet4SAR and MaDiNet adapt diffusion-based detection to SAR imagery \citep{diffdet4sar,madinet}. MaDiNet further introduces a large MambaSAR module and reports strong performance on SSDD, SAR-ShipDataset, and SAR-AIRcraft1.0. Its accuracy demonstrates the value of global context, while its complex diffusion pipeline motivates a complementary question: can SAR-specific state control improve a much smaller one-stage detector?
+
+We answer this question with \method. The module uses a depthwise local sequence filter to estimate a background trend and attenuate local residual disturbances before the selective scan. PFIM then combines the filtered trend with two-dimensional local standard deviation to estimate token importance. It parameterizes two factors of the scan drive, an energy-conditioned damping factor $\gamma$ and an importance-centered factor $w$, and separately adapts the transition step $\Delta$. In the reported CUDA implementation, $\gamma$ and $w$ are not distinct recurrent operator locations: their product scales the scan input. We state this explicitly to keep the paper aligned with the executable code.
+
+Our contributions are:
+\begin{itemize}
+  \item We introduce a residual-suppressed selective state space drive that attenuates local sequence disturbances before global propagation.
+  \item We design PFIM to condition a factorized scan drive and transition-step adaptation on local trend and spatial-variation cues.
+  \item We integrate one \method{} stage into a lightweight Mamba-YOLO detector, retaining 5.96M parameters and 13.21 GFLOPs.
+\item We provide a matched, single-run OGSOD-1.0 baseline comparison and separate it from protocol-mismatched archive evidence on SSDD, SAR-ShipDataset, and SAR-AIRcraft.
+\end{itemize}
+
+\section{Related Work}
+
+\subsection{SAR Target Detection}
+
+SSDD introduced an early public benchmark for SAR ship detection \citep{ssdd2017}, followed by an official standardized release and analysis \citep{ssddofficial}. SAR-ShipDataset contains 39,729 image patches from Gaofen-3 and Sentinel-1 under diverse coastal and open-sea conditions \citep{sarshipdataset}. SAR-AIRcraft1.0 contains 4,368 high-resolution images and seven fine-grained aircraft categories \citep{saraircraft}. OGSOD-1.0 was introduced as an optical-guided SAR benchmark and covers bridges, harbors, and oil tanks \citep{ogsod}. These datasets differ substantially in target density, image scale, and background complexity, making direct comparison sensitive to split and preprocessing choices.
+
+One-stage YOLO models are widely used for efficient SAR detection \citep{yolov5,yolov8}. Diffusion-based detectors instead formulate localization as box denoising. DiffDet4SAR specializes this paradigm for aircraft, while MaDiNet combines diffusion with a MambaSAR backbone to model target-background context \citep{diffdet4sar,madinet}. Our objective is not to reproduce MaDiNet's diffusion pipeline; it is to inject SAR priors directly into a compact selective scan.
+
+\subsection{Visual State Space Models}
+
+Structured SSMs provide an alternative to quadratic self-attention \citep{s4}. Mamba makes transition parameters input dependent and introduces hardware-aware selective scan kernels \citep{mamba}. Mamba-YOLO builds an object detector around visual state space blocks and shows that an SSM backbone can be trained without large-scale pretraining \citep{mambayolo}. These generic blocks do not distinguish target scattering from speckle. \method{} addresses this limitation by controlling the scan input with local residual and importance cues.
+
+\section{Method}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{figures/ig_dsssm_framework.pdf}
+  \caption{Overview of the lightweight detector and one \method{} block. Only the shallow P2/4 stage is replaced. Inside the block, residual-suppressed tokens and two-dimensional local variation form the PFIM importance field. The reported CUDA path uses $\gamma$ and $w$ as two factors of the scan drive, adapts step size $\Delta$, and executes selective scan in FP32.}
+  \label{fig:framework}
+\end{figure*}
+
+\subsection{Design Objective and Placement}
+
+A generic visual SSM treats every token as a valid state-space drive. This is undesirable for SAR imagery: an isolated speckle response can enter the scan and influence many subsequent positions, whereas aggressively suppressing all high-frequency responses can erase weak targets. We therefore separate two decisions: (i) whether a local response is inconsistent with its neighborhood, and (ii) whether that response is perceptually important. The first is handled by a learnable residual suppressor and the second by PFIM.
+
+Given a shallow feature map $\mathbf{F}\in\mathbb{R}^{B\times C\times H\times W}$, we flatten and normalize it into
+\begin{equation}
+  \mathbf{x}=\mathrm{LN}(\mathrm{Flatten}(\mathbf{F}))
+  \in\mathbb{R}^{B\times N\times C},\qquad N=HW.
+\end{equation}
+As illustrated in Figure~\ref{fig:framework}, only the P2/4 VSS stage of Mamba-YOLO is replaced by \method. P3--P5, the bidirectional feature pyramid, and the detection head remain unchanged. This placement controls noisy low-level evidence before repeated multi-scale fusion while avoiding the cost of replacing every backbone stage.
+
+\subsection{Local Residual Suppression}
+
+We estimate a channel-wise local trend over the flattened sequence using a depthwise 1-D convolution initialized as a three-tap mean filter:
+\begin{equation}
+  \bar{\mathbf{x}}=\mathrm{DWConv1D}(\mathbf{x}),\qquad
+  \mathbf{r}=\mathbf{x}-\bar{\mathbf{x}}.
+\end{equation}
+The state-space drive is de-biased by
+\begin{equation}
+  \widetilde{\mathbf{x}}=\mathbf{x}-\lambda_s\mathbf{r},
+  \label{eq:despeckle}
+\end{equation}
+where $\lambda_s$ and the depthwise kernel are learned. Equation~\ref{eq:despeckle} is deliberately residual: it attenuates locally inconsistent responses instead of performing irreversible image-level despeckling. The block-level skip path still carries the original feature, allowing optimization to recover target evidence when suppression is excessive.
+
+\subsection{Perceptual Feature Importance Module}
+
+Sequence residual magnitude alone cannot distinguish speckle from a genuine scattering center. PFIM restores the spatial layout of $\widetilde{\mathbf{x}}$ and computes the local first and second moments with a $3\times3$ average pool:
+\begin{align}
+  \boldsymbol{\mu}&=\mathrm{AvgPool}_{2D}(\widetilde{\mathbf{X}}),\\
+  \mathbf{s}&=\sqrt{\mathrm{AvgPool}_{2D}(\widetilde{\mathbf{X}}^2)-\boldsymbol{\mu}^2+\epsilon}.
+\end{align}
+After flattening $\mathbf{s}$, PFIM combines spatial variation with the sequence trend:
+\begin{equation}
+  I_t=\sigma\!\left(\mathbf{W}_2\,\mathrm{GELU}
+  \left(\mathbf{W}_1\mathrm{LN}([\bar{\mathbf{x}}_t;\mathbf{s}_t])\right)\right),
+  \quad \widehat I_t=I_t-0.5.
+  \label{eq:pfim}
+\end{equation}
+The last projection is zero-initialized, giving the non-saturated value $I_t=0.5$ at initialization. Because $\widehat I_t$ enters both scan-drive factors, PFIM contributes zero initial offset to them. The transition branch in Eq.~\ref{eq:delta}, however, uses the uncentered $I_t$ and therefore receives a small positive offset $\eta/2$. Thus the importance estimator starts non-saturated, but the complete module is not claimed to be an exact identity initialization.
+
+\subsection{Factorized Drive and Transition Control}
+
+The de-speckled tokens are projected into a scan drive and output gate,
+\begin{equation}
+  (\mathbf{u},\mathbf{z})=\mathrm{Split}(\mathbf{W}_{in}\widetilde{\mathbf{x}}),
+\end{equation}
+while $\mathbf{B}_t$ and $\mathbf{C}_t$ are generated from $\mathbf{u}_t$. PFIM acts at two executable locations: it adapts the transition step and factorizes the scan-drive scale into two differently conditioned terms. The transition term is
+\begin{equation}
+  \Delta_t=\mathrm{softplus}(\mathbf{W}_{\Delta}\mathbf{u}_t+\eta I_t).
+  \label{eq:delta}
+\end{equation}
+The first drive factor combines normalized trend energy $e_t=\lVert\bar{\mathbf{x}}_t\rVert_2/\sqrt{C}$ with centered importance:
+\begin{equation}
+  \gamma_t=g_{min}+(1-g_{min})
+  \sigma(-\alpha\sigma_n e_t+\beta\widehat I_t).
+  \label{eq:gamma}
+\end{equation}
+The floor $g_{min}=0.5$ prevents complete erasure. The second drive factor depends only on centered importance:
+\begin{equation}
+  w_t=\max\!\left(0.1,1+\tanh(\rho)\widehat I_t\right).
+  \label{eq:write}
+\end{equation}
+Thus, $\gamma_t$ introduces energy-aware damping, $w_t$ rescales target-like current evidence, and $\Delta_t$ changes the effective temporal scale of the SSM. The first two terms are independently parameterized but multiply the same scan input in the executed model; they must not be interpreted as separate recurrent update sites.
+
+\subsection{Ablation Variants}
+
+To attribute the localization change to a specific mechanism, the same block is instantiated in several control forms. \texttt{no\_pfim} disables the importance network, leaving residual suppression and the energy-conditioned damping floor in Eq.~\ref{eq:gamma}; the importance-centered factor is set to one and the transition step in Eq.~\ref{eq:delta} receives no importance offset. It is therefore a reduced-parameter control rather than a capacity-matched one. Three single-factor variants retain the full PFIM but route its centered importance $\widehat I_t$ to exactly one executable location: \texttt{gamma} feeds it only into Eq.~\ref{eq:gamma}, \texttt{write} only into Eq.~\ref{eq:write}, and \texttt{delta} only into Eq.~\ref{eq:delta}, with the remaining locations held at their neutral values. \texttt{gamma\_write} feeds $\widehat I_t$ into both drive factors but leaves the transition step unadapted. Two parameter-matched controls isolate the spatial structure of the importance field itself: \texttt{global} averages $\widehat I_t$ over all tokens, removing token-wise alignment while preserving the PFIM parameter count, and \texttt{no\_2dstd} keeps token-wise importance but computes local variation from the sequence neighborhood only, dropping the two-dimensional second-moment term. Because $\gamma_t$ and $w_t$ multiply the same scan input in the executable path, the single-factor runs diagnose the factorization of one drive rather than independent recurrent update locations.
+
+\subsection{Executable Selective Scan and Block Output}
+
+All reported experiments use the CUDA fast path. Because the kernel does not expose an external hidden-state damping input, the implemented drive is
+\begin{equation}
+  \mathbf{u}^{scan}_t=\gamma_t w_t\mathbf{u}_t,
+  \label{eq:scaninput}
+\end{equation}
+followed by
+\begin{align}
+  \mathbf{y}^{ssm}&=\mathrm{SelectiveScan}(\mathbf{u}^{scan},\Delta,\mathbf{A},\mathbf{B},\mathbf{C}),\\
+  \mathbf{y}&=\mathbf{W}_{out}\!\left[(\mathbf{y}^{ssm}+\mathbf{D}\widetilde{\mathbf{x}})
+  \odot\mathrm{SiLU}(\mathbf{z})\right].
+  \label{eq:output}
+\end{align}
+The scan operands are explicitly cast to FP32 inside an autocast-disabled region. The result is inserted into a pre-normalized residual block with learnable layer scales initialized to $10^{-2}$:
+\begin{align}
+  \mathbf{x}'&=\mathbf{x}+\ell_1\odot\method(\mathrm{LN}(\mathbf{x})),\\
+  \mathbf{x}^{out}&=\mathbf{x}'+\ell_2\odot\mathrm{MLP}(\mathrm{LN}(\mathbf{x}')).
+\end{align}
+Depthwise filtering, local pooling, PFIM, and selective scan are all linear in token count $N$. Replacing only one shallow stage yields a complete detector with 5.9648M parameters and 13.2079 GFLOPs at 640 input.
+
+\begin{algorithm}[t]
+\caption{Implemented \method{} Forward Pass}
+\begin{algorithmic}[1]
+\REQUIRE Tokens $\mathbf{x}$ and spatial shape $(H,W)$
+\STATE $\bar{\mathbf{x}}\leftarrow\mathrm{DWConv1D}(\mathbf{x})$
+\STATE $\widetilde{\mathbf{x}}\leftarrow\mathbf{x}-\lambda_s(\mathbf{x}-\bar{\mathbf{x}})$
+\STATE $\mathbf{I}\leftarrow\mathrm{PFIM}(\widetilde{\mathbf{x}},\bar{\mathbf{x}},H,W)$
+\STATE Project $\widetilde{\mathbf{x}}$ to $\mathbf{u},\mathbf{z},\Delta,\mathbf{B},\mathbf{C}$
+\STATE Compute $\gamma$ by Eq.~\ref{eq:gamma} and $w$ by Eq.~\ref{eq:write}
+\STATE $\mathbf{u}^{scan}\leftarrow\gamma\odot w\odot\mathbf{u}$
+\STATE Run FP32 selective scan and residual output in Eq.~\ref{eq:output}
+\RETURN Output tokens $\mathbf{y}$
+\end{algorithmic}
+\end{algorithm}
+
+\section{Experiments}
+
+\subsection{Datasets and Protocols}
+
+\paragraph{SSDD.}
+The primary archive uses SSDD ship detection experiments at 640 input resolution. The strongest recovered ex27 checkpoint is selected by the training validator's composite fitness, rather than by a post-hoc TEST choice. Because these runs were recovered from multiple servers, we retain their original names and distinguish archive evidence from newly controlled experiments.
+
+\paragraph{SAR-ShipDataset.}
+The revised dataset contains 39,729 images and 47,416 instances \citep{sarshipdataset,madinet}. Our local seeded split contains 31,783 training, 3,972 validation, and 3,974 test images. The exact sample list used by MaDiNet is not public, so cross-paper numbers are contextual.
+
+\paragraph{SAR-AIRcraft.}
+The original dataset has 4,368 images, 16,463 instances, and image sizes from 800 to 1500 pixels \citep{saraircraft,madinet}. Our available Hugging Face copy is a 512$\times$512 overlapping-patch derivative with 13,976/1,923/2,989 train/validation/test patches. Original-image IDs do not overlap across splits, but duplicate object evidence can appear in neighboring patches. We therefore report both patch validation and patch test results and do not claim direct equivalence with MaDiNet's 90.5 \apfifty{}.
+
+\paragraph{OGSOD-1.0.}
+The original benchmark was introduced for optical-guided SAR detection and reports 14,665 paired optical--SAR training images plus 3,666 SAR test images \citep{ogsod}. The recovered archive used here contains 18,331 SAR images in supplied train/validation/test JSON files, converted into 14,664/1,834/1,833 YOLO samples. The converted test split has 4,769 valid boxes from three classes: 3,165 bridges, 399 harbors, and 1,205 tanks. We report this as a local three-way protocol rather than the original published split.
+
+\subsection{Metrics and Training Details}
+
+We report precision, recall, \apfifty{}, and \apcoco{}. Literature values taken from MaDiNet use its reported confidence-0.5 protocol. Our Ultralytics evaluations compute AP by sweeping confidence thresholds; displayed precision and recall correspond to the validator's selected operating point. These definitions should not be conflated. For the matched OGSOD runs, training saves \texttt{best.pt} using validation fitness $0.1\,\mathrm{AP}_{50}+0.9\,\mathrm{AP}_{50:95}$; each selected checkpoint is then evaluated once on the held-out local TEST split in FP32. Thus, the TEST values in Table~\ref{tab:ogsod} are not used for checkpoint selection, but one run per architecture is still insufficient to estimate seed variance.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Training settings for current representative runs.}
+\label{tab:training}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrl}
+\toprule
+Dataset & Size & Epochs & Batch & GPUs & Optimizer \\
+\midrule
+SSDD ex27 & 640 & 300 & 32 & 1 & SGD \\
+SAR-Ship, T & 512 & 300 & 384 & 2 H200 & AdamW \\
+SAR-Air, T & 1024 & 300 & 48 & 2 H100 & AdamW \\
+OGSOD, T & 1024 & 300 & 64 & 2 H200 & AdamW \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+The completed SAR-Aircraft T run uses FP32, cosine scheduling, initial learning rate $3\times10^{-4}$, weight decay $5\times10^{-4}$, and no module-only warmup. The main SAR-Ship T run is evaluated at 512. Full commands and run paths are preserved in the accompanying experiment reports.
+
+\subsection{Complexity Reporting Convention}
+
+Tables~\ref{tab:ssdd-large}--\ref{tab:air-large} pair MaDiNet's published detection metrics with complexity whenever it can be identified. Values marked $\dagger$ are server measurements at 640 input, batch 1, and FP32; Detectron2 rows use the official R50-FPN configurations and the same multiply-add convention as the Ultralytics rows. Values marked $\star$ are author-reported at their original, non-normalized protocol. MaDiNet did not release a complete detector configuration; the $\geq$ values marked $\ddagger$ cover the measured official MambaSAR res4+res5 core alone and are conservative lower bounds. NR means that numerical complexity was not reported and no public implementation permits measurement; a dash in an accuracy column means that metric was not reported. Unsupported profiler operations make the measured FLOPs conservative architecture references. OGSOD uses only locally profiled, matched-capacity rows and is reported separately.
+
+\subsection{SSDD: Accuracy Near the Strongest Reference}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\caption{Selected SSDD results. Literature AP$_{50}$ follows MaDiNet; local AP uses Ultralytics. Complexity uses the 640-input reference.}
+\label{tab:ssdd-large}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrl}
+\toprule
+Method & AP$_{50}$ & AP$_{50:95}$ & Params(M) & GFLOPs & Evidence \\
+\midrule
+Faster R-CNN & 89.7 & -- & 41.295$^\dagger$ & 150.343$^\dagger$ & Literature + profile \\
+DiffDet4SAR & 96.9 & -- & 111.141$^\dagger$ & 204.787$^\dagger$ & Literature + profile \\
+YOLOv5n & 98.0 & -- & 2.655$^\dagger$ & 7.840$^\dagger$ & Literature + profile \\
+YOLOv8n & 98.1 & -- & 3.157$^\dagger$ & 8.858$^\dagger$ & Literature + profile \\
+YOLOv5s & 98.3 & -- & 9.153$^\dagger$ & 24.213$^\dagger$ & Literature + profile \\
+MaDiNet & \textbf{99.0} & -- & $\geq$223.265$^\ddagger$ & $\geq$345.283$^\ddagger$ & Literature + core bound \\
+\midrule
+Mamba-YOLO-T & 98.485 & 72.852 & 5.986$^\dagger$ & 13.612$^\dagger$ & Local archive \\
+\rowcolor{gray!12}
+\method{} / PFIM-T & \textbf{98.704} & \textbf{74.022} & \textbf{5.965}$^\dagger$ & \textbf{13.208}$^\dagger$ & Local archive \\
+\bottomrule
+\end{tabular}}
+\caption*{\footnotesize Metrics are percentages. Cross-paper AP remains contextual because splits and evaluators differ.}
+\end{table}
+
+Our AP$_{50}$ is only 0.296 points below MaDiNet while the complete detector is 5.965M parameters and 13.208 GFLOPs. Even MaDiNet's measured core alone is at least 37.4 times larger and 26.1 times more compute-intensive. Against the archived Mamba-YOLO-T reference, \method{} adds no model cost, raises AP$_{50}$ by 0.219 points, and raises AP$_{50:95}$ by 1.170 points. Because the two rows originate from recovered code states, this trend is consistent with improved localization but is not used as the primary causal evidence.
+
+\subsection{SAR-ShipDataset: Large-Scale Ship Transfer}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\caption{Selected SAR-ShipDataset results. Literature and local rows use different unpublished sample lists and are contextual.}
+\label{tab:ship-large}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrl}
+\toprule
+Method & AP$_{50}$ & AP$_{50:95}$ & Params(M) & GFLOPs & Evidence \\
+\midrule
+SAR-ShipNet & 90.2 & -- & NR & NR & Literature \\
+YOLOv5n & 89.3 & -- & 2.655$^\dagger$ & 7.840$^\dagger$ & Literature + profile \\
+DiffusionDet & 95.0 & -- & 110.552$^\dagger$ & 204.263$^\dagger$ & Literature + profile \\
+DiffDet4SAR & 95.1 & -- & 111.141$^\dagger$ & 204.787$^\dagger$ & Literature + profile \\
+MaDiNet & \textbf{97.5} & -- & $\geq$223.265$^\ddagger$ & $\geq$345.283$^\ddagger$ & Literature + core bound \\
+\midrule
+Mamba-YOLO-T & 94.616 & 49.568 & 5.986$^\dagger$ & 13.612$^\dagger$ & Local archive$^*$ \\
+\rowcolor{gray!12}
+\method{} / PFIM-T & 94.844 & \textbf{57.818} & \textbf{5.965}$^\dagger$ & \textbf{13.208}$^\dagger$ & Local test \\
+\method{} / PFIM-S & \textbf{95.609} & 53.177 & 21.739 & 48.0 & Local test \\
+\bottomrule
+\end{tabular}}
+\caption*{\footnotesize $^*$The archived T baseline changed global batch from 256 to 128 during training. It is included for transparency, not as a clean controlled ablation.}
+\end{table}
+
+PFIM-T remains the paper's lightweight operating point. It is 2.656 AP$_{50}$ points below MaDiNet under non-identical splits but requires only a small fraction of the measured MaDiNet core complexity. PFIM-S narrows the AP$_{50}$ gap to 1.891 points at 21.739M parameters and 48.0 GFLOPs, providing a capacity reference rather than a controlled scaling ablation. The unusually large T-scale AP$_{50:95}$ gain over the archived baseline is promising, but the mid-run batch change prevents a causal architecture claim until a matched baseline is completed.
+
+\subsection{SAR-AIRcraft: Fine-Grained Patch Evaluation}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\caption{Selected SAR-AIRcraft AP$_{50}$ results. Literature rows use original images; local rows use overlapping 512-patch validation.}
+\label{tab:air-large}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrl}
+\toprule
+Method & AP$_{50}$ & AP$_{50:95}$ & Params(M) & GFLOPs & Evidence \\
+\midrule
+MLSDNet & 82.7 & -- & 0.928$^\star$ & 1.420$^\star$ & Literature \\
+YOLOv5n & 88.2 & -- & 2.655$^\dagger$ & 7.840$^\dagger$ & Literature + profile \\
+YOLOv8n & 88.2 & -- & 3.157$^\dagger$ & 8.858$^\dagger$ & Literature + profile \\
+DiffDet4SAR & 88.4 & -- & 111.151$^\dagger$ & 204.796$^\dagger$ & Literature + profile \\
+MaDiNet & \textbf{90.5} & -- & $\geq$223.265$^\ddagger$ & $\geq$345.283$^\ddagger$ & Literature + core bound \\
+\midrule
+Mamba-YOLO-T & 87.751 & 69.904 & 5.986$^\dagger$ & 13.612$^\dagger$ & Local patch val$^*$ \\
+\rowcolor{gray!12}
+\method{} / PFIM-T & 88.825 & 70.513 & \textbf{5.965}$^\dagger$ & \textbf{13.208}$^\dagger$ & Local patch val$^*$ \\
+\method{} / PFIM-S & \textbf{89.304} & \textbf{72.025} & 21.742 & 48.0 & Local patch val \\
+\bottomrule
+\end{tabular}}
+\caption*{\footnotesize $^*$The local baseline used a different optimizer, batch, and incomplete schedule; it is not a controlled ablation.}
+\end{table}
+
+On patch validation, PFIM-T improves the local Mamba reference by 1.074 AP$_{50}$ and 0.609 AP$_{50:95}$ points without increasing complexity, although the optimization mismatch prevents causal attribution. PFIM-S reaches 89.304 AP$_{50}$ and 72.025 AP$_{50:95}$, improving the completed T model by 0.479 and 1.512 points at approximately 3.64 times the complexity. The T-scale AP$_{50}$ is 1.675 points below MaDiNet's original-image result, but this gap is not a leaderboard comparison because the data representations differ. Its patch test P/R/AP$_{50}$/AP$_{50:95}$ is 79.276/63.733/70.822/55.552. The 18.00-point validation-to-test AP$_{50}$ gap is dominated by Boeing737, whose AP$_{50}$ falls from 78.10 to 39.56.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{figures/sar_aircraft_per_class_ap50.pdf}
+  \caption{Per-class AP50 on the SAR-Aircraft patch validation and test splits. The Boeing737 shift dominates the aggregate degradation.}
+  \label{fig:airclass}
+\end{figure}
+
+\subsection{OGSOD-1.0: Matched Localization Evidence}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.7pt}
+\caption{Matched OGSOD-1.0 TEST results. Both models use the same 300-epoch, 1024-input, batch-64 AdamW protocol. Metrics are percentages; complexity uses the 640-input reference.}
+\label{tab:ogsod}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+Model & P & R & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ & Params & GFLOPs \\
+\midrule
+Mamba-YOLO-T & \textbf{80.143} & 71.155 & 77.173 & 40.211 & 42.302 & 5.985 & 13.6 \\
+\rowcolor{gray!12}
+\method{} / PFIM-T & 79.714 & \textbf{71.692} & \textbf{77.263} & \textbf{40.971} & \textbf{43.602} & \textbf{5.964} & \textbf{13.2} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+In this matched single-run comparison, PFIM-T changes AP$_{50}$ by only +0.090 points but improves AP$_{75}$ by 0.760 and AP$_{50:95}$ by 1.300 points. This is the cleanest available observation for the paper's central hypothesis: the modification may improve localization under stricter overlap criteria rather than uniformly raising confidence or precision. It is not, by itself, evidence of a stable improvement across random seeds.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.1pt}
+\caption{OGSOD-1.0 per-class TEST localization. B and P denote the Mamba-YOLO-T baseline and PFIM-T, respectively.}
+\label{tab:ogsod-class}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Baseline} & \multicolumn{3}{c}{PFIM-T} \\
+Class & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+Bridge & 81.135 & 26.050 & 36.266 & \textbf{82.272} & \textbf{28.775} & \textbf{38.272} \\
+Harbor & 98.128 & 88.213 & 73.529 & \textbf{99.315} & \textbf{88.665} & \textbf{75.388} \\
+Tank & \textbf{52.257} & \textbf{6.370} & 17.111 & 50.203 & 5.474 & \textbf{17.147} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+The aggregate gain comes from bridges and harbors. Tank AP$_{50}$ and AP$_{75}$ decrease by 2.055 and 0.896 points. This class contains 1,205 instances in only 71 positive test images, approximately 17 targets per positive image. The result is a failure mode for the current matched run, but it does not establish its mechanism: density, repeated appearance, object scale, and NMS difficulty are confounded here. Nor does it establish a broad small-target conclusion. Density-, scale-, and nearest-neighbor-stratified evaluations are required before attributing the regression to shared local smoothing or importance modulation.
+
+\subsection{Controlled Ablation and Diagnostics (Results Pending)}
+
+The single-run comparison above is a preliminary observation, not a variance estimate. To isolate which component produces the localization gain, we freeze the OGSOD local split, 1024 input, 300 epochs, batch 64, FP32 AdamW, cosine schedule, and augmentation, then compare Mamba-YOLO-T against three controls: residual suppression without PFIM (\texttt{no\_pfim}), a parameter-matched PFIM that averages importance over the whole image instead of per token (\texttt{global}), and the full token-wise PFIM model. Each architecture is trained with seeds 0/1/2, and validation-selected \texttt{best.pt} is evaluated once on TEST in FP32. Table~\ref{tab:ogsod-matrix} will report per-seed means and standard deviations together with paired deltas against the baseline; this is the only result that can support a stability claim.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Planned three-seed OGSOD-1.0 primary matrix. Values are mean$\pm$std over seeds 0/1/2, and deltas are paired against Mamba-YOLO-T.}
+\label{tab:ogsod-matrix}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+Model & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ & $\Delta$AP$_{50}$ & $\Delta$AP$_{75}$ & $\Delta$AP$_{50:95}$ \\
+\midrule
+Mamba-YOLO-T & \pending & \pending & \pending & -- & -- & -- \\
+no-PFIM & \pending & \pending & \pending & \pending & \pending & \pending \\
+global-PFIM & \pending & \pending & \pending & \pending & \pending & \pending \\
+full PFIM & \pending & \pending & \pending & \pending & \pending & \pending \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+A second diagnostic set keeps seed 0 and ablates the factorized scan drive and transition path one branch at a time. Because the CUDA kernel exposes one scan-input location, \texttt{gamma} and \texttt{write} are two differently conditioned factors of the same drive, while \texttt{delta} is the separate transition step. The variants in Table~\ref{tab:ogsod-branch} are therefore reported as branch diagnostics rather than as independent recurrent operator sites; \texttt{no\_2dstd} additionally removes the two-dimensional spatial variation term while preserving parameter count.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Planned seed-0 branch diagnostics on OGSOD-1.0 TEST.}
+\label{tab:ogsod-branch}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lccc}
+\toprule
+Variant & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+gamma & \pending & \pending & \pending \\
+write & \pending & \pending & \pending \\
+delta & \pending & \pending & \pending \\
+gamma + write & \pending & \pending & \pending \\
+no-2D-std & \pending & \pending & \pending \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+After the seed-0 primary checkpoints exist, we will partition the held-out TEST set by per-image instance count, median normalized box area, and median nearest-neighbor center distance, and report AP$_{50}$/AP$_{75}$/AP$_{50:95}$ within each stratum. This separates density, scale, and spacing confounds that are presently entangled in the tank result. Fixed-checkpoint importance maps for the full model will then be selected only from a thresholded per-image audit, so the visual evidence is chosen by a reproducible rule rather than by post-hoc inspection. These analyses do not select the model; they diagnose an already frozen checkpoint.
+
+\begin{figure}[t]
+  \centering
+  \figph{Placeholder: density / scale / nearest-neighbor stratified AP on OGSOD TEST (pending seed-0 checkpoints).}
+  \caption{Planned stratified TEST analysis. The three panels separate per-image instance density, normalized box area, and nearest-neighbor spacing; each reports overall and per-class AP$_{50}$/AP$_{75}$/AP$_{50:95}$.}
+  \label{fig:strata}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \figph{Placeholder: PFIM importance overlays for rule-selected bridge/harbor gains and tank regressions.}
+  \caption{Planned PFIM importance visualization. Candidates are selected by a fixed IoU-0.75, confidence-0.25, NMS-0.7 per-image audit before any qualitative example is shown.}
+  \label{fig:importance}
+\end{figure}
+
+\subsection{Accuracy--Efficiency Trade-off}
+
+Across the four datasets, the intended operating point is localization quality at low complexity rather than universal AP$_{50}$ superiority. The matched OGSOD comparison supplies the only direct architecture comparison and shows the clearest AP$_{75}$/AP$_{50:95}$ observation. The archive rows add non-causal context: PFIM-T is within 0.30 AP$_{50}$ points of MaDiNet on SSDD and within 1.68 points on the non-aligned aircraft comparison, while the full detector is much smaller than the measured MaDiNet core alone. It is also 34.8\% smaller and 45.5\% lower-FLOP than the locally profiled YOLOv5s configuration. These comparisons characterize an efficiency context; they do not demonstrate cross-dataset architecture gains.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.4pt}
+\caption{Evidence hierarchy for T-scale PFIM-minus-baseline deltas. Positive values denote PFIM gains in percentage points.}
+\label{tab:evidence}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llrrl}
+\toprule
+Dataset & Evaluation & $\Delta$AP$_{50}$ & $\Delta$AP$_{50:95}$ & Status \\
+\midrule
+OGSOD-1.0 & Test & +0.090 & +1.300 & Matched, single run \\
+SSDD & Archive val & +0.219 & +1.170 & Recovered code states \\
+SAR-Ship & Local test & +0.228 & +8.250 & Baseline batch changed \\
+SAR-Air & Patch val & +1.074 & +0.609 & Optimization mismatch \\
+SAR-Air & Patch test & +0.420 & +1.039 & Optimization mismatch \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\FloatBarrier
+\section{Discussion}
+
+The strongest controlled single-run evidence is OGSOD-1.0, where the matched T-scale comparison improves AP$_{75}$ and AP$_{50:95}$ without increasing model size. Table~\ref{tab:evidence} deliberately separates this observation from archive deltas. SSDD and SAR-ShipDataset broaden the application coverage, while SAR-Aircraft exposes a severe distribution shift, but none of these archives establish an additional controlled architecture comparison. The T model becomes precision-oriented on aircraft patch validation, obtaining 90.96 precision and 79.63 recall. This behavior is compatible with suppression of ambiguous responses, but controlled threshold and calibration studies are needed before attributing the trade-off to PFIM.
+
+The OGSOD tank result narrows the claim further. Dense, repetitive scattering patterns may require instance-separating cues that are not represented by one shared local importance field. Density-stratified evaluation and importance-map visualization are necessary to determine whether the degradation comes from residual smoothing, shared modulation, or the detector head. We therefore report the observation as a limitation rather than a resolved mechanism.
+
+The comparison with MaDiNet highlights different design goals. MaDiNet obtains higher AP50 through a diffusion detector and a large MambaSAR backbone. \method{} uses one shallow SAR-aware stage inside a 5.96M-parameter one-stage detector. The current evidence therefore supports an accuracy-efficiency claim, not a universal SOTA claim.
+
+\section{Limitations and Reproducibility Status}
+
+A matched OGSOD comparison now provides one controlled architecture reference, but four limitations remain. First, it is a single run per model and does not establish variance across seeds. Second, PFIM has not yet been decomposed into gamma-only, write-only, delta-only, no-PFIM, and parameter-matched spatially unstructured controls. These diagnostics are needed to isolate the factorized drive parameterization from transition adaptation; gamma and write should not be treated as distinct operator locations. Third, several SSDD rows come from recovered multi-server experiments; the SAR-Ship baseline changed global batch from 256 to 128; and the available SAR-Aircraft baseline used a different optimizer, batch, and training duration. These remain archive comparisons. Fourth, MaDiNet does not publish exact split files for all three datasets, our aircraft data are overlapping patches, and the recovered OGSOD split differs from the original published protocol.
+
+The controlled matrix needed to close the first two limitations is fully instrumented but not yet executed. A single runner freezes the OGSOD data fingerprint and code/config hashes, records the training protocol, and evaluates each validation-selected \texttt{best.pt} once on TEST in FP32; an aggregator enforces evidence fields and emits per-seed means, standard deviations, and paired deltas, with a strict completion check that refuses to emit a publication table from incomplete seeds. The remaining step is server-side: run the baseline, no-PFIM, global-PFIM, and full PFIM models under the same initialization procedure and assigned seed, optimizer, batch, augmentation, and 300-epoch schedule for seeds 0/1/2, followed by the seed-0 branch diagnostics and density/scale/spacing analysis. All commands, run paths, data fingerprints, code hashes, and per-class metrics used in this draft are preserved in the project reports.
+
+\section{Conclusion}
+
+We presented \method, an importance-guided de-speckle state space module for lightweight SAR target detection. It attenuates local sequence residuals, estimates importance from local spatial statistics, and conditions a factorized selective-scan drive together with the transition step. Integrated into Mamba-YOLO-T, the model remains compact at 5.96M parameters and 13.21 GFLOPs. One matched OGSOD-1.0 run per architecture shows a 1.300-point AP$_{50:95}$ gain with negligible AP$_{50}$ change; three archive datasets provide protocol-limited context rather than a replicated cross-dataset claim. The dense-tank result also shows that the benefit is not uniform across object layouts. The defensible conclusion is therefore specific: \method{} is a lightweight candidate for localization-sensitive SAR detection whose causal benefit remains pending multi-seed, parameter-matched, and branch-level validation.
+
+\bibliographystyle{plainnat}
+\bibliography{aaai_ds_ssm_refs}
+
+\end{document}

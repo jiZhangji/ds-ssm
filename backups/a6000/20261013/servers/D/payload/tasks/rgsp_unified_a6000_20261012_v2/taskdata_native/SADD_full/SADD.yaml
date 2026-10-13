@@ -1,0 +1,8 @@
+# Full SADD image-level protocol; not an official or scene-independent split.
+path: "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata_native/SADD_full"
+train: images/train
+val: images/val
+test: images/test
+nc: 1
+names:
+  0: aircraft

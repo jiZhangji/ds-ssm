@@ -1,0 +1,43 @@
+{
+  "experiment": "ssdd_scratch_p3_sd16_b32_v2_ssdd_baseline",
+  "placement": "baseline",
+  "variant": "baseline",
+  "state_dim": 0,
+  "seed": 0,
+  "subset": "SSDD",
+  "weights": "/home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v2_ssdd_baseline/weights/best.pt",
+  "weights_sha256": "a577bb0ae5204d651e23616a679ff4b3d1b7bbeb8735ed76c19076d01e6cdb06",
+  "data": "/home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v2-manifest/datasets/SSDD.yaml",
+  "data_yaml_sha256": "ab522afa1c6d978f2f9490389d6f14111bc43404700d2f7b2637b301eea77338",
+  "split": "test",
+  "imgsz": 640,
+  "batch": 32,
+  "conf": 0.001,
+  "iou": 0.6,
+  "precision_mode": "fp32",
+  "result_dir": "/home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/evaluations/ssdd_scratch_p3_sd16_b32_v2_ssdd_baseline_test",
+  "speed_ms": {
+    "preprocess": 0.16062115800791774,
+    "inference": 7.153123617172241,
+    "loss": 0.00023225258136617727,
+    "postprocess": 0.30977664322688664
+  },
+  "overall": {
+    "precision": 0.8853948585859324,
+    "recall": 0.8206696921609273,
+    "ap50": 0.886294999696307,
+    "ap75": 0.42497029089470195,
+    "ap50_95": 0.4568281721539697
+  },
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "ship",
+      "precision": 0.8853948585859324,
+      "recall": 0.8206696921609273,
+      "ap50": 0.886294999696307,
+      "ap75": 0.42497029089470195,
+      "ap50_95": 0.4568281721539697
+    }
+  ]
+}

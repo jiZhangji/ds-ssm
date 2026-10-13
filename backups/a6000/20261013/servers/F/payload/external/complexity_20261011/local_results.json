@@ -1,0 +1,100 @@
+[
+  {
+    "method": "YOLOv3",
+    "params": 103693235,
+    "flops_g": 282.9804032,
+    "config": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code/ultralytics/cfg/models/v3/yolov3.yaml",
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "scan_counted": false
+  },
+  {
+    "method": "YOLOv5n",
+    "params": 2508659,
+    "flops_g": 7.176704,
+    "config": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code/ultralytics/cfg/models/v5/yolov5.yaml",
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "scan_counted": false
+  },
+  {
+    "method": "YOLOv5s",
+    "params": 9122579,
+    "flops_g": 24.0430592,
+    "config": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code/ultralytics/cfg/models/v5/yolov5.yaml",
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "scan_counted": false
+  },
+  {
+    "method": "YOLOv8n",
+    "params": 3011043,
+    "flops_g": 8.1941504,
+    "config": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code/ultralytics/cfg/models/v8/yolov8.yaml",
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "scan_counted": false
+  },
+  {
+    "method": "Original-clean",
+    "params": 5985547,
+    "flops_g": 13.6115648,
+    "config": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed0/manifest/configs/original.yaml",
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "scan_counted": false
+  },
+  {
+    "method": "RGSP-clean",
+    "params": 5920441,
+    "flops_g": 13.1481792,
+    "config": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed0/manifest/configs/full.yaml",
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "scan_counted": false
+  },
+  {
+    "method": "ex27",
+    "params": 5964757,
+    "flops_g": 13.2078528,
+    "config": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM_Backbone-SSDD-ex7.yaml",
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "scan_counted": false
+  }
+]

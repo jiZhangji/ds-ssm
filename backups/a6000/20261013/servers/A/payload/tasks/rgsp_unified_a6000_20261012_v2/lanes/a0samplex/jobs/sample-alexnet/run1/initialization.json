@@ -1,0 +1,34 @@
+{
+  "control": {
+    "auxiliary_heads": null,
+    "builder": "torchvision.models.alexnet",
+    "initialization": "scratch",
+    "input_channels": 3,
+    "input_size": 224,
+    "literature_result_reproduction_claimed": false,
+    "method_id": "alexnet",
+    "num_classes": 10,
+    "output": "single_logits_tensor",
+    "pretrained_weights": null,
+    "torchvision_version": "0.14.1+cu117"
+  },
+  "state_sha256": "b24bad87c42565b99dee6958cef0e1ed92d03d31d80089b0bb2db55cf70a7832",
+  "tensors": {
+    "classifier.1.bias": "09b23f124129018b93f164ddde8857ca0c48da8bbd87f7ae7a124f5f1b06326f",
+    "classifier.1.weight": "e48d2ff392727692521b843592fe00ab91511853ffc443d1c0a4c718c37ea92b",
+    "classifier.4.bias": "98389b743d53b94a19ffb1cbfbe1c6d2285ccbd5c5e3628be92dce229232f5b7",
+    "classifier.4.weight": "4776cd7d570883fd04e5ea006ced7346764c49de7ca28fed7b79f4f65836aee4",
+    "classifier.6.bias": "992b32435f63209877c66c53ebaf53e6cd7f5e52e12a674311088a04dd247b2c",
+    "classifier.6.weight": "a1fffbbe8f7cb2bf37156f7f3de0f4fe809e61da44a4b74883e8b1adb1019eb5",
+    "features.0.bias": "ee16fe304cdbf0d79088ec90b5439ebf07f19e604ff1b2158901a081ec7b1b78",
+    "features.0.weight": "b595fd67c8124447df7e86d971c261fbeb8d4deeca243e0bd74c488542e039cd",
+    "features.10.bias": "d802e7dd5589aa6235992f083b0d75e47d01f04f30356dd42dac41768ff03d13",
+    "features.10.weight": "cf4138a502d3753d2e124f04c84018c90562014666e784f066766656cb402ba8",
+    "features.3.bias": "69ad9626aa17a16238588b6e717b318c3a6d32a754df7e921111a31f52ce887c",
+    "features.3.weight": "5a384c4e78e1da6700203638481410adaca6ecd24916eef5c954273191a44edc",
+    "features.6.bias": "916fccd6c8b993475194e6689ed0bdbfce7546601d9c872548dddf57df846733",
+    "features.6.weight": "0e3dc0861eac649e366745eb1de548fe35d0d227bf33177400c8a48c68330a14",
+    "features.8.bias": "bb0c81ddfdbf9017f00058c82f5b3ee4a8ecccbf7c3ec4f5aca674b5bbccc2a7",
+    "features.8.weight": "f06e2084f1d8a15246abf60352107e952b169ecac58429fdba74a127da4ddff1"
+  }
+}

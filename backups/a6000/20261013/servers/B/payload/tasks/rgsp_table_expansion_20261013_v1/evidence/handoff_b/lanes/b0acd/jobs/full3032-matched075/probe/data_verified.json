@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "test": 1792,
+    "train": 1000,
+    "val": 240
+  },
+  "dataset": "SAR-ACD-full3032",
+  "full_source_files_rehashed": 3032,
+  "logical_manifest_sha256": "3ad8605dfc38a8e38c7384c50e8a19949ad31e2d516786fa37ec685993638bda",
+  "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/taskdata/acd_pair_v1/full3032/manifest.json",
+  "manifest_sha256": "917e638f6bb9e8111e7d83d1b8fcc45dade396e1ac66c40645415e349c1dfc49",
+  "paired_holdout_sha256": "51da1dae01bcf11288d85d57514d347867581a9ee7959023a46eda94e0930400",
+  "selected_images_redecoded": 3032,
+  "source_modified": false
+}

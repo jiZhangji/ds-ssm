@@ -1,0 +1,36 @@
+{
+  "command": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/sample_amplitude_20261013_v1/queue_after.py",
+    "--foreground",
+    "--predecessor-root",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1",
+    "--predecessor-lane",
+    "b0acd",
+    "--lane",
+    "b0amplitude",
+    "--gpu-uuid",
+    "GPU-09b018e1-7140-296a-73d4-9e010ee209a2",
+    "--methods",
+    "Full",
+    "Original",
+    "Matched075"
+  ],
+  "created_at": 1791864731.7741942,
+  "gpu_uuid": "GPU-09b018e1-7140-296a-73d4-9e010ee209a2",
+  "lane": "b0amplitude",
+  "launched_at": 1791864731.8004882,
+  "log_path": "/home/powerleader/ig-ds-ssm/tasks/sample_amplitude_20261013_v1/dispatch/b0amplitude.gate.log",
+  "methods": [
+    "Full",
+    "Original",
+    "Matched075"
+  ],
+  "pid": 405899,
+  "predecessor_lane": "b0acd",
+  "predecessor_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1",
+  "root": "/home/powerleader/ig-ds-ssm/tasks/sample_amplitude_20261013_v1",
+  "start_ticks": "42170080"
+}

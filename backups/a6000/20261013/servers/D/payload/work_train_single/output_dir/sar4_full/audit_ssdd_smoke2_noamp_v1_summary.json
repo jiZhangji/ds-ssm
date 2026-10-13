@@ -1,0 +1,19 @@
+{
+  "experiment_id": "audit_ssdd_smoke2_noamp_v1",
+  "records": [
+    {
+      "dataset": "SSDD",
+      "experiment": "audit_ssdd_smoke2_noamp_v1_ssdd_baseline",
+      "variant": "baseline",
+      "placement": "baseline",
+      "state_dim": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "ap50": 0.0,
+      "ap75": 0.0,
+      "ap50_95": 0.0,
+      "inference_ms": 7.7790659049461635,
+      "weights": "/home/powerleader/ig-ds-ssm/work_train_single/output_dir/sar4_full/audit_ssdd_smoke2_noamp_v1_ssdd_baseline/weights/best.pt"
+    }
+  ]
+}

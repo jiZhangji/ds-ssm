@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "test": 1,
+    "train": 1,
+    "val": 1
+  },
+  "dataset_identity": "SAR-ShipDataset",
+  "manifest_sha256": "6a9742c9d6ed0012bbc89ffcb0dd792be09f461e5aa1628b042babf03f8c295e",
+  "names": [
+    "ship"
+  ],
+  "nc": 1,
+  "status": "verified"
+}

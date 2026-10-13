@@ -1,0 +1,19 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+FUSAR-Map ours epoch=1/160 loss=2.15109 score=0.18665
+FUSAR-Map ours epoch=2/160 loss=2.07079 score=0.16088
+FUSAR-Map ours epoch=3/160 loss=1.99031 score=0.18166
+FUSAR-Map ours epoch=4/160 loss=1.92340 score=0.18578
+FUSAR-Map ours epoch=5/160 loss=1.89946 score=0.13877
+FUSAR-Map ours epoch=6/160 loss=1.94519 score=0.18180
+FUSAR-Map ours epoch=7/160 loss=1.92695 score=0.14414
+FUSAR-Map ours epoch=8/160 loss=1.86969 score=0.18448
+FUSAR-Map ours epoch=9/160 loss=1.86092 score=0.16579
+FUSAR-Map ours epoch=10/160 loss=1.88723 score=0.18146
+FUSAR-Map ours epoch=11/160 loss=1.82550 score=0.12922
+FUSAR-Map ours epoch=12/160 loss=1.87136 score=0.16049
+FUSAR-Map ours epoch=13/160 loss=1.81537 score=0.18292
+FUSAR-Map ours epoch=14/160 loss=1.82821 score=0.15336
+FUSAR-Map ours epoch=15/160 loss=1.84025 score=0.12601
+FUSAR-Map ours epoch=16/160 loss=1.79287 score=0.13110

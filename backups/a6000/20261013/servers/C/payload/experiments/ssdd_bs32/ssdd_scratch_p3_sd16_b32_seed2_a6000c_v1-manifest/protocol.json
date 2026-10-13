@@ -1,0 +1,35 @@
+{
+  "amp": false,
+  "batch": 32,
+  "code": {
+    "mbyolo_train_sarair.py": "a09dbbe373d321eb2e776daf6dc18f5b9c0c15b603ba706285d74ddc335051be",
+    "tools/evaluate_sarmix.py": "b618852403eeda8737cadd847ac5193848325141eb6666dac10fa8185d67c50d",
+    "tools/run_sar4_full_suite.py": "9720ab7d48ee3ae6cc47e6515b7bad3fe32131e1b9e0f8bd56748db51d762e86",
+    "ultralytics/nn/modules/mamba_yolo.py": "6abc3a657f7925c076e84f890500e56d4fe00106f4e02edbfea4cf7dea93819d"
+  },
+  "configs": {
+    "SSDD:baseline": "74dcda6fcbd55daea5dbb87026787d41886d0104c58b2bf5c805dca0077d5f44",
+    "SSDD:full_p3": "ec287ccce00023599bda0a916fcad804e20e07a12e0b4b5aec57d2bfbc4ebc79"
+  },
+  "datasets": {
+    "SSDD": {
+      "path": "/home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed2_a6000c_v1-manifest/datasets/SSDD.yaml",
+      "sha256": "859eb1b137a1613af02b150b6942f8c0964fd79057bb187c8836ba7195f48100"
+    }
+  },
+  "epochs": 150,
+  "eval_batch": 32,
+  "experiment_id": "ssdd_scratch_p3_sd16_b32_seed2_a6000c_v1",
+  "imgsz": 640,
+  "lr0": 0.0002,
+  "lrf": 0.01,
+  "module_warmup_epochs": 0,
+  "nbs": 64,
+  "optimizer": "AdamW",
+  "optimizer_warmup_epochs": 3.0,
+  "patience": 30,
+  "seed": 2,
+  "state_dim": 16,
+  "weight_decay": 0.0005,
+  "weights": "none"
+}

@@ -1,0 +1,651 @@
+{
+  "schema": "rgsp-paper-result-source-read-v1",
+  "captured_date": "2026-10-11",
+  "recorded_utc": "2026-10-11T03:15:24.466Z",
+  "scope": "Read-only source retrieval of seven newly completed SSDD seed0 rows. No training, inference, evaluation rerun, server file changes, or weight download.",
+  "source_host_alias": "powerleader-a6000-b",
+  "source_campaign_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+  "source_thread": "codex://threads/01a12053-e7f7-7d02-a7b7-c1f8b7edc44b",
+  "frozen_plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "protocol": {
+    "subset": "ssdd",
+    "split_counts": {
+      "train": 730,
+      "val": 186,
+      "test": 232
+    },
+    "data_manifest_sha256": "cd2f5314ecc8139f8e51a8c283d309f522c12abd58320003ea86bacbaac853de",
+    "seed": 0,
+    "input": 640,
+    "batch": 16,
+    "max_epochs": 150,
+    "patience": 30,
+    "precision": "fp32",
+    "init": "scratch",
+    "optimizer": "AdamW",
+    "lr0": 0.0002,
+    "selection": "val fitness (0.1 AP50 + 0.9 AP50:95)",
+    "test_conf": 0.001,
+    "test_iou": 0.6,
+    "metric_storage": "fraction; multiply by 100 for paper percentage"
+  },
+  "integrity": {
+    "status": "PASS",
+    "file_count": 42,
+    "source_hash_method": "sha256sum on source host, compared with Get-FileHash SHA256 of SCP byte copies",
+    "small_artifact_hashes_and_receipt_bindings": true,
+    "weights_not_downloaded_or_rehashed": true,
+    "controls_by_epoch_not_recaptured": true
+  },
+  "limitations": [
+    "Only seed0; does not estimate cross-seed stability or statistical significance.",
+    "SSDD Full d32 has 53 observed training epochs under the same 150-epoch maximum. It is a completed negative result and is not removed or labelled invalid.",
+    "These seven rows extend the 20-row 2026-10-10 snapshot to 27 SSDD configurations; the older 50-figure gallery retains its snapshot.",
+    "The previous 20 SSDD rows and nine SADD rows keep their previous source and reuse/adoption qualifications.",
+    "Actual checkpoint hashes are linked by metadata here, not newly recomputed from weight bytes. This read-only source retrieval is not a full experiment acceptance or global seed0 barrier."
+  ],
+  "rows": [
+    {
+      "trial_id": "ssdd_cnn_yolov8n_seed0",
+      "checks": {
+        "all_download_hashes": true,
+        "receipt_binding": true,
+        "metrics_match_receipt": true,
+        "common_frozen_plan": true,
+        "common_trial": true,
+        "test_seed0": true,
+        "not_smoke": true,
+        "best_hash_chain": true,
+        "eval_hash_chain": true,
+        "complete_status": true,
+        "finite_probability_metrics": true,
+        "same_data_manifest": true
+      },
+      "files": [
+        {
+          "relative_path": "ssdd_cnn_yolov8n_seed0/eval_test.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_cnn_yolov8n_seed0/eval_test.json",
+          "bytes": 1529,
+          "sha256": "8e167ee7e385ebc1fd868503451d3726a5f6596e278f6d0c11662beb08f81958",
+          "remote_sha256": "8e167ee7e385ebc1fd868503451d3726a5f6596e278f6d0c11662beb08f81958",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_cnn_yolov8n_seed0/evaluation_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_cnn_yolov8n_seed0/evaluation_complete.json",
+          "bytes": 436,
+          "sha256": "6057c0da72ef00510594d2dda046a3f73e71a0b80975564e2344c322cb27fc6c",
+          "remote_sha256": "6057c0da72ef00510594d2dda046a3f73e71a0b80975564e2344c322cb27fc6c",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_cnn_yolov8n_seed0/provenance.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_cnn_yolov8n_seed0/provenance.json",
+          "bytes": 79087,
+          "sha256": "cbd55c591a911b0803d92c46f7adee5cb18f943f40006260c1ec4d0d8e643207",
+          "remote_sha256": "cbd55c591a911b0803d92c46f7adee5cb18f943f40006260c1ec4d0d8e643207",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_cnn_yolov8n_seed0/ssdd_cnn_yolov8n_seed0.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_cnn_yolov8n_seed0.json",
+          "bytes": 2421,
+          "sha256": "900c271942d2eaf0744fad8dda1457ab700206952ab3f9c28aa96b35a26b000f",
+          "remote_sha256": "900c271942d2eaf0744fad8dda1457ab700206952ab3f9c28aa96b35a26b000f",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_cnn_yolov8n_seed0/train_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_cnn_yolov8n_seed0/train_complete.json",
+          "bytes": 571,
+          "sha256": "ecb7e710fc3ca24a3ae59cc5e269bd179bf48014ca0095df9062e02743201aba",
+          "remote_sha256": "ecb7e710fc3ca24a3ae59cc5e269bd179bf48014ca0095df9062e02743201aba",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_cnn_yolov8n_seed0/trial_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_cnn_yolov8n_seed0/trial_complete.json",
+          "bytes": 522,
+          "sha256": "68aa5bbfff1071078ee9176afc88207808b278a1b2d8476402ef9302a9503f9a",
+          "remote_sha256": "68aa5bbfff1071078ee9176afc88207808b278a1b2d8476402ef9302a9503f9a",
+          "source_hash_matches": true
+        }
+      ],
+      "metrics": {
+        "ap50": 0.8723509619683196,
+        "ap50_95": 0.4245733760220959,
+        "ap75": 0.3500910542075448,
+        "precision": 0.8977490627954055,
+        "recall": 0.8186813186813187
+      },
+      "spec": {
+        "control": "cnn_yolov8n",
+        "placement": "baseline",
+        "state_dim": 0,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "train_epochs_observed": 150,
+      "eval_data_manifest_sha256": "cd2f5314ecc8139f8e51a8c283d309f522c12abd58320003ea86bacbaac853de",
+      "eval_weights_sha256": "4ca882e01331ba497d6a268f9e191afeac9749270797b93a4784cd68467fae4d",
+      "train_resumed": false,
+      "eval_file_sha256": "8e167ee7e385ebc1fd868503451d3726a5f6596e278f6d0c11662beb08f81958"
+    },
+    {
+      "trial_id": "ssdd_full_d32_seed0",
+      "checks": {
+        "all_download_hashes": true,
+        "receipt_binding": true,
+        "metrics_match_receipt": true,
+        "common_frozen_plan": true,
+        "common_trial": true,
+        "test_seed0": true,
+        "not_smoke": true,
+        "best_hash_chain": true,
+        "eval_hash_chain": true,
+        "complete_status": true,
+        "finite_probability_metrics": true,
+        "same_data_manifest": true
+      },
+      "files": [
+        {
+          "relative_path": "ssdd_full_d32_seed0/eval_test.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/eval_test.json",
+          "bytes": 1509,
+          "sha256": "23fd54b22ee44493c7d6e3d7f3d11136213fa20da53ba47ec3928d5e3e12f40c",
+          "remote_sha256": "23fd54b22ee44493c7d6e3d7f3d11136213fa20da53ba47ec3928d5e3e12f40c",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_d32_seed0/evaluation_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/evaluation_complete.json",
+          "bytes": 433,
+          "sha256": "01f39b4186dc88d3d39d3c7d7da8f4540a00627e97fcefdbaf9b100764468bc6",
+          "remote_sha256": "01f39b4186dc88d3d39d3c7d7da8f4540a00627e97fcefdbaf9b100764468bc6",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_d32_seed0/provenance.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/provenance.json",
+          "bytes": 79072,
+          "sha256": "9d670562cf1f851236d059825a7187ac7318f7540952e727998bf220d8559075",
+          "remote_sha256": "9d670562cf1f851236d059825a7187ac7318f7540952e727998bf220d8559075",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_d32_seed0/ssdd_full_d32_seed0.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_d32_seed0.json",
+          "bytes": 2395,
+          "sha256": "6eedbe7308db33a21e8913b1ec3d9f0d4cf5805990b95c80a9403293f439b15f",
+          "remote_sha256": "6eedbe7308db33a21e8913b1ec3d9f0d4cf5805990b95c80a9403293f439b15f",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_d32_seed0/train_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/train_complete.json",
+          "bytes": 1556,
+          "sha256": "a65e884b4840917430b7dd5aa62a4dd189b722b1e01c6273f0fc709edc5e59ba",
+          "remote_sha256": "a65e884b4840917430b7dd5aa62a4dd189b722b1e01c6273f0fc709edc5e59ba",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_d32_seed0/trial_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d32_seed0/trial_complete.json",
+          "bytes": 519,
+          "sha256": "77de49727230b8773aaa4ebbd0c46ee332a9f518b5c8e29d3c1fdfbb051fd473",
+          "remote_sha256": "77de49727230b8773aaa4ebbd0c46ee332a9f518b5c8e29d3c1fdfbb051fd473",
+          "source_hash_matches": true
+        }
+      ],
+      "metrics": {
+        "ap50": 0.6818567713263167,
+        "ap50_95": 0.22229270000055226,
+        "ap75": 0.06657156107870892,
+        "precision": 0.8164968714571473,
+        "recall": 0.608058608058608
+      },
+      "spec": {
+        "control": "full",
+        "placement": "p3",
+        "state_dim": 32,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "train_epochs_observed": 53,
+      "eval_data_manifest_sha256": "cd2f5314ecc8139f8e51a8c283d309f522c12abd58320003ea86bacbaac853de",
+      "eval_weights_sha256": "f2cb0643ccbf5179f405d8cf2ecf9be0f645ea8d4763896ca6c2be362999d54e",
+      "train_resumed": false,
+      "eval_file_sha256": "23fd54b22ee44493c7d6e3d7f3d11136213fa20da53ba47ec3928d5e3e12f40c"
+    },
+    {
+      "trial_id": "ssdd_full_d8_seed0",
+      "checks": {
+        "all_download_hashes": true,
+        "receipt_binding": true,
+        "metrics_match_receipt": true,
+        "common_frozen_plan": true,
+        "common_trial": true,
+        "test_seed0": true,
+        "not_smoke": true,
+        "best_hash_chain": true,
+        "eval_hash_chain": true,
+        "complete_status": true,
+        "finite_probability_metrics": true,
+        "same_data_manifest": true
+      },
+      "files": [
+        {
+          "relative_path": "ssdd_full_d8_seed0/eval_test.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d8_seed0/eval_test.json",
+          "bytes": 1506,
+          "sha256": "e0b59b2b96b106bb67222bf6bd0b72045fea78a4cc17d060eba1d26c8181eab1",
+          "remote_sha256": "e0b59b2b96b106bb67222bf6bd0b72045fea78a4cc17d060eba1d26c8181eab1",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_d8_seed0/evaluation_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d8_seed0/evaluation_complete.json",
+          "bytes": 432,
+          "sha256": "e4d4e33db60b0595944354d217d7716c54fde0339e8e6fd57d5689d6a429bbdf",
+          "remote_sha256": "e4d4e33db60b0595944354d217d7716c54fde0339e8e6fd57d5689d6a429bbdf",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_d8_seed0/provenance.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d8_seed0/provenance.json",
+          "bytes": 79070,
+          "sha256": "cbee67233da8f4db1de7803d0c143a2728284c0933b04711a9b99dac520fa37c",
+          "remote_sha256": "cbee67233da8f4db1de7803d0c143a2728284c0933b04711a9b99dac520fa37c",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_d8_seed0/ssdd_full_d8_seed0.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_d8_seed0.json",
+          "bytes": 2386,
+          "sha256": "3e47390d7c07eb999f23e973aa915af9bbe53489ad908f264368a20cffd0efe8",
+          "remote_sha256": "3e47390d7c07eb999f23e973aa915af9bbe53489ad908f264368a20cffd0efe8",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_d8_seed0/train_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d8_seed0/train_complete.json",
+          "bytes": 1560,
+          "sha256": "8a550fde7d3f8582355ccedfbd246941cbe5a0a07c0b8685d51e1357d1d9e9bc",
+          "remote_sha256": "8a550fde7d3f8582355ccedfbd246941cbe5a0a07c0b8685d51e1357d1d9e9bc",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_d8_seed0/trial_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_d8_seed0/trial_complete.json",
+          "bytes": 518,
+          "sha256": "317fa72cf419a38641c9d4be11d1ec9719bed4d63d77fa8e817d9c7f9c30d60a",
+          "remote_sha256": "317fa72cf419a38641c9d4be11d1ec9719bed4d63d77fa8e817d9c7f9c30d60a",
+          "source_hash_matches": true
+        }
+      ],
+      "metrics": {
+        "ap50": 0.8749099559477984,
+        "ap50_95": 0.4233052536199596,
+        "ap75": 0.33640801558152245,
+        "precision": 0.9060177064285734,
+        "recall": 0.7945309767724469
+      },
+      "spec": {
+        "control": "full",
+        "placement": "p3",
+        "state_dim": 8,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "train_epochs_observed": 150,
+      "eval_data_manifest_sha256": "cd2f5314ecc8139f8e51a8c283d309f522c12abd58320003ea86bacbaac853de",
+      "eval_weights_sha256": "3ee906628747d517916548ce6683a9207420114e997c48e1010285e406d5940c",
+      "train_resumed": false,
+      "eval_file_sha256": "e0b59b2b96b106bb67222bf6bd0b72045fea78a4cc17d060eba1d26c8181eab1"
+    },
+    {
+      "trial_id": "ssdd_full_stats5_seed0",
+      "checks": {
+        "all_download_hashes": true,
+        "receipt_binding": true,
+        "metrics_match_receipt": true,
+        "common_frozen_plan": true,
+        "common_trial": true,
+        "test_seed0": true,
+        "not_smoke": true,
+        "best_hash_chain": true,
+        "eval_hash_chain": true,
+        "complete_status": true,
+        "finite_probability_metrics": true,
+        "same_data_manifest": true
+      },
+      "files": [
+        {
+          "relative_path": "ssdd_full_stats5_seed0/eval_test.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/eval_test.json",
+          "bytes": 1517,
+          "sha256": "27d06cedb81504e9f51105fb9eecce3151b894fee3ad4c1479223d7830f3f3f6",
+          "remote_sha256": "27d06cedb81504e9f51105fb9eecce3151b894fee3ad4c1479223d7830f3f3f6",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_stats5_seed0/evaluation_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/evaluation_complete.json",
+          "bytes": 436,
+          "sha256": "42eace2354d4b358fb78af214bcd5e2b530df553c394e79d7a1e1e865c291b83",
+          "remote_sha256": "42eace2354d4b358fb78af214bcd5e2b530df553c394e79d7a1e1e865c291b83",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_stats5_seed0/provenance.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/provenance.json",
+          "bytes": 79075,
+          "sha256": "6d0641512cd098343e64d8b2c492e8d16a7f54cd106783155b1f4c40ef980377",
+          "remote_sha256": "6d0641512cd098343e64d8b2c492e8d16a7f54cd106783155b1f4c40ef980377",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_stats5_seed0/ssdd_full_stats5_seed0.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_stats5_seed0.json",
+          "bytes": 2421,
+          "sha256": "1eaae558b0fbb7e43236e3f436dab23f70da3d644ae4917f1540abe4982c845b",
+          "remote_sha256": "1eaae558b0fbb7e43236e3f436dab23f70da3d644ae4917f1540abe4982c845b",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_stats5_seed0/train_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/train_complete.json",
+          "bytes": 1557,
+          "sha256": "98a001f886a3d9bea536cc0153da43000d3fdd9d1b498ac6faa546652ccef133",
+          "remote_sha256": "98a001f886a3d9bea536cc0153da43000d3fdd9d1b498ac6faa546652ccef133",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_stats5_seed0/trial_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats5_seed0/trial_complete.json",
+          "bytes": 522,
+          "sha256": "c5656573b8d43675b8763867a168a88d42ebfcde8bd4ab7c1fa040a974de7ee3",
+          "remote_sha256": "c5656573b8d43675b8763867a168a88d42ebfcde8bd4ab7c1fa040a974de7ee3",
+          "source_hash_matches": true
+        }
+      ],
+      "metrics": {
+        "ap50": 0.8682456834425558,
+        "ap50_95": 0.4234263621863392,
+        "ap75": 0.37401186976291406,
+        "precision": 0.8745218929863373,
+        "recall": 0.804175391313684
+      },
+      "spec": {
+        "control": "full",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 5,
+        "trend_kernel_size": 3
+      },
+      "train_epochs_observed": 150,
+      "eval_data_manifest_sha256": "cd2f5314ecc8139f8e51a8c283d309f522c12abd58320003ea86bacbaac853de",
+      "eval_weights_sha256": "91bce3790608d17e72a879bfa2bdc162fb8d2bc18b13d54c26dc99e4aa41499e",
+      "train_resumed": false,
+      "eval_file_sha256": "27d06cedb81504e9f51105fb9eecce3151b894fee3ad4c1479223d7830f3f3f6"
+    },
+    {
+      "trial_id": "ssdd_full_stats7_seed0",
+      "checks": {
+        "all_download_hashes": true,
+        "receipt_binding": true,
+        "metrics_match_receipt": true,
+        "common_frozen_plan": true,
+        "common_trial": true,
+        "test_seed0": true,
+        "not_smoke": true,
+        "best_hash_chain": true,
+        "eval_hash_chain": true,
+        "complete_status": true,
+        "finite_probability_metrics": true,
+        "same_data_manifest": true
+      },
+      "files": [
+        {
+          "relative_path": "ssdd_full_stats7_seed0/eval_test.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats7_seed0/eval_test.json",
+          "bytes": 1516,
+          "sha256": "2955342efb8515d64e7c549f6195bfa20d7c73411e4c61d2ad9bf0f489e112e2",
+          "remote_sha256": "2955342efb8515d64e7c549f6195bfa20d7c73411e4c61d2ad9bf0f489e112e2",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_stats7_seed0/evaluation_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats7_seed0/evaluation_complete.json",
+          "bytes": 436,
+          "sha256": "78df0709619fdbc2fc29452526098684b63174240f7d53e8363688e1808380ea",
+          "remote_sha256": "78df0709619fdbc2fc29452526098684b63174240f7d53e8363688e1808380ea",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_stats7_seed0/provenance.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats7_seed0/provenance.json",
+          "bytes": 79075,
+          "sha256": "6a406ab22dfc4abdb2696f85a164bb0b5b3934d82ff68f92c0b33094ce777c5b",
+          "remote_sha256": "6a406ab22dfc4abdb2696f85a164bb0b5b3934d82ff68f92c0b33094ce777c5b",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_stats7_seed0/ssdd_full_stats7_seed0.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_stats7_seed0.json",
+          "bytes": 2420,
+          "sha256": "8f0220286cad051f430cde28d385d9773855fedda8f4be4cb018968cd52fef2c",
+          "remote_sha256": "8f0220286cad051f430cde28d385d9773855fedda8f4be4cb018968cd52fef2c",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_stats7_seed0/train_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats7_seed0/train_complete.json",
+          "bytes": 1555,
+          "sha256": "b8066c7fe3c73c7e381063a3b7ad59949d769638678536f0186a478d62b0fae4",
+          "remote_sha256": "b8066c7fe3c73c7e381063a3b7ad59949d769638678536f0186a478d62b0fae4",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_stats7_seed0/trial_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_stats7_seed0/trial_complete.json",
+          "bytes": 522,
+          "sha256": "a14f0ac5a5182d76a9b22a8e65bdbe6de93b3c0c2471fd08c13da43416fbdace",
+          "remote_sha256": "a14f0ac5a5182d76a9b22a8e65bdbe6de93b3c0c2471fd08c13da43416fbdace",
+          "source_hash_matches": true
+        }
+      ],
+      "metrics": {
+        "ap50": 0.8515749398700159,
+        "ap50_95": 0.39194292103148876,
+        "ap75": 0.2746165885825079,
+        "precision": 0.9245498650252696,
+        "recall": 0.76007326007326
+      },
+      "spec": {
+        "control": "full",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 7,
+        "trend_kernel_size": 3
+      },
+      "train_epochs_observed": 150,
+      "eval_data_manifest_sha256": "cd2f5314ecc8139f8e51a8c283d309f522c12abd58320003ea86bacbaac853de",
+      "eval_weights_sha256": "6c4e641e71d8e1d252b3ef2fc61ce05d2b61e76a05a76801ca6aac5be94287b6",
+      "train_resumed": false,
+      "eval_file_sha256": "2955342efb8515d64e7c549f6195bfa20d7c73411e4c61d2ad9bf0f489e112e2"
+    },
+    {
+      "trial_id": "ssdd_full_trend5_seed0",
+      "checks": {
+        "all_download_hashes": true,
+        "receipt_binding": true,
+        "metrics_match_receipt": true,
+        "common_frozen_plan": true,
+        "common_trial": true,
+        "test_seed0": true,
+        "not_smoke": true,
+        "best_hash_chain": true,
+        "eval_hash_chain": true,
+        "complete_status": true,
+        "finite_probability_metrics": true,
+        "same_data_manifest": true
+      },
+      "files": [
+        {
+          "relative_path": "ssdd_full_trend5_seed0/eval_test.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend5_seed0/eval_test.json",
+          "bytes": 1517,
+          "sha256": "3d425b08e2a9fb87ab799d216d369ff24e5bc7b03696aa968a0b3d292cacb2a9",
+          "remote_sha256": "3d425b08e2a9fb87ab799d216d369ff24e5bc7b03696aa968a0b3d292cacb2a9",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_trend5_seed0/evaluation_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend5_seed0/evaluation_complete.json",
+          "bytes": 436,
+          "sha256": "632ea68f20b53f784c016cfbda9ce6cee48d2c1fd6bb5990f9089835bb9b18de",
+          "remote_sha256": "632ea68f20b53f784c016cfbda9ce6cee48d2c1fd6bb5990f9089835bb9b18de",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_trend5_seed0/provenance.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend5_seed0/provenance.json",
+          "bytes": 79075,
+          "sha256": "37303acf098d149e097f267872ed0594eb9d1b851551b147113e47d886389181",
+          "remote_sha256": "37303acf098d149e097f267872ed0594eb9d1b851551b147113e47d886389181",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_trend5_seed0/ssdd_full_trend5_seed0.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_trend5_seed0.json",
+          "bytes": 2420,
+          "sha256": "ecabbc05bc7439d6f3cb8cd0597e6f4d776841d5bd522eb86c6e24333f085744",
+          "remote_sha256": "ecabbc05bc7439d6f3cb8cd0597e6f4d776841d5bd522eb86c6e24333f085744",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_trend5_seed0/train_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend5_seed0/train_complete.json",
+          "bytes": 1559,
+          "sha256": "b545ca89c94617e302ecbb6b3bafed6aaf470828a439e44df3d8643ffdac9af5",
+          "remote_sha256": "b545ca89c94617e302ecbb6b3bafed6aaf470828a439e44df3d8643ffdac9af5",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_trend5_seed0/trial_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend5_seed0/trial_complete.json",
+          "bytes": 522,
+          "sha256": "5173d51a5e9246477cf160aa5e70c52d872ef350c83dbb0678aeca5648780c5d",
+          "remote_sha256": "5173d51a5e9246477cf160aa5e70c52d872ef350c83dbb0678aeca5648780c5d",
+          "source_hash_matches": true
+        }
+      ],
+      "metrics": {
+        "ap50": 0.8476831316948911,
+        "ap50_95": 0.42350457337089065,
+        "ap75": 0.367419907030907,
+        "precision": 0.9120763114319893,
+        "recall": 0.740965241297118
+      },
+      "spec": {
+        "control": "full",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 5
+      },
+      "train_epochs_observed": 150,
+      "eval_data_manifest_sha256": "cd2f5314ecc8139f8e51a8c283d309f522c12abd58320003ea86bacbaac853de",
+      "eval_weights_sha256": "36445e0b878abee054e381659377e3d3b3b28caddea66c2a34bcf426bae73b9a",
+      "train_resumed": false,
+      "eval_file_sha256": "3d425b08e2a9fb87ab799d216d369ff24e5bc7b03696aa968a0b3d292cacb2a9"
+    },
+    {
+      "trial_id": "ssdd_full_trend7_seed0",
+      "checks": {
+        "all_download_hashes": true,
+        "receipt_binding": true,
+        "metrics_match_receipt": true,
+        "common_frozen_plan": true,
+        "common_trial": true,
+        "test_seed0": true,
+        "not_smoke": true,
+        "best_hash_chain": true,
+        "eval_hash_chain": true,
+        "complete_status": true,
+        "finite_probability_metrics": true,
+        "same_data_manifest": true
+      },
+      "files": [
+        {
+          "relative_path": "ssdd_full_trend7_seed0/eval_test.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend7_seed0/eval_test.json",
+          "bytes": 1517,
+          "sha256": "762072eb2c56ef3147c94d2cfe5d3832e18c4bb01abd3f37c74ffacf239463e0",
+          "remote_sha256": "762072eb2c56ef3147c94d2cfe5d3832e18c4bb01abd3f37c74ffacf239463e0",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_trend7_seed0/evaluation_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend7_seed0/evaluation_complete.json",
+          "bytes": 436,
+          "sha256": "653c06ed33ee374257af9ffbc365a0aa862c6c2e699f35cdf1db900ad26c0225",
+          "remote_sha256": "653c06ed33ee374257af9ffbc365a0aa862c6c2e699f35cdf1db900ad26c0225",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_trend7_seed0/provenance.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend7_seed0/provenance.json",
+          "bytes": 79075,
+          "sha256": "3a9554547647f54253b683949b70ff20e8092d3b0af0d1c866f9a4046171879d",
+          "remote_sha256": "3a9554547647f54253b683949b70ff20e8092d3b0af0d1c866f9a4046171879d",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_trend7_seed0/ssdd_full_trend7_seed0.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/receipts/ssdd_full_trend7_seed0.json",
+          "bytes": 2420,
+          "sha256": "c9ebd06519da687e0105f52562dc78596cc5c71cf7e987ec6ad6ce9f53d1b022",
+          "remote_sha256": "c9ebd06519da687e0105f52562dc78596cc5c71cf7e987ec6ad6ce9f53d1b022",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_trend7_seed0/train_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend7_seed0/train_complete.json",
+          "bytes": 1563,
+          "sha256": "e1a94653e8d684937d76ee45af2ba0f8ed55d7fe19c7731d606567c3417592e6",
+          "remote_sha256": "e1a94653e8d684937d76ee45af2ba0f8ed55d7fe19c7731d606567c3417592e6",
+          "source_hash_matches": true
+        },
+        {
+          "relative_path": "ssdd_full_trend7_seed0/trial_complete.json",
+          "source_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_full_trend7_seed0/trial_complete.json",
+          "bytes": 522,
+          "sha256": "3d1d0e925fdbd7d351ed2cd43a73ecb6918c27f2080b3ade7cd46b98e4dbd531",
+          "remote_sha256": "3d1d0e925fdbd7d351ed2cd43a73ecb6918c27f2080b3ade7cd46b98e4dbd531",
+          "source_hash_matches": true
+        }
+      ],
+      "metrics": {
+        "ap50": 0.8802274429988759,
+        "ap50_95": 0.4131098239131877,
+        "ap75": 0.3106522459207313,
+        "precision": 0.914612961563936,
+        "recall": 0.8043348774180987
+      },
+      "spec": {
+        "control": "full",
+        "placement": "p3",
+        "state_dim": 16,
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 7
+      },
+      "train_epochs_observed": 150,
+      "eval_data_manifest_sha256": "cd2f5314ecc8139f8e51a8c283d309f522c12abd58320003ea86bacbaac853de",
+      "eval_weights_sha256": "bd6a4e7bce2e5488e075a6ad0da6ea5a301c84a9e500984a29548a2fce812685",
+      "train_resumed": false,
+      "eval_file_sha256": "762072eb2c56ef3147c94d2cfe5d3832e18c4bb01abd3f37c74ffacf239463e0"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "gpus": {
+    "A:0": {
+      "idle_since": null,
+      "index": 0,
+      "last_snapshot": "2026-09-01T00:18:08.832072+00:00",
+      "memory_total": 49140,
+      "memory_used": 30890,
+      "name": "NVIDIA RTX A6000",
+      "utilization": 100
+    },
+    "B:0": {
+      "idle_since": 1788221888.832069,
+      "index": 0,
+      "last_snapshot": "2026-09-01T00:18:08.832077+00:00",
+      "memory_total": 49140,
+      "memory_used": 520,
+      "name": "NVIDIA RTX A6000",
+      "utilization": 0
+    },
+    "C:0": {
+      "idle_since": null,
+      "index": 0,
+      "last_snapshot": "2026-09-01T00:18:08.832080+00:00",
+      "memory_total": 49140,
+      "memory_used": 12191,
+      "name": "NVIDIA RTX A6000",
+      "utilization": 100
+    },
+    "D:0": {
+      "idle_since": 1788202274.3897066,
+      "index": 0,
+      "last_snapshot": "2026-09-01T00:18:08.832082+00:00",
+      "memory_total": 49140,
+      "memory_used": 683,
+      "name": "NVIDIA RTX A6000",
+      "utilization": 0
+    }
+  },
+  "hosts": {
+    "A": {
+      "error": null,
+      "last_seen": "2026-09-01T00:18:08.029460+00:00"
+    },
+    "B": {
+      "error": null,
+      "last_seen": "2026-09-01T00:18:08.330363+00:00"
+    },
+    "C": {
+      "error": null,
+      "last_seen": "2026-09-01T00:18:08.561303+00:00"
+    },
+    "D": {
+      "error": null,
+      "last_seen": "2026-09-01T00:18:08.831976+00:00"
+    }
+  },
+  "jobs": {
+    "cd_farmland_baseline": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:51:05.532375+00:00",
+      "status": "complete"
+    },
+    "cd_farmland_p3_d16": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T05:40:26.731160+00:00",
+      "status": "complete"
+    },
+    "cd_ottawa_baseline": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:51:05.532368+00:00",
+      "status": "complete"
+    },
+    "cd_ottawa_p3_d16": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:51:05.532370+00:00",
+      "status": "complete"
+    },
+    "cd_sulzberger_baseline": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T05:38:25.227270+00:00",
+      "status": "complete"
+    },
+    "cd_sulzberger_p3_d16": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T06:37:16.483729+00:00",
+      "status": "complete"
+    },
+    "cd_yellow_river_baseline": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:51:05.532372+00:00",
+      "status": "complete"
+    },
+    "cd_yellow_river_p3_d16": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T03:12:24.442766+00:00",
+      "status": "complete"
+    },
+    "cls_sample_baseline": {
+      "attempts": 1,
+      "completed_at": "2026-08-28T11:11:10.763215+00:00",
+      "gpu": 0,
+      "host": "D",
+      "last_launch_at": "2026-08-28T11:03:03.180715+00:00",
+      "last_launch_message": "STARTED:221482",
+      "pid": 221482,
+      "status": "complete"
+    },
+    "cls_sample_p3_d16": {
+      "attempts": 1,
+      "completed_at": "2026-08-28T11:32:29.644035+00:00",
+      "gpu": 0,
+      "host": "D",
+      "last_launch_at": "2026-08-28T11:26:24.632254+00:00",
+      "last_launch_message": "STARTED:223988",
+      "pid": 223988,
+      "status": "complete"
+    },
+    "cls_sar_acd_baseline": {
+      "attempts": 0,
+      "completed_at": "2026-08-30T03:58:01.091922+00:00",
+      "status": "complete"
+    },
+    "cls_sar_acd_p3_d16": {
+      "attempts": 1,
+      "completed_at": "2026-08-29T21:05:47.174575+00:00",
+      "gpu": 0,
+      "host": "A",
+      "last_launch_at": "2026-08-28T11:02:02.140253+00:00",
+      "last_launch_message": "STARTED:186541",
+      "pid": 186541,
+      "status": "complete"
+    },
+    "det_aircraft_baseline_b32": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "det_aircraft_p3_d16_b32": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "det_airship_baseline_b32": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T04:05:07.378195+00:00",
+      "status": "complete"
+    },
+    "det_airship_p3_d16_b32": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T05:49:34.063563+00:00",
+      "status": "complete"
+    },
+    "det_sadd_baseline_b32": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:51:05.532349+00:00",
+      "status": "complete"
+    },
+    "det_sadd_p3_d16_b32": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:51:05.532351+00:00",
+      "status": "complete"
+    },
+    "det_srsdd_baseline_b32": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "det_srsdd_p3_d16_b32": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "det_ssdd_baseline_b16": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:51:05.532335+00:00",
+      "status": "complete"
+    },
+    "det_ssdd_p3_d16_b16": {
+      "attempts": 0,
+      "completed_at": "2026-08-28T02:51:05.532340+00:00",
+      "status": "complete"
+    },
+    "seg_fusar_map_baseline": {
+      "attempts": 1,
+      "gpu": 0,
+      "host": "B",
+      "last_exit_observed_at": "2026-09-01T00:18:08.832045+00:00",
+      "last_launch_at": "2026-09-01T00:16:06.124450+00:00",
+      "last_launch_message": "STARTED:711408",
+      "pid": 711408,
+      "status": "pending"
+    },
+    "seg_fusar_map_p3_d16": {
+      "attempts": 0,
+      "status": "pending"
+    }
+  },
+  "updated_at": "2026-09-01T00:18:08.832099+00:00"
+}

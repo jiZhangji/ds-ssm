@@ -1,0 +1,31 @@
+{
+  "actual_records_sha256": "43f5c4e9ea9e54a9b457c074ab76547b368edceec248eafc1b70cfaa19aebe48",
+  "cache_location": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/d0sadd2/jobs/sadd-full/probe/data",
+  "counts_verified": {
+    "train": 2372
+  },
+  "data_yaml": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata_native/SADD_full/SADD.yaml",
+    "sha256": "058288d1222086aa528ffd41184f6525f17466f43baee9e45f6643f810b9ae46"
+  },
+  "dataset_id": "sadd",
+  "expected_counts": {
+    "test": 298,
+    "train": 2372,
+    "val": 296
+  },
+  "files_verified": 4744,
+  "heldout_image_or_label_files_opened": false,
+  "input_manifest": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata_native/SADD_full/manifest.json",
+    "sha256": "3440521e8920f8043e13fe43b4f31b5fb12310ed854497ee9756f086d5a81b09"
+  },
+  "location_records_sha256": "a409613020037cb93b449dbb99217988d9b5f1999b6ad4a0b7c6f18719ee0126",
+  "names": [
+    "aircraft"
+  ],
+  "probe_only": true,
+  "source_data_protocol": "sadd-full2966-posneg-stratified-80-10-10-rgbgroup-v1",
+  "source_images_repaired": false,
+  "source_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata_native/SADD_full"
+}

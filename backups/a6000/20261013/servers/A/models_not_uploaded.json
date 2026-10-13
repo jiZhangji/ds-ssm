@@ -1,0 +1,1969 @@
+[
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/farmland/ours/best.pt",
+    "bytes": 25843300,
+    "mtime_ns": 1787891236062854749,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/farmland/ours/last.pt",
+    "bytes": 25843300,
+    "mtime_ns": 1787895550603958925,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/ottawa/ours/best.pt",
+    "bytes": 25843300,
+    "mtime_ns": 1787869711824620854,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/ottawa/ours/last.pt",
+    "bytes": 25843300,
+    "mtime_ns": 1787874058435834656,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/sar-acd/ours/best.pt",
+    "bytes": 21382026,
+    "mtime_ns": 1787993277623086323,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/sar-acd/ours/last.pt",
+    "bytes": 21382026,
+    "mtime_ns": 1788037508589170988,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/sulzberger/ours/best.pt",
+    "bytes": 25843300,
+    "mtime_ns": 1787896052609155131,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/sulzberger/ours/last.pt",
+    "bytes": 25843300,
+    "mtime_ns": 1787899004069544552,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/yellow_river/ours/best.pt",
+    "bytes": 25843300,
+    "mtime_ns": 1787882818157587278,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd16_20260828/yellow_river/ours/last.pt",
+    "bytes": 25843300,
+    "mtime_ns": 1787886721756014896,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/farmland/baseline/best.pt",
+    "bytes": 28348106,
+    "mtime_ns": 1787875742690456197,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/farmland/baseline/last.pt",
+    "bytes": 28348106,
+    "mtime_ns": 1787880128919060695,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/farmland/ours/best.pt",
+    "bytes": 25917028,
+    "mtime_ns": 1787884635561171268,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/farmland/ours/last.pt",
+    "bytes": 25917028,
+    "mtime_ns": 1787888943770073366,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/ottawa/baseline/best.pt",
+    "bytes": 28348106,
+    "mtime_ns": 1787834772959218234,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/ottawa/baseline/last.pt",
+    "bytes": 28348106,
+    "mtime_ns": 1787835128567634661,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/ottawa/ours/best.pt",
+    "bytes": 25917028,
+    "mtime_ns": 1787844301308531878,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/ottawa/ours/last.pt",
+    "bytes": 25917028,
+    "mtime_ns": 1787846479908968147,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/sulzberger/baseline/best.pt",
+    "bytes": 28348106,
+    "mtime_ns": 1787892463534781161,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/sulzberger/baseline/last.pt",
+    "bytes": 28348106,
+    "mtime_ns": 1787895473954427954,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/sulzberger/ours/best.pt",
+    "bytes": 25917028,
+    "mtime_ns": 1787896078997621685,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/sulzberger/ours/last.pt",
+    "bytes": 25917028,
+    "mtime_ns": 1787899024957949945,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/yellow_river/baseline/best.pt",
+    "bytes": 28348106,
+    "mtime_ns": 1787850107403284296,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/yellow_river/baseline/last.pt",
+    "bytes": 28348106,
+    "mtime_ns": 1787854036394659217,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/yellow_river/ours/best.pt",
+    "bytes": 25917028,
+    "mtime_ns": 1787862327903188364,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/corrected_shared_v2_sd32_20260827/yellow_river/ours/last.pt",
+    "bytes": 25917028,
+    "mtime_ns": 1787866226525389112,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/classification/SAR_ACD/baseline/best.pt",
+    "bytes": 23877400,
+    "mtime_ns": 1787784231889620624,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/classification/SAR_ACD/baseline/last.pt",
+    "bytes": 23877464,
+    "mtime_ns": 1787784402304609553,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/classification/SAR_ACD/ours/best.pt",
+    "bytes": 21372594,
+    "mtime_ns": 1787784439337240741,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/classification/SAR_ACD/ours/last.pt",
+    "bytes": 21372658,
+    "mtime_ns": 1787784603603978603,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/segmentation/FUSAR_Map/baseline/best.pt",
+    "bytes": 13260379,
+    "mtime_ns": 1787808956719771219,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task/segmentation/FUSAR_Map/baseline/last.pt",
+    "bytes": 13260443,
+    "mtime_ns": 1787809022268295242,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/best.pt",
+    "bytes": 12273421,
+    "mtime_ns": 1787771346338155799,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch10.pt",
+    "bytes": 36579527,
+    "mtime_ns": 1787758407150689594,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch100.pt",
+    "bytes": 36590215,
+    "mtime_ns": 1787766790162614143,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch110.pt",
+    "bytes": 36591367,
+    "mtime_ns": 1787767720441018292,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch120.pt",
+    "bytes": 36592583,
+    "mtime_ns": 1787768650647464339,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch130.pt",
+    "bytes": 36593799,
+    "mtime_ns": 1787769579619733354,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch140.pt",
+    "bytes": 36594951,
+    "mtime_ns": 1787770509385214871,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch20.pt",
+    "bytes": 36580679,
+    "mtime_ns": 1787759336051559672,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch30.pt",
+    "bytes": 36581895,
+    "mtime_ns": 1787760266495229140,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch40.pt",
+    "bytes": 36583047,
+    "mtime_ns": 1787761198032640266,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch50.pt",
+    "bytes": 36584263,
+    "mtime_ns": 1787762130711918346,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch60.pt",
+    "bytes": 36585479,
+    "mtime_ns": 1787763062542347135,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch70.pt",
+    "bytes": 36586631,
+    "mtime_ns": 1787763994521495803,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch80.pt",
+    "bytes": 36587847,
+    "mtime_ns": 1787764926496173394,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/epoch90.pt",
+    "bytes": 36588999,
+    "mtime_ns": 1787765858354888814,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_baseline/weights/last.pt",
+    "bytes": 12275661,
+    "mtime_ns": 1787771346194148373,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/best.pt",
+    "bytes": 12138938,
+    "mtime_ns": 1787784075206716781,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch10.pt",
+    "bytes": 36181401,
+    "mtime_ns": 1787772305902827977,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch100.pt",
+    "bytes": 36192089,
+    "mtime_ns": 1787779929714229877,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch110.pt",
+    "bytes": 36193305,
+    "mtime_ns": 1787780776141058679,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch120.pt",
+    "bytes": 36194457,
+    "mtime_ns": 1787781622460165499,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch130.pt",
+    "bytes": 36195673,
+    "mtime_ns": 1787782468497957551,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch140.pt",
+    "bytes": 36196825,
+    "mtime_ns": 1787783314687991566,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch20.pt",
+    "bytes": 36182553,
+    "mtime_ns": 1787773153438470910,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch30.pt",
+    "bytes": 36183769,
+    "mtime_ns": 1787774001088685796,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch40.pt",
+    "bytes": 36184985,
+    "mtime_ns": 1787774848038981918,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch50.pt",
+    "bytes": 36186137,
+    "mtime_ns": 1787775694449284121,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch60.pt",
+    "bytes": 36187353,
+    "mtime_ns": 1787776543232217440,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch70.pt",
+    "bytes": 36188505,
+    "mtime_ns": 1787777390461775675,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch80.pt",
+    "bytes": 36189721,
+    "mtime_ns": 1787778236687634445,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/epoch90.pt",
+    "bytes": 36190937,
+    "mtime_ns": 1787779083400473911,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed1_a6000a_v1_sadd_full_p3/weights/last.pt",
+    "bytes": 12141242,
+    "mtime_ns": 1787784075054713875,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/best.pt",
+    "bytes": 12275661,
+    "mtime_ns": 1787731500025423652,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch10.pt",
+    "bytes": 36579463,
+    "mtime_ns": 1787719078700019071,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch100.pt",
+    "bytes": 36590151,
+    "mtime_ns": 1787727111040689248,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch110.pt",
+    "bytes": 36591367,
+    "mtime_ns": 1787728004123221297,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch120.pt",
+    "bytes": 36592583,
+    "mtime_ns": 1787728898526028125,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch130.pt",
+    "bytes": 36593735,
+    "mtime_ns": 1787729794693988798,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch140.pt",
+    "bytes": 36594951,
+    "mtime_ns": 1787730691795295200,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch20.pt",
+    "bytes": 36580679,
+    "mtime_ns": 1787719968886603607,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch30.pt",
+    "bytes": 36581831,
+    "mtime_ns": 1787720859694223568,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch40.pt",
+    "bytes": 36583047,
+    "mtime_ns": 1787721751993849543,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch50.pt",
+    "bytes": 36584199,
+    "mtime_ns": 1787722645026861221,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch60.pt",
+    "bytes": 36585415,
+    "mtime_ns": 1787723538685313699,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch70.pt",
+    "bytes": 36586631,
+    "mtime_ns": 1787724432619322719,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch80.pt",
+    "bytes": 36587783,
+    "mtime_ns": 1787725326306899640,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/epoch90.pt",
+    "bytes": 36588999,
+    "mtime_ns": 1787726219051571223,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_baseline/weights/last.pt",
+    "bytes": 12275661,
+    "mtime_ns": 1787731499869418338,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/best.pt",
+    "bytes": 12146618,
+    "mtime_ns": 1787743855742443431,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch10.pt",
+    "bytes": 36199769,
+    "mtime_ns": 1787732439592517324,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch100.pt",
+    "bytes": 36210521,
+    "mtime_ns": 1787739837289464510,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch110.pt",
+    "bytes": 36211673,
+    "mtime_ns": 1787740657971095083,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch120.pt",
+    "bytes": 36212889,
+    "mtime_ns": 1787741477954444561,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch130.pt",
+    "bytes": 36214041,
+    "mtime_ns": 1787742297942890831,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch140.pt",
+    "bytes": 36215257,
+    "mtime_ns": 1787743118136870841,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch20.pt",
+    "bytes": 36200985,
+    "mtime_ns": 1787733264505720935,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch30.pt",
+    "bytes": 36202201,
+    "mtime_ns": 1787734089240887877,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch40.pt",
+    "bytes": 36203353,
+    "mtime_ns": 1787734911825339117,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch50.pt",
+    "bytes": 36204569,
+    "mtime_ns": 1787735733619603643,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch60.pt",
+    "bytes": 36205721,
+    "mtime_ns": 1787736554024130958,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch70.pt",
+    "bytes": 36206937,
+    "mtime_ns": 1787737375253457427,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch80.pt",
+    "bytes": 36208089,
+    "mtime_ns": 1787738196699984323,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/epoch90.pt",
+    "bytes": 36209305,
+    "mtime_ns": 1787739017696673081,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/cross_task_detection/ig_dsssm_p3_sadd_sd32_b16_seed0_v1_sadd_full_p3/weights/last.pt",
+    "bytes": 12147322,
+    "mtime_ns": 1787743855590441942,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_fusarmap_head_d16_v1/ours/seed_0/best.pt",
+    "bytes": 52675727,
+    "mtime_ns": 1788288063381647052,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_fusarmap_head_d16_v1/ours/seed_0/best_fwiou.pt",
+    "bytes": 52723779,
+    "mtime_ns": 1788282037375195422,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_fusarmap_head_d16_v1/ours/seed_0/best_miou.pt",
+    "bytes": 52722821,
+    "mtime_ns": 1788288063497649085,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_fusarmap_head_d16_v1/ours/seed_0/last.pt",
+    "bytes": 52675727,
+    "mtime_ns": 1788289429910866695,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_upernet_miou_d16_v1/ours/seed_0/best.pt",
+    "bytes": 44914475,
+    "mtime_ns": 1788248268621206039,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_upernet_miou_d16_v1/ours/seed_0/best_fwiou.pt",
+    "bytes": 44966803,
+    "mtime_ns": 1788241889901355883,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_upernet_miou_d16_v1/ours/seed_0/best_miou.pt",
+    "bytes": 44965719,
+    "mtime_ns": 1788248268753209441,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/fusar_mambayolo_t_upernet_miou_d16_v1/ours/seed_0/last.pt",
+    "bytes": 44914475,
+    "mtime_ns": 1788251790902120845,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p3_d16_bs32_scratch_v1/ours/best.pt",
+    "bytes": 375669319,
+    "mtime_ns": 1788532054568826086,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p3_d16_bs32_scratch_v1/ours/best_fwiou.pt",
+    "bytes": 375741701,
+    "mtime_ns": 1788533582381843996,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p3_d16_bs32_scratch_v1/ours/best_miou.pt",
+    "bytes": 375740304,
+    "mtime_ns": 1788532055016837261,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p3_d16_bs32_scratch_v1/ours/last.pt",
+    "bytes": 375669319,
+    "mtime_ns": 1788534890415584386,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_p3_d16_v1/ours/best.pt",
+    "bytes": 44919083,
+    "mtime_ns": 1788326827079722995,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_p3_d16_v1/ours/best_fwiou.pt",
+    "bytes": 44971411,
+    "mtime_ns": 1788326827311727797,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_p3_d16_v1/ours/best_miou.pt",
+    "bytes": 44970327,
+    "mtime_ns": 1788326827195725395,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_p3_d16_v1/ours/last.pt",
+    "bytes": 44919083,
+    "mtime_ns": 1788329323545119704,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_effective_bs64_a_effective_baseline/baseline/best.pt",
+    "bytes": 371725543,
+    "mtime_ns": 1788625847965019816,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_effective_bs64_a_effective_baseline/baseline/best_fwiou.pt",
+    "bytes": 371792597,
+    "mtime_ns": 1788628947679941034,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_effective_bs64_a_effective_baseline/baseline/best_miou.pt",
+    "bytes": 371791320,
+    "mtime_ns": 1788625848409026788,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_effective_bs64_a_effective_baseline/baseline/last.pt",
+    "bytes": 371725543,
+    "mtime_ns": 1788632046525363271,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_v1/ours/best.pt",
+    "bytes": 375669383,
+    "mtime_ns": 1788355638442285618,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_v1/ours/best_fwiou.pt",
+    "bytes": 375741765,
+    "mtime_ns": 1788361465081578271,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_v1/ours/best_miou.pt",
+    "bytes": 375740368,
+    "mtime_ns": 1788355638910267284,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_v1/ours/last.pt",
+    "bytes": 375669383,
+    "mtime_ns": 1788361666116629790,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup20_bs32_queue_v1/ours/best.pt",
+    "bytes": 375669447,
+    "mtime_ns": 1788555714616306125,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup20_bs32_queue_v1/ours/best_fwiou.pt",
+    "bytes": 375741829,
+    "mtime_ns": 1788561593224623951,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup20_bs32_queue_v1/ours/best_miou.pt",
+    "bytes": 375740432,
+    "mtime_ns": 1788555715072312718,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup20_bs32_queue_v1/ours/last.pt",
+    "bytes": 375669447,
+    "mtime_ns": 1788562245687085744,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup50_bs32_v1/ours/best.pt",
+    "bytes": 375669447,
+    "mtime_ns": 1788397622238800332,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup50_bs32_v1/ours/best_fwiou.pt",
+    "bytes": 375741829,
+    "mtime_ns": 1788398715034922597,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup50_bs32_v1/ours/best_miou.pt",
+    "bytes": 375740432,
+    "mtime_ns": 1788397622698806838,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/openearthmap_saronly_p_vmamba_tiny_pretrained_p3_d16_warmup50_bs32_v1/ours/last.pt",
+    "bytes": 375669447,
+    "mtime_ns": 1788404173857105098,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/priority_optimization_20260831/sar-acd/ours_lr1e4_ls0/best.pt",
+    "bytes": 21382154,
+    "mtime_ns": 1788210555961454097,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/priority_optimization_20260831/sar-acd/ours_lr1e4_ls0/last.pt",
+    "bytes": 21382154,
+    "mtime_ns": 1788221926686549812,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_a_bs16_20260905/Farmland/baseline_bs16/best.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788599734332908405,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_a_bs16_20260905/Farmland/baseline_bs16/last.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788599759785537878,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_a_bs16_20260905/Farmland/ours_bs16/best.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788599804306615346,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_a_bs16_20260905/Farmland/ours_bs16/last.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788599828663192861,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_a_bs16_20260905/Ottawa/baseline_bs16/best.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788599404377792308,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_a_bs16_20260905/Ottawa/baseline_bs16/last.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788599429842172550,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_a_bs16_20260905/Ottawa/ours_bs16/best.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788599525363593998,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_a_bs16_20260905/Ottawa/ours_bs16/last.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788599542275844930,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_a_bs16_20260905/Yellow_River/baseline_bs16/best.pt",
+    "bytes": 28348554,
+    "mtime_ns": 1788599596205295998,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_a_bs16_20260905/Yellow_River/baseline_bs16/last.pt",
+    "bytes": 28348554,
+    "mtime_ns": 1788599620121947462,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_a_bs16_20260905/Yellow_River/ours_bs16/best.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788599684167636693,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_a_bs16_20260905/Yellow_River/ours_bs16/last.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788599706952219580,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/farmland/baseline_bs32/best.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788574335888930893,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/farmland/baseline_bs32/last.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788574353769172019,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/farmland/baseline_bs64/best.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788574459670599605,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/farmland/baseline_bs64/last.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788574479046860709,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/farmland/ours_bs32/best.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788574387869631804,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/farmland/ours_bs32/last.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788574404953862119,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/farmland/ours_bs64/best.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788574574216142791,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/farmland/ours_bs64/last.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788574592728392116,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/ottawa/baseline_bs32/best.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788562365341062506,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/ottawa/baseline_bs32/last.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788562383793368258,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/ottawa/baseline_bs64/best.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788562522007664881,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/ottawa/baseline_bs64/last.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788562541823994986,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/ottawa/ours_bs32/best.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788562422042002718,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/ottawa/ours_bs32/last.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788562439566293702,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/ottawa/ours_bs64/best.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788562630769540713,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/ottawa/ours_bs64/last.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788562649741921579,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/yellow_river/baseline_bs32/best.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788574056461158001,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/yellow_river/baseline_bs32/last.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788574072949380919,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/yellow_river/baseline_bs64/best.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788574215791310475,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/yellow_river/baseline_bs64/last.pt",
+    "bytes": 28348490,
+    "mtime_ns": 1788574229443494755,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/yellow_river/ours_bs32/best.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788574096669701539,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/yellow_river/ours_bs32/last.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788574112541916032,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/yellow_river/ours_bs64/best.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788574270448048120,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "experiments/recheck_change_bs_20260904/yellow_river/ours_bs64/last.pt",
+    "bytes": 25843684,
+    "mtime_ns": 1788574287572279162,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/full/weights/best.pt",
+    "bytes": 12137274,
+    "mtime_ns": 1791494758098414845,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/full/weights/last.pt",
+    "bytes": 12142010,
+    "mtime_ns": 1791494757958412187,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/local_energy/weights/best.pt",
+    "bytes": 12138554,
+    "mtime_ns": 1791490194078209470,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/local_energy/weights/last.pt",
+    "bytes": 12143290,
+    "mtime_ns": 1791490193926206729,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/matched_scale075/weights/best.pt",
+    "bytes": 12145018,
+    "mtime_ns": 1791484304379402052,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/matched_scale075/weights/last.pt",
+    "bytes": 12147066,
+    "mtime_ns": 1791484304227399749,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/original/weights/best.pt",
+    "bytes": 12279757,
+    "mtime_ns": 1791478642301541533,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_recovery_20261008_v1/sadd_seed0/runs/original/weights/last.pt",
+    "bytes": 12281677,
+    "mtime_ns": 1791478642141537245,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/seed0/runs/original/weights/best.pt",
+    "bytes": 36588423,
+    "mtime_ns": 1791442745027127086,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/seed0/runs/original/weights/last.pt",
+    "bytes": 36589383,
+    "mtime_ns": 1791442982112076441,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/original/weights/best.pt",
+    "bytes": 12257997,
+    "mtime_ns": 1791440100333835116,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_sadd_controls_20261008_v1/smoke/runs/original/weights/last.pt",
+    "bytes": 12258125,
+    "mtime_ns": 1791440100193838905,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/probe_runs/change_detection/preflight_full.pt",
+    "bytes": 15009885,
+    "mtime_ns": 1791545512589786683,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/probe_runs/change_detection/preflight_matched_scale075.pt",
+    "bytes": 15014197,
+    "mtime_ns": 1791545512377783191,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/probe_runs/change_detection/preflight_original.pt",
+    "bytes": 15276149,
+    "mtime_ns": 1791545512173779831,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/probe_runs/classification/preflight_full.pt",
+    "bytes": 11266677,
+    "mtime_ns": 1791545482473290439,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/probe_runs/classification/preflight_matched_scale075.pt",
+    "bytes": 11270437,
+    "mtime_ns": 1791545482309287736,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/probe_runs/classification/preflight_original.pt",
+    "bytes": 11532757,
+    "mtime_ns": 1791545482149285098,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_5kmoyyeu/best.pt",
+    "bytes": 21,
+    "mtime_ns": 1791544763125256987,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_5kmoyyeu/last.pt",
+    "bytes": 26,
+    "mtime_ns": 1791544763125256987,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_9tk7cix1/best.pt",
+    "bytes": 21,
+    "mtime_ns": 1791544763137257191,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_9tk7cix1/last.pt",
+    "bytes": 26,
+    "mtime_ns": 1791544763137257191,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_i0wpyaw2/last.pt",
+    "bytes": 8,
+    "mtime_ns": 1791544763133257124,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_p42umxse/best.pt",
+    "bytes": 9,
+    "mtime_ns": 1791544763125256987,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_p42umxse/last.pt",
+    "bytes": 26,
+    "mtime_ns": 1791544763125256987,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_qjrnj849/best.pt",
+    "bytes": 21,
+    "mtime_ns": 1791544763125256987,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_qjrnj849/last.pt",
+    "bytes": 26,
+    "mtime_ns": 1791544763125256987,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_s3mxu1o3/best.pt",
+    "bytes": 21,
+    "mtime_ns": 1791544763125256987,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_s3mxu1o3/last.pt",
+    "bytes": 26,
+    "mtime_ns": 1791544763125256987,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_sxgo6z8v/best.pt",
+    "bytes": 21,
+    "mtime_ns": 1791544763129257055,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_sxgo6z8v/last.pt",
+    "bytes": 26,
+    "mtime_ns": 1791544763129257055,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_wkun6wtq/best.pt",
+    "bytes": 21,
+    "mtime_ns": 1791544763133257124,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_wkun6wtq/last.pt",
+    "bytes": 26,
+    "mtime_ns": 1791544763133257124,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_yewbmoa_/best.pt",
+    "bytes": 21,
+    "mtime_ns": 1791544763129257055,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/unit_fixtures/case_yewbmoa_/last.pt",
+    "bytes": 26,
+    "mtime_ns": 1791544763129257055,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/farmland_full_seed0/best.pt",
+    "bytes": 44963599,
+    "mtime_ns": 1791552164249042186,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/farmland_full_seed0/last.pt",
+    "bytes": 44963599,
+    "mtime_ns": 1791552197326844106,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/farmland_matched_scale075_seed0/best.pt",
+    "bytes": 44933283,
+    "mtime_ns": 1791552071455693999,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/farmland_matched_scale075_seed0/last.pt",
+    "bytes": 44933283,
+    "mtime_ns": 1791552104380104824,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/farmland_original_seed0/best.pt",
+    "bytes": 45752069,
+    "mtime_ns": 1791551934537996870,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/farmland_original_seed0/last.pt",
+    "bytes": 45752069,
+    "mtime_ns": 1791551969874432964,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ottawa_full_seed0/best.pt",
+    "bytes": 44963599,
+    "mtime_ns": 1791551798132328375,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ottawa_full_seed0/last.pt",
+    "bytes": 44963599,
+    "mtime_ns": 1791551831732736967,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ottawa_matched_scale075_seed0/best.pt",
+    "bytes": 44933283,
+    "mtime_ns": 1791551610554083129,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ottawa_matched_scale075_seed0/last.pt",
+    "bytes": 44933283,
+    "mtime_ns": 1791551643530472884,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ottawa_original_seed0/best.pt",
+    "bytes": 45752069,
+    "mtime_ns": 1791551446840187573,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/ottawa_original_seed0/last.pt",
+    "bytes": 45752069,
+    "mtime_ns": 1791551482368592754,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_cnn_yolov8n_seed0/weights/best.pt",
+    "bytes": 6251054,
+    "mtime_ns": 1791522659664772547,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_cnn_yolov8n_seed0/weights/last.pt",
+    "bytes": 6255790,
+    "mtime_ns": 1791522659584769882,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_cnn_yolov8n_seed0/weights/raw_fp32_best.pt",
+    "bytes": 48692588,
+    "mtime_ns": 1791522499591268665,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_cnn_yolov8n_seed0/weights/raw_fp32_last.pt",
+    "bytes": 48706028,
+    "mtime_ns": 1791522659312760820,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_matched_identity_seed0/weights/best.pt",
+    "bytes": 12141434,
+    "mtime_ns": 1791521858079076050,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_matched_identity_seed0/weights/last.pt",
+    "bytes": 12146234,
+    "mtime_ns": 1791521857939068123,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_matched_identity_seed0/weights/raw_fp32_best.pt",
+    "bytes": 95475386,
+    "mtime_ns": 1791520766471742016,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sadd_matched_identity_seed0/weights/raw_fp32_last.pt",
+    "bytes": 95488826,
+    "mtime_ns": 1791521857463041160,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sample_full_seed0/best.pt",
+    "bytes": 33765543,
+    "mtime_ns": 1791551175417243401,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sample_full_seed0/last.pt",
+    "bytes": 33765543,
+    "mtime_ns": 1791551341115005995,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sample_matched_scale075_seed0/best.pt",
+    "bytes": 33735327,
+    "mtime_ns": 1791550644380880648,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sample_matched_scale075_seed0/last.pt",
+    "bytes": 33735327,
+    "mtime_ns": 1791550806845926634,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sample_original_seed0/best.pt",
+    "bytes": 34553931,
+    "mtime_ns": 1791549871877351292,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sample_original_seed0/last.pt",
+    "bytes": 34553931,
+    "mtime_ns": 1791550055568234780,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_full_seed0/best.pt",
+    "bytes": 33750183,
+    "mtime_ns": 1791549158962064403,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_full_seed0/last.pt",
+    "bytes": 33750183,
+    "mtime_ns": 1791549444962618699,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_matched_scale075_seed0/best.pt",
+    "bytes": 33719967,
+    "mtime_ns": 1791548232126529088,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_matched_scale075_seed0/last.pt",
+    "bytes": 33719967,
+    "mtime_ns": 1791548512079436371,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_original_seed0/best.pt",
+    "bytes": 34538571,
+    "mtime_ns": 1791546980195901834,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_original_seed0/last.pt",
+    "bytes": 34538571,
+    "mtime_ns": 1791547268375863731,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_full_seed0/best.pt",
+    "bytes": 44963599,
+    "mtime_ns": 1791552523509389262,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_full_seed0/last.pt",
+    "bytes": 44963599,
+    "mtime_ns": 1791552555486570861,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_matched_scale075_seed0/best.pt",
+    "bytes": 44933283,
+    "mtime_ns": 1791552374271365644,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_matched_scale075_seed0/last.pt",
+    "bytes": 44933283,
+    "mtime_ns": 1791552405840716869,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_original_seed0/best.pt",
+    "bytes": 45752069,
+    "mtime_ns": 1791552267050411895,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_original_seed0/last.pt",
+    "bytes": 45752069,
+    "mtime_ns": 1791552300752033897,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-full/run0/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791812427627627914,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-full/run1/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791814171426579330,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-full/run2/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791815775286985470,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-matched075/run0/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791812238176801733,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-matched075/run1/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791813929610211919,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-matched075/run2/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791815593256593715,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-original/run0/best.pt",
+    "bytes": 15255131,
+    "mtime_ns": 1791813254180934246,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-original/run1/best.pt",
+    "bytes": 15255131,
+    "mtime_ns": 1791814894016597549,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/farmland-original/run2/best.pt",
+    "bytes": 15255131,
+    "mtime_ns": 1791816517134163398,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-full/run0/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791813001207089532,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-full/run1/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791814773848846631,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-full/run2/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791816341580928826,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-matched075/run0/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791812799753762149,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-matched075/run1/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791814572209635704,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-matched075/run2/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791816163183490772,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-original/run0/best.pt",
+    "bytes": 15255131,
+    "mtime_ns": 1791813492689894573,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-original/run1/best.pt",
+    "bytes": 15255131,
+    "mtime_ns": 1791815108444285659,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/ottawa-original/run2/best.pt",
+    "bytes": 15255131,
+    "mtime_ns": 1791816788325867780,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-full/run0/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791812125847116705,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-full/run1/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791813754962971680,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-full/run2/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791815369875993873,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-matched075/run0/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791811953656515389,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-matched075/run1/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791813613680275023,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-matched075/run2/best.pt",
+    "bytes": 14990729,
+    "mtime_ns": 1791815242486563316,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-original/run0/best.pt",
+    "bytes": 15255131,
+    "mtime_ns": 1791812578214835653,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-original/run1/best.pt",
+    "bytes": 15255131,
+    "mtime_ns": 1791814341389592568,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0/jobs/yellow_river-original/run2/best.pt",
+    "bytes": 15255131,
+    "mtime_ns": 1791815917319705041,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-alexnet/run0/best.pt",
+    "bytes": 228184893,
+    "mtime_ns": 1791857457794663328,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-alexnet/run1/best.pt",
+    "bytes": 228184893,
+    "mtime_ns": 1791861620212004793,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-googlenet/run0/best.pt",
+    "bytes": 22605817,
+    "mtime_ns": 1791857685420010810,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-googlenet/run1/best.pt",
+    "bytes": 22605817,
+    "mtime_ns": 1791861894133515631,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-swin_b/run0/best.pt",
+    "bytes": 347583691,
+    "mtime_ns": 1791861301697701741,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-swin_b/run1/best.pt",
+    "bytes": 347583691,
+    "mtime_ns": 1791864629601441048,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-swin_t/run0/best.pt",
+    "bytes": 110395259,
+    "mtime_ns": 1791858229742640841,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-swin_t/run1/best.pt",
+    "bytes": 110395259,
+    "mtime_ns": 1791862301841822078,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-vgg16/run0/best.pt",
+    "bytes": 537216205,
+    "mtime_ns": 1791858958911391890,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-vgg16/run1/best.pt",
+    "bytes": 537216205,
+    "mtime_ns": 1791862625593028610,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-vit_b_16/run0/best.pt",
+    "bytes": 343275449,
+    "mtime_ns": 1791859884449283362,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/a0samplex/jobs/sample-vit_b_16/run1/best.pt",
+    "bytes": 343275449,
+    "mtime_ns": 1791863649982563562,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "bytes": 121094026,
+    "mtime_ns": 1788341620349500619,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "weights/historical_ssdd/baseline_best.pt",
+    "bytes": 12315576,
+    "mtime_ns": 1787919080266968848,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  },
+  {
+    "path": "weights/historical_ssdd/ex27_best.pt",
+    "bytes": 12269861,
+    "mtime_ns": 1787918778322421361,
+    "sha256": null,
+    "status": "not_read_not_uploaded"
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "status": "TRAINING_COMPLETE",
+  "task": "change_detection",
+  "method": "ddnet",
+  "dataset": "Ottawa",
+  "seed": 1,
+  "protocol": "author_architecture_native_pseudo_common_optimization_v1",
+  "protocol_sha256": "777013c652ed47960bd1877c4f33e910088a6941e15c08ac69172ee141e5344e",
+  "device": "cuda:0",
+  "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+  "test_evaluated": true,
+  "best_epoch": 20,
+  "trained_epochs": 50,
+  "optimizer_updates": 6250,
+  "best_pseudo_val_loss": 0.007993118675949517,
+  "reloaded_pseudo_validation": {
+    "loss": 0.007993118675949517,
+    "accuracy": 0.999,
+    "count": 2000
+  },
+  "metrics": {
+    "TP": 14677,
+    "FP": 539,
+    "FN": 1372,
+    "TN": 84912,
+    "pixels": 101500,
+    "precision": 0.9645767613038907,
+    "recall": 0.9145118075892579,
+    "f1": 0.9388773388773389,
+    "iou": 0.8847962382445141,
+    "overall_accuracy": 0.9811724137931035,
+    "kappa": 0.9277590653774238,
+    "percent_error": 1.8827586206896552
+  },
+  "before_fixed_postprocess_metrics": {
+    "TP": 14757,
+    "FP": 821,
+    "FN": 1292,
+    "TN": 84630,
+    "pixels": 101500,
+    "precision": 0.9472974707921428,
+    "recall": 0.9194965418406131,
+    "f1": 0.9331899958895881,
+    "iou": 0.8747480735032602,
+    "overall_accuracy": 0.9791822660098523,
+    "kappa": 0.9208634046946778,
+    "percent_error": 2.0817733990147786
+  },
+  "inference": {
+    "neural_pixels": 5472,
+    "all_pixels": 101500,
+    "fixed_component_threshold": 20,
+    "connectivity": 2
+  },
+  "ground_truth_sha256": "37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131",
+  "ground_truth_first_access": "after selected-checkpoint inference completed",
+  "parameters": 6712,
+  "trainable_parameters": 6712,
+  "best_weight_sha256": "8757f4f8ab14db635f71bc524f4e916f4021150e4419f8b6c2dee883420e4545",
+  "last_weight_sha256": "b2e6e21e67f4516bc1468938af16ddf146809429d6dde8e67905db1395b4529e",
+  "checkpoint": {
+    "path": "best.pt",
+    "sha256": "8757f4f8ab14db635f71bc524f4e916f4021150e4419f8b6c2dee883420e4545"
+  },
+  "elapsed_seconds": 203.8002243199735,
+  "seed_count_recommendation_from_actual_runtime": 3,
+  "original_paper_score_reproduction": false,
+  "completed_at": "2026-10-12T14:35:08.587232+00:00"
+}

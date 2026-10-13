@@ -1,0 +1,529 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,array,multirow}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{placeins}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.8}
+\usepackage{xeCJK}
+\usepackage{newunicodechar}
+\setmainfont{TeX Gyre Termes}
+\renewcommand{\rmdefault}{TeXGyreTermes(0)}
+\newunicodechar{①}{\textcircled{1}}
+\newunicodechar{②}{\textcircled{2}}
+\newunicodechar{③}{\textcircled{3}}
+\setCJKmainfont[AutoFakeBold,AutoFakeSlant]{FandolSong-Regular}
+\setCJKsansfont[AutoFakeBold,AutoFakeSlant]{FandolHei-Regular}
+\setCJKmonofont{FandolFang-Regular}
+\emergencystretch=1em
+\newcommand{\pp}{\,\mathrm{pp}}
+\renewcommand{\IEEEkeywordsname}{关键词}
+\title{\LARGE 面向 SAR 图像的可靠性引导 Mamba 状态传播方法\\[0.5em]
+{\large Reliability-Guided Selective State Propagation in Mamba for SAR Imagery}}
+\author{}
+\IEEEaftertitletext{\begin{center}\footnotesize 论文工作稿：2026 年 10 月 9 日（证据与图文修订版）\end{center}}
+\begin{document}
+\maketitle
+\begin{abstract}
+视觉状态空间模型通过输入依赖的选择性更新建模长程关系。对于 SAR 图像，局部响应的强弱不足以单独表明其任务相关性，因此值得研究局部结构线索能否为已有的内容选择提供补充。本文提出可靠性引导选择性状态传播方法（Reliability-Guided Selective State Propagation，RGSP）：局部响应修正（Local Response Correction，LRC）利用短程趋势与残差调整扫描前特征；局部结构引导模块（Local Structure Guidance Module，LSGM）融合趋势和二维邻域变化，生成参与扫描输入调制与离散化步长构造的逐位置条件信号。这里的可靠性是设计目标，而非已经校准的概率含义。本文区分系统替换效果与模块归因，并报告已有实验的正负结果及审计限制。在固定阳性子集的 SADD 三种子实验中，Full 的 AP$_{50:95}$ 为 $51.98\pm2.59\%$，低于原始网络的 $53.35\pm0.88\%$，尚未显示稳定收益。旧 SSDD 实验因关闭参数漂移和结构差异仅作为历史观察，新的匹配控制协议单独给出，未完成结果不作推断。跨任务记录进一步说明，该结构引导设计的收益具有任务与配置依赖性。
+\end{abstract}
+\begin{IEEEkeywords}
+合成孔径雷达；视觉状态空间模型；Mamba；局部结构引导；选择性状态更新
+\end{IEEEkeywords}
+
+\section{引言}\label{sec:intro}
+合成孔径雷达（Synthetic Aperture Radar，SAR）具有全天时、全天候观测能力，广泛用于目标识别、检测和地表变化分析。SAR 图像中的局部响应受成像机理、目标散射和背景共同影响：显著响应可能来自目标散射中心，也可能对应其他高亮结构；较弱响应也可能包含边缘或细粒度信息。因此，响应强度与任务相关性并不等价，需要结合邻域关系理解局部特征。图~\ref{fig:motivation}(a) 展示这一观察，但原始图像中的亮度差异本身并不能证明中间特征不可区分。
+
+目标判别还依赖分布于不同位置的散射中心及其空间组合。CNN 通过层级卷积聚合上下文\cite{resnet2015}，视觉 Transformer 通过自注意力建立长距离联系\cite{vit2020}。Mamba 则采用输入依赖的选择性状态更新，以随序列长度近线性增长的计算量进行递推建模\cite{mamba2023}。Vim、VMamba 和 Mamba YOLO 分别探索了视觉序列、二维选择性扫描和层级检测网络中的状态空间建模\cite{vim2024,vmamba2024,mambayolo2024}。在这类模型中，当前位置输入不仅影响当前输出，还可以经递推状态影响后续位置，因此信息进入扫描和参与更新的方式值得共同考察。
+
+通用 Mamba 已有内容依赖的选择机制，其输入也可以包含邻域上下文。本文不将其概括为缺少空间信息或无法抑制干扰，而研究一个更具体的问题：\emph{能否从扫描前特征的局部趋势与二维邻域变化中构造结构描述，将其作为附加条件参与扫描输入和离散化步长的生成？} 图~\ref{fig:motivation}(b)、(c) 保留同一内容依赖更新流程，并以新增路径表示研究对象；它们不构成噪声传播或抑制已经发生的实验证据。
+
+为此，RGSP 首先用 LRC 根据短程趋势与残差调整待扫描的中间特征，再用 LSGM 联合编码趋势和二维邻域变化，生成逐位置结构引导信号。该信号沿两条路径发挥作用：一条调节扫描输入幅度，另一条参与离散化步长的构造。两条路径共同影响递推更新，但不对应两个独立的物理噪声滤波器。本文保留 RGSP 的工作名称，其中“可靠性”指利用结构关系改善任务表征的设计目标；实际引导量由任务损失学习，不是目标概率或校准置信度。
+
+本文从实现机制、配置比较和适用边界三个层面进行分析。检测作为主要验证任务，分类与变化检测作为跨任务诊断，分割作为密集预测边界分析。现有结果不能支持完整模块稳定优于基线，因此本文保留退化结果，并区分已完成观察与仍待验收的控制实验。主要贡献为：
+\begin{enumerate}
+\item 提出局部结构参与选择性状态更新的实现方式，将短程特征修正与递推参数条件化连接起来。
+\item 构建 LRC 与 LSGM，明确结构引导分别作用于扫描输入和离散化步长，而状态写入/读出投影仍由内容特征生成。
+\item 给出可追溯的配置比较与证据边界：报告 SADD 三种子结果及跨任务正负观察，纠正旧 SSDD 的模块归因，并列明结构匹配控制的设计与未完成项。
+\end{enumerate}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig1_motivation_20261009.pdf}
+\caption{\textbf{研究动机与设计区别。}（a）SSDD 训练图像及同灰度映射裁块，区域 1 为官方标注舰船，区域 2 为语义未核验的人工选取高亮区域。（b）内容特征已生成输入依赖参数，并直接参与状态更新。（c）RGSP 保留内容依赖路径，增加扫描前 LRC 和局部结构引导；橙色虚线仅调节扫描输入与步长，不作用于 $B_t$。右侧为特征空间设计示意，不代表实测噪声传播或抑制效果。读出部分为简洁起见未画出。}
+\label{fig:motivation}
+\end{figure*}
+
+\section{相关工作}\label{sec:related_work}
+
+\subsection{SAR 图像分析}
+
+随着深度学习的发展，SAR 图像分析已经从传统的统计建模逐步转向基于 CNN、Transformer 等深度网络的特征学习，并广泛应用于目标识别、目标检测和语义分割等任务。在 SAR 目标识别中，已有方法主要围绕判别性特征学习、局部与全局信息融合以及有限样本条件下的鲁棒表示展开。例如，基于 ViT 的方法利用全局自注意力建模目标不同区域之间的关系，并结合对比学习缓解标注样本不足的问题；其他研究则通过多层特征约束、局部--全局交互等方式提高不同观测条件下的目标判别能力。对于 SAR 目标检测，研究重点更多集中于复杂背景、小目标和多尺度目标的表征。Speckle-Free SAR Ship Detection 探讨了散斑处理与检测性能之间的关系\cite{specklefree}；SAR-NanoShipNet 通过尺度自适应和特征增强改善小尺度舰船检测\cite{sarnano}；SFD-Net 则通过特征分离和多尺度融合提高目标与背景干扰之间的可分性\cite{sfdnet}。在语义分割等密集预测任务中，局部连续性、边界结构和多尺度上下文同样被广泛用于提高复杂 SAR 场景的区域解析能力\cite{fusar}。
+
+尽管上述方法面向的任务不同，其核心问题具有一定共性。由于 SAR 图像中的目标通常表现为离散散射响应及其空间组合，单个位置的响应强度难以完整描述其结构意义，因此现有方法普遍通过邻域上下文、多尺度关系、目标边界或局部--全局交互增强特征表达。尤其在复杂背景下，如何区分具有稳定结构意义的目标响应与孤立散射、杂波响应，是目标识别、检测和分割等任务共同面对的问题。这些研究说明，结合局部空间关系理解 SAR 响应是提升下游任务性能的重要途径，也为进一步研究局部结构信息与长距离特征建模之间的关系提供了基础。
+
+
+\subsection{遥感图像中的视觉状态空间模型}
+
+近年来，Mamba 及视觉状态空间模型因其线性复杂度和长距离建模能力受到广泛关注。早期视觉 SSM 主要围绕如何将二维图像转换为适合状态空间递归的序列展开，随后研究逐渐扩展到多方向扫描、空间结构建模和自适应信息选择。Spatial-Mamba 不再仅依赖扫描路径建立二维联系，而是在状态空间中构造邻域连接，并通过结构感知状态融合增强空间依赖\cite{spatialmamba2025}；DAMamba 则利用动态自适应扫描，根据输入内容调整采样区域和扫描顺序，以提高状态空间模型对复杂空间结构的适应能力\cite{damamba2025}。这些工作表明，除长距离递归能力之外，二维空间关系以及信息进入状态空间的组织方式同样是视觉 SSM 的关键设计因素。
+
+在遥感领域，已有研究进一步结合遥感图像的空间分布特点对 Mamba 进行适配。RS-Mamba 针对大幅面遥感影像提出全向选择性扫描，通过多个空间方向聚合全局上下文，并在语义分割和变化检测任务上验证了其有效性\cite{rsmamba2024}。RSMTMamba 则利用 Mamba 建模不同遥感任务之间的特征关系，在统一框架中实现语义分割、高度估计和边界检测\cite{rstmtmamba2025}。这些工作主要从扫描方向、全局上下文以及跨任务特征交互等角度拓展状态空间模型在遥感场景中的应用。
+
+针对 SAR 图像，也已经出现了一系列领域化的 Mamba 方法。MaDiNet 面向 SAR 目标检测，利用 Gamma 分布描述 SAR 图像统计特性，并设计 MambaSAR 建模目标的空间结构信息\cite{madinet2025}；MCMN 在 PolSAR 舰船检测中构造融合 Doppler 与散射特性的输入表示，并采用 Mamba--CNN 双分支结构联合提取局部细节和长距离上下文\cite{mcmn}。此外，RSS-Net 将二维选择性状态空间模型与 CNN 局部特征结合用于 SAR 去斑\cite{rssnet}，MambaDIP 则将 Mamba 与深度图像先验和 SAR 统计模型结合，用于散斑抑制与图像增强\cite{mambadip}。总体来看，现有遥感及 SAR Mamba 方法已经从扫描组织、空间状态交互、局部--全局融合以及领域先验注入等多个角度改善状态空间建模。
+
+然而，现有方法对 SAR 结构信息的利用主要集中于输入特征构造、网络分支设计、扫描组织或状态间的空间交互。对于选择性状态空间模型而言，如何从当前响应与其局部邻域的关系中提取结构线索，并进一步利用这些线索条件化递归状态更新，仍有进一步研究空间。本文关注这一更具体的问题，即将 SAR 局部结构描述直接引入扫描输入与离散化步长的构造。
+
+与一般空间门控仅重标定输入或输出特征相比，RGSP 还将结构条件接入步长 logits；与改变扫描顺序或在状态间增加二维连接的方法相比，本文检测实现保留单向行优先扫描，在既定递推内调整输入驱动与更新系数。这是计算路径上的区别，不意味着其他方法无法编码局部结构，也不预设这一设计必然更有效。其额外价值应由保持扫描组织、归一化和前馈结构一致的控制实验判断。
+
+
+
+\FloatBarrier
+\section{方法}
+\label{sec:method}
+
+\subsection{总体网络架构}
+\label{sec:overall_architecture}
+
+本文提出可靠性引导选择性状态传播机制
+（Reliability-Guided Selective State Propagation，RGSP），
+利用局部趋势与邻域变化调节视觉状态空间模型的递归更新。
+如图~\ref{fig:overview}(a) 所示，
+整体任务网络由输入嵌入、分层骨干、特征聚合或解码模块以及任务头组成。
+SAR 图像首先经过输入嵌入转换为特征表示，
+随后由分层骨干提取不同空间尺度的特征，
+再通过任务对应的特征聚合或解码模块与预测头生成输出。
+
+RGSP 集成于骨干网络的状态空间块中，
+用于调整中间特征进入选择性扫描及参与状态更新的方式。
+在本文的检测配置中，
+RGSP 块替换第二个骨干阶段中 P3/8 特征层的状态空间块，
+其输出继续传入后续骨干阶段和检测结构。
+该替换保持所属特征层的空间尺寸与通道数，
+使其能够与后续网络层衔接。
+
+RGSP 的状态建模过程与任务头解耦。
+分类、检测和分割分别采用各自的网络配置、预测头与训练目标，
+图~\ref{fig:overview}(a) 仅展示检测实例，不将其外推为所有任务共享的完整网络。
+不同任务的具体接入方式在实验部分说明。
+以下以骨干内部的 RGSP 替换块为对象，
+介绍其整体结构及内部计算过程。
+
+\begin{figure*}[!t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/fig2_architecture_20261009.pdf}
+    \caption{
+    整体网络架构与 RGSP 模块。
+    （a）以检测网络为例，展示 RGSP 在 P3/8 特征层中的插入位置；
+    不同任务对应独立的网络配置与任务头。
+    （b）完整替换块，包含两次归一化、残差融合和前馈分支；
+    （c）放大状态建模分支 $\mathcal{R}$，
+    依次展示局部响应修正、局部结构引导及结构条件化状态更新。
+    深色实线表示特征流，橙色虚线表示结构引导路径。
+    扫描后的旁路融合、门控和输出投影在图中合并展示。
+    }
+    \label{fig:overview}
+\end{figure*}
+
+
+\subsection{RGSP 模块}
+\label{sec:rgsp}
+
+给定中间特征
+$F\in\mathbb{R}^{b\times H\times W\times C}$，
+其中 $b$、$H$、$W$ 和 $C$
+分别表示批大小、空间高度、空间宽度和通道数，
+实现中采用 $b\times C\times H\times W$ 存储顺序，
+转置后与上述数学记法等价。
+首先按行优先顺序展平空间维，
+得到长度为 $N=HW$ 的序列
+$X\in\mathbb{R}^{b\times N\times C}$。
+RGSP 块由状态建模分支与前馈分支组成，
+两者依次通过残差连接更新特征：
+\begin{equation}
+\begin{aligned}
+U
+&=
+X+a_1\odot
+\mathcal{R}\left(\operatorname{LN}_1(X)\right),
+\\
+X_{\mathrm{out}}
+&=
+U+a_2\odot
+\operatorname{FFN}\left(\operatorname{LN}_2(U)\right),
+\end{aligned}
+\label{eq:rgsp_block}
+\end{equation}
+其中，$\mathcal{R}$ 表示结构条件化状态建模分支，
+$\operatorname{FFN}$ 为带 GELU 激活的两层前馈网络，
+$a_1,a_2\in\mathbb{R}^{C}$
+为可学习的逐通道缩放参数。
+最终将 $X_{\mathrm{out}}$ 恢复为空间特征图，
+作为该块的输出。
+
+如图~\ref{fig:overview}(c) 所示，
+状态建模分支 $\mathcal{R}$ 包含三个相互衔接的组成部分。
+局部响应修正
+（Local Response Correction，LRC）
+利用序列邻域关系调整扫描前的特征；
+局部结构引导模块
+（Local Structure Guidance Module，LSGM）
+融合趋势与二维邻域变化，生成逐位置结构引导信号；
+结构条件化选择性状态更新将该信号分别用于扫描输入调制与离散化步长生成，
+完成递归建模和输出映射。
+
+这一流程包含内容与结构两条相互联系的路径：
+修正特征提供待扫描的内容，
+局部结构描述提供调节扫描过程的条件。
+其中，可靠性是采用局部结构线索的设计动机，
+实际生成的引导信号通过下游任务损失联合学习，
+用于控制不同位置参与状态更新的方式。
+以下记
+$x=\operatorname{LN}_1(X)$，
+依次介绍三个组成部分。
+
+
+\subsubsection{局部响应修正}
+\label{sec:lrc}
+
+SAR 局部响应的结构意义依赖其与周围位置之间的关系。
+为在扫描前建模这种关系，
+LRC 首先沿序列维估计短程趋势，
+再利用当前位置相对于趋势的偏离调整输入特征。
+
+具体而言，
+采用核宽为 $3$ 的逐通道一维卷积估计局部趋势：
+\begin{equation}
+\bar{x}
+=
+\mathcal{L}(x)
+=
+\operatorname{DWConv1D}_{k=3}(x).
+\label{eq:local_trend}
+\end{equation}
+该算子在各通道内独立聚合相邻 token，
+卷积参数与任务网络联合优化。
+随后定义趋势残差与修正特征：
+\begin{equation}
+r=x-\bar{x},
+\qquad
+\tilde{x}=x-\lambda_s r,
+\label{eq:residual}
+\end{equation}
+其中 $\lambda_s$ 为块级可学习标量。
+残差 $r$ 描述当前位置相对于短程趋势的偏离，
+$\lambda_s$ 控制这一偏离在修正过程中的作用。
+趋势卷积在初始化时是均值核，训练后并不保证保持低通性质；
+$\lambda_s$ 未被约束为非负或小于一，残差也不等同于散斑。
+通过联合学习趋势卷积与修正系数，
+LRC 利用邻域关系调整后续扫描所使用的特征表示。
+
+LRC 同时输出 $\bar{x}$ 与 $\tilde{x}$。
+局部趋势 $\bar{x}$ 用于生成结构描述和趋势能量，
+修正特征 $\tilde{x}$ 则进入二维邻域统计及内容投影。
+由于趋势卷积沿行优先展平序列执行，
+图像行末与下一行行首会成为相邻 token。
+因此，该算子刻画与扫描顺序一致的一维短程关系，
+二维空间变化由后续 LSGM 补充。
+
+
+\subsubsection{局部结构引导}
+\label{sec:lsgm}
+
+局部趋势描述沿扫描序列的短程关系，
+二维邻域统计补充空间响应的变化信息。
+LSGM 联合编码这两类描述，
+构建用于条件化状态更新的逐位置结构引导信号。
+
+首先将修正特征 $\tilde{x}$ 恢复为空间布局，
+记为 $\widetilde{F}$，
+并逐通道计算 $3\times3$ 邻域标准差：
+\begin{equation}
+S=
+\sqrt{
+\max\left(
+\mathcal{P}(\widetilde{F}^{\,2})
+-
+\mathcal{P}(\widetilde{F})^{2},
+\,0
+\right)
++\epsilon
+}.
+\label{eq:local_std}
+\end{equation}
+其中，平方运算逐元素执行，
+$\mathcal{P}$ 表示局部均值池化，
+$\epsilon$ 为数值稳定常数。
+图像边界处的统计量仅由有效邻域位置计算。
+将 $S$ 按相同空间顺序展平为 $s$，
+并与趋势特征进行通道拼接：
+\begin{equation}
+v=[\bar{x},s]
+\in\mathbb{R}^{b\times N\times2C}.
+\label{eq:structural_descriptor}
+\end{equation}
+
+结构描述 $v$ 经过通道归一化与两层感知机，
+生成引导信号：
+\begin{equation}
+\begin{aligned}
+I&=\sigma\left(
+W_2\operatorname{GELU}
+\left(W_1\operatorname{LN}(v)+b_1\right)+b_2
+\right),\\
+&\qquad I\in(0,1)^{b\times N\times1}.
+\end{aligned}
+\label{eq:importance}
+\end{equation}
+其中，$\sigma$ 为 Sigmoid 函数，
+$W_1,W_2,b_1,b_2$ 为可学习参数。
+隐藏层宽度为
+$\max(\lfloor C/4\rfloor,16)$。
+LSGM 为每个空间位置输出一个标量，
+并在后续运算中沿通道维广播。
+
+局部变化既可能来自目标边缘，也可能来自背景起伏，
+因此 LSGM 通过任务训练联合解释趋势与邻域变化，
+不预设局部标准差与信息价值之间的单调关系。
+本文将 $I$ 作为结构条件信号，
+而非目标概率或校准置信度。
+如图中的两条橙色虚线所示，
+$I$ 分别用于扫描输入调制与离散化步长条件化。
+
+
+\subsubsection{结构条件化选择性状态更新}
+\label{sec:structure_conditioned_ssm}
+
+获得修正特征 $\tilde{x}$ 与结构引导信号 $I$ 后，
+RGSP 将二者分别用于内容构造和递推调节。
+以下省略批维，
+以 $t$ 表示序列位置，
+以 $d_s$ 表示每个通道的状态维数。
+
+\paragraph{内容投影。}
+首先将修正特征映射为内容分支与输出门控分支：
+\begin{equation}
+[u_t,z_t]
+=
+W_{\mathrm{in}}\tilde{x}_t,
+\qquad
+u_t,z_t\in\mathbb{R}^{C}.
+\label{eq:input_projection}
+\end{equation}
+内容分支进一步生成状态写入与读出参数：
+\begin{equation}
+B_t=W_Bu_t,
+\qquad
+C_t=W_Cu_t,
+\qquad
+B_t,C_t\in\mathbb{R}^{d_s}.
+\label{eq:ssm_parameters}
+\end{equation}
+$B_t$ 与 $C_t$ 均由调制前的内容特征 $u_t$ 生成，
+结构引导信号则通过下述两条路径参与扫描输入和步长的构造。
+
+\paragraph{扫描输入调制。}
+首先由局部趋势计算逐位置的趋势能量：
+\begin{equation}
+E_t
+=
+\frac{\|\bar{x}_t\|_2}{\sqrt{C}}.
+\label{eq:trend_energy}
+\end{equation}
+随后结合趋势能量与结构引导，
+构造扫描输入的两个缩放因子：
+\begin{align}
+\gamma_t
+&=
+g_{\min}
++
+(1-g_{\min})
+\sigma\left(
+-\alpha s_nE_t+\beta(I_t-0.5)
+\right),
+\label{eq:energy_modulation}\\
+g_{w,t}
+&=
+\max\left(
+0.1,\,
+1+\tanh(\rho)(I_t-0.5)
+\right),
+\label{eq:write_modulation}\\
+u_{\mathrm{scan},t}
+&=
+\gamma_tg_{w,t}u_t.
+\label{eq:modulation}
+\end{align}
+其中，$\alpha,\beta,\rho$ 为可学习标量，
+$s_n$ 为固定能量缩放系数，
+$g_{\min}$ 为 $\gamma_t$ 的下界。
+$\gamma_t$ 综合趋势能量与结构引导，
+$g_{w,t}$ 提供以 $I_t=0.5$ 为中心的输入缩放。
+两个因子共同作用于内容分支，
+形成实际送入扫描的输入驱动。
+
+\paragraph{离散化步长条件化。}
+除扫描输入外，
+结构引导信号还参与离散化步长的生成：
+\begin{equation}
+\Delta_t
+=
+\operatorname{softplus}
+\left(
+W_{\Delta}u_t+b_{\Delta}+\eta I_t
+\right),
+\qquad
+\Delta_t\in\mathbb{R}_{>0}^{C},
+\label{eq:delta_condition}
+\end{equation}
+其中 $\eta$ 为可学习标量，
+$I_t$ 沿通道维广播。
+该操作在内容相关的步长 logits 上加入结构条件项，
+使递推参数同时依赖当前位置内容与局部邻域描述。
+
+\paragraph{选择性递推与输出。}
+状态矩阵采用如下参数化：
+\begin{equation}
+A=-\exp(A_{\log})
+\in\mathbb{R}^{C\times d_s},
+\label{eq:state_matrix}
+\end{equation}
+其中指数运算逐元素执行。
+令 $h_{t,c,j}$ 表示位置 $t$、
+通道 $c$ 和状态维 $j$ 上的隐藏状态，
+则选择性递推为
+\begin{equation}
+\begin{aligned}
+h_{t,c,j}&=\exp\left(\Delta_{t,c}A_{c,j}\right)h_{t-1,c,j}
++\Delta_{t,c}B_{t,j}u_{\mathrm{scan},t,c},\\
+h_{0,c,j}&=0.
+\end{aligned}
+\label{eq:rgsp_state}
+\end{equation}
+对状态维进行读出，
+并加入修正特征的逐通道旁路：
+\begin{equation}
+y_{t,c}
+=
+\sum_{j=1}^{d_s}C_{t,j}h_{t,c,j}
++
+D_c\tilde{x}_{t,c},
+\label{eq:ssm_readout}
+\end{equation}
+其中 $D\in\mathbb{R}^{C}$ 为可学习参数。
+随后通过 SiLU 门控与输出投影得到
+\begin{equation}
+o_t
+=
+W_{\mathrm{out}}
+\left(
+y_t\odot\operatorname{SiLU}(z_t)
+\right).
+\label{eq:rgsp_output}
+\end{equation}
+上述旁路融合、门控和投影对应图中的
+``Output fusion''。
+
+在式~\eqref{eq:rgsp_state} 中，
+$u_{\mathrm{scan},t}$ 调节当前内容的输入驱动，
+$\Delta_t$ 同时影响历史状态衰减与当前输入写入。
+因此，同一结构引导信号通过两条路径参与状态更新：
+一条调整进入递推的内容幅度，
+另一条参与递推系数的生成。
+由于 $A$ 的元素为负，
+增大 $\Delta_t$ 会增强相应历史状态分量的衰减，
+同时改变当前输入项，
+其作用需结合两部分共同理解。
+
+将各位置输出 $o_t$ 组成序列，
+即得到式~\eqref{eq:rgsp_block} 中
+状态建模分支 $\mathcal{R}$ 的输出。
+该序列经块级残差融合与前馈分支形成最终特征，
+再传入后续网络层。
+由此，RGSP 将局部结构描述、
+扫描输入构造和选择性状态更新连接为完整的特征建模过程。
+
+\FloatBarrier
+\input{sections/experiments}
+\section{结论}\label{sec:conclusion}
+本文提出 RGSP，通过局部响应修正和结构引导，将局部趋势与二维邻域变化接入扫描输入和离散化步长的构造。该设计提供了局部结构参与选择性状态更新的一种实现，而不把学习得到的引导量等同于已校准的可靠性。
+
+现有证据尚未显示完整方法具有稳定、跨任务的性能优势。SADD 三种子实验中，Full 的 AP$_{50:95}$ 均值低于 Original；旧 SSDD 的关闭参数漂移使独立组件归因不再成立，跨任务记录也包含不同程度的退化。后续应依据结构匹配控制和一致的训练/评估协议检验各条路径的贡献，补齐效率、机制与定性证据，再确定方法的适用范围。
+
+\IEEEtriggeratref{16}
+\begin{thebibliography}{99}
+\interlinepenalty=10000
+\bibitem{resnet2015}
+K. He, X. Zhang, S. Ren, and J. Sun, ``Deep Residual Learning for Image Recognition,'' in \emph{Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)}, 2016, pp. 770--778. arXiv:1512.03385, 2015.
+
+\bibitem{vit2020}
+A. Dosovitskiy et al., ``An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale,'' in \emph{Proc. Int. Conf. Learning Representations (ICLR)}, 2021. arXiv:2010.11929, 2020.
+
+\bibitem{mamba2023}
+A. Gu and T. Dao, ``Mamba: Linear-Time Sequence Modeling with Selective State Spaces,'' arXiv:2312.00752, 2023. \url{https://arxiv.org/abs/2312.00752}.
+
+\bibitem{vim2024}
+L. Zhu et al., ``Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model,'' arXiv:2401.09417, 2024. \url{https://arxiv.org/abs/2401.09417}.
+
+\bibitem{vmamba2024}
+Y. Liu, Y. Tian, Y. Zhao, H. Yu, L. Xie, Y. Wang, Q. Ye, and Y. Liu, ``VMamba: Visual State Space Model,'' in \emph{Advances in Neural Information Processing Systems (NeurIPS)}, 2024. arXiv:2401.10166.
+
+\bibitem{mambayolo2024}
+Z. Wang et al., ``Mamba YOLO: A Simple Baseline for Object Detection with State Space Model,'' arXiv:2406.05835, 2024. \url{https://arxiv.org/abs/2406.05835}.
+
+\bibitem{rsmamba2024}
+Y. Zhao et al., ``RS-Mamba for Large Remote Sensing Image Dense Prediction,'' \emph{IEEE Transactions on Geoscience and Remote Sensing}, 2024. doi:10.1109/TGRS.2024.3425540.
+
+\bibitem{rstmtmamba2025}
+Y. Shen et al., ``Learning Cross-Task Features With Mamba for Remote Sensing Image Multitask Prediction,'' \emph{IEEE Transactions on Geoscience and Remote Sensing}, 2025. doi:10.1109/TGRS.2025.3540573.
+
+\bibitem{madinet2025}
+J. Zhou et al., ``MaDiNet: Mamba Diffusion Network for SAR Target Detection,'' \emph{IEEE Transactions on Circuits and Systems for Video Technology}, vol. 35, no. 11, pp. 10787--10800, 2025. doi:10.1109/TCSVT.2025.3574657.
+
+\bibitem{mambadip}
+Chinchu A. et al., ``MambaDIP: Mamba-Based Deep Image Prior Framework for Despeckling and Enhancement of SAR Images,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 19, pp. 21255--21271, 2026. doi:10.1109/JSTARS.2026.3702550.
+
+\bibitem{rssnet}
+M. Huang, Y. Yang, and Q. Sun, ``RSS-Net: A Mamba-Based Network for SAR Image Denoizing,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 19, pp. 3539--3551, 2026. doi:10.1109/JSTARS.2025.3647971.
+
+\bibitem{specklefree}
+S.-W. Chen, X.-C. Cui, X.-S. Wang, and S.-P. Xiao, ``Speckle-Free SAR Image Ship Detection,'' \emph{IEEE Transactions on Image Processing}, vol. 30, pp. 5969--5983, 2021. doi:10.1109/TIP.2021.3089936.
+
+\bibitem{sarnano}
+Y. Zhang et al., ``SAR-NanoShipNet: A Scale-Adaptive Network for Robust Small Ship Detection in SAR Imagery,'' \emph{ISPRS Journal of Photogrammetry and Remote Sensing}, vol. 232, pp. 262--279, 2026. doi:10.1016/j.isprsjprs.2025.12.006.
+
+\bibitem{sfdnet}
+B. Wu et al., ``A Novel Star Feature Decoupling Network for Multiscale SAR Image Ship Detection,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 19, pp. 18294--18305, 2026. doi:10.1109/JSTARS.2026.3688771.
+
+\bibitem{fusar}
+X. Shi et al., ``Object-Level Semantic Segmentation on the High-Resolution Gaofen-3 FUSAR-Map Dataset,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, 2021. doi:10.1109/JSTARS.2021.3063797.
+
+\bibitem{spatialmamba2025}
+C. Xiao, M. Li, Z. Zhang, D. Meng, and L. Zhang, Spatial-Mamba: Effective Visual State Space Models via Structure-Aware State Fusion, in \emph{Proc. Int. Conf. Learning Representations (ICLR)}, 2025. arXiv:2410.15091.
+
+\bibitem{damamba2025}
+T. Li, C. Li, J. Lyu, H. Pei, B. Zhang, T. Jin, and R. Ji, DAMamba: Vision State Space Model with Dynamic Adaptive Scan, in \emph{Advances in Neural Information Processing Systems (NeurIPS)}, vol. 38, 2025. doi:10.52202/085713-1326.
+
+\bibitem{mcmn}
+G. Gao, C. Li, X. Zhang, B. Yao, and Z. Chen, ``Mamba-CNN hybrid Multi-scale ship detection Network driven by a Dual-perception feature of Doppler and Scattering,'' \emph{ISPRS Journal of Photogrammetry and Remote Sensing}, vol. 232, pp. 656--674, 2026. doi:10.1016/j.isprsjprs.2026.01.004.
+
+\bibitem{madinet_preprint}
+J. Zhou et al., ``MaDiNet: Mamba Diffusion Network for SAR Target Detection,'' arXiv:2411.07500v1, 2024, Tables 3--5.
+
+\bibitem{ssdd2017}
+J. Li, C. Qu, and J. Shao, ``Ship Detection in SAR Images Based on an Improved Faster R-CNN,'' in \emph{Proc. SAR in Big Data Era}, 2017.
+
+\bibitem{ssdd2021}
+T. Zhang et al., ``SAR Ship Detection Dataset (SSDD): Official Release and Comprehensive Data Analysis,'' \emph{Remote Sensing}, vol. 13, no. 18, art. 3690, 2021. doi:10.3390/rs13183690.
+
+\bibitem{sardataset}
+Y. Wang et al., ``A SAR Dataset of Ship Detection for Deep Learning under Complex Backgrounds,'' \emph{Remote Sensing}, vol. 11, no. 7, art. 765, 2019. doi:10.3390/rs11070765.
+
+\bibitem{saraircraft}
+Z. Wang et al., ``SAR-AIRcraft-1.0: High-Resolution SAR Aircraft Detection and Recognition Dataset,'' \emph{Journal of Radars}, vol. 12, no. 4, pp. 906--922, 2023. doi:10.12000/JR23043.
+\end{thebibliography}
+\end{document}

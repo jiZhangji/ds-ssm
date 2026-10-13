@@ -1,0 +1,97 @@
+{
+  "actual_head_nc": 7,
+  "class6_classifier_gradient_abs": 2.781202793121338,
+  "class_names": {
+    "0": "Boeing737",
+    "1": "Boeing787",
+    "2": "A330",
+    "3": "A220",
+    "4": "A320/321",
+    "5": "ARJ21",
+    "6": "other"
+  },
+  "constructor_nc": 1,
+  "control": "full",
+  "controls": [
+    {
+      "alpha": 0.5,
+      "beta_i": 1.0,
+      "buffer_scalars": [],
+      "control": "full",
+      "delta_path": true,
+      "descriptor_mode": "trend_std",
+      "eta_i": 0.10000000149011612,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "lambda_s": 0.5,
+      "lrc_enabled": true,
+      "min_retain": 0.5,
+      "name": "model.3",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "predictor_input_features": 128,
+      "predictor_parameters_active": true,
+      "requires_grad": {
+        "alpha": true,
+        "beta_i": true,
+        "eta_i": true,
+        "lambda_s": true,
+        "rho_i": true
+      },
+      "rho_i": 1.0,
+      "trend_parameters_active": true
+    }
+  ],
+  "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "gradient_tensors": 401,
+  "loss": 14.968584060668945,
+  "loss_components": [
+    3.0232019424438477,
+    2.6028220653533936,
+    1.8582683801651
+  ],
+  "no_optimizer_step_no_fit_loop": true,
+  "runtime_nc": 7,
+  "seconds": 1.335827065006015,
+  "status": "PASS",
+  "synthetic_image_shape": [
+    2,
+    3,
+    128,
+    128
+  ],
+  "synthetic_target_class_ids": [
+    0,
+    6
+  ],
+  "training_feature_shapes": [
+    [
+      2,
+      71,
+      16,
+      16
+    ],
+    [
+      2,
+      71,
+      8,
+      8
+    ],
+    [
+      2,
+      71,
+      4,
+      4
+    ]
+  ]
+}

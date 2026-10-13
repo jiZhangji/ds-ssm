@@ -1,0 +1,55 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/provenance.json",
+      "sha256": "adb41d18f496e2233726872628ae120651d802b53533af10e6f9c4e0f201e665"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/train_complete.json",
+      "sha256": "7634a5cbf63e384f4ffb9e461f1db8419584116a0adb4590114df08a47e54353"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/eval_test.json",
+      "sha256": "c67cbe103bb5b742422efc2044a17c4a5e60f82828b7cfef081a8e455283080b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/evaluation_complete.json",
+      "sha256": "a2a0a4ec811507bb62db6f90757eb7700884660e24fe5861e366193ec4329cd0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/weights/best.pt",
+      "sha256": "7f2431c0ec621c0ef328f01f268fbc4d691ffae720d6a5a4cad19bab45dd8c39"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/weights/raw_fp32_last.pt",
+      "sha256": "51d4121aaabc18bc0f2c2ed2e0c53ac392be762aa084f5dc70124f09a73f62c8"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/controls_by_epoch.jsonl",
+      "sha256": "826a34fe22c5522e1ba734d5cdf22a3a008c1a298450b262c8cd1885a6708cac"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ssdd_lsgm_trend_only_seed0/trial_complete.json",
+      "sha256": "25628448a0112f3817eb90d739002e9c0e6b9fe27531b5b5a3a3ba2065b0850b"
+    }
+  ],
+  "details": {
+    "kind": "detection",
+    "overall": {
+      "ap50": 0.8593674692979356,
+      "ap50_95": 0.4195611212856233,
+      "ap75": 0.35700629300012093,
+      "precision": 0.9129611410080481,
+      "recall": 0.7875457875457875
+    },
+    "resumed": false,
+    "smoke_only": false
+  },
+  "finished_utc": "2026-10-09T23:43:44.605024+00:00",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "ssdd_lsgm_trend_only_seed0",
+  "trial_sha256": "89c99396a7b770c4ea8989a91da5b33d98a7b1c86bd965e6b15dd8e7fb0480b7"
+}

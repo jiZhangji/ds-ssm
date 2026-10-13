@@ -1,0 +1,109 @@
+{
+  "protocol_sha256": "42aff11e4edb5cd9ffe516f6a42c86c1187d7896e9698ae08be89dea43355590",
+  "protocol": {
+    "protocol": "author_architecture_native_pseudo_common_optimization_v1",
+    "method": "wasnet",
+    "dataset": "Ottawa",
+    "split_seed": 20261012,
+    "image1": {
+      "sha256": "22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9"
+    },
+    "image2": {
+      "sha256": "2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880"
+    },
+    "image_shape": [
+      350,
+      290
+    ],
+    "input_channels": [
+      "T1",
+      "T2",
+      "native_SRAD_logratio_DI"
+    ],
+    "patch_size": 8,
+    "batch_size": 16,
+    "gradient_accumulation": 4,
+    "nominal_effective_batch": 64,
+    "partial_final_accumulation": "actual_sample_count_normalization",
+    "optimizer": "AdamW",
+    "lr": 0.0002,
+    "weight_decay": 0.0005,
+    "optimizer_parameter_groups": "bias and norm zero decay; ordinary weights 0.0005",
+    "optimizer_betas": [
+      0.937,
+      0.999
+    ],
+    "optimizer_epsilon": 1e-08,
+    "max_epochs": 150,
+    "patience": 30,
+    "warmup_epochs": 3,
+    "scheduler": "optimizer-update-wise linear warmup, linear decay to 0.01*base_lr",
+    "precision": "FP32",
+    "amp": false,
+    "tf32": false,
+    "initialization": "scratch",
+    "checkpoint_selection": "minimum held-out image-only pseudo-label validation loss",
+    "early_stop": "30 consecutive non-improving pseudo-validation epochs; min_delta=0",
+    "ground_truth_access_before_final_inference": false,
+    "transductive": true,
+    "ground_truth_spatial_split": false,
+    "original_paper_reproduction": false,
+    "pseudo_validation_fraction": 0.2,
+    "sampling": [
+      {
+        "class": 0,
+        "available": 82796,
+        "nominal_quota": 7000,
+        "selected": 7000,
+        "train": 5600,
+        "val": 1400
+      },
+      {
+        "class": 1,
+        "available": 13232,
+        "nominal_quota": 3000,
+        "selected": 3000,
+        "train": 2400,
+        "val": 600
+      }
+    ],
+    "sampling_adaptation": "Deterministic source nominal quotas, truncate to available real samples; fix source off-by-one/dummy-zero sampling. Hold out pseudo centers only; image patches can overlap.",
+    "postprocessing": "native uncertain-only classification; fixed <=20 connected-component removal",
+    "preprocessing": {
+      "source": [
+        {
+          "source": "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb",
+          "source_sha256": "a896f8b7bb97026346040124da555ba6033a5ebb35901e8941c70fe1f22df45c",
+          "cell_source_sha256": {
+            "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell6": "d1fb93e603cd64fb4576b7541d7c37d5b7a043eaff238c8c025ca934f11bd129",
+            "vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:cell7": "a5ae18d12fafa15e8bda44bcae38b56ea094425a4438e948d9c27972602bd769"
+          },
+          "definitions": [
+            "FCM",
+            "del2",
+            "dicomp",
+            "hcluster",
+            "srad"
+          ],
+          "transformed_ast_sha256": "2056e93021bee0e387b88aa4277c736cd4e87fd9af78508a8a112d76234eb6a6",
+          "precision_cast_rewrites": 0,
+          "hook_once_rewrites": 0
+        }
+      ],
+      "uses_ground_truth": false,
+      "transductive": true,
+      "intensity_scaling": "original_scale_no_divide255",
+      "label_counts": {
+        "1.0": 82796,
+        "1.5": 5472,
+        "2.0": 13232
+      }
+    },
+    "source_manifest": {
+      "author_models.py": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+      "run_cd_author.py": "e175ce12b0eb2a23abe5564a608ece810a25322dbfeff321adba4a7c35631e96",
+      "source_registry.json": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a"
+    },
+    "protocol_arrays_logical_sha256": "c7deedfb2ac01ccb863f2a91c7c67a2955b415d9817073ef7e658e713ae8fe86"
+  }
+}

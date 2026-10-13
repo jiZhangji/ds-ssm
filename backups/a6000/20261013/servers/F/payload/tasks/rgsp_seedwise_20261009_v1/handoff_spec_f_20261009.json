@@ -1,0 +1,30 @@
+{
+  "schema": "rgsp-legacy-handoff-v1",
+  "hostname": "powerleader-a6000-f",
+  "boot_id": "dfb67cbd-b5c4-4773-baf4-987809504ed5",
+  "python": "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+  "recovery_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1",
+  "frozen_code_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code",
+  "campaign_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+  "evidence_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f",
+  "lanes": [
+    {
+      "id": "f0", "seed": 0, "variant": "local_energy",
+      "gpu_index": 0, "gpu_uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+      "parent_pid": 122224, "parent_start_ticks": 6617006,
+      "child_pid": 124025, "child_start_ticks": 6959750,
+      "recovery_lane": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed0",
+      "source_lane": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed0",
+      "adopted_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed0_local_energy"
+    },
+    {
+      "id": "f1", "seed": 1, "variant": "local_energy",
+      "gpu_index": 1, "gpu_uuid": "GPU-ce57e76d-ee2e-ff91-dbdd-ec0938874c40",
+      "parent_pid": 122228, "parent_start_ticks": 6617015,
+      "child_pid": 123607, "child_start_ticks": 6847065,
+      "recovery_lane": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed1",
+      "source_lane": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed1",
+      "adopted_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/adopted/ssdd_seed1_local_energy"
+    }
+  ]
+}

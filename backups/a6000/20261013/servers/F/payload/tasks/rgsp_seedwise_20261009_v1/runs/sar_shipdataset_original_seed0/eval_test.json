@@ -1,0 +1,41 @@
+{
+  "batch": 16,
+  "conf": 0.001,
+  "data": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/data.yaml",
+  "data_manifest_sha256": "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78",
+  "data_yaml_sha256": "d41830bc75db60353c19250a857815af787d40c9d5c8e6da7e2662c89d700386",
+  "imgsz": 640,
+  "iou": 0.6,
+  "overall": {
+    "ap50": 0.9544108740023634,
+    "ap50_95": 0.519042077767667,
+    "ap75": 0.4937717494908893,
+    "precision": 0.9239741240505112,
+    "recall": 0.9038554909401746
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "precision_mode": "fp32",
+  "result_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_original_seed0/evaluation/test",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "smoke_only": false,
+  "spec": {
+    "control": "original",
+    "placement": "baseline",
+    "state_dim": 0,
+    "stats_kernel_size": 3,
+    "trend_kernel_size": 3
+  },
+  "speed_ms": {
+    "inference": 9.056608882091966,
+    "loss": 0.00037748608447585086,
+    "postprocess": 0.19009148108641227,
+    "preprocess": 0.13962761505080878
+  },
+  "split": "test",
+  "subset": "sar_shipdataset",
+  "trial_id": "sar_shipdataset_original_seed0",
+  "trial_sha256": "c2b29ac256ce87ea4987d51f6ee95aaafde079c5e9d4da1f24bf1cbaf7da7e7b",
+  "weights": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_shipdataset_original_seed0/weights/best.pt",
+  "weights_sha256": "e5f42999c3c2dfd0ca27febe2e1246545b74bbf4ec4e8906566210bac6ad019f"
+}

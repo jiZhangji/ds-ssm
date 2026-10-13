@@ -1,0 +1,4827 @@
+{
+  "status": "PASS",
+  "hostname": "powerleader-PT6620W",
+  "pid": 536326,
+  "gpu_identity": {
+    "hostname": "powerleader-PT6620W",
+    "torch": "1.13.1+cu117",
+    "cuda_visible_devices": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+    "physical_gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+    "physical_gpu_index": 0,
+    "physical_gpu_name": "NVIDIA RTX A6000",
+    "reported_count_before": 0,
+    "cuda_runtime_count": 1,
+    "reported_count_after": 1,
+    "compatibility_applied": true,
+    "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+    "torch_installation_modified": false,
+    "gpu_mask_changed": false
+  },
+  "finished_utc": "2026-10-12T02:16:58.553302+00:00",
+  "script_sha256": "b020ca1f58d7568d5a07f341b6dbec04610c828937bf724971d46fd8274299c6",
+  "source_sha256": {
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_trial.py": "e348f28b38c41a271fed5776510e2b44b241c20f8399eb86ee8aca5fad7d5e5f",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_shared_sar_tasks_v2.py": "e90e621c6738902f39a65e18ae4344095de54162e67ed5e5bc5ef9b37f365aa0",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo.py": "05d1900840474e068aec65bc30ca81501fce55a464ca0dc3fbe60054885aade3",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/common_utils_mbyolo.py": "d89bf46c84d3f9a3465244f4a191b2c193f50f58c3080f51ae8fa9b2bc0e0a00"
+  },
+  "torch_version": "1.13.1+cu117",
+  "thop_source_sha256": "0ac4bd985216dd5594035e691d06c60d95fe37adb8bb5d0b66ce45b49396fc58",
+  "results": [
+    {
+      "trial_id": "sar_acd_original_seed0",
+      "dataset": "sar_acd",
+      "task": "classification",
+      "variant": "original",
+      "parameters": 2852181,
+      "trainable_parameters": 2852181,
+      "input_shapes": [
+        [
+          1,
+          3,
+          224,
+          224
+        ]
+      ],
+      "output_shape": [
+        1,
+        5
+      ],
+      "checkpoint_sha256": "a83dcfad43a2a99e84638c877e2e897580f6d96edfa94cdabd7dbca9fda9f121",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_original_seed0/best.pt",
+      "result_sha256": "78295008b867e71e47d6b221983c9b16842169e4277e2e4ac06e1b2cee329bbf",
+      "config_sha256": "ceef262a2b29a29887b695c48043ad93580835e027c27b01e06892da34249033",
+      "control_audit": {
+        "variant": "original",
+        "controlled_blocks": 0
+      },
+      "thop_legacy_x2_flops": 787810732.0,
+      "scan_basic_arithmetic_flops": 190668800,
+      "functional_einsum_mac2_flops": 160563200,
+      "cross_merge_add_flops": 1430016,
+      "covered_flops_g": 1.140472748,
+      "scan_calls": [
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            256,
+            3136
+          ],
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            3136
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            3136
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 80281600,
+          "special_function_evaluations_symbolic_upper_bound": 14450688
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            512,
+            784
+          ],
+          "a_shape": [
+            512,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            784
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            784
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 40140800,
+          "special_function_evaluations_symbolic_upper_bound": 7225344
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            2048,
+            49
+          ],
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            49
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            49
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 10035200,
+          "special_function_evaluations_symbolic_upper_bound": 1806336
+        }
+      ],
+      "einsum_calls": [
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              3136
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ],
+          "flops": 54591488
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              3136
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              128,
+              784
+            ],
+            [
+              4,
+              36,
+              128
+            ]
+          ],
+          "flops": 28901376
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              4,
+              784
+            ],
+            [
+              4,
+              128,
+              4
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              49
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ],
+          "flops": 9633792
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              49
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ],
+          "flops": 3211264
+        }
+      ],
+      "unregistered_leaf_module_types": [
+        "timm.layers.drop.DropPath",
+        "torch.nn.modules.activation.GELU",
+        "torch.nn.modules.activation.SiLU",
+        "torch.nn.modules.linear.Identity"
+      ],
+      "finite_forward": true,
+      "scope": "full registered task model; paired CD encoders counted twice, shared parameters once"
+    },
+    {
+      "trial_id": "sar_acd_matched_scale075_seed0",
+      "dataset": "sar_acd",
+      "task": "classification",
+      "variant": "matched_scale075",
+      "parameters": 2784541,
+      "trainable_parameters": 2784541,
+      "input_shapes": [
+        [
+          1,
+          3,
+          224,
+          224
+        ]
+      ],
+      "output_shape": [
+        1,
+        5
+      ],
+      "checkpoint_sha256": "2c1ac6842121045b1519c312ff8a83dc8da143be74ac893878ede6b4de094963",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_matched_scale075_seed0/best.pt",
+      "result_sha256": "5976e8287de1f068e24b56a96a3322df02c228791eece1ddf0cd198895aaaca7",
+      "config_sha256": "018e52898361627757b43c92d429611d2fb1d4572ae7d74a2cc6007ffc66a4c0",
+      "control_audit": {
+        "variant": "matched_scale075",
+        "controlled_blocks": 1,
+        "placement": "internal P3/8, 64 channels",
+        "scalars": {
+          "lambda_s": 0.0,
+          "alpha": 0.0,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612
+        },
+        "buffer_scalars": [
+          "lambda_s",
+          "alpha",
+          "beta_i",
+          "rho_i",
+          "eta_i"
+        ],
+        "min_retain": 0.5,
+        "use_pfim": false
+      },
+      "thop_legacy_x2_flops": 727006828.0,
+      "scan_basic_arithmetic_flops": 155344896,
+      "functional_einsum_mac2_flops": 128450560,
+      "cross_merge_add_flops": 1128960,
+      "covered_flops_g": 1.011931244,
+      "scan_calls": [
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            256,
+            3136
+          ],
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            3136
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            3136
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 80281600,
+          "special_function_evaluations_symbolic_upper_bound": 14450688
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            64,
+            784
+          ],
+          "a_shape": [
+            64,
+            16
+          ],
+          "b_shape": [
+            1,
+            1,
+            16,
+            784
+          ],
+          "c_shape": [
+            1,
+            1,
+            16,
+            784
+          ],
+          "has_D": false,
+          "has_delta_bias": false,
+          "delta_softplus": false,
+          "basic_arithmetic_flops": 4816896,
+          "special_function_evaluations_symbolic_upper_bound": 802816
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            2048,
+            49
+          ],
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            49
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            49
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 10035200,
+          "special_function_evaluations_symbolic_upper_bound": 1806336
+        }
+      ],
+      "einsum_calls": [
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              3136
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ],
+          "flops": 54591488
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              3136
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              49
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ],
+          "flops": 9633792
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              49
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ],
+          "flops": 3211264
+        }
+      ],
+      "unregistered_leaf_module_types": [
+        "timm.layers.drop.DropPath",
+        "torch.nn.modules.activation.GELU",
+        "torch.nn.modules.activation.SiLU",
+        "torch.nn.modules.linear.Identity"
+      ],
+      "finite_forward": true,
+      "scope": "full registered task model; paired CD encoders counted twice, shared parameters once"
+    },
+    {
+      "trial_id": "sar_acd_full_seed0",
+      "dataset": "sar_acd",
+      "task": "classification",
+      "variant": "full",
+      "parameters": 2787075,
+      "trainable_parameters": 2787075,
+      "input_shapes": [
+        [
+          1,
+          3,
+          224,
+          224
+        ]
+      ],
+      "output_shape": [
+        1,
+        5
+      ],
+      "checkpoint_sha256": "3c73a8c0b741e95349490813f9ce3d923c708fcf83f78e93d187500f469820b9",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_full_seed0/best.pt",
+      "result_sha256": "052e28a6358b7aa9ed53a7c611e1df856f61eb60c95af2a27292c929246eb124",
+      "config_sha256": "b72915e3976ed0b77697439db72badd265023a91f5755735bc1379e76873254c",
+      "control_audit": {
+        "variant": "full",
+        "controlled_blocks": 1,
+        "placement": "internal P3/8, 64 channels",
+        "scalars": {
+          "lambda_s": 0.496133953332901,
+          "alpha": 0.48876193165779114,
+          "beta_i": 1.008074164390564,
+          "rho_i": 1.007952332496643,
+          "eta_i": 0.10677842795848846
+        },
+        "buffer_scalars": [],
+        "min_retain": 0.5,
+        "use_pfim": true
+      },
+      "thop_legacy_x2_flops": 731045996.0,
+      "scan_basic_arithmetic_flops": 155344896,
+      "functional_einsum_mac2_flops": 128450560,
+      "cross_merge_add_flops": 1128960,
+      "covered_flops_g": 1.015970412,
+      "scan_calls": [
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            256,
+            3136
+          ],
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            3136
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            3136
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 80281600,
+          "special_function_evaluations_symbolic_upper_bound": 14450688
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            64,
+            784
+          ],
+          "a_shape": [
+            64,
+            16
+          ],
+          "b_shape": [
+            1,
+            1,
+            16,
+            784
+          ],
+          "c_shape": [
+            1,
+            1,
+            16,
+            784
+          ],
+          "has_D": false,
+          "has_delta_bias": false,
+          "delta_softplus": false,
+          "basic_arithmetic_flops": 4816896,
+          "special_function_evaluations_symbolic_upper_bound": 802816
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            2048,
+            49
+          ],
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            49
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            49
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 10035200,
+          "special_function_evaluations_symbolic_upper_bound": 1806336
+        }
+      ],
+      "einsum_calls": [
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              3136
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ],
+          "flops": 54591488
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              3136
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              49
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ],
+          "flops": 9633792
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              49
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ],
+          "flops": 3211264
+        }
+      ],
+      "unregistered_leaf_module_types": [
+        "timm.layers.drop.DropPath",
+        "torch.nn.modules.activation.GELU",
+        "torch.nn.modules.activation.SiLU",
+        "torch.nn.modules.linear.Identity"
+      ],
+      "finite_forward": true,
+      "scope": "full registered task model; paired CD encoders counted twice, shared parameters once"
+    },
+    {
+      "trial_id": "sample_original_seed0",
+      "dataset": "sample",
+      "task": "classification",
+      "variant": "original",
+      "parameters": 2853466,
+      "trainable_parameters": 2853466,
+      "input_shapes": [
+        [
+          1,
+          3,
+          224,
+          224
+        ]
+      ],
+      "output_shape": [
+        1,
+        10
+      ],
+      "checkpoint_sha256": "46a101e3179eef1aedd76992bb67feca3138929b48a3216cab783e3479701faf",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_original_seed0/best.pt",
+      "result_sha256": "161f3fc0dd2f035beb5e04518a400f6ab7bb3b77706d8e72705e12a88069bdb3",
+      "config_sha256": "5823dd705474f8dd762107b4ea7d27e952a9c9c0886b1a40bd1e22d8d6395551",
+      "control_audit": {
+        "variant": "original",
+        "controlled_blocks": 0
+      },
+      "thop_legacy_x2_flops": 787813292.0,
+      "scan_basic_arithmetic_flops": 190668800,
+      "functional_einsum_mac2_flops": 160563200,
+      "cross_merge_add_flops": 1430016,
+      "covered_flops_g": 1.140475308,
+      "scan_calls": [
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            256,
+            3136
+          ],
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            3136
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            3136
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 80281600,
+          "special_function_evaluations_symbolic_upper_bound": 14450688
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            512,
+            784
+          ],
+          "a_shape": [
+            512,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            784
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            784
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 40140800,
+          "special_function_evaluations_symbolic_upper_bound": 7225344
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            2048,
+            49
+          ],
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            49
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            49
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 10035200,
+          "special_function_evaluations_symbolic_upper_bound": 1806336
+        }
+      ],
+      "einsum_calls": [
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              3136
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ],
+          "flops": 54591488
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              3136
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              128,
+              784
+            ],
+            [
+              4,
+              36,
+              128
+            ]
+          ],
+          "flops": 28901376
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              4,
+              784
+            ],
+            [
+              4,
+              128,
+              4
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              49
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ],
+          "flops": 9633792
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              49
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ],
+          "flops": 3211264
+        }
+      ],
+      "unregistered_leaf_module_types": [
+        "timm.layers.drop.DropPath",
+        "torch.nn.modules.activation.GELU",
+        "torch.nn.modules.activation.SiLU",
+        "torch.nn.modules.linear.Identity"
+      ],
+      "finite_forward": true,
+      "scope": "full registered task model; paired CD encoders counted twice, shared parameters once"
+    },
+    {
+      "trial_id": "sample_matched_scale075_seed0",
+      "dataset": "sample",
+      "task": "classification",
+      "variant": "matched_scale075",
+      "parameters": 2785826,
+      "trainable_parameters": 2785826,
+      "input_shapes": [
+        [
+          1,
+          3,
+          224,
+          224
+        ]
+      ],
+      "output_shape": [
+        1,
+        10
+      ],
+      "checkpoint_sha256": "8df22701ce24971d6eb0e2a8a3a58306056634cf6714f56993523a00b987101f",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_matched_scale075_seed0/best.pt",
+      "result_sha256": "9ba38eb5ea9929b87a4a19ac6165b3bdb012a38f2aa1e166756bf28388e4a47f",
+      "config_sha256": "4eca5a736f2922dfe97b0661e53d8f9e2d897e160e0d44dc3dccd2c1420468eb",
+      "control_audit": {
+        "variant": "matched_scale075",
+        "controlled_blocks": 1,
+        "placement": "internal P3/8, 64 channels",
+        "scalars": {
+          "lambda_s": 0.0,
+          "alpha": 0.0,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612
+        },
+        "buffer_scalars": [
+          "lambda_s",
+          "alpha",
+          "beta_i",
+          "rho_i",
+          "eta_i"
+        ],
+        "min_retain": 0.5,
+        "use_pfim": false
+      },
+      "thop_legacy_x2_flops": 727009388.0,
+      "scan_basic_arithmetic_flops": 155344896,
+      "functional_einsum_mac2_flops": 128450560,
+      "cross_merge_add_flops": 1128960,
+      "covered_flops_g": 1.011933804,
+      "scan_calls": [
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            256,
+            3136
+          ],
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            3136
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            3136
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 80281600,
+          "special_function_evaluations_symbolic_upper_bound": 14450688
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            64,
+            784
+          ],
+          "a_shape": [
+            64,
+            16
+          ],
+          "b_shape": [
+            1,
+            1,
+            16,
+            784
+          ],
+          "c_shape": [
+            1,
+            1,
+            16,
+            784
+          ],
+          "has_D": false,
+          "has_delta_bias": false,
+          "delta_softplus": false,
+          "basic_arithmetic_flops": 4816896,
+          "special_function_evaluations_symbolic_upper_bound": 802816
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            2048,
+            49
+          ],
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            49
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            49
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 10035200,
+          "special_function_evaluations_symbolic_upper_bound": 1806336
+        }
+      ],
+      "einsum_calls": [
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              3136
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ],
+          "flops": 54591488
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              3136
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              49
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ],
+          "flops": 9633792
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              49
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ],
+          "flops": 3211264
+        }
+      ],
+      "unregistered_leaf_module_types": [
+        "timm.layers.drop.DropPath",
+        "torch.nn.modules.activation.GELU",
+        "torch.nn.modules.activation.SiLU",
+        "torch.nn.modules.linear.Identity"
+      ],
+      "finite_forward": true,
+      "scope": "full registered task model; paired CD encoders counted twice, shared parameters once"
+    },
+    {
+      "trial_id": "sample_full_seed0",
+      "dataset": "sample",
+      "task": "classification",
+      "variant": "full",
+      "parameters": 2788360,
+      "trainable_parameters": 2788360,
+      "input_shapes": [
+        [
+          1,
+          3,
+          224,
+          224
+        ]
+      ],
+      "output_shape": [
+        1,
+        10
+      ],
+      "checkpoint_sha256": "92407b44ce5c41f2d86e868bce5be60a937f2b3b9a6a07be0790b49598804250",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_full_seed0/best.pt",
+      "result_sha256": "1ca580d9b452068922fdb299ecd8c71f2ea5b5c3f7e521ed4378f6746ffbd7c8",
+      "config_sha256": "0db04c335d05ff95e25c35de604cbfd418b78500c64b6406b7d13cfcecc454e1",
+      "control_audit": {
+        "variant": "full",
+        "controlled_blocks": 1,
+        "placement": "internal P3/8, 64 channels",
+        "scalars": {
+          "lambda_s": 0.5020343065261841,
+          "alpha": 0.47644996643066406,
+          "beta_i": 1.027553915977478,
+          "rho_i": 1.0293684005737305,
+          "eta_i": 0.12395919859409332
+        },
+        "buffer_scalars": [],
+        "min_retain": 0.5,
+        "use_pfim": true
+      },
+      "thop_legacy_x2_flops": 731048556.0,
+      "scan_basic_arithmetic_flops": 155344896,
+      "functional_einsum_mac2_flops": 128450560,
+      "cross_merge_add_flops": 1128960,
+      "covered_flops_g": 1.015972972,
+      "scan_calls": [
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            256,
+            3136
+          ],
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            3136
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            3136
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 80281600,
+          "special_function_evaluations_symbolic_upper_bound": 14450688
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            64,
+            784
+          ],
+          "a_shape": [
+            64,
+            16
+          ],
+          "b_shape": [
+            1,
+            1,
+            16,
+            784
+          ],
+          "c_shape": [
+            1,
+            1,
+            16,
+            784
+          ],
+          "has_D": false,
+          "has_delta_bias": false,
+          "delta_softplus": false,
+          "basic_arithmetic_flops": 4816896,
+          "special_function_evaluations_symbolic_upper_bound": 802816
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            196
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            196
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 20070400,
+          "special_function_evaluations_symbolic_upper_bound": 3612672
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            2048,
+            49
+          ],
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            49
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            49
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 10035200,
+          "special_function_evaluations_symbolic_upper_bound": 1806336
+        }
+      ],
+      "einsum_calls": [
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              3136
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ],
+          "flops": 54591488
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              3136
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              196
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 16056320
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              196
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 3211264
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              49
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ],
+          "flops": 9633792
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              49
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ],
+          "flops": 3211264
+        }
+      ],
+      "unregistered_leaf_module_types": [
+        "timm.layers.drop.DropPath",
+        "torch.nn.modules.activation.GELU",
+        "torch.nn.modules.activation.SiLU",
+        "torch.nn.modules.linear.Identity"
+      ],
+      "finite_forward": true,
+      "scope": "full registered task model; paired CD encoders counted twice, shared parameters once"
+    },
+    {
+      "trial_id": "ottawa_original_seed0",
+      "dataset": "ottawa",
+      "task": "change_detection",
+      "variant": "original",
+      "parameters": 3782737,
+      "trainable_parameters": 3782737,
+      "input_shapes": [
+        [
+          1,
+          3,
+          192,
+          192
+        ],
+        [
+          1,
+          3,
+          192,
+          192
+        ]
+      ],
+      "output_shape": [
+        1,
+        1,
+        192,
+        192
+      ],
+      "checkpoint_sha256": "256baf0a4ecdf99e8d9b6e7e7aab9eeb1f3d297cc5054c43b6783c8fd7dfa45a",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_original_seed0/best.pt",
+      "result_sha256": "fae6c86e7bc215bf8e42200bfd2c9a427d19934cfbedb4167aec4af5502d9040",
+      "config_sha256": "2fa20fbbaea074b760e7713451eb466cb91c5efbd63032ce31966d05178d10a2",
+      "control_audit": {
+        "variant": "original",
+        "controlled_blocks": 0
+      },
+      "thop_legacy_x2_flops": 3240007264.0,
+      "scan_basic_arithmetic_flops": 280166400,
+      "functional_einsum_mac2_flops": 235929600,
+      "cross_merge_add_flops": 2101248,
+      "covered_flops_g": 3.758204512,
+      "scan_calls": [
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            256,
+            2304
+          ],
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 58982400,
+          "special_function_evaluations_symbolic_upper_bound": 10616832
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            512,
+            576
+          ],
+          "a_shape": [
+            512,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            576
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            576
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 29491200,
+          "special_function_evaluations_symbolic_upper_bound": 5308416
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            2048,
+            36
+          ],
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 7372800,
+          "special_function_evaluations_symbolic_upper_bound": 1327104
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            256,
+            2304
+          ],
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 58982400,
+          "special_function_evaluations_symbolic_upper_bound": 10616832
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            512,
+            576
+          ],
+          "a_shape": [
+            512,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            576
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            576
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 29491200,
+          "special_function_evaluations_symbolic_upper_bound": 5308416
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            2048,
+            36
+          ],
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 7372800,
+          "special_function_evaluations_symbolic_upper_bound": 1327104
+        }
+      ],
+      "einsum_calls": [
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              2304
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ],
+          "flops": 40108032
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              2304
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              128,
+              576
+            ],
+            [
+              4,
+              36,
+              128
+            ]
+          ],
+          "flops": 21233664
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              4,
+              576
+            ],
+            [
+              4,
+              128,
+              4
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              36
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ],
+          "flops": 7077888
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              36
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              2304
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ],
+          "flops": 40108032
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              2304
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              128,
+              576
+            ],
+            [
+              4,
+              36,
+              128
+            ]
+          ],
+          "flops": 21233664
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              4,
+              576
+            ],
+            [
+              4,
+              128,
+              4
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              36
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ],
+          "flops": 7077888
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              36
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ],
+          "flops": 2359296
+        }
+      ],
+      "unregistered_leaf_module_types": [
+        "timm.layers.drop.DropPath",
+        "torch.nn.modules.activation.GELU",
+        "torch.nn.modules.activation.SiLU",
+        "torch.nn.modules.dropout.Dropout2d",
+        "torch.nn.modules.linear.Identity",
+        "torch.nn.modules.normalization.GroupNorm"
+      ],
+      "finite_forward": true,
+      "scope": "full registered task model; paired CD encoders counted twice, shared parameters once"
+    },
+    {
+      "trial_id": "ottawa_matched_scale075_seed0",
+      "dataset": "ottawa",
+      "task": "change_detection",
+      "variant": "matched_scale075",
+      "parameters": 3715097,
+      "trainable_parameters": 3715097,
+      "input_shapes": [
+        [
+          1,
+          3,
+          192,
+          192
+        ],
+        [
+          1,
+          3,
+          192,
+          192
+        ]
+      ],
+      "output_shape": [
+        1,
+        1,
+        192,
+        192
+      ],
+      "checkpoint_sha256": "1d3054243c4f8134e22a520399bfecb1c96a52b548732b41b02aa18e912fa855",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_matched_scale075_seed0/best.pt",
+      "result_sha256": "e26959ccf664fdde4598443546b101f4495eebb53da03d36c2b365776892ffd4",
+      "config_sha256": "e83cfebf456aa0f90cbffc663a72b5c781977c6f2bc1434b984e442d6b00b4d0",
+      "control_audit": {
+        "variant": "matched_scale075",
+        "controlled_blocks": 1,
+        "placement": "internal P3/8, 64 channels",
+        "scalars": {
+          "lambda_s": 0.0,
+          "alpha": 0.0,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612
+        },
+        "buffer_scalars": [
+          "lambda_s",
+          "alpha",
+          "beta_i",
+          "rho_i",
+          "eta_i"
+        ],
+        "min_retain": 0.5,
+        "use_pfim": false
+      },
+      "thop_legacy_x2_flops": 3150662752.0,
+      "scan_basic_arithmetic_flops": 228261888,
+      "functional_einsum_mac2_flops": 188743680,
+      "cross_merge_add_flops": 1658880,
+      "covered_flops_g": 3.5693272,
+      "scan_calls": [
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            256,
+            2304
+          ],
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 58982400,
+          "special_function_evaluations_symbolic_upper_bound": 10616832
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            64,
+            576
+          ],
+          "a_shape": [
+            64,
+            16
+          ],
+          "b_shape": [
+            1,
+            1,
+            16,
+            576
+          ],
+          "c_shape": [
+            1,
+            1,
+            16,
+            576
+          ],
+          "has_D": false,
+          "has_delta_bias": false,
+          "delta_softplus": false,
+          "basic_arithmetic_flops": 3538944,
+          "special_function_evaluations_symbolic_upper_bound": 589824
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            2048,
+            36
+          ],
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 7372800,
+          "special_function_evaluations_symbolic_upper_bound": 1327104
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            256,
+            2304
+          ],
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 58982400,
+          "special_function_evaluations_symbolic_upper_bound": 10616832
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            64,
+            576
+          ],
+          "a_shape": [
+            64,
+            16
+          ],
+          "b_shape": [
+            1,
+            1,
+            16,
+            576
+          ],
+          "c_shape": [
+            1,
+            1,
+            16,
+            576
+          ],
+          "has_D": false,
+          "has_delta_bias": false,
+          "delta_softplus": false,
+          "basic_arithmetic_flops": 3538944,
+          "special_function_evaluations_symbolic_upper_bound": 589824
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            2048,
+            36
+          ],
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 7372800,
+          "special_function_evaluations_symbolic_upper_bound": 1327104
+        }
+      ],
+      "einsum_calls": [
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              2304
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ],
+          "flops": 40108032
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              2304
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              36
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ],
+          "flops": 7077888
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              36
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              2304
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ],
+          "flops": 40108032
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              2304
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              36
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ],
+          "flops": 7077888
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              36
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ],
+          "flops": 2359296
+        }
+      ],
+      "unregistered_leaf_module_types": [
+        "timm.layers.drop.DropPath",
+        "torch.nn.modules.activation.GELU",
+        "torch.nn.modules.activation.SiLU",
+        "torch.nn.modules.dropout.Dropout2d",
+        "torch.nn.modules.linear.Identity",
+        "torch.nn.modules.normalization.GroupNorm"
+      ],
+      "finite_forward": true,
+      "scope": "full registered task model; paired CD encoders counted twice, shared parameters once"
+    },
+    {
+      "trial_id": "ottawa_full_seed0",
+      "dataset": "ottawa",
+      "task": "change_detection",
+      "variant": "full",
+      "parameters": 3717631,
+      "trainable_parameters": 3717631,
+      "input_shapes": [
+        [
+          1,
+          3,
+          192,
+          192
+        ],
+        [
+          1,
+          3,
+          192,
+          192
+        ]
+      ],
+      "output_shape": [
+        1,
+        1,
+        192,
+        192
+      ],
+      "checkpoint_sha256": "a554357025b5b96f45b024ea56cc401051ae1928828b2ff130a0ce063475637b",
+      "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_full_seed0/best.pt",
+      "result_sha256": "1623006678b4861d8e34e052e8b4bcc973bc200e5a56c5082ea730842fe81f23",
+      "config_sha256": "9e6239b3c866ba7f12ad6a8a05ab91c55641d6dadb2f5560259bd17e114fd675",
+      "control_audit": {
+        "variant": "full",
+        "controlled_blocks": 1,
+        "placement": "internal P3/8, 64 channels",
+        "scalars": {
+          "lambda_s": 0.4937593340873718,
+          "alpha": 0.49656638503074646,
+          "beta_i": 1.0021215677261353,
+          "rho_i": 1.0033819675445557,
+          "eta_i": 0.10293535888195038
+        },
+        "buffer_scalars": [],
+        "min_retain": 0.5,
+        "use_pfim": true
+      },
+      "thop_legacy_x2_flops": 3156597856.0,
+      "scan_basic_arithmetic_flops": 228261888,
+      "functional_einsum_mac2_flops": 188743680,
+      "cross_merge_add_flops": 1658880,
+      "covered_flops_g": 3.575262304,
+      "scan_calls": [
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            256,
+            2304
+          ],
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 58982400,
+          "special_function_evaluations_symbolic_upper_bound": 10616832
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            64,
+            576
+          ],
+          "a_shape": [
+            64,
+            16
+          ],
+          "b_shape": [
+            1,
+            1,
+            16,
+            576
+          ],
+          "c_shape": [
+            1,
+            1,
+            16,
+            576
+          ],
+          "has_D": false,
+          "has_delta_bias": false,
+          "delta_softplus": false,
+          "basic_arithmetic_flops": 3538944,
+          "special_function_evaluations_symbolic_upper_bound": 589824
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            2048,
+            36
+          ],
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 7372800,
+          "special_function_evaluations_symbolic_upper_bound": 1327104
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            256,
+            2304
+          ],
+          "a_shape": [
+            256,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            2304
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 58982400,
+          "special_function_evaluations_symbolic_upper_bound": 10616832
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            64,
+            576
+          ],
+          "a_shape": [
+            64,
+            16
+          ],
+          "b_shape": [
+            1,
+            1,
+            16,
+            576
+          ],
+          "c_shape": [
+            1,
+            1,
+            16,
+            576
+          ],
+          "has_D": false,
+          "has_delta_bias": false,
+          "delta_softplus": false,
+          "basic_arithmetic_flops": 3538944,
+          "special_function_evaluations_symbolic_upper_bound": 589824
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            1024,
+            144
+          ],
+          "a_shape": [
+            1024,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            144
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 14745600,
+          "special_function_evaluations_symbolic_upper_bound": 2654208
+        },
+        {
+          "backend": "core",
+          "u_shape": [
+            1,
+            2048,
+            36
+          ],
+          "a_shape": [
+            2048,
+            16
+          ],
+          "b_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "c_shape": [
+            1,
+            4,
+            16,
+            36
+          ],
+          "has_D": true,
+          "has_delta_bias": true,
+          "delta_softplus": true,
+          "basic_arithmetic_flops": 7372800,
+          "special_function_evaluations_symbolic_upper_bound": 1327104
+        }
+      ],
+      "einsum_calls": [
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              2304
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ],
+          "flops": 40108032
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              2304
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              36
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ],
+          "flops": 7077888
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              36
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              64,
+              2304
+            ],
+            [
+              4,
+              34,
+              64
+            ]
+          ],
+          "flops": 40108032
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              2,
+              2304
+            ],
+            [
+              4,
+              64,
+              2
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              256,
+              144
+            ],
+            [
+              4,
+              40,
+              256
+            ]
+          ],
+          "flops": 11796480
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              8,
+              144
+            ],
+            [
+              4,
+              256,
+              8
+            ]
+          ],
+          "flops": 2359296
+        },
+        {
+          "equation": "b k d l, k c d -> b k c l",
+          "shapes": [
+            [
+              1,
+              4,
+              512,
+              36
+            ],
+            [
+              4,
+              48,
+              512
+            ]
+          ],
+          "flops": 7077888
+        },
+        {
+          "equation": "b k r l, k d r -> b k d l",
+          "shapes": [
+            [
+              1,
+              4,
+              16,
+              36
+            ],
+            [
+              4,
+              512,
+              16
+            ]
+          ],
+          "flops": 2359296
+        }
+      ],
+      "unregistered_leaf_module_types": [
+        "timm.layers.drop.DropPath",
+        "torch.nn.modules.activation.GELU",
+        "torch.nn.modules.activation.SiLU",
+        "torch.nn.modules.dropout.Dropout2d",
+        "torch.nn.modules.linear.Identity",
+        "torch.nn.modules.normalization.GroupNorm"
+      ],
+      "finite_forward": true,
+      "scope": "full registered task model; paired CD encoders counted twice, shared parameters once"
+    }
+  ],
+  "counting_contract": {
+    "base": "2 times existing THOP counters, the project's legacy convention; normalization uses THOP approximation",
+    "einsum": "2*product(unique index dimensions), standard dense contraction MAC convention",
+    "scan": "6*B*D*L*N factored real variable-B/C recurrence arithmetic; +BDL for delta_bias; +2BDL for D*u; +BDL for softplus addition",
+    "cross_merge": "3*B*D*H*W scalar additions",
+    "not_included": [
+      "scan exponentials/softplus special functions (symbolic counts supplied per call)",
+      "all other functional elementwise arithmetic, activations, statistics, and interpolation not covered by THOP",
+      "CUDA parallel-prefix overhead, address arithmetic, memory movement, preprocessing and task postprocessing"
+    ],
+    "interpretation": "covered-operation estimate for complete models; not exact total FLOPs, latency or GPU instruction count; do not compare as identical coverage to legacy THOP-only numbers"
+  }
+}

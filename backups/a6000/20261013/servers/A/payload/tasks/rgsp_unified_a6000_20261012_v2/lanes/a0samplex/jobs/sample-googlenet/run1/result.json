@@ -1,0 +1,248 @@
+{
+  "best_epoch": 59,
+  "best_validation_score": 0.9944240645634629,
+  "checkpoint": {
+    "path": "best.pt",
+    "sha256": "722a6cb4d83ff4cabf800bc3c046f7524a47efd8d0c9e309594c26408e1ce360"
+  },
+  "complexity": {
+    "batch": 1,
+    "complete_operation_coverage": false,
+    "covered_flops": 3020636544.0,
+    "covered_operation_profile": {
+      "batch": 1,
+      "coverage": {
+        "cross_merge": "3*B*D*H*W additions for four-direction merging; CrossScan movement has no arithmetic charge.",
+        "einsum": "2 * product(unique index dimensions) for real FP32 binary dense contractions, MAC=2.",
+        "exhaustive": false,
+        "interpretation": "Covered-operation estimate, not total FLOPs or hardware work; not directly interchangeable with THOP-only reports.",
+        "not_included": [
+          "Scan exponentials and softplus special functions; symbolic counts are separate.",
+          "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+          "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+          "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+        ],
+        "parameter_sharing": "Registered shared parameters counted once; repeated module forwards counted per actual execution.",
+        "scan": "6*B*D*L*N factored variable-B/C recurrence; +2BDL for skip D*u; +BDL for delta bias; +BDL for softplus addition.",
+        "scope": "Full unfused registered model; eval, batch=1, FP32, no TF32, no task postprocessing/NMS.",
+        "thop": "2 * existing THOP counters (legacy convention, including THOP normalization approximations).",
+        "version": "rgsp-covered-operations-v1"
+      },
+      "covered_flops_g": 3.020636544,
+      "cross_merge_add_flops": 0,
+      "cross_merge_calls": [],
+      "device": "cuda:0",
+      "einsum_calls": [],
+      "finite_forward": true,
+      "functional_einsum_mac2_flops": 0,
+      "fused": false,
+      "input_shapes": [
+        [
+          1,
+          3,
+          224,
+          224
+        ]
+      ],
+      "nms_included": false,
+      "output_shape": [
+        1,
+        10
+      ],
+      "output_shapes": [
+        [
+          1,
+          10
+        ]
+      ],
+      "parameters": 5610154,
+      "precision": "FP32",
+      "scan_basic_arithmetic_flops": 0,
+      "scan_calls": [],
+      "ssm_module_calls": [],
+      "status": "PASS",
+      "thop_legacy_x2_flops": 3020636544.0,
+      "thop_version": "2.0.16",
+      "torch_version": "1.13.1+cu117",
+      "trainable_parameters": 0,
+      "unregistered_leaf_module_types": [],
+      "unsupported": [
+        "Scan exponentials and softplus special functions; symbolic counts are separate.",
+        "Other functional arithmetic, activations, statistics, interpolation and dense-head decoding not counted by THOP.",
+        "DS-SSM external softplus, energy/gamma/write/z gates and D*x residual; PFIM functional pooling/statistics/gates.",
+        "CUDA prefix-scan overhead, memory/address operations, preprocessing, NMS and postprocessing."
+      ]
+    },
+    "hardware": "RTX A6000",
+    "input_shape_each": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "input_tensors": 1,
+    "latency_ms_mean": 3.8287033123197034,
+    "latency_scope": "model-only; synthetic shape-matched inputs; no I/O/pre/postprocessing",
+    "params": 5610154,
+    "precision": "FP32",
+    "profiler": "THOP legacy x2 + actual selective-scan/einsum/cross-merge covered arithmetic",
+    "status": "PARTIAL_COVERAGE_MEASURED",
+    "throughput_samples_per_second": 261.18503274523204
+  },
+  "dataset": "SAMPLE",
+  "elapsed_seconds": 235.50154192897025,
+  "epochs_completed": 89,
+  "finished_utc": "2026-10-13T03:26:14.246707+00:00",
+  "historical_results_reused": false,
+  "method": "googlenet",
+  "metrics": {
+    "accuracy": 0.07235621521335807,
+    "confusion_matrix": [
+      [
+        0,
+        1,
+        50,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        10,
+        1,
+        0,
+        0,
+        41,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        39,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        20,
+        12,
+        0,
+        0,
+        0,
+        15,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        11,
+        13,
+        0,
+        0,
+        0,
+        29,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        17,
+        17,
+        0,
+        0,
+        6,
+        13,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        46,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        57,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        11,
+        36,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        16,
+        0,
+        0,
+        19,
+        0,
+        1,
+        0,
+        22
+      ]
+    ],
+    "macro_f1": 0.07497033333390701,
+    "macro_precision": 0.11311064920014939,
+    "macro_recall": 0.07154674491787606,
+    "per_class_recall": [
+      0.0,
+      0.0,
+      0.20408163265306123,
+      0.0,
+      0.0,
+      0.11320754716981132,
+      0.018867924528301886,
+      0.0,
+      0.0,
+      0.3793103448275862
+    ]
+  },
+  "optimizer_updates": 979,
+  "params": 5610154,
+  "protocol_group": "new_unified_supervised",
+  "protocol_sha256": "e5e4da634c9cb573244e57937f07290c709a41e2e86656752e2f3cff2d0ee0ea",
+  "seed": 1,
+  "status": "TRAINING_COMPLETE",
+  "task": "classification",
+  "test_evaluated": true,
+  "threshold_from_validation": null,
+  "training_seconds": 233.78959322097944
+}

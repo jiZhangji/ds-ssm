@@ -1,0 +1,93 @@
+{
+  "cross_trial_sha256": "904f3199c6ae28f347f37f26b6c628960c9be2c6b4df0570d0169c4870928fa4",
+  "datasets": [
+    {
+      "dataset": "Ottawa",
+      "expected_positive_val_pixels": 2331,
+      "expected_unique_val_pixels": 15168,
+      "manifest_sha256": "7cfc014e6c6e94a670b692382c1fe5328404035e3ceb29941f62aef4209721d7",
+      "metric": {
+        "evaluated_native_unique_pixels": 15168,
+        "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+        "f1": 0.2664152237270701,
+        "fn": 0,
+        "fp": 12837,
+        "iou": 0.15367879746835442,
+        "kappa": 0.0,
+        "oa": 0.15367879746835442,
+        "precision": 0.15367879746835442,
+        "recall": 1.0,
+        "tn": 0,
+        "tp": 2331
+      },
+      "naive_repeated_crop_pixels": 55296,
+      "only_val_records_entered_loader": true,
+      "shared_scene_mask_caveat": "The same source mask stores all splits; only the val coordinate union participates.",
+      "threshold": 0.1,
+      "train_test_pixels_entering_metric": 0,
+      "validation_crop_count": 24
+    },
+    {
+      "dataset": "Farmland",
+      "expected_positive_val_pixels": 589,
+      "expected_unique_val_pixels": 9216,
+      "manifest_sha256": "5c5e7521398ab6575e98eb986afdfb4dbb8c595726351b0d111d1ee333f7ba2b",
+      "metric": {
+        "evaluated_native_unique_pixels": 9216,
+        "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+        "f1": 0.1201427842937277,
+        "fn": 0,
+        "fp": 8627,
+        "iou": 0.06391059027777778,
+        "kappa": 0.0,
+        "oa": 0.06391059027777778,
+        "precision": 0.06391059027777778,
+        "recall": 1.0,
+        "tn": 0,
+        "tp": 589
+      },
+      "naive_repeated_crop_pixels": 36864,
+      "only_val_records_entered_loader": true,
+      "shared_scene_mask_caveat": "The same source mask stores all splits; only the val coordinate union participates.",
+      "threshold": 0.1,
+      "train_test_pixels_entering_metric": 0,
+      "validation_crop_count": 16
+    },
+    {
+      "dataset": "Yellow_River",
+      "expected_positive_val_pixels": 2134,
+      "expected_unique_val_pixels": 9216,
+      "manifest_sha256": "a7aa8b3d0e78ff7a8364545409cf73732e264d2946ff2e9fcfee98bdce77d224",
+      "metric": {
+        "evaluated_native_unique_pixels": 9216,
+        "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+        "f1": 0.3760352422907489,
+        "fn": 0,
+        "fp": 7082,
+        "iou": 0.23155381944444445,
+        "kappa": 0.0,
+        "oa": 0.23155381944444445,
+        "precision": 0.23155381944444445,
+        "recall": 1.0,
+        "tn": 0,
+        "tp": 2134
+      },
+      "naive_repeated_crop_pixels": 36864,
+      "only_val_records_entered_loader": true,
+      "shared_scene_mask_caveat": "The same source mask stores all splits; only the val coordinate union participates.",
+      "threshold": 0.1,
+      "train_test_pixels_entering_metric": 0,
+      "validation_crop_count": 16
+    }
+  ],
+  "evaluations_per_dataset": 1,
+  "finished_utc": "2026-10-09T03:01:09.010863+00:00",
+  "formal_result": false,
+  "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "model": "seed0 random Original full_t+UPerNet-lite, evaluation mode, no optimizer",
+  "probe_sha256": "8e9a427e17df51833c7cabf075d5f451c22fcee986711ee45cb787b819d72a58",
+  "source_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+  "status": "passed",
+  "test_evaluation_performed": false,
+  "validation_only": true
+}

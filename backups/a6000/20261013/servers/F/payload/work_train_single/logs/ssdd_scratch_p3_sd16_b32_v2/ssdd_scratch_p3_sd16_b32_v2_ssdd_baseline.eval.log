@@ -1,0 +1,19 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+ssdd_baseline summary: 388 layers, 5984203 parameters, 0 gradients, 13.6 GFLOPs
+[34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/ssdd_bs32_source/SSDD/labels/test.cache... 232 images, 0 backgrounds, 0 corrupt: 100%|██████████| 232/232 [00:00<?, ?it/s][34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/data/ssdd_bs32_source/SSDD/labels/test.cache... 232 images, 0 backgrounds, 0 corrupt: 100%|██████████| 232/232 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/8 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  12%|█▎        | 1/8 [00:00<00:02,  2.93it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  25%|██▌       | 2/8 [00:00<00:01,  3.35it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  38%|███▊      | 3/8 [00:00<00:01,  3.63it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 4/8 [00:01<00:01,  3.77it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  62%|██████▎   | 5/8 [00:01<00:00,  3.87it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  75%|███████▌  | 6/8 [00:01<00:00,  3.80it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  88%|████████▊ | 7/8 [00:01<00:00,  3.58it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 8/8 [00:02<00:00,  3.96it/s]
+                   all        232        546      0.885      0.821      0.886      0.457
+Speed: 0.2ms preprocess, 7.2ms inference, 0.0ms loss, 0.3ms postprocess per image
+experiment: ssdd_scratch_p3_sd16_b32_v2_ssdd_baseline
+subset:     SSDD
+P/R:        0.885395/0.820670
+AP50:       0.886295
+AP75:       0.424970
+AP50-95:    0.456828
+JSON:       /home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v2_ssdd_baseline/eval_test.json
+
+===== 2026-08-28T02:41:32.100778 =====
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/tools/evaluate_sarmix.py --weights /home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v2_ssdd_baseline/weights/best.pt --data /home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v2-manifest/datasets/SSDD.yaml --experiment ssdd_scratch_p3_sd16_b32_v2_ssdd_baseline --placement baseline --variant baseline --state-dim 0 --seed 0 --subset SSDD --split test --output-json /home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v2_ssdd_baseline/eval_test.json --imgsz 640 --batch 32 --device 0 --workers 8 --project /home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/evaluations --name ssdd_scratch_p3_sd16_b32_v2_ssdd_baseline_test

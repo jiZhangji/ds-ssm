@@ -1,0 +1,25 @@
+{
+  "data": {
+    "ready_path": "/home/powerleader/ig-ds-ssm/tasks/sample_amplitude_20261013_v1/data/READY.json"
+  },
+  "data_ready": false,
+  "gpu_uuid": "GPU-09b018e1-7140-296a-73d4-9e010ee209a2",
+  "lane": "b0amplitude",
+  "methods": [
+    "Full",
+    "Original",
+    "Matched075"
+  ],
+  "predecessor": {
+    "owner_running": true,
+    "predecessor_status": "RUNNING",
+    "receipt_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/launch/b0acd.json",
+    "state_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1/lanes/b0acd/state.json"
+  },
+  "predecessor_complete": false,
+  "predecessor_lane": "b0acd",
+  "predecessor_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1",
+  "root": "/home/powerleader/ig-ds-ssm/tasks/sample_amplitude_20261013_v1",
+  "status": "WAITING_PREDECESSOR",
+  "time": 1791864822.0332358
+}

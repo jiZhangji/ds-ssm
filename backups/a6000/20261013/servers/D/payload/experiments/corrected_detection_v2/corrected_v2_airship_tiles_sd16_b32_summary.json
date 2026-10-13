@@ -1,0 +1,33 @@
+{
+  "experiment_id": "corrected_v2_airship_tiles_sd16_b32",
+  "records": [
+    {
+      "dataset": "AIR-SARShip-2.0",
+      "experiment": "corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline",
+      "variant": "baseline",
+      "placement": "baseline",
+      "state_dim": 0,
+      "precision": 0.5654122750221551,
+      "recall": 0.45217391304347826,
+      "ap50": 0.4759010068302959,
+      "ap75": 0.07462881293794348,
+      "ap50_95": 0.17375037249948516,
+      "inference_ms": 9.464950031704372,
+      "weights": "/home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_baseline/weights/best.pt"
+    },
+    {
+      "dataset": "AIR-SARShip-2.0",
+      "experiment": "corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3",
+      "variant": "full",
+      "placement": "p3",
+      "state_dim": 16,
+      "precision": 0.5854150690330692,
+      "recall": 0.46608695652173915,
+      "ap50": 0.5155932357692471,
+      "ap75": 0.09086504211293625,
+      "ap50_95": 0.1929145722576104,
+      "inference_ms": 8.771219518449572,
+      "weights": "/home/powerleader/ig-ds-ssm/experiments/corrected_detection_v2/corrected_v2_airship_tiles_sd16_b32_air_sarship_20_full_p3/weights/best.pt"
+    }
+  ]
+}

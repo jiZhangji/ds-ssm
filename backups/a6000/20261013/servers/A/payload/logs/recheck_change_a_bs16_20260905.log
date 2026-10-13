@@ -1,0 +1,1022 @@
+[2026-09-05 17:09:19] start change-detection BS=16 device=cuda:0 tag=a_bs16
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Ottawa baseline finetune 1/150 loss=1.45722 score=0.68330
+Ottawa baseline finetune 2/150 loss=0.93204 score=0.94324
+Ottawa baseline finetune 3/150 loss=0.75104 score=0.95245
+Ottawa baseline finetune 4/150 loss=0.71948 score=0.95721
+Ottawa baseline finetune 5/150 loss=0.68712 score=0.95948
+Ottawa baseline finetune 6/150 loss=0.68571 score=0.95874
+Ottawa baseline finetune 7/150 loss=0.62946 score=0.96210
+Ottawa baseline finetune 8/150 loss=0.59484 score=0.96253
+Ottawa baseline finetune 9/150 loss=0.59492 score=0.96180
+Ottawa baseline finetune 10/150 loss=0.59905 score=0.96205
+Ottawa baseline finetune 11/150 loss=0.55245 score=0.96189
+Ottawa baseline finetune 12/150 loss=0.54263 score=0.96249
+Ottawa baseline finetune 13/150 loss=0.54983 score=0.96305
+Ottawa baseline finetune 14/150 loss=0.53385 score=0.96290
+Ottawa baseline finetune 15/150 loss=0.55581 score=0.96350
+Ottawa baseline finetune 16/150 loss=0.48643 score=0.96219
+Ottawa baseline finetune 17/150 loss=0.46332 score=0.96335
+Ottawa baseline finetune 18/150 loss=0.44776 score=0.96358
+Ottawa baseline finetune 19/150 loss=0.47336 score=0.96377
+Ottawa baseline finetune 20/150 loss=0.45261 score=0.96400
+Ottawa baseline finetune 21/150 loss=0.40692 score=0.96503
+Ottawa baseline finetune 22/150 loss=0.44257 score=0.96369
+Ottawa baseline finetune 23/150 loss=0.39936 score=0.96403
+Ottawa baseline finetune 24/150 loss=0.38911 score=0.96497
+Ottawa baseline finetune 25/150 loss=0.38207 score=0.96474
+Ottawa baseline finetune 26/150 loss=0.38420 score=0.96609
+Ottawa baseline finetune 27/150 loss=0.37002 score=0.96617
+Ottawa baseline finetune 28/150 loss=0.36620 score=0.96580
+Ottawa baseline finetune 29/150 loss=0.35089 score=0.96342
+Ottawa baseline finetune 30/150 loss=0.38441 score=0.96581
+Ottawa baseline finetune 31/150 loss=0.33920 score=0.96525
+Ottawa baseline finetune 32/150 loss=0.32992 score=0.96644
+Ottawa baseline finetune 33/150 loss=0.32852 score=0.96709
+Ottawa baseline finetune 34/150 loss=0.33359 score=0.96596
+Ottawa baseline finetune 35/150 loss=0.31434 score=0.96654
+Ottawa baseline finetune 36/150 loss=0.33008 score=0.96670
+Ottawa baseline finetune 37/150 loss=0.29503 score=0.96730
+Ottawa baseline finetune 38/150 loss=0.34059 score=0.96666
+Ottawa baseline finetune 39/150 loss=0.28951 score=0.96777
+Ottawa baseline finetune 40/150 loss=0.31587 score=0.96760
+Ottawa baseline finetune 41/150 loss=0.29674 score=0.96672
+Ottawa baseline finetune 42/150 loss=0.26578 score=0.96808
+Ottawa baseline finetune 43/150 loss=0.28083 score=0.96795
+Ottawa baseline finetune 44/150 loss=0.28287 score=0.96754
+Ottawa baseline finetune 45/150 loss=0.26556 score=0.96743
+Ottawa baseline finetune 46/150 loss=0.26570 score=0.96692
+Ottawa baseline finetune 47/150 loss=0.28223 score=0.96771
+Ottawa baseline finetune 48/150 loss=0.26847 score=0.96779
+Ottawa baseline finetune 49/150 loss=0.27608 score=0.96792
+Ottawa baseline finetune 50/150 loss=0.25992 score=0.96709
+Ottawa baseline finetune 51/150 loss=0.26356 score=0.96859
+Ottawa baseline finetune 52/150 loss=0.22914 score=0.96887
+Ottawa baseline finetune 53/150 loss=0.23197 score=0.96796
+Ottawa baseline finetune 54/150 loss=0.24269 score=0.96937
+Ottawa baseline finetune 55/150 loss=0.22779 score=0.96947
+Ottawa baseline finetune 56/150 loss=0.25179 score=0.96832
+Ottawa baseline finetune 57/150 loss=0.21796 score=0.96849
+Ottawa baseline finetune 58/150 loss=0.21771 score=0.96815
+Ottawa baseline finetune 59/150 loss=0.22692 score=0.96787
+Ottawa baseline finetune 60/150 loss=0.20450 score=0.96846
+Ottawa baseline finetune 61/150 loss=0.20808 score=0.96808
+Ottawa baseline finetune 62/150 loss=0.22262 score=0.96796
+Ottawa baseline finetune 63/150 loss=0.19977 score=0.96831
+Ottawa baseline finetune 64/150 loss=0.23445 score=0.96866
+Ottawa baseline finetune 65/150 loss=0.21395 score=0.96826
+Ottawa baseline finetune 66/150 loss=0.19569 score=0.96895
+Ottawa baseline finetune 67/150 loss=0.20500 score=0.96898
+Ottawa baseline finetune 68/150 loss=0.19734 score=0.96885
+Ottawa baseline finetune 69/150 loss=0.18572 score=0.96861
+Ottawa baseline finetune 70/150 loss=0.19693 score=0.96833
+Ottawa baseline finetune 71/150 loss=0.20725 score=0.96863
+Ottawa baseline finetune 72/150 loss=0.18962 score=0.96841
+Ottawa baseline finetune 73/150 loss=0.18664 score=0.96757
+Ottawa baseline finetune 74/150 loss=0.22161 score=0.96852
+Ottawa baseline finetune 75/150 loss=0.18807 score=0.96808
+Ottawa baseline finetune 76/150 loss=0.18022 score=0.96887
+Ottawa baseline finetune 77/150 loss=0.17967 score=0.96847
+Ottawa baseline finetune 78/150 loss=0.19028 score=0.96845
+Ottawa baseline finetune 79/150 loss=0.17056 score=0.96822
+Ottawa baseline finetune 80/150 loss=0.16721 score=0.96863
+Ottawa baseline finetune 81/150 loss=0.17027 score=0.96848
+Ottawa baseline finetune 82/150 loss=0.20995 score=0.96868
+Ottawa baseline finetune 83/150 loss=0.17745 score=0.96921
+Ottawa baseline finetune 84/150 loss=0.18226 score=0.96883
+Ottawa baseline finetune 85/150 loss=0.23436 score=0.96657
+Ottawa baseline finetune 86/150 loss=0.19965 score=0.96778
+Ottawa baseline finetune 87/150 loss=0.19184 score=0.96898
+Ottawa baseline finetune 88/150 loss=0.18366 score=0.96858
+Ottawa baseline finetune 89/150 loss=0.16571 score=0.96844
+Ottawa baseline finetune 90/150 loss=0.17056 score=0.96903
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "backbone_layout": "legacy",
+  "decoder": "multiscale",
+  "initialization": "scratch",
+  "pretrained": {
+    "path": null,
+    "loaded_tensors": 0,
+    "model_tensors": 209,
+    "coverage": 0.0
+  },
+  "protocol": "dense-spatial-macroblocks",
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 112,
+    "val": 24,
+    "test": 32
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 192,
+  "eval_batch": 16,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 150,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 55,
+  "threshold": 0.7500000000000002,
+  "metric": {
+    "precision": 0.9025871066952441,
+    "recall": 0.9399976765799256,
+    "f1": 0.9209126124405026,
+    "iou": 0.8534180114209947,
+    "oa": 0.983506096733941,
+    "kappa": 0.9117098216806289
+  },
+  "params": 2346329,
+  "gflops": 1.177137648,
+  "latency_ms": 6.777194266517957,
+  "fps": 147.5536867727695,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_change_a_bs16_20260905/Ottawa/baseline_bs16/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Ottawa/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Ottawa ours finetune 1/150 loss=1.52758 score=0.85382
+Ottawa ours finetune 2/150 loss=1.00933 score=0.93863
+Ottawa ours finetune 3/150 loss=0.86241 score=0.94969
+Ottawa ours finetune 4/150 loss=0.84479 score=0.95327
+Ottawa ours finetune 5/150 loss=0.79258 score=0.95102
+Ottawa ours finetune 6/150 loss=0.73746 score=0.95611
+Ottawa ours finetune 7/150 loss=0.71497 score=0.95785
+Ottawa ours finetune 8/150 loss=0.71389 score=0.95813
+Ottawa ours finetune 9/150 loss=0.70026 score=0.95999
+Ottawa ours finetune 10/150 loss=0.67432 score=0.95979
+Ottawa ours finetune 11/150 loss=0.65485 score=0.96017
+Ottawa ours finetune 12/150 loss=0.65019 score=0.96067
+Ottawa ours finetune 13/150 loss=0.62986 score=0.96186
+Ottawa ours finetune 14/150 loss=0.59846 score=0.96107
+Ottawa ours finetune 15/150 loss=0.57494 score=0.96229
+Ottawa ours finetune 16/150 loss=0.59626 score=0.96400
+Ottawa ours finetune 17/150 loss=0.60628 score=0.96202
+Ottawa ours finetune 18/150 loss=0.53874 score=0.96418
+Ottawa ours finetune 19/150 loss=0.52821 score=0.96408
+Ottawa ours finetune 20/150 loss=0.52461 score=0.96473
+Ottawa ours finetune 21/150 loss=0.55492 score=0.96552
+Ottawa ours finetune 22/150 loss=0.51056 score=0.96600
+Ottawa ours finetune 23/150 loss=0.48601 score=0.96597
+Ottawa ours finetune 24/150 loss=0.49966 score=0.96563
+Ottawa ours finetune 25/150 loss=0.46054 score=0.96567
+Ottawa ours finetune 26/150 loss=0.48231 score=0.96608
+Ottawa ours finetune 27/150 loss=0.43400 score=0.96591
+Ottawa ours finetune 28/150 loss=0.44525 score=0.96672
+Ottawa ours finetune 29/150 loss=0.44332 score=0.96619
+Ottawa ours finetune 30/150 loss=0.44406 score=0.96604
+Ottawa ours finetune 31/150 loss=0.40304 score=0.96633
+Ottawa ours finetune 32/150 loss=0.41696 score=0.96715
+Ottawa ours finetune 33/150 loss=0.39013 score=0.96667
+Ottawa ours finetune 34/150 loss=0.36642 score=0.96752
+Ottawa ours finetune 35/150 loss=0.41206 score=0.96681
+Ottawa ours finetune 36/150 loss=0.36746 score=0.96749
+Ottawa ours finetune 37/150 loss=0.39852 score=0.96628
+Ottawa ours finetune 38/150 loss=0.36974 score=0.96698
+Ottawa ours finetune 39/150 loss=0.34579 score=0.96708
+Ottawa ours finetune 40/150 loss=0.34576 score=0.96655
+Ottawa ours finetune 41/150 loss=0.33589 score=0.96786
+Ottawa ours finetune 42/150 loss=0.36624 score=0.96671
+Ottawa ours finetune 43/150 loss=0.31546 score=0.96766
+Ottawa ours finetune 44/150 loss=0.35374 score=0.96619
+Ottawa ours finetune 45/150 loss=0.31544 score=0.96688
+Ottawa ours finetune 46/150 loss=0.32292 score=0.96773
+Ottawa ours finetune 47/150 loss=0.30960 score=0.96785
+Ottawa ours finetune 48/150 loss=0.32662 score=0.96695
+Ottawa ours finetune 49/150 loss=0.29595 score=0.96781
+Ottawa ours finetune 50/150 loss=0.28891 score=0.96770
+Ottawa ours finetune 51/150 loss=0.29544 score=0.96811
+Ottawa ours finetune 52/150 loss=0.30647 score=0.96778
+Ottawa ours finetune 53/150 loss=0.27947 score=0.96791
+Ottawa ours finetune 54/150 loss=0.28025 score=0.96773
+Ottawa ours finetune 55/150 loss=0.29412 score=0.96782
+Ottawa ours finetune 56/150 loss=0.26775 score=0.96755
+Ottawa ours finetune 57/150 loss=0.29623 score=0.96759
+Ottawa ours finetune 58/150 loss=0.29047 score=0.96823
+Ottawa ours finetune 59/150 loss=0.27334 score=0.96782
+Ottawa ours finetune 60/150 loss=0.27552 score=0.96824
+Ottawa ours finetune 61/150 loss=0.25801 score=0.96810
+Ottawa ours finetune 62/150 loss=0.28112 score=0.96822
+Ottawa ours finetune 63/150 loss=0.26409 score=0.96767
+Ottawa ours finetune 64/150 loss=0.26022 score=0.96777
+Ottawa ours finetune 65/150 loss=0.29062 score=0.96851
+Ottawa ours finetune 66/150 loss=0.23948 score=0.96792
+Ottawa ours finetune 67/150 loss=0.26156 score=0.96817
+Ottawa ours finetune 68/150 loss=0.24455 score=0.96822
+Ottawa ours finetune 69/150 loss=0.25576 score=0.96846
+Ottawa ours finetune 70/150 loss=0.25929 score=0.96833
+Ottawa ours finetune 71/150 loss=0.24532 score=0.96814
+Ottawa ours finetune 72/150 loss=0.24639 score=0.96848
+Ottawa ours finetune 73/150 loss=0.23134 score=0.96850
+Ottawa ours finetune 74/150 loss=0.21233 score=0.96827
+Ottawa ours finetune 75/150 loss=0.27371 score=0.96760
+Ottawa ours finetune 76/150 loss=0.20438 score=0.96829
+Ottawa ours finetune 77/150 loss=0.21912 score=0.96874
+Ottawa ours finetune 78/150 loss=0.22319 score=0.96874
+Ottawa ours finetune 79/150 loss=0.20407 score=0.96875
+Ottawa ours finetune 80/150 loss=0.22594 score=0.96870
+Ottawa ours finetune 81/150 loss=0.20788 score=0.96813
+Ottawa ours finetune 82/150 loss=0.20079 score=0.96838
+Ottawa ours finetune 83/150 loss=0.21329 score=0.96844
+Ottawa ours finetune 84/150 loss=0.21579 score=0.96878
+Ottawa ours finetune 85/150 loss=0.19530 score=0.96847
+Ottawa ours finetune 86/150 loss=0.21355 score=0.96864
+Ottawa ours finetune 87/150 loss=0.20290 score=0.96877
+Ottawa ours finetune 88/150 loss=0.22439 score=0.96860
+Ottawa ours finetune 89/150 loss=0.20987 score=0.96840
+Ottawa ours finetune 90/150 loss=0.22695 score=0.96870
+Ottawa ours finetune 91/150 loss=0.20780 score=0.96857
+Ottawa ours finetune 92/150 loss=0.19653 score=0.96880
+Ottawa ours finetune 93/150 loss=0.20976 score=0.96896
+Ottawa ours finetune 94/150 loss=0.19206 score=0.96879
+Ottawa ours finetune 95/150 loss=0.21643 score=0.96863
+Ottawa ours finetune 96/150 loss=0.19175 score=0.96844
+Ottawa ours finetune 97/150 loss=0.19390 score=0.96894
+Ottawa ours finetune 98/150 loss=0.21638 score=0.96864
+Ottawa ours finetune 99/150 loss=0.19115 score=0.96873
+Ottawa ours finetune 100/150 loss=0.22216 score=0.96871
+Ottawa ours finetune 101/150 loss=0.19668 score=0.96917
+Ottawa ours finetune 102/150 loss=0.17715 score=0.96895
+Ottawa ours finetune 103/150 loss=0.19348 score=0.96871
+Ottawa ours finetune 104/150 loss=0.17422 score=0.96886
+Ottawa ours finetune 105/150 loss=0.21254 score=0.96879
+Ottawa ours finetune 106/150 loss=0.19447 score=0.96868
+Ottawa ours finetune 107/150 loss=0.17898 score=0.96831
+Ottawa ours finetune 108/150 loss=0.18372 score=0.96848
+Ottawa ours finetune 109/150 loss=0.18614 score=0.96865
+Ottawa ours finetune 110/150 loss=0.16944 score=0.96864
+Ottawa ours finetune 111/150 loss=0.18875 score=0.96900
+Ottawa ours finetune 112/150 loss=0.18911 score=0.96917
+Ottawa ours finetune 113/150 loss=0.19153 score=0.96895
+Ottawa ours finetune 114/150 loss=0.16863 score=0.96898
+Ottawa ours finetune 115/150 loss=0.18693 score=0.96910
+Ottawa ours finetune 116/150 loss=0.18077 score=0.96884
+Ottawa ours finetune 117/150 loss=0.18609 score=0.96882
+Ottawa ours finetune 118/150 loss=0.17220 score=0.96907
+Ottawa ours finetune 119/150 loss=0.17018 score=0.96891
+Ottawa ours finetune 120/150 loss=0.16395 score=0.96873
+Ottawa ours finetune 121/150 loss=0.16728 score=0.96895
+Ottawa ours finetune 122/150 loss=0.19011 score=0.96899
+Ottawa ours finetune 123/150 loss=0.18205 score=0.96881
+Ottawa ours finetune 124/150 loss=0.17484 score=0.96873
+Ottawa ours finetune 125/150 loss=0.21280 score=0.96904
+Ottawa ours finetune 126/150 loss=0.20135 score=0.96923
+Ottawa ours finetune 127/150 loss=0.17316 score=0.96922
+Ottawa ours finetune 128/150 loss=0.16923 score=0.96918
+Ottawa ours finetune 129/150 loss=0.18246 score=0.96916
+Ottawa ours finetune 130/150 loss=0.16400 score=0.96908
+Ottawa ours finetune 131/150 loss=0.18413 score=0.96901
+Ottawa ours finetune 132/150 loss=0.17468 score=0.96887
+Ottawa ours finetune 133/150 loss=0.17598 score=0.96891
+Ottawa ours finetune 134/150 loss=0.18190 score=0.96900
+Ottawa ours finetune 135/150 loss=0.18876 score=0.96900
+Ottawa ours finetune 136/150 loss=0.17474 score=0.96898
+Ottawa ours finetune 137/150 loss=0.16497 score=0.96888
+Ottawa ours finetune 138/150 loss=0.17456 score=0.96897
+Ottawa ours finetune 139/150 loss=0.18650 score=0.96897
+Ottawa ours finetune 140/150 loss=0.18759 score=0.96913
+Ottawa ours finetune 141/150 loss=0.18878 score=0.96908
+Ottawa ours finetune 142/150 loss=0.17344 score=0.96902
+Ottawa ours finetune 143/150 loss=0.16891 score=0.96905
+Ottawa ours finetune 144/150 loss=0.17859 score=0.96890
+Ottawa ours finetune 145/150 loss=0.17755 score=0.96896
+Ottawa ours finetune 146/150 loss=0.17670 score=0.96902
+Ottawa ours finetune 147/150 loss=0.16141 score=0.96899
+Ottawa ours finetune 148/150 loss=0.23618 score=0.96895
+Ottawa ours finetune 149/150 loss=0.17314 score=0.96915
+Ottawa ours finetune 150/150 loss=0.18524 score=0.96911
+{
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "legacy",
+  "decoder": "multiscale",
+  "initialization": "scratch",
+  "pretrained": {
+    "path": null,
+    "loaded_tensors": 0,
+    "model_tensors": 200,
+    "coverage": 0.0
+  },
+  "protocol": "dense-spatial-macroblocks",
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 112,
+    "val": 24,
+    "test": 32
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 192,
+  "eval_batch": 16,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 150,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 126,
+  "threshold": 0.5500000000000002,
+  "metric": {
+    "precision": 0.8877694308668596,
+    "recall": 0.9600288767923526,
+    "f1": 0.9224862757292701,
+    "iou": 0.8561248501531767,
+    "oa": 0.9835179646809896,
+    "kappa": 0.9132806432320896
+  },
+  "params": 2138147,
+  "gflops": 1.136191824,
+  "latency_ms": 6.707166732909779,
+  "fps": 149.09425094404483,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_change_a_bs16_20260905/Ottawa/ours_bs16/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Ottawa/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Yellow River baseline finetune 1/150 loss=1.59520 score=0.58596
+Yellow River baseline finetune 2/150 loss=1.09138 score=0.89607
+Yellow River baseline finetune 3/150 loss=1.05136 score=0.91222
+Yellow River baseline finetune 4/150 loss=0.88930 score=0.91936
+Yellow River baseline finetune 5/150 loss=0.93631 score=0.91868
+Yellow River baseline finetune 6/150 loss=0.82735 score=0.92042
+Yellow River baseline finetune 7/150 loss=0.78503 score=0.91596
+Yellow River baseline finetune 8/150 loss=1.00758 score=0.91201
+Yellow River baseline finetune 9/150 loss=0.80683 score=0.91231
+Yellow River baseline finetune 10/150 loss=0.82079 score=0.92059
+Yellow River baseline finetune 11/150 loss=0.73311 score=0.92469
+Yellow River baseline finetune 12/150 loss=0.81152 score=0.92042
+Yellow River baseline finetune 13/150 loss=0.68244 score=0.92132
+Yellow River baseline finetune 14/150 loss=0.84245 score=0.91597
+Yellow River baseline finetune 15/150 loss=0.69280 score=0.91892
+Yellow River baseline finetune 16/150 loss=0.69281 score=0.93185
+Yellow River baseline finetune 17/150 loss=0.64658 score=0.93129
+Yellow River baseline finetune 18/150 loss=0.69229 score=0.93601
+Yellow River baseline finetune 19/150 loss=0.58165 score=0.93303
+Yellow River baseline finetune 20/150 loss=0.60985 score=0.92816
+Yellow River baseline finetune 21/150 loss=0.67797 score=0.93664
+Yellow River baseline finetune 22/150 loss=0.67857 score=0.93579
+Yellow River baseline finetune 23/150 loss=0.55850 score=0.93164
+Yellow River baseline finetune 24/150 loss=0.59420 score=0.92200
+Yellow River baseline finetune 25/150 loss=0.55081 score=0.92726
+Yellow River baseline finetune 26/150 loss=0.65390 score=0.93151
+Yellow River baseline finetune 27/150 loss=0.62960 score=0.94029
+Yellow River baseline finetune 28/150 loss=0.62640 score=0.93356
+Yellow River baseline finetune 29/150 loss=0.56525 score=0.93979
+Yellow River baseline finetune 30/150 loss=0.51023 score=0.94014
+Yellow River baseline finetune 31/150 loss=0.51035 score=0.93543
+Yellow River baseline finetune 32/150 loss=0.55494 score=0.93469
+Yellow River baseline finetune 33/150 loss=0.47154 score=0.93693
+Yellow River baseline finetune 34/150 loss=0.60018 score=0.93401
+Yellow River baseline finetune 35/150 loss=0.44668 score=0.93597
+Yellow River baseline finetune 36/150 loss=0.40100 score=0.94038
+Yellow River baseline finetune 37/150 loss=0.47507 score=0.94032
+Yellow River baseline finetune 38/150 loss=0.67481 score=0.94076
+Yellow River baseline finetune 39/150 loss=0.44139 score=0.94198
+Yellow River baseline finetune 40/150 loss=0.46442 score=0.93798
+Yellow River baseline finetune 41/150 loss=0.41038 score=0.93948
+Yellow River baseline finetune 42/150 loss=0.40828 score=0.94110
+Yellow River baseline finetune 43/150 loss=0.54097 score=0.94195
+Yellow River baseline finetune 44/150 loss=0.43282 score=0.94095
+Yellow River baseline finetune 45/150 loss=0.67092 score=0.94048
+Yellow River baseline finetune 46/150 loss=0.35024 score=0.93451
+Yellow River baseline finetune 47/150 loss=0.41996 score=0.93305
+Yellow River baseline finetune 48/150 loss=0.37492 score=0.93218
+Yellow River baseline finetune 49/150 loss=0.46240 score=0.94012
+Yellow River baseline finetune 50/150 loss=0.65202 score=0.93805
+Yellow River baseline finetune 51/150 loss=0.45780 score=0.94076
+Yellow River baseline finetune 52/150 loss=0.91463 score=0.94123
+Yellow River baseline finetune 53/150 loss=0.39896 score=0.93696
+Yellow River baseline finetune 54/150 loss=0.37663 score=0.94089
+Yellow River baseline finetune 55/150 loss=0.50689 score=0.93940
+Yellow River baseline finetune 56/150 loss=0.48104 score=0.93990
+Yellow River baseline finetune 57/150 loss=0.45318 score=0.94122
+Yellow River baseline finetune 58/150 loss=0.45795 score=0.94108
+Yellow River baseline finetune 59/150 loss=0.36674 score=0.94077
+Yellow River baseline finetune 60/150 loss=0.44407 score=0.94166
+Yellow River baseline finetune 61/150 loss=0.35025 score=0.94018
+Yellow River baseline finetune 62/150 loss=0.44766 score=0.93823
+Yellow River baseline finetune 63/150 loss=0.31243 score=0.93717
+Yellow River baseline finetune 64/150 loss=0.33320 score=0.93881
+Yellow River baseline finetune 65/150 loss=0.44664 score=0.93889
+Yellow River baseline finetune 66/150 loss=0.30356 score=0.93312
+Yellow River baseline finetune 67/150 loss=0.47171 score=0.94031
+Yellow River baseline finetune 68/150 loss=0.55755 score=0.94119
+Yellow River baseline finetune 69/150 loss=0.49148 score=0.93842
+Yellow River baseline finetune 70/150 loss=0.31872 score=0.93853
+Yellow River baseline finetune 71/150 loss=0.35208 score=0.94303
+Yellow River baseline finetune 72/150 loss=0.41749 score=0.94051
+Yellow River baseline finetune 73/150 loss=0.29823 score=0.94153
+Yellow River baseline finetune 74/150 loss=0.30295 score=0.93986
+Yellow River baseline finetune 75/150 loss=0.38426 score=0.94075
+Yellow River baseline finetune 76/150 loss=0.46760 score=0.94017
+Yellow River baseline finetune 77/150 loss=0.28973 score=0.93889
+Yellow River baseline finetune 78/150 loss=0.26864 score=0.93829
+Yellow River baseline finetune 79/150 loss=0.41125 score=0.94144
+Yellow River baseline finetune 80/150 loss=0.42000 score=0.94128
+Yellow River baseline finetune 81/150 loss=0.33949 score=0.93746
+Yellow River baseline finetune 82/150 loss=0.51435 score=0.93577
+Yellow River baseline finetune 83/150 loss=0.34582 score=0.93658
+Yellow River baseline finetune 84/150 loss=0.43748 score=0.94011
+Yellow River baseline finetune 85/150 loss=0.30373 score=0.93737
+Yellow River baseline finetune 86/150 loss=0.30857 score=0.93746
+Yellow River baseline finetune 87/150 loss=0.37035 score=0.93840
+Yellow River baseline finetune 88/150 loss=0.28529 score=0.93946
+Yellow River baseline finetune 89/150 loss=0.27593 score=0.94005
+Yellow River baseline finetune 90/150 loss=0.27407 score=0.93888
+Yellow River baseline finetune 91/150 loss=0.47909 score=0.93829
+Yellow River baseline finetune 92/150 loss=0.31161 score=0.94194
+Yellow River baseline finetune 93/150 loss=0.35178 score=0.93979
+Yellow River baseline finetune 94/150 loss=0.28606 score=0.93924
+Yellow River baseline finetune 95/150 loss=0.29498 score=0.93873
+Yellow River baseline finetune 96/150 loss=0.27129 score=0.93240
+Yellow River baseline finetune 97/150 loss=0.87418 score=0.93990
+Yellow River baseline finetune 98/150 loss=0.24608 score=0.93990
+Yellow River baseline finetune 99/150 loss=0.39617 score=0.93971
+Yellow River baseline finetune 100/150 loss=0.36650 score=0.94043
+Yellow River baseline finetune 101/150 loss=0.35167 score=0.94032
+Yellow River baseline finetune 102/150 loss=0.32933 score=0.93876
+Yellow River baseline finetune 103/150 loss=0.43151 score=0.94188
+Yellow River baseline finetune 104/150 loss=0.37268 score=0.94015
+Yellow River baseline finetune 105/150 loss=0.33617 score=0.93542
+Yellow River baseline finetune 106/150 loss=0.32517 score=0.93823
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "Yellow River",
+  "task": "change_detection",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "backbone_layout": "legacy",
+  "decoder": "multiscale",
+  "initialization": "scratch",
+  "pretrained": {
+    "path": null,
+    "loaded_tensors": 0,
+    "model_tensors": 209,
+    "coverage": 0.0
+  },
+  "protocol": "dense-spatial-macroblocks",
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 100,
+    "val": 16,
+    "test": 16
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 192,
+  "eval_batch": 16,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 150,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 71,
+  "threshold": 0.8500000000000002,
+  "metric": {
+    "precision": 0.9120549120549121,
+    "recall": 0.8570176668536175,
+    "f1": 0.8836801633700495,
+    "iou": 0.7916012368263424,
+    "oa": 0.9781748453776041,
+    "kappa": 0.8716506923190953
+  },
+  "params": 2346329,
+  "gflops": 1.177137648,
+  "latency_ms": 6.626522601194059,
+  "fps": 150.90871339061096,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_change_a_bs16_20260905/Yellow_River/baseline_bs16/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Yellow_River/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Yellow River ours finetune 1/150 loss=1.69582 score=0.39103
+Yellow River ours finetune 2/150 loss=1.26987 score=0.86835
+Yellow River ours finetune 3/150 loss=1.13683 score=0.90621
+Yellow River ours finetune 4/150 loss=0.97014 score=0.91616
+Yellow River ours finetune 5/150 loss=0.91720 score=0.91971
+Yellow River ours finetune 6/150 loss=0.94617 score=0.92033
+Yellow River ours finetune 7/150 loss=0.94654 score=0.91747
+Yellow River ours finetune 8/150 loss=0.89076 score=0.91736
+Yellow River ours finetune 9/150 loss=0.91979 score=0.91298
+Yellow River ours finetune 10/150 loss=0.94437 score=0.91856
+Yellow River ours finetune 11/150 loss=0.79397 score=0.91917
+Yellow River ours finetune 12/150 loss=0.88458 score=0.91920
+Yellow River ours finetune 13/150 loss=0.81477 score=0.91992
+Yellow River ours finetune 14/150 loss=0.88477 score=0.92003
+Yellow River ours finetune 15/150 loss=0.72573 score=0.91839
+Yellow River ours finetune 16/150 loss=0.95416 score=0.90811
+Yellow River ours finetune 17/150 loss=0.91703 score=0.91571
+Yellow River ours finetune 18/150 loss=0.85833 score=0.91031
+Yellow River ours finetune 19/150 loss=0.71182 score=0.90992
+Yellow River ours finetune 20/150 loss=0.63816 score=0.91569
+Yellow River ours finetune 21/150 loss=0.72423 score=0.92200
+Yellow River ours finetune 22/150 loss=0.83333 score=0.91959
+Yellow River ours finetune 23/150 loss=0.68846 score=0.91946
+Yellow River ours finetune 24/150 loss=0.72521 score=0.91981
+Yellow River ours finetune 25/150 loss=0.60264 score=0.92049
+Yellow River ours finetune 26/150 loss=0.58669 score=0.92736
+Yellow River ours finetune 27/150 loss=0.69860 score=0.93038
+Yellow River ours finetune 28/150 loss=0.55794 score=0.93199
+Yellow River ours finetune 29/150 loss=0.57571 score=0.92958
+Yellow River ours finetune 30/150 loss=0.52166 score=0.93116
+Yellow River ours finetune 31/150 loss=0.89894 score=0.93319
+Yellow River ours finetune 32/150 loss=0.55095 score=0.92616
+Yellow River ours finetune 33/150 loss=0.58092 score=0.93426
+Yellow River ours finetune 34/150 loss=0.61810 score=0.93344
+Yellow River ours finetune 35/150 loss=0.67588 score=0.92085
+Yellow River ours finetune 36/150 loss=0.55090 score=0.92014
+Yellow River ours finetune 37/150 loss=0.66885 score=0.93093
+Yellow River ours finetune 38/150 loss=0.61884 score=0.93644
+Yellow River ours finetune 39/150 loss=0.68131 score=0.93565
+Yellow River ours finetune 40/150 loss=0.49661 score=0.93667
+Yellow River ours finetune 41/150 loss=0.55282 score=0.93406
+Yellow River ours finetune 42/150 loss=0.47167 score=0.93969
+Yellow River ours finetune 43/150 loss=0.67871 score=0.93291
+Yellow River ours finetune 44/150 loss=0.53144 score=0.93927
+Yellow River ours finetune 45/150 loss=0.44915 score=0.94149
+Yellow River ours finetune 46/150 loss=0.60177 score=0.93833
+Yellow River ours finetune 47/150 loss=0.41334 score=0.93765
+Yellow River ours finetune 48/150 loss=0.41520 score=0.93348
+Yellow River ours finetune 49/150 loss=0.63853 score=0.92984
+Yellow River ours finetune 50/150 loss=0.65383 score=0.93548
+Yellow River ours finetune 51/150 loss=0.58656 score=0.93693
+Yellow River ours finetune 52/150 loss=0.47570 score=0.93770
+Yellow River ours finetune 53/150 loss=0.54017 score=0.93971
+Yellow River ours finetune 54/150 loss=0.41188 score=0.94284
+Yellow River ours finetune 55/150 loss=0.45981 score=0.93270
+Yellow River ours finetune 56/150 loss=0.44458 score=0.94216
+Yellow River ours finetune 57/150 loss=0.36314 score=0.93728
+Yellow River ours finetune 58/150 loss=0.47560 score=0.93553
+Yellow River ours finetune 59/150 loss=0.37967 score=0.94257
+Yellow River ours finetune 60/150 loss=0.46316 score=0.93834
+Yellow River ours finetune 61/150 loss=0.41958 score=0.93862
+Yellow River ours finetune 62/150 loss=0.36866 score=0.94135
+Yellow River ours finetune 63/150 loss=0.42728 score=0.94316
+Yellow River ours finetune 64/150 loss=0.38631 score=0.94180
+Yellow River ours finetune 65/150 loss=0.38994 score=0.94277
+Yellow River ours finetune 66/150 loss=0.36330 score=0.94162
+Yellow River ours finetune 67/150 loss=0.40379 score=0.94091
+Yellow River ours finetune 68/150 loss=0.36724 score=0.94407
+Yellow River ours finetune 69/150 loss=0.55493 score=0.94258
+Yellow River ours finetune 70/150 loss=0.36853 score=0.94305
+Yellow River ours finetune 71/150 loss=0.34224 score=0.94207
+Yellow River ours finetune 72/150 loss=0.37581 score=0.94051
+Yellow River ours finetune 73/150 loss=0.46749 score=0.94279
+Yellow River ours finetune 74/150 loss=0.42254 score=0.93982
+Yellow River ours finetune 75/150 loss=0.43035 score=0.94262
+Yellow River ours finetune 76/150 loss=0.31953 score=0.94104
+Yellow River ours finetune 77/150 loss=0.31520 score=0.94047
+Yellow River ours finetune 78/150 loss=0.53292 score=0.94253
+Yellow River ours finetune 79/150 loss=0.45603 score=0.94152
+Yellow River ours finetune 80/150 loss=0.38479 score=0.94099
+Yellow River ours finetune 81/150 loss=0.45730 score=0.94115
+Yellow River ours finetune 82/150 loss=0.48093 score=0.92898
+Yellow River ours finetune 83/150 loss=0.34270 score=0.93177
+Yellow River ours finetune 84/150 loss=0.59518 score=0.92964
+Yellow River ours finetune 85/150 loss=0.36327 score=0.93695
+Yellow River ours finetune 86/150 loss=0.44338 score=0.93841
+Yellow River ours finetune 87/150 loss=0.32229 score=0.94177
+Yellow River ours finetune 88/150 loss=0.30743 score=0.94393
+Yellow River ours finetune 89/150 loss=0.52252 score=0.94463
+Yellow River ours finetune 90/150 loss=0.50060 score=0.94284
+Yellow River ours finetune 91/150 loss=0.54760 score=0.94257
+Yellow River ours finetune 92/150 loss=0.52443 score=0.94167
+Yellow River ours finetune 93/150 loss=0.49205 score=0.94216
+Yellow River ours finetune 94/150 loss=0.49712 score=0.93696
+Yellow River ours finetune 95/150 loss=0.45582 score=0.94239
+Yellow River ours finetune 96/150 loss=0.32837 score=0.94047
+Yellow River ours finetune 97/150 loss=0.46084 score=0.93771
+Yellow River ours finetune 98/150 loss=0.33955 score=0.93888
+Yellow River ours finetune 99/150 loss=0.28230 score=0.93749
+Yellow River ours finetune 100/150 loss=0.49797 score=0.93832
+Yellow River ours finetune 101/150 loss=0.28810 score=0.93856
+Yellow River ours finetune 102/150 loss=0.38682 score=0.93887
+Yellow River ours finetune 103/150 loss=0.54215 score=0.94081
+Yellow River ours finetune 104/150 loss=0.31912 score=0.94121
+Yellow River ours finetune 105/150 loss=0.63827 score=0.94144
+Yellow River ours finetune 106/150 loss=0.36840 score=0.93981
+Yellow River ours finetune 107/150 loss=0.37063 score=0.94156
+Yellow River ours finetune 108/150 loss=0.51296 score=0.94088
+Yellow River ours finetune 109/150 loss=0.28665 score=0.94183
+Yellow River ours finetune 110/150 loss=0.32308 score=0.94101
+Yellow River ours finetune 111/150 loss=0.33550 score=0.94104
+Yellow River ours finetune 112/150 loss=0.30966 score=0.94036
+Yellow River ours finetune 113/150 loss=0.27588 score=0.94153
+Yellow River ours finetune 114/150 loss=0.25710 score=0.94048
+Yellow River ours finetune 115/150 loss=0.26613 score=0.94075
+Yellow River ours finetune 116/150 loss=0.37048 score=0.94131
+Yellow River ours finetune 117/150 loss=0.29506 score=0.94134
+Yellow River ours finetune 118/150 loss=0.43977 score=0.94124
+Yellow River ours finetune 119/150 loss=0.30645 score=0.94002
+Yellow River ours finetune 120/150 loss=0.90371 score=0.94108
+Yellow River ours finetune 121/150 loss=0.45506 score=0.94081
+Yellow River ours finetune 122/150 loss=0.29157 score=0.93864
+Yellow River ours finetune 123/150 loss=0.46412 score=0.93975
+Yellow River ours finetune 124/150 loss=0.29892 score=0.94054
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "Yellow River",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "legacy",
+  "decoder": "multiscale",
+  "initialization": "scratch",
+  "pretrained": {
+    "path": null,
+    "loaded_tensors": 0,
+    "model_tensors": 200,
+    "coverage": 0.0
+  },
+  "protocol": "dense-spatial-macroblocks",
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 100,
+    "val": 16,
+    "test": 16
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 192,
+  "eval_batch": 16,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 150,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 89,
+  "threshold": 0.6000000000000002,
+  "metric": {
+    "precision": 0.9142199082586564,
+    "recall": 0.8278708637128436,
+    "f1": 0.8689053834055352,
+    "iou": 0.7681986729117877,
+    "oa": 0.9758351643880209,
+    "kappa": 0.8556323367141946
+  },
+  "params": 2138147,
+  "gflops": 1.136191824,
+  "latency_ms": 6.6262147660988076,
+  "fps": 150.9157241803002,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_change_a_bs16_20260905/Yellow_River/ours_bs16/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Yellow_River/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Farmland baseline finetune 1/150 loss=1.75692 score=0.50419
+Farmland baseline finetune 2/150 loss=1.34705 score=0.76283
+Farmland baseline finetune 3/150 loss=1.21654 score=0.86689
+Farmland baseline finetune 4/150 loss=1.18530 score=0.86412
+Farmland baseline finetune 5/150 loss=1.14983 score=0.85217
+Farmland baseline finetune 6/150 loss=1.12667 score=0.87924
+Farmland baseline finetune 7/150 loss=1.06341 score=0.87901
+Farmland baseline finetune 8/150 loss=1.11606 score=0.83437
+Farmland baseline finetune 9/150 loss=1.11238 score=0.89098
+Farmland baseline finetune 10/150 loss=1.03272 score=0.88894
+Farmland baseline finetune 11/150 loss=0.97936 score=0.88819
+Farmland baseline finetune 12/150 loss=0.98672 score=0.89115
+Farmland baseline finetune 13/150 loss=0.95339 score=0.89439
+Farmland baseline finetune 14/150 loss=0.99812 score=0.87357
+Farmland baseline finetune 15/150 loss=0.95221 score=0.89417
+Farmland baseline finetune 16/150 loss=0.90679 score=0.89629
+Farmland baseline finetune 17/150 loss=0.90522 score=0.90581
+Farmland baseline finetune 18/150 loss=0.88860 score=0.90449
+Farmland baseline finetune 19/150 loss=0.90484 score=0.90483
+Farmland baseline finetune 20/150 loss=0.85144 score=0.90475
+Farmland baseline finetune 21/150 loss=0.86390 score=0.90813
+Farmland baseline finetune 22/150 loss=0.85968 score=0.91103
+Farmland baseline finetune 23/150 loss=0.81643 score=0.90540
+Farmland baseline finetune 24/150 loss=0.80096 score=0.91042
+Farmland baseline finetune 25/150 loss=0.77477 score=0.90956
+Farmland baseline finetune 26/150 loss=0.79953 score=0.89939
+Farmland baseline finetune 27/150 loss=0.79898 score=0.90639
+Farmland baseline finetune 28/150 loss=0.79188 score=0.90614
+Farmland baseline finetune 29/150 loss=0.75594 score=0.90302
+Farmland baseline finetune 30/150 loss=0.75841 score=0.92084
+Farmland baseline finetune 31/150 loss=0.74166 score=0.90271
+Farmland baseline finetune 32/150 loss=0.75002 score=0.90667
+Farmland baseline finetune 33/150 loss=0.70967 score=0.91105
+Farmland baseline finetune 34/150 loss=0.81038 score=0.89815
+Farmland baseline finetune 35/150 loss=0.80495 score=0.89195
+Farmland baseline finetune 36/150 loss=0.67979 score=0.90857
+Farmland baseline finetune 37/150 loss=0.68493 score=0.91120
+Farmland baseline finetune 38/150 loss=0.67509 score=0.90018
+Farmland baseline finetune 39/150 loss=0.66905 score=0.90656
+Farmland baseline finetune 40/150 loss=0.70899 score=0.90820
+Farmland baseline finetune 41/150 loss=0.66576 score=0.89883
+Farmland baseline finetune 42/150 loss=0.62722 score=0.91265
+Farmland baseline finetune 43/150 loss=0.63250 score=0.90915
+Farmland baseline finetune 44/150 loss=0.56762 score=0.90909
+Farmland baseline finetune 45/150 loss=0.70958 score=0.91379
+Farmland baseline finetune 46/150 loss=0.56628 score=0.90673
+Farmland baseline finetune 47/150 loss=0.60270 score=0.90572
+Farmland baseline finetune 48/150 loss=0.58711 score=0.90364
+Farmland baseline finetune 49/150 loss=0.60151 score=0.90938
+Farmland baseline finetune 50/150 loss=0.61173 score=0.90932
+Farmland baseline finetune 51/150 loss=0.60617 score=0.89496
+Farmland baseline finetune 52/150 loss=0.65111 score=0.91244
+Farmland baseline finetune 53/150 loss=0.60708 score=0.90525
+Farmland baseline finetune 54/150 loss=0.50620 score=0.91199
+Farmland baseline finetune 55/150 loss=0.55557 score=0.90942
+Farmland baseline finetune 56/150 loss=0.48760 score=0.89941
+Farmland baseline finetune 57/150 loss=0.51068 score=0.90963
+Farmland baseline finetune 58/150 loss=0.56884 score=0.90486
+Farmland baseline finetune 59/150 loss=0.55452 score=0.91459
+Farmland baseline finetune 60/150 loss=0.48986 score=0.90676
+Farmland baseline finetune 61/150 loss=0.50444 score=0.90449
+Farmland baseline finetune 62/150 loss=0.51534 score=0.90177
+Farmland baseline finetune 63/150 loss=0.44066 score=0.90822
+Farmland baseline finetune 64/150 loss=0.47039 score=0.91124
+Farmland baseline finetune 65/150 loss=0.56409 score=0.92019
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "Farmland",
+  "task": "change_detection",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "backbone_layout": "legacy",
+  "decoder": "multiscale",
+  "initialization": "scratch",
+  "pretrained": {
+    "path": null,
+    "loaded_tensors": 0,
+    "model_tensors": 209,
+    "coverage": 0.0
+  },
+  "protocol": "dense-spatial-macroblocks",
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 112,
+    "val": 16,
+    "test": 16
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 192,
+  "eval_batch": 16,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 150,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 30,
+  "threshold": 0.5000000000000001,
+  "metric": {
+    "precision": 0.7770414201183432,
+    "recall": 0.13887478849407783,
+    "f1": 0.23563610263771756,
+    "iou": 0.13355300626474656,
+    "oa": 0.9277784559461806,
+    "kappa": 0.2165928908384049
+  },
+  "params": 2346329,
+  "gflops": 1.177137648,
+  "latency_ms": 6.6554270005629705,
+  "fps": 150.25331957144326,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_change_a_bs16_20260905/Farmland/baseline_bs16/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Farmland/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/work_train_single/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+Farmland ours finetune 1/150 loss=1.87497 score=0.07348
+Farmland ours finetune 2/150 loss=1.46521 score=0.68879
+Farmland ours finetune 3/150 loss=1.49203 score=0.80546
+Farmland ours finetune 4/150 loss=1.28027 score=0.80450
+Farmland ours finetune 5/150 loss=1.24966 score=0.86439
+Farmland ours finetune 6/150 loss=1.20055 score=0.88215
+Farmland ours finetune 7/150 loss=1.23354 score=0.88403
+Farmland ours finetune 8/150 loss=1.15964 score=0.89108
+Farmland ours finetune 9/150 loss=1.20064 score=0.89330
+Farmland ours finetune 10/150 loss=1.16015 score=0.89043
+Farmland ours finetune 11/150 loss=1.10191 score=0.88525
+Farmland ours finetune 12/150 loss=1.11891 score=0.89464
+Farmland ours finetune 13/150 loss=1.16354 score=0.89675
+Farmland ours finetune 14/150 loss=1.07344 score=0.89933
+Farmland ours finetune 15/150 loss=1.03169 score=0.90768
+Farmland ours finetune 16/150 loss=1.06654 score=0.90186
+Farmland ours finetune 17/150 loss=1.01872 score=0.89588
+Farmland ours finetune 18/150 loss=1.01696 score=0.90092
+Farmland ours finetune 19/150 loss=1.00579 score=0.90492
+Farmland ours finetune 20/150 loss=0.97950 score=0.91020
+Farmland ours finetune 21/150 loss=0.98160 score=0.90742
+Farmland ours finetune 22/150 loss=0.95907 score=0.90370
+Farmland ours finetune 23/150 loss=0.92122 score=0.90727
+Farmland ours finetune 24/150 loss=0.94307 score=0.90825
+Farmland ours finetune 25/150 loss=0.93414 score=0.91022
+Farmland ours finetune 26/150 loss=0.92006 score=0.90917
+Farmland ours finetune 27/150 loss=0.89167 score=0.90409
+Farmland ours finetune 28/150 loss=0.88287 score=0.90903
+Farmland ours finetune 29/150 loss=0.90881 score=0.90730
+Farmland ours finetune 30/150 loss=0.91617 score=0.89805
+Farmland ours finetune 31/150 loss=0.84488 score=0.90563
+Farmland ours finetune 32/150 loss=0.90323 score=0.90049
+Farmland ours finetune 33/150 loss=0.95335 score=0.91100
+Farmland ours finetune 34/150 loss=0.86107 score=0.90396
+Farmland ours finetune 35/150 loss=0.81446 score=0.91175
+Farmland ours finetune 36/150 loss=0.82063 score=0.90318
+Farmland ours finetune 37/150 loss=0.81196 score=0.90604
+Farmland ours finetune 38/150 loss=0.77715 score=0.90924
+Farmland ours finetune 39/150 loss=0.92959 score=0.90472
+Farmland ours finetune 40/150 loss=0.76861 score=0.91100
+Farmland ours finetune 41/150 loss=0.74460 score=0.91192
+Farmland ours finetune 42/150 loss=0.76574 score=0.90057
+Farmland ours finetune 43/150 loss=0.75100 score=0.90850
+Farmland ours finetune 44/150 loss=0.71052 score=0.91025
+Farmland ours finetune 45/150 loss=0.72876 score=0.91258
+Farmland ours finetune 46/150 loss=0.72289 score=0.90739
+Farmland ours finetune 47/150 loss=0.74846 score=0.90510
+Farmland ours finetune 48/150 loss=0.71761 score=0.90145
+Farmland ours finetune 49/150 loss=0.71215 score=0.90221
+Farmland ours finetune 50/150 loss=0.67035 score=0.90825
+Farmland ours finetune 51/150 loss=0.76750 score=0.90357
+Farmland ours finetune 52/150 loss=0.66641 score=0.90544
+Farmland ours finetune 53/150 loss=0.65312 score=0.90607
+Farmland ours finetune 54/150 loss=0.72105 score=0.90728
+Farmland ours finetune 55/150 loss=0.62233 score=0.91657
+Farmland ours finetune 56/150 loss=0.70491 score=0.90697
+Farmland ours finetune 57/150 loss=0.62221 score=0.89871
+Farmland ours finetune 58/150 loss=0.63954 score=0.90550
+Farmland ours finetune 59/150 loss=0.58095 score=0.91172
+Farmland ours finetune 60/150 loss=0.60393 score=0.91004
+Farmland ours finetune 61/150 loss=0.59771 score=0.91366
+Farmland ours finetune 62/150 loss=0.59121 score=0.90649
+Farmland ours finetune 63/150 loss=0.55777 score=0.90805
+Farmland ours finetune 64/150 loss=0.67766 score=0.90068
+Farmland ours finetune 65/150 loss=0.65048 score=0.90471
+Farmland ours finetune 66/150 loss=0.53801 score=0.90202
+Farmland ours finetune 67/150 loss=0.56512 score=0.90353
+Farmland ours finetune 68/150 loss=0.58389 score=0.91136
+Farmland ours finetune 69/150 loss=0.56219 score=0.91115
+Farmland ours finetune 70/150 loss=0.61626 score=0.90669
+Farmland ours finetune 71/150 loss=0.54943 score=0.90646
+Farmland ours finetune 72/150 loss=0.59976 score=0.90860
+Farmland ours finetune 73/150 loss=0.53143 score=0.91377
+Farmland ours finetune 74/150 loss=0.57010 score=0.90826
+Farmland ours finetune 75/150 loss=0.59068 score=0.90247
+Farmland ours finetune 76/150 loss=0.54893 score=0.90168
+Farmland ours finetune 77/150 loss=0.48839 score=0.90771
+Farmland ours finetune 78/150 loss=0.48462 score=0.90643
+Farmland ours finetune 79/150 loss=0.68707 score=0.90188
+Farmland ours finetune 80/150 loss=0.52756 score=0.90843
+Farmland ours finetune 81/150 loss=0.58445 score=0.90852
+Farmland ours finetune 82/150 loss=0.47692 score=0.90698
+Farmland ours finetune 83/150 loss=0.53703 score=0.90758
+Farmland ours finetune 84/150 loss=0.63352 score=0.91244
+Farmland ours finetune 85/150 loss=0.46412 score=0.90886
+Farmland ours finetune 86/150 loss=0.47241 score=0.90790
+Farmland ours finetune 87/150 loss=0.51828 score=0.90861
+Farmland ours finetune 88/150 loss=0.49173 score=0.90612
+Farmland ours finetune 89/150 loss=0.50624 score=0.90578
+Farmland ours finetune 90/150 loss=0.45207 score=0.90892
+EARLY STOP: 35 stale epochs
+{
+  "dataset": "Farmland",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "legacy",
+  "decoder": "multiscale",
+  "initialization": "scratch",
+  "pretrained": {
+    "path": null,
+    "loaded_tensors": 0,
+    "model_tensors": 200,
+    "coverage": 0.0
+  },
+  "protocol": "dense-spatial-macroblocks",
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 112,
+    "val": 16,
+    "test": 16
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 192,
+  "eval_batch": 16,
+  "epochs_requested": 150,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 150,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 55,
+  "threshold": 0.8500000000000002,
+  "metric": {
+    "precision": 0.9325851703406813,
+    "recall": 0.4921319796954315,
+    "f1": 0.6442752318981032,
+    "iou": 0.47522568522527675,
+    "oa": 0.9564378526475694,
+    "kappa": 0.6234210072261239
+  },
+  "params": 2138147,
+  "gflops": 1.136191824,
+  "latency_ms": 6.760892233190437,
+  "fps": 147.90947193194708,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_change_a_bs16_20260905/Farmland/ours_bs16/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Farmland/manifest.json"
+}
+[2026-09-05 17:17:09] completed change-detection BS=16 tag=a_bs16

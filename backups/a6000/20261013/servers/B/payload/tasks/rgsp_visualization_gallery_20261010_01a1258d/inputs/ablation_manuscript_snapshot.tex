@@ -1,0 +1,144 @@
+\subsection{消融实验}\label{sec:ablation}
+消融围绕三个问题展开：整块替换是否改善系统性能，局部修正和结构引导是否提供独立或互补收益，以及结果能否在不同种子与数据上保持方向。为避免历史标签与实际实现混淆，先说明配置归属，再报告全部已回收结果，最后给出尚待验收的结构匹配控制。不把前文 300 轮或部分迁移的高分轨道作为以下消融的基线。
+
+\subsubsection{配置定义与关闭条件审计}\label{sec:component_ablation}
+历史 SSDD 共包含五种配置。Original 是原始 VSSBlock；LocalEnergy 对应旧 DS-only/LRC-only，既含残差修正，又含趋势能量调制，因此不是纯 LRC 消融。Full 同时开启局部修正、能量与两条结构引导路径。Global 与 Full 使用相同的可训练引导预测器，但将位置引导平均为图像级信号。
+
+旧 PFIM-only/LSGM-only 原意是将 $\lambda_s$、$\alpha$ 置零并冻结，以取消残差和能量项；然而训练器会重新启用不在显式冻结名单内的参数。对三个原 best 检查点的核验发现，两标量均非零（表~\ref{tab:freeze_audit}）。本稿将该配置改称 Legacy-PFIM，保留测试成绩，但撤回严格独立 LSGM 收益的解释。新的 GuidanceOnly 采用不参与优化的 buffer 固定关闭值，并核查训练和权重重载后的状态，不能由旧 Legacy-PFIM 结果代替。
+
+\begin{table}[!t]
+\centering\small
+\caption{旧 Legacy-PFIM 最佳权重中的关闭参数。设计要求两项始终为零，实际均发生漂移。}\label{tab:freeze_audit}
+\begin{tabular}{crr}
+\toprule
+Seed & $\lambda_s$ & $\alpha$\\
+\midrule
+0 & 0.0219879150 & -0.0108566284\\
+1 & 0.0011110306 & -0.0126419067\\
+2 & -0.0000919104 & -0.0191802979\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{SSDD 模块组成与全指标结果}
+表~\ref{tab:component_ablation} 给出五配置的完整均值与样本标准差，表~\ref{tab:ssdd_individual} 列出全部 15 次测试。LocalEnergy 的 AP$_{50:95}$ 均值为 $43.9815\%$，相对 Original 高 $1.9514$ 个百分点；Full 为 $42.9090\%$，比 LocalEnergy 低 $1.0726$ 个百分点。Legacy-PFIM 的 $43.1237\%$ 是对应历史模型的有效记录，但不能从其标签推断已经孤立了结构引导。
+
+各指标并非同向变化。Full 的 Precision 均值为 $91.91\%$，高于 Original 的 $89.55\%$；但 AP$_{75}$ 仅为 $34.10\%$，与 Original 的 $34.05\%$ 接近。LocalEnergy 的 AP$_{75}$ 均值最高，为 $37.58\%$；Legacy-PFIM 的 Recall 均值最高，为 $81.39\%$。这些现象反映不同配置的检测行为，不证明某个组件普遍改善所有指标；Precision/Recall 还受到各自最优 F1 阈值选择的影响。
+\input{sections/ssdd_summary}
+\input{sections/ssdd_individual}
+
+\subsubsection{逐种子配对差与波动}
+表~\ref{tab:paired_ablation} 对每个相同种子计算 AP$_{50:95}$ 差值。LocalEnergy 相对 Original 的三项差为 $+2.9001/+5.2557/-2.3016$ 个百分点，Full 为 $-0.3543/+5.9345/-2.9437$ 个百分点。前者仅两个种子为正，后者仅一个种子为正，不能把均值高于基线写成一致提升，也没有证据将 seed2 排除为异常值。
+
+Full 的跨种子 AP$_{50:95}$ 标准差小于 Original，并不等于收益更稳定：其配对差标准差为 $4.5657$ 个百分点，方向仍不一致。由于 SSDD 不同种子使用不同开发集划分，波动同时包含数据划分和训练随机性。Full 减 LocalEnergy 的均差是加入当前引导配置后的边际差；它不是残差和结构引导的严格四格交互，也不能直接归因为过度抑制或噪声传播。
+\input{sections/ssdd_paired}
+
+\subsubsection{结构引导粒度的影响}\label{sec:guidance_granularity}
+Global 将逐位置引导取空间均值再广播：
+\begin{equation}
+I^{\mathrm{global}}=\frac{1}{N}\sum_{t=1}^{N}I_t,\qquad
+I_t\leftarrow I^{\mathrm{global}}.
+\label{eq:global_guidance}
+\end{equation}
+该操作只消除引导 $I$ 的空间差异；内容、趋势能量和基础步长仍随位置变化，不能称整个模型变成位置无关。表~\ref{tab:component_ablation} 中，Global 的 AP$_{50:95}$ 为 $43.7656\%$，高于 Full 的 $42.9090\%$；Full 减 Global 的逐种子差为 $-2.6422/-0.2137/+0.2860$ 个百分点，均值 $-0.8566$。Full 的 AP$_{50}$ 均值较高，而 Global 的 AP$_{75}$ 和 AP$_{50:95}$ 较高。因此当前历史轨道不支持逐位置引导优于图像级引导；结论不外推至其他数据或新控制轨道。
+
+\subsubsection{SADD：固定划分的跨数据消融}\label{sec:sadd_ablation}
+在固定阳性 795/44/44 划分上，比较 Original、Matched075、LocalEnergy 和 Full，每种配置三个训练种子，共 12 次正式测试。Matched075 保持 RGSP 的替换块结构，但关闭残差、能量及引导依赖，将扫描输入倍率固定为 0.75；它用于判断学习调制是否超过相同结构和常数缩放参考，不等同于 Original。
+
+表~\ref{tab:sadd_current} 给出汇总，表~\ref{tab:sadd_individual} 给出全部逐种子值。Original 的 AP$_{50:95}$ 为 $53.3467\pm0.8753\%$，Full 为 $51.9793\pm2.5915\%$。Full 的 AP$_{50}$ 均值为 $97.73\%$，略高于 Original 的 $97.32\%$，但 AP$_{75}$ 由 $52.82\%$ 降为 $49.11\%$，AP$_{50:95}$ 同样下降。因此不能仅凭宽松 IoU 指标的微小上升宣称整体有效。
+\input{sections/sadd_summary}
+\input{sections/sadd_individual}
+
+表~\ref{tab:sadd_paired} 将系统替换与同结构比较分别列示。Matched075 相对 Original 三个种子都为负，均差为 $-1.1694$ 个百分点；LocalEnergy 相对 Matched075 均差为 $+0.1903$，但仅 seed2 为正。Full 相对 Original 为 $-4.7087/-0.7816/+1.3881$，均差 $-1.3674$；相对 Matched075 为 $-0.1980$；相对 LocalEnergy 为 $-0.3883$ 个百分点。最后两种比较虽然各有两个正差种子，但 seed0 的负差使均值为负，仍不得删去该种子。
+
+SADD 与历史 SSDD 的结果方向不同，说明组件收益依赖数据和协议，而非完整组合天然优于局部组合。由于 SADD 未覆盖完整残差/能量及输入/步长四格，不能从这四配置估计全部因素交互。Original 的恢复方式、仅阳性筛选和 44 张测试图也限制了比较的强度；这些限制与全部正负结果一同保留。
+\input{sections/sadd_paired}
+
+\subsubsection{结构匹配锚点与完整控制矩阵}\label{sec:matched_controls}
+为了区分整块替换、常数输入缩放和学习调制，新 SSDD 730/186/232 轨道定义表~\ref{tab:control_matrix} 的 12 配置。除 Original 外，均使用相同替换块，保持共同张量的初始化规则；关闭参数保存为 buffer，训练和重载时检查关闭值。构造顺序一致不代表所有变体的可训练参数数目完全相同，保留的 buffer 也不等于零存储开销。
+
+当 $g_{\min}=0.5$、能量与引导项关闭时，式~\eqref{eq:energy_modulation} 产生 $\gamma=0.5+0.5\sigma(0)=0.75$，而不是 1。MatchedIdentity 使用输入倍率 1，Matched075 保持 0.75 背景；二者之差检验常数尺度，而不是去斑能力。Original 与 MatchedIdentity 的比较才进一步显式暴露替换块的扫描、前馈和归一化差异。
+
+截至本文采用的本地回收证据，新的 SSDD 完整 $12\times3=36$ 次结果尚未整体验收。本表给出可复现定义与所回答的问题，不填写预期成绩；局部完成的运行也不与旧 15-run 混成新三种子统计。
+
+\begin{table*}[tp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{新 SSDD 的完整消融设计。R 为残差修正，E 为趋势能量，U 为扫描输入；0/1 表示关闭/开启，不表示实测效果。}\label{tab:control_matrix}
+\begin{tabularx}{\linewidth}{@{}lccccX@{}}
+\toprule
+Configuration & R & E & $I\to U$ & $I\to\Delta$ & 检验目的\\
+\midrule
+Original & -- & -- & -- & -- & 原始四向 SS2D 系统参考\\
+MatchedIdentity & 0 & 0 & 0 & 0 & 同替换结构，扫描输入倍率 1\\
+Matched075 & 0 & 0 & 0 & 0 & 同替换结构，扫描输入倍率 0.75\\
+Residual075 & 1 & 0 & 0 & 0 & 在 0.75 背景下仅开启残差修正\\
+EnergyOnly & 0 & 1 & 0 & 0 & 仅开启趋势能量调制\\
+LocalEnergy & 1 & 1 & 0 & 0 & 残差与能量组合，无学习引导\\
+LocalEnergy+Input & 1 & 1 & 1 & 0 & 固定 R+E，仅增加输入引导\\
+LocalEnergy+Delta & 1 & 1 & 0 & 1 & 固定 R+E，仅增加步长引导\\
+Full & 1 & 1 & 1 & 1 & 两条引导路径共同开启\\
+FixedHalf & 1 & 1 & 常数 & 常数 & 固定 $I=0.5$，保留固定步长偏置\\
+GuidanceOnly & 0 & 0 & 1 & 1 & 运行时严格关闭 R/E，不复用旧 Legacy-PFIM\\
+Global & 1 & 1 & 均值 & 均值 & 可训练图像级引导，检验空间粒度\\
+\bottomrule
+\end{tabularx}
+\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+矩阵为已定义的控制设计，完整 36-run 尚未验收；不是 36 个已完成成绩。SADD 已完成其中 Original、Matched075、LocalEnergy、Full 四组，但使用自己的固定阳性划分。
+\end{minipage}
+\end{table*}
+
+\subsubsection{残差/能量与输入/步长的四格归因}
+残差和能量的四格由 Matched075、Residual075、EnergyOnly、LocalEnergy 构成。以相同种子的 AP$_{50:95}$ 为 $M$，交互项为
+\begin{equation}
+\begin{aligned}
+\mathcal{J}_{R,E}={}&M_{\mathrm{LocalEnergy}}-M_{\mathrm{Residual075}}\\
+&-M_{\mathrm{EnergyOnly}}+M_{\mathrm{Matched075}}.
+\end{aligned}
+\label{eq:interaction_re}
+\end{equation}
+这将两因素共同开启的变化与各自单独变化进行比较，比直接用 Full 减 LocalEnergy 更接近所定义的非加性效应；但即使交互为负，也只代表该协议和指标下的统计关系，不证明内部物理机制。
+
+固定 R+E 后，LocalEnergy、LocalEnergy+Input、LocalEnergy+Delta 与 Full 构成引导路径四格：
+\begin{equation}
+\begin{aligned}
+\mathcal{J}_{U,\Delta}={}&M_{\mathrm{Full}}-M_{\mathrm{LocalEnergy+Input}}\\
+&-M_{\mathrm{LocalEnergy+Delta}}+M_{\mathrm{LocalEnergy}}.
+\end{aligned}
+\label{eq:interaction_ud}
+\end{equation}
+输入路径同时含 $\gamma$ 的引导项和 $g_w$，它们共同作用于扫描驱动；步长路径影响状态衰减和当前写入。不能将 $\gamma$、$g_w$、$\Delta$ 命名为三个完全独立的状态更新位置。两类交互均须先逐种子计算，再报告均值与标准差；本版没有完整四格验收结果，不给出交互数值或预定哪条路径更好。
+
+\subsubsection{固定引导与真正仅引导控制}
+FixedHalf 将 $I$ 固定为 0.5。此时输入侧中心化引导项归零，$g_w=1$，但 $\eta=0.1$ 时步长 logits 中仍有 $\eta I=0.05$。所以 FixedHalf 检验学习引导与固定偏置的差异，不能称为完全关闭引导；固定系数本身也不参与优化。GuidanceOnly 则严格固定 $\lambda_s=\alpha=0$，保留学习到的输入与步长路径，用于替代旧冻结失败的名义控制。Full 与 Global 的新轨道比较检验空间粒度，历史 Global 结果只作先验观察，不代替该新比较。
+
+\subsubsection{参数量、计算量与推理时间}
+表~\ref{tab:complexity_ablation} 保留五配置的历史复杂度记录。Full 相比 Original 少 65106 个参数（约 $1.09\%$）；相比 LocalEnergy 多 2337 个参数，历史报告 GFLOPs 由 13.12 变为 13.15。参数差异既来自引导预测器，也来自 Original 与替换块的扫描和前馈结构，不能全部解释为状态更新机制的轻量化收益。
+
+\begin{table*}[tp]
+\centering\small
+\caption{SSDD 五变体的历史复杂度账本。参数/GFLOPs 为 seed0 检查点记录，时间为三个种子的评估批内每图推理时间均值。}\label{tab:complexity_ablation}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrr}
+\toprule
+Configuration & Parameters & Reported GFLOPs & Batch inference (ms/image)\\
+\midrule
+Original & 5,985,547 & 13.61 & 6.6038\\
+LocalEnergy & 5,918,104 & 13.12 & 5.9842\\
+Legacy-PFIM & 5,920,441 & 13.15 & 6.0802\\
+Full & 5,920,441 & 13.15 & 6.0685\\
+Global & 5,920,441 & 13.15 & 6.0987\\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+640 输入、RTX A6000、FP32，评估 batch 16；不是 batch=1 延迟，也不包含预处理和 NMS 的完整端到端耗时。自定义 scan 的 FLOPs 是否完整计入仍需统一复核，因此列为历史报告值，不据此证明严格同规模优势。
+\end{minipage}
+\end{table*}
+
+时间记录显示 Full 在该批内测量中低于 Original，但没有独立的充分预热、同步重复与延迟分位数证据，不能将时间倒数写为端到端 FPS。新 buffer 控制的参数、可训练参数、存储和计算还需分别统计；旧表不代表新 12 配置均已测量。
+
+\subsubsection{其他消融的覆盖范围}
+本版检测数值采用 P3/8、状态维数 16、趋势和统计窗口均为 3；并未给出可配对的 P2/P3/P4、$d_s=8/16/32$ 或 $3/5/7$ 窗口网格的完整成绩。虽然扩展实现已提供这些配置接口，接口存在不等于实验完成，不能据此称 P3、16 或 $3\times3$ 为全局最优。
+
+前文 Ottawa、Yellow River 中的早期 d16/d32 结果，以及 SAR-ACD 的模块预热和 OpenEarthMap-SAR 的批量结果，是相应任务下的配置诊断，不是统一检测模型的单因素消融。它们已经保留完整表格，不跨任务合并参数结论。引导图的空间打乱、强度匹配和困难样本分层还缺少已核验结果，不以动机示意图替代。

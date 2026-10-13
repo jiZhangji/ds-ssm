@@ -1,0 +1,354 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_shared_sar_tasks_v2.py:565: UserWarning: _bincount_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  return torch.bincount(index, minlength=classes * classes).reshape(classes, classes).cpu()
+SAMPLE full seed0 epoch=1/200 loss=2.278755 val=0.017568
+SAMPLE full seed0 epoch=2/200 loss=2.016740 val=0.024630
+SAMPLE full seed0 epoch=3/200 loss=1.794348 val=0.106801
+SAMPLE full seed0 epoch=4/200 loss=1.646744 val=0.437091
+SAMPLE full seed0 epoch=5/200 loss=1.505807 val=0.531221
+SAMPLE full seed0 epoch=6/200 loss=1.375787 val=0.615115
+SAMPLE full seed0 epoch=7/200 loss=1.289695 val=0.546510
+SAMPLE full seed0 epoch=8/200 loss=1.295872 val=0.600110
+SAMPLE full seed0 epoch=9/200 loss=1.160131 val=0.729385
+SAMPLE full seed0 epoch=10/200 loss=1.087378 val=0.713457
+SAMPLE full seed0 epoch=11/200 loss=1.035880 val=0.807397
+SAMPLE full seed0 epoch=12/200 loss=1.010477 val=0.833324
+SAMPLE full seed0 epoch=13/200 loss=0.977801 val=0.784880
+SAMPLE full seed0 epoch=14/200 loss=0.989688 val=0.773532
+SAMPLE full seed0 epoch=15/200 loss=0.913151 val=0.842344
+SAMPLE full seed0 epoch=16/200 loss=0.868136 val=0.851515
+SAMPLE full seed0 epoch=17/200 loss=0.863582 val=0.750707
+SAMPLE full seed0 epoch=18/200 loss=0.823330 val=0.867861
+SAMPLE full seed0 epoch=19/200 loss=0.797358 val=0.820160
+SAMPLE full seed0 epoch=20/200 loss=0.779908 val=0.796060
+SAMPLE full seed0 epoch=21/200 loss=0.756572 val=0.810046
+SAMPLE full seed0 epoch=22/200 loss=0.736770 val=0.888893
+SAMPLE full seed0 epoch=23/200 loss=0.737205 val=0.935840
+SAMPLE full seed0 epoch=24/200 loss=0.702575 val=0.782745
+SAMPLE full seed0 epoch=25/200 loss=0.693373 val=0.814037
+SAMPLE full seed0 epoch=26/200 loss=0.670906 val=0.821979
+SAMPLE full seed0 epoch=27/200 loss=0.675952 val=0.913228
+SAMPLE full seed0 epoch=28/200 loss=0.657157 val=0.919505
+SAMPLE full seed0 epoch=29/200 loss=0.666571 val=0.911772
+SAMPLE full seed0 epoch=30/200 loss=0.651201 val=0.846003
+SAMPLE full seed0 epoch=31/200 loss=0.649008 val=0.843853
+SAMPLE full seed0 epoch=32/200 loss=0.645245 val=0.876679
+SAMPLE full seed0 epoch=33/200 loss=0.636728 val=0.893405
+SAMPLE full seed0 epoch=34/200 loss=0.615462 val=0.909726
+SAMPLE full seed0 epoch=35/200 loss=0.605217 val=0.860572
+SAMPLE full seed0 epoch=36/200 loss=0.606571 val=0.918236
+SAMPLE full seed0 epoch=37/200 loss=0.608690 val=0.879348
+SAMPLE full seed0 epoch=38/200 loss=0.603194 val=0.928300
+SAMPLE full seed0 epoch=39/200 loss=0.589948 val=0.892897
+SAMPLE full seed0 epoch=40/200 loss=0.594600 val=0.910564
+SAMPLE full seed0 epoch=41/200 loss=0.584527 val=0.952957
+SAMPLE full seed0 epoch=42/200 loss=0.577362 val=0.952052
+SAMPLE full seed0 epoch=43/200 loss=0.587493 val=0.927587
+SAMPLE full seed0 epoch=44/200 loss=0.596149 val=0.952275
+SAMPLE full seed0 epoch=45/200 loss=0.583036 val=0.814360
+SAMPLE full seed0 epoch=46/200 loss=0.576976 val=0.926077
+SAMPLE full seed0 epoch=47/200 loss=0.569485 val=0.915021
+SAMPLE full seed0 epoch=48/200 loss=0.574318 val=0.959757
+SAMPLE full seed0 epoch=49/200 loss=0.570885 val=0.926861
+SAMPLE full seed0 epoch=50/200 loss=0.566208 val=0.926369
+SAMPLE full seed0 epoch=51/200 loss=0.564286 val=0.960736
+SAMPLE full seed0 epoch=52/200 loss=0.567235 val=0.890963
+SAMPLE full seed0 epoch=53/200 loss=0.559703 val=0.961081
+SAMPLE full seed0 epoch=54/200 loss=0.568917 val=0.958652
+SAMPLE full seed0 epoch=55/200 loss=0.558686 val=0.912081
+SAMPLE full seed0 epoch=56/200 loss=0.565832 val=0.901092
+SAMPLE full seed0 epoch=57/200 loss=0.556473 val=0.882604
+SAMPLE full seed0 epoch=58/200 loss=0.554844 val=0.832992
+SAMPLE full seed0 epoch=59/200 loss=0.558893 val=0.918604
+SAMPLE full seed0 epoch=60/200 loss=0.557104 val=0.966986
+SAMPLE full seed0 epoch=61/200 loss=0.556494 val=0.944296
+SAMPLE full seed0 epoch=62/200 loss=0.551349 val=0.978308
+SAMPLE full seed0 epoch=63/200 loss=0.553994 val=0.952897
+SAMPLE full seed0 epoch=64/200 loss=0.548481 val=0.937676
+SAMPLE full seed0 epoch=65/200 loss=0.547891 val=0.967150
+SAMPLE full seed0 epoch=66/200 loss=0.542760 val=0.960589
+SAMPLE full seed0 epoch=67/200 loss=0.544426 val=0.944837
+SAMPLE full seed0 epoch=68/200 loss=0.543019 val=0.953578
+SAMPLE full seed0 epoch=69/200 loss=0.542089 val=0.943465
+SAMPLE full seed0 epoch=70/200 loss=0.538541 val=0.970524
+SAMPLE full seed0 epoch=71/200 loss=0.538577 val=0.960245
+SAMPLE full seed0 epoch=72/200 loss=0.540119 val=0.983960
+SAMPLE full seed0 epoch=73/200 loss=0.539103 val=0.951843
+SAMPLE full seed0 epoch=74/200 loss=0.538602 val=0.977399
+SAMPLE full seed0 epoch=75/200 loss=0.537304 val=0.949505
+SAMPLE full seed0 epoch=76/200 loss=0.538391 val=0.975279
+SAMPLE full seed0 epoch=77/200 loss=0.535368 val=0.967770
+SAMPLE full seed0 epoch=78/200 loss=0.535671 val=0.977963
+SAMPLE full seed0 epoch=79/200 loss=0.536036 val=0.977963
+SAMPLE full seed0 epoch=80/200 loss=0.538570 val=0.977399
+SAMPLE full seed0 epoch=81/200 loss=0.538501 val=0.992795
+SAMPLE full seed0 epoch=82/200 loss=0.538047 val=0.958891
+SAMPLE full seed0 epoch=83/200 loss=0.537187 val=0.983960
+SAMPLE full seed0 epoch=84/200 loss=0.532033 val=0.959520
+SAMPLE full seed0 epoch=85/200 loss=0.532691 val=0.967460
+SAMPLE full seed0 epoch=86/200 loss=0.530821 val=0.992296
+SAMPLE full seed0 epoch=87/200 loss=0.532489 val=0.949594
+SAMPLE full seed0 epoch=88/200 loss=0.531502 val=0.943571
+SAMPLE full seed0 epoch=89/200 loss=0.530928 val=0.975279
+SAMPLE full seed0 epoch=90/200 loss=0.529827 val=0.967502
+SAMPLE full seed0 epoch=91/200 loss=0.530049 val=0.976820
+SAMPLE full seed0 epoch=92/200 loss=0.529903 val=0.958026
+SAMPLE full seed0 epoch=93/200 loss=0.529096 val=0.943628
+SAMPLE full seed0 epoch=94/200 loss=0.531642 val=0.992296
+SAMPLE full seed0 epoch=95/200 loss=0.530640 val=0.976612
+SAMPLE full seed0 epoch=96/200 loss=0.526858 val=0.976612
+SAMPLE full seed0 epoch=97/200 loss=0.529240 val=0.976612
+SAMPLE full seed0 epoch=98/200 loss=0.527304 val=0.966077
+SAMPLE full seed0 epoch=99/200 loss=0.535228 val=0.976612
+SAMPLE full seed0 epoch=100/200 loss=0.528329 val=0.975466
+SAMPLE full seed0 epoch=101/200 loss=0.526510 val=0.965980
+SAMPLE full seed0 epoch=102/200 loss=0.529014 val=0.960026
+SAMPLE full seed0 epoch=103/200 loss=0.527344 val=0.957512
+SAMPLE full seed0 epoch=104/200 loss=0.527960 val=0.992296
+SAMPLE full seed0 epoch=105/200 loss=0.524720 val=0.984524
+SAMPLE full seed0 epoch=106/200 loss=0.523199 val=0.984524
+SAMPLE full seed0 epoch=107/200 loss=0.527144 val=0.975466
+SAMPLE full seed0 epoch=108/200 loss=0.523615 val=0.983615
+SAMPLE full seed0 epoch=109/200 loss=0.527225 val=0.958026
+SAMPLE full seed0 epoch=110/200 loss=0.524587 val=0.967150
+SAMPLE full seed0 epoch=111/200 loss=0.525873 val=0.976612
+SAMPLE full seed0 epoch=112/200 loss=0.525658 val=0.958035
+SAMPLE full seed0 epoch=113/200 loss=0.527197 val=0.992296
+SAMPLE full seed0 epoch=114/200 loss=0.524339 val=0.984524
+SAMPLE full seed0 epoch=115/200 loss=0.521880 val=0.967126
+SAMPLE full seed0 epoch=116/200 loss=0.525112 val=0.984524
+SAMPLE full seed0 epoch=117/200 loss=0.521878 val=0.975466
+SAMPLE full seed0 epoch=118/200 loss=0.519999 val=0.976612
+SAMPLE full seed0 epoch=119/200 loss=0.525994 val=0.959375
+SAMPLE full seed0 epoch=120/200 loss=0.520656 val=0.983615
+SAMPLE full seed0 epoch=121/200 loss=0.521893 val=0.976612
+{
+  "schema": "rgsp-cross-trial-v1",
+  "dataset": "SAMPLE",
+  "task": "classification",
+  "variant": "full",
+  "seed": 0,
+  "protocol": {
+    "schema": "rgsp-cross-trial-v1",
+    "dataset": "SAMPLE",
+    "task": "classification",
+    "logical_data_sha256": "720071fa7393deda234e06ec6fe12377e80e95ba89bb62f1902d4eeb2f810f12",
+    "split_counts": {
+      "test": 135,
+      "train": 1075,
+      "val": 135
+    },
+    "annotation_policy": "fail",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "epochs": 200,
+    "patience": 40,
+    "imgsz": 224,
+    "batch": 64,
+    "eval_batch": 64,
+    "optimizer": "AdamW",
+    "lr": 0.0002,
+    "weight_decay": 0.0005,
+    "scheduler": "cosine to 1% initial lr",
+    "module_warmup_epochs": 0,
+    "precision": "FP32 (AMP/TF32 off)",
+    "gradient_clip_l2": 5.0,
+    "grad_accum": 1,
+    "classification_label_smoothing": 0.1,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "selection_metric": "macro_f1",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "historical_results_comparable": false
+  },
+  "protocol_sha256": "251231b6f6ae9700aaf0240a56921b8b98fa7e556094016f53e3b7fae1cd1bb5",
+  "data": {
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/SAMPLE/manifest.json",
+    "manifest_sha256": "3b34a6d7c88e6d80c71b429082fb8af6652c5231f716e63bd5c8bc1bdb88c939",
+    "logical_manifest_sha256": "720071fa7393deda234e06ec6fe12377e80e95ba89bb62f1902d4eeb2f810f12",
+    "counts": {
+      "test": 135,
+      "train": 1075,
+      "val": 135
+    },
+    "audit_sha256": "a50fba37e9f4a148b5fd66884f261670e0526d882dde4febfb820da967ced87a",
+    "files_sha256": "15350dd6b82931f37ac4f9409aa770f0d75a5541276932c654d01433b685dc3c",
+    "annotation_policy": "fail"
+  },
+  "initialization_common_tensor_sha256": "c00f0c32d2261ebead696e7bebd84e9156de469f78759447f093b400c9d6eb55",
+  "checkpoint": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_full_seed0/best.pt",
+  "best_sha256": "92407b44ce5c41f2d86e868bce5be60a937f2b3b9a6a07be0790b49598804250",
+  "best_epoch": 81,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.9777777777777777,
+    "macro_precision": 0.9785030758714969,
+    "macro_recall": 0.9773344302756067,
+    "macro_f1": 0.977039481039481,
+    "per_class_recall": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.9230769230769231,
+      0.9411764705882353,
+      0.9090909090909091,
+      1.0
+    ],
+    "confusion_matrix": [
+      [
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        13,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        13,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        13,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        12,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18
+      ]
+    ]
+  },
+  "reloaded_controls": {
+    "variant": "full",
+    "controlled_blocks": 1,
+    "placement": "internal P3/8, 64 channels",
+    "scalars": {
+      "lambda_s": 0.5020343065261841,
+      "alpha": 0.47644996643066406,
+      "beta_i": 1.027553915977478,
+      "rho_i": 1.0293684005737305,
+      "eta_i": 0.12395919859409332
+    },
+    "buffer_scalars": [],
+    "min_retain": 0.5,
+    "use_pfim": true
+  },
+  "parameters": 2788360,
+  "trainable_parameters": 2788360,
+  "buffers": 4465,
+  "efficiency_status": "Params only here; matched-hardware latency and scan-aware FLOPs require the separate efficiency lane. No undercounted THOP GFLOPs claimed.",
+  "historical_negative_results_preserved": true,
+  "finished_utc": "2026-10-09T13:09:01.554008+00:00"
+}
+{"compatibility_launcher": "PASS", "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/sample_full_seed0/cuda_compatibility.json"}

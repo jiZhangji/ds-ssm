@@ -1,0 +1,2531 @@
+% !TeX program = xelatex
+\documentclass[journal]{IEEEtran}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,array,multirow}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{placeins}
+\usepackage{longtable,xltabular,needspace}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.8}
+\usepackage{xeCJK}
+\usepackage{newunicodechar}
+\setmainfont{Noto Serif}
+
+\newunicodechar{①}{\textcircled{1}}
+\newunicodechar{②}{\textcircled{2}}
+\newunicodechar{③}{\textcircled{3}}
+\setCJKmainfont[AutoFakeBold,AutoFakeSlant]{Noto Serif CJK SC}
+\setCJKsansfont[AutoFakeBold,AutoFakeSlant]{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+\emergencystretch=1em
+\newcommand{\pp}{\,\mathrm{pp}}
+\renewcommand{\IEEEkeywordsname}{关键词}
+\title{\LARGE 面向 SAR 图像的可靠性引导 Mamba 状态传播方法\\[0.5em]
+{\large Reliability-Guided Selective State Propagation in Mamba for SAR Imagery}}
+\author{}
+\IEEEaftertitletext{\begin{center}\footnotesize 整合修订工作稿：2026 年 10 月 11 日\end{center}}
+\begin{document}
+\maketitle
+\begin{abstract}
+SAR 图像中的散斑、杂波和离散强散射使不同空间位置的响应具有复杂的结构意义。Mamba 能够通过输入依赖的选择性状态更新建立长距离联系，但局部结构线索如何参与其更新变量的构造仍值得进一步研究。本文提出可靠性引导选择性状态传播方法（Reliability-Guided Selective State Propagation，RGSP），以局部响应修正（Local Response Correction，LRC）利用短程趋势及残差调整扫描前特征，并以局部结构引导模块（Local Structure Guidance Module，LSGM）融合趋势和二维邻域变化，生成用于调节扫描输入及离散化步长的结构信号。我们在 SSDD 和 SADD 检测设置下报告历史多随机种子比较与现有单种子结构匹配控制，并结合分类与变化检测结果考察跨任务表现。在 SSDD 历史实验中，包含残差修正与能量调制的 LocalEnergy 配置取得 $43.98\%$ 的 AP$_{50:95}$，相对原始网络的 $42.03\%$ 有所提升，但该比较同时包含网络结构差异；SADD 固定阳性子集上，完整配置的 AP$_{50:95}$ 为 $51.98\pm2.59\%$，低于原始网络的 $53.35\pm0.88\%$。结果表明，局部结构条件化的收益依赖具体设置，仍需更充分的多种子结构匹配实验进一步检验各路径的作用及其稳定性。
+\end{abstract}
+
+\begin{IEEEkeywords}
+合成孔径雷达；视觉状态空间模型；Mamba；局部结构引导；选择性状态更新
+\end{IEEEkeywords}
+
+\section{引言}
+\label{sec:intro}
+
+合成孔径雷达（Synthetic Aperture Radar，SAR）具有全天时、全天候观测能力，广泛应用于海面舰船监测、机场目标识别、地表观测和灾害变化分析等场景。受相干成像机制、目标散射特性及成像几何等因素共同影响，SAR 图像中的结构信息常与散斑及背景杂波交织，增加了特征提取与表征的难度。对于目标检测、目标分类和变化检测等任务，有效的特征表征既需要刻画局部纹理、边缘及散射结构，也需要结合更大范围的空间上下文，描述这些局部结构的空间组织及其与场景背景的关系。因此，如何结合局部结构与空间上下文构建有效的特征表征，是 SAR 图像解译中的重要研究问题。
+
+围绕上述建模需求，卷积神经网络（Convolutional Neural Network，CNN）通过层级卷积逐步聚合邻域信息并扩大感受野，为局部特征提取与上下文融合提供了有效途径\cite{resnet2015}；视觉 Transformer 利用自注意力建立不同图像区域之间的长距离依赖\cite{vit2020}，但全局成对交互在高分辨率特征上通常伴随较高的计算和存储开销。近年来，Mamba 及其选择性状态空间模型（Selective State Space Model，SSM）通过输入依赖的状态更新机制，以随序列长度近线性增长的计算量实现长距离信息建模\cite{mamba2023}。Vision Mamba（Vim）将状态空间建模扩展到视觉序列\cite{vim2024}，VMamba 进一步通过二维选择性扫描（SS2D）建立空间依赖\cite{vmamba2024}，Mamba-YOLO 则将状态空间建模引入层级目标检测框架\cite{mambayolo2024}。这些研究为兼顾空间建模能力与计算效率提供了新的技术路径。
+
+随着视觉状态空间模型的发展，相关研究进一步从空间序列组织、特征交互和领域适配等方面拓展 Mamba 的应用。RS-Mamba 面向大幅面遥感图像研究状态空间模型在密集预测中的应用\cite{rsmamba2024}，RSMTMamba 探索遥感跨任务特征学习\cite{rstmtmamba2025}，MaDiNet 等方法将 Mamba 引入 SAR 目标检测框架\cite{madinet2025}。此外，MambaDIP 将 Mamba 与深度图像先验结合，用于 SAR 去斑与增强\cite{mambadip}，RSS-Net 则探索 Mamba 在 SAR 图像去噪中的应用\cite{rssnet}。这些研究涉及扫描组织、局部与全局特征融合、多尺度交互及领域先验等不同方向，为进一步研究 SAR 特征的组织与传播提供了基础。
+
+在选择性状态空间模型中，输入特征既参与当前信息写入，也通过输入依赖参数影响状态演化，其作用能够经递推状态影响后续位置。因此，除了研究空间序列如何组织，还需要共同考察进入递推过程的特征如何构造，以及这些特征如何参与状态更新。通用 Mamba 已具有内容依赖的选择机制，其输入特征也可以包含邻域上下文；在此基础上，显式构造局部结构描述，并将其作为附加条件接入递推过程，是本文关注的研究方向。这里的研究重点是局部结构条件的构造，以及它们进入选择性递推的具体方式。
+
+对于 SAR 特征，当前位置相对于局部趋势的偏差，以及二维邻域中不同位置之间的变化关系，提供了描述局部结构的不同视角。前者刻画当前特征与周围局部模式之间的联系，后者补充空间变化信息。由此，本文提出以下研究问题：\emph{如何利用局部结构关系调整进入选择性扫描的特征，并进一步将这些关系引入状态更新，使局部特征以结构相关的方式参与后续传播？}这一问题将“传播什么信息”与“信息如何参与传播”联系起来，也为区分特征修正与递推条件化的作用提供了具体研究对象。
+
+围绕上述问题，本文提出\textbf{可靠性引导选择性状态传播方法（Reliability-Guided Selective State Propagation，RGSP）}。RGSP 从\emph{传播内容与状态更新}两个层面利用局部结构：首先根据局部趋势及响应偏差调整待扫描特征，再将趋势与二维邻域变化形成的结构描述用于递推更新。其中，“局部结构可靠性”表示利用局部关系识别有助于任务表征的信息、并引导其参与传播的设计目标。实际结构引导量由任务损失驱动学习，用作位置相关的控制条件，并未经过独立可靠性标注或概率校准，因而不能直接解释为目标概率或置信度。该设计也不将局部特征简单划分为噪声与有效信息两类。
+
+具体而言，RGSP 首先设计\textbf{局部响应修正（Local Response Correction，LRC）}。LRC 在网络中间特征上沿扫描序列学习短程局部趋势，利用当前响应相对于该趋势的偏差构造残差，并通过可学习的修正调整进入选择性扫描的特征。这样，当前位置的表示能够显式结合其与周围位置的局部关系，再参与后续状态递推。该过程作用于任务特征空间，目标是调整待传播的表征，而非恢复平滑的 SAR 图像；局部偏差本身也不被预先判定为噪声。
+
+在此基础上，RGSP 进一步设计\textbf{局部结构引导模块（Local Structure Guidance Module，LSGM）}。LSGM 联合编码局部趋势与二维邻域变化，生成逐位置的结构引导信号，并沿两条路径参与选择性状态更新：一条调节扫描输入驱动，改变当前特征参与状态写入的强度；另一条参与离散化步长的构造，进而影响历史状态演化与当前信息写入。状态写入与读出参数仍由内容特征生成，结构引导支路不直接调制这些参数。两条引导路径共同作用于递推过程，并不对应两个独立的物理去噪器。通过 LRC 与 LSGM，局部结构描述既参与扫描前特征调整，也参与递推更新条件的形成，从而建立局部结构分析与状态传播之间的直接联系，其计算路径如图~\ref{fig:motivation} 所示。
+
+本文以 SAR 目标检测为主要验证场景，并通过目标分类与变化检测考察跨任务适用性。实验分别报告 SSDD 历史 15 次与 SADD 12 次运行的配置均值、样本标准差及主要指标配对差，并结合现有结构匹配控制、路径消融、引导粒度比较与计算开销记录，分析不同设计的表现与代价。代表性方法比较区分本地实验与外部文献报告，协议不同的文献结果仅作背景参照。评估同时区分整块替换带来的性能差异与组件级机制归因，对旧实验的参数冻结失效、结构和数据协议差异、小测试集等限制分别说明。结构匹配控制、运行时关闭条件与统一效率评估按实际完成范围报告，未完成的验证不作为既有结论。现有结果呈现配置与任务依赖性，尚不能支持完整模块稳定优于基线的结论。正向与退化结果均予保留，不将单种子排序解释为跨任务稳定增益。
+
+\begin{figure*}[!t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/fig1_motivation_20261009.pdf}
+    \caption{
+        \textbf{研究动机与计算路径。}
+        （a）SSDD 训练图像及采用相同灰度映射的局部裁块，区域 1 为官方标注舰船，区域 2 为人工选取且语义未核验的高亮区域；原始图像示例不用于判定中间特征是否可区分。
+        （b）通用 Mamba 根据内容特征生成输入依赖参数，并通过递推状态传递信息。
+        （c）RGSP 在内容依赖更新的基础上加入扫描前 LRC 与局部结构引导，橙色虚线仅调节扫描输入与离散化步长，不直接作用于 $B_t$。
+        读出部分为简洁起见省略，右侧为特征空间设计示意，不代表实测噪声传播或抑制效果。
+    }
+    \label{fig:motivation}
+\end{figure*}
+
+本文的主要贡献如下：
+
+\begin{enumerate}
+    \item 提出面向 SAR 图像的可靠性引导选择性状态传播方法 RGSP，将显式局部结构描述引入扫描前特征调整与选择性状态更新，在局部特征构造与递推传播之间建立可学习的联系。
+
+    \item 设计局部响应修正模块 LRC 与局部结构引导模块 LSGM。前者利用局部趋势及响应偏差调整待扫描特征，后者融合趋势与二维邻域变化构造位置相关的结构条件，分别调节扫描输入驱动与离散化步长。
+
+    \item 以 SAR 目标检测为主要场景开展多种子配置比较，并结合分类与变化检测实验考察跨任务适用性，从性能差异、计算开销和正负结果分析设计取舍，区分已获得的实验观察与仍需多种子结构匹配验证的组件作用。
+\end{enumerate}
+\section{相关工作}
+\label{sec:related_work}
+
+\subsection{SAR 图像特征学习}
+
+SAR 图像分析围绕成像统计、空间结构先验和数据驱动特征学习形成了多种可结合的技术路线。随着深度学习的发展，CNN、Transformer 等模型被用于目标分类与识别、目标检测、变化检测和区域解析等任务。CNN 通过层级卷积聚合邻域信息，Transformer 则利用自注意力建立跨区域联系\cite{resnet2015,vit2020}。在目标分类与识别中，相关研究关注判别性特征、局部与全局信息融合，以及有限样本和不同观测条件下的鲁棒表示；对比学习、多层特征约束等则提供了组织特征学习的不同思路。
+
+对于 SAR 目标检测，复杂背景、小目标及尺度变化是重要研究问题。Speckle-Free SAR Ship Detection 探讨了散斑处理与舰船检测之间的关系\cite{specklefree}；SAR-NanoShipNet 围绕尺度自适应开展小尺度舰船检测研究\cite{sarnano}；SFD-Net 则提出面向多尺度 SAR 舰船检测的特征解耦网络\cite{sfdnet}。这些工作分别从图像处理、尺度适配和特征建模等层面研究任务相关信息的提取。
+
+在语义分割等区域分析任务中，FUSAR-Map 相关研究为高分辨率 SAR 场景的对象级语义解析提供了数据与研究基础\cite{fusar}，局部连续性、边界结构和多尺度上下文也是这类任务关注的重要线索。上述研究虽然具有不同的任务目标，但都涉及局部信息与空间关系的结合。本文进一步关注显式局部结构描述如何参与后续递推，将研究对象从一般特征增强落实到选择性状态更新中的具体计算路径。
+
+\subsection{视觉与遥感状态空间模型}
+
+Mamba 通过输入依赖的选择性状态空间机制，以随序列长度近线性增长的计算量进行长距离建模\cite{mamba2023}。Vision Mamba（Vim）、VMamba 和 Mamba-YOLO 分别将状态空间建模用于视觉序列、二维选择性扫描和层级目标检测\cite{vim2024,vmamba2024,mambayolo2024}。这些工作为视觉特征的高效空间交互提供了基础，也推动了对扫描组织与二维结构建模的进一步研究。
+
+在空间建模方面，Spatial-Mamba 在单向扫描形成的状态上建立邻域连接，通过结构感知状态融合引入二维空间上下文\cite{spatialmamba2025}；DAMamba 则探索动态自适应扫描，使视觉特征的空间组织能够结合输入内容进行调整\cite{damamba2025}。这些研究分别从邻域状态交互和自适应扫描等角度拓展视觉 SSM，说明空间信息的组织与融合可以通过不同计算位置实现。
+
+在遥感领域，RS-Mamba 面向大幅面图像的密集预测，通过全向选择性扫描聚合不同空间方向的信息\cite{rsmamba2024}；RSMTMamba 则研究遥感多任务预测中的跨任务特征学习与交互\cite{rstmtmamba2025}。这些工作将状态空间模型的应用拓展到大范围上下文建模和多任务特征组织，为遥感场景中的空间表征提供了不同实现途径。
+
+针对 SAR 图像，MaDiNet 将 Mamba 与扩散式检测结合用于目标检测\cite{madinet2025}；MCMN 围绕 Doppler 与散射双感知特征，构建 Mamba--CNN 混合多尺度舰船检测网络\cite{mcmn}。在图像恢复方面，RSS-Net 探索基于 Mamba 的 SAR 图像去噪\cite{rssnet}，MambaDIP 则将 Mamba 与深度图像先验结合用于 SAR 去斑和增强\cite{mambadip}。这些方法从检测框架、输入表示、网络融合和图像先验等不同层面体现了 SAR 领域适配的多样性。
+
+与上述研究相联系，本文主要关注\emph{既定递推中的局部结构条件}。通用 Mamba 已有内容依赖的选择机制，本文在此基础上，先利用局部趋势及响应偏差调整待扫描特征，再将趋势与二维邻域变化形成的结构条件用于扫描输入和离散化步长。RGSP 的作用不止于特征重标定，还包括将结构信号接入步长的预激活量，从而影响历史状态演化与当前信息写入；写入与读出参数仍由内容特征生成，结构引导支路不直接调制这些参数。
+
+具体而言，本文检测实现采用单向行优先扫描，重点是在这一递推内调节输入驱动与更新条件，而非通过重排扫描位置或增设邻域状态融合实现结构交互。这是研究侧重点与计算路径的区别，并不意味着其他方法无法编码局部结构，也不预设该设计必然更有效。其额外作用需要通过保持扫描组织、归一化、残差和前馈结构一致的控制实验加以检验。
+
+\FloatBarrier
+\section{方法}
+\label{sec:method}
+
+\subsection{总体网络架构}
+\label{sec:overall_architecture}
+
+本文提出可靠性引导选择性状态传播（Reliability-Guided Selective State Propagation，RGSP），利用局部趋势与邻域变化调节扫描输入和递推系数，将局部特征处理与长距离状态建模相衔接。如图~\ref{fig:overview}(a) 所示，以检测网络为例，SAR 图像首先通过输入嵌入转换为特征，随后由分层骨干提取多尺度表示，再经特征聚合模块与检测头生成预测。RGSP 集成于第二个骨干阶段的 P3/8 特征层，以一个 RGSP 块替换相应状态空间块，保持输入输出的空间尺寸与通道数，其输出继续传入后续骨干阶段和检测结构。
+
+RGSP 的状态建模与任务头解耦。本文以检测为主要验证任务，分类与变化检测采用各自的输入适配、网络配置、预测头和训练目标。不同任务的特征聚合或解码模块及具体接入方式在实验部分说明；图中的检测实例不代表所有任务共享相同的完整网络。以下以检测配置中的 RGSP 替换块为例，介绍其内部计算过程。
+
+\begin{figure*}[!t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/fig2_architecture_20261009.pdf}
+    \caption{
+    整体网络架构与 RGSP 模块。
+    （a）检测网络及 P3/8 特征层中的替换位置；
+    （b）包含两次归一化、残差融合和前馈分支的完整替换块；
+    （c）状态建模分支 $\mathcal{R}$，依次包含局部响应修正、局部结构引导和结构条件化选择性状态更新。
+    深色实线表示特征流，橙色虚线表示结构引导路径；
+    扫描后的旁路融合、门控与输出投影合并为 \emph{Output fusion}。
+    }
+    \label{fig:overview}
+\end{figure*}
+
+
+\subsection{RGSP 模块}
+\label{sec:rgsp}
+
+给定中间特征 $F\in\mathbb{R}^{b\times H\times W\times C}$，其中 $b,H,W,C$ 分别表示批大小、高度、宽度和通道数，按行优先顺序展平空间维，得到 $X\in\mathbb{R}^{b\times N\times C}$，$N=HW$。实现采用 $b\times C\times H\times W$ 存储顺序，经转置后与上述记法等价。RGSP 块包含依次连接的状态建模分支与前馈分支：
+\begin{equation}
+\begin{aligned}
+U
+&=X+a_1\odot
+\mathcal{R}\!\left(\operatorname{LN}_1(X)\right),\\
+X_{\mathrm{out}}
+&=U+a_2\odot
+\operatorname{FFN}\!\left(\operatorname{LN}_2(U)\right).
+\end{aligned}
+\label{eq:rgsp_block}
+\end{equation}
+其中，归一化沿通道维执行，$a_1,a_2\in\mathbb{R}^{C}$ 为可学习的逐通道残差缩放参数，$\operatorname{FFN}$ 为通道宽度 $C\rightarrow2C\rightarrow C$、带 GELU 激活的两层前馈网络。最终将 $X_{\mathrm{out}}$ 恢复为空间特征图。
+
+如图~\ref{fig:overview}(c) 所示，$\mathcal{R}$ 包含局部响应修正（Local Response Correction，LRC）、局部结构引导模块（Local Structure Guidance Module，LSGM）和结构条件化选择性状态更新。LRC 提供修正后的内容特征，LSGM 由局部趋势与二维邻域变化生成结构条件，后者分别参与扫描输入和离散化步长的构造。这里的可靠性是利用局部结构指导状态传播的设计动机，实际引导信号由下游任务损失联合学习。以下记 $x=\operatorname{LN}_1(X)$。
+
+
+\subsubsection{局部响应修正}
+\label{sec:lrc}
+
+SAR 响应的结构意义依赖其与周围位置的关系。LRC 首先沿扫描序列聚合短程邻域，再利用当前位置相对邻域趋势的偏离修正特征：
+\begin{equation}
+\bar{x}
+=\mathcal{L}(x)
+=\operatorname{DWConv1D}_{k=3}(x).
+\label{eq:local_trend}
+\end{equation}
+该卷积逐通道独立执行，步长为 $1$，序列两端各零填充一个位置，卷积核以均值核初始化并参与训练。随后定义趋势残差与修正特征：
+\begin{equation}
+r=x-\bar{x},
+\qquad
+\tilde{x}=x-\lambda_s r,
+\label{eq:residual}
+\end{equation}
+其中 $\lambda_s$ 为块级可学习标量，控制趋势偏离对特征修正的作用。等价形式 $\tilde{x}=(1-\lambda_s)x+\lambda_s\bar{x}$ 表明，该步骤在当前位置响应与邻域聚合之间学习组合。残差 $r$ 不等同于散斑或噪声，$\lambda_s$ 未被限制在 $[0,1]$，训练后的趋势卷积也不保证保持低通性质，因此该步骤应理解为可学习的局部响应修正。
+
+LRC 同时输出 $\bar{x}$ 与 $\tilde{x}$：前者用于结构描述与趋势能量计算，后者用于二维邻域统计和内容投影。由于采用行优先展平，行末与下一行行首在序列中相邻；该卷积刻画的是与扫描顺序一致的一维短程关系，二维空间变化由 LSGM 补充。
+
+
+\subsubsection{局部结构引导}
+\label{sec:lsgm}
+
+LSGM 联合编码序列趋势与二维邻域变化，生成逐位置结构引导信号。首先将 $\tilde{x}$ 恢复为空间布局 $\widetilde{F}$，逐通道计算 $3\times3$ 邻域标准差：
+\begin{equation}
+S=
+\sqrt{
+\max\!\left(
+\mathcal{P}(\widetilde{F}^{\,2})
+-\mathcal{P}(\widetilde{F})^2,\,0
+\right)+\epsilon
+}.
+\label{eq:local_std}
+\end{equation}
+其中，平方逐元素执行，$\mathcal{P}$ 为局部均值池化，边界处仅统计有效邻域位置，$\epsilon=10^{-5}$ 用于数值稳定，局部统计采用单精度计算。将 $S$ 按相同顺序展平为 $s$，并与趋势特征沿通道维拼接：
+\begin{equation}
+v=[\bar{x},s]
+\in\mathbb{R}^{b\times N\times2C}.
+\label{eq:structural_descriptor}
+\end{equation}
+结构描述经过归一化及两层感知机得到
+\begin{equation}
+\begin{aligned}
+I&=\sigma\!\left(
+W_2\operatorname{GELU}\!\left(
+W_1\operatorname{LN}(v)+b_1
+\right)+b_2
+\right),\\
+I&\in(0,1)^{b\times N\times1}.
+\end{aligned}
+\label{eq:importance}
+\end{equation}
+其中 $\sigma$ 为 Sigmoid 函数，$W_1,W_2,b_1,b_2$ 为可学习参数；隐藏层宽度为 $\max(\lfloor C/4\rfloor,16)$。每个位置输出一个标量，并在后续运算中沿通道维广播。
+
+局部变化既可能来自目标边缘，也可能来自背景起伏，因此 LSGM 通过任务训练联合解释趋势与邻域变化，不预设局部标准差与信息价值之间的单调关系。$I$ 是用于调节状态更新的结构条件，而非目标概率或校准置信度。
+
+
+\subsubsection{结构条件化选择性状态更新}
+\label{sec:structure_conditioned_ssm}
+
+RGSP 在既定的单向行优先扫描中，将修正内容与结构条件分别用于输入构造和递推调节。以下省略批维，以 $t$ 表示序列位置，$d_s$ 表示每个通道的状态维数。
+
+\paragraph{内容投影。}
+将修正特征映射为内容分支和输出门控分支：
+\begin{equation}
+[u_t,z_t]=W_{\mathrm{in}}\tilde{x}_t,
+\qquad
+u_t,z_t\in\mathbb{R}^{C}.
+\label{eq:input_projection}
+\end{equation}
+内容分支进一步生成状态写入与读出参数：
+\begin{equation}
+B_t=W_Bu_t,\qquad C_t=W_Cu_t,
+\qquad
+B_t,C_t\in\mathbb{R}^{d_s}.
+\label{eq:ssm_parameters}
+\end{equation}
+$B_t,C_t$ 由调制前的 $u_t$ 生成，在状态运算中沿通道维广播；结构引导不直接调制二者，而是进入以下两条路径。
+
+\paragraph{扫描输入调制。}
+由局部趋势计算逐位置趋势能量：
+\begin{equation}
+E_t=\frac{\|\bar{x}_t\|_2}{\sqrt{C}}.
+\label{eq:trend_energy}
+\end{equation}
+结合趋势能量与结构引导，构造两个输入缩放因子：
+\begin{align}
+\gamma_t
+&=g_{\min}+(1-g_{\min})
+\sigma\!\left(-\alpha s_nE_t+\beta(I_t-0.5)\right),
+\label{eq:energy_modulation}\\
+g_{w,t}
+&=\max\!\left(
+0.1,\,1+\tanh(\rho)(I_t-0.5)
+\right),
+\label{eq:write_modulation}\\
+u_{\mathrm{scan},t}
+&=\gamma_tg_{w,t}u_t.
+\label{eq:modulation}
+\end{align}
+其中 $\alpha,\beta,\rho$ 为可学习标量，$s_n$ 为固定能量缩放系数，$g_{\min}$ 为 $\gamma_t$ 的下界。$\gamma_t$ 综合趋势能量与结构条件，$g_{w,t}$ 提供以 $I_t=0.5$ 为中心的缩放。两者共同调制同一个扫描输入驱动，并不分别对应历史保留与当前写入。
+
+\paragraph{离散化步长条件化。}
+结构引导同时参与离散化步长生成：
+\begin{equation}
+\begin{aligned}
+\Delta_t
+&=\operatorname{softplus}\!\left(
+W_{\Delta}u_t+b_{\Delta}+\eta I_t
+\right),\\
+\Delta_t
+&\in\mathbb{R}_{>0}^{C}.
+\end{aligned}
+\label{eq:delta_condition}
+\end{equation}
+其中 $\eta$ 为可学习标量，$I_t$ 沿通道维广播。结构项加入 Softplus 之前的步长预激活值，使正值步长同时依赖内容与局部结构，而非直接对最终步长进行缩放。
+
+\paragraph{选择性递推与输出。}
+各通道的状态转移系数通过逐元素指数运算参数化为负值：
+\begin{equation}
+A=-\exp(A_{\log})
+\in\mathbb{R}^{C\times d_s}.
+\label{eq:state_matrix}
+\end{equation}
+令 $h_{t,c,j}$ 表示位置 $t$、通道 $c$、状态维 $j$ 上的隐藏状态，实际采用的选择性递推为
+\begin{equation}
+\begin{aligned}
+h_{t,c,j}
+&=\exp\!\left(\Delta_{t,c}A_{c,j}\right)h_{t-1,c,j}\\
+&\quad+\Delta_{t,c}B_{t,j}u_{\mathrm{scan},t,c},
+\qquad h_{0,c,j}=0.
+\end{aligned}
+\label{eq:rgsp_state}
+\end{equation}
+随后沿状态维读出，并加入修正特征的逐通道旁路：
+\begin{equation}
+y_{t,c}
+=\sum_{j=1}^{d_s}C_{t,j}h_{t,c,j}
++D_c\tilde{x}_{t,c},
+\label{eq:ssm_readout}
+\end{equation}
+其中 $D\in\mathbb{R}^{C}$ 为可学习参数。读出结果经 SiLU 门控与输出投影得到
+\begin{equation}
+o_t=W_{\mathrm{out}}\!\left(
+y_t\odot\operatorname{SiLU}(z_t)
+\right).
+\label{eq:rgsp_output}
+\end{equation}
+上述旁路融合、门控和投影对应图中的 \emph{Output fusion}。
+
+在式~\eqref{eq:rgsp_state} 中，$u_{\mathrm{scan},t}$ 调整当前内容的输入驱动，$\Delta_t$ 同时影响历史状态衰减与当前输入写入。对固定的负值 $A_{c,j}$，增大 $\Delta_{t,c}$ 会增强相应历史分量的衰减，并改变输入项的系数。由于相关调制参数由训练学习且无符号约束，不能仅由 $I_t$ 的大小预设最终保留或写入强度。将各位置 $o_t$ 组成序列即得到 $\mathcal{R}(x)$，再经式~\eqref{eq:rgsp_block} 的残差与前馈分支形成块输出。
+
+检测的默认完整配置采用 $d_s=16$、$s_n=0.1$、$g_{\min}=0.5$；$\lambda_s,\alpha,\beta,\rho,\eta$ 分别初始化为 $0.5,0.5,1,1,0.1$。LSGM 末层权重与偏置采用零初始化，使初始 $I=0.5$；$A_{\log,c,j}$、$D_c$ 及 $a_1,a_2$ 的各通道分量分别初始化为 $\log j$、$1$ 和 $10^{-2}$。不同任务与消融变体的设置在实验部分分别说明。
+
+\FloatBarrier
+\section{实验}
+\label{sec:experiments}
+
+\subsection{实验设置}
+\label{sec:experimental_settings}
+
+本文在 SAR 目标检测、图像分类和变化检测任务上
+评估 RGSP 的特征建模能力。
+各任务分别采用相应的数据集、预测头和评价指标，
+通过外部方法比较、直接基线比较和组件消融，
+考察局部结构条件化对不同任务的影响。
+
+\subsubsection{数据集与划分}
+\label{sec:datasets}
+
+\textbf{目标检测。}
+检测实验采用 SSDD 和 SADD，
+并保留 SAR-ShipDataset 的历史实验
+作为额外数据集结果\cite{sardataset}，
+其具体设置在对应比较中注明。
+SSDD 包含 928 张官方训练图像和
+232 张官方测试图像\cite{ssdd2017,ssdd2021}。
+已有三种子实验采用
+742/186/232 的训练、验证和测试划分；
+随机种子 $0$、$1$、$2$ 分别生成开发集划分，
+同一种子内各配置共享划分。
+后续控制实验移除开发集合中
+与官方测试集字节完全相同的 12 张图像，
+保留全部 232 张测试图像，
+并按图像内容组建立固定的
+730/186/232 划分。
+两套划分的结果分别报告。
+
+SADD 采用单类阳性子集，
+训练、验证和测试集分别包含
+795、44 和 44 张图像，
+对应 7215、212 和 408 个目标框。
+三个训练种子共享固定划分。
+该设置包含 883 张有目标图像，
+不包含原始副本中的 2083 张空标注图像，
+用于评价有目标场景中的检测表现。
+该设置不等同于七类 SAR-AIRcraft-1.0 数据集\cite{saraircraft}。
+
+\textbf{图像分类。}
+分类实验采用 SAR-ACD 和 SAMPLE。
+SAR-ACD 使用五类设置；
+新增固定划分包含
+2003 张训练图像、251 张验证图像
+和 254 张测试图像，
+排除训练集中的歧义标注记录，
+保留验证与测试集的既有标注。
+SAMPLE 使用实测图像的闭集分类设置，
+训练、验证和测试集分别包含
+1075、135 和 135 张图像。
+该设置与文献中的合成图像训练、
+实测图像测试协议分别报告。
+
+\textbf{变化检测。}
+变化检测实验采用 Ottawa、Farmland
+和 Yellow River。
+新增固定空间划分中的训练、验证和测试
+切片数分别为
+112/24/32、112/16/16 和 100/16/16。
+切片由双时相图像及对应标注生成，
+这些数量表示样本切片数，而非独立场景数。
+测试时将重叠切片的预测聚合到原始图像，
+在留出的原生像素上计算指标。
+已有变化检测实验采用其各自的划分与评估设置，
+不与新增固定划分合并统计。
+
+\subsubsection{比较方法}
+\label{sec:comparison_methods}
+
+各任务均同时报告代表性外部方法
+和本地基线的结果。
+目标检测比较通用检测器、
+SAR 专用检测网络及预训练检测方法；
+图像分类比较 CNN、Transformer
+和 SAR 表征学习方法；
+变化检测比较已有 SAR 变化检测方法。
+具体方法、结果来源与协议
+在各任务的比较表中列明。
+
+本地直接基线采用对应任务中
+未接入 RGSP 的网络，
+并保留相应的输入适配与预测头。
+Original 与 Full 用于评价完整替换配置的效果；
+结构匹配控制与组件变体用于进一步分析
+局部响应修正、能量调制和结构引导路径的作用。
+其中，Matched075 保留 Full 的替换块结构，
+关闭局部残差修正、能量调制与结构引导，
+并将扫描输入倍率固定为 0.75；
+详细定义见第~\ref{sec:matched_component_ablation} 节。
+分类与变化检测同时报告 Original、Matched075 和 Full，
+以区分整块替换效果与组件组合在匹配结构下的变化。
+
+比较表区分本地实验与文献报告结果。
+当前控制实验中，同一数据集的配对配置共享数据划分、
+最大训练预算、模型选择规则和评估流程；
+早停可以使实际训练轮数不同。
+历史结果的初始化、训练恢复、预算和评估差异
+在对应表注中单独说明；
+文献结果注明数据协议与初始化设置。
+不同类别定义、训练数据来源或评估范围的结果
+分别列示，不合并为同协议排名。
+
+\subsubsection{网络配置与实现细节}
+\label{sec:implementation_details}
+
+\textbf{网络配置。}
+新增检测、分类和变化检测实验
+均采用完整 Mamba-YOLO-T 骨干，
+深度与宽度系数分别为 0.33 和 0.25。
+默认在 P3/8 阶段以一个 RGSP 块
+替换相应状态空间块，
+输入通道数为 64，状态维数为 $d_s=16$。
+检测保留对应的颈部和检测头；
+分类采用 P5 特征的全局平均池化，
+随后通过 LayerNorm、概率为 0.2 的 Dropout
+及线性分类层生成预测；
+变化检测采用共享权重的孪生编码器，
+对 P2--P5 特征计算绝对差，
+并通过宽度为 96 的 UPerNet-lite 预测头
+生成变化图。
+
+Original 采用四向 SS2D
+及扩展比例为 4 的前馈分支；
+RGSP 替换块采用单向行优先扫描、
+LayerNorm、LayerScale
+及扩展比例为 2 的前馈分支。
+因此，Original 与 Full 的比较
+反映整块替换效果，
+组件作用通过保持替换块结构一致的控制实验分析。
+
+LRC 使用核宽为 3 的逐通道一维卷积，
+以均值核 $1/3$ 初始化。
+LSGM 的局部标准差采用有效 $3\times3$ 邻域，
+数值稳定项为 $\epsilon=10^{-5}$，
+隐藏宽度为 $\max(\lfloor C/4\rfloor,16)$。
+末层权重与偏置初始化为零，
+使初始引导信号为 $I=0.5$。
+完整配置中，
+$\lambda_s,\alpha,\beta,\rho,\eta$
+分别初始化为 $0.5,0.5,1,1,0.1$；
+固定系数为 $s_n=0.1$ 和 $g_{\min}=0.5$，
+块级残差缩放参数初始化为 $10^{-2}$。
+消融配置的关闭方式和初始化设置
+在消融研究中说明。
+
+\textbf{训练设置。}
+本节所述从头训练检测配置与新增分类、变化检测配置
+采用 FP32 和 AdamW，
+初始学习率为 $2\times10^{-4}$，
+权重衰减为 $5\times10^{-4}$。
+检测采用线性学习率衰减，
+分类与变化检测采用余弦学习率衰减，
+最终学习率均为初始值的 0.01 倍。
+各任务的输入尺寸和训练预算
+见表~\ref{tab:training_settings}。
+
+\begin{table}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{本地从头训练实验的训练设置。
+Epochs 为最大训练轮数，Patience 为早停耐心值。}
+\label{tab:training_settings}
+\begin{tabular}{lcrrr}
+\toprule
+Task / Dataset & Input & Batch & Epochs & Patience \\
+\midrule
+Detection: SSDD
+& $640^2$ & 16 & 150 & 30 \\
+Detection: SADD
+& $640^2$ & 16 & 200 & 40 \\
+Classification
+& $224^2$ & 64 & 200 & 40 \\
+Change detection
+& $192^2$ & 16 & 150 & 25 \\
+\bottomrule
+\end{tabular}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+分类设置适用于新增 SAR-ACD 和 SAMPLE 实验；
+变化检测设置适用于新增 Ottawa、Farmland
+和 Yellow River 实验。
+检测框架的名义批大小参数为 64，
+用于梯度累积和权重衰减缩放，
+表中列示实际批大小。
+本表不适用于历史部分迁移初始化、
+300 轮训练和 SAR-ShipDataset 等独立历史轨道。
+\end{minipage}
+\end{table}
+
+检测优化器预热为 3 轮，
+新增模块不采用额外预热。
+数据增强包括概率为 0.3 的 Mosaic，
+并在最后 15 轮关闭；
+旋转范围为 $\pm180^\circ$，
+平移比例为 0.1，缩放幅度为 0.3，
+水平与垂直翻转概率均为 0.5，
+HSV 参数为 $(0,0,0.1)$。
+不使用 MixUp、多尺度训练或自动混合精度。
+新增分类与变化检测实验
+采用固定归一化 $(x/255-0.5)/0.5$，
+梯度范数上限为 5；
+分类采用标签平滑系数 0.1。
+已有分类实验中的预训练初始化与额外模块预热，
+以及已有变化检测实验中的网络和训练差异，
+在对应结果中单独注明。
+
+上述检测实验使用 RTX A6000，
+软件环境为 Python 3.10.16、
+PyTorch 1.13.1+cu117 和 Ultralytics 8.2.29。
+训练启用确定性设置，
+选择性扫描使用 FP32 CUDA 算子。
+新增控制实验在训练前重置
+模型构建探针影响的 BatchNorm 统计，
+并保存数据、代码及初始化记录；
+训练恢复和版本信息随相应实验记录保留。
+
+\textbf{模型选择与测试。}
+采用独立验证集的本地检测实验依据以下指标选择最佳检查点：
+\begin{equation}
+f_{\mathrm{val}}
+=0.1\,\mathrm{AP}_{50}
++0.9\,\mathrm{AP}_{50:95}.
+\label{eq:selection_fitness}
+\end{equation}
+训练验证采用 NMS IoU 阈值 0.7；
+最终测试采用置信度下限 0.001、
+NMS IoU 阈值 0.6、批大小 16 和 FP32。
+新增分类实验依据验证集 Macro-F1 选模；
+新增变化检测实验依据验证集 F1 选模，
+在验证集上从 0.10 至 0.90、
+间隔 0.05 的网格中选择判定阈值，
+再固定用于测试。
+变化检测的重叠预测概率
+先在原始像素上求均值，
+每个测试像素仅计一次。
+上述独立测试协议不使用测试集选择检查点；
+变化检测的判定阈值也仅由验证集确定。
+检测表中的 Precision 和 Recall 则取评估器在对应评估集上
+确定的最优 F1 工作点，不属于预先冻结部署阈值的结果。
+历史 SSDD 300 轮配置将官方测试集用于验证选模，
+该例外在表~\ref{tab:ssdd_detection_comparison} 中明确标注，
+不计作独立测试证据。
+
+\subsubsection{评价指标与统计}
+\label{sec:evaluation_metrics}
+
+目标检测报告 $\mathrm{AP}_{50}$、
+$\mathrm{AP}_{75}$、
+$\mathrm{AP}_{50:95}$、Precision 和 Recall，
+其中 $\mathrm{AP}_{50:95}$
+为 IoU 阈值从 0.50 至 0.95、
+间隔 0.05 的平均 AP。
+Precision 和 Recall
+在评估器确定的最优 F1 工作点计算。
+图像分类报告 Accuracy 和 Macro-F1；
+变化检测报告 F1、IoU、OA、
+Precision 和 Recall。
+
+对于配置 $m$ 和随机种子 $s$，
+相对参考配置的指标差定义为
+\begin{equation}
+d_{m,s}=M_{m,s}-M_{\mathrm{ref},s},
+\label{eq:paired_difference}
+\end{equation}
+其中 $M$ 为对应任务的评价指标。
+多种子实验报告各配置的均值与样本标准差，
+并列出主要指标的逐种子配对差：
+\begin{equation}
+\bar M=\frac{1}{K}\sum_{s=0}^{K-1}M_s,\qquad
+s_M=\sqrt{
+\frac{1}{K-1}
+\sum_{s=0}^{K-1}(M_s-\bar M)^2
+}.
+\label{eq:experiment_statistics}
+\end{equation}
+已有 SSDD 和 SADD 多种子实验取 $K=3$；
+单种子结果单独报告，不计算跨种子标准差。
+指标通常以百分数表示，
+差值以百分点（pp）表示。
+统计量由未舍入的原始指标计算。
+
+历史 SSDD 的跨种子波动
+同时包含开发集划分与训练随机性，
+SADD 的划分保持固定。
+配对差及正差次数用于描述配置间的变化，
+不作为统计显著性的判据。
+\subsection{不同任务的性能比较}
+\label{sec:performance_comparison}
+
+本文选择目标检测、图像分类和变化检测，
+分别考察 RGSP 在目标级定位、图像级判别和像素级变化识别中的表现。
+目标检测需要同时保持目标的判别性与空间定位信息；
+图像分类关注局部结构与整体表征对类别区分的作用；
+变化检测则要求结合双时相信息，
+区分真实变化与背景响应差异。
+三类任务具有不同的输出粒度和特征需求，
+因而能够从互补角度考察局部结构引导状态传播的适用性。
+
+本节分别比较 RGSP 与代表性方法的性能。
+外部方法采用文献报告结果，
+本地实验比较原始网络 Original 与完整配置 RGSP，
+分类与变化检测表另列结构匹配控制 Matched075。
+各表分别注明结果来源、数据协议和初始化设置；
+相同协议内的结果用于分析配置间的性能变化，
+不同协议的文献结果用于提供已有方法的性能参照。
+除特别说明外，指标均以百分数表示，
+``--'' 表示来源未报告该项指标。
+本节中的 RGSP 均指预先定义的完整配置，
+不根据测试结果将其他消融变体替换为最终方法。
+
+\subsubsection{目标检测}
+\label{sec:detection_results}
+
+本节在 SSDD、SADD 和 SAR-ShipDataset 上比较检测性能，
+每个数据集用一张表汇总已有结果。
+三表均以 Mamba-YOLO-T~\cite{mambayolo2024} 为本地基础检测器参照，
+SSDD 与 SADD 另列 YOLOv8n 轻量 CNN 对照；
+SAR-ShipDataset 尚无对应 YOLOv8n 结果。
+表内先列文献方法，再列本地基线与本文配置，
+每个直接比较组以本文方法收尾。
+SSDD 和 SADD 中 RGSP (Ours) 均为预先定义的 Full：
+在 Mamba-YOLO-T 的 P3/8 阶段替换一个状态空间块。
+SAR-ShipDataset 仅有 IG-DS-SSM/PFIM-T、S 历史配置，
+保留其原名称，不视为当前 Full 的重复实验。
+
+各行保留方法引文、发表出处和年份，
+数值转引来源在表内及表注中说明。
+P、R 分别为 Precision、Recall，指标单位为百分数，
+短横线表示未报告或不适用。
+不同划分、训练条件与种子统计采用表内分组；
+三种子结果为均值$\pm$样本标准差，
+加粗仅用于本地同协议组内最优值。
+文献报告、历史非独立测试记录与本地对照不合并排名。
+
+\textbf{SSDD。}
+表~\ref{tab:ssdd_detection_comparison}
+列出文献报告及本地对照结果。
+文献组包括通用检测器 ViTDet，
+SAR 舰船检测方法 FEPS-Net、FGBG-Net 和 PEGNet，
+以及 ViTDet4SAR、SARATR-X、SUMMIT 和 SARDet-MIM
+等预训练方法。
+方法原始出处见行内引文，
+SAR 专用方法数值转引自 SARDet-MIM 的 Table 1~\cite{sardetmim2026}，
+不将其视为本文在统一协议下的复现结果。
+历史检查点及非独立测试记录在同表单独分组，口径见表注。
+本地直接对照区分历史 $742/186/232$ 划分的三种子比较，
+以及清理后 $730/186/232$ 固定划分的单种子比较。
+
+\begin{table*}[!t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{SSDD 上的目标检测与模型复杂度结果。
+检测指标单位为\%，复杂度按单类、$640\times640$输入统计。
+外部方法按年份排列；加粗仅表示各本地同协议组内的最优检测结果。}
+\label{tab:ssdd_detection_comparison}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccrrrrrrr}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{Publication}
+& \multicolumn{5}{c}{Detection metrics ($\uparrow$)}
+& \multicolumn{2}{c}{Complexity ($\downarrow$)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-8}\cmidrule(lr){9-10}
+& Venue & Year & P & R & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$
+& Params (M) & FLOPs (G) \\
+\midrule
+Faster R-CNN
+& NeurIPS & 2015
+& 87.1 & 90.4 & 89.7 & -- & -- & $41.295^{*}$ & $150.343^{*}$ \\
+RetinaNet
+& ICCV & 2017
+& 94.0 & 93.1 & 95.0 & -- & -- & $36.277^{*}$ & $159.342^{*}$ \\
+Cascade R-CNN
+& CVPR & 2018
+& 84.1 & 90.8 & 90.5 & -- & -- & $69.152^{*}$ & $237.395^{*}$ \\
+YOLOv3
+& arXiv & 2018
+& 95.5 & 94.8 & 96.2 & -- & -- & $61.524^{*}$ & $155.260^{*}$ \\
+CenterNet
+& ICCV & 2019
+& 94.3 & 93.6 & 95.1 & -- & -- & -- & -- \\
+FCOS
+& ICCV & 2019
+& 94.6 & 93.9 & 95.3 & -- & -- & $32.113^{*}$ & $157.158^{*}$ \\
+YOLOv5s
+& Software & 2020
+& 97.2 & 96.4 & 98.3 & -- & -- & $7.022^{*}$ & $15.946^{*}$ \\
+YOLOv5n
+& Software & 2021
+& 97.0 & 95.8 & 98.0 & -- & -- & $1.765^{*}$ & $4.224^{*}$ \\
+YOLOX
+& arXiv & 2021
+& 95.0 & 93.8 & 96.2 & -- & -- & -- & -- \\
+FEPS-Net~\cite{feps2023}
+& JSTARS & 2023
+& -- & -- & 96.0 & 67.5 & 59.9 & -- & -- \\
+DiffusionDet~\cite{diffusiondet2023}
+& ICCV & 2023
+& 95.1 & 93.9 & 96.3 & -- & -- & $110.552^{*}$ & $204.263^{*}$ \\
+YOLOv8n~\cite{yolov82023}
+& Software & 2023
+& 97.3 & 96.4 & 98.1 & -- & -- & $3.011^{*}$ & $8.194^{*}$ \\
+ConsistencyDet
+& arXiv & 2024
+& 94.5 & 94.0 & 95.6 & -- & -- & $110.552^{*}$ & $3743.694^{*}$ \\
+DiffDet4SAR~\cite{diffdet4sar2024}
+& GRSL & 2024
+& 95.3 & 95.2 & 96.9 & -- & -- & $111.141^{*}$ & $204.787^{*}$ \\
+FGBG-Net~\cite{fgbg2025}
+& TGRS & 2025
+& -- & -- & 95.5 & 80.1 & 66.9 & $32.712^{*}$ & $171.142^{*}$ \\
+PEGNet~\cite{pegnet2025}
+& GRSL & 2025
+& -- & -- & 97.3 & 87.0 & 71.1 & -- & -- \\
+MaDiNet~\cite{madinet2025}
+& TCSVT & 2025
+& 98.0 & 97.0 & 99.0 & -- & -- & -- & -- \\
+\midrule
+\multicolumn{10}{l}{\textit{历史检查点记录：训练条件未完全匹配，评估口径见表注}} \\
+Mamba-YOLO-T~\cite{mambayolo2024}
+& AAAI & 2025
+& 96.738 & 96.154 & 98.605 & 83.613 & 70.348 & -- & -- \\
+IG-DS-SSM/PFIM ex27
+& Internal & --
+& 97.759 & 95.857 & 98.688 & 84.005 & 71.445 & -- & -- \\
+IG-DS-SSM/PFIM P3 (TEST-as-VAL)$^{\ddagger}$
+& Internal & --
+& 97.302 & 95.421 & 98.549 & 85.552 & 72.261 & -- & -- \\
+IG-DS-SSM/PFIM ex27 (VAL)$^{\S}$
+& Internal & --
+& -- & -- & 98.704 & -- & 74.022 & -- & -- \\
+\addlinespace
+\multicolumn{10}{l}{\textit{本地对照：历史 $742/186/232$ 划分，3 seeds，scratch}} \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}
+& AAAI & 2025
+& $89.55\pm1.83$ & $79.24\pm1.70$ & $86.52\pm2.56$ & $34.05\pm5.25$ & $42.03\pm3.47$ & 5.986 & $13.612^{\#}$ \\
+RGSP (Ours)
+& This work & --
+& $\mathbf{91.91\pm1.49}$ & $\mathbf{79.85\pm1.02}$ & $\mathbf{87.97\pm0.11}$ & $\mathbf{34.10\pm3.12}$ & $\mathbf{42.91\pm1.13}$ & 5.920 & $13.148^{\#}$ \\
+\addlinespace
+\multicolumn{10}{l}{\textit{本地对照：清理后 $730/186/232$ 划分，seed 0，scratch}} \\
+YOLOv8n~\cite{yolov82023}
+& Software & 2023
+& 89.77 & \textbf{81.87} & 87.24 & 35.01 & 42.46 & 3.011 & 8.194 \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}$^{\dagger}$
+& AAAI & 2025
+& 92.99 & 77.66 & 86.08 & \textbf{38.20} & \textbf{43.81} & 5.986 & $13.612^{\#}$ \\
+RGSP (Ours)
+& This work & --
+& \textbf{93.91} & 78.57 & \textbf{87.74} & 32.74 & 42.69 & 5.920 & $13.148^{\#}$ \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+Publication 为方法出处。FEPS-Net、FGBG-Net 和 PEGNet 的检测指标
+转引自 SARDet-MIM~\cite{sardetmim2026} Table 1；
+其余外部方法转引自 MaDiNet 预印本~\cite{madinet_preprint} Table 3，
+对应评估集合尚未核实为独立测试集。
+$^{*}$表示指定实现的完整检测网络复杂度，尚未绑定文献成绩的确切实现版本：
+Faster R-CNN、RetinaNet、FCOS、Cascade R-CNN采用R50-FPN；
+YOLOv3、YOLOv5n/s采用Ultralytics YOLOv5 v7.0实现；
+YOLOv8n采用项目冻结的Ultralytics实现；
+FGBG-Net采用作者master分支单类R50配置，补齐缺失的同版本框架文件；
+扩散方法采用既有R50-FPN、500 proposals测量记录，
+ConsistencyDet对应40次检测头调用。
+统计以一次乘加计为2 FLOPs，不含完整预处理与后处理；
+未计入的部分逐元素运算、ROIAlign、采样等详见测量记录。
+$^{\#}$为THOP支持算子的计算量，自定义选择性扫描未计入。
+历史ex27复杂度为对应ex7结构的参考值，尚未逐检查点绑定。
+“--”表示无法确认原行的完整模型配置或缺少可核验的完整模型结果。
+CenterNet的HG52/HG104和YOLOX六种规模均已测量，
+但文献行未绑定具体规模，故不任意选择一个值填入。
+FEPS-Net仅完成兼容重建诊断；PEGNet未找到已确认的作者实现；
+MaDiNet公开核心模块结果不作为完整检测器复杂度。
+本地三种子检测结果为均值$\pm$样本标准差，
+复杂度为seed 0结构记录或冻结配置测量，不与清理后单种子检测结果合并统计。
+两组本地对照的物理训练batch size为16。
+$^{\dagger}$表示复用清理后协议的既有Original结果。
+本地P、R采用最优F1工作点，MaDiNet Table 3标注置信度阈值为0.5。
+历史检查点前两行使用官方232张测试图像、$640\times640$输入、
+评估batch size 32和FP32，训练条件未完全匹配。
+$^{\ddagger}$P3采用部分迁移初始化、300轮训练和20轮模块预热，
+官方测试集用于验证选模，该行不是独立测试结果。
+$^{\S}$74.022为ex27验证集成绩，同一检查点测试复评为71.445。
+Internal不等同于当前RGSP Full。不同来源不作统一排名。
+\end{minipage}
+\end{table*}
+
+在历史三种子从头训练实验中，
+RGSP 的 AP$_{50}$ 从 $86.52\%$ 提高至 $87.97\%$，
+AP$_{50:95}$ 从 $42.03\%$ 提高至 $42.91\%$，
+分别增加 $1.45$ 和 $0.88$ 个百分点；
+AP$_{75}$ 仅提高 $0.05$ 个百分点。
+主要指标的逐种子配对差分别为
+$-0.35$、$+5.93$ 和 $-2.94$ 个百分点，
+平均为 $+0.88\pm4.57$ 个百分点。
+三次比较中仅一次为正，
+均值改善尚未体现为跨种子一致的增益。
+
+在清理后固定划分的单种子实验中，
+RGSP 的 AP$_{50:95}$ 为 $42.69\%$，
+比 YOLOv8n 高 $0.23$ 个百分点，
+但比 Original 低 $1.12$ 个百分点。
+RGSP 的 AP$_{50}$ 高于两个参考模型，
+AP$_{75}$ 则低于两者，
+说明宽松匹配与较严格定位指标的变化并不一致。
+这些结果说明，整块替换的性能变化
+需要结合对应训练和评估条件解释。
+
+历史检查点复评中，
+IG-DS-SSM/PFIM ex27 的 AP$_{50}$、
+AP$_{75}$ 和 AP$_{50:95}$
+分别为 $98.688\%$、$84.005\%$ 和 $71.445\%$。
+相对历史 Mamba-YOLO-T 检查点，
+三项指标分别提高 $0.083$、$0.393$
+和 $1.098$ 个百分点。
+这一比较确认了两个检查点在同一评估器下的数值差异，
+但训练条件尚未完全匹配，
+不能将差值全部归因于模块设计。
+
+历史 P3 配置记录的 AP$_{50:95}$ 为 $72.261\%$，
+历史 ex27 的验证集成绩为 $74.022\%$。
+这些结果高于当前从头训练实验的数值，
+但同时涉及初始化、训练预算、网络版本
+和选模协议的变化。
+其中，300轮配置将官方测试集同时用于验证选模，
+74.022则属于验证集记录；
+因此两项结果保留其原始口径，
+不用于替代当前独立测试对照。
+
+\textbf{SADD。}
+表~\ref{tab:sadd_detection_comparison}
+比较通用 YOLO 检测器、SAR 飞机专用的 YOLO-SAD，
+以及 ViTDet 和 SAR 表征预训练方法。
+YOLO 系列数值转引自 YOLO-SAD 的 Table 9~\cite{yolosad2024}，
+其余文献数值转引自 SARDet-MIM 的 Table 2~\cite{sardetmim2026}。
+YOLO-SAD 文献在去重后的701张图像上
+按60:40划分训练与验证集；
+SARDet-MIM 文献在2966张图像上
+按5:1随机划分训练与测试集。
+本文采用单类阳性子集的固定 $795/44/44$ 划分，
+与两组外部协议不同，因此分别列示而不统一排名。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{SADD 上的目标检测结果（\%）。
+不同文献协议与本地阳性子集结果分组列示；
+加粗仅表示各本地同协议组内的最优结果。}
+\label{tab:sadd_detection_comparison}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccrrrrr}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{Publication}
+& \multicolumn{5}{c}{Detection metrics ($\uparrow$)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-8}
+& Venue & Year & P & R
+& AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+\multicolumn{8}{l}{\textit{文献报告：数值转引自 YOLO-SAD~\cite{yolosad2024}，Table 9}} \\
+YOLOv4~\cite{yolov42020}
+& arXiv & 2020
+& -- & -- & 87.8 & -- & 54.0 \\
+YOLOv7~\cite{yolov72023}
+& CVPR & 2023
+& -- & -- & 89.8 & -- & 55.2 \\
+YOLO-SAD~\cite{yolosad2024}
+& Appl. Sci. & 2024
+& -- & -- & 91.9 & -- & 57.1 \\
+\midrule
+\multicolumn{8}{l}{\textit{文献报告：数值转引自 SARDet-MIM~\cite{sardetmim2026}，Table 2}} \\
+ViTDet~\cite{vitdet2022}
+& ECCV & 2022
+& -- & -- & 93.0 & 51.0 & 50.2 \\
+ViTDet4SAR~\cite{vitdet4sar2025}
+& IGARSS & 2025
+& -- & -- & 94.6 & 47.5 & 50.3 \\
+SARATR-X~\cite{saratrx2025}
+& TIP & 2025
+& -- & -- & 94.3 & 50.7 & 50.4 \\
+SARDet-MIM~\cite{sardetmim2026}
+& Remote Sens. & 2026
+& -- & -- & 95.9 & 59.6 & 55.3 \\
+\midrule
+\multicolumn{8}{l}{\textit{本地对照：固定阳性 $795/44/44$ 划分，3 seeds，scratch}} \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}
+& AAAI & 2025
+& $93.57\pm0.44$ & $\mathbf{94.23\pm2.23}$ & $97.32\pm0.91$ & $\mathbf{52.82\pm4.44}$ & $\mathbf{53.35\pm0.88}$ \\
+RGSP (Ours)
+& This work & --
+& $\mathbf{94.11\pm1.60}$ & $93.97\pm1.82$ & $\mathbf{97.73\pm0.55}$ & $49.11\pm5.49$ & $51.98\pm2.59$ \\
+\midrule
+\multicolumn{8}{l}{\textit{本地对照：固定阳性 $795/44/44$ 划分，seed 0，scratch}} \\
+YOLOv8n~\cite{yolov82023}
+& Software & 2023
+& 93.70 & 94.77 & 97.03 & 50.74 & 52.73 \\
+Mamba-YOLO-T (Original)~\cite{mambayolo2024}
+& AAAI & 2025
+& \textbf{94.52} & \textbf{97.19} & \textbf{98.53} & \textbf{53.77} & \textbf{54.09} \\
+RGSP (Ours)$^{\dagger}$
+& This work & --
+& 92.59 & 91.94 & 97.09 & 43.56 & 49.00 \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+本地三种子结果为均值$\pm$样本标准差，
+三个训练种子共享同一划分。
+三种子 Original 包含历史断点恢复记录，
+相应限制沿用该组实验说明。
+$^{\dagger}$表示复用三种子实验中的 RGSP seed 0，
+不构成额外独立重复；单种子组的 Original 为新增运行。
+外部两组与本地阳性子集采用不同划分，不据此统一排名。
+\end{minipage}
+\end{table*}
+
+在本地三种子实验中，
+RGSP 的 AP$_{50}$ 均值为 $97.73\%$，
+比 Original 高 $0.41$ 个百分点；
+但 AP$_{75}$ 从 $52.82\%$ 降至 $49.11\%$，
+AP$_{50:95}$ 从 $53.35\%$ 降至 $51.98\%$。
+主要指标的逐种子配对差分别为
+$-4.71$、$-0.78$ 和 $+1.39$ 个百分点，
+平均为 $-1.37\pm3.09$ 个百分点。
+因此，宽松 IoU 条件下的改善
+没有转化为较严格定位指标上的提高。
+
+单种子对照也呈现相同的主要指标变化方向：
+RGSP 的 AP$_{50:95}$ 为 $49.00\%$，
+低于 Original 的 $54.09\%$
+和 YOLOv8n 的 $52.73\%$。
+完整配置在当前设置下仍存在定位性能下降的问题。
+由于测试集仅包含 44 张阳性图像，
+这些结果描述有目标场景下的检测表现，
+纯背景图像上的误检表现仍需另行评估。
+
+\textbf{SAR-ShipDataset。}
+表~\ref{tab:sarship_detection_comparison}
+给出 SAR-ShipDataset 上的结果。
+文献方法包括 SAR 舰船检测的 Improved FCOS、
+跨模态特征迁移方法 CMFT、
+通用扩散式检测器 DiffusionDet，
+以及 DiffDet4SAR 和 MaDiNet。
+方法出处采用各自正式版本，
+本表性能数值则统一取自 MaDiNet 的2024年作者稿
+（arXiv:2411.07500v1，Table 4）~\cite{madinet_preprint}。
+两者不混用为同一版本的报告。
+
+本地结果沿用历史 Mamba-YOLO-T 基线
+以及 IG-DS-SSM/PFIM 的 T、S 规模配置。
+IG-DS-SSM/PFIM 是内部历史方法名称，
+不等同于当前完整 RGSP 配置在统一协议下的独立重复。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.10}
+\caption{SAR-ShipDataset 上的目标检测结果（\%）。
+方法出处与数值来源分别标注；本地历史配置的训练条件未完全匹配，
+不标注统一最优结果。}
+\label{tab:sarship_detection_comparison}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccrr}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{Publication}
+& \multicolumn{2}{c}{Detection metrics ($\uparrow$)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+& Venue & Year & AP$_{50}$ & AP$_{50:95}$ \\
+\midrule
+\multicolumn{5}{l}{\textit{文献报告：数值转引自 MaDiNet 作者稿~\cite{madinet_preprint}，Table 4}} \\
+Improved FCOS~\cite{improvedfcos2022}
+& JSTARS & 2022
+& 94.1 & -- \\
+CMFT~\cite{cmft2023}
+& TGRS & 2023
+& 94.5 & -- \\
+DiffusionDet~\cite{diffusiondet2023}
+& ICCV & 2023
+& 95.0 & -- \\
+DiffDet4SAR~\cite{diffdet4sar2024}
+& GRSL & 2024
+& 95.1 & -- \\
+MaDiNet~\cite{madinet2025}
+& TCSVT & 2025
+& 97.5 & -- \\
+\midrule
+\multicolumn{5}{l}{\textit{本地历史记录：不同训练配置，未使用测试时增强}} \\
+Mamba-YOLO-T~\cite{mambayolo2024}
+& AAAI & 2025
+& 94.62 & 49.57 \\
+IG-DS-SSM/PFIM-T
+& Internal & --
+& 94.84 & 57.82 \\
+IG-DS-SSM/PFIM-S
+& Internal & --
+& 95.61 & 53.18 \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+文献组全部数值取自 arXiv:2411.07500v1（2024）的 Table 4；
+MaDiNet 行列出的是正式期刊版本的出处（TCSVT，2025），
+不表示本表数值来自该正式版本的表格。
+Improved FCOS 为所引文献中的SAR舰船改进模型，
+不等同于通用FCOS；
+CMFT 为跨模态特征迁移方法。
+Internal 表示仅按本地实验记录列示的历史配置，
+T、S 为其模型规模标记。
+本地基线与方法的批大小调度等条件不同，
+初始化、模型规模和训练预算尚未全部统一，
+不将差值解释为严格组件增益。
+\end{minipage}
+\end{table*}
+
+历史 IG-DS-SSM/PFIM-T 的 AP$_{50}$ 为 $94.84\%$，
+相对 Mamba-YOLO-T 提高 $0.23$ 个百分点；
+AP$_{50:95}$ 从 $49.57\%$ 提高至 $57.82\%$，
+增加 $8.25$ 个百分点。
+历史 S 规模方法的 AP$_{50}$ 为 $95.61\%$，
+高于 T 规模方法，但 AP$_{50:95}$ 为 $53.18\%$，
+低于 T 规模方法。
+这些结果体现不同配置在宽松匹配和综合定位指标上的差异；
+由于历史实验条件尚未全部统一，
+其性能变化仍需在固定协议下进一步验证。
+
+\FloatBarrier
+\subsubsection{图像分类}
+\label{sec:classification_results}
+
+本节在 SAR-ACD 和 SAMPLE 上比较分类性能，
+采用 Accuracy 和 Macro-F1 作为评价指标。
+各数据集的外部方法与本地结果分别分组列示，
+加粗表示本地同协议比较中的最高值。
+文献中定义相同的 OA 统一记为 Accuracy，
+``--'' 表示来源未报告该项指标。
+
+\textbf{SAR-ACD。}
+表~\ref{tab:saracd_performance}
+给出 SAR-ACD 上的分类性能比较，
+包括代表性 CNN、Transformer 和 SAR 表征方法。
+SUMMIT 与 BU-SIP 文献采用六类设置，
+本文采用五类固定划分，
+各组结果按照对应协议列示
+\cite{summit2025,busip2025}。
+
+\begin{table}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{SAR-ACD 上的分类性能比较（\%）。
+不同类别设置与训练协议分组列示，
+加粗表示本地比较中的最高值。}
+\label{tab:saracd_performance}
+\begin{tabular}{lrr}
+\toprule
+Method & Accuracy & Macro-F1 \\
+\midrule
+\multicolumn{3}{l}
+{\textit{文献报告：六类，SUMMIT 协议}} \\
+ResNet-50 & 84.08 & -- \\
+Swin-T    & 85.74 & -- \\
+Swin-B    & 86.24 & -- \\
+ViT       & 93.20 & -- \\
+SUMMIT    & 94.86 & -- \\
+\midrule
+\multicolumn{3}{l}
+{\textit{文献报告：六类，BU-SIP 协议}} \\
+ResNet    & 92.79 & -- \\
+VIBNet    & 93.50 & -- \\
+BU-SIP    & 95.43 & -- \\
+\midrule
+\multicolumn{3}{l}
+{\textit{本地实验：五类，从头训练，seed 0}} \\
+Original
+& \textbf{94.88} & \textbf{94.82} \\
+Matched075
+& 92.13 & 92.05 \\
+RGSP (Ours)
+& 92.91 & 92.95 \\
+\bottomrule
+\end{tabular}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+外部结果分别取自
+文献~\cite{summit2025} 的 Table 5
+和文献~\cite{busip2025} 的 Table 7。
+SUMMIT 组采用来源中的100\%训练数据设置，
+BU-SIP 组每类使用200张训练图像。
+本地训练/验证/测试图像数为2003/251/254，
+Original、Matched075 与 RGSP 使用相同划分和训练协议。
+\end{minipage}
+\end{table}
+
+在本地五类设置下，
+Original 的 Accuracy 和 Macro-F1
+分别为 $94.88\%$ 和 $94.82\%$，
+RGSP 分别为 $92.91\%$ 和 $92.95\%$，
+下降 $1.97$ 和 $1.87$ 个百分点。
+两个指标的变化方向一致，
+完整 RGSP 在当前从头训练设置下
+未改善相对 Original 的分类性能。
+Matched075 的 Accuracy 和 Macro-F1
+分别为 $92.13\%$ 和 $92.05\%$；
+RGSP 相对该结构匹配控制
+分别提高 $0.79$ 和 $0.90$ 个百分点，
+但仍未达到 Original 的水平。
+这说明整块替换效果与匹配结构下的组件组合变化
+需要分别判断。
+外部方法提供六类设置下的性能参照，
+由于类别组成和训练协议不同，
+其数值不与本文五类结果直接排名。
+
+历史 VMamba-Tiny 预训练实验中，
+RGSP 曾获得较高的分类结果，
+但对应配置包含额外模块预热，
+训练预算也与当前实验不同。
+历史记录与当前从头训练结果分别解释，
+不将其差异归结为模块的稳定增益。
+
+\textbf{SAMPLE。}
+表~\ref{tab:sample_performance}
+给出 SAMPLE 上的分类性能比较。
+外部方法采用 MLDA 文献中的
+合成数据训练、实测数据测试协议，
+本文采用仅包含实测数据的闭集协议
+\cite{mlda2025}。
+两组实验分别考察跨域迁移和实测数据内部的类别识别。
+
+\begin{table}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{SAMPLE 上的分类性能比较（\%）。
+合成到实测与 real-only 闭集协议分组列示，
+加粗表示本地比较中的最高值。}
+\label{tab:sample_performance}
+\begin{tabular}{lrr}
+\toprule
+Method & Accuracy & Macro-F1 \\
+\midrule
+\multicolumn{3}{l}
+{\textit{文献报告：合成到实测}} \\
+ResNet-50
+& $48.37\pm3.73$ & $45.54\pm3.75$ \\
+AConvNet
+& $52.36\pm3.97$ & $48.47\pm3.66$ \\
+ERM
+& $91.78\pm1.86$ & $90.97\pm1.72$ \\
+SSR
+& $94.69\pm1.19$ & $94.65\pm1.21$ \\
+MLDA
+& $96.76\pm1.34$ & $96.70\pm1.29$ \\
+\midrule
+\multicolumn{3}{l}
+{\textit{本地实验：real-only，seed 0}} \\
+Original
+& 97.04 & 96.81 \\
+Matched075
+& \textbf{98.52} & \textbf{98.35} \\
+RGSP (Ours)
+& 97.78 & 97.70 \\
+\bottomrule
+\end{tabular}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+外部结果取自文献~\cite{mlda2025} 的 Table 2：
+采用$14^\circ$--$16^\circ$合成数据训练，
+在$17^\circ$实测数据上测试；
+均值与标准差沿用来源报告。
+本地仅使用实测图像，
+训练/验证/测试图像数为1075/135/135，
+Original、Matched075 与 RGSP 均从头训练，
+共享相同划分和训练协议。
+\end{minipage}
+\end{table}
+
+在本地 real-only 设置下，
+RGSP 的 Accuracy 从 $97.04\%$ 提高至 $97.78\%$，
+Macro-F1 从 $96.81\%$ 提高至 $97.70\%$，
+分别增加 $0.74$ 和 $0.89$ 个百分点。
+Accuracy 的变化对应135张测试图像中
+增加一张正确分类图像，
+因此当前观察到的改善幅度较小。
+Matched075 的 Accuracy 和 Macro-F1
+分别为 $98.52\%$ 和 $98.35\%$，
+均高于 RGSP；
+相对 Matched075，RGSP 分别下降
+$0.74$ 和 $0.65$ 个百分点。
+因此，RGSP 相对 Original 的小幅改善
+不足以证明新增组件优于相同替换块结构。
+外部方法采用合成到实测协议，
+其结果用于说明跨域识别的已有性能，
+不与本文闭集结果直接计算性能增益。
+
+两个分类数据集呈现不同的变化方向：
+相对 Original，RGSP 在 SAMPLE 上小幅改善，
+在 SAR-ACD 上下降；
+相对 Matched075，RGSP 在 SAR-ACD 上提高，
+在 SAMPLE 上下降。
+当前单种子结果既未显示整块替换的跨数据集一致增益，
+也未显示新增组件组合相对匹配结构的一致优势。
+
+\subsubsection{变化检测}
+\label{sec:change_detection_results}
+
+本节在 Ottawa、Farmland 和 Yellow River 上
+比较变化检测性能。
+外部结果采用 SARCDNet 文献中报告的
+DDNet、LANTNet、CAMixer、MDDNet、
+WBANet 和 SARCDNet 数值
+\cite{sarcdnet2026}，
+并与本地 Original、Matched075 和 RGSP 分组列示。
+
+外部文献采用基于聚类伪标签的逐图像对训练与整图评估；
+本文采用训练、验证和测试区域划分，
+依据验证集选择判定阈值并固定用于测试。
+本地三个配置采用相同的双时相网络框架、
+差分特征构造和解码头，均从头训练，使用 seed 0。
+重叠预测聚合到原始像素后评估，
+每个测试像素仅计一次。
+
+各表采用 Precision、Recall、F1、IoU 和 OA。
+来源中与 OA 定义相同的 PCC 统一记为 OA，
+以比例报告的 F1 转换为百分数。
+``--'' 表示来源未报告该项指标；
+加粗仅表示本地同协议比较中的最高值。
+
+\textbf{Ottawa。}
+表~\ref{tab:ottawa_performance}
+给出 Ottawa 上的变化检测性能比较。
+文献方法报告的 F1 介于 $93.90\%$ 和 $94.90\%$，
+本地实验则在固定测试区域上比较三个配置。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Ottawa 上的变化检测性能比较（\%）。
+文献整图评估与本地测试区域评估分组列示，
+加粗表示本地比较中的最高值。}
+\label{tab:ottawa_performance}
+\begin{tabular*}{\textwidth}
+{@{\extracolsep{\fill}}lrrrrr}
+\toprule
+Method & Precision & Recall & F1 & IoU & OA \\
+\midrule
+\multicolumn{6}{l}
+{\textit{文献报告：SARCDNet 比较表，整图评估}} \\
+DDNet
+& -- & -- & 94.10 & -- & 98.17 \\
+LANTNet
+& -- & -- & 94.50 & -- & 98.30 \\
+CAMixer
+& -- & -- & 93.90 & -- & 98.13 \\
+MDDNet
+& -- & -- & 94.50 & -- & 98.30 \\
+WBANet
+& -- & -- & 94.20 & -- & 98.22 \\
+SARCDNet
+& -- & -- & 94.90 & -- & 98.41 \\
+\midrule
+\multicolumn{6}{l}
+{\textit{本地实验：固定测试区域，从头训练，seed 0}} \\
+Original
+& 96.18 & \textbf{96.66}
+& 96.42 & 93.09 & 98.91 \\
+Matched075
+& 96.27 & 96.34
+& 96.31 & 92.88 & 98.88 \\
+RGSP (Ours)
+& \textbf{96.97} & 96.48
+& \textbf{96.73} & \textbf{93.66} & \textbf{99.01} \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+文献结果取自文献~\cite{sarcdnet2026} 的 Table 2，
+其他方法的数值为该文献中的比较记录。
+本地测试包含18432个唯一像素，
+判定阈值由各模型的验证集结果确定。
+不同评估区域的结果不进行统一排名。
+\end{minipage}
+\end{table*}
+
+在本地一致协议下，
+RGSP 的 F1 从 $96.42\%$ 提高至 $96.73\%$，
+IoU 从 $93.09\%$ 提高至 $93.66\%$，
+分别增加 $0.31$ 和 $0.57$ 个百分点。
+Precision 提高 $0.79$ 个百分点，
+Recall 小幅下降 $0.18$ 个百分点，
+表现为精确率提高与召回率小幅降低，
+共同带来 F1 的有限改善。
+Matched075 的 F1 为 $96.31\%$，
+RGSP 相对它提高 $0.42$ 个百分点；
+因此，本次改善同时出现在相对 Original
+和相对结构匹配控制的比较中，
+但幅度均较小。
+由于外部文献采用整图评估，
+本文较高的数值不能直接解释为对外部方法的超越。
+
+\textbf{Farmland。}
+表~\ref{tab:farmland_performance}
+给出 Farmland 上的变化检测性能比较。
+外部方法在对应整图协议下报告的 F1
+介于 $86.70\%$ 和 $89.50\%$，
+本地测试区域包含9216个唯一像素，
+其中365个为变化像素。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Farmland 上的变化检测性能比较（\%）。
+文献整图评估与本地测试区域评估分组列示，
+加粗表示本地比较中的最高值。}
+\label{tab:farmland_performance}
+\begin{tabular*}{\textwidth}
+{@{\extracolsep{\fill}}lrrrrr}
+\toprule
+Method & Precision & Recall & F1 & IoU & OA \\
+\midrule
+\multicolumn{6}{l}
+{\textit{文献报告：SARCDNet 比较表，整图评估}} \\
+DDNet
+& -- & -- & 86.70 & -- & 98.47 \\
+LANTNet
+& -- & -- & 87.20 & -- & 98.62 \\
+CAMixer
+& -- & -- & 88.00 & -- & 98.70 \\
+MDDNet
+& -- & -- & 86.70 & -- & 98.58 \\
+WBANet
+& -- & -- & 88.10 & -- & 98.65 \\
+SARCDNet
+& -- & -- & 89.50 & -- & 98.79 \\
+\midrule
+\multicolumn{6}{l}
+{\textit{本地实验：固定测试区域，从头训练，seed 0}} \\
+Original
+& 0.00 & 0.00 & 0.00 & 0.00 & 96.04 \\
+Matched075
+& \textbf{100.00} & 26.03
+& 41.30 & 26.03 & 97.07 \\
+RGSP (Ours)
+& \textbf{100.00} & \textbf{26.85}
+& \textbf{42.33} & \textbf{26.85} & \textbf{97.10} \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+文献结果取自文献~\cite{sarcdnet2026} 的 Table 3。
+本地变化像素占测试区域约3.96\%。
+Original 在验证集选定的阈值下
+将全部测试像素预测为未变化，
+其变化类 Precision、Recall、F1 和 IoU
+按评估器定义记为零，不是缺失结果。
+\end{minipage}
+\end{table*}
+
+Original 将全部测试像素预测为未变化，
+仍获得 $96.04\%$ 的 OA，
+但变化类 F1 和 IoU 均为零。
+这一结果说明，
+在类别不平衡设置下，
+仅依据 OA 无法判断变化区域的检出能力。
+
+RGSP 的 Precision 为 $100.00\%$，
+Recall 为 $26.85\%$，
+F1 和 IoU 分别为 $42.33\%$ 和 $26.85\%$。
+相比 Original，
+RGSP 能够识别部分变化像素，
+但仍遗漏大部分变化区域。
+但 Matched075 已达到 $41.30\%$ 的 F1，
+同样没有误检，并检出365个变化像素中的95个；
+RGSP 检出98个，仅增加3个，
+相应 F1 提高 $1.03$ 个百分点。
+因此，相对 Original 的大幅改善主要体现
+从全负预测转向部分变化检出，
+不能全部归因于新增局部组件或结构引导；
+相对匹配结构的增量有限，
+召回不足仍是该设置下的主要问题。
+
+外部方法的结果提供整图协议下的性能参照。
+由于训练样本构造和评估区域不同，
+不将其与本地结果直接计算性能差值。
+
+\textbf{Yellow River。}
+表~\ref{tab:yellowriver_performance}
+给出 Yellow River 上的变化检测性能比较。
+外部方法报告的 F1 介于 $85.20\%$ 和 $90.00\%$，
+本地实验在固定测试区域上
+分析完整 RGSP 的替换效果。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{Yellow River 上的变化检测性能比较（\%）。
+文献整图评估与本地测试区域评估分组列示，
+加粗表示本地比较中的最高值。}
+\label{tab:yellowriver_performance}
+\begin{tabular*}{\textwidth}
+{@{\extracolsep{\fill}}lrrrrr}
+\toprule
+Method & Precision & Recall & F1 & IoU & OA \\
+\midrule
+\multicolumn{6}{l}
+{\textit{文献报告：SARCDNet 比较表，整图评估}} \\
+DDNet
+& -- & -- & 87.30 & -- & 95.66 \\
+LANTNet
+& -- & -- & 85.80 & -- & 95.21 \\
+CAMixer
+& -- & -- & 85.20 & -- & 95.01 \\
+MDDNet
+& -- & -- & 85.80 & -- & 95.17 \\
+WBANet
+& -- & -- & 87.60 & -- & 95.70 \\
+SARCDNet
+& -- & -- & 90.00 & -- & 96.52 \\
+\midrule
+\multicolumn{6}{l}
+{\textit{本地实验：固定测试区域，从头训练，seed 0}} \\
+Original
+& 65.88 & \textbf{98.57}
+& 78.97 & 65.25 & 92.45 \\
+Matched075
+& \textbf{99.58} & 53.02
+& 69.19 & 52.90 & 93.21 \\
+RGSP (Ours)
+& 95.90 & 70.51
+& \textbf{81.27} & \textbf{68.45} & \textbf{95.32} \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+文献结果取自文献~\cite{sarcdnet2026} 的 Table 2。
+本地测试包含9216个唯一像素，
+判定阈值由各模型的验证集结果确定并固定用于测试。
+文献整图结果与本地测试区域结果分别解释。
+\end{minipage}
+\end{table*}
+
+在本地一致协议下，
+RGSP 的 F1 从 $78.97\%$ 提高至 $81.27\%$，
+IoU 从 $65.25\%$ 提高至 $68.45\%$，
+分别增加 $2.30$ 和 $3.20$ 个百分点；
+OA 从 $92.45\%$ 提高至 $95.32\%$。
+
+这一改善伴随着明显的 Precision--Recall 权衡：
+Precision 从 $65.88\%$ 提高至 $95.90\%$，
+Recall 从 $98.57\%$ 降至 $70.51\%$。
+RGSP 在当前工作点下减少误检，
+同时增加漏检。
+F1 和 IoU 的提高反映两类错误综合变化后的结果，
+不能解释为所有变化区域均得到更好的识别。
+Matched075 的 Precision 为 $99.58\%$，
+但 Recall 仅为 $53.02\%$，F1 为 $69.19\%$；
+RGSP 相对 Matched075 的 F1
+提高 $12.08$ 个百分点，
+并以精确率下降换取召回率提高。
+这与相对 Original 时精确率提高、召回率下降的方向不同，
+说明性能取舍依赖所选参考配置。
+文献方法报告的 F1 均高于当前本地结果，
+但协议差异使其不能作为同条件下的直接性能差距。
+
+相对 Original，RGSP 在三个变化检测数据集上的 F1 均有所提高，
+但变化形式不同：
+Ottawa 为小幅改善，
+Farmland 为从全负预测转向部分变化检出，
+Yellow River 则表现为误检减少与漏检增加。
+相对 Matched075，三个数据集的 F1
+分别提高 $0.42$、$1.03$ 和 $12.08$ 个百分点，
+说明完整组件组合在本次匹配比较中的增量
+随数据集明显变化。
+这些单种子观察尚需多种子结果进一步验证；
+匹配比较也不能单独分离局部修正、能量调制
+与结构引导各自的贡献。
+
+\FloatBarrier
+\subsection{消融实验与设计分析}
+\label{sec:ablation_analysis}
+
+本节通过结构匹配控制、组件消融和设计参数比较，
+分析 RGSP 各计算环节的作用。
+首先区分替换块结构变化与新增组件带来的性能差异，
+随后考察结构引导的作用路径、引导粒度和局部描述量，
+最后分析插入位置、状态维数及局部窗口的影响。
+除单独说明的历史统计外，
+本节采用已回收的 seed 0 结果：
+SSDD 使用清理后的 $730/186/232$ 划分，
+SADD 使用固定的 $795/44/44$ 阳性图像划分。
+同一数据集内采用对应的训练、选模与测试协议；
+历史复用结果明确标注，不计作新的独立重复。
+各项比较用于描述当前配置下的性能变化，
+不据单种子排序宣称统计显著性或普遍最优设计。
+
+\subsubsection{结构匹配与组件消融}
+\label{sec:matched_component_ablation}
+
+\textbf{结构匹配控制。}
+Original 为 Mamba-YOLO-T 中原始的 VSSBlock，
+采用四向 SS2D 和扩展比例为 4 的前馈分支。
+RGSP 替换块采用单向行优先扫描、
+LayerNorm、LayerScale 和扩展比例为 2 的前馈分支。
+因此，Original 与 RGSP 的直接比较同时包含
+扫描方式、归一化、前馈结构和新增组件的变化，
+只能用于评价整块替换效果。
+
+为进一步分析组件作用，
+构建与 RGSP 使用相同替换块结构的
+MatchedIdentity 和 Matched075。
+两者均关闭局部残差修正、能量调制和结构引导。
+MatchedIdentity 的扫描输入倍率为 1，
+Matched075 保留关闭调制项后产生的常数倍率：
+\begin{equation}
+\gamma
+=g_{\min}+(1-g_{\min})\sigma(0)
+=0.75,
+\label{eq:ablation_matched_scale}
+\end{equation}
+其中 $g_{\min}=0.5$。
+MatchedIdentity 仅表示扫描输入不额外缩放，
+并不表示整个替换块为恒等映射。
+Matched075 则为各组件比较提供一致的常数缩放背景。
+
+记局部残差修正、趋势能量调制、
+输入引导和步长引导分别为
+$R$、$E$、$U$ 和 $D$。
+Residual075 仅开启 $R$，
+EnergyOnly 仅开启 $E$，
+LocalEnergy 同时开启 $R$ 和 $E$；
+GuidanceOnly 固定残差与能量系数为零，
+仅保留两条结构引导路径；
+Full 为四个计算环节均开启的完整 RGSP。
+关闭的控制参数不参与优化，
+并在权重重载后核验其状态。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{SSDD 上的结构匹配与组件消融结果（\%）。
+使用清理后的 $730/186/232$ 划分，均为 seed 0。
+$R$、$E$、$U$ 和 $D$ 分别表示残差修正、
+能量调制、输入引导和步长引导。}
+\label{tab:ssdd_matched_components}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccrrr}
+\toprule
+配置 & $R$ & $E$ & $U$ & $D$
+& AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+Original$^{\dagger}$
+& -- & -- & -- & --
+& 86.08 & 38.20 & 43.81 \\
+MatchedIdentity$^{\dagger}$
+& 0 & 0 & 0 & 0
+& 85.67 & 29.51 & 40.72 \\
+Matched075
+& 0 & 0 & 0 & 0
+& 87.29 & 29.69 & 41.35 \\
+\midrule
+Residual075
+& 1 & 0 & 0 & 0
+& 85.54 & 31.92 & 41.06 \\
+EnergyOnly
+& 0 & 1 & 0 & 0
+& 87.56 & 42.83 & 45.49 \\
+LocalEnergy$^{\ddagger}$
+& 1 & 1 & 0 & 0
+& 85.29 & 26.41 & 39.34 \\
+GuidanceOnly
+& 0 & 0 & 1 & 1
+& 86.67 & 39.62 & 44.49 \\
+Full
+& 1 & 1 & 1 & 1
+& 87.74 & 32.74 & 42.69 \\
+\midrule
+Full no-LRC
+& -- & 1 & 1 & 1
+& 87.96 & 38.19 & 44.36 \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+0/1 表示关闭/开启；-- 表示不适用或不属于该二值控制。
+$^{\dagger}$表示复用既有结果；
+$^{\ddagger}$表示同一清理后协议的历史采纳，
+不是旧 $742/186/232$ 划分中的 LocalEnergy。
+该采纳结果已核对测试、训练与最佳权重绑定，
+但采纳完成记录的正文复核仍不完整。
+所有行实际观察训练轮数均为 150。
+Full no-LRC 删除趋势卷积及残差修正，
+并同时改变后续能量与引导的输入来源，
+不能视为仅关闭 $R$ 的单因素控制。
+\end{minipage}
+\end{table*}
+
+\textbf{SSDD 结果。}
+表~\ref{tab:ssdd_matched_components} 显示，
+MatchedIdentity 的 $\mathrm{AP}_{50:95}$ 为 $40.72\%$，
+低于 Original 的 $43.81\%$；
+Matched075 为 $41.35\%$，
+比 MatchedIdentity 高 $0.63$ 个百分点。
+这说明替换块结构及常数输入尺度本身
+已经能够改变检测结果，
+不能将 Full 相对 Original 的全部变化
+归因于新增的局部计算或结构引导。
+
+相对 Matched075，
+Residual075 的 $\mathrm{AP}_{50:95}$
+下降 $0.29$ 个百分点，
+EnergyOnly 提高 $4.14$ 个百分点，
+LocalEnergy 则下降 $2.01$ 个百分点。
+因此，残差修正与能量调制的组合
+在当前种子下没有呈现简单的增益叠加。
+GuidanceOnly 达到 $44.49\%$，
+比 Matched075 高 $3.14$ 个百分点；
+Full 为 $42.69\%$，
+比 Matched075 高 $1.34$ 个百分点，
+但比 Original 低 $1.12$ 个百分点。
+此外，Full 的 $\mathrm{AP}_{50}$ 高于 Original，
+而 $\mathrm{AP}_{75}$ 和 $\mathrm{AP}_{50:95}$ 较低，
+表明宽松匹配与较严格定位评价下的变化并不一致。
+
+为描述残差修正与能量调制组合的非加性，
+以 $\mathrm{AP}_{50:95}$ 为 $M$，计算
+\begin{equation}
+\begin{aligned}
+\mathcal{J}_{R,E}
+={}&M_{\mathrm{LocalEnergy}}
+-M_{\mathrm{Residual075}}\\
+&-M_{\mathrm{EnergyOnly}}
++M_{\mathrm{Matched075}}.
+\end{aligned}
+\label{eq:ablation_interaction_re}
+\end{equation}
+由未舍入结果得到
+$\mathcal{J}_{R,E}=-5.86$ 个百分点。
+该值仅描述当前种子和协议下的性能非加性，
+不构成统计显著性或内部机制的证明。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{SADD 上的结构匹配与组件消融结果（\%）。
+使用固定阳性 $795/44/44$ 划分，均为 seed 0。}
+\label{tab:sadd_matched_components}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrr}
+\toprule
+配置 & Precision & Recall
+& AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ & Epochs \\
+\midrule
+Original
+& 94.52 & 97.19 & 98.53 & 53.77 & 54.09 & 200 \\
+MatchedIdentity
+& 93.59 & 97.55 & 98.62 & 52.53 & 52.60 & 191 \\
+Matched075$^{\dagger}$
+& 94.18 & 95.83 & 97.57 & 49.60 & 52.09 & 200 \\
+LocalEnergy$^{\dagger}$
+& 93.29 & 94.61 & 97.59 & 48.10 & 51.95 & 168 \\
+Full$^{\dagger}$
+& 92.59 & 91.94 & 97.09 & 43.56 & 49.00 & 156 \\
+\midrule
+Full no-LRC
+& 93.79 & 95.34 & 97.98 & 48.44 & 52.45 & 191 \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+$^{\dagger}$表示复用已有三种子实验中对应的 seed 0 结果，
+不构成新的独立重复。
+本表 Original 为新轨道结果，
+与历史三种子统计中的 Original 不同。
+Epochs 为实际观察训练轮数，不是最佳检查点轮数；
+各配置共享最大训练预算和早停策略，
+但实际训练轮数可以不同。
+Precision 和 Recall 对应各模型的最优 F1 工作点。
+\end{minipage}
+\end{table*}
+
+\textbf{SADD 结果。}
+表~\ref{tab:sadd_matched_components} 中，
+Original、MatchedIdentity 和 Matched075 的
+$\mathrm{AP}_{50:95}$ 分别为
+$54.09\%$、$52.60\%$ 和 $52.09\%$。
+与 SSDD 不同，
+常数倍率 0.75 在该数据集上低于倍率 1，
+说明输入尺度的影响并不具有跨数据集一致性。
+
+LocalEnergy 的 $\mathrm{AP}_{50:95}$ 为 $51.95\%$，
+比 Matched075 低 $0.14$ 个百分点；
+Full 为 $49.00\%$，
+相对 Matched075 和 Original
+分别下降 $3.09$ 和 $5.08$ 个百分点。
+Full 的 Recall 和 $\mathrm{AP}_{75}$ 同时下降，
+当前结果未显示完整组合在该阳性子集上的优势。
+SADD 尚缺残差单独开启、能量单独开启
+及严格 GuidanceOnly 的完整对应结果，
+因此不在该数据集上估计残差与能量的四格交互。
+
+\textbf{删除局部趋势路径。}
+Full no-LRC 直接令
+$\bar{x}=\widetilde{x}=x$，
+跳过趋势卷积和残差修正，
+后续能量调制与 LSGM 也改为使用相应的原始响应。
+该变体在 SSDD 和 SADD 上的
+$\mathrm{AP}_{50:95}$ 分别为
+$44.36\%$ 和 $52.45\%$，
+相对 Full 提高 $1.68$ 和 $3.45$ 个百分点。
+这一结果表明完整局部趋势路径在当前配置下
+没有带来一致收益；
+由于删除操作同时改变了多个后续计算的输入，
+不能据此认定残差修正这一单独因素必然有害。
+
+历史三种子结果也保留上述不一致性。
+在 SSDD 的旧 $742/186/232$ 协议下，
+Original、LocalEnergy 和 Full 的
+$\mathrm{AP}_{50:95}$ 分别为
+$42.03\pm3.47\%$、
+$43.98\pm1.44\%$ 和
+$42.91\pm1.13\%$。
+Full 相对 Original 的配对差方向并不一致，
+相对 LocalEnergy 的平均差为负。
+在 SADD 的已有三种子实验中，
+Full 为 $51.98\pm2.59\%$，
+低于 Original 的 $53.35\pm0.88\%$。
+这些统计与当前单种子控制分别解释，
+不合并估计组件增益。
+历史 Legacy-PFIM 配置中被关闭的系数实际发生漂移，
+因此也不将其作为严格的仅引导控制。
+
+\subsubsection{结构引导方式与描述量分析}
+\label{sec:guidance_design_analysis}
+
+\textbf{输入引导与步长引导。}
+为分析结构条件的作用路径，
+在保留残差修正和能量调制的基础上，
+分别构建 LocalEnergy+Input、
+LocalEnergy+Delta 和 Full。
+LocalEnergy+Input 仅开启结构条件到扫描输入的路径，
+包括输入倍率中的引导项和写入倍率 $g_w$；
+LocalEnergy+Delta 仅开启结构条件到步长的路径；
+Full 同时开启两条路径。
+关闭步长引导仅移除结构项 $\eta I$，
+基础步长仍然依赖输入内容。
+
+表~\ref{tab:ssdd_guidance_descriptors}
+和图~\ref{fig:rgsp_guidance_paths}
+给出了 SSDD 上的比较。
+LocalEnergy+Input 和 LocalEnergy+Delta 的
+$\mathrm{AP}_{50:95}$ 分别为
+$45.26\%$ 和 $43.43\%$，
+相对 LocalEnergy 提高
+$5.93$ 和 $4.09$ 个百分点。
+两者均高于 Full 的 $42.69\%$，
+说明当前结果不支持两条路径同时开启必然更优。
+
+相应的两路径非加性定义为
+\begin{equation}
+\begin{aligned}
+\mathcal{J}_{U,D}
+={}&M_{\mathrm{Full}}
+-M_{\mathrm{LocalEnergy+Input}}\\
+&-M_{\mathrm{LocalEnergy+Delta}}
++M_{\mathrm{LocalEnergy}}.
+\end{aligned}
+\label{eq:ablation_interaction_ud}
+\end{equation}
+当前 SSDD seed 0 的结果为
+$\mathcal{J}_{U,D}=-6.67$ 个百分点。
+该观察提示两条路径需要联合评估，
+但尚不足以确定产生性能变化的具体内部原因。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{SSDD 上的结构引导方式与局部描述量比较（\%）。
+均使用清理后划分和 seed 0。
+$\Delta_{\mathrm{Full}}$ 为相对 Full 的
+$\mathrm{AP}_{50:95}$ 差值，单位为百分点。}
+\label{tab:ssdd_guidance_descriptors}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrr}
+\toprule
+配置 & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$
+& $\Delta_{\mathrm{Full}}$ \\
+\midrule
+LocalEnergy$^{\ddagger}$
+& 85.29 & 26.41 & 39.34 & $-3.35$ \\
+LocalEnergy+Input
+& 87.50 & 39.84 & 45.26 & $+2.58$ \\
+LocalEnergy+Delta
+& 87.57 & 37.95 & 43.43 & $+0.74$ \\
+Full
+& 87.74 & 32.74 & 42.69 & $0.00$ \\
+Post-gate
+& 88.84 & 42.73 & 46.62 & $+3.93$ \\
+\midrule
+FixedHalf
+& 86.63 & 33.92 & 42.38 & $-0.31$ \\
+ConstantGuidance
+& 85.68 & 32.28 & 40.45 & $-2.24$ \\
+Global
+& 87.45 & 35.49 & 43.30 & $+0.61$ \\
+\midrule
+LSGM trend-only
+& 85.94 & 35.70 & 41.96 & $-0.73$ \\
+LSGM std-only
+& 86.29 & 42.64 & 45.15 & $+2.46$ \\
+LSGM point-only
+& 86.26 & 28.37 & 40.19 & $-2.50$ \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+各行实际观察训练轮数均为 150。
+$^{\ddagger}$的历史采纳及核查范围
+与表~\ref{tab:ssdd_matched_components} 相同。
+差值由未舍入结果计算后统一舍入。
+表中多个比较共享同一 Full 或 LocalEnergy 结果，
+不代表这些参考配置被重复独立训练。
+\end{minipage}
+\end{table*}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\linewidth]{gallery/pdf/C12.pdf}
+\caption{SSDD 上不同结构引导路径的
+$\mathrm{AP}_{50:95}$ 比较。
+LocalEnergy+Input 和 LocalEnergy+Delta
+分别保留输入引导和步长引导，
+Full 同时保留两条路径。
+Post-gate 将结构相关倍率移到状态读出侧，
+并关闭结构条件到步长的路径，
+因此其与 Full 的比较涉及两项变化。
+结果为清理后协议的 seed 0 记录。}
+\label{fig:rgsp_guidance_paths}
+\end{figure}
+
+\textbf{扫描输入与状态读出侧引导。}
+Post-gate 保留能量调制后的扫描输入，
+将结构引导的相对倍率移至状态读出侧。
+记仅包含能量项的倍率为 $\gamma_{E,t}$，
+则
+\begin{equation}
+u_t^{\mathrm{scan}}=\gamma_{E,t}u_t,
+\qquad
+q_t=\frac{\gamma_t g_{w,t}}{\gamma_{E,t}}.
+\label{eq:ablation_post_gate}
+\end{equation}
+其中 $q_t$ 作用于状态读出之后、
+加入 $D\widetilde{x}_t$ 旁路之前，
+随后仍执行输出门控。
+因此，该变体并非对整个块输出统一缩放。
+同时，Post-gate 关闭结构条件到步长的路径，
+Full 与 Post-gate 不能视为纯粹的引导位置控制。
+
+在 SSDD 上，
+Post-gate 的 $\mathrm{AP}_{50:95}$ 为 $46.62\%$，
+相对 Full 和 Original
+分别提高 $3.93$ 和 $2.80$ 个百分点。
+在两者均关闭结构步长引导的比较中，
+Post-gate 比 LocalEnergy+Input
+高 $1.35$ 个百分点。
+这一比较更接近输入侧与读出侧的作用位置分析，
+但仍仅为当前单种子的观察。
+
+\textbf{固定引导与引导粒度。}
+FixedHalf 和 ConstantGuidance
+均固定 $I_t=0.5$，
+停用可学习引导预测器，
+并固定输入引导系数 $\beta$ 和 $\rho$。
+此时中心化输入引导项为零、$g_w=1$，
+输入侧仍保留能量调制。
+二者的区别在于：
+FixedHalf 固定 $\eta=0.1$，
+ConstantGuidance 保留 $\eta$ 可训练。
+令 $\ell_t$ 为未加入结构项的步长预激活，则
+\begin{equation}
+\begin{aligned}
+\Delta_t^{\mathrm{FixedHalf}}
+&=\operatorname{softplus}(\ell_t+0.05),\\
+\Delta_t^{\mathrm{ConstantGuidance}}
+&=\operatorname{softplus}(\ell_t+0.5\eta).
+\end{aligned}
+\label{eq:ablation_fixed_guidance}
+\end{equation}
+因此，两者均不是完全删除步长偏移的控制。
+
+SSDD 上 FixedHalf 和 ConstantGuidance 的
+$\mathrm{AP}_{50:95}$ 分别为
+$42.38\%$ 和 $40.45\%$，
+均低于 Full。
+其中 Full 相对 FixedHalf 的差值仅为
+$0.31$ 个百分点，
+当前单种子结果不足以证明可学习局部引导
+具有稳定优势。
+
+Global 将逐位置引导图的空间均值
+广播到所有位置，
+其 $\mathrm{AP}_{50:95}$ 为 $43.30\%$，
+比 Full 高 $0.61$ 个百分点。
+该控制仅移除引导信号 $I$ 的空间变化，
+内容特征、局部趋势、能量响应和基础步长
+仍可以随位置变化。
+因此，Global 不能解释为整个状态更新过程
+不再使用局部信息。
+当前结果也未证明逐位置引导优于图像级引导。
+
+\begin{table}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{SADD 上固定引导与读出侧引导的比较（\%）。
+均为固定阳性划分的 seed 0 结果。}
+\label{tab:sadd_guidance_variants}
+\begin{tabular}{lrrrr}
+\toprule
+配置 & AP$_{50}$ & AP$_{75}$
+& AP$_{50:95}$ & Epochs \\
+\midrule
+Full$^{\dagger}$
+& 97.09 & 43.56 & 49.00 & 156 \\
+ConstantGuidance
+& 96.81 & 51.33 & 52.21 & 191 \\
+Post-gate
+& 98.32 & 58.10 & 54.28 & 200 \\
+\bottomrule
+\end{tabular}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+$^{\dagger}$表示复用已有 seed 0 结果。
+各配置采用相同最大预算和早停策略，
+实际训练轮数不同。
+\end{minipage}
+\end{table}
+
+SADD 的对应结果见
+表~\ref{tab:sadd_guidance_variants}。
+ConstantGuidance 的 $\mathrm{AP}_{50:95}$
+为 $52.21\%$，
+比 Full 高 $3.21$ 个百分点；
+这一方向与 SSDD 不同。
+Post-gate 为 $54.28\%$，
+比 Full 高 $5.28$ 个百分点，
+相对当前 Original 则仅提高 $0.19$ 个百分点。
+因此，已有结果支持继续考察引导作用位置，
+但不足以确立跨数据集的稳定优势。
+本文仍以预先定义的 Full 表示完整 RGSP，
+不根据测试集上的配置排序
+事后将 Post-gate 替换为默认方法。
+SADD 尚缺两条引导路径、全局引导
+和局部描述量的完整对应控制，
+不以 SSDD 结果代替该数据集的证据。
+
+\textbf{局部描述量。}
+为分析 LSGM 输入的作用，
+保持预测器结构和 $2C$ 输入宽度一致，
+通过零填充构建三个变体：
+\begin{equation}
+\begin{aligned}
+\mathbf{z}_t^{\mathrm{trend}}
+&=[\bar{x}_t,\,0],\\
+\mathbf{z}_t^{\mathrm{std}}
+&=[0,\,\operatorname{Std}_{\mathcal{N}}
+(\widetilde{x})_t],\\
+\mathbf{z}_t^{\mathrm{point}}
+&=[\widetilde{x}_t,\,0].
+\end{aligned}
+\label{eq:ablation_descriptor_inputs}
+\end{equation}
+三者分别对应 trend-only、
+std-only 和 point-only。
+其余残差修正、能量调制和两条引导路径保持开启。
+其中 point-only 仍使用经过 LRC 修正的特征，
+不能称为整个网络完全不使用邻域信息。
+
+如表~\ref{tab:ssdd_guidance_descriptors}
+和图~\ref{fig:rgsp_local_descriptors} 所示，
+trend-only、std-only 和 point-only 的
+$\mathrm{AP}_{50:95}$ 分别为
+$41.96\%$、$45.15\%$ 和 $40.19\%$。
+std-only 比 Full 高 $2.46$ 个百分点，
+其 $\mathrm{AP}_{75}$ 也由 $32.74\%$
+提高到 $42.64\%$；
+但 $\mathrm{AP}_{50}$ 低于 Full。
+这表明描述量选择对不同 IoU 指标的影响并不相同，
+完整描述量组合在当前配置下也未取得最高性能。
+这些结果为后续简化引导输入提供依据，
+但不将局部标准差的单次优势
+推广为不同数据集和训练条件下的普遍规律，
+也不将学习到的引导信号解释为
+经过校准的可靠性概率。
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\linewidth]{gallery/pdf/C13.pdf}
+\caption{SSDD 上结构引导粒度与局部描述量的比较。
+Full 使用完整局部描述量；
+Global 对引导图进行空间平均；
+三个单描述量变体通过零填充
+保持 LSGM 输入宽度和预测器结构一致。
+图中为清理后协议的 seed 0
+$\mathrm{AP}_{50:95}$ 结果。}
+\label{fig:rgsp_local_descriptors}
+\end{figure}
+
+\subsubsection{插入位置与参数敏感性}
+\label{sec:design_sensitivity}
+
+在 SSDD 上进一步比较插入位置、
+状态维数和局部窗口大小。
+默认配置在 P3/8 阶段替换一个状态空间块，
+状态维数为 $d_s=16$，
+一维趋势卷积核宽为 $k_t=3$，
+二维统计窗口为 $k_s\times k_s=3\times3$。
+位置实验保持对应 Full 计算环节，
+分别在 P2、P3 和 P4 接入替换块；
+状态维数实验采用 $d_s\in\{8,16,32\}$；
+窗口实验分别改变趋势卷积核宽
+或二维统计窗口，
+不同时改变两类邻域设置。
+结果见表~\ref{tab:ssdd_design_sensitivity}。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{SSDD 上的插入位置与参数敏感性分析（\%）。
+均为清理后划分的 seed 0 结果。
+默认 Full 为 P3、$d_s=16$、
+$k_t=3$ 和 $k_s=3$。
+$\Delta_{\mathrm{Full}}$ 为相对默认配置的
+$\mathrm{AP}_{50:95}$ 差值，单位为百分点。}
+\label{tab:ssdd_design_sensitivity}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrr}
+\toprule
+比较因素 & 设置
+& AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$
+& $\Delta_{\mathrm{Full}}$ & Epochs \\
+\midrule
+默认配置 & Full
+& 87.74 & 32.74 & 42.69 & $0.00$ & 150 \\
+\midrule
+插入位置 & P2
+& 82.90 & 29.49 & 38.82 & $-3.87$ & 105 \\
+插入位置 & P4
+& 85.83 & 35.88 & 43.15 & $+0.46$ & 150 \\
+\midrule
+状态维数 & $d_s=8$
+& 87.49 & 33.64 & 42.33 & $-0.36$ & 150 \\
+状态维数 & $d_s=32$
+& 68.19 & 6.66 & 22.23 & $-20.46$ & 53 \\
+\midrule
+趋势核宽 & $k_t=5$
+& 84.77 & 36.74 & 42.35 & $-0.34$ & 150 \\
+趋势核宽 & $k_t=7$
+& 88.02 & 31.07 & 41.31 & $-1.38$ & 150 \\
+\midrule
+统计窗口 & $k_s=5$
+& 86.82 & 37.40 & 42.34 & $-0.35$ & 150 \\
+统计窗口 & $k_s=7$
+& 85.16 & 27.46 & 39.19 & $-3.49$ & 150 \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+每项变体仅改变表中指定的设计设置，
+其余采用对应 Full 配置。
+位置变化同时涉及特征分辨率和通道数；
+状态维数或卷积核形状变化也会改变参数张量形状，
+相同随机种子不保证初始化完全配对。
+Epochs 为实际观察训练轮数，
+不是最佳检查点轮数；
+各行共享最大训练预算和早停规则。
+\end{minipage}
+\end{table*}
+
+\textbf{插入位置。}
+P2、P3 和 P4 的 $\mathrm{AP}_{50:95}$
+分别为 $38.82\%$、$42.69\%$ 和 $43.15\%$。
+P4 比默认 P3 高 $0.46$ 个百分点，
+但其 $\mathrm{AP}_{50}$ 低于 P3；
+P2 的三个 AP 指标均较低，
+且实际训练在 105 轮结束。
+因此，P3 是本文统一采用的默认实现位置，
+不能表述为已经验证的最优位置。
+位置变化还涉及空间分辨率、通道数、
+参数形状及初始化差异，
+当前结果不足以将性能差异
+完全归因于某一特征尺度的结构信息。
+
+\textbf{状态维数。}
+$d_s=8$ 的 $\mathrm{AP}_{50:95}$ 为 $42.33\%$，
+比默认 $d_s=16$ 低 $0.36$ 个百分点，
+两者在该种子下较为接近。
+$d_s=32$ 则下降到 $22.23\%$，
+其 $\mathrm{AP}_{50}$ 和 $\mathrm{AP}_{75}$
+也明显下降。
+该配置实际仅训练 53 轮，
+因此结果反映的是当前训练方案和早停条件下的表现，
+不能据此断言更大状态维数本身必然导致退化。
+本文保留该负结果，
+并将默认维数视为当前实现选择，
+而非跨任务普遍最优的状态规模。
+
+\textbf{趋势卷积核宽与二维统计窗口。}
+将趋势卷积核宽由 3 增大到 5 和 7 时，
+$\mathrm{AP}_{50:95}$ 分别为
+$42.35\%$ 和 $41.31\%$，
+均低于默认配置。
+其中核宽 7 的 $\mathrm{AP}_{50}$ 为 $88.02\%$，
+高于默认配置，
+但 $\mathrm{AP}_{75}$ 和 $\mathrm{AP}_{50:95}$
+未获得改善。
+因此，仅依据宽松 IoU 指标
+不能判断扩大趋势邻域的收益。
+
+将二维统计窗口增大到
+$5\times5$ 和 $7\times7$ 时，
+$\mathrm{AP}_{50:95}$ 分别为
+$42.34\%$ 和 $39.19\%$。
+当前结果未显示扩大统计邻域能够持续提高性能。
+趋势卷积核宽作用于扫描序列上的趋势估计，
+二维窗口作用于图像邻域的标准差计算，
+两者改变的计算环节不同，
+不能合并解释为同一种局部感受野实验。
+默认的核宽 3 和 $3\times3$ 统计窗口
+在本组比较中取得较高的主要指标，
+但仍需多种子和其他数据集验证其稳定性。
+
+\textbf{性能与计算开销的取舍。}
+插入位置改变替换块处理的特征分辨率和通道数，
+状态维数改变递推状态的规模，
+局部窗口则改变趋势或统计计算所使用的邻域。
+这些设置同时影响性能与计算需求，
+不能仅依据单种子 AP 排序确定最终设计。
+其中 $d_s=8$ 与默认配置的主要指标较为接近，
+可作为进一步评估开销的候选；
+P4 的单次主要指标略高，
+也需要结合完整网络的参数量、计算量和实测速度判断。
+由于本组位置、维数与窗口变体
+尚未全部完成统一条件下的效率测量，
+本文不对它们给出未经测量的速度排序或最优效率结论；
+复杂度与效率在后续小节按对应测量条件报告。
+
+\FloatBarrier
+\subsection{复杂度与效率分析}
+\label{sec:efficiency}
+
+为考察 RGSP 的计算开销，
+表~\ref{tab:rgsp_complexity_efficiency}
+汇总 SSDD 历史五配置的参数量、
+报告计算量、批内推理耗时与检测性能。
+这些记录用于分析历史配置的性能与开销取舍，
+不与前节清理后协议的单种子结果合并比较。
+
+\begin{table*}[!t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{SSDD 历史五配置的复杂度、批内推理耗时与检测性能。
+检测性能为旧 $742/186/232$ 划分下的
+三种子均值$\pm$样本标准差（\%）。}
+\label{tab:rgsp_complexity_efficiency}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrr}
+\toprule
+配置 & 参数量 & 报告 GFLOPs
+& 推理耗时（ms/image） & AP$_{50:95}$ \\
+\midrule
+Original
+& 5,985,547 & 13.61 & 6.6038
+& $42.03\pm3.47$ \\
+LocalEnergy
+& 5,918,104 & 13.12 & 5.9842
+& $43.98\pm1.44$ \\
+Legacy-PFIM
+& 5,920,441 & 13.15 & 6.0802
+& $43.12\pm1.70$ \\
+Full (RGSP)
+& 5,920,441 & 13.15 & 6.0685
+& $42.91\pm1.13$ \\
+Global
+& 5,920,441 & 13.15 & 6.0987
+& $43.77\pm1.65$ \\
+\bottomrule
+\end{tabular*}
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+各项统计以完整检测网络为对象，
+输入为 $640\times640$，
+硬件为 RTX A6000，
+采用 FP32 和评估 batch size 16。
+参数量及报告 GFLOPs 来自 seed 0；
+计算量使用 THOP 统计，
+自定义选择性扫描算子的计数覆盖尚待核验。
+推理耗时为三个种子评估记录的均值，
+表示批内平均每图模型推理时间，
+不含预处理和 NMS，
+不等同于 batch size 1 延迟，
+其倒数亦不作为端到端 FPS。
+Legacy-PFIM 的关闭系数存在漂移，
+不作为严格的仅引导控制。
+\end{minipage}
+\end{table*}
+
+Full 的参数量为 5,920,441，
+相对采用相同替换块结构的 LocalEnergy
+增加 2,337，约为 $0.04\%$，
+报告计算量由 13.12 GFLOPs 增至 13.15 GFLOPs，
+表明结构引导分支引入的参数增量较小。
+相对 Original，
+Full 的参数量减少约 $1.09\%$，
+报告计算量也有所降低；
+但这一变化同时涉及扫描方向、
+前馈扩展比例及块结构调整，
+不能全部归因于结构引导本身。
+
+在已有批内评估记录中，
+Full 的平均每图推理耗时为 6.0685 ms，
+低于 Original 的 6.6038 ms，
+但高于 LocalEnergy 的 5.9842 ms。
+同时，LocalEnergy 的历史
+$\mathrm{AP}_{50:95}$ 均值为 $43.98\%$，
+高于 Full 的 $42.91\%$。
+因此，这组记录未显示完整组合
+具有更优的性能与开销取舍。
+考虑到现有计时尚缺统一预热与独立重复测量，
+上述差异仅作为给定条件下的观察，
+不据此确立稳定的速度排序或端到端加速结论。
+本节结果亦不代表新增控制变体、
+分类及变化检测网络已经完成统一效率评估。
+
+\FloatBarrier
+\section{结论}
+\label{sec:conclusion}
+
+本文提出面向 SAR 图像的可靠性引导选择性状态传播方法 RGSP，
+将显式局部结构描述引入扫描前特征调整与选择性状态更新。
+其中，局部响应修正模块 LRC
+利用局部趋势及响应偏差调整待扫描特征，
+并通过趋势能量参与扫描输入调制；
+局部结构引导模块 LSGM
+融合局部趋势与二维邻域变化，
+生成位置相关的结构条件，
+进一步参与扫描输入和离散化步长的构造。
+通过上述设计，
+RGSP 在内容依赖的选择机制基础上，
+将局部特征修正与递推条件化联系起来，
+为 SAR 局部结构与长距离依赖的联合建模
+提供了一种具体的实现方式。
+
+目标检测、图像分类和变化检测实验表明，
+RGSP 的表现具有任务与配置依赖性，
+完整组合未呈现一致的性能优势。
+结构匹配与路径消融进一步显示，
+局部响应修正、能量调制及两条引导路径的作用
+并非简单叠加，
+增加局部描述量或同时启用多条路径
+也不必然获得更好的结果。
+在新增单种子变化检测比较中，
+RGSP 相对 Original 在 Ottawa、Farmland 和 Yellow River 上的 F1 均有所提高，
+但改善形式不同，
+其中 Yellow River 表现为误检减少与漏检增加。
+相对 Matched075 的 F1 增量则依次为
+$0.42$、$1.03$ 和 $12.08$ 个百分点；
+Farmland 上匹配控制已接近完整配置。
+分类结果同样并非一致获益：
+SAR-ACD 上完整配置低于 Original，
+SAMPLE 上则低于 Matched075。
+这些发现说明，
+局部结构条件化需要结合具体任务的特征需求、
+组件组合及评价指标进行设计与判断。
+后续将通过更充分的多种子配对实验与结构引导诊断，
+进一步研究各计算路径之间的关系，
+并优化其性能与计算开销的取舍。
+
+\FloatBarrier
+\appendices
+\section{历史备选图}
+\label{app:original_alternatives}
+正文采用四幅图；本附录另保留底稿中的三幅历史备选图，
+仅供工作稿选图和版本对照，不替换正文图件，
+也不作为新增实验或现行机制证据。
+历史图中的旧名称、结构及表述以正文为准。
+
+% BEGIN ORIGINAL ALTERNATIVE fig1_motivation
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.98\linewidth,height=0.67\textheight,keepaspectratio]{figures/fig1_motivation.pdf}
+\caption{原包备选图：早期动机图。历史资产保留，不代表新增实验或现行机制验证。}
+\label{fig:original-alternative-motivation}
+\end{figure}
+\clearpage
+% END ORIGINAL ALTERNATIVE fig1_motivation
+
+% BEGIN ORIGINAL ALTERNATIVE fig1_motivation_20261008
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.98\linewidth,height=0.67\textheight,keepaspectratio]{figures/fig1_motivation_20261008.pdf}
+\caption{原包备选图：2026 年 10 月 8 日动机图版本。保留原文件供比较，不替换正文采用的版本。}
+\label{fig:original-alternative-motivation-20261008}
+\end{figure}
+\clearpage
+% END ORIGINAL ALTERNATIVE fig1_motivation_20261008
+
+% BEGIN ORIGINAL ALTERNATIVE fig2_method
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.98\linewidth,height=0.67\textheight,keepaspectratio]{figures/fig2_method.pdf}
+\caption{原包备选图：早期方法图。旧术语、结构及协议仅作历史材料，现行方法以正文和当前架构图为准。}
+\label{fig:original-alternative-method}
+\end{figure}
+\clearpage
+% END ORIGINAL ALTERNATIVE fig2_method
+
+% Bibliography follows all sections and appendices; single source file.
+
+\begin{thebibliography}{99}
+\interlinepenalty=10000
+\bibitem{resnet2015}
+K. He, X. Zhang, S. Ren, and J. Sun, ``Deep Residual Learning for Image Recognition,'' in \emph{Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)}, 2016, pp. 770--778. arXiv:1512.03385, 2015.
+
+\bibitem{vit2020}
+A. Dosovitskiy et al., ``An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale,'' in \emph{Proc. Int. Conf. Learning Representations (ICLR)}, 2021. arXiv:2010.11929, 2020.
+
+\bibitem{mamba2023}
+A. Gu and T. Dao, ``Mamba: Linear-Time Sequence Modeling with Selective State Spaces,'' arXiv:2312.00752, 2023. \url{https://arxiv.org/abs/2312.00752}.
+
+\bibitem{vim2024}
+L. Zhu et al., ``Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model,'' arXiv:2401.09417, 2024. \url{https://arxiv.org/abs/2401.09417}.
+
+\bibitem{vmamba2024}
+Y. Liu, Y. Tian, Y. Zhao, H. Yu, L. Xie, Y. Wang, Q. Ye, and Y. Liu, ``VMamba: Visual State Space Model,'' in \emph{Advances in Neural Information Processing Systems (NeurIPS)}, 2024. arXiv:2401.10166.
+
+\bibitem{mambayolo2024}
+Z. Wang, C. Li, H. Xu, X. Zhu, and H. Li,
+``Mamba YOLO: A Simple Baseline for Object Detection with State Space Model,''
+in \emph{Proc. AAAI Conf. Artif. Intell.},
+vol. 39, no. 8, 2025, pp. 8205--8213. doi:10.1609/aaai.v39i8.32885.
+
+\bibitem{rsmamba2024}
+Y. Zhao et al., ``RS-Mamba for Large Remote Sensing Image Dense Prediction,'' \emph{IEEE Transactions on Geoscience and Remote Sensing}, 2024. doi:10.1109/TGRS.2024.3425540.
+
+\bibitem{rstmtmamba2025}
+Y. Shen et al., ``Learning Cross-Task Features With Mamba for Remote Sensing Image Multitask Prediction,'' \emph{IEEE Transactions on Geoscience and Remote Sensing}, 2025. doi:10.1109/TGRS.2025.3540573.
+
+\bibitem{madinet2025}
+J. Zhou, Y. Liu, B. Peng, L. Liu, and X. Li,
+``MaDiNet: Mamba Diffusion Network for SAR Target Detection,''
+\emph{IEEE Transactions on Circuits and Systems for Video Technology},
+vol. 35, no. 11, pp. 10787--10800, 2025. doi:10.1109/TCSVT.2025.3574657.
+
+\bibitem{mambadip}
+Chinchu A. et al., ``MambaDIP: Mamba-Based Deep Image Prior Framework for Despeckling and Enhancement of SAR Images,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 19, pp. 21255--21271, 2026. doi:10.1109/JSTARS.2026.3702550.
+
+\bibitem{rssnet}
+M. Huang, Y. Yang, and Q. Sun, ``RSS-Net: A Mamba-Based Network for SAR Image Denoizing,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 19, pp. 3539--3551, 2026. doi:10.1109/JSTARS.2025.3647971.
+
+\bibitem{specklefree}
+S.-W. Chen, X.-C. Cui, X.-S. Wang, and S.-P. Xiao, ``Speckle-Free SAR Image Ship Detection,'' \emph{IEEE Transactions on Image Processing}, vol. 30, pp. 5969--5983, 2021. doi:10.1109/TIP.2021.3089936.
+
+\bibitem{sarnano}
+Y. Zhang et al., ``SAR-NanoShipNet: A Scale-Adaptive Network for Robust Small Ship Detection in SAR Imagery,'' \emph{ISPRS Journal of Photogrammetry and Remote Sensing}, vol. 232, pp. 262--279, 2026. doi:10.1016/j.isprsjprs.2025.12.006.
+
+\bibitem{sfdnet}
+B. Wu et al., ``A Novel Star Feature Decoupling Network for Multiscale SAR Image Ship Detection,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 19, pp. 18294--18305, 2026. doi:10.1109/JSTARS.2026.3688771.
+
+\bibitem{fusar}
+X. Shi et al., ``Object-Level Semantic Segmentation on the High-Resolution Gaofen-3 FUSAR-Map Dataset,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, 2021. doi:10.1109/JSTARS.2021.3063797.
+
+\bibitem{spatialmamba2025}
+C. Xiao, M. Li, Z. Zhang, D. Meng, and L. Zhang, Spatial-Mamba: Effective Visual State Space Models via Structure-Aware State Fusion, in \emph{Proc. Int. Conf. Learning Representations (ICLR)}, 2025. arXiv:2410.15091.
+
+\bibitem{damamba2025}
+T. Li, C. Li, J. Lyu, H. Pei, B. Zhang, T. Jin, and R. Ji, DAMamba: Vision State Space Model with Dynamic Adaptive Scan, in \emph{Advances in Neural Information Processing Systems (NeurIPS)}, vol. 38, 2025. doi:10.52202/085713-1326.
+
+\bibitem{mcmn}
+G. Gao, C. Li, X. Zhang, B. Yao, and Z. Chen, ``Mamba-CNN hybrid Multi-scale ship detection Network driven by a Dual-perception feature of Doppler and Scattering,'' \emph{ISPRS Journal of Photogrammetry and Remote Sensing}, vol. 232, pp. 656--674, 2026. doi:10.1016/j.isprsjprs.2026.01.004.
+
+\bibitem{sardataset}
+Y. Wang et al., ``A SAR Dataset of Ship Detection for Deep Learning under Complex Backgrounds,'' \emph{Remote Sensing}, vol. 11, no. 7, art. 765, 2019. doi:10.3390/rs11070765.
+
+\bibitem{ssdd2017}
+J. Li, C. Qu, and J. Shao, ``Ship Detection in SAR Images Based on an Improved Faster R-CNN,'' in \emph{Proc. SAR in Big Data Era}, 2017.
+
+\bibitem{ssdd2021}
+T. Zhang et al., ``SAR Ship Detection Dataset (SSDD): Official Release and Comprehensive Data Analysis,'' \emph{Remote Sensing}, vol. 13, no. 18, art. 3690, 2021. doi:10.3390/rs13183690.
+
+\bibitem{saraircraft}
+Z. Wang et al., ``SAR-AIRcraft-1.0: High-Resolution SAR Aircraft Detection and Recognition Dataset,'' \emph{Journal of Radars}, vol. 12, no. 4, pp. 906--922, 2023. doi:10.12000/JR23043.
+
+\bibitem{yolov82023}
+G. Jocher, A. Chaurasia, and J. Qiu,
+``Ultralytics YOLOv8,'' computer software, 2023.
+[Online]. Available: \url{https://github.com/ultralytics/ultralytics}.
+
+\bibitem{sardetmim2026}
+P. Zhou, B. Niu, L. Huang, Q. Wang, Y. Zhao, G. Zhou, and Y. Hu, ``SARDet-MIM: Enhancing SAR Target Detection via a Structural and Scattering Masked Autoencoder,'' \emph{Remote Sensing}, vol. 18, no. 4, art. 580, 2026. doi:10.3390/rs18040580.
+
+\bibitem{vitdet2022}
+Y. Li, H. Mao, R. Girshick, and K. He,
+``Exploring Plain Vision Transformer Backbones for Object Detection,''
+in \emph{Proc. Eur. Conf. Comput. Vis. (ECCV)},
+2022, pp. 280--296. \url{https://doi.org/10.1007/978-3-031-20077-9_17}.
+
+\bibitem{feps2023}
+L. Bai, C. Yao, Z. Ye, D. Xue, X. Lin, and M. Hui,
+``Feature Enhancement Pyramid and Shallow Feature Reconstruction Network for SAR Ship Detection,''
+\emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
+vol. 16, pp. 1042--1056, 2023. doi:10.1109/JSTARS.2022.3230859.
+
+\bibitem{fgbg2025}
+W. Ma, X. Yang, H. Zhu, X. Wang, B. Hou, M. Ma, and Y. Wu,
+``Dense-Weak Ship Detection Based on Foreground-Guided Background Generation Network in SAR Images,''
+\emph{IEEE Transactions on Geoscience and Remote Sensing},
+vol. 63, pp. 1--16, 2025. doi:10.1109/TGRS.2025.3572095.
+
+\bibitem{pegnet2025}
+X. Tang, J. Zhang, Y. Xia, K. Cao, and C. Zhang,
+``PEGNet: An Enhanced Ship Detection Model for Dense Scenes and Multiscale Targets,''
+\emph{IEEE Geoscience and Remote Sensing Letters},
+vol. 22, pp. 1--5, 2025. doi:10.1109/LGRS.2025.3528221.
+
+\bibitem{vitdet4sar2025}
+X. Pu and F. Xu,
+``Enhancing SAR Object Detection with Self-Supervised Pre-Training on Masked Auto-Encoders,''
+in \emph{Proc. IEEE Int. Geosci. Remote Sens. Symp. (IGARSS)},
+2025, pp. 6204--6207. doi:10.1109/IGARSS55030.2025.11243361.
+
+\bibitem{saratrx2025}
+W. Li, W. Yang, Y. Hou, L. Liu, Y. Liu, and X. Li,
+``SARATR-X: Toward Building a Foundation Model for SAR Target Recognition,''
+\emph{IEEE Transactions on Image Processing},
+vol. 34, pp. 869--884, 2025. doi:10.1109/TIP.2025.3531988.
+
+\bibitem{summit2025}
+Y. Du, Y. Chen, L. Huang, Y. Yang, P. Ghamisi, and Q. Du, ``SUMMIT: A SAR Foundation Model With Multiple Auxiliary Tasks Enhanced Intrinsic Characteristics,'' \emph{International Journal of Applied Earth Observation and Geoinformation}, vol. 141, art. 104624, 2025. doi:10.1016/j.jag.2025.104624.
+
+\bibitem{yolosad2024}
+J. Chen, Y. Shen, Y. Liang, Z. Wang, and Q. Zhang, ``YOLO-SAD: An Efficient SAR Aircraft Detection Network,'' \emph{Applied Sciences}, vol. 14, no. 7, art. 3025, 2024. doi:10.3390/app14073025.
+
+\bibitem{yolov42020}
+A. Bochkovskiy, C.-Y. Wang, and H.-Y. M. Liao,
+``YOLOv4: Optimal Speed and Accuracy of Object Detection,''
+arXiv:2004.10934, 2020. \url{https://arxiv.org/abs/2004.10934}.
+
+\bibitem{yolov72023}
+C.-Y. Wang, A. Bochkovskiy, and H.-Y. M. Liao,
+``YOLOv7: Trainable Bag-of-Freebies Sets New State-of-the-Art for Real-Time Object Detectors,''
+in \emph{Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)},
+2023, pp. 7464--7475.
+
+\bibitem{madinet_preprint}
+J. Zhou, C. Xiao, B. Peng, T. Liu, Z. Liu, Y. Liu, and L. Liu,
+``MaDiNet: Mamba Diffusion Network for SAR Target Detection,''
+arXiv:2411.07500v1, 2024. \url{https://arxiv.org/abs/2411.07500v1}.
+
+\bibitem{improvedfcos2022}
+S. Yang, W. An, S. Li, G. Wei, and B. Zou,
+``An Improved FCOS Method for Ship Detection in SAR Images,''
+\emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
+vol. 15, pp. 8910--8927, 2022. doi:10.1109/JSTARS.2022.3213583.
+
+\bibitem{cmft2023}
+J. He, N. Su, C. Xu, Y. Liao, Y. Yan, C. Zhao, W. Hou, and S. Feng,
+``A Cross-Modality Feature Transfer Method for Target Detection in SAR Images,''
+\emph{IEEE Transactions on Geoscience and Remote Sensing},
+vol. 61, pp. 1--15, 2023. doi:10.1109/TGRS.2023.3300536.
+
+\bibitem{diffusiondet2023}
+S. Chen, P. Sun, Y. Song, and P. Luo,
+``DiffusionDet: Diffusion Model for Object Detection,''
+in \emph{Proc. IEEE/CVF Int. Conf. Comput. Vis. (ICCV)},
+2023, pp. 19830--19843.
+
+\bibitem{diffdet4sar2024}
+J. Zhou, C. Xiao, B. Peng, Z. Liu, L. Liu, Y. Liu, and X. Li,
+``DiffDet4SAR: Diffusion-Based Aircraft Target Detection Network for SAR Images,''
+\emph{IEEE Geoscience and Remote Sensing Letters},
+vol. 21, pp. 1--5, 2024. doi:10.1109/LGRS.2024.3386020.
+
+\bibitem{busip2025}
+C. Zhao, D. Wang, S. Zhang, and G. Kuang, ``Bottom-Up Scattering Information Perception Network for SAR Target Recognition,'' arXiv:2504.04780, 2025. \url{https://arxiv.org/abs/2504.04780}.
+
+\bibitem{mlda2025}
+W. Shu, R. Zhan, S. Chen, Y. Guo, and H. Zhang, ``Single-Domain Generalization via Multilevel Data Augmentation for SAR Target Recognition Training on Fully Simulated Data,'' \emph{Remote Sensing}, vol. 17, no. 17, art. 2966, 2025. doi:10.3390/rs17172966.
+
+\bibitem{sarcdnet2026}
+V. D. Kevala, V. Mukundan, S. Nedungatt, S. Suresh, and S. Lal, SARCDNet-an enhanced deep learning network for change detection from bi-temporal SAR images, \emph{Scientific Reports}, vol. 16, art. 1826, 2026 (online Dec. 31, 2025). doi:10.1038/s41598-025-31488-y.
+\end{thebibliography}
+\end{document}
+

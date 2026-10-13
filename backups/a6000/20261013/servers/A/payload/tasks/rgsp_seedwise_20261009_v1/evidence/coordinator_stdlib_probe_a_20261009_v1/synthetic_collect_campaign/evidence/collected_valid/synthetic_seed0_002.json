@@ -1,0 +1,38 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_origin/train_complete.json",
+      "sha256": "f114e6f28b82f857549b171ed591fb2203803e798d81c5b25009cb20b17ab01c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_origin/eval_test.json",
+      "sha256": "f2883081aac23dadcced7dfeda29310502fa868135429d17db43c82d71fc5d0b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_origin/evaluation_complete.json",
+      "sha256": "fee10970d29ffb67d684e08453d8d6b51db4b280ded6007e1c4af96b1cec3146"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_origin/best.json",
+      "sha256": "10d2792e028382d907d5cf50c04dc89788ce656c0fd6aa3a5412d2795d5cc0b3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_origin/protocol.json",
+      "sha256": "ca03dd1d436dcb1eba49aba957c41dbc47b1bf8615b118a5c02242d6c9e6ad9d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_collect_campaign/synthetic_origin/audit.json",
+      "sha256": "ae89bbfb295194d943c445ce70455094abfdab9cb08818f569b6f53f77f58cf0"
+    }
+  ],
+  "details": {
+    "synthetic_fixture_only": true
+  },
+  "finished_utc": "2026-10-09T00:00:00+00:00",
+  "plan_sha256": "266f8526b7c8589c21fc715f62df84a7eeb60f94255d1ef32fa6a64d60ceed34",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "synthetic_seed0_002",
+  "trial_sha256": "8238fdec308c00f89882108f7edc8696c20e62a90e6f0e6497130cbb5664dc98"
+}

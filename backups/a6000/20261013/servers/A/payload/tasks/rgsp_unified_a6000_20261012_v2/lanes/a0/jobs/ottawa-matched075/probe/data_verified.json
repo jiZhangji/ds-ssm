@@ -1,0 +1,16 @@
+{
+  "audit_sha256": "8f189848a27a86ae25ea66b251c177d1e54dcad80532d57049710c77912564c8",
+  "counts": {
+    "test": 32,
+    "train": 112,
+    "val": 24
+  },
+  "dataset": "Ottawa",
+  "files_sha256": "a1d404e96e06bfbb53b4954221d92aa907e11ba3025aa748f71790dd7596166a",
+  "logical_manifest_sha256": "8b6eddc38f368c0a05e277fcf148a1550b3826fe935cbd2055e74669844998c2",
+  "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/manifest.json",
+  "manifest_sha256": "7cb16010d08fbfbfe12f22ce6a0045bb10bebbfe50488f1543687c43cbdfc2a5",
+  "native_cross_split_pixel_intersections": 0,
+  "preserved_record_identity_sha256": "1b258aa7409a9831f5e3eba412339d4841039de85210ff0676028c2e47401a37",
+  "unique_files_rehashed_and_redecoded": 3
+}

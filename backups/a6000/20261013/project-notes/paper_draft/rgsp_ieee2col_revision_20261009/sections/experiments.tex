@@ -1,0 +1,131 @@
+\section{实验}\label{sec:experiments}
+本文区分三类证据：固定协议下已完成的配置比较、存在归因限制的历史实验，以及尚未完成验收的控制实验。正文集中报告前两类中可解释的观察；完整历史结果与跨协议文献记录保留在独立补充材料中，不将其合并为统一排行榜。
+
+\subsection{实验设置}\label{sec:experimental_settings}
+\subsubsection{数据集与协议边界}
+SSDD 采用当前副本的官方 928 张训练图像与 232 张测试图像作为来源\cite{ssdd2017,ssdd2021}。历史 15-run 使用 742/186/232 的训练/验证/测试划分，三个种子分别生成开发集划分，同一种子内各变体配对。后续内容审计发现，当前 1160 张图像仅含 1135 个不同字节内容，10 个重复组跨官方训练与测试集合，涉及 12 张训练副本及 10 张测试图。新控制轨道保留全部 232 张官方测试图，从开发集合排除这 12 张副本后，按内容组构建 730/186 的训练/验证划分。两条轨道分开报告；此审计不等于已经排除近重复或证明场景独立性。
+
+SADD 使用本地恢复的单类阳性子集，固定划分为 795/44/44 张图像，三个训练种子共享同一划分。该子集共 883 张有目标图像，不包含原始副本中的 2083 张空标注图像；它不是七类 SAR-AIRcraft1.0，也不是已经证明场景独立的官方评估协议。测试集仅 44 张，限制了对背景误检、场景泛化和稳定性的推断。
+
+跨任务部分保留 SAR-ACD、SAMPLE、Ottawa、Yellow River 和 OpenEarthMap-SAR 的既有配对记录。它们采用各自的任务头、初始化和训练设置，仅用于诊断。历史 SAR-ShipDataset 与 AIR-SARShip-2.0 结果移至补充材料；Farmland、Sulzberger 和 FUSAR-Map 不属于本版结果正文的覆盖范围，旧档案保持不变。SAR-ShipDataset 与 SAR-AIRcraft1.0 的公平多种子验证仍待完成，不能由 SADD 实验替代。
+
+\subsubsection{实现与选模}
+检测采用 Mamba-YOLO-T，RGSP 替换 P3/8 阶段实际执行的一个状态空间块，状态维数为 16，其余阶段、颈部和检测头保持配置一致。局部趋势卷积为核宽 3 的逐通道卷积，以均值核初始化；二维标准差使用有效的 $3\times3$ 邻域，$\epsilon=10^{-5}$。LSGM 隐藏宽度为 $\max(\lfloor C/4\rfloor,16)$，末层零初始化，使初始 $I=0.5$。Full 中 $\lambda_s,\alpha,\beta,\rho,\eta$ 分别初始化为 $0.5,0.5,1,1,0.1$，$s_n=0.1$、$g_{\min}=0.5$；块级通道缩放初始化为 $10^{-2}$。控制配置的关闭分支另行定义，不能套用 Full 初始化解释。
+
+SSDD 与 SADD 均从头训练，输入 $640\times640$，batch size 16，名义 batch size 64，AdamW 初始学习率 $2\times10^{-4}$、最终比例 0.01、权重衰减 $5\times10^{-4}$，采用线性学习率衰减。SSDD 最多 150 轮、早停 patience 30；SADD 最多 200 轮、patience 40。优化器预热 3 轮，无额外模块预热。增强包括 Mosaic 概率 0.3（末 15 轮关闭）、旋转 $\pm180^\circ$、平移 0.1、缩放 0.3、水平/垂直翻转各 0.5，以及 HSV $(0,0,0.1)$。训练采用 FP32 和确定性设置，选择性扫描使用 FP32 CUDA 算子。
+
+运行环境为 RTX A6000、Python 3.10.16、PyTorch 1.13.1+cu117 和 Ultralytics 8.2.29。模型由验证集组合指标选取：
+\begin{equation}
+f_{\mathrm{val}}=0.1\,\mathrm{AP}_{50}+0.9\,\mathrm{AP}_{50:95}.
+\end{equation}
+训练验证的 NMS IoU 为 0.7；最终独立测试使用置信度下限 0.001、NMS IoU 0.6、batch 16、FP32。测试评估不用于删除不利配置或随机种子。新控制轨道统一重置构建探针造成的 BatchNorm 统计，并记录共同张量初始化、数据和代码哈希。
+
+部分训练经历服务器重启。SADD 的 Original 从带 EMA/FP16 优化器状态的检查点恢复，不能宣称与无中断训练逐位等价；seed0/1 恢复前仍有历史控制审计缺口。逐 run 指标、权重哈希、恢复核验摘要及完成记录的来源索引随包提供，限制不因最终成功评估而消失。
+
+\subsubsection{指标与统计}
+检测主要指标为 $\mathrm{AP}_{50:95}$，并报告 $\mathrm{AP}_{50}$ 与 $\mathrm{AP}_{75}$。Precision/Recall 使用评估器的最优 F1 工作点，不同模型的阈值可能不同，故不直接作为固定阈值误检比较。分类采用 Accuracy 与 Macro-F1，变化检测采用 F1/IoU，分割以 mIoU 为主。三种子结果报告均值与样本标准差，并计算同种子配对差。SSDD 跨种子波动包含划分和训练随机性；SADD 划分固定，二者不混作同一种统计口径。三种子描述不构成显著性证明。
+
+\subsection{SADD：固定阳性子集的三种子比较}
+表~\ref{tab:sadd_current} 给出 Original、Matched075、LocalEnergy 和 Full 四组的全部三种子汇总。Matched075 是与 RGSP 相同替换结构、扫描输入固定倍率为 0.75 的控制；LocalEnergy 开启残差修正与趋势能量调制但关闭结构引导；Full 增加两条结构引导路径。
+
+\begin{table}[!t]
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\caption{SADD 固定阳性子集结果（均值$\pm$样本标准差，\%）。同一固定 795/44/44 划分，全部三个种子。}
+\label{tab:sadd_current}
+\begin{tabular}{lrrr}
+\toprule
+Configuration & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$\\
+\midrule
+Original & $97.32\pm0.91$ & $52.82\pm4.44$ & $53.35\pm0.88$ \\
+Matched075 & $97.37\pm1.26$ & $50.67\pm1.01$ & $52.18\pm0.88$ \\
+LocalEnergy & $97.57\pm0.91$ & $48.75\pm1.77$ & $52.37\pm0.43$ \\
+Full & $97.73\pm0.55$ & $49.11\pm5.49$ & $51.98\pm2.59$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Full 的 AP$_{50:95}$ 相对 Original 的三个配对差分别为 $-4.7087$、$-0.7816$ 和 $+1.3881$ 个百分点，平均 $-1.3674$ 个百分点，仅一个种子为正。虽然 Full 的 AP$_{50}$ 均值略高，但严格定位指标 AP$_{75}$ 和 AP$_{50:95}$ 的均值均低于 Original，不能概括为整体性能提升。
+
+LocalEnergy 相对 Matched075 的 AP$_{50:95}$ 平均差为 $+0.1903$ 个百分点；Full 相对 LocalEnergy 为 $-0.3883$ 个百分点。前者反映当前替换结构中残差与能量组合的比较，后者反映加入结构引导路径后的差异，不是完整四格交互估计。结果显示收益方向存在种子和指标依赖；阳性筛选、小测试集及恢复限制也须与结论一并理解。
+\FloatBarrier
+
+\subsection{SSDD：历史观察与归因纠正}
+历史 15-run 数值保留于表~\ref{tab:ssdd_legacy}。其中 LocalEnergy 对应旧 DS-only 标签，包含残差修正及趋势能量调制，不能称为纯 LRC 消融；Legacy-PFIM 对应旧 PFIM-only 标签。对三个旧 best 检查点的审计确认，其 $\lambda_s$ 与 $\alpha$ 均非零，原训练器重新启用了拟冻结参数。因此，Legacy-PFIM 不是严格的仅 LSGM 控制，本文撤回其“独立组件收益”的解释。
+
+\begin{table}[!t]
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\caption{SSDD 历史 742/186/232 轨道（\%）。数值保留，标签已纠正；不是新 730/186/232 控制结果。}
+\label{tab:ssdd_legacy}
+\begin{tabular}{lrrr}
+\toprule
+Configuration & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$\\
+\midrule
+Original & $86.52\pm2.56$ & $34.05\pm5.25$ & $42.03\pm3.47$\\
+LocalEnergy & $86.70\pm1.01$ & $37.58\pm3.78$ & $43.98\pm1.44$\\
+Legacy-PFIM & $88.23\pm1.61$ & $34.83\pm3.94$ & $43.12\pm1.70$\\
+Full & $87.97\pm0.11$ & $34.10\pm3.12$ & $42.91\pm1.13$\\
+Global & $86.41\pm0.66$ & $36.87\pm3.89$ & $43.77\pm1.65$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+该历史轨道中，Full 相对 Original 的配对差为 $-0.35$、$+5.93$、$-2.94$ 个百分点，均值为 $+0.88$；不得删除 seed2 或将其视为已证实的异常值。LocalEnergy 的均值比 Full 高 $1.07$ 个百分点，这一边际差不等于严格因素交互。Original 采用四向 SS2D，而替换块采用单向扫描，前馈扩展比例也由 4 改为 2，因此系统替换差异不能全部归因于结构引导。
+
+Global 将 LSGM 逐位置输出取空间均值后广播：
+\begin{equation}
+I^{\mathrm{global}}=\frac{1}{N}\sum_{t=1}^{N}I_t.
+\end{equation}
+这只消除引导信号的位置差异，内容、趋势能量与基础步长仍随位置变化。历史 Global 的 AP$_{50:95}$ 均值高于 Full $0.86$ 个百分点，未显示逐位置引导优势；这一观察仍属于历史协议，不能扩大为普遍结论。
+\FloatBarrier
+
+\subsection{结构匹配控制与待完成验证}
+为分离结构替换、常数缩放和学习调制的影响，新 SSDD 轨道在同一替换块中设置 12 种配置：Original、MatchedIdentity、Matched075、Residual075、EnergyOnly、LocalEnergy、LocalEnergy+Input、LocalEnergy+Delta、Full、FixedHalf、GuidanceOnly 和 Global。全部配置矩阵、初始化及关闭条件见补充材料。关闭参数存为不参与优化的 buffer，并在训练和重载时核验；不再仅依赖构造时的 \texttt{requires\_grad=False}。
+
+当 $g_{\min}=0.5$ 且关闭能量与引导项时，$\gamma=0.75$，而非 1，所以 Matched075 与真正中性的 MatchedIdentity 都有必要。FixedHalf 固定 $I=0.5$ 时仍保留步长 logits 的 $\eta I=0.05$ 偏置，不能视为完全关闭引导。
+
+严格交互需在共同结构和缩放背景下按种子计算，例如：
+\begin{equation}
+\begin{aligned}
+\mathcal{J}_{R,E}
+&=M_{\mathrm{LocalEnergy}}-M_{\mathrm{Residual075}}\\
+&\quad-M_{\mathrm{EnergyOnly}}+M_{\mathrm{Matched075}},\\
+\mathcal{J}_{U,\Delta}
+&=M_{\mathrm{Full}}-M_{\mathrm{LocalEnergy+Input}}\\
+&\quad-M_{\mathrm{LocalEnergy+Delta}}+M_{\mathrm{LocalEnergy}}.
+\end{aligned}
+\end{equation}
+其中 $M$ 为同种子、同协议下的指定指标。这是统计上的非加性比较，不直接证明某种物理机制。截至本版所依据的 2026 年 10 月 9 日回收记录，完整 36-run 尚未验收，因此本节只给出协议，不填写预期结果或据此宣称机制有效。
+
+\subsection{跨任务诊断与适用边界}
+表~\ref{tab:cross_task_summary} 汇总已有配对记录中的代表性正负结果；补充材料保留所有已列批次和各指标。不同初始化、模块预热和批量设置分别解释，不合并为“通用提升”。
+
+\begin{table*}[!t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\caption{历史跨任务诊断（\%）。各行为单种子记录，不同数据集和配置不可横向排名。}
+\label{tab:cross_task_summary}
+\begin{tabularx}{\linewidth}{@{}llrrX@{}}
+\toprule
+Dataset / setting & Metric & Baseline & RGSP & 解释边界\\
+\midrule
+SAR-ACD & Accuracy & 89.764 & 96.850 & RGSP 额外模块预热 50 轮，差异含训练策略效应\\
+SAMPLE & Accuracy & 98.519 & 97.037 & 当前 real-only 闭集划分，非 synthetic-to-measured 协议\\
+Ottawa, B: BS16 & F1 & 92.091 & 92.249 & F1 略升，Precision 由 90.259 降至 88.777\\
+Yellow River, B: BS32 & F1 & 86.273 & 83.554 & Precision 与 Recall 均下降\\
+OpenEarthMap-SAR, A & mIoU & 36.401 & 36.532 & mIoU 略升，但 FWIoU 与 OA 下降\\
+OpenEarthMap-SAR, B & mIoU & 36.551 & 35.898 & 有效批量 64；mIoU、FWIoU 与 OA 均下降\\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+Yellow River 的 BS16、BS32、BS64 和 BS96 重跑中，F1 均下降。Precision 仅在 BS16、BS96 上升；BS32 为 $91.293\%\to90.000\%$，BS64 为 $91.834\%\to91.671\%$，同样下降。所有这些配置的 Recall 均降低，不能将退化统一解释为“提高精度、牺牲召回”。
+
+SAR-ACD 的正差不能剥离额外预热日程的影响；SAMPLE 和密集预测结果则显示，引入局部结构条件并不自动带来泛化收益。当前没有通过同协议诊断将退化归因于弱目标抑制、扫描方向或某类结构偏好，这些解释仍是需要实验检验的假设。
+
+\subsection{尚缺的证据}
+当前未纳入经过核验的预测可视化，因此不保留空的“定性比较”章节，也不将示意图或性能柱状图代替预测证据。后续应在相同阈值和后处理设置下展示改善与退化案例；引导图只能标为学习到的结构信号，不能未经诊断称为可靠性图。
+
+相同硬件、精度、输入和 batch 下的统一效率比较，以及 SAR-ShipDataset/SAR-AIRcraft1.0 的公平多种子验证仍未齐备。历史复杂度测量和外部文献数值在补充材料中保留来源及范围，不用于证明严格同规模优势。本文现阶段的结论限于上述已完成配置观察和可复现的计算机制。
+

@@ -1,0 +1,276 @@
+{
+  "revision": "rgsp_cn_revision_20261005",
+  "recorded_at": "2026-10-05T11:50:32.4878073+08:00",
+  "input_zip_sha256": "833E6050D6D769B42CB8EB5E5B9424818E65E06FF749EA4EB2D19A58E732199A",
+  "original_preservation_checks": [
+    {
+      "input_entry": "README.md",
+      "preserved_as": "source_archive/README_input.md",
+      "sha256": "2452E2EDF0F61C3E8C720F4D0CC9539239E44E82EBF5A18CDBD74A4A5AA9FA78"
+    },
+    {
+      "input_entry": "supplementary/results_individual.csv",
+      "preserved_as": "supplementary/results_individual.csv",
+      "sha256": "4632E57FDC9FF5E1A3ABB771471D05BEF82504D4E0C6E5A183E64C5735975036"
+    },
+    {
+      "input_entry": "supplementary/results.csv",
+      "preserved_as": "supplementary/results.csv",
+      "sha256": "64D4B908455DBA4B5FE3F17279CD11C032E10B5586F9361122816AD418B223B3"
+    },
+    {
+      "input_entry": "figures/fig9_pfim_visualization_limits.pdf",
+      "preserved_as": "figures/fig9_pfim_visualization_limits.pdf",
+      "sha256": "F3DDC2488942DAC7A868DEF61DA2C5D90CC06220F1286E911489245E3123DA38"
+    },
+    {
+      "input_entry": "figures/fig8_segmentation_limits.pdf",
+      "preserved_as": "figures/fig8_segmentation_limits.pdf",
+      "sha256": "7F88DB2EBA621A16ACFA3CB5CAA7F58D03CBA259925521864F075D81F8933B8E"
+    },
+    {
+      "input_entry": "figures/fig7_sar_acd.pdf",
+      "preserved_as": "figures/fig7_sar_acd.pdf",
+      "sha256": "ADD0F9166130F749C442D24281B1FA0B1A37F5F68559FB97D519D22F202995BB"
+    },
+    {
+      "input_entry": "figures/fig6_change_detection.pdf",
+      "preserved_as": "figures/fig6_change_detection.pdf",
+      "sha256": "860864B59012FF1B7E126DD96E1EA1B9C07AB1389091A9E41A642890C507AB0F"
+    },
+    {
+      "input_entry": "figures/fig5_efficiency.pdf",
+      "preserved_as": "figures/fig5_efficiency.pdf",
+      "sha256": "131E94DEF479FF6FFB124FAC43F747B1CE1E198F437DB31EA051A6AC1863ABFE"
+    },
+    {
+      "input_entry": "figures/fig4_ssdd_paired_delta.pdf",
+      "preserved_as": "figures/fig4_ssdd_paired_delta.pdf",
+      "sha256": "0B698CC28024E1105DC5F13E426B57E158D1D87A219CA34ECAC0361D9BE7A039"
+    },
+    {
+      "input_entry": "figures/fig3_ssdd_main.pdf",
+      "preserved_as": "figures/fig3_ssdd_main.pdf",
+      "sha256": "F52FE5AE8B6A92AFBBDEFC5B0EDA17CF34802BC54E262791802D9069147E05AE"
+    },
+    {
+      "input_entry": "figures/fig2_method.pdf",
+      "preserved_as": "figures/fig2_method.pdf",
+      "sha256": "4773AA92F76F66F13E18958AB2EDD71D24118D41FD88B3BECBFD6EE05E86F6B2"
+    },
+    {
+      "input_entry": "figures/fig1_motivation.pdf",
+      "preserved_as": "figures/fig1_motivation.pdf",
+      "sha256": "A930EF673DB6B81825DA60252704BF759B71A797AEC0418F0451253CC72D7001"
+    },
+    {
+      "input_entry": "figures/fig11_experiment_protocol.pdf",
+      "preserved_as": "figures/fig11_experiment_protocol.pdf",
+      "sha256": "5AE8219EDF4D8A196EAD11BF3A7AAD3F6220C753139E25BD488CBCF08BC45DB5"
+    },
+    {
+      "input_entry": "figures/fig10_historical_detection.pdf",
+      "preserved_as": "figures/fig10_historical_detection.pdf",
+      "sha256": "CA28B384836BB51B71420C324D59600132974A10C29E03E1F78B03D8FB8175E2"
+    },
+    {
+      "input_entry": "supplementary/README.md",
+      "preserved_as": "supplementary/README.md",
+      "sha256": "FAD621BB3312BD83C7D81660A7499F8DE5A36E1398A14AD80D4E27EEF05D0716"
+    },
+    {
+      "input_entry": "supplementary/PAPER_EXPERIMENT_SUMMARY.md",
+      "preserved_as": "supplementary/PAPER_EXPERIMENT_SUMMARY.md",
+      "sha256": "F955E174E62556045BADF4D195584D619C849DE8C69D583A3CEB70335CF3690D"
+    },
+    {
+      "input_entry": "supplementary/BASELINE_PROTOCOL.md",
+      "preserved_as": "supplementary/BASELINE_PROTOCOL.md",
+      "sha256": "B82E24A51CBE230B016783197BDCE731DA6B12E06462CF5B885834365890BCB8"
+    },
+    {
+      "input_entry": "main.tex",
+      "preserved_as": "source_archive/main_input_20261005.tex",
+      "sha256": "BFFB3C01AE1C20BEB736B64B8E7D9C96A922E6423D9F1717595B474D0378968B"
+    }
+  ],
+  "source_evidence": [
+    {
+      "workspace_path": "source_code/work_train_single/ultralytics/nn/modules/mamba_yolo.py",
+      "sha256": "48E6BA384C1A4FCCAA98894A664375A276605E2F14830B6B89AA92E4250567E5"
+    },
+    {
+      "workspace_path": "source_code/work_train_single/ultralytics/utils/metrics.py",
+      "sha256": "59A08475C656E22C91DD3494B8D3F792BE530134782A3DFE1AC538F1645F8775"
+    },
+    {
+      "workspace_path": "paper_draft/ig_ds_ssm_cn/main.tex",
+      "sha256": "3AFA6EAA7328A4BEC9F04F39F359564D16FDF4DB8213D57E9BD0AFE22F8F243E"
+    }
+  ],
+  "files": [
+    {
+      "path": "figures/fig1_motivation.pdf",
+      "bytes": 21759,
+      "sha256": "A930EF673DB6B81825DA60252704BF759B71A797AEC0418F0451253CC72D7001"
+    },
+    {
+      "path": "figures/fig10_historical_detection.pdf",
+      "bytes": 13460,
+      "sha256": "CA28B384836BB51B71420C324D59600132974A10C29E03E1F78B03D8FB8175E2"
+    },
+    {
+      "path": "figures/fig11_experiment_protocol.pdf",
+      "bytes": 23525,
+      "sha256": "5AE8219EDF4D8A196EAD11BF3A7AAD3F6220C753139E25BD488CBCF08BC45DB5"
+    },
+    {
+      "path": "figures/fig2_method.pdf",
+      "bytes": 32685,
+      "sha256": "4773AA92F76F66F13E18958AB2EDD71D24118D41FD88B3BECBFD6EE05E86F6B2"
+    },
+    {
+      "path": "figures/fig3_ssdd_main.pdf",
+      "bytes": 15702,
+      "sha256": "F52FE5AE8B6A92AFBBDEFC5B0EDA17CF34802BC54E262791802D9069147E05AE"
+    },
+    {
+      "path": "figures/fig4_ssdd_paired_delta.pdf",
+      "bytes": 15842,
+      "sha256": "0B698CC28024E1105DC5F13E426B57E158D1D87A219CA34ECAC0361D9BE7A039"
+    },
+    {
+      "path": "figures/fig5_efficiency.pdf",
+      "bytes": 15951,
+      "sha256": "131E94DEF479FF6FFB124FAC43F747B1CE1E198F437DB31EA051A6AC1863ABFE"
+    },
+    {
+      "path": "figures/fig6_change_detection.pdf",
+      "bytes": 18354,
+      "sha256": "860864B59012FF1B7E126DD96E1EA1B9C07AB1389091A9E41A642890C507AB0F"
+    },
+    {
+      "path": "figures/fig7_sar_acd.pdf",
+      "bytes": 15807,
+      "sha256": "ADD0F9166130F749C442D24281B1FA0B1A37F5F68559FB97D519D22F202995BB"
+    },
+    {
+      "path": "figures/fig8_segmentation_limits.pdf",
+      "bytes": 13630,
+      "sha256": "7F88DB2EBA621A16ACFA3CB5CAA7F58D03CBA259925521864F075D81F8933B8E"
+    },
+    {
+      "path": "figures/fig9_pfim_visualization_limits.pdf",
+      "bytes": 738044,
+      "sha256": "F3DDC2488942DAC7A868DEF61DA2C5D90CC06220F1286E911489245E3123DA38"
+    },
+    {
+      "path": "main.tex",
+      "bytes": 76070,
+      "sha256": "8BD5FFBFDBFD9137C43C11677F84F77D772AEBEA2BB2643E15318512459037C8"
+    },
+    {
+      "path": "paper.pdf",
+      "bytes": 577909,
+      "sha256": "F3346618B5B39D76DCF2CF063F96C12CBC3EAB15593AA5B29D231B48784EA977"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2879,
+      "sha256": "CC368B9D8D8A0112FD1E69E23F7D751B9B434DAA6531C51FAC8339EF8D84BAC6"
+    },
+    {
+      "path": "REFERENCE_AUDIT.md",
+      "bytes": 8582,
+      "sha256": "C0F59729149EBC9EE27FD6C07E5A005FE8E91B133DE3F192B3FA910BF940DCAA"
+    },
+    {
+      "path": "revision_checks/citation_occurrences.json",
+      "bytes": 26382,
+      "sha256": "EC87FEAC1706AEF17A3561FB4A46529C981A0BB97A6E45766CF7D4957C70AA2E"
+    },
+    {
+      "path": "revision_checks/crossref_metadata.json",
+      "bytes": 39014,
+      "sha256": "99FFFB43A193FBE07AB45D1CB98A3DC21262099BBE1968BE3C04265F74FF8968"
+    },
+    {
+      "path": "revision_checks/pdf_validation.json",
+      "bytes": 12464,
+      "sha256": "75D544837A7ED59CD0EDB800FB12EAB70A3AF42DA2BD1F73E97577777C51B684"
+    },
+    {
+      "path": "revision_checks/primary_pages.json",
+      "bytes": 120173,
+      "sha256": "D776AA60A925E4AC86ABD86B923C9C918E3C31C206789DCF0130A704089DCC1F"
+    },
+    {
+      "path": "revision_checks/recomputed_statistics.json",
+      "bytes": 4792,
+      "sha256": "D6EC12FCAF038094D9F5B2EDEBF30E1299109B32750A383E9E1925CC35B982A4"
+    },
+    {
+      "path": "revision_checks/source_validation.json",
+      "bytes": 320,
+      "sha256": "D186CDFC2E207A9A29345C6A9FBD34FCFDA6F4C431105266939038CCEBC3092E"
+    },
+    {
+      "path": "REVISION_NOTES.md",
+      "bytes": 5087,
+      "sha256": "381D8EE3875601CD96ED4AB2BDAB7FE01DAC675B1C4E1171B1CF402BD51C8619"
+    },
+    {
+      "path": "revision_tools.mjs",
+      "bytes": 8948,
+      "sha256": "BAD83558D0AF2694B6020B46D5D1CF843EC8A5FDF983E2B3968A9869E65DBC1C"
+    },
+    {
+      "path": "source_archive/main_input_20261005.tex",
+      "bytes": 61318,
+      "sha256": "BFFB3C01AE1C20BEB736B64B8E7D9C96A922E6423D9F1717595B474D0378968B"
+    },
+    {
+      "path": "source_archive/README_input.md",
+      "bytes": 1916,
+      "sha256": "2452E2EDF0F61C3E8C720F4D0CC9539239E44E82EBF5A18CDBD74A4A5AA9FA78"
+    },
+    {
+      "path": "supplementary/BASELINE_PROTOCOL.md",
+      "bytes": 8410,
+      "sha256": "B82E24A51CBE230B016783197BDCE731DA6B12E06462CF5B885834365890BCB8"
+    },
+    {
+      "path": "supplementary/PAPER_EXPERIMENT_SUMMARY.md",
+      "bytes": 5077,
+      "sha256": "F955E174E62556045BADF4D195584D619C849DE8C69D583A3CEB70335CF3690D"
+    },
+    {
+      "path": "supplementary/PROTOCOL_CLARIFICATIONS.md",
+      "bytes": 2053,
+      "sha256": "1039EA4EF035653E19CB6BD91986CC77DD773EA690D4871B287CCF1494910793"
+    },
+    {
+      "path": "supplementary/README.md",
+      "bytes": 416,
+      "sha256": "FAD621BB3312BD83C7D81660A7499F8DE5A36E1398A14AD80D4E27EEF05D0716"
+    },
+    {
+      "path": "supplementary/results_individual.csv",
+      "bytes": 2037,
+      "sha256": "4632E57FDC9FF5E1A3ABB771471D05BEF82504D4E0C6E5A183E64C5735975036"
+    },
+    {
+      "path": "supplementary/results.csv",
+      "bytes": 751,
+      "sha256": "64D4B908455DBA4B5FE3F17279CD11C032E10B5586F9361122816AD418B223B3"
+    }
+  ],
+  "compilation": "Existing TeX Live 2026 XeLaTeX; stable repeated compilation; native compiler unavailable",
+  "pages": 25,
+  "figures": 5,
+  "tables": 21,
+  "references": 24,
+  "citation_occurrences": 42,
+  "new_experiments": false,
+  "integrity_note": "This manifest excludes its own hash. The separate delivery receipt identifies the final ZIP and PDF."
+}

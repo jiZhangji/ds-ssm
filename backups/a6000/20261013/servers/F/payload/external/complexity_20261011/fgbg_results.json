@@ -1,0 +1,23 @@
+{
+  "method": "FGBG-Net-author-R50",
+  "params": 32711764,
+  "flops_g": 171.1423616,
+  "unsupported": {
+    "aten::max_pool2d": 1,
+    "aten::add_": 16,
+    "aten::add": 7,
+    "aten::mul": 60,
+    "aten::exp": 10,
+    "aten::div": 5,
+    "aten::sub": 10
+  },
+  "classes": 1,
+  "input": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "config": "vfnet_r50_fpn_1x_coco.py",
+  "training_only_branches_excluded": true
+}

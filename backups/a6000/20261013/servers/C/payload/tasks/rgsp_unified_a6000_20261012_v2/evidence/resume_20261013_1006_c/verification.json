@@ -1,0 +1,2394 @@
+{
+  "copied_files": [
+    {
+      "path": "lanes/c0/jobs/sample-full/probe/protocol.json",
+      "sha256": "e633e9dc6c5377be491b2ae42389ce5a296de672909910d16945d794244b4d6d"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/probe/result.json",
+      "sha256": "eca5a5fabdc7fdb6209b6c8228b887a8c4db499b6606f755ab33279980045707"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run0/completion.json",
+      "sha256": "20ffc40b2a4bb5f7941bf00dd65f44a54bb5c853b2e1b3aacea87ca1e0af8a9b"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run0/progress.json",
+      "sha256": "0c77398a340fd2517207329cbe25446e95717e34c332d2309e419b7838a1b8aa"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run0/protocol.json",
+      "sha256": "e633e9dc6c5377be491b2ae42389ce5a296de672909910d16945d794244b4d6d"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run0/result.json",
+      "sha256": "517ae2c55a9ffb24aa9a829d0ca5062025a787544e659ad165bb5d2d92a49ffb"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run0/test.json",
+      "sha256": "d7b4507ba085e711450e83feb2d4c57439d1ac802a4936e6af000c4d67549701"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run1/completion.json",
+      "sha256": "9f2f1d17244937aff107db0628d13b3e411e9a97b9496695078b30973bb620f9"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run1/progress.json",
+      "sha256": "2a24497f8e41b5d8a03fa9a9a0fee01502c3799dabe5412341404a634e011e04"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run1/protocol.json",
+      "sha256": "e633e9dc6c5377be491b2ae42389ce5a296de672909910d16945d794244b4d6d"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run1/result.json",
+      "sha256": "0ba196827f6381075bc2f880440ff03856d97b1399eca301359a55ae13e36785"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run1/test.json",
+      "sha256": "cdcfd23b93757f272a389b1989a567508a6df7ef5506096a6b47600238e396ed"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run2/completion.json",
+      "sha256": "fbc23753ebfff0fc8ffc0030dd1fee226c25e6e4033770376df3f4ff0f7d2803"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run2/progress.json",
+      "sha256": "241c8d049dd12495e5598a9e67319213fa16846c59f93ab4bc0c8a42bf420ac7"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run2/protocol.json",
+      "sha256": "e633e9dc6c5377be491b2ae42389ce5a296de672909910d16945d794244b4d6d"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run2/result.json",
+      "sha256": "f75a5fec03bf3b9bc717d49065c6c2634a1ef833cacc3b78ac292d25c64038c8"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-full/run2/test.json",
+      "sha256": "16d750b1f55154de769fffe97171ebc0b92ffa2c17c84d5843f4d192eb6a9893"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/probe/protocol.json",
+      "sha256": "6ca0deb97fbb0ab84ede8ded44ee76d0d817c481a48c0e76b3ed747b6d38a215"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/probe/result.json",
+      "sha256": "54f4588b45f6f5e3162f85436c54d1541b0c3a1a9600a831be2e42da76b4244c"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run0/completion.json",
+      "sha256": "049c225daf0d1857e4ab3d8a65c849123cefe586af2426510ccd67f8c40949d8"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run0/progress.json",
+      "sha256": "0772585e2834c9c030f0896d3601a2d5f2a794967c665f59c542f53123023eb6"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run0/protocol.json",
+      "sha256": "6ca0deb97fbb0ab84ede8ded44ee76d0d817c481a48c0e76b3ed747b6d38a215"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run0/result.json",
+      "sha256": "2c1a5f7b95f68f7b8e8b7fe7ec94ed8a5b8c6141de9f6ebbfa4ff3ff8fc596f3"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run0/test.json",
+      "sha256": "16462958e782941230683a81fecb7c64af7e721f5622521c31479531962d046f"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run1/completion.json",
+      "sha256": "398bf07a56ca1c2b3d98f724c7065d3337167beb3e90b03716c179be2198affd"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run1/progress.json",
+      "sha256": "7fe1f347fd5ecc4b68620aa0f19097f548bcf8cc9dc3281b567a8a78dd423ee1"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run1/protocol.json",
+      "sha256": "6ca0deb97fbb0ab84ede8ded44ee76d0d817c481a48c0e76b3ed747b6d38a215"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run1/result.json",
+      "sha256": "d8476af44c6f53cfdcfacaa4d0d6cba89f4dac6deacd96069a1d361ceaeb0e87"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run1/test.json",
+      "sha256": "290e949ce22ef9ede82f7d421fe80804c6631b6d0bafcbe6110af27a41653f0d"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run2/completion.json",
+      "sha256": "84fb3a42cc2a35ef6af9dfd99a434258c1aa33bb37c64dc222e6f24042bd2381"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run2/progress.json",
+      "sha256": "fbd3390a843b6fa8c6075449a617536f2e4c9d2f91b0b5e9807b40a9d4a554da"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run2/protocol.json",
+      "sha256": "6ca0deb97fbb0ab84ede8ded44ee76d0d817c481a48c0e76b3ed747b6d38a215"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run2/result.json",
+      "sha256": "09590331468bfddc021a167f16da4ff4af36219980a2b72bac3679bf3e825e00"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-matched075/run2/test.json",
+      "sha256": "f2df0f43efd646f06217b10c45560935eb7e189ba7043a9637ca1e06d51df2f0"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/probe/protocol.json",
+      "sha256": "960b111025cf6f322870e77b4764bce40a910a36690d0de34d90b56564dd07fc"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/probe/result.json",
+      "sha256": "782346c57f58b54f29539f1defe37142b7b67ab25d71a9a0a5c045b9f9920a74"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run0/completion.json",
+      "sha256": "f6eb345360cc0735cbd2a84e6a785491c7f1080196a631454aa79ec0d391b08d"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run0/progress.json",
+      "sha256": "19f28e916fc578c05d921cfb7983f0135caf4b16cea789da7098dcc420c8ed22"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run0/protocol.json",
+      "sha256": "960b111025cf6f322870e77b4764bce40a910a36690d0de34d90b56564dd07fc"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run0/result.json",
+      "sha256": "ef4b45a8dc3d56949a3046e9df611a9ce8d2d89ded1bf1ec0ff5addb786d0f28"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run0/test.json",
+      "sha256": "ecc1402f5e10dffafa53c7d2badc9797db318012459a6dd7a7edb362be145378"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run1/completion.json",
+      "sha256": "4b7fa4c3992861ddea097d546ab89cbb8d6a944cb0bbcbebfe93f74befdc8bc5"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run1/progress.json",
+      "sha256": "62ddcc4391de8fdce6ce8522ad8e8a7276eda77796b526cf79c07baaa725cf81"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run1/protocol.json",
+      "sha256": "960b111025cf6f322870e77b4764bce40a910a36690d0de34d90b56564dd07fc"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run1/result.json",
+      "sha256": "b0a6b999502410c128809b140a77393e0c9b1155c959b881038bf8830f02d1fa"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run1/test.json",
+      "sha256": "16e523edbcb80e0b01927f63d175d7697cb91b5b0b0a2806e8fcb9a1cce24180"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run2/completion.json",
+      "sha256": "d6a2e4162702efddcfd6d5c5e95020fe57da1602fb0d0f1b2512ee0c85d0d440"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run2/progress.json",
+      "sha256": "0d4c2d6af5278f0429855cfddbb9ed67f2becd22011a34f2dc565df5100dbda6"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run2/protocol.json",
+      "sha256": "960b111025cf6f322870e77b4764bce40a910a36690d0de34d90b56564dd07fc"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run2/result.json",
+      "sha256": "2d0db3f98e21113fd6f2ffa0ec87fdda3bde706d3e456dd2267b1b3501fb6c88"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-original/run2/test.json",
+      "sha256": "b5ccaeefd9630b3b593deed47e99c03c6d1f2de5f129bc8727328bf8e34608f2"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/probe/protocol.json",
+      "sha256": "f51e6f5aa10196846128eb4bb72b69050afa6b281c5f2e6a875291a3857c5519"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/probe/result.json",
+      "sha256": "e8e7b435ec3dcea63b6a56d2e41e4a077e2413fc656e6e911bc2e430250d7165"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run0/completion.json",
+      "sha256": "af0f4fa8bc615c3c0d86ea4fa6ea6fbe13e94bed23788e6b09b2f8c5976aa6d2"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run0/progress.json",
+      "sha256": "b59fc1488725a80bf270c6dc0b0e261d857d5343ee412fc03f6847c5543524f0"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run0/protocol.json",
+      "sha256": "f51e6f5aa10196846128eb4bb72b69050afa6b281c5f2e6a875291a3857c5519"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run0/result.json",
+      "sha256": "fccbd70b8e8b228dfe6fe37c4b141a0fec09aa5e504c62aa73d6ca67ef0a3e7c"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run0/test.json",
+      "sha256": "db07b7a43f291d45e0b47e64a959471389e07859bb3a511ea2d74eb0f02b308a"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run1/completion.json",
+      "sha256": "9a0c987a9047abfe77b62482128099b1378fd7e6e1e30135f4ecd799f967a296"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run1/progress.json",
+      "sha256": "cac2cd6a9bb03d26fb5b6111d8d6f880c6d16f008c1ee147104a11a0d0ad13f8"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run1/protocol.json",
+      "sha256": "f51e6f5aa10196846128eb4bb72b69050afa6b281c5f2e6a875291a3857c5519"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run1/result.json",
+      "sha256": "9c6311ca10c74fe7a8de34dc98aaf50240241399ae48df73bdc4a44a7fcbf06c"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run1/test.json",
+      "sha256": "89eb52f41f17d2216e7dc9ca92d514593c0ede875f85f7dd38d08f96334972d3"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run2/completion.json",
+      "sha256": "7dcbd536080346d104ce14b6940fd629305de795fc2d50a49d81a3627a28d994"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run2/progress.json",
+      "sha256": "5d66cce729c68c788e0cd5ef4797554939ace2b126e013060cb819c47def8417"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run2/protocol.json",
+      "sha256": "f51e6f5aa10196846128eb4bb72b69050afa6b281c5f2e6a875291a3857c5519"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run2/result.json",
+      "sha256": "585aea7e1be5599dab6a5f8d43b84bec2799115b24a07783650ceb7f8debddd6"
+    },
+    {
+      "path": "lanes/c0/jobs/sample-resnet50/run2/test.json",
+      "sha256": "11f486a2e12760edf2051ff0f121e90d6c6960dd0900fd8c4424a5043d283fa2"
+    },
+    {
+      "path": "lanes/c0/state.json",
+      "sha256": "71aaccb204bb937343c9996699d6edd63e7b153bd476f8ec5527f66961b528ca"
+    },
+    {
+      "path": "lanes/c0shipfull/jobs/sar_ship-full/probe/attempt.json",
+      "sha256": "ce8e3d68864b1532b29f0ad2f1f8b480bd1559e40ced8fecadfbe9c424d97ee4"
+    },
+    {
+      "path": "lanes/c0shipfull/jobs/sar_ship-full/probe/protocol.json",
+      "sha256": "caed014dc9803c4aa888caa8330ee4d7b5528aa0f95ed5a2990c0a1b40e2ed82"
+    },
+    {
+      "path": "lanes/c0shipfull/jobs/sar_ship-full/probe/result.json",
+      "sha256": "41771c235b8ea06d3c0de68ecf36d1ddc6c2505b1b7edb8d57107aceac044140"
+    },
+    {
+      "path": "lanes/c0shipfull/jobs/sar_ship-full/run0/attempt.json",
+      "sha256": "d6ecd7af51873df519707379af45d2d1fea05bec736a4279bd07e3bd00d41165"
+    },
+    {
+      "path": "lanes/c0shipfull/jobs/sar_ship-full/run0/protocol.json",
+      "sha256": "caed014dc9803c4aa888caa8330ee4d7b5528aa0f95ed5a2990c0a1b40e2ed82"
+    },
+    {
+      "path": "lanes/c0shipfull/state.json",
+      "sha256": "64a2d901c1d575eadaa4a6084feff56151dcd286399612384d53036d4832513b"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0/jobs/sample-full/probe/protocol.json",
+      "sha256": "e633e9dc6c5377be491b2ae42389ce5a296de672909910d16945d794244b4d6d"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0/jobs/sample-full/probe/result.json",
+      "sha256": "085595eaa68475ebb5bd9a0bd81ffc9374d9e5742ff78fee1036f97344ba2aae"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0/jobs/sample-matched075/probe/protocol.json",
+      "sha256": "6ca0deb97fbb0ab84ede8ded44ee76d0d817c481a48c0e76b3ed747b6d38a215"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0/jobs/sample-matched075/probe/result.json",
+      "sha256": "5a3d0a34cbfffd2da25080c2b8a65dfeaeddf616830d120b4e6bedf06404e79e"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0/jobs/sample-original/probe/protocol.json",
+      "sha256": "960b111025cf6f322870e77b4764bce40a910a36690d0de34d90b56564dd07fc"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0/jobs/sample-original/probe/result.json",
+      "sha256": "06044ba311a8088a32fb0da09763daa9ec846b74c8a77d9c70ce5810e214219e"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0/jobs/sample-resnet50/probe/protocol.json",
+      "sha256": "f51e6f5aa10196846128eb4bb72b69050afa6b281c5f2e6a875291a3857c5519"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0/jobs/sample-resnet50/probe/result.json",
+      "sha256": "6175fbac1ac0c78f99bc69c245eedb702f1bbb3e9790e3fe0a3c0fbaf4aa1800"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0/state.json",
+      "sha256": "461d768ad3e5beb125dd6d583839cc5db7eb5e693b95417398c638871adeb637"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0shipfull/jobs/sar_ship-full/probe/attempt.json",
+      "sha256": "ec91b9a97d0e5e3dcda2c74f52e3ea2a31fabb4fbb65023019c50c19dd045e25"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0shipfull/jobs/sar_ship-full/probe/protocol.json",
+      "sha256": "caed014dc9803c4aa888caa8330ee4d7b5528aa0f95ed5a2990c0a1b40e2ed82"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0shipfull/jobs/sar_ship-full/probe/result.json",
+      "sha256": "78b6cee604c565b1db51a08e0fabced87b1cf64cdafa697e34c3c07911f94f72"
+    },
+    {
+      "path": "qa_smoke_01/lanes/c0shipfull/state.json",
+      "sha256": "49080dc44687511990410bbc76672980e44360967bc4ae3a9b4237210584432d"
+    },
+    {
+      "path": "plans/c0.json",
+      "sha256": "be6a43106aa0918d4945509590f0cd4e5ee60da6c1f9b4f4686f4b17848aff2a"
+    },
+    {
+      "path": "plans/c0.production.json",
+      "sha256": "eaa3ae5a570f7115ede77bd1da83e485ef65db941ef52735395769597c235a1f"
+    },
+    {
+      "path": "plans/c0shipfull.json",
+      "sha256": "eb6acbc21e436f9f06d3622cba6f77f39b61643e29183e67563d37876cc5776d"
+    },
+    {
+      "path": "plans/c0shipfull.production.json",
+      "sha256": "d9c9bb52ae9bc7bbd511e3978d0891072adfc73f7bf961c571712b94d98ac270"
+    },
+    {
+      "path": "launch/c0.json",
+      "sha256": "5721c2e9eba9704408872e773f705ab813a08b052b07449e928e063af711d2b7"
+    },
+    {
+      "path": "launch/c0.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "launch/c0.probe01.json",
+      "sha256": "7d18477eeddc135907170434f0b2788a4f71d4b40ffd6da25e620b5858000012"
+    },
+    {
+      "path": "launch/c0.probe01.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "launch/c0shipfull.json",
+      "sha256": "245227d0928bb16a3ab6f0c482c65c599a37f197fcc98a7f6d5e952e81c1dc75"
+    },
+    {
+      "path": "launch/c0shipfull.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "launch/c0shipfull.probe01.json",
+      "sha256": "7672ab96cab39da7409d83527c90fba0cd4c40a32c7ec41c7cd27559f3b0f6ac"
+    },
+    {
+      "path": "launch/c0shipfull.probe01.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "dispatch/c0.admission.json",
+      "sha256": "92044c2da762cafc7a4b3d583692df2ff33af1a632f6c9340e3cc25380ed69a1"
+    },
+    {
+      "path": "dispatch/c0.launch.json",
+      "sha256": "3a22ec5fda571ab00abfa46d515b709b52e24b02a78fb91c0eb4d05bc385a7f4"
+    },
+    {
+      "path": "dispatch/c0.log",
+      "sha256": "60b0600b98ec5894dd4a04d6915fecf82afbbb1d9a61c0a91562bf0f719ad283"
+    },
+    {
+      "path": "dispatch/c0.state.json",
+      "sha256": "0f62240d074baee327805bbe17048c02efd5ed339ae330a2704b78029853ba9f"
+    },
+    {
+      "path": "dispatch/c0shipfull.admission.json",
+      "sha256": "c3bda59b636249cce92918daaad986d1b43689dbbb2d260b61bf76d3e4d38c8b"
+    },
+    {
+      "path": "dispatch/c0shipfull.launch.json",
+      "sha256": "f80330753d6995843e07ef28fa12afad92e907c9742ab5f7295880afbb6d6e43"
+    },
+    {
+      "path": "dispatch/c0shipfull.log",
+      "sha256": "cd68f9258ca94d5ee7c34defc609db90d57fc5dedb038afba79a581e0ab14b06"
+    },
+    {
+      "path": "dispatch/c0shipfull.state.json",
+      "sha256": "fa99694e2a25554aa088d1ee80abffcb79d6f127958d663de4b56e9dc0c8c700"
+    },
+    {
+      "path": "taskdata/SAMPLE/audit.json",
+      "sha256": "23747f8ab3631eee9f7f48a919b789b0b6886876c412e5edff297122dd9b6eb7"
+    },
+    {
+      "path": "taskdata/SAMPLE/readiness.json",
+      "sha256": "aea84e39e28464c84b4a315dfab583d3caa4b9b67b7c415f090eaba67bff0366"
+    },
+    {
+      "path": "taskdata/SAMPLE/source_audit.json",
+      "sha256": "c05e9a667202616237f44adb042235d66c0baef5a812703e3ffa61f2fa1b0ca3"
+    },
+    {
+      "path": "taskdata/SAR_ACD6/preparation_failed.json",
+      "sha256": "487180cfd2198a5755e478c839ca443d9c834fad2104e303af682bed5b77fb23"
+    },
+    {
+      "path": "taskdata/SAR_ACD6/source_audit.json",
+      "sha256": "7c3772675b11c53b1eb2f1a209f0c0febc2d655bbcb15763aabe8f99d75071e0"
+    }
+  ],
+  "hostname": "a6000-c",
+  "lanes": [
+    {
+      "lane": "c0",
+      "status": "COMPLETE",
+      "updated_at": 1791816456.371532
+    },
+    {
+      "lane": "c0shipfull",
+      "status": "RUNNING",
+      "updated_at": 1791856396.810534
+    }
+  ],
+  "scope": "Sequential snapshot; only terminal state-marked results verified; weights remain on server.",
+  "snapshot": "resume_20261013_1006_c",
+  "time": "2026-10-13T02:04:11.955556+00:00",
+  "verified_complete_results": [
+    {
+      "best_epoch": 109,
+      "dataset": "SAMPLE",
+      "elapsed_seconds": 493.68646596197505,
+      "epochs": 139,
+      "id": "sample-full",
+      "lane": "c0",
+      "method": "Full",
+      "metric_unit": null,
+      "params": 2788360,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-full/run0/best.pt",
+        "checkpoint_sha256": "6e28c51ba3857eacfc64a462076d0d7640c568b165decdca34c04ef1566d79cf",
+        "completion_sha256": "20ffc40b2a4bb5f7941bf00dd65f44a54bb5c853b2e1b3aacea87ca1e0af8a9b",
+        "metrics": {
+          "accuracy": 0.0037105751391465678,
+          "confusion_matrix": [
+            [
+              0,
+              14,
+              22,
+              0,
+              0,
+              0,
+              22,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              51,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              49,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              36,
+              10,
+              0,
+              0,
+              0,
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              16,
+              0,
+              0,
+              0,
+              0,
+              37,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              16,
+              37,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              23,
+              29,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              18,
+              40,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              40,
+              1,
+              0,
+              0,
+              0,
+              11,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              17,
+              31,
+              0,
+              0,
+              10,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.0017279343161037506,
+          "macro_precision": 0.0011174579392577333,
+          "macro_recall": 0.0038098693759071114,
+          "per_class_recall": [
+            0.0,
+            0.019230769230769232,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.018867924528301886,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "protocol_sha256": "0f7b5dfa1b351da94ebe7bb49fb8f2ea00174e1ed69047f45fd8dac3a92c1c4e",
+        "result_sha256": "517ae2c55a9ffb24aa9a829d0ca5062025a787544e659ad165bb5d2d92a49ffb"
+      }
+    },
+    {
+      "best_epoch": 85,
+      "dataset": "SAMPLE",
+      "elapsed_seconds": 411.8019581330009,
+      "epochs": 115,
+      "id": "sample-full",
+      "lane": "c0",
+      "method": "Full",
+      "metric_unit": null,
+      "params": 2788360,
+      "seed": 1,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-full/run1/best.pt",
+        "checkpoint_sha256": "647772e1e691bd5c44d2d301535a1e082e9d4219d1755adff6dff0bebd3a36d9",
+        "completion_sha256": "9f2f1d17244937aff107db0628d13b3e411e9a97b9496695078b30973bb620f9",
+        "metrics": {
+          "accuracy": 0.00927643784786642,
+          "confusion_matrix": [
+            [
+              0,
+              36,
+              3,
+              0,
+              0,
+              0,
+              19,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              48,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              47,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              48,
+              1,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              22,
+              0,
+              0,
+              0,
+              0,
+              31,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              36,
+              17,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              27,
+              26,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              59,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              46,
+              0,
+              0,
+              0,
+              0,
+              6,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              56,
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.0041079997890629116,
+          "macro_precision": 0.003234846177276881,
+          "macro_recall": 0.009733124018838305,
+          "per_class_recall": [
+            0.0,
+            0.07692307692307693,
+            0.02040816326530612,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "protocol_sha256": "0f7b5dfa1b351da94ebe7bb49fb8f2ea00174e1ed69047f45fd8dac3a92c1c4e",
+        "result_sha256": "0ba196827f6381075bc2f880440ff03856d97b1399eca301359a55ae13e36785"
+      }
+    },
+    {
+      "best_epoch": 82,
+      "dataset": "SAMPLE",
+      "elapsed_seconds": 398.90975597599754,
+      "epochs": 112,
+      "id": "sample-full",
+      "lane": "c0",
+      "method": "Full",
+      "metric_unit": null,
+      "params": 2788360,
+      "seed": 2,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-full/run2/best.pt",
+        "checkpoint_sha256": "39b935e05c3ddd57c029f4875f4560026fa8f57c4d5d2205d45783cc268d4559",
+        "completion_sha256": "fbc23753ebfff0fc8ffc0030dd1fee226c25e6e4033770376df3f4ff0f7d2803",
+        "metrics": {
+          "accuracy": 0.11688311688311688,
+          "confusion_matrix": [
+            [
+              0,
+              58,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              50,
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              32,
+              13,
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              39,
+              12,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              53,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              46,
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              21,
+              32,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              31,
+              29,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              52,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              8,
+              11,
+              0,
+              0,
+              15,
+              24,
+              0,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.039617898441427844,
+          "macro_precision": 0.02532051282051282,
+          "macro_recall": 0.12268445839874412,
+          "per_class_recall": [
+            0.0,
+            0.9615384615384616,
+            0.2653061224489796,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "protocol_sha256": "0f7b5dfa1b351da94ebe7bb49fb8f2ea00174e1ed69047f45fd8dac3a92c1c4e",
+        "result_sha256": "f75a5fec03bf3b9bc717d49065c6c2634a1ef833cacc3b78ac292d25c64038c8"
+      }
+    },
+    {
+      "best_epoch": 50,
+      "dataset": "SAMPLE",
+      "elapsed_seconds": 282.7040822599665,
+      "epochs": 80,
+      "id": "sample-matched075",
+      "lane": "c0",
+      "method": "Matched075",
+      "metric_unit": null,
+      "params": 2785826,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-matched075/run0/best.pt",
+        "checkpoint_sha256": "28e14838050ad336ffd168702937f0ee29a1f708512721bf2bd0fdcb3dbcca9e",
+        "completion_sha256": "049c225daf0d1857e4ab3d8a65c849123cefe586af2426510ccd67f8c40949d8",
+        "metrics": {
+          "accuracy": 0.012987012987012988,
+          "confusion_matrix": [
+            [
+              0,
+              31,
+              1,
+              0,
+              0,
+              0,
+              26,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              51,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              49,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              34,
+              10,
+              0,
+              0,
+              0,
+              7,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              13,
+              0,
+              0,
+              0,
+              0,
+              40,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              38,
+              14,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              14,
+              34,
+              0,
+              0,
+              0,
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              38,
+              20,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              28,
+              3,
+              0,
+              0,
+              0,
+              21,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              27,
+              8,
+              0,
+              0,
+              20,
+              2,
+              0,
+              0,
+              1
+            ]
+          ],
+          "macro_f1": 0.008020718189633996,
+          "macro_precision": 0.1029094827586207,
+          "macro_recall": 0.013081177118262349,
+          "per_class_recall": [
+            0.0,
+            0.019230769230769232,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.09433962264150944,
+            0.0,
+            0.0,
+            0.017241379310344827
+          ]
+        },
+        "protocol_sha256": "ffa83416d4e819aaa920047e524485fdab1f7138d54489b1a2e331803fdfb1f2",
+        "result_sha256": "2c1a5f7b95f68f7b8e8b7fe7ec94ed8a5b8c6141de9f6ebbfa4ff3ff8fc596f3"
+      }
+    },
+    {
+      "best_epoch": 50,
+      "dataset": "SAMPLE",
+      "elapsed_seconds": 284.33703935699305,
+      "epochs": 80,
+      "id": "sample-matched075",
+      "lane": "c0",
+      "method": "Matched075",
+      "metric_unit": null,
+      "params": 2785826,
+      "seed": 1,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-matched075/run1/best.pt",
+        "checkpoint_sha256": "7afa4b61285504e4f26dd9fa43680b6578305442b0c024e882c299767238d885",
+        "completion_sha256": "398bf07a56ca1c2b3d98f724c7065d3337167beb3e90b03716c179be2198affd",
+        "metrics": {
+          "accuracy": 0.022263450834879406,
+          "confusion_matrix": [
+            [
+              0,
+              29,
+              13,
+              6,
+              0,
+              0,
+              10,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              48,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              47,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              47,
+              3,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              22,
+              0,
+              0,
+              0,
+              0,
+              31,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              13,
+              40,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              17,
+              36,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              46,
+              14,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              49,
+              0,
+              0,
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              31,
+              7,
+              0,
+              0,
+              12,
+              0,
+              0,
+              0,
+              8
+            ]
+          ],
+          "macro_f1": 0.026806526806526804,
+          "macro_precision": 0.10153846153846154,
+          "macro_recall": 0.021485411140583555,
+          "per_class_recall": [
+            0.0,
+            0.07692307692307693,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.13793103448275862
+          ]
+        },
+        "protocol_sha256": "ffa83416d4e819aaa920047e524485fdab1f7138d54489b1a2e331803fdfb1f2",
+        "result_sha256": "d8476af44c6f53cfdcfacaa4d0d6cba89f4dac6deacd96069a1d361ceaeb0e87"
+      }
+    },
+    {
+      "best_epoch": 70,
+      "dataset": "SAMPLE",
+      "elapsed_seconds": 355.0994260300067,
+      "epochs": 100,
+      "id": "sample-matched075",
+      "lane": "c0",
+      "method": "Matched075",
+      "metric_unit": null,
+      "params": 2785826,
+      "seed": 2,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-matched075/run2/best.pt",
+        "checkpoint_sha256": "7713f87b2e807a7f9f6a97a454ab92d452405b5ddd8ca7ebb8dab1d1204cd360",
+        "completion_sha256": "84fb3a42cc2a35ef6af9dfd99a434258c1aa33bb37c64dc222e6f24042bd2381",
+        "metrics": {
+          "accuracy": 0.07235621521335807,
+          "confusion_matrix": [
+            [
+              0,
+              56,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              39,
+              0,
+              0,
+              0,
+              0,
+              13,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              21,
+              0,
+              0,
+              0,
+              0,
+              28,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              38,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              45,
+              6,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              28,
+              25,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              49,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              24,
+              36,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              52,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              15,
+              0,
+              0,
+              11,
+              32,
+              0,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.021727019498607242,
+          "macro_precision": 0.012703583061889252,
+          "macro_recall": 0.075,
+          "per_class_recall": [
+            0.0,
+            0.75,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "protocol_sha256": "ffa83416d4e819aaa920047e524485fdab1f7138d54489b1a2e331803fdfb1f2",
+        "result_sha256": "09590331468bfddc021a167f16da4ff4af36219980a2b72bac3679bf3e825e00"
+      }
+    },
+    {
+      "best_epoch": 77,
+      "dataset": "SAMPLE",
+      "elapsed_seconds": 414.26090665900847,
+      "epochs": 107,
+      "id": "sample-original",
+      "lane": "c0",
+      "method": "Original",
+      "metric_unit": null,
+      "params": 2853466,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-original/run0/best.pt",
+        "checkpoint_sha256": "52093378cfd06f3b09866db9fa606af771708ab1f784215e19f39c04bb79b543",
+        "completion_sha256": "f6eb345360cc0735cbd2a84e6a785491c7f1080196a631454aa79ec0d391b08d",
+        "metrics": {
+          "accuracy": 0.00927643784786642,
+          "confusion_matrix": [
+            [
+              0,
+              29,
+              0,
+              2,
+              0,
+              0,
+              27,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              51,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              49,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              43,
+              0,
+              1,
+              0,
+              0,
+              7,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0,
+              4,
+              0,
+              0,
+              40,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              33,
+              19,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              20,
+              25,
+              5,
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              51,
+              8,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              23,
+              1,
+              2,
+              0,
+              0,
+              26,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              57,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.006031435289881977,
+          "macro_precision": 0.008982211626627544,
+          "macro_recall": 0.00954423859529298,
+          "per_class_recall": [
+            0.0,
+            0.019230769230769232,
+            0.0,
+            0.0196078431372549,
+            0.0,
+            0.0,
+            0.05660377358490566,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "protocol_sha256": "d6d808b96afcaa8ecabf8b978e30b1c68b6c8e51c5a20209974fbc435368f603",
+        "result_sha256": "ef4b45a8dc3d56949a3046e9df611a9ce8d2d89ded1bf1ec0ff5addb786d0f28"
+      }
+    },
+    {
+      "best_epoch": 50,
+      "dataset": "SAMPLE",
+      "elapsed_seconds": 309.85664557898417,
+      "epochs": 80,
+      "id": "sample-original",
+      "lane": "c0",
+      "method": "Original",
+      "metric_unit": null,
+      "params": 2853466,
+      "seed": 1,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-original/run1/best.pt",
+        "checkpoint_sha256": "1fe3b773e87798c813ed596336f52c74a2a7bff84e139b6b5c881c2a69e2e124",
+        "completion_sha256": "4b7fa4c3992861ddea097d546ab89cbb8d6a944cb0bbcbebfe93f74befdc8bc5",
+        "metrics": {
+          "accuracy": 0.04823747680890538,
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              56,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              12,
+              0,
+              0,
+              0,
+              40,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              9,
+              0,
+              0,
+              0,
+              40,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              6,
+              45,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              5,
+              35,
+              0,
+              0,
+              0,
+              13,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              51,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              53,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              3,
+              54,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              7,
+              45,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              3,
+              33,
+              0,
+              0,
+              3,
+              2,
+              0,
+              0,
+              17
+            ]
+          ],
+          "macro_f1": 0.047662141779788836,
+          "macro_precision": 0.08729007633587786,
+          "macro_recall": 0.04767769176636172,
+          "per_class_recall": [
+            0.0,
+            0.0,
+            0.1836734693877551,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.29310344827586204
+          ]
+        },
+        "protocol_sha256": "d6d808b96afcaa8ecabf8b978e30b1c68b6c8e51c5a20209974fbc435368f603",
+        "result_sha256": "b0a6b999502410c128809b140a77393e0c9b1155c959b881038bf8830f02d1fa"
+      }
+    },
+    {
+      "best_epoch": 86,
+      "dataset": "SAMPLE",
+      "elapsed_seconds": 449.6384174870327,
+      "epochs": 116,
+      "id": "sample-original",
+      "lane": "c0",
+      "method": "Original",
+      "metric_unit": null,
+      "params": 2853466,
+      "seed": 2,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-original/run2/best.pt",
+        "checkpoint_sha256": "95f03f305491936c0510be739ddc2df983e7a81614258e95635b3be6eab2c89a",
+        "completion_sha256": "d6a2e4162702efddcfd6d5c5e95020fe57da1602fb0d0f1b2512ee0c85d0d440",
+        "metrics": {
+          "accuracy": 0.061224489795918366,
+          "confusion_matrix": [
+            [
+              0,
+              54,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              30,
+              2,
+              0,
+              0,
+              0,
+              20,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              13,
+              3,
+              0,
+              0,
+              0,
+              33,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              45,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              50,
+              1,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              38,
+              15,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              29,
+              24,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              54,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              52,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              52,
+              0,
+              0,
+              0,
+              2,
+              4,
+              0,
+              0,
+              0
+            ]
+          ],
+          "macro_f1": 0.0182477224268269,
+          "macro_precision": 0.012112277391201793,
+          "macro_recall": 0.06381475667189952,
+          "per_class_recall": [
+            0.0,
+            0.5769230769230769,
+            0.061224489795918366,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "protocol_sha256": "d6d808b96afcaa8ecabf8b978e30b1c68b6c8e51c5a20209974fbc435368f603",
+        "result_sha256": "2d0db3f98e21113fd6f2ffa0ec87fdda3bde706d3e456dd2267b1b3501fb6c88"
+      }
+    },
+    {
+      "best_epoch": 59,
+      "dataset": "SAMPLE",
+      "elapsed_seconds": 332.4802544459817,
+      "epochs": 89,
+      "id": "sample-resnet50",
+      "lane": "c0",
+      "method": "resnet50",
+      "metric_unit": null,
+      "params": 23528522,
+      "seed": 0,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-resnet50/run0/best.pt",
+        "checkpoint_sha256": "a25b2b246c200f3c2754f892147840ec1d0aca3767a9cd04bfde44babeb72226",
+        "completion_sha256": "af0f4fa8bc615c3c0d86ea4fa6ea6fbe13e94bed23788e6b09b2f8c5976aa6d2",
+        "metrics": {
+          "accuracy": 0.03710575139146568,
+          "confusion_matrix": [
+            [
+              0,
+              27,
+              14,
+              0,
+              0,
+              0,
+              17,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              7,
+              0,
+              0,
+              0,
+              41,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              46,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              50,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              25,
+              3,
+              0,
+              0,
+              0,
+              25,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              46,
+              5,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              17,
+              34,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              31,
+              29,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              42,
+              9,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              47,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              9
+            ]
+          ],
+          "macro_f1": 0.04250594534658088,
+          "macro_precision": 0.20571803112272424,
+          "macro_recall": 0.036879167862530635,
+          "per_class_recall": [
+            0.0,
+            0.07692307692307693,
+            0.061224489795918366,
+            0.0,
+            0.0,
+            0.03773584905660377,
+            0.03773584905660377,
+            0.0,
+            0.0,
+            0.15517241379310345
+          ]
+        },
+        "protocol_sha256": "bb565dc8da68067b2dff89a3aa29aa489789a6b99a7db6ed65bd7110edc527be",
+        "result_sha256": "fccbd70b8e8b228dfe6fe37c4b141a0fec09aa5e504c62aa73d6ca67ef0a3e7c"
+      }
+    },
+    {
+      "best_epoch": 49,
+      "dataset": "SAMPLE",
+      "elapsed_seconds": 294.39756181900157,
+      "epochs": 79,
+      "id": "sample-resnet50",
+      "lane": "c0",
+      "method": "resnet50",
+      "metric_unit": null,
+      "params": 23528522,
+      "seed": 1,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-resnet50/run1/best.pt",
+        "checkpoint_sha256": "4c41a88b9e4b68294b399e3263a3b0aab88164461075492bb9b4c3eedd93bc6f",
+        "completion_sha256": "9a0c987a9047abfe77b62482128099b1378fd7e6e1e30135f4ecd799f967a296",
+        "metrics": {
+          "accuracy": 0.027829313543599257,
+          "confusion_matrix": [
+            [
+              0,
+              33,
+              0,
+              0,
+              0,
+              0,
+              25,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              51,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              48,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              47,
+              0,
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              16,
+              0,
+              0,
+              0,
+              0,
+              37,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              51,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              38,
+              12,
+              0,
+              0,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              48,
+              12,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              44,
+              0,
+              0,
+              0,
+              0,
+              8,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              46,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              11
+            ]
+          ],
+          "macro_f1": 0.035034649286038874,
+          "macro_precision": 0.10201223776223775,
+          "macro_recall": 0.026548971522946795,
+          "per_class_recall": [
+            0.0,
+            0.019230769230769232,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.05660377358490566,
+            0.0,
+            0.0,
+            0.1896551724137931
+          ]
+        },
+        "protocol_sha256": "bb565dc8da68067b2dff89a3aa29aa489789a6b99a7db6ed65bd7110edc527be",
+        "result_sha256": "9c6311ca10c74fe7a8de34dc98aaf50240241399ae48df73bdc4a44a7fcbf06c"
+      }
+    },
+    {
+      "best_epoch": 88,
+      "dataset": "SAMPLE",
+      "elapsed_seconds": 439.902703853033,
+      "epochs": 118,
+      "id": "sample-resnet50",
+      "lane": "c0",
+      "method": "resnet50",
+      "metric_unit": null,
+      "params": 23528522,
+      "seed": 2,
+      "test_evaluated": true,
+      "verified": {
+        "checkpoint_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/c0/jobs/sample-resnet50/run2/best.pt",
+        "checkpoint_sha256": "22c24e8a152770d70169e8ce58d3635f28dec36be709aec38704e8cb9da5aa56",
+        "completion_sha256": "7dcbd536080346d104ce14b6940fd629305de795fc2d50a49d81a3627a28d994",
+        "metrics": {
+          "accuracy": 0.07606679035250463,
+          "confusion_matrix": [
+            [
+              0,
+              16,
+              20,
+              1,
+              0,
+              0,
+              19,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              13,
+              37,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              11,
+              37,
+              0,
+              0
+            ],
+            [
+              0,
+              43,
+              0,
+              5,
+              0,
+              0,
+              2,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              18,
+              0,
+              3,
+              0,
+              0,
+              28,
+              4,
+              0,
+              0
+            ],
+            [
+              0,
+              11,
+              36,
+              0,
+              0,
+              3,
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              13,
+              38,
+              0,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              42,
+              15,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              38,
+              7,
+              2,
+              0,
+              0,
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              29,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              29
+            ]
+          ],
+          "macro_f1": 0.09523001734502626,
+          "macro_precision": 0.23328372760366137,
+          "macro_recall": 0.07320177708238593,
+          "per_class_recall": [
+            0.0,
+            0.019230769230769232,
+            0.02040816326530612,
+            0.09803921568627451,
+            0.0,
+            0.05660377358490566,
+            0.03773584905660377,
+            0.0,
+            0.0,
+            0.5
+          ]
+        },
+        "protocol_sha256": "bb565dc8da68067b2dff89a3aa29aa489789a6b99a7db6ed65bd7110edc527be",
+        "result_sha256": "585aea7e1be5599dab6a5f8d43b84bec2799115b24a07783650ceb7f8debddd6"
+      }
+    }
+  ]
+}

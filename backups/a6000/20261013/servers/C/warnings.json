@@ -1,0 +1,17 @@
+[
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1949_c/audited_rows.json",
+    "reason": "larger_than_20MiB",
+    "bytes": 43737169
+  },
+  {
+    "path": "tasks/rgsp_seedwise_20261009_v1/lanes/c_seed0/logs/sar_shipdataset_full_seed0.log",
+    "reason": "larger_than_20MiB",
+    "bytes": 89865519
+  },
+  {
+    "path": "tasks/rgsp_unified_a6000_20261012_v2/lanes/c0shipfull/jobs/sar_ship-full/run0/verified_data_records.json",
+    "reason": "larger_than_20MiB",
+    "bytes": 23590413
+  }
+]

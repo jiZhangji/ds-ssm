@@ -1,0 +1,11 @@
+{
+  "checkpoint": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0sadd2/jobs/sadd-yolov8s/run0/weights/best.pt",
+    "sha256": "3777854dad04ff1960466697f45258a948ab42cc54b1632eef01943a89bc5fe5"
+  },
+  "finished_utc": "2026-10-12T17:09:42.942360+00:00",
+  "protocol_sha256": "2732ddc4569770051d9bfa132831763811c3bbd42aef4c3dd7a5a5c38a0803b4",
+  "result_sha256": "c464526890fa3a558670258b00524bdc98e825b7171e80fcdd4f7ae087fbf036",
+  "schema": "rgsp-unified-detection-20261012-v1",
+  "status": "TRAINING_COMPLETE"
+}

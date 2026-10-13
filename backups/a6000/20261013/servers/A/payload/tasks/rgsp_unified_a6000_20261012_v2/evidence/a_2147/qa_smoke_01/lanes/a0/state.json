@@ -1,0 +1,669 @@
+{
+  "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "jobs": {
+    "farmland-full": {
+      "estimated_seconds": 198.857576202385,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Farmland/manifest.json",
+          "--dataset",
+          "Farmland",
+          "--method",
+          "Full",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/farmland-full/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.0352872920339,
+        "ended_at": 1791810958.3035898,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/farmland-full/probe",
+        "payload": {
+          "dataset": "Farmland",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 198.857576202385,
+          "method": "Full",
+          "params": 3717631,
+          "peak_gpu_allocated_bytes": 1926379008,
+          "protocol_sha256": "24f609da2f3144dad63d546acc98cb9621042d84476e7915daedd0a754fabe76",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.4988264659768902,
+            0.379155682050623,
+            0.49687648995313793,
+            0.37649817898636684
+          ],
+          "updates_per_epoch": 2,
+          "validation_evaluated": false
+        },
+        "pid": 573741,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791810948.240074,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "24f609da2f3144dad63d546acc98cb9621042d84476e7915daedd0a754fabe76",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "farmland-matched075": {
+      "estimated_seconds": 196.34029846709123,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Farmland/manifest.json",
+          "--dataset",
+          "Farmland",
+          "--method",
+          "Matched075",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/farmland-matched075/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.036645843007136,
+        "ended_at": 1791810886.7892401,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/farmland-matched075/probe",
+        "payload": {
+          "dataset": "Farmland",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 196.34029846709123,
+          "method": "Matched075",
+          "params": 3715097,
+          "peak_gpu_allocated_bytes": 1881516544,
+          "protocol_sha256": "cbf852242e1fde515c9516c90476f294d0c035d926f2aa1a94f413cea0bdb943",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.49167865404160693,
+            0.37113938003312796,
+            0.48820073500974104,
+            0.3685885989689268
+          ],
+          "updates_per_epoch": 2,
+          "validation_evaluated": false
+        },
+        "pid": 573477,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791810876.7252584,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "cbf852242e1fde515c9516c90476f294d0c035d926f2aa1a94f413cea0bdb943",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "farmland-original": {
+      "estimated_seconds": 212.63328583466188,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Farmland/manifest.json",
+          "--dataset",
+          "Farmland",
+          "--method",
+          "Original",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/farmland-original/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.036623628984671,
+        "ended_at": 1791810815.2571626,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/farmland-original/probe",
+        "payload": {
+          "dataset": "Farmland",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 212.63328583466188,
+          "method": "Original",
+          "params": 3782737,
+          "peak_gpu_allocated_bytes": 2104282112,
+          "protocol_sha256": "fe7c0e6fd22c6290ba64efaf81b39666ab3e184cda8c18007bb782634a0a6ff9",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.5498471949831583,
+            0.41498931299429387,
+            0.549802374036517,
+            0.4104656240087934
+          ],
+          "updates_per_epoch": 2,
+          "validation_evaluated": false
+        },
+        "pid": 573206,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791810805.1942456,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "fe7c0e6fd22c6290ba64efaf81b39666ab3e184cda8c18007bb782634a0a6ff9",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "ottawa-full": {
+      "estimated_seconds": 201.91510826590402,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/manifest.json",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "Full",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/ottawa-full/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.036425436963327,
+        "ended_at": 1791810743.8502033,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/ottawa-full/probe",
+        "payload": {
+          "dataset": "Ottawa",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 201.91510826590402,
+          "method": "Full",
+          "params": 3717631,
+          "peak_gpu_allocated_bytes": 1926379008,
+          "protocol_sha256": "452e0080095250efe91102edef48c209300632ce6d3b5841fef15302103b8b7d",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.49816042702877894,
+            0.37647189799463376,
+            0.4952079980284907,
+            0.37297679600305855
+          ],
+          "updates_per_epoch": 2,
+          "validation_evaluated": false
+        },
+        "pid": 572998,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791810733.7866142,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "452e0080095250efe91102edef48c209300632ce6d3b5841fef15302103b8b7d",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "ottawa-matched075": {
+      "estimated_seconds": 200.7105775871813,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/manifest.json",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "Matched075",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/ottawa-matched075/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.036395889008418,
+        "ended_at": 1791810672.393684,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/ottawa-matched075/probe",
+        "payload": {
+          "dataset": "Ottawa",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 200.7105775871813,
+          "method": "Matched075",
+          "params": 3715097,
+          "peak_gpu_allocated_bytes": 1881516544,
+          "protocol_sha256": "644f937ddc823a638532bd170457596054546b8a0dc26b8e9331d4dc15578cbc",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.49398881004890427,
+            0.3734671699930914,
+            0.49118688801536337,
+            0.36938176897820085
+          ],
+          "updates_per_epoch": 2,
+          "validation_evaluated": false
+        },
+        "pid": 572851,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791810662.330785,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "644f937ddc823a638532bd170457596054546b8a0dc26b8e9331d4dc15578cbc",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "ottawa-original": {
+      "estimated_seconds": 216.2134250388148,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/manifest.json",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "Original",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/ottawa-original/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.054020858951844,
+        "ended_at": 1791810600.9262154,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/ottawa-original/probe",
+        "payload": {
+          "dataset": "Ottawa",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 216.2134250388148,
+          "method": "Original",
+          "params": 3782737,
+          "peak_gpu_allocated_bytes": 2104282112,
+          "protocol_sha256": "7810f673af85c974e78e5c340a956cb6958f516ffa467e29f04ba091eb8d775f",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.5519633339717984,
+            0.4130812679650262,
+            0.5429631340084597,
+            0.4104027469875291
+          ],
+          "updates_per_epoch": 2,
+          "validation_evaluated": false
+        },
+        "pid": 572461,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791810590.8265235,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "7810f673af85c974e78e5c340a956cb6958f516ffa467e29f04ba091eb8d775f",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "yellow_river-full": {
+      "estimated_seconds": 188.9084843767807,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Yellow_River/manifest.json",
+          "--dataset",
+          "Yellow_River",
+          "--method",
+          "Full",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/yellow_river-full/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.036902412015479,
+        "ended_at": 1791811172.7649446,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/yellow_river-full/probe",
+        "payload": {
+          "dataset": "Yellow_River",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 188.9084843767807,
+          "method": "Full",
+          "params": 3717631,
+          "peak_gpu_allocated_bytes": 1926522368,
+          "protocol_sha256": "1abdd0511054b5364e6a0c98d87f83e1dafe3e5cbd251175498ed129eb07d038",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.4990561989834532,
+            0.30474599701119587,
+            0.49830475001363084,
+            0.3132875950541347
+          ],
+          "updates_per_epoch": 2,
+          "validation_evaluated": false
+        },
+        "pid": 574184,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791811162.700001,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "1abdd0511054b5364e6a0c98d87f83e1dafe3e5cbd251175498ed129eb07d038",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "yellow_river-matched075": {
+      "estimated_seconds": 187.91160298384494,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Yellow_River/manifest.json",
+          "--dataset",
+          "Yellow_River",
+          "--method",
+          "Matched075",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/yellow_river-matched075/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.03524998499779,
+        "ended_at": 1791811101.3119423,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/yellow_river-matched075/probe",
+        "payload": {
+          "dataset": "Yellow_River",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 187.91160298384494,
+          "method": "Matched075",
+          "params": 3715097,
+          "peak_gpu_allocated_bytes": 1884936704,
+          "protocol_sha256": "7acdbd746951f86dfb53f615ed5c36957e2a47f029fafa1ea08e28bb0c9d84d8",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.49748437898233533,
+            0.3056945080170408,
+            0.4940932760364376,
+            0.30563012999482453
+          ],
+          "updates_per_epoch": 2,
+          "validation_evaluated": false
+        },
+        "pid": 574036,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791811091.2503407,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "7acdbd746951f86dfb53f615ed5c36957e2a47f029fafa1ea08e28bb0c9d84d8",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    },
+    "yellow_river-original": {
+      "estimated_seconds": 199.7194615935325,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/run_cross.py",
+          "--campaign-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1",
+          "--source-root",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+          "--manifest",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Yellow_River/manifest.json",
+          "--dataset",
+          "Yellow_River",
+          "--method",
+          "Original",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/yellow_river-original/probe",
+          "--gpu-uuid",
+          "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.038855611986946,
+        "ended_at": 1791811029.8015227,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01/lanes/a0/jobs/yellow_river-original/probe",
+        "payload": {
+          "dataset": "Yellow_River",
+          "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+          "estimated_full_seconds": 199.7194615935325,
+          "method": "Original",
+          "params": 3782737,
+          "peak_gpu_allocated_bytes": 2105719296,
+          "protocol_sha256": "8781cae2f9aa0e24f4179dee8a0e059ba082a9728e251f632b51d2d26ca7b1b0",
+          "seed": 0,
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "timed_update_seconds": [
+            0.544490009022411,
+            0.33401747298194095,
+            0.5404666500398889,
+            0.33189631399000064
+          ],
+          "updates_per_epoch": 2,
+          "validation_evaluated": false
+        },
+        "pid": 573888,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791811019.733946,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "8781cae2f9aa0e24f4179dee8a0e059ba082a9728e251f632b51d2d26ca7b1b0",
+      "reason": null,
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": 3,
+      "status": "ACTIVE"
+    }
+  },
+  "lane": "a0",
+  "plan_sha256": "a40ae68fc37fef0a8be906ae22b73ee5f4cea7b23263c03e4f8a90d115106385",
+  "revision": 56,
+  "root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01",
+  "status": "PROBES_COMPLETE",
+  "updated_at": 1791811172.829817,
+  "version": 1
+}

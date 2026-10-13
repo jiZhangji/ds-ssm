@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "test": 539,
+    "train": 645,
+    "val": 161
+  },
+  "dataset": "SAMPLE",
+  "full_source_files_rehashed": 2690,
+  "logical_manifest_sha256": "2c00618ae1e7cd5405f83af3a0aa8640e5c68871f58406251cd83e8c92c39622",
+  "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/SAMPLE/manifest.json",
+  "manifest_sha256": "d25697494b20ba9f3a44d979ca663d210535fed6c6d5406e57bba2f0c1518481",
+  "selected_images_redecoded": 1345
+}

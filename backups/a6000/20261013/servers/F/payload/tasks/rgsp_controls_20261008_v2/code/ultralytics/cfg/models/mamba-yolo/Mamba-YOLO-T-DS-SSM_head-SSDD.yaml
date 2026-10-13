@@ -1,0 +1,40 @@
+nc: 1
+scales:   # [depth, width, max_channels]
+  T: [0.33, 0.25, 1024]  
+
+# 💥 修改版 Backbone (同配置一)
+backbone:
+  - [-1, 1, SimpleStem, [128, 3]]        # 0
+  - [-1, 3, DS_VSSBlock, [128]]          # 1 💥 浅层 DS-SSM
+  - [-1, 1, VisionClueMerge, [256]]      # 2
+  - [-1, 3, DS_VSSBlock, [256]]          # 3 💥 中层 DS-SSM
+  - [-1, 1, VisionClueMerge, [512]]      # 4
+  - [-1, 9, VSSBlock, [512]]             # 5
+  - [-1, 1, VisionClueMerge, [1024]]     # 6
+  - [-1, 3, VSSBlock, [1024]]            # 7
+  - [-1, 1, SPPF, [1024, 5]]             # 8
+
+# 💥 修改版 PAFPN: 插入 DSCA 消除伪显著性
+head:
+  - [-1, 1, nn.Upsample, [None, 2, 'nearest']] # 9
+  - [[-1, 5], 1, Concat, [1]]            # 10
+  - [-1, 1, DSCA_Block, [512]]           # 11 💥 插入：清洗 P4 融合特征
+  - [-1, 3, XSSBlock, [512]]             # 12 (原 11)
+
+  - [-1, 1, nn.Upsample, [None, 2, 'nearest']] # 13
+  - [[-1, 3], 1, Concat, [1]]            # 14
+  - [-1, 1, DSCA_Block, [256]]           # 15 💥 插入：清洗 P3(小目标) 融合特征，极其关键！
+  - [-1, 3, XSSBlock, [256]]             # 16 (原 14) -> 🚀 Detect P3 输入
+
+  - [-1, 1, Conv, [256, 3, 2]]           # 17
+  - [[-1, 12], 1, Concat, [1]]           # 18 ⚠️ 注意：连接现在的第 12 层
+  - [-1, 1, DSCA_Block, [512]]           # 19 💥 插入：清洗融合特征
+  - [-1, 3, XSSBlock, [512]]             # 20 (原 17) -> 🚀 Detect P4 输入
+
+  - [-1, 1, Conv, [512, 3, 2]]           # 21
+  - [[-1, 8], 1, Concat, [1]]            # 22 ⚠️ 注意：连接 Backbone 的第 8 层 (SPPF)
+  - [-1, 1, DSCA_Block, [1024]]          # 23 💥 插入：清洗融合特征
+  - [-1, 3, XSSBlock, [1024]]            # 24 (原 20) -> 🚀 Detect P5 输入
+
+  # ⚠️ Detect 头索引更新：分别对应上面的 16, 20, 24 层
+  - [[16, 20, 24], 1, Detect, [nc]]      # 25

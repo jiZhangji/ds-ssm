@@ -1,0 +1,8 @@
+SYNC_CHECK source=10070 dest=10070
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py", line 31, in <module>
+    from ultralytics.nn.modules.vmamba_backbone import VMambaTinyBackbone  # noqa: E402
+ModuleNotFoundError: No module named 'ultralytics.nn.modules.vmamba_backbone'

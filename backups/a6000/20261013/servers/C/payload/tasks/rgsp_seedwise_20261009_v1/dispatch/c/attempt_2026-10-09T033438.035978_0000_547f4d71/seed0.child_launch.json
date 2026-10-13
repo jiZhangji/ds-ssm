@@ -1,0 +1,33 @@
+{
+  "child": {
+    "argv": [
+      "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+      "-B",
+      "-u",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py",
+      "--plan",
+      "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+      "--lane",
+      "c_seed0"
+    ],
+    "pid": 3599939,
+    "ppid": 3599938,
+    "session": 3599938,
+    "start_ticks": 16430263,
+    "state": "R"
+  },
+  "command": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py",
+    "--plan",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+    "--lane",
+    "c_seed0"
+  ],
+  "lane": "c_seed0",
+  "log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/c/attempt_2026-10-09T033438.035978_0000_547f4d71/seed0.log",
+  "seed": 0,
+  "started_utc": "2026-10-09T03:34:38.158395+00:00"
+}

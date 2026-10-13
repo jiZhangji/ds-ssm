@@ -1,0 +1,19 @@
+{
+  "experiment_id": "ssdd_scratch_p3_sd16_b32_v1",
+  "records": [
+    {
+      "dataset": "SSDD",
+      "experiment": "ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline",
+      "variant": "baseline",
+      "placement": "baseline",
+      "state_dim": 0,
+      "precision": 0.9111358370825238,
+      "recall": 0.8113553113553114,
+      "ap50": 0.8818758858978692,
+      "ap75": 0.43925875379968915,
+      "ap50_95": 0.4674873191274146,
+      "inference_ms": 7.1204541058375925,
+      "weights": "/home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline/weights/best.pt"
+    }
+  ]
+}

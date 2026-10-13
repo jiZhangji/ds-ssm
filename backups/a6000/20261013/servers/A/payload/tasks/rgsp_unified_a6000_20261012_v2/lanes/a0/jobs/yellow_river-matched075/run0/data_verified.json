@@ -1,0 +1,16 @@
+{
+  "audit_sha256": "1fc527e2f365518375b4e860d4fc02946fb9614ba71dfb2d5a43db51b027a646",
+  "counts": {
+    "test": 16,
+    "train": 100,
+    "val": 16
+  },
+  "dataset": "Yellow_River",
+  "files_sha256": "8b5be7b1ae90681c0f4ba753b66e9332a9f01754c8278ecb36033de391e6ea74",
+  "logical_manifest_sha256": "6a5cd08967ba9ec3439a08c4e25841b95f06a3dddc46aa6613469ebc57ea5304",
+  "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Yellow_River/manifest.json",
+  "manifest_sha256": "159147b22a5c26f1930c68388ec07dfffe7923311bd1c3fafe5cd6a3423c7630",
+  "native_cross_split_pixel_intersections": 0,
+  "preserved_record_identity_sha256": "b4441969dae6780edff60b939673cc9313fe141cae0866e1a3857aad453b9816",
+  "unique_files_rehashed_and_redecoded": 3
+}

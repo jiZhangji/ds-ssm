@@ -1,0 +1,223 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+FUSAR-Map baseline epoch=1/150 loss=0.92001 score=0.59834
+FUSAR-Map baseline epoch=2/150 loss=0.87154 score=0.52379
+FUSAR-Map baseline epoch=3/150 loss=0.85423 score=0.60776
+FUSAR-Map baseline epoch=4/150 loss=0.84068 score=0.61670
+FUSAR-Map baseline epoch=5/150 loss=0.82865 score=0.53322
+FUSAR-Map baseline epoch=6/150 loss=0.82184 score=0.62409
+FUSAR-Map baseline epoch=7/150 loss=0.81221 score=0.61873
+FUSAR-Map baseline epoch=8/150 loss=0.80513 score=0.61941
+FUSAR-Map baseline epoch=9/150 loss=0.79632 score=0.60151
+FUSAR-Map baseline epoch=10/150 loss=0.79458 score=0.56954
+FUSAR-Map baseline epoch=11/150 loss=0.78700 score=0.63057
+FUSAR-Map baseline epoch=12/150 loss=0.78125 score=0.60862
+FUSAR-Map baseline epoch=13/150 loss=0.77777 score=0.62511
+FUSAR-Map baseline epoch=14/150 loss=0.77362 score=0.62559
+FUSAR-Map baseline epoch=15/150 loss=0.76623 score=0.62301
+FUSAR-Map baseline epoch=16/150 loss=0.76478 score=0.62435
+FUSAR-Map baseline epoch=17/150 loss=0.76028 score=0.62720
+FUSAR-Map baseline epoch=18/150 loss=0.75512 score=0.63234
+FUSAR-Map baseline epoch=19/150 loss=0.75244 score=0.62936
+FUSAR-Map baseline epoch=20/150 loss=0.74867 score=0.61094
+FUSAR-Map baseline epoch=21/150 loss=0.74546 score=0.63717
+FUSAR-Map baseline epoch=22/150 loss=0.74212 score=0.63850
+FUSAR-Map baseline epoch=23/150 loss=0.73907 score=0.61460
+FUSAR-Map baseline epoch=24/150 loss=0.73623 score=0.62653
+FUSAR-Map baseline epoch=25/150 loss=0.73247 score=0.59527
+FUSAR-Map baseline epoch=26/150 loss=0.73343 score=0.62646
+FUSAR-Map baseline epoch=27/150 loss=0.72941 score=0.61020
+FUSAR-Map baseline epoch=28/150 loss=0.72521 score=0.63615
+FUSAR-Map baseline epoch=29/150 loss=0.72314 score=0.64019
+FUSAR-Map baseline epoch=30/150 loss=0.72109 score=0.61920
+FUSAR-Map baseline epoch=31/150 loss=0.71763 score=0.62164
+FUSAR-Map baseline epoch=32/150 loss=0.71492 score=0.62512
+FUSAR-Map baseline epoch=33/150 loss=0.71165 score=0.63039
+FUSAR-Map baseline epoch=34/150 loss=0.71128 score=0.62953
+FUSAR-Map baseline epoch=35/150 loss=0.70970 score=0.63251
+FUSAR-Map baseline epoch=36/150 loss=0.70439 score=0.61987
+FUSAR-Map baseline epoch=37/150 loss=0.70311 score=0.63139
+FUSAR-Map baseline epoch=38/150 loss=0.70405 score=0.62066
+FUSAR-Map baseline epoch=39/150 loss=0.69800 score=0.63298
+FUSAR-Map baseline epoch=40/150 loss=0.69868 score=0.63858
+FUSAR-Map baseline epoch=41/150 loss=0.69627 score=0.64018
+FUSAR-Map baseline epoch=42/150 loss=0.69428 score=0.63200
+FUSAR-Map baseline epoch=43/150 loss=0.69118 score=0.63327
+FUSAR-Map baseline epoch=44/150 loss=0.68932 score=0.64187
+FUSAR-Map baseline epoch=45/150 loss=0.68877 score=0.62732
+FUSAR-Map baseline epoch=46/150 loss=0.68669 score=0.62948
+FUSAR-Map baseline epoch=47/150 loss=0.68381 score=0.64502
+FUSAR-Map baseline epoch=48/150 loss=0.68403 score=0.64079
+FUSAR-Map baseline epoch=49/150 loss=0.68202 score=0.63545
+FUSAR-Map baseline epoch=50/150 loss=0.67840 score=0.62971
+FUSAR-Map baseline epoch=51/150 loss=0.67707 score=0.62631
+FUSAR-Map baseline epoch=52/150 loss=0.67649 score=0.63023
+FUSAR-Map baseline epoch=53/150 loss=0.67399 score=0.62561
+FUSAR-Map baseline epoch=54/150 loss=0.67258 score=0.63633
+FUSAR-Map baseline epoch=55/150 loss=0.67100 score=0.62521
+FUSAR-Map baseline epoch=56/150 loss=0.67064 score=0.62216
+FUSAR-Map baseline epoch=57/150 loss=0.66805 score=0.63013
+FUSAR-Map baseline epoch=58/150 loss=0.66641 score=0.62903
+FUSAR-Map baseline epoch=59/150 loss=0.66607 score=0.63425
+FUSAR-Map baseline epoch=60/150 loss=0.66440 score=0.63230
+FUSAR-Map baseline epoch=61/150 loss=0.66371 score=0.62741
+FUSAR-Map baseline epoch=62/150 loss=0.66264 score=0.63319
+FUSAR-Map baseline epoch=63/150 loss=0.66014 score=0.63797
+FUSAR-Map baseline epoch=64/150 loss=0.66119 score=0.64060
+FUSAR-Map baseline epoch=65/150 loss=0.65866 score=0.62701
+FUSAR-Map baseline epoch=66/150 loss=0.65794 score=0.63053
+FUSAR-Map baseline epoch=67/150 loss=0.65573 score=0.63778
+FUSAR-Map baseline epoch=68/150 loss=0.65618 score=0.62662
+FUSAR-Map baseline epoch=69/150 loss=0.65442 score=0.63078
+FUSAR-Map baseline epoch=70/150 loss=0.65411 score=0.63174
+FUSAR-Map baseline epoch=71/150 loss=0.65292 score=0.62268
+FUSAR-Map baseline epoch=72/150 loss=0.65136 score=0.62497
+FUSAR-Map baseline epoch=73/150 loss=0.65209 score=0.63054
+FUSAR-Map baseline epoch=74/150 loss=0.64940 score=0.63692
+FUSAR-Map baseline epoch=75/150 loss=0.64854 score=0.62054
+FUSAR-Map baseline epoch=76/150 loss=0.64763 score=0.63283
+FUSAR-Map baseline epoch=77/150 loss=0.64963 score=0.62948
+FUSAR-Map baseline epoch=78/150 loss=0.64928 score=0.63168
+FUSAR-Map baseline epoch=79/150 loss=0.64664 score=0.62890
+FUSAR-Map baseline epoch=80/150 loss=0.64590 score=0.62215
+FUSAR-Map baseline epoch=81/150 loss=0.64327 score=0.62846
+FUSAR-Map baseline epoch=82/150 loss=0.64356 score=0.62691
+FUSAR-Map baseline epoch=83/150 loss=0.64334 score=0.63354
+FUSAR-Map baseline epoch=84/150 loss=0.64207 score=0.62672
+FUSAR-Map baseline epoch=85/150 loss=0.64280 score=0.63191
+FUSAR-Map baseline epoch=86/150 loss=0.64207 score=0.62990
+FUSAR-Map baseline epoch=87/150 loss=0.64113 score=0.62859
+FUSAR-Map baseline epoch=88/150 loss=0.64018 score=0.62859
+FUSAR-Map baseline epoch=89/150 loss=0.63977 score=0.62779
+FUSAR-Map baseline epoch=90/150 loss=0.64075 score=0.63267
+FUSAR-Map baseline epoch=91/150 loss=0.63996 score=0.62891
+FUSAR-Map baseline epoch=92/150 loss=0.63925 score=0.62714
+FUSAR-Map baseline epoch=93/150 loss=0.63897 score=0.63156
+FUSAR-Map baseline epoch=94/150 loss=0.63801 score=0.61725
+FUSAR-Map baseline epoch=95/150 loss=0.63686 score=0.62837
+FUSAR-Map baseline epoch=96/150 loss=0.63720 score=0.62981
+FUSAR-Map baseline epoch=97/150 loss=0.63630 score=0.62681
+FUSAR-Map baseline epoch=98/150 loss=0.63717 score=0.63614
+FUSAR-Map baseline epoch=99/150 loss=0.63688 score=0.63319
+FUSAR-Map baseline epoch=100/150 loss=0.63578 score=0.62574
+FUSAR-Map baseline epoch=101/150 loss=0.63486 score=0.62353
+FUSAR-Map baseline epoch=102/150 loss=0.63505 score=0.62826
+FUSAR-Map baseline epoch=103/150 loss=0.63533 score=0.63046
+FUSAR-Map baseline epoch=104/150 loss=0.63412 score=0.63041
+FUSAR-Map baseline epoch=105/150 loss=0.63392 score=0.63652
+FUSAR-Map baseline epoch=106/150 loss=0.63418 score=0.62953
+FUSAR-Map baseline epoch=107/150 loss=0.63296 score=0.63035
+FUSAR-Map baseline epoch=108/150 loss=0.63369 score=0.62671
+FUSAR-Map baseline epoch=109/150 loss=0.63329 score=0.62972
+FUSAR-Map baseline epoch=110/150 loss=0.63235 score=0.63516
+FUSAR-Map baseline epoch=111/150 loss=0.63337 score=0.63249
+FUSAR-Map baseline epoch=112/150 loss=0.63190 score=0.63763
+FUSAR-Map baseline epoch=113/150 loss=0.63203 score=0.62170
+FUSAR-Map baseline epoch=114/150 loss=0.63187 score=0.62814
+FUSAR-Map baseline epoch=115/150 loss=0.63166 score=0.63107
+FUSAR-Map baseline epoch=116/150 loss=0.63318 score=0.63154
+FUSAR-Map baseline epoch=117/150 loss=0.63051 score=0.63660
+FUSAR-Map baseline epoch=118/150 loss=0.63112 score=0.63025
+FUSAR-Map baseline epoch=119/150 loss=0.63030 score=0.63126
+FUSAR-Map baseline epoch=120/150 loss=0.63058 score=0.63364
+FUSAR-Map baseline epoch=121/150 loss=0.63164 score=0.63117
+FUSAR-Map baseline epoch=122/150 loss=0.63091 score=0.62947
+FUSAR-Map baseline epoch=123/150 loss=0.63012 score=0.62941
+FUSAR-Map baseline epoch=124/150 loss=0.63085 score=0.63191
+FUSAR-Map baseline epoch=125/150 loss=0.63008 score=0.62909
+FUSAR-Map baseline epoch=126/150 loss=0.62953 score=0.63559
+FUSAR-Map baseline epoch=127/150 loss=0.62946 score=0.63219
+FUSAR-Map baseline epoch=128/150 loss=0.62976 score=0.62699
+FUSAR-Map baseline epoch=129/150 loss=0.62874 score=0.63155
+FUSAR-Map baseline epoch=130/150 loss=0.62938 score=0.62899
+FUSAR-Map baseline epoch=131/150 loss=0.62949 score=0.62831
+FUSAR-Map baseline epoch=132/150 loss=0.62930 score=0.62919
+FUSAR-Map baseline epoch=133/150 loss=0.62952 score=0.62946
+FUSAR-Map baseline epoch=134/150 loss=0.62944 score=0.63168
+FUSAR-Map baseline epoch=135/150 loss=0.62939 score=0.63683
+FUSAR-Map baseline epoch=136/150 loss=0.62989 score=0.63237
+FUSAR-Map baseline epoch=137/150 loss=0.62781 score=0.63124
+FUSAR-Map baseline epoch=138/150 loss=0.62844 score=0.63028
+FUSAR-Map baseline epoch=139/150 loss=0.62770 score=0.62484
+FUSAR-Map baseline epoch=140/150 loss=0.62904 score=0.63345
+FUSAR-Map baseline epoch=141/150 loss=0.62814 score=0.62707
+FUSAR-Map baseline epoch=142/150 loss=0.62853 score=0.62951
+FUSAR-Map baseline epoch=143/150 loss=0.62820 score=0.63378
+FUSAR-Map baseline epoch=144/150 loss=0.62795 score=0.63699
+FUSAR-Map baseline epoch=145/150 loss=0.62723 score=0.63346
+FUSAR-Map baseline epoch=146/150 loss=0.62820 score=0.63422
+FUSAR-Map baseline epoch=147/150 loss=0.62695 score=0.63019
+FUSAR-Map baseline epoch=148/150 loss=0.62872 score=0.62798
+FUSAR-Map baseline epoch=149/150 loss=0.62828 score=0.63044
+FUSAR-Map baseline epoch=150/150 loss=0.62793 score=0.62973
+{
+  "dataset": "FUSAR-Map",
+  "task": "segmentation",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "initialization": "scratch",
+  "protocol": "fusar-map-paper-disclosed-17560-train-4390-val-wuhan-1280-test",
+  "selection_policy": "best-validation-fwiou-test-once",
+  "class_names": [
+    "building",
+    "vegetation",
+    "water",
+    "road"
+  ],
+  "split_sizes": {
+    "train": 17560,
+    "val": 4390,
+    "test": 1280
+  },
+  "imgsz": 256,
+  "batch": 10,
+  "epochs_requested": 150,
+  "optimizer": "Adam",
+  "scheduler": "step",
+  "lr": 0.001,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.93,
+  "momentum": 0.9,
+  "weight_decay": 0.0,
+  "label_smoothing": 0.0,
+  "best_epoch": 47,
+  "threshold": null,
+  "metric": {
+    "miou_all": 0.44293078998007396,
+    "miou_foreground": 0.5578410463286111,
+    "mpa": 0.5123586400368083,
+    "dice": 0.5196887940489305,
+    "oa": 0.785091757774353,
+    "fwiou": 0.6646078303716096,
+    "per_class_iou": [
+      0.09820002093446246,
+      0.7352475780078136,
+      0.8748858825640389,
+      0.06338967841398094
+    ],
+    "per_class_pa": [
+      0.1377785874165271,
+      0.8985647168543235,
+      0.9258385473411936,
+      0.08725270853518893
+    ],
+    "per_class_dice": [
+      0.17883813342291455,
+      0.8474267157334743,
+      0.9332684092405353,
+      0.119221917798798
+    ]
+  },
+  "params": 2346620,
+  "gflops": 1.737421696,
+  "latency_ms": 3.4572000692908964,
+  "fps": 289.2514115346264,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/paper_aligned_shared_20260831/formal_fusar_paper_protocol_p3_d16_fp32_v3/FUSAR_Map/baseline/seed_0/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/segmentation/FUSAR_Map_Paper_Code/manifest.json"
+}
+
+===== 2026-09-01T00:35:12.583994 =====
+$ /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python -u /home/powerleader/ig-ds-ssm/work_train_single/tools/run_shared_sar_tasks_v2.py --manifest /home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/segmentation/FUSAR_Map_Paper_Code/manifest.json --dataset FUSAR-Map --variant baseline --output /home/powerleader/ig-ds-ssm/experiments/paper_aligned_shared_20260831/formal_fusar_paper_protocol_p3_d16_fp32_v3/FUSAR_Map/baseline/seed_0 --epochs 150 --patience 150 --batch 10 --imgsz 256 --workers 8 --lr 0.001 --weight-decay 0.0 --optimizer Adam --momentum 0.9 --scheduler step --lr-step-size 2 --lr-gamma 0.93 --label-smoothing 0.0 --state-dim 16 --seed 0 --device cuda

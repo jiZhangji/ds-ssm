@@ -1,0 +1,199 @@
+{
+  "audit_gate": {
+    "archive_audit": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1949_c/archive_audit.json",
+      "sha256": "a4b42255677feac2173652ec870130a89c647c57e677eb98613551c11c4794ac",
+      "size": 51826
+    },
+    "byte_exclusion_counts": {
+      "test": 0,
+      "train": 48,
+      "val": 2
+    },
+    "counts": {
+      "test": 3974,
+      "train": 31735,
+      "val": 3970
+    },
+    "limitations": [
+      "This is a fixed local image split, not a verified official or acquisition-disjoint protocol.",
+      "Sensor/polarization/date filename groups are unverified proxies, not recovered scene IDs.",
+      "Cross-split exact byte/RGB duplicates are excluded from lower-priority splits only.",
+      "Within-split duplicate images and differing source annotations are preserved, not adjudicated.",
+      "No near-duplicate or geographic/acquisition-independence claim is made.",
+      "The audit is not a claim that every original label is correct."
+    ],
+    "original_counts": {
+      "test": 3974,
+      "train": 31783,
+      "val": 3972
+    },
+    "original_test_preserved": true,
+    "pixel_exclusion_counts": {
+      "test": 0,
+      "train": 48,
+      "val": 2
+    },
+    "pixel_verification_scope": "Duplicate rules independently recomputed from the reviewed SHA-bound full Pillow audit; every corresponding original image/label byte hash was rechecked, not a second decoded-pixel implementation.",
+    "predicted_manifest_sha256": "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78",
+    "status": "audit_gate_verified",
+    "test_internal_duplicate_groups": {
+      "byte": 0,
+      "pixel": 0
+    },
+    "test_internal_semantic_disagreement_groups": {
+      "byte": 0,
+      "pixel": 0
+    },
+    "union_exclusion_counts": {
+      "test": 0,
+      "train": 48,
+      "val": 2
+    },
+    "unknown_source_group_metadata": {
+      "counts": {
+        "test": 104,
+        "train": 773,
+        "val": 92
+      },
+      "hash_encoding": "SHA256 of UTF8 compact sorted-key JSON; ordinal unique name lists; no trailing newline",
+      "meaning": "Only existing missing sensor/polarization/date proxies in the fixed source are accepted; null is preserved, not converted into a scene or acquisition ID. No sample is excluded by this check.",
+      "name_family_counts": {
+        "test": {
+          "newship": 75,
+          "ship": 29
+        },
+        "train": {
+          "newship": 586,
+          "ship": 187
+        },
+        "val": {
+          "newship": 66,
+          "ship": 26
+        }
+      },
+      "name_family_pattern": "(newship|ship)[0-9]+\\.jpg",
+      "ordered_names_sha256": "3ae853c94d02fc793d8da6f35b75c25d23a90164bf0289131dc5f59240d4d40e",
+      "per_split_names_sha256": {
+        "test": "8ce32232d29d72780e9c5e0ba5d0fb8906f53d47c62008792f6b49690d460bdc",
+        "train": "9078bc56a143acc1cc8d4747c86a19b72cb84e7614cfbe09b42cb580d6c126d7",
+        "val": "4d995d9c09fc19b92ff7f348cabd81c05b92a65dba47018320f6c3de1488765a"
+      },
+      "source_manifest_sha256": "a69d2acf8fcf2d90cf691b15c007549002be5036c7155493e5cdcd809f25dc4a",
+      "status": "exact_known_unknown_source_proxies_preserved",
+      "total": 969
+    }
+  },
+  "helper": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/ship_gate_v2.py",
+    "sha256": "caabe5022a1d53d94747c0091f9899413b5a86b1fac21e700a343baed3be4806",
+    "size": 47887
+  },
+  "hostname": "a6000-c",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-ship-publication-gate-v2",
+  "source_evidence": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+      "sha256": "37e1e2254643541118e4bab29d11cb93f1483847fc73aa69be8d63be4907cbe0",
+      "size": 225182
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/manifest.py",
+      "sha256": "ff1f6708e735d5bd91d9c341edfcfdcc714829c5ab5ee0c6110df263d5b6fed7",
+      "size": 19948
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/deferred_data.py",
+      "sha256": "dbfd4cadcdbe6a7533bfb679ed540d2739c8ee6b961b4558bd5e66e6e05a7fb1",
+      "size": 6381
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/audit_external_archives.py",
+      "sha256": "772fdada1542a3bc2c644859a6cc82ae76dac150ddf2459a83462e6695473b0b",
+      "size": 20251
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/stage_shipdataset.py",
+      "sha256": "81e621a130f8f6e66c3785c27a411ebe46dc4cb9733f1299411a35d0352f41f8",
+      "size": 10134
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/ship_gate_v2.py",
+      "sha256": "caabe5022a1d53d94747c0091f9899413b5a86b1fac21e700a343baed3be4806",
+      "size": 47887
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1949_c/archive_audit.json",
+      "sha256": "a4b42255677feac2173652ec870130a89c647c57e677eb98613551c11c4794ac",
+      "size": 51826
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/source_snapshot_v1.zip",
+      "sha256": "aea74cd1d3a55b750004b72249a8896c13a7751025b5398d8eb2e37098bb9b69",
+      "size": 5795637
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/raw_archives/ship_dataset_v0.zip",
+      "sha256": "6a185fbf2f51408d19ca941745581a8e1aabbacd33db6494985621086495481e",
+      "size": 426990175
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1949_c/audited_rows.json",
+      "sha256": "3d7bc69c8e58f7d3341993a96f9c019544b40e4db375e4ef6734276492416adb",
+      "size": 43737169
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1949_c/byte_groups.json",
+      "sha256": "b29757b6c2f8599e73c17d91116e2e7301abdbfcb3b1a57fbd203fef2a8e8957",
+      "size": 257702
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/audits/ship_recovery_20261009_1949_c/pixel_groups.json",
+      "sha256": "ce562d86a9012b050bf44c40211d37b812caf2860b785d3295af70b36bc1494a",
+      "size": 257702
+    }
+  ],
+  "staged": {
+    "counts": {
+      "test": 3974,
+      "train": 31735,
+      "val": 3970
+    },
+    "descriptor": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/dataset.json",
+      "sha256": "c14a5295a56a23ccedb9edc3548e315fdafd3f89fea351274d4485131caaa3c5",
+      "size": 631
+    },
+    "exclusions": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/exclusions.json",
+      "sha256": "4177e9880749c0144941ffdf9aee7da0c407c973ef038c38521da59e581b2d8e",
+      "size": 19953
+    },
+    "manifest": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/data_content.json",
+      "sha256": "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78",
+      "size": 20455551
+    },
+    "original_test_preserved": true,
+    "readiness_present": false,
+    "source_audit": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/source_audit.json",
+      "sha256": "1a45e249df41642a998bed9c51e6964a238d94b9ccfee2c25985697b907c2b76",
+      "size": 47153
+    },
+    "stage_complete": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/stage_complete.json",
+      "sha256": "d15725872cd253f23f00f0d143633f4b2fa35d25b94235beff24356a6fed0ebc",
+      "size": 490
+    },
+    "status": "staged_verified_not_published",
+    "yaml": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/data.yaml",
+      "sha256": "d41830bc75db60353c19250a857815af787d40c9d5c8e6da7e2662c89d700386",
+      "size": 169
+    }
+  },
+  "status": "candidate_inputs_verified",
+  "verified_utc": "2026-10-09T12:16:21.199686+00:00"
+}

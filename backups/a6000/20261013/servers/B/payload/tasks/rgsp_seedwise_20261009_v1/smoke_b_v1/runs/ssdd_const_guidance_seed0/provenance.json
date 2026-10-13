@@ -1,0 +1,1450 @@
+{
+  "code_hashes": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/mbyolo_train.py",
+      "sha256": "61c3e373b0ac7587eb051b66bfa62786a358bd780ab50901ce8512076bd4c2ce"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/pyproject.toml",
+      "sha256": "b3a390a3f3982780e61c46653d07ce48a10ba2d6882fcf1b991f2897947063dd"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/audit_fusar_map_manifest.py",
+      "sha256": "e349995fddf3985342dfcbd38e985c7425e86422b2f9cf346ab904146fcb8deb"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/audit_paper_aligned_detection.py",
+      "sha256": "acba99a102cff8bf39be47de52ce4b4bd60642917f5feec1be31fe994069b357"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/audit_sadd_data.py",
+      "sha256": "df299ac168afeb6e232542b7ed599c7134013886f9323e695087dc303e753e17"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/audit_ssdd_content.py",
+      "sha256": "12a19adb7a484893fecd1f0ca954fb044074cc4642883755b6d90dbe33be8a43"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/benchmark_shared_segmentation_step.py",
+      "sha256": "6e13f6cac50572b87120e4134f59c0b26644ecc020c9dfb3abae9112bc10f5b8"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/bootstrap_a6000_small_tasks.sh",
+      "sha256": "640374bc77583b759a57831ff18b8e7040a8a1d6107ee1b75bdaed76511e456d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/bootstrap_sar4_oneclick.sh",
+      "sha256": "980f17b023cb6f03cb3bb4b3412d54d28e9727abca3a420aec1621cf5e9f8fab"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/check_dsssm_cpu_fallback.py",
+      "sha256": "28b402498d75a9b4463b9ee8fdf00aeb35388ef468eac1fc17abc55e0f25c070"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/check_ogsod_ablation_configs.py",
+      "sha256": "fbe9c3c02a0e7f8347796c725e9509694acd34716cdfd7a4551799aafdced29e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/collect_sarmix_remote_results.py",
+      "sha256": "3025046055848f108ca1585c2baf727dcabeec7645a186d1a882ad2388a6368f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/compare_ogsod_per_image.py",
+      "sha256": "1341d25a54523d88c38c50999158d323d73e840bf28f0db524ba6d14c12861e1"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/convert_sarair_coco2yolo.py",
+      "sha256": "e69794a015c6ffff0cd4d224b7b0e203d334c0cf0c4b94a6f3d6526d5f7c496b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/deploy_a6000_detection_queues.ps1",
+      "sha256": "a98236b19988276bb361c821fbfa08e9df0f10da9d1e9f5d270fd7e57a01fcba"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/deploy_all_remaining_to_a6000_a.ps1",
+      "sha256": "8ce0a951bf5ecd6119dea7bef91d0adeaac263a107ff652dbef872e748bd7277"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/deploy_and_start_3090_1.ps1",
+      "sha256": "17e8eaceaac8a676dc3134f7ad44b6b275945eba73992a4a4fe6d7315b8671b4"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/deploy_remaining_from_windows.ps1",
+      "sha256": "869ffd71acd6517c966a2c64e294ce94aef131562d2259207dd075a0544fc6d0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/deploy_remaining_to_a6000_c.ps1",
+      "sha256": "793ca13541c62f3c60eb22512863687a935fa5dc184a492e50c86a08c36fa39d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/download_cross_task_small_data.sh",
+      "sha256": "ce5ff0aa3918837470d62ae2ffc10d3c1832f71cb91d828b6142f3521d35ddad"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/download_modelscope_file.py",
+      "sha256": "99be7cf37b5f3f55b343a734888a8e64e092155dff6215732edd7793bbfd04f5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/evaluate_ogsod_ablation.py",
+      "sha256": "7089221e7f299c6d9098cfc1dba219858347e8c930e2e1e019e38da3c0619a81"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/evaluate_ogsod_strata.py",
+      "sha256": "fa96401d51006191d94772993aeb34adb98175ee7755624b3c6a417f5e8efb6c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/evaluate_sarmix.py",
+      "sha256": "b618852403eeda8737cadd847ac5193848325141eb6666dac10fa8185d67c50d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/evaluate_ssdd_sweep.py",
+      "sha256": "eed7e5a038e7600e9a86d020e31aee3034934e6cb3c3d48747391a84de81fb43"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/gpu_idle_scheduler.py",
+      "sha256": "22ad269bfebcec5cabf8707ea8e35ca7c177b33b66ee3b1fb402cb5429645d87"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/ig_ds_ssm_experiment_queue.json",
+      "sha256": "3af65b5bd6aa80988672fec87373e6a7080da40cf50a27d26edb5860008edbc3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/launch_remaining_3090_1.sh",
+      "sha256": "dce41ee4ab4e6a34e4662d60b7ab931b055d9974f055fc3995a24124143973bc"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/launch_rgsp_lane.sh",
+      "sha256": "3f6dba845d362e43c4d99f744a0b2ae948f69fb9da9c898b620abf1f9a18b0f3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/launch_sadd_lane.sh",
+      "sha256": "952260b12085c9ca1004e931da9549dffe109f9dd255083febaa8b2916930070"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/prepare_cross_task_data.py",
+      "sha256": "d2dbc3438e43ceb9c792e0c42d601c8e04a397d6875c87aacab9b082355418ba"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/prepare_cross_task_v2.py",
+      "sha256": "a43d95d903fbb6492bd24ab6f377d1e09149968929b480e330944141430f969c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/prepare_flat_yolo_detection.py",
+      "sha256": "29bda3db6c59be0a143fcf072be1d322045ab02ab329ad365c8387de5f855bee"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/prepare_hf_sar_det_datasets.py",
+      "sha256": "76d3bac95210a8d0c81018638b1d7bac07321992288c5e66b7f46e3c1b6f0f05"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/prepare_openearthmap_sar.py",
+      "sha256": "6270ec8d99c9eb80477f27edc9108f862bb6b2984ade4962bb8058a95537e669"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/prepare_sarmix_proxy.py",
+      "sha256": "4e788da93d907eb04fd6169076e4aa658c1137b9616a6d3413d23e6dd3f10934"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/prepare_srsdd_coco_yolo.py",
+      "sha256": "487ba40e48f8b84772e11d268fb0309d4f67f2835aad98d742366d68ab2ef3f0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/prepare_ssdd_bbox_voc_to_yolo.py",
+      "sha256": "3dd78f32b3a96b9036805c4ac094d831ce565671139e8f302ec3398d9b18800d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/prepare_ssdd_coco_threeway.py",
+      "sha256": "9c42d063b81882000a6c778475b9cf1ce7786d435978f84fbc25a241ce7012fa"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/prepare_ssdd_coco_to_yolo.py",
+      "sha256": "0dfe1dede9f364c2d00fe9f5833d4e3a722cd740afc9bb32842b44fc0ecacc4c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/prepare_ssdd_yolo.py",
+      "sha256": "1c50296a1e0c4eb94f0409f0cba30f9f131996f6937a6557b5db71982eb14463"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/queue_a6000_detection.sh",
+      "sha256": "a30a79528805528f2e60b6ab1775c23fabc03624aad66f6e4c6de93c08b8a178"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/queue_fusar_count_aligned_after_pid.sh",
+      "sha256": "9a7271e2199b429e5fd7a1134811368beba5865ed5f5a5b8e1630071487ce878"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/queue_openearthmap_sar_pair.sh",
+      "sha256": "e38c18490a700aa858c24770d7308f2e8e51f4e7e0f0b2717c784eb45582213b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/queue_sarmix_p3_when_idle.sh",
+      "sha256": "fa57066d1ac80f13deb0416ae1934f6e6684b64924f4308cc28f4a1aff4eb8a0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/queue_shared_after_current.sh",
+      "sha256": "92f3051cbb10af85f8eb4111b88e6ac8fe32811b16c414d59be55dbc00a3efbe"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/recheck_change_bs_matrix_20260905.sh",
+      "sha256": "cd64e1966658fbb34374da9b99aa087579722a80788eaa6ff7f2b1aa7bffcdda"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/recheck_sar_acd_bs64_fixed_20260905.sh",
+      "sha256": "102301f66a6d25e2a1e5c68d30fa533d500e5364289ca0108fe0f8891a751adf"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_a6000_small_tasks.sh",
+      "sha256": "cb6d324bbe43ca34cceaa76104092c701630beed2676254ec056cee7a99be98c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_airship_d16_b32_a6000d.sh",
+      "sha256": "2cca3f18c142ae64186c3429b1d9f6d5cbbe00462eacb92e36b7576fd18f836d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_all_cross_task.sh",
+      "sha256": "875b96b3f460d5fdb1568a23ce6ffb32b541462a930b3fb9255ed442623595e2"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_cd_acd_bs_warmup_queue.sh",
+      "sha256": "e443b37b1ff921cdf08bdb3a9e77bfb7ec718098fea663a4555c5443293bab16"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_change_bs_queue_after_openearthmap.sh",
+      "sha256": "871d81c9705e157658bc2114522ea94d32682a671e21fbf7f18e60c47c167853"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_cross_task_remaining_1080.sh",
+      "sha256": "9a0121f88395bf67453e55a3288f99aeb90705a262936a332b7964b4f6579357"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_detection_after_pid.sh",
+      "sha256": "a2c2d37fe2aaad09582bdcbcaa377dbe1bc89fbffe9e14a68494b4f0d842ef92"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_detection_v2_queue.sh",
+      "sha256": "0b3d07c94cc673b64e0210e3694d9edc9f9147098e85e1c58f9d89e0ad69a870"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_fusar_count_aligned.sh",
+      "sha256": "beb421c796628e6a8116dd07024ee112481c9b4661a050552233c49e1fc73c6b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_fusar_map_net_head.sh",
+      "sha256": "c1414455f183f9f5a266b264a52c824c6d407fa1ec7e55d224a177aa2d19b15d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_historical_config_detection_p3.sh",
+      "sha256": "b27844156714526932c84c4327495eeb4c219fe606d778c43a37e6b77200729b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_ogsod_ablation_matrix.sh",
+      "sha256": "095a28222d39a8cbe51e2c7c53e58cbb78e941ca7179802994025889cf8f7cd2"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_openearthmap_bs64_queue.sh",
+      "sha256": "0324cc491222a1ef0584a7301ec01f3de7ab00070eebd80d48b493424267c3b8"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_openearthmap_bs64_queue_20260905.sh",
+      "sha256": "06f9730eeb3b4054bdb62a9c3e738b62136cf4c691cc29d53329dd91a705c864"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_openearthmap_sar.sh",
+      "sha256": "1ba74150aed3ab75e803e9a396e691cf694e3c8d3f34d4a70aaf096063f62a55"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_openearthmap_vmamba_decoder_warmup20.sh",
+      "sha256": "88cb72a84614836c874d06f925573473f62b538ab5913b538dda5430f2d08afc"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_openearthmap_vmamba_pair.sh",
+      "sha256": "5cf1d3712d0d837f6ea9cbb80fb9ae366fffc76bbfbcd679490c17cdd3d24f15"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_openearthmap_vmamba_warmup50.sh",
+      "sha256": "88cb72a84614836c874d06f925573473f62b538ab5913b538dda5430f2d08afc"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_openearthmap_warmup20_bs32_after_scratch.sh",
+      "sha256": "47e38cdbd4cd794d8fcbc83abdc0d926ff1d7ab0732834ade0f003ac268e0986"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_openearthmap_warmup_bs32_queue.sh",
+      "sha256": "8109d1b770f5bca87854a928ed4325fb1df2a0f1348eb854508e54a7c93db449"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_paper_aligned_detection.py",
+      "sha256": "beef510eeedf1a51498278919f70935ee277ec59354621386f359d2fb529ae27"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_paper_aligned_shared.py",
+      "sha256": "4016cb262fb94672d4da017bde80b71051973587961f50bd92b599bbb9de3f44"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_priority_optimization_queue.sh",
+      "sha256": "f7e177c7db71643e395d096b15d14fd595c5fe80d1e130bed64d281e44bf6112"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_rgsp_controls.py",
+      "sha256": "5578f4d136d4ffe4457193b0c0f5f1affe7e64522b19eb4c26ab638171bd21df"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_sadd_controls.py",
+      "sha256": "7596cfb0422f65b2cac9ae2799b53b908dfc784d6a4957e0e8d10805f97caa5f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_sar4_full_suite.py",
+      "sha256": "d7a27fc4c3f725b58691a6b54a81147ba5d5b050bec4c45ad9d84c93b2562478"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_sar4_full_suite_oneclick.sh",
+      "sha256": "dd01ea5ac6dedfb2236eacdde200de5a572d304d41164b78efb206fde9e554d9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_sar_acd_bs_warmup_queue_after_openearthmap.sh",
+      "sha256": "2a610b9031ed85580949517d6efbb9cc5c249d6eca4fdd2229e1fb952de65aca"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_sarmix_proxy.py",
+      "sha256": "b16699d43aeb1a16c6ed3479cef2b47543f551fc2e4ffe9ada7fa3164eee3511"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_sarmix_proxy_oneclick.sh",
+      "sha256": "994fdc429b06e298e809a6064f67f84c7a0c2362932ef589b66b0c6eafada850"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_shared_sar_tasks.py",
+      "sha256": "a3f7e65a5864862b77c6071d2d626d74b23f773fb1e0b506873c668678c90ea6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_shared_sar_tasks_v2.py",
+      "sha256": "e90e621c6738902f39a65e18ae4344095de54162e67ed5e5bc5ef9b37f365aa0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_shared_sd32_1080.sh",
+      "sha256": "916cb4b101eba352fecaa8887f89af72cb44708a393f338f88ffb0b4504de085"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_shared_subset.sh",
+      "sha256": "4c16fe43df185e087f4afbb2886e4260484e8afdd5aad3262c5faa5fed72788c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_shared_v2_ours_only_queue.sh",
+      "sha256": "b52aa0fadbd62cec2d2b75b8eb0a75a00d1c50330a0609f319ed5f158d358f2d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_shared_v2_queue.sh",
+      "sha256": "35ff55bf56f41af6c2f4c2229d8106ea0eb28ad3d6cbbe34aacc95c60949cd2d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_ssdd_historical_checkpoint_diagnostic.sh",
+      "sha256": "ed4889144c9ed4bcbed4f57be29124820fcf505b747e389920a00002eb64eb21"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_ssdd_historical_warmstart_pair.sh",
+      "sha256": "c0d9e1e43b85197fc73b684852941f90e387b04382af1082c2ddc80e16bfdc1d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/run_ssdd_sweep.py",
+      "sha256": "0b8ad5cf5972d9d0ddd038e20810cb283370ba5a610ebc5abdfbeedd97ebf1da"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/smoke_shared_sar_tasks_v2.py",
+      "sha256": "c6153ac57094461c285909a24f2d175f6ec98c7c83e288ffb1c765ac83013ff9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/snapshot_ogsod_model.py",
+      "sha256": "030c5b7c12a3cdf7b445e54f60dc9769d46b7fadf01acbe97b81335d7c15d486"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/snapshot_yolo_dataset.py",
+      "sha256": "d495308ffe2f99b81cf94eb86e147b6da40ef70a6821063ac3ddb9896c7014db"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/start_gpu_idle_scheduler.sh",
+      "sha256": "062ccda231184a8e9eb5fc5c513f3cfb12023aa64adfa8d9fb746113b7facbd5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/status_sarmix_proxy.py",
+      "sha256": "99045ee38340aeaa55491e6397c7dbdfd3b2e5daae37fc37e37b2e8a01685e4c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/summarize_cross_task_results.py",
+      "sha256": "4ec23d5544f97e901e9b85bf52143321d6ac51c776487dc381382443f3b93a0b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/summarize_ogsod_ablation_matrix.py",
+      "sha256": "38409c4b97c890da2b67d06de6aaf55a28dbb563eebd837eed4ae240cddbe221"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/summarize_sarmix.py",
+      "sha256": "c4d55157eeefbd39a08bc801c4ba9c22d4f63645c02ea73c6e23b01de2cd0058"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/sync_a6000_detection_chunks.ps1",
+      "sha256": "ae2688ce73049f0618bf6b93e4da00a1c380ecffb81c98f50333e23844dc6b2b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/sync_a6000_detection_data.ps1",
+      "sha256": "f7c03839e94ce0d2acd77b6d8f37d4367f183b15dc53d17bf62888b73dbb3b5e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/train_rgsp_control.py",
+      "sha256": "749b311a118eafa5eaa072c62a50bdc387373bf6447ce4a8c7b26d77031ab9f1"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/validate_rgsp_controls.py",
+      "sha256": "6a51c4295048d6e7a6a88939a1efb5a22faf042a8ffe85e0da1830f138948f9c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/validate_rgsp_expanded.py",
+      "sha256": "05c81f0b51f4f6730abab4b99138eafacd70c28ec1137d0f661a705b36afc650"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/validate_selective_scan_backend.py",
+      "sha256": "03a7fb82a673b6dc512437a50ace03a8345a9734e5237c2c408b10146fd45f9f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/visualize_dsssm_motivation.py",
+      "sha256": "dbb9a5f7faa40dabfa9d9bf59bf63d6e3066f0fa815ab246e55cb637682a857b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/visualize_pfim_importance.py",
+      "sha256": "df60ee45f4a6e04cec567085efc8c82ad347fe07bf4b2e87be1b84287803f861"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/wait_and_run_sarmix_proxy.sh",
+      "sha256": "545d330de0a8c28fbf00f6f44c2a4900f9a3b4b9a57060f91fd7657028ca6e1f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/tools/wait_and_run_ssdd_historical_diagnostic.sh",
+      "sha256": "ffd9808d23f496646a6fca4dc06716bccc9702187da49b51f5885520a1619d64"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/__init__.py",
+      "sha256": "3d24292f13658b3e770f62e3a3e6f673e7b0ec7114fc3415b4a2fe847ac5a547"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/__init__.py",
+      "sha256": "0bf01df79e30e8fc4dd044c1fea9b137b42e9778313af779fb303b0cd87df9de"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/datasets/OGSOD.yaml",
+      "sha256": "487a8bc6d6726a3c723fcfb118d1042d130ac2561b6b6f77a9ad99d4fda88cc7"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/datasets/SAR-AIRcraft1.0.yaml",
+      "sha256": "b69aa67d6c72258536374f3b2eaa37dc32d4189db5a42d7e0f7da718b476c40c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/datasets/SAR_AIRcraft.yaml",
+      "sha256": "b69aa67d6c72258536374f3b2eaa37dc32d4189db5a42d7e0f7da718b476c40c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/datasets/SAR_AIRcraft_HF.yaml",
+      "sha256": "017bdf0cbcddf3254c372bcc679c5a5438cc1ce83451a02be57cb99dbfe4a035"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/datasets/SSDD_HF.yaml",
+      "sha256": "80133a4c459eea1146af6bff47a4fab3655c633f1346a34e14955b7cd1ce7e5b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/datasets/SSDD_YOLO.yaml",
+      "sha256": "bd6dd252d90de5b2c19db13b4432027496adb38591711aa6486190db7060c6f4"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/datasets/ship_dataset_v0.yaml",
+      "sha256": "ad376a982646a88bf80558b87dcda27fa12c1dc3e5e9b7a782b86129701c101c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/default.yaml",
+      "sha256": "0abcf5e743f7a212610981969ff719de8de9a338ec7b6a0a3e656c1fd637b8f6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/README.md",
+      "sha256": "1b5a9cb75f5faefb82cd8f069268118b02abc5c3b01e605df90d0c253f635ec2"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-B.yaml",
+      "sha256": "ea5f668ab3054664dd145db5498f7336f92c90453e6d083df1835932816bfbd3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-L.yaml",
+      "sha256": "6eef4245c810e258c8992c413a48042be3573c3d39339b05b0d272430619fb6c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-S-DS-SSM_Backbone-SSDD-ex7.yaml",
+      "sha256": "402c6a584bb004c2deaac6f2f402f31a45105a733bab4de88099c2fd19f78390"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DG-DSSSM-SSDD-ex30-baseline.yaml",
+      "sha256": "21c9c94bd34587136cc9a4e9544562c6de092c53af17d77ebbb25a42c01b3fd9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DG-DSSSM-SSDD-ex31-erase.yaml",
+      "sha256": "6b047ce3a1c37d2543331aaae7a8ae7230d4043c9cd480c913fd7d01883a3c8e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DG-DSSSM-SSDD-ex32-write.yaml",
+      "sha256": "5469ab0684e7dcae778d44f639b13b9739832c033a8109f22b5499c136d7b466"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DG-DSSSM-SSDD-ex33-erase-write.yaml",
+      "sha256": "5c532dc0a400408c30eac0a02cfd2c9f04c6f2a7fedbddc86bbc77a6027efc47"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DG-DSSSM-SSDD-ex34-erase-write-delta.yaml",
+      "sha256": "b8b04bdc94bfc23aa3d8fc1d675a8072b113d792f5a8602d50be5552ff7942ef"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM-OGSOD-no-pfim.yaml",
+      "sha256": "718f1759da50bb521a8ed87183913500e75c6965933d5ae16df4b9a51cb56566"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM-OGSOD-pfim-delta.yaml",
+      "sha256": "6e99c1c151040c7b981c0e025b1228869f39cf501062f55f65b8dbb208abbd2f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM-OGSOD-pfim-full.yaml",
+      "sha256": "0fbf0127dc1f2f30f3d5d706139519b54bbdea6fbcedc0b7ab7b30b65f7cbe82"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM-OGSOD-pfim-gamma-write.yaml",
+      "sha256": "d6951226126d74861e9a491ba52da5f2bda4f919b62c9d43a16a3dcb53f903c5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM-OGSOD-pfim-gamma.yaml",
+      "sha256": "b6c05c148d516fb1b8ef079f166022673635633a34ddec6ab8e355198519ac3d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM-OGSOD-pfim-global.yaml",
+      "sha256": "733b543c24908438e39b6ba227603f0495e01864341e6da760913ae803e662fc"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM-OGSOD-pfim-no-2dstd.yaml",
+      "sha256": "3b4dda440d42e57dbd6da41f1cc40fd35c66990b5e8aeabfaa7117519cdcaeaf"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM-OGSOD-pfim-write.yaml",
+      "sha256": "fce3be40c367609752f5790aa150c0c7a2745e9e7ec3b4b847125d5b9a08ba4a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM_Backbone-SAR_AIRcraft-ex7.yaml",
+      "sha256": "f64cef088f92f2f516ce7b2b18620d0b8448bfaf7590a449418ad41cd4344e04"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM_Backbone-SSDD-ex7.yaml",
+      "sha256": "56a978786932ac0f3f8a23631688f07dbf1ffabe83e2d575c883f5bd8c3a252e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM_Backbone-SSDD-ex8.yaml",
+      "sha256": "ab177658a9f351fdec1901104d8344a354b4dc6727e2a193c5da0a9b11e3bbf3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM_Backbone-SSDD.yaml",
+      "sha256": "ab81693c2db744360d26f53d9e10a382e49efe0d70d10c26611054b8d7570585"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-DS-SSM_head-SSDD.yaml",
+      "sha256": "fd650f63afab609e1fcfa1af11292bb268bf8837e304ced63fa6495a9e72c512"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-OGSOD-baseline.yaml",
+      "sha256": "d363edd4d195e6d86b308da2ac72dcb0e21131f6b29a067336a959b5015e67b0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T-SSDD.yaml",
+      "sha256": "a6a3ec3ed9990d7aeba7022a248195942013a2b6bae2857883532caca07cbcee"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/Mamba-YOLO-T.yaml",
+      "sha256": "c8d26b4270ee2130d0cf0debef7f511bc6260e5d397983d4c69cabe54aedf44e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/mamba-yolo/yolo-mamba-seg.yaml",
+      "sha256": "84e79da40074d304c9d532c58d733ad4fcb424de491a4d78e47d63e758f2b06f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/rt-detr/rtdetr-l.yaml",
+      "sha256": "35bce2f77b40261070ebd8543419335da78c316c16ead59e02c74df329ebcae5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/rt-detr/rtdetr-resnet101.yaml",
+      "sha256": "a349d6a0a7224febf2a42d9e4b9a8811635269cd0beafc0bb5b2bdb9c425b86e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/rt-detr/rtdetr-resnet50.yaml",
+      "sha256": "adbeb85902beddafcf79b51ccba09ba6c92f942ef81fd337b4c22bdd1e6f1c35"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/rt-detr/rtdetr-x.yaml",
+      "sha256": "139bada8d2fba0dcedc8f2b24863e85444fc44851ea80a9c85d6ac96ee596f98"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v3/yolov3-spp.yaml",
+      "sha256": "35f289781a438034b05e8edf48df26c90510ebc60b07dc51b6a7418069553c7b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v3/yolov3-tiny.yaml",
+      "sha256": "e669c618237e98d0efaaf3b3d80cc685fc04834d5ec7378734f4b7340de9a226"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v3/yolov3.yaml",
+      "sha256": "fbde29e2d78f743b5da67cfbf6eeced6c0a157af644e2d35945c5c546a09f0c6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v5/yolov5-p6.yaml",
+      "sha256": "dac9822ae193f10dbade2d0898924d53c3abf975e6b8b31ff496a7066e138e21"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v5/yolov5.yaml",
+      "sha256": "b1139057cb60bfa94b460c70043228f4c6b3ecd509818651fc8e0c6ccf4ed414"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v6/yolov6.yaml",
+      "sha256": "49bd279a6b5daaa1c216e131c93f878a9d7464be26e776e16252a07b49051826"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-cls-resnet101.yaml",
+      "sha256": "b82ea49742efbe56fc6e820e47b05d02a6134bc62e707ffdd591b7a4e5884bb4"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-cls-resnet50.yaml",
+      "sha256": "16090d99c80b8c0414df8ba41f82cc23acdcd6968ef23ee3caaaf1fb7aa38bd0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-cls.yaml",
+      "sha256": "fae37821a0871419b2275659d3d87677ccf771e5684965c3e3875b151b0179a0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-ghost-p2.yaml",
+      "sha256": "6e7e431f0c19de603152f6b2c2aefaff824d81669b3053029c23684e92d20ca9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-ghost-p6.yaml",
+      "sha256": "92a81b10a36e6bb5f01fde73b5e5ba2335da0238da580d258f3982008edbf04f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-ghost.yaml",
+      "sha256": "5941ce235f1a035d648003430966c30f2de3b303653ff9c8929597d3d05f06e2"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-obb.yaml",
+      "sha256": "4efe490d94cb3ab7f2063de082ab1ef528630e933e9c8148c618ac7902b02440"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-p2.yaml",
+      "sha256": "b5f1e4915002d1f90273b01b8ac4f31a95d6dc57e4dbe2b9fb08d17926e6ec6c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-p6.yaml",
+      "sha256": "f71549a3aa95bb14510c97c63664c83ea8c0be8266c5c7503a07b0b8d54e1c78"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-pose-p6.yaml",
+      "sha256": "cb3c48db46cc05da3a7f991de7755fb841e6fd0a84fd5deec00bc5244d136ebd"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-pose.yaml",
+      "sha256": "0c7a0977babb1f0f3d2415f98a6f8cdcd586f2681edd574f54d6f82b88d3cc84"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-rtdetr.yaml",
+      "sha256": "a1fba37fbecb5b7b2d5d2ebe95e54cfc4c5139689f27ce03e56a9186e8f25492"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-seg-p6.yaml",
+      "sha256": "39f30b30704e63a76de3f62c36e3c03463f033704f05fee2fd5ded40fc84c581"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-seg.yaml",
+      "sha256": "7cdf399bf6833021f8a13277cfe7edf7c3dd87a764d29661e280752c89e826b0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-world.yaml",
+      "sha256": "4574e9fed822c7c75b9d51e9adaa7188ad9a6b1eccdaa21f9ae47e680bdee2c5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8-worldv2.yaml",
+      "sha256": "7ef195531be504e8cde8b52289a886b278cae592a3c18196c60909e3d84698c8"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v8/yolov8.yaml",
+      "sha256": "56349efd5d869fd66926bc13b73d00ebfe88329e94bae80d891eda112851e6b7"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v9/yolov9c-seg.yaml",
+      "sha256": "e76e91bf8ae3cc74fe5649b524885edc4ec5110e4538256429eb157756ec73a9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v9/yolov9c.yaml",
+      "sha256": "7b26b80eff1850771d16941ca8e3cb03d7f5b5dbe8356d767ab39be41aaa4056"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v9/yolov9e-seg.yaml",
+      "sha256": "5ce5d2018d4cb7b478aa2f13c33ac91189c9d654821e3ca4e723880e362ffdaf"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/models/v9/yolov9e.yaml",
+      "sha256": "041cbc1a1cf9d608213036dcd1b4db02662656e013685158d90129a0f0a6999a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/trackers/botsort.yaml",
+      "sha256": "62b3e68f5f29d54538d24247e4d45d2ffe12f1fee49e082493fab62989d5b9da"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/cfg/trackers/bytetrack.yaml",
+      "sha256": "42f1e6b6ec2e94ae17ea3dd3e5512ab429b4b1b59605456658f70270cdb4a9ed"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/__init__.py",
+      "sha256": "5467be0131bb8f7e45e00e2bf099b37df8e586f7b824024f8116b96a1293535f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/annotator.py",
+      "sha256": "7af5d0cc04557ab73485bf6897e9ff1abac77fe7655cee2508c316119a09d943"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/augment.py",
+      "sha256": "ff3555c8904519f76915eaca60d7e1cb2717136028c6201f3e4c8eb28e0ebca5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/base.py",
+      "sha256": "0b7b5e2e7c3ded94dba491d3f4fef2616a2c00aa1c3338098d17b5af181fa65b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/build.py",
+      "sha256": "01f326cf4b072189b0af2ffdd2d10915193f933d12dd2a2549c557a981e24f4f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/converter.py",
+      "sha256": "34b0e257aed1b216ca427309522410175d5ba15cc4aa08b61f3dfd9ca5402385"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/dataset.py",
+      "sha256": "345697c87467eb84f24c46ed4a4afb4a4a965caf1b10997a959e8cd49c0edcc6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/explorer/__init__.py",
+      "sha256": "f98de6d5979d7a939052ffca5bcdb3686c6f53f3d21dcbb051316a1bd06102be"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/explorer/explorer.py",
+      "sha256": "1aa41c1e4113c654b4c3e9585274c4fd127dc0f45e2bb73d5c6e35fa4f45a311"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/explorer/gui/__init__.py",
+      "sha256": "987b49b8ae21c05f1cb95f951c373bb69eaee83d601f3d99ec923c82b9900d3b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/explorer/gui/dash.py",
+      "sha256": "de62eb1f487e93f02d86582a54d5ce1dd94aa2a8f03701659cc62230f01d2fa4"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/explorer/utils.py",
+      "sha256": "12fbee91089051306bb19ce798c9f2117d84a93bb0668fc67b273cc9f8bc3480"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/loaders.py",
+      "sha256": "6fa5d954e1cefdfe660b3dcc1584e65e62f43a9e8543e0f9a894d178481f08dd"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/scripts/download_weights.sh",
+      "sha256": "33bd9240e5cfd768ada0d61c9be6f286294dead3612f24a8a84c483847faf766"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/scripts/get_coco.sh",
+      "sha256": "7dad80c2fcf77fcad44bd778c8290b4c145bbe49cf7221e02d345c6ce897b768"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/scripts/get_coco128.sh",
+      "sha256": "3316cdd2e232db8e0a4fb518fafbb8b896a4978993b22462277ce7a2e2f03c4c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/scripts/get_imagenet.sh",
+      "sha256": "38e27e1d211592ece2761076b3f4674028ac1a1e4c62bebb84ef3ebbbdd451e7"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/split_dota.py",
+      "sha256": "3d0764c30945b4b2a1588adb4e8b2149e91719d81badb60c37a84ce2e8df6bba"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/data/utils.py",
+      "sha256": "cea160e3169653ef9f6acb599b0bd9dc3c46c894378b8b5534bb989ea4b5c71b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/engine/__init__.py",
+      "sha256": "987b49b8ae21c05f1cb95f951c373bb69eaee83d601f3d99ec923c82b9900d3b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/engine/exporter.py",
+      "sha256": "2565665cc0fc4695ce6b28ac4b6fd0e2049eaaf2807977ccb7663e6b3399888a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/engine/model.py",
+      "sha256": "a92bc24fe97c98b4fe0838b1cba9a3c82ecde71dde76c5a6a1b4566e88f02d43"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/engine/predictor.py",
+      "sha256": "1d7cb2d62f43eeb0fe033fef07d7da8fb42d6f32a48f1cd88c093f645891774a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/engine/results.py",
+      "sha256": "cd1b8422b06da68090dcce9afd8b1c9f25eb5923fece92f7002bf481376b0dac"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/engine/trainer.py",
+      "sha256": "1edb313c0bfb73040935fe508d28c03967ad034a69532ad918eed6ec2b1c4f31"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/engine/tuner.py",
+      "sha256": "899ae03265d20e97ee0eee1b74545f96602cb1ccacdbef16f2a006c52c8e5491"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/engine/validator.py",
+      "sha256": "cda506de8e9b09d23758e9eaf026f9828a09f03902d214e91e93740788789650"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/hub/__init__.py",
+      "sha256": "cd76a6f357922762241f40b03f2fd5846d571d97a6f6fb3d8d1e2e1bbb3eb806"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/hub/auth.py",
+      "sha256": "1480f9f0d13a7e1ecea7f078e503a9581c35aa804dd29a272f5eaebf26f6759f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/hub/session.py",
+      "sha256": "6c8951380a7afb790eb6f330565ecb367fd7528b06b256ef8047598aed6c613c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/hub/utils.py",
+      "sha256": "469143169f5b8942bbd0cb30cf3da8dee12ee31c10c51692b4f4b5f54da0bb48"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/__init__.py",
+      "sha256": "4d3f622c22ff9fd63cd1d714ab4168fa9f86459092536beb5973370a8330aaa1"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/fastsam/__init__.py",
+      "sha256": "d1db7ae6367fe5bed0fa675737c312124827151034148c257a5fcb4b645a3a55"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/fastsam/model.py",
+      "sha256": "73b186c1a6bd017b2c245c2b72ecad147a4f3a5812ad2de7d2eb727f82522f6a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/fastsam/predict.py",
+      "sha256": "d161d416ba8750dcb57133692cab0dd052aa2ca0afafb7c753aa69f75fd0560d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/fastsam/prompt.py",
+      "sha256": "4e1ad80357c988033600575907b1778ffea9e7e42cbe9872763a3046b21728e2"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/fastsam/utils.py",
+      "sha256": "afe6f7eb659becfd990253b059c90f24ce872ef83e7850c3cf8c24034ca62ddd"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/fastsam/val.py",
+      "sha256": "20b2a6c3753c1589a642c3bdc24f7e6c9f4fca9fd9b6124cdfa6fad4bef9b376"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/nas/__init__.py",
+      "sha256": "77af964eb60b5ef6cfb39f1e6c0d3ee7cdce0e2f95cb35dcfade1a1880d02ba3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/nas/model.py",
+      "sha256": "9f0ef9ef896861f247884431fedb5e985f60a727a1bd64155584c81f496c4d2a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/nas/predict.py",
+      "sha256": "3bb7fdd8a13a862e4310d4d1cd788cb26faa2be9dd5683b506cdddba0a7c68b0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/nas/val.py",
+      "sha256": "b5545f504cb5bc41baecee49650cd03b480f1e3b7f59688fbd1bcf960fc1b608"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/rtdetr/__init__.py",
+      "sha256": "01981ad42dea9464ed82902ea435b87688a3ab9699950785f1ee79fc33f651ab"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/rtdetr/model.py",
+      "sha256": "d95929a45d7fe7cd57990d1423b968f1f5fb32a84024f5d532bda3c8c1d7b5b9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/rtdetr/predict.py",
+      "sha256": "f8d14102fff854851c5f270eef003c207e841d7ad5c8e8abfb93d991de3aab2a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/rtdetr/train.py",
+      "sha256": "db40056155bd34fc70d3e729fac45d228bd689d14bd08221251bf6a198e43e53"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/rtdetr/val.py",
+      "sha256": "e10400add686118f2b26c26ebf2274df67fc186546755da35111cad8474cc729"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/sam/__init__.py",
+      "sha256": "f40d62c9f3cdfe772aab74cc1317bffae3e80118c45f7a6ca07108d71306d951"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/sam/amg.py",
+      "sha256": "32c292452d9289e64afe7fa6d880a4d50a5c628825e66a1f72c55afb815762fa"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/sam/build.py",
+      "sha256": "fa2faf8f47a043689d05951fdd77fe1fcf50793a0cde4cb41d3c4a3ff2845d3b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/sam/model.py",
+      "sha256": "764121a8911916e4a82ae6cc6808d4c7553d369e3d0082379c149c747f2b3012"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/sam/modules/__init__.py",
+      "sha256": "987b49b8ae21c05f1cb95f951c373bb69eaee83d601f3d99ec923c82b9900d3b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/sam/modules/decoders.py",
+      "sha256": "ecd5a704dba9c4662f1f44b537447a3411f175515152bae72fd12a030d3d2781"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/sam/modules/encoders.py",
+      "sha256": "a513591f3b76276c43fc3d01b6ef299380dc22d7ebe9d46bf6b7117f1a196615"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/sam/modules/sam.py",
+      "sha256": "cc2e25e2472b2100ff7a47338e5da5e9d81a001aaa8d1399c50f850dbfa2b6dd"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/sam/modules/tiny_encoder.py",
+      "sha256": "ca95c83015e9b0d501aec91b7498e8da912b23f9ad34994731d9a8f44aea829d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/sam/modules/transformer.py",
+      "sha256": "54835931be31931e081c06c97610aad972c3bda14132ea7b4460b5e832d2ece6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/sam/predict.py",
+      "sha256": "06e49aa8c3a4a7088ce47e6c58e135083230103933f2e30a57a00c472b02664e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/utils/__init__.py",
+      "sha256": "987b49b8ae21c05f1cb95f951c373bb69eaee83d601f3d99ec923c82b9900d3b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/utils/loss.py",
+      "sha256": "3e694a0dee3141389890f48274d51a6f1242edb878df31b188a548c6c5c15461"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/utils/ops.py",
+      "sha256": "b27d6f77020ad8b682bf1beeb8fdf5630d875c4300990768eca0fd25587818ce"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/__init__.py",
+      "sha256": "7b5719afda5b49b7f761ad8ebe44e3191c03fc4d986697bad74c6c90133c8049"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/classify/__init__.py",
+      "sha256": "b7ee295079a023682385cfa5ddba8d11c12d283d5d3b8d270f855ce98db10faa"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/classify/predict.py",
+      "sha256": "c05638188956c5eee274c9dd130d519c323ade8e773137e21cacf4b367ce8c06"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/classify/train.py",
+      "sha256": "f4246ab4b91e3e8e19900ccc4f10d8e33b6b35a584df8aa7cad63299f084073b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/classify/val.py",
+      "sha256": "31776d5ab0585697c5b8f7c53ce4cb29aff005d4c8038741660b93f84b65759e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/detect/__init__.py",
+      "sha256": "251f206495a7ef03016e1fb48ffd3bde7c495594cc1595564ce1b95a7be4eb0d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/detect/predict.py",
+      "sha256": "fdaf6f1f70e628563a79eced153763de791fbbf30a1ba9fbcdbe6b44a1a3b3d2"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/detect/train.py",
+      "sha256": "f1496ad523cd2eb90ea978f462de73351d5cfd797f4273a396509da811d431db"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/detect/val.py",
+      "sha256": "35550791e6b6892639f0fedad93835c9e369fc8b702a89ae2ea92007b986524e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/model.py",
+      "sha256": "c0eac9e87594f4a846ee955c80ae07748f317b61924a17bc578bf86c90d5c9d3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/obb/__init__.py",
+      "sha256": "b7159b3c62d8d7f33b67094b423af01a34c13a5b2ff4fdf2939644832b138a75"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/obb/predict.py",
+      "sha256": "a6b7c3ce1c2e547285e824709c554103e605239abb53b344430213187981d8ec"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/obb/train.py",
+      "sha256": "b56a45b5c6ac3305aad40ffd55d6c4839a48547c2e5b099e2ceca3f92e3fd6c6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/obb/val.py",
+      "sha256": "b47a140e1f8fbfde4612743bdf2cc2000c674cc35acafe32660df78661ae370c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/pose/__init__.py",
+      "sha256": "386bf13772ea268b7687c197d5cb09d4a12bb079c32ac9b7dc27ba64153d2ebe"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/pose/predict.py",
+      "sha256": "8a5964e2ac99bf26dcfd7328f53293e78148922cf1f75318be21397393b00534"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/pose/train.py",
+      "sha256": "922f1b913f167c81634ca7f5a1f7910ea788aa693a03c6bb005a20ee733ea2d3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/pose/val.py",
+      "sha256": "6dea0f3d359c92f3bb7359167f60db16320de881dc4d5da1701d6b2af934a701"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/segment/__init__.py",
+      "sha256": "9926ca384f019c72fb3cbda708e546edd44cec223a8497b314f3f06458c49b2f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/segment/predict.py",
+      "sha256": "c6d034659cae87d595a57ef36457407829169f1850df40031334ae77f1fa37b1"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/segment/train.py",
+      "sha256": "68e4290c8a6d65f29297d9856ba07edd6dd071c311966048341908f4af3edec4"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/segment/val.py",
+      "sha256": "0f112947415a41e3e53976f5f7e14ee06d0d97dad67fdb26b4087d787fffda0d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/world/__init__.py",
+      "sha256": "dd54c7d2ae0d3add84591a26d79c82ca6be6be6d04b69d9b9844c9521b154c12"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/world/train.py",
+      "sha256": "69c60ddbea272faf4bacbe1abfafe1636af9018d2eac2d165620ecb67ee7a5f2"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/models/yolo/world/train_world.py",
+      "sha256": "9f45d3007631b9f1d4e4e67f423a641e278a8a4fb6e33d0bad82b35986c22ef0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/__init__.py",
+      "sha256": "e013cb1d8f3dc4433f6a5e6e2b468e98582230be823061196decf13af4e3384b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/autobackend.py",
+      "sha256": "cec305f864b5db1b4c05e404912a09e5cb9d107cb331a452401b9771fb8135da"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/__init__.py",
+      "sha256": "2b99ac16805e3030b61c19ab9c7f2124cbb77e0f8fb3506fac747570c39d54c2"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/block.py",
+      "sha256": "1df22b2f2b51b63a6bbe997e12692076892ce725da22a2a2b33824070c2794bc"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/common_utils_mbyolo.py",
+      "sha256": "d89bf46c84d3f9a3465244f4a191b2c193f50f58c3080f51ae8fa9b2bc0e0a00"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/conv.py",
+      "sha256": "6307bcec886e692db6991d8927dc639d6f126fe9bb5938f1baa23157f0eff252"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/head.py",
+      "sha256": "dcdff8cd6d54be12358c2ac8c4890d6314037625ba1f1b71a5a34002e76ae8d5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo.py",
+      "sha256": "05d1900840474e068aec65bc30ca81501fce55a464ca0dc3fbe60054885aade3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_air_ex2.py",
+      "sha256": "96cbfbfd0b59a717ba29c00c01ce0c4ab68e96301b6321906a837a9f46d12baa"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex1.py",
+      "sha256": "4beceb2f30bd2c4b65915174465fdc7eff51f242b8327bacfca203a21eca2fce"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex14-15.py",
+      "sha256": "f93e5856c63a527cb572f53a005d8cb13b7413ace6dc041d49fef0e3b55f7d01"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex19.py",
+      "sha256": "c79113e8c6a1a0609701e082685e50a613c59b5839fa4da855a162f265da57b5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex2.py",
+      "sha256": "bb4f8bd52567b68667679009b587d3c3536122438bcc06d13acb898df1d516eb"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex20.py",
+      "sha256": "388c8a897aa4dce197b7386b0c81f7a61ee1d6cb4d0015f10b16d4ed9c28d4c8"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex21-22.py",
+      "sha256": "b8f0bbf7e833b1dbf3fe8452ed7279a45ee03d67c807dd28bb3f5ce2a479d788"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex23.py",
+      "sha256": "4af0b732da08c5e6158e78a9a172c5505c9eac1115a40ba3d1d159910af6a30b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex3.py",
+      "sha256": "bdbdfaebef1a333cd59c21911d7183f6866c51a114059152036c9efc4ea31ffb"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex30_dg_dsssm.py",
+      "sha256": "b78088e029b211c793e1be3d0ebe9f9554f31a4bf38118ea24d77beb9c38be47"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex4.py",
+      "sha256": "db9e14bf18fc2d5c8f0cdf5de3e6217a1b50a54dd1abfb9342e848054345c1eb"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex5.py",
+      "sha256": "ff7e580995490fecd4b3d12ddbde3504a4a00c0ee1fd22b345887e48ab6d7ac7"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex6.py",
+      "sha256": "b7cf76df1fc259f20c7cd8374e9a96d9b3d4ef17da99c08dc704ad2e1fed2110"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex7.py",
+      "sha256": "906247b5b89b35fb602350fd063fcbfb6647624394b2dce611939fe9c9208619"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex8.py",
+      "sha256": "96cbfbfd0b59a717ba29c00c01ce0c4ab68e96301b6321906a837a9f46d12baa"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/mamba_yolo_ex9-13.py",
+      "sha256": "96cbfbfd0b59a717ba29c00c01ce0c4ab68e96301b6321906a837a9f46d12baa"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/transformer.py",
+      "sha256": "0310fdb944690a5f84aaf5dedc3886e895bea41cc1d7a1be01a84b759ef26b2a"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/utils.py",
+      "sha256": "efbf509e72a9f6ff23bf6e7511276e4d7274a25f0790838b6c6416c041908e15"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_backbone.py",
+      "sha256": "5fb46b975bd7b6df4adda579d84ce553beb40c30efffcac7d6e9d0c76fd8aa38"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py",
+      "sha256": "b09fe25a9e3e8f4038942aea278a2cbc23347d03c831aeb40f45f0cc7b7d0332"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csms6s.py",
+      "sha256": "7671a74f07e98742fc743d933bcb6025906f1a73f940afd1f55262a17104a4a7"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/mamba2/__init__.py",
+      "sha256": "d36266915e9cb989aeb101ff9945f3c138599d93962c3d74abe285cea4af1c27"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/mamba2/k_activations.py",
+      "sha256": "8cf8eff99cd054748a7981b10547e0bf0d109a92c3272cfcde5ef2b3e2cc7d80"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/mamba2/layer_norm.py",
+      "sha256": "ac9eb366032281a29399804e9dd8a3499fa7b58ff97c907bc7f36d419de87821"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/mamba2/layernorm_gated.py",
+      "sha256": "3a37ef83da00ec889598519e94e02438e38f7ddd29fb10ddcc423948f5fd7c35"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/mamba2/selective_state_update.py",
+      "sha256": "b26d975d127bc1572ffe5ad5b91329ad90969160e0d653ec17125c811c9f39f6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/mamba2/ssd_bmm.py",
+      "sha256": "681d3e734dac1a696e0f29d4f2276e0a28d05aca4f5bedc9a2fccb3e1def0afe"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/mamba2/ssd_chunk_scan.py",
+      "sha256": "97a2ca113247dbb714cf0730ff8260c92767723a69564ebbfbf98e685b290131"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/mamba2/ssd_chunk_state.py",
+      "sha256": "bfdbd3b0522481ea59d4f47297b5d361994079e72751b9af7af4e3d12ceb7f37"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/mamba2/ssd_combined.py",
+      "sha256": "0c3c8004c3a4ec425e2d7239afe4079a85a12bc63b28b9bb3009190081de931c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/mamba2/ssd_minimal.py",
+      "sha256": "59e75c5c7d23bda0596b157a3fd8b7bdcf686f01e690b1b61abbfbb2807d9178"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/mamba2/ssd_state_passing.py",
+      "sha256": "76861f795ede8c66a51e90a5296e01b67d6e49def3c2d3925003e625ca52bde0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/vmamba.py",
+      "sha256": "54aa8146873cf20eb163052255e91eb10621c10315d8345e48e8740235566b6d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/tasks.py",
+      "sha256": "f236b06c5533bf86ba2e5dbeac6e8271f13ba80dd256768179ab7a7bfaaced01"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/solutions/__init__.py",
+      "sha256": "4b89bba7fae9836a64f4f767aaa0fee9293efb00c7c594a8edc5198d2c23fe24"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/solutions/ai_gym.py",
+      "sha256": "45d915d79216f022d89fda460b392f5351a8af6a3bd5d6be4cb255bec14cf1ad"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/solutions/analytics.py",
+      "sha256": "508f07a1e81f2091a0bd03ceb78f9ef40d2cb36fe87ccef3cf171b2a585eeba9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/solutions/distance_calculation.py",
+      "sha256": "a52224cb2b4719101a37322b92436488e9d25565353d8bd446508857f8d13910"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/solutions/heatmap.py",
+      "sha256": "0075e799786843de6987be33b1daef5ff2dfcb7c05d12b07d0c21e4e2c44ed08"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/solutions/object_counter.py",
+      "sha256": "211da4be08e5687bb37eae7982dc01886149edd4b9fb938214e724e78a25dcf5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/solutions/parking_management.py",
+      "sha256": "05dec5537599f264415aaf3567973c8c7e569681788cf2a8f13c9ca94fc07042"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/solutions/queue_management.py",
+      "sha256": "1029ba80b66996613d0a6fb374e6b31c1043716fafbebf27c76336f1f70f6edb"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/solutions/speed_estimation.py",
+      "sha256": "923a8c4871931cc65a3604ca34a5942f19c940db2f86ae16314a613159418ec7"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/trackers/README.md",
+      "sha256": "5f78df482194cacd2fcef6513ffdafa2042f37b67c9294ee40a83606a25856f3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/trackers/__init__.py",
+      "sha256": "8fbd88807d9d647400acc3cae18c1c57989e230f787d8be519d42307d70e40ac"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/trackers/basetrack.py",
+      "sha256": "faf0430fe43d96cc5f4cc2b6c3d92ea961ab61b44c99a0420846c61b2479de01"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/trackers/bot_sort.py",
+      "sha256": "dfd02f85855b4fb8b3177fbead7fdee8b8606f97334c0db7830e8082735c45db"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/trackers/byte_tracker.py",
+      "sha256": "5f720097dbfa1b20afe6f2cf06f5b2529ce92c793b4aaf423e960a3ec5658363"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/trackers/track.py",
+      "sha256": "367080f7d8d754ebe3ed7a4bfd1bcc9b4d4319d8b12aa00c173e9275db37d244"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/trackers/utils/__init__.py",
+      "sha256": "987b49b8ae21c05f1cb95f951c373bb69eaee83d601f3d99ec923c82b9900d3b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/trackers/utils/gmc.py",
+      "sha256": "fb5a01345441fbd11ac09994393e7ae80ca02c2571270fa3b0f4883a5e63fc79"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/trackers/utils/kalman_filter.py",
+      "sha256": "d28aa1939f4d2848b0709d855e7c3afec4f86c8142e96bb9218d81f931b124a5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/trackers/utils/matching.py",
+      "sha256": "53185219ae6937a5a8630612040924b7e3bbc4cc54478ed5b9407a3df54d91be"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/__init__.py",
+      "sha256": "7652abecfd21d84cf743e58b438f69d23b238d690aab709192194224b18a94c9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/autobatch.py",
+      "sha256": "bbdb169830903116ffa3432361a7229e47bf238fb63e9de264c85bb74f1965d8"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/benchmarks.py",
+      "sha256": "b4155ee50e076400698e92352c3aa94fc6c94a864586c004b726421f1f1d3088"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/callbacks/__init__.py",
+      "sha256": "62b5aa0b705555a4cba1be2208f47a237ea65312143a93c95bb07f2e34fbf10c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/callbacks/base.py",
+      "sha256": "a08a1c3f2c87a7bf6f3028e1499b24410fe5eab9588f5238d7725657ae2ffe57"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/callbacks/clearml.py",
+      "sha256": "33d162d4e7dd5aa726f2e5646aeb97df3248621361e93a7b268e027c0d2ed27c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/callbacks/comet.py",
+      "sha256": "411dfef5fd0bfd6ee76565a0fce10deedf0b6b6268b5aa524be0a735856309d9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/callbacks/dvc.py",
+      "sha256": "5880a532cbaf8628b2af046fe41b192f18ecc58349dd8f15abbccdd01b61b6ba"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/callbacks/hub.py",
+      "sha256": "20f36709194010503e0edd7c2564ee1e1690a5c032dd71a0c410f82613b48d2b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/callbacks/mlflow.py",
+      "sha256": "ed53e35d110f23bfdbc1db3d91e2c4311925c87e3a5de2649cc4e12a53bd0008"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/callbacks/neptune.py",
+      "sha256": "e59dee6b96014d44b9e851fc5502901b569a228f5f1fc184cb30b9abba788a94"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/callbacks/raytune.py",
+      "sha256": "c78ba2d450cb9e74728fde9601d8550e13ca90d133c6575470f3fe438fca518b"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/callbacks/tensorboard.py",
+      "sha256": "f7632997d5dad900b52c05f9bcb5857d5aab44f9ede451982bb3717920e41fbd"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/callbacks/wb.py",
+      "sha256": "f7e7e340874b8ebddbef70d3137ac73b5ef52af6c7d55c1e27e6e66effaba93c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/checks.py",
+      "sha256": "3c363578796cc835442222918ef6fcd6ecf68e788bd4caa03ff4e65c7ffbf0a3"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/dist.py",
+      "sha256": "dc778d6d8da0a7bbd885cbd586caef4eb417a509a04fcb699a7cc0a5fdde4110"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/downloads.py",
+      "sha256": "7263b612fd435759bf958810db21831b9c554480554bfcfd9d2fc5ade73f35e5"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/errors.py",
+      "sha256": "1aa3ff2608ff9f4a5ac67f0e3219f70d30a0a0d901d968d47146aab3e33a4909"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/files.py",
+      "sha256": "4d57d8d168b922c51ce1876c0f30b474083e8c03f97b162fc2a0775665e10cb6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/instance.py",
+      "sha256": "e5d68ce6793106ff61af9433c8823cce6b858f6e211ee36d72be043021c0b696"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/loss.py",
+      "sha256": "7a35e73c4200ccd128373d948d6d3f7dc75e52cf47cbe8cfcd4ac9dc58882301"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/metrics.py",
+      "sha256": "59a08475c656e22c91dd3494b8d3f792be530134782a3dfe1ac538f1645f8775"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/ops.py",
+      "sha256": "27dc1b6fd6935bd69a2390c946a03bd816405fbedc995c8225d9c6bb0903bbe9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/patches.py",
+      "sha256": "4a032a78cb2ad8ae89a0124fd4da655cc97d0baacad0978950286306b24e9dea"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/plotting.py",
+      "sha256": "acce856c41c3fd362d02397f8eb073b4a809620e104a958f5be3fb75e98411cc"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/tal.py",
+      "sha256": "c6e232af252369a6079073c6f46bc1c21d71c4dd87ab8cb78573adb8445e8706"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/torch_utils.py",
+      "sha256": "de1afe1d555bfd42c0b7d98f0b452ac7186dfce86fca78145deab1d00e218d2e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/triton.py",
+      "sha256": "820d5f8a7c67a3fb58d867bd3cc866bbb3c8f70be8159a2289c753e0186abf7c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/utils/tuner.py",
+      "sha256": "e3d28069d299b14782a70226e529f482b6f444f70c348f2f1c62f0ae80c424d2"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/manifest.py",
+      "sha256": "6acac34e277082b0d2a557eec4c3c9bc3b96d6fd4e8b7c8ec7ff4104a549402d"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py",
+      "sha256": "1ddbc5fa547e5f6a168305476921d1c85f6692706f35861323f9e85e2118398f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/train_trial.py",
+      "sha256": "ef0b210963d195478300e6cb7ef6dcc28544baff783041fd335b644b1d1bac3f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data.py",
+      "sha256": "04c4698597a6e0bce6e0499227a3ebb6652da45acf44c69f3c6127dba6ee30f9"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_trial.py",
+      "sha256": "904f3199c6ae28f347f37f26b6c628960c9be2c6b4df0570d0169c4870928fa4"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cuda_uuid_compat.py",
+      "sha256": "3faa16696535c447d50a405799040e17ef7780bb9444c3f5b0c9d5310061b04d"
+    }
+  ],
+  "config_sha256": "7bb426f40de1aab7f89a6fa26c503caba4604cd05b10cb790acf6d8400ec9210",
+  "data_manifest_sha256": "cd2f5314ecc8139f8e51a8c283d309f522c12abd58320003ea86bacbaac853de",
+  "data_yaml_sha256": "55784492a13eec556af419b736b7005a3f308dba96b1f4df2b02883199af34ec",
+  "epochs": 2,
+  "fitness": "0.1*AP50+0.9*AP50_95",
+  "patience": 30,
+  "plan_sha256": "6328e555e42d10869e756d5058fb914c4ba6b35712a4d9206b1f5f8e4f160971",
+  "protocol_source": "frozen tools/train_rgsp_control.py hyperparameters",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "selection_split": "val",
+  "smoke_only": true,
+  "spec": {
+    "control": "const_guidance",
+    "placement": "p3",
+    "state_dim": 16,
+    "stats_kernel_size": 3,
+    "trend_kernel_size": 3
+  },
+  "test_split": "test",
+  "trial_id": "ssdd_const_guidance_seed0",
+  "trial_sha256": "2b4b2edfe416261fd8e381c1e9032e6ea3d56aa3d295dbd5962956f9c6ef9943"
+}

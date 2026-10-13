@@ -1,0 +1,33 @@
+{
+  "dataset": "Sulzberger",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "initialization": "scratch",
+  "protocol": "dense-spatial-macroblocks",
+  "split_sizes": {
+    "train": 76,
+    "val": 16,
+    "test": 8
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "epochs_requested": 150,
+  "best_epoch": 4,
+  "threshold": 0.6500000000000001,
+  "metric": {
+    "precision": 0.516559482162683,
+    "recall": 0.9206615890083633,
+    "f1": 0.6618000295218797,
+    "iou": 0.49454494404556576,
+    "oa": 0.8290812174479166,
+    "kappa": 0.5592266206033882
+  },
+  "params": 2138147,
+  "gflops": 1.136191824,
+  "latency_ms": 435.7723011674049,
+  "fps": 2.2947764172276823,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/sulzberger/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Sulzberger/manifest.json"
+}

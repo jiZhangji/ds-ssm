@@ -1,0 +1,43 @@
+\section{实验}\label{sec:experiments}
+本节保留底稿的图像分类、目标检测、语义分割与变化检测结果，并将全部已有消融数值及其分析直接列入正文。实验分为历史任务比较、已回收的多种子消融和待验收的结构控制三部分；三者不混合成统一性能排行榜。
+
+\subsection{实验设置}\label{sec:experimental_settings}
+\subsubsection{数据集与划分}\label{sec:datasets}
+SSDD 包含官方训练部分 928 张图和测试部分 232 张图\cite{ssdd2017,ssdd2021}。历史 15-run 在种子 0、1、2 下分别从官方训练部分划出 742 张训练图与 186 张验证图，每个种子内五种变体共享划分。后续对当前副本的内容审计发现，1160 张图只有 1135 个不同字节内容；10 个重复组跨官方训练与测试集合，涉及 12 张训练副本及 10 张测试图。因此，新控制轨道保留官方 test 的 232 张图，排除开发集合中的这 12 张副本后，按内容组构建 730/186 的训练/验证划分。历史与新轨道必须分表；字节去重不证明近重复已经排除或场景独立。
+
+新 SADD 消融采用本地恢复的单类阳性子集，固定为 795/44/44 张训练/验证/测试图，三个训练种子共享此划分；框数分别为 7215/212/408。883 张有目标图像不包含原始副本的 2083 张空标注图像。它不是七类 SAR-AIRcraft1.0，也不是已经证明场景独立的官方划分。测试集仅 44 张且没有空场景，不能据此充分评估纯背景误检和场景泛化。本节检测比较表中的旧 SADD 从头训练与部分迁移结果属于其他历史轨道，不与新 12-run 计算均值。
+
+分类保留 SAR-ACD 五类设置及 SAMPLE 的当前 real-only 闭集设置。检测的历史结果包括 SSDD、SAR-ShipDataset、SADD 和 AIR-SARShip-2.0；变化检测保留 Ottawa、Yellow River；语义分割保留 OpenEarthMap-SAR 的 SAR-only 配置。底稿未展开的 Farmland、Sulzberger、FUSAR-Map 和 SAR-AIRcraft1.0 不因本次编辑而新增已完成结论。既有跨任务结果为单种子，不同任务头、预训练、模块预热与数据协议分别解释。
+
+\subsubsection{实现细节}\label{sec:implementation_details}
+检测以 Mamba-YOLO-T 为基础，深度和宽度系数分别为 0.33、0.25。RGSP 在 P3/8 阶段实际替换一个状态空间块，输入通道为 64、状态维数为 16，颈部、检测头及其余阶段保持对应配置。Original 使用四向 SS2D 及扩展比例 4 的前馈分支；替换块使用单向行优先扫描、LayerNorm、LayerScale 和扩展比例 2 的前馈分支。因此二者的差异是整块替换效果，而非严格的单组件因果效应。
+
+局部趋势采用核宽 3 的逐通道卷积，初始化为均值核；二维标准差使用有效 $3\times3$ 邻域和 $\epsilon=10^{-5}$。LSGM 隐藏宽度为 $\max(\lfloor C/4\rfloor,16)$，末层零初始化，使初始引导为 $I=0.5$。Full 中 $\lambda_s,\alpha,\beta,\rho,\eta$ 分别初始化为 $0.5,0.5,1,1,0.1$，$s_n=0.1$、$g_{\min}=0.5$，两条块级通道缩放初始化为 $10^{-2}$。关闭分支的控制另按第~\ref{sec:matched_controls} 节定义，不能把 Full 初始值当作所有配置的设置。
+
+SSDD 与 SADD 多种子轨道均从头训练，输入 $640\times640$，物理 batch size 为 16，名义 batch size 为 64。采用 AdamW，初始学习率 $2\times10^{-4}$，最终学习率比例 0.01，权重衰减 $5\times10^{-4}$，学习率线性衰减。SSDD 最多 150 轮、早停 patience 30；SADD 最多 200 轮、patience 40。优化器预热 3 轮，无额外模块预热。名义 batch 不代表所有更新恰好含 64 张图：预热期间梯度累积及最后不完整 batch 遵循框架规则。
+
+增强包括概率 0.3 的 Mosaic（最后 15 轮关闭）、旋转 $\pm180^\circ$、平移 0.1、缩放 0.3、水平/垂直翻转各 0.5、HSV $(0,0,0.1)$；不使用 MixUp、多尺度或自动混合精度。采用确定性设置和 FP32 选择性扫描 CUDA 算子，不承诺跨环境逐位一致。运行环境记录为 RTX A6000、Python 3.10.16、PyTorch 1.13.1+cu117、Ultralytics 8.2.29；同一种子的变体在同一 GPU 上执行。
+
+验证集选模采用组合指标
+\begin{equation}
+f_{\mathrm{val}}=0.1\,\mathrm{AP}_{50}+0.9\,\mathrm{AP}_{50:95}.
+\label{eq:selection_fitness}
+\end{equation}
+训练验证的 NMS IoU 为 0.7，最终独立测试为置信度下限 0.001、NMS IoU 0.6、batch 16、FP32。新轨道统一重置模型构建探针改变的 BatchNorm 统计，核对共同张量初始化和源码、数据哈希；不把这些新审计条件追溯为旧轨道已满足。
+
+SADD 的 Original 曾从包含 EMA/FP16 优化器状态的检查点恢复，不能视为与无中断训练逐位等价；seed0/1 恢复前的部分控制审计记录仍缺失。最终完成标记和权重哈希可确认这 12 个测试结果的归属，但不消除恢复限制。本文采用 2026 年 10 月 9 日本地回收证据，未把实时远端队列状态当作已验收结果。
+
+\subsubsection{评价指标与统计}\label{sec:evaluation_metrics}
+检测主要报告 AP$_{50:95}$，并完整保留 AP$_{50}$、AP$_{75}$、Precision 和 Recall。AP$_{50:95}$ 为 IoU 从 0.50 至 0.95、步长 0.05 的平均 AP；Precision/Recall 对应评估器最优 F1 工作点，不同模型的置信度阈值可能不同，不能将其当成固定阈值下的误检比较。分类使用 Accuracy/Macro-F1，变化检测使用 F1、IoU、OA、Precision、Recall，分割使用 mIoU、FWIoU 和 OA。
+
+对种子 $s$、配置 $m$ 和指标 $M$，定义配对差
+\begin{equation}
+d_{m,s}=M_{m,s}-M_{\mathrm{ref},s}.
+\label{eq:paired_difference}
+\end{equation}
+三种子均值与样本标准差分别为
+\begin{equation}
+\bar M=\frac{1}{3}\sum_{s=0}^{2}M_s,\qquad
+s_M=\sqrt{\frac{1}{2}\sum_{s=0}^{2}(M_s-\bar M)^2}.
+\end{equation}
+所有差值以百分点（pp）表示，先由原始比例值计算再四舍五入。SSDD 跨种子波动同时包含划分与训练随机性；SADD 划分固定，二者不混为同一方差来源。保留全部种子，不把 2/3 正差称为稳定有效，三次运行也不足以作强统计显著性判断。

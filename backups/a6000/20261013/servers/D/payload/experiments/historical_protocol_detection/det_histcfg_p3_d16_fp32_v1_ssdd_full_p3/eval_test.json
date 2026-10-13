@@ -1,0 +1,43 @@
+{
+  "experiment": "det_histcfg_p3_d16_fp32_v1_ssdd_full_p3",
+  "placement": "p3",
+  "variant": "full",
+  "state_dim": 16,
+  "seed": 0,
+  "subset": "SSDD",
+  "weights": "/home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/best.pt",
+  "weights_sha256": "c3919b95f66fba15d91a7d442d5d4818e13a3b187e074cad979230394af5abac",
+  "data": "/home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1-manifest/datasets/SSDD.yaml",
+  "data_yaml_sha256": "5608b98c250353ad9782866f02ff3698685a7c3926da8e00df976ba3f0693dce",
+  "split": "test",
+  "imgsz": 640,
+  "batch": 64,
+  "conf": 0.001,
+  "iou": 0.6,
+  "precision_mode": "fp32",
+  "result_dir": "/home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/evaluations/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3_test",
+  "speed_ms": {
+    "preprocess": 0.1334547996520996,
+    "inference": 7.099180385984224,
+    "loss": 9.660063118770204e-05,
+    "postprocess": 0.3027566548051505
+  },
+  "overall": {
+    "precision": 0.9730181885032014,
+    "recall": 0.9542124542124543,
+    "ap50": 0.9854859585551101,
+    "ap75": 0.8555155066678402,
+    "ap50_95": 0.7226077921400423
+  },
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "ship",
+      "precision": 0.9730181885032014,
+      "recall": 0.9542124542124543,
+      "ap50": 0.9854859585551101,
+      "ap75": 0.8555155066678402,
+      "ap50_95": 0.7226077921400423
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "completed": [
+    "ssdd_full_p2_seed0",
+    "sar_shipdataset_full_seed0"
+  ],
+  "current": "sar_shipdataset_full_seed0",
+  "finished_utc": "2026-10-11T10:09:49.165529+00:00",
+  "gpu": {
+    "checked_utc": "2026-10-09T04:10:54.275524+00:00",
+    "compute_processes": [],
+    "memory_total_mib": 49140,
+    "memory_used_mib": 1308,
+    "name": "NVIDIA RTX A6000",
+    "utilization_percent": 0,
+    "uuid": "GPU-e5f8a5d2-306d-582e-c926-f795df943b1b"
+  },
+  "gpu_uuid": "GPU-e5f8a5d2-306d-582e-c926-f795df943b1b",
+  "host": "a6000-c",
+  "lane": "c_seed0",
+  "pid": 3599939,
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "started_utc": "2026-10-09T03:34:38.210904+00:00",
+  "state": "complete",
+  "updated_utc": "2026-10-11T10:09:49.181986+00:00"
+}

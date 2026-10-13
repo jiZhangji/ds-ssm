@@ -1,0 +1,60 @@
+{
+  "data": {
+    "annotation_policy": "fail",
+    "audit_sha256": "5935f8221f4c420c908ee2b67be062ac706bfc881051f5ecdfe0081676d4a8cd",
+    "counts": {
+      "test": 32,
+      "train": 112,
+      "val": 24
+    },
+    "files_sha256": "f487199e1d2f4ee9fc7150a1614a670ecbf2fd1e31aa993f1e688dfba28086fc",
+    "logical_manifest_sha256": "af42e4de932e50b34e768e0a4d1f0bb690edc62390ce939d4285fb347075ec33",
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/Ottawa/manifest.json",
+    "manifest_sha256": "7cfc014e6c6e94a670b692382c1fe5328404035e3ceb29941f62aef4209721d7"
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "protocol": {
+    "annotation_policy": "fail",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "batch": 16,
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "classification_label_smoothing": 0.1,
+    "dataset": "Ottawa",
+    "epochs": 150,
+    "eval_batch": 16,
+    "grad_accum": 1,
+    "gradient_clip_l2": 5.0,
+    "historical_results_comparable": false,
+    "imgsz": 192,
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "logical_data_sha256": "af42e4de932e50b34e768e0a4d1f0bb690edc62390ce939d4285fb347075ec33",
+    "lr": 0.0002,
+    "module_warmup_epochs": 0,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "optimizer": "AdamW",
+    "patience": 25,
+    "precision": "FP32 (AMP/TF32 off)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "scheduler": "cosine to 1% initial lr",
+    "schema": "rgsp-cross-trial-v1",
+    "selection_metric": "f1",
+    "split_counts": {
+      "test": 32,
+      "train": 112,
+      "val": 24
+    },
+    "task": "change_detection",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "weight_decay": 0.0005
+  },
+  "protocol_sha256": "65e6c9f98f6084b2d5c3c94ef662510777176ce306a3205a0f02df59d2db57e0",
+  "seed": 0,
+  "source_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+  "trial_id": "ottawa_original_seed0",
+  "validate_only": false,
+  "variant": "original"
+}

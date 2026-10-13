@@ -1,0 +1,93 @@
+Waiting for existing experiment PID 118741: SAR-ACD
+Starting shared SAR tasks: SAR-ACD
+[ready] SAR-ACD: {'format': 'class-directory', 'images': 2522, 'classes': ['A220', 'A330', 'ARJ21', 'Boeing737', 'Boeing787'], 'manifest': '/home/powerleader/ig-ds-ssm/data/cross_task_prepared/classification/SAR_ACD/manifest.json'}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+SAR-ACD baseline epoch=1/100 score=0.56120
+SAR-ACD baseline epoch=2/100 score=0.88021
+SAR-ACD baseline epoch=3/100 score=0.93490
+SAR-ACD baseline epoch=4/100 score=0.96224
+SAR-ACD baseline epoch=5/100 score=0.95833
+SAR-ACD baseline epoch=6/100 score=0.98958
+SAR-ACD baseline epoch=7/100 score=0.95703
+SAR-ACD baseline epoch=8/100 score=0.98828
+SAR-ACD baseline epoch=9/100 score=0.97786
+SAR-ACD baseline epoch=10/100 score=0.98177
+SAR-ACD baseline epoch=11/100 score=1.00000
+SAR-ACD baseline epoch=12/100 score=0.99219
+SAR-ACD baseline epoch=13/100 score=0.97786
+SAR-ACD baseline epoch=14/100 score=0.98177
+SAR-ACD baseline epoch=15/100 score=0.98958
+SAR-ACD baseline epoch=16/100 score=0.98958
+SAR-ACD baseline epoch=17/100 score=0.98568
+SAR-ACD baseline epoch=18/100 score=0.98568
+SAR-ACD baseline epoch=19/100 score=0.99609
+SAR-ACD baseline epoch=20/100 score=0.98568
+SAR-ACD baseline epoch=21/100 score=1.00000
+SAR-ACD baseline epoch=22/100 score=0.97396
+SAR-ACD baseline epoch=23/100 score=0.98568
+SAR-ACD baseline epoch=24/100 score=0.98958
+SAR-ACD baseline epoch=25/100 score=0.98958
+SAR-ACD baseline epoch=26/100 score=0.98958
+SAR-ACD baseline epoch=27/100 score=0.98047
+SAR-ACD baseline epoch=28/100 score=0.99609
+SAR-ACD baseline epoch=29/100 score=0.98828
+SAR-ACD baseline epoch=30/100 score=0.98958
+SAR-ACD baseline epoch=31/100 score=0.98958
+EARLY STOP: SAR-ACD baseline after 20 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "baseline",
+  "state_dim": 0,
+  "metric": {
+    "accuracy": 0.9921875
+  },
+  "latency_ms": 1.6753479686574828,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/classification/SAR_ACD/baseline/best.pt",
+  "epochs": 100,
+  "params": 1975133
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+SAR-ACD ours epoch=1/100 score=0.75651
+SAR-ACD ours epoch=2/100 score=0.90365
+SAR-ACD ours epoch=3/100 score=0.96224
+SAR-ACD ours epoch=4/100 score=1.00000
+SAR-ACD ours epoch=5/100 score=0.96615
+SAR-ACD ours epoch=6/100 score=0.98177
+SAR-ACD ours epoch=7/100 score=0.99609
+SAR-ACD ours epoch=8/100 score=0.96615
+SAR-ACD ours epoch=9/100 score=0.98568
+SAR-ACD ours epoch=10/100 score=0.98177
+SAR-ACD ours epoch=11/100 score=0.98958
+SAR-ACD ours epoch=12/100 score=0.95052
+SAR-ACD ours epoch=13/100 score=0.97656
+SAR-ACD ours epoch=14/100 score=0.98958
+SAR-ACD ours epoch=15/100 score=1.00000
+SAR-ACD ours epoch=16/100 score=0.98958
+SAR-ACD ours epoch=17/100 score=1.00000
+SAR-ACD ours epoch=18/100 score=0.98568
+SAR-ACD ours epoch=19/100 score=0.98568
+SAR-ACD ours epoch=20/100 score=0.97396
+SAR-ACD ours epoch=21/100 score=0.97786
+SAR-ACD ours epoch=22/100 score=0.95833
+SAR-ACD ours epoch=23/100 score=0.98177
+SAR-ACD ours epoch=24/100 score=1.00000
+EARLY STOP: SAR-ACD ours after 20 stale epochs
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "ours",
+  "state_dim": 16,
+  "metric": {
+    "accuracy": 0.984375
+  },
+  "latency_ms": 1.7371890234404848,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/classification/SAR_ACD/ours/best.pt",
+  "epochs": 100,
+  "params": 1766951
+}
+Wrote /home/powerleader/ig-ds-ssm/experiments/cross_task/final_results.json

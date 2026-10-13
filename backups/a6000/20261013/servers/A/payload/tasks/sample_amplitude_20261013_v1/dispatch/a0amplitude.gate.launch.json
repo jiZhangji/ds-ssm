@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/sample_amplitude_20261013_v1/queue_after.py",
+    "--foreground",
+    "--predecessor-root",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1",
+    "--predecessor-lane",
+    "a0acd",
+    "--lane",
+    "a0amplitude",
+    "--gpu-uuid",
+    "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+    "--methods",
+    "ResNet50"
+  ],
+  "created_at": 1791864724.0588138,
+  "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "lane": "a0amplitude",
+  "launched_at": 1791864724.0721853,
+  "log_path": "/home/powerleader/ig-ds-ssm/tasks/sample_amplitude_20261013_v1/dispatch/a0amplitude.gate.log",
+  "methods": [
+    "ResNet50"
+  ],
+  "pid": 631041,
+  "predecessor_lane": "a0acd",
+  "predecessor_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_expansion_20261013_v1",
+  "root": "/home/powerleader/ig-ds-ssm/tasks/sample_amplitude_20261013_v1",
+  "start_ticks": "42165355"
+}

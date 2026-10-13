@@ -1,0 +1,15 @@
+{
+  "host": "a6000-c",
+  "pid": 3542918,
+  "seed": 2,
+  "cuda_visible_devices": "0",
+  "started_utc": "2026-10-08T04:19:33.376527+00:00",
+  "state": "complete",
+  "completed": [
+    "original",
+    "guidance_only",
+    "full"
+  ],
+  "current": "full",
+  "updated_utc": "2026-10-08T04:20:13.922886+00:00"
+}

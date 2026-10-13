@@ -1,0 +1,233 @@
+{
+  "pages": 25,
+  "page_checks": [
+    {
+      "page": 1,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1412,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "面向 SAR 图像的可靠性引导 Mamba 状态传播方法 Reliability-Guided Selective State Propagation in Mamba for SAR Imagery 中文修订稿 2026 年 10 月 5 日 摘要 合成孔径雷达（SAR）图像中"
+    },
+    {
+      "page": 2,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1446,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "1 引言 2 选择性状态更新 SAR 局部响应 可学习结构描述 输入驱动与 强度不等于结构价值 局部趋势与邻域变化 离散化步长 研究假设：显式局部结构线索能否补充 Mamba 已有的输入选择性？ 验证层次：整体变体比较、同结构机制控制、跨任务适用边界。 图 1: 研究动机与验证问"
+    },
+    {
+      "page": 3,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1293,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "2 相关工作 3 2 相关工作 2.1 SAR 局部统计、图像去斑与任务表征 局部统计长期用于图像增强和噪声滤波。Lee 滤波利用局部统计构造自适应图像估计，为局部 响应与邻域背景之间的关系提供了经典建模思路 [12]。Speckle-Free SAR Image Ship De"
+    },
+    {
+      "page": 4,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1105,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "3 方法 4 表 1: 代表性设计的作用位置。表中区分设计接口，不据此推断性能优劣。 设计 主要作用位置 与本研究的联系 局部统计滤波 图像域局部估计 提供局部统计背景；与任务驱动特征变换不同 [12] VMamba[7] 二维扫描组织 四向空间递推；是原始 VSS/SS2D 的"
+    },
+    {
+      "page": 5,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1251,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "3 方法 5 这一操作有两个重要边界。首先，卷积沿展平序列计算，行末与下一行行首会成为序列邻居，因 而不是二维 3×3 滤波。其次，卷积核和 λ 均未施加保证平滑性的约束。只有在额外满足 λ ∈ [0,1] s s 且趋势算子具有平滑性质时，X e = (1−λ )X +λ X¯"
+    },
+    {
+      "page": 6,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1085,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "3 方法 6 PFIM 步长调制 [X¯,Std (X e )] ∆(u,I) 2D 序列趋势 E,I −→q X¯ γ 与 w 归 一 化 局部修正 内容投影 驱动调制 状态递推 读出门控 序 列 X e u,z,B,C uscan =qu h o t t X 图 2: RGS"
+    },
+    {
+      "page": 7,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1200,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "3 方法 7 式(16)只是在给定系数下解释信息传播，不是整个输入依赖非线性网络的稳定性证明。 u,B,C,∆,q 随输入变化，不能据单步系数范围推断所有扰动都会收缩，也不能据递推结构宣 称噪声必然累积放大。 3.6 视觉块集成与实现边界 令 X 为未归一化的展平输入，f 为上述"
+    },
+    {
+      "page": 8,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1422,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "4 实验设计与评价协议 8 当前 d = 64,d = 16 时，PFIM 的参数数目为 h 2(2d)+(2d)d +d +d +1 = 2337, (19) h h h 分别对应 LayerNorm、第一线性层及偏置、第二线性层及偏置。完整模型的参数差还受表 2的壳层 替换影"
+    },
+    {
+      "page": 9,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1273,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "4 实验设计与评价协议 9 表 3: 实验范围及证据用途。计划项不包含新的运行结果。 任务 数据集 本文材料 主要用途 目标检测 SSDD 5 变体 × 3 seeds 汇 整体替换、组合与粒度分析 总 目标检测 SAR-ShipDataset、 历史单次记录；统 跨数据集验证范"
+    },
+    {
+      "page": 10,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1261,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "4 实验设计与评价协议 10 端到端复现。附录 F列出需要归档的原始证据。 4.4 主变体与对照语义 基线保留 Mamba-YOLO-T 的原始 VSSBlock。其余变体在相同 P3/8 接口使用第 3.6节的替 换块，任务头、颈部及训练配方按同一记录协议组织。表 5给出真实开"
+    },
+    {
+      "page": 11,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1265,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "5 实验结果与分析 11 46 44 42 40 38 Baseline DS-only PFIM-only Full Global )%( PA 59:05 图 3: SSDD 主指标及跨 seed 离散程度。误差线为样本标准差，不是置信区间；本图不表示统计显著性。 5 实验结"
+    },
+    {
+      "page": 12,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1118,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "5 实验结果与分析 12 表 7: 相对同 seed Baseline 的 AP 配对变化（pp）。 50:95 变体 Seed 0 Seed 1 Seed 2 平均差 ±s d DS-only +2.9001 +5.2557 −2.3016 +1.95±3.87 PFIM-on"
+    },
+    {
+      "page": 13,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1436,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "5 实验结果与分析 13 表 8: seed 0 成本记录。GFLOPs∗ 未核实自定义 scan 核覆盖；t 来自评估器的每图平均推理时间， infer 1000/t 不是独立测量的 batch=1 端到端 FPS。 infer 变体 参数量 GFLOPs∗ t (ms) 10"
+    },
+    {
+      "page": 14,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1082,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "6 讨论 14 表 10: 分割历史记录，单 seed（%）。“–”表示原汇总未提供该字段，不以零补齐。 数据集 配置 mIoU FWIoU Dice OA FUSAR-Map Baseline 44.297 65.382 – 77.105 FUSAR-Map P3 43.561"
+    },
+    {
+      "page": 15,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 941,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "7 结论 15 6.2 何种证据能够解释方法作用 现有结果支持对具体实现及配置差异进行描述，但尚未分离局部修正、能量项、重要性输入驱 动和步长调制的独立作用。最关键的补充不是增加一组不匹配的外部榜单，而是在同壳层下设置 λ = 0,q = 1,η = 0 的中性对照，并增加常数 "
+    },
+    {
+      "page": 16,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 610,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "A 符号、实现与变体补充 16 A 符号、实现与变体补充 表 11: 核心张量、参数与当前检测路径。 符号 形状/取值 含义 X,X¯,X e b×L×d 归一化输入、序列趋势、修正特征 S,V b×L×d；b×L×2d 二维局部标准差及拼接描述子 I b×L×1 每位置一个控制"
+    },
+    {
+      "page": 17,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1334,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "B SSDD 逐 RUN 结果 17 B SSDD 逐 run 结果 表 12: SSDD 测试记录（%）。每行对应原包一条记录，不将四舍五入后的显示数用于二次计算。 变体 Seed AP AP AP P R 50 75 50:95 Baseline 0 87.1822 35.6"
+    },
+    {
+      "page": 18,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1422,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "C 跨任务协议与完整记录 18 C.2 变化检测 每个数据集包含一个配准图像对，记录尺寸分别为 Ottawa 350×290、Yellow River 289×257、 Farmland 291×306、Sulzberger 256×256。历史说明采用 48×48 裁块并缩放到"
+    },
+    {
+      "page": 19,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1074,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "D 历史检测与公开作者报告 19 C.3 分割 FUSAR-Map 采用四类 UPerNet-lite 诊断设置，输入 256、batch 10、FP32、最多 150 epochs， 按验证 mIoU 选模。记录的训练/验证/测试块数为 17,560/4,390/1,280；源"
+    },
+    {
+      "page": 20,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1353,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "D 历史检测与公开作者报告 20 D.2 协议不匹配及失败记录 表 17: 不能作为当前公平主比较的历史结果，AP （%）。 50:95 记录 数值 不可直接比较的原因 SSDD ex27 TEST Baseline 70.348； 历史检查点与部分迁移初始化；VAL 74.02"
+    },
+    {
+      "page": 21,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1057,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "E 待完成的确认实验设计 21 采用文献中的二手对比数字，应标注转引来源，不能让读者误认为由本文重新运行。 E 待完成的确认实验设计 本节是后续实验方案，不是新增实验结果。其目的是把方法假设转化为明确控制和验收条件； 所有运行均需另行冻结代码、数据与资源配置。 E.1 优先级 P"
+    },
+    {
+      "page": 22,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1104,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "E 待完成的确认实验设计 22 可视化应使用预先固定的样例集合，包含近岸/离岸、弱小目标、密集区域、强散射背景和失 败样例。展示原输入、预测、误差、I、q 与 ∆ 的统计，而非只画视觉上有利的热图。尺度与背景 分组规则在观察测试结果前冻结；报告样本数及分组不确定性，不根据结果修改"
+    },
+    {
+      "page": 23,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 1708,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "F 证据归档与版本说明 23 F 证据归档与版本说明 本修订以用户提供的 Overleaf 源包为基础，保留其原始逐 run CSV、汇总 CSV 及历史图件。 所有正文图为本稿内嵌矢量图或由已有数值绘制的统计图，没有新增训练、推理或模拟结果。主文 的数值复算使用原始精度和样本标"
+    },
+    {
+      "page": 24,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 3089,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "参考文献 24 [7] Y. Liu, Y. Tian, Y. Zhao, et al. VMamba: Visual State Space Model. Advances in Neural Information Processing Systems (NeurIPS), "
+    },
+    {
+      "page": 25,
+      "width_pt": 595.28,
+      "height_pt": 841.89,
+      "characters": 957,
+      "outside_page_safe_margin": [],
+      "unresolved_markers": 0,
+      "opening_text": "参考文献 25 [21] X. Shi, S. Fu, J. Chen, F. Wang, and F. Xu. Object-Level Semantic Segmentation on the High- Resolution Gaofen-3 FUSAR-Map Datas"
+    }
+  ],
+  "all_pages_nonempty": true,
+  "outside_margin_count": 0,
+  "unresolved_markers": 0
+}

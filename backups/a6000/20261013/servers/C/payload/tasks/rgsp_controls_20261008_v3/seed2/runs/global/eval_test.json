@@ -1,0 +1,43 @@
+{
+  "experiment": "rgsp_controls_seed2_global",
+  "placement": "p3",
+  "variant": "global",
+  "state_dim": 16,
+  "seed": 2,
+  "subset": "SSDD",
+  "weights": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed2/runs/global/weights/best.pt",
+  "weights_sha256": "06b48ef74b1beb1ee451fa19419275d6e75f7b5b54f04d52d2d8eacc2e314708",
+  "data": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed2/manifest/data.yaml",
+  "data_yaml_sha256": "b27549f7978086c05afb98827b0ed658823fdcb26b3946ec24d021b5569e2503",
+  "split": "test",
+  "imgsz": 640,
+  "batch": 16,
+  "conf": 0.001,
+  "iou": 0.6,
+  "precision_mode": "fp32",
+  "result_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/seed2/evaluations/global",
+  "speed_ms": {
+    "preprocess": 0.06640368494494209,
+    "inference": 5.9333217555078965,
+    "loss": 0.00035762786865234375,
+    "postprocess": 0.19568718712905356
+  },
+  "overall": {
+    "precision": 0.8890797002853564,
+    "recall": 0.8367814899634785,
+    "ap50": 0.8806652042468496,
+    "ap75": 0.328270505116656,
+    "ap50_95": 0.4241912128756513
+  },
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "ship",
+      "precision": 0.8890797002853564,
+      "recall": 0.8367814899634785,
+      "ap50": 0.8806652042468496,
+      "ap75": 0.328270505116656,
+      "ap50_95": 0.4241912128756513
+    }
+  ]
+}

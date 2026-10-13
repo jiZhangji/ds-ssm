@@ -1,0 +1,155 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py:197: UserWarning: upsample_bilinear2d_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py:197: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Yellow_River original seed0 epoch=1/150 loss=1.835832 val=0.376035
+Yellow_River original seed0 epoch=2/150 loss=1.583530 val=0.641026
+Yellow_River original seed0 epoch=3/150 loss=1.422725 val=0.884415
+Yellow_River original seed0 epoch=4/150 loss=1.213465 val=0.883111
+Yellow_River original seed0 epoch=5/150 loss=1.087914 val=0.907060
+Yellow_River original seed0 epoch=6/150 loss=1.003843 val=0.885990
+Yellow_River original seed0 epoch=7/150 loss=1.002879 val=0.918515
+Yellow_River original seed0 epoch=8/150 loss=0.921755 val=0.885838
+Yellow_River original seed0 epoch=9/150 loss=0.872462 val=0.905510
+Yellow_River original seed0 epoch=10/150 loss=0.844993 val=0.930605
+Yellow_River original seed0 epoch=11/150 loss=0.802215 val=0.935010
+Yellow_River original seed0 epoch=12/150 loss=0.838920 val=0.934752
+Yellow_River original seed0 epoch=13/150 loss=0.819631 val=0.934430
+Yellow_River original seed0 epoch=14/150 loss=0.841420 val=0.940568
+Yellow_River original seed0 epoch=15/150 loss=0.834408 val=0.940676
+Yellow_River original seed0 epoch=16/150 loss=0.712818 val=0.921780
+Yellow_River original seed0 epoch=17/150 loss=0.670029 val=0.938132
+Yellow_River original seed0 epoch=18/150 loss=0.801002 val=0.938202
+Yellow_River original seed0 epoch=19/150 loss=0.675046 val=0.936361
+Yellow_River original seed0 epoch=20/150 loss=0.670508 val=0.936817
+Yellow_River original seed0 epoch=21/150 loss=0.698635 val=0.926700
+Yellow_River original seed0 epoch=22/150 loss=0.734787 val=0.932633
+Yellow_River original seed0 epoch=23/150 loss=0.656692 val=0.940507
+Yellow_River original seed0 epoch=24/150 loss=0.664657 val=0.928452
+Yellow_River original seed0 epoch=25/150 loss=0.604581 val=0.930985
+Yellow_River original seed0 epoch=26/150 loss=0.644216 val=0.937651
+Yellow_River original seed0 epoch=27/150 loss=0.612433 val=0.942229
+Yellow_River original seed0 epoch=28/150 loss=0.553586 val=0.944693
+Yellow_River original seed0 epoch=29/150 loss=0.599878 val=0.948724
+Yellow_River original seed0 epoch=30/150 loss=0.547429 val=0.946663
+Yellow_River original seed0 epoch=31/150 loss=0.564405 val=0.948542
+Yellow_River original seed0 epoch=32/150 loss=0.599751 val=0.951185
+Yellow_River original seed0 epoch=33/150 loss=0.549406 val=0.942684
+Yellow_River original seed0 epoch=34/150 loss=0.675790 val=0.942426
+Yellow_River original seed0 epoch=35/150 loss=0.517219 val=0.921532
+Yellow_River original seed0 epoch=36/150 loss=0.596190 val=0.816979
+Yellow_River original seed0 epoch=37/150 loss=0.552880 val=0.912063
+Yellow_River original seed0 epoch=38/150 loss=0.510359 val=0.933269
+Yellow_River original seed0 epoch=39/150 loss=0.548124 val=0.821654
+Yellow_River original seed0 epoch=40/150 loss=0.462084 val=0.899656
+Yellow_River original seed0 epoch=41/150 loss=0.430564 val=0.929808
+Yellow_River original seed0 epoch=42/150 loss=0.429836 val=0.847309
+Yellow_River original seed0 epoch=43/150 loss=0.460976 val=0.881140
+Yellow_River original seed0 epoch=44/150 loss=0.460005 val=0.937046
+Yellow_River original seed0 epoch=45/150 loss=0.514806 val=0.948502
+Yellow_River original seed0 epoch=46/150 loss=0.428763 val=0.922963
+Yellow_River original seed0 epoch=47/150 loss=0.671656 val=0.183057
+Yellow_River original seed0 epoch=48/150 loss=0.479096 val=0.502446
+Yellow_River original seed0 epoch=49/150 loss=0.462609 val=0.153979
+Yellow_River original seed0 epoch=50/150 loss=0.431484 val=0.603392
+Yellow_River original seed0 epoch=51/150 loss=0.484910 val=0.937911
+Yellow_River original seed0 epoch=52/150 loss=0.510552 val=0.810105
+Yellow_River original seed0 epoch=53/150 loss=0.497088 val=0.941010
+Yellow_River original seed0 epoch=54/150 loss=0.486433 val=0.915263
+Yellow_River original seed0 epoch=55/150 loss=0.439367 val=0.911161
+Yellow_River original seed0 epoch=56/150 loss=0.467503 val=0.939559
+Yellow_River original seed0 epoch=57/150 loss=0.410110 val=0.943908
+{
+  "schema": "rgsp-cross-trial-v1",
+  "dataset": "Yellow_River",
+  "task": "change_detection",
+  "variant": "original",
+  "seed": 0,
+  "protocol": {
+    "schema": "rgsp-cross-trial-v1",
+    "dataset": "Yellow_River",
+    "task": "change_detection",
+    "logical_data_sha256": "06671e955b4c1fecfd0ffb7c56c661231d5e4a6832e288b2527811b4d8ea2241",
+    "split_counts": {
+      "test": 16,
+      "train": 100,
+      "val": 16
+    },
+    "annotation_policy": "fail",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "epochs": 150,
+    "patience": 25,
+    "imgsz": 192,
+    "batch": 16,
+    "eval_batch": 16,
+    "optimizer": "AdamW",
+    "lr": 0.0002,
+    "weight_decay": 0.0005,
+    "scheduler": "cosine to 1% initial lr",
+    "module_warmup_epochs": 0,
+    "precision": "FP32 (AMP/TF32 off)",
+    "gradient_clip_l2": 5.0,
+    "grad_accum": 1,
+    "classification_label_smoothing": 0.1,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "selection_metric": "f1",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "historical_results_comparable": false
+  },
+  "protocol_sha256": "7e20b559cfe9b6364bd0aeeceb9d024ed8f4d0a0f648bc4da3fd416e74620c0f",
+  "data": {
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/Yellow_River/manifest.json",
+    "manifest_sha256": "a7aa8b3d0e78ff7a8364545409cf73732e264d2946ff2e9fcfee98bdce77d224",
+    "logical_manifest_sha256": "06671e955b4c1fecfd0ffb7c56c661231d5e4a6832e288b2527811b4d8ea2241",
+    "counts": {
+      "test": 16,
+      "train": 100,
+      "val": 16
+    },
+    "audit_sha256": "e9d4f235c47f3f2c3add54ff364dded861f780eb2b1f76df4e02935d8bc37679",
+    "files_sha256": "44ddd56e277fa71e0795de6a6cf9ed9c220798aad27ab770e967211c241eec2a",
+    "annotation_policy": "fail"
+  },
+  "initialization_common_tensor_sha256": "d258a21c11bddf3824e3377acf6401654d52d5ccbadee72d7ec597e3fa046067",
+  "checkpoint": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_original_seed0/best.pt",
+  "best_sha256": "dae57b65d6a0622a3216666d0a710fb33593bb61bcd2241812519df9424d65a5",
+  "best_epoch": 32,
+  "threshold": 0.15,
+  "metric": {
+    "precision": 0.6587701612903226,
+    "recall": 0.9856711915535445,
+    "f1": 0.7897280966767373,
+    "iou": 0.6525212181727409,
+    "oa": 0.9244791666666666,
+    "kappa": 0.7459003924670661,
+    "tp": 1307,
+    "fp": 677,
+    "fn": 19,
+    "tn": 7213,
+    "evaluated_native_unique_pixels": 9216,
+    "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities"
+  },
+  "reloaded_controls": {
+    "variant": "original",
+    "controlled_blocks": 0
+  },
+  "parameters": 3782737,
+  "trainable_parameters": 3782737,
+  "buffers": 5688,
+  "efficiency_status": "Params only here; matched-hardware latency and scan-aware FLOPs require the separate efficiency lane. No undercounted THOP GFLOPs claimed.",
+  "historical_negative_results_preserved": true,
+  "finished_utc": "2026-10-09T13:25:01.098778+00:00"
+}
+{"compatibility_launcher": "PASS", "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/yellow_river_original_seed0/cuda_compatibility.json"}

@@ -1,0 +1,541 @@
+{
+  "started_utc": "2026-10-09T02:56:21.528034+00:00",
+  "cases": [
+    {
+      "case": "original",
+      "spec": {
+        "control": "original",
+        "placement": "baseline",
+        "state_dim": 0
+      },
+      "status": "PASS",
+      "actual_rgsp_blocks": 0,
+      "controls": [],
+      "forward_observations": [],
+      "output_shapes": [
+        [
+          1,
+          65,
+          16,
+          16
+        ],
+        [
+          1,
+          65,
+          8,
+          8
+        ],
+        [
+          1,
+          65,
+          4,
+          4
+        ]
+      ],
+      "detector_strides": [
+        8,
+        16,
+        32
+      ],
+      "bn_modules_reset_and_checked": 41,
+      "loss": 4.887796878814697,
+      "parameters_with_gradients": 404,
+      "parameter_gradient_max_abs": 0.216470867395401,
+      "peak_allocated_mib": 188.15283203125
+    },
+    {
+      "case": "p2_full_d16",
+      "spec": {
+        "control": "full",
+        "placement": "p2",
+        "state_dim": 16
+      },
+      "status": "PASS",
+      "actual_rgsp_blocks": 1,
+      "controls": [
+        {
+          "name": "model.1",
+          "control": "full",
+          "options": {
+            "stats_kernel_size": 3,
+            "trend_kernel_size": 3
+          },
+          "lambda_s": 0.5,
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [],
+          "parameter_scalars": [
+            "lambda_s",
+            "alpha",
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "requires_grad": {
+            "lambda_s": true,
+            "alpha": true,
+            "beta_i": true,
+            "rho_i": true,
+            "eta_i": true
+          },
+          "lrc_enabled": true,
+          "trend_parameters_active": true,
+          "predictor_parameters_active": true,
+          "descriptor_mode": "trend_std",
+          "predictor_input_features": 64,
+          "fixed_importance": null,
+          "importance_factor_location": "scan_input",
+          "input_path": true,
+          "delta_path": true,
+          "min_retain": 0.5
+        }
+      ],
+      "forward_observations": [
+        {
+          "name": "model.1",
+          "shape": [
+            1,
+            32,
+            32,
+            32
+          ],
+          "device": "cuda:0",
+          "stride": 4
+        }
+      ],
+      "output_shapes": [
+        [
+          1,
+          65,
+          16,
+          16
+        ],
+        [
+          1,
+          65,
+          8,
+          8
+        ],
+        [
+          1,
+          65,
+          4,
+          4
+        ]
+      ],
+      "detector_strides": [
+        8,
+        16,
+        32
+      ],
+      "bn_modules_reset_and_checked": 39,
+      "loss": 4.916616439819336,
+      "parameters_with_gradients": 401,
+      "parameter_gradient_max_abs": 0.22084346413612366,
+      "peak_allocated_mib": 184.099609375
+    },
+    {
+      "case": "p3_full_d16",
+      "spec": {
+        "control": "full",
+        "placement": "p3",
+        "state_dim": 16
+      },
+      "status": "PASS",
+      "actual_rgsp_blocks": 1,
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "full",
+          "options": {
+            "stats_kernel_size": 3,
+            "trend_kernel_size": 3
+          },
+          "lambda_s": 0.5,
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [],
+          "parameter_scalars": [
+            "lambda_s",
+            "alpha",
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "requires_grad": {
+            "lambda_s": true,
+            "alpha": true,
+            "beta_i": true,
+            "rho_i": true,
+            "eta_i": true
+          },
+          "lrc_enabled": true,
+          "trend_parameters_active": true,
+          "predictor_parameters_active": true,
+          "descriptor_mode": "trend_std",
+          "predictor_input_features": 128,
+          "fixed_importance": null,
+          "importance_factor_location": "scan_input",
+          "input_path": true,
+          "delta_path": true,
+          "min_retain": 0.5
+        }
+      ],
+      "forward_observations": [
+        {
+          "name": "model.3",
+          "shape": [
+            1,
+            64,
+            16,
+            16
+          ],
+          "device": "cuda:0",
+          "stride": 8
+        }
+      ],
+      "output_shapes": [
+        [
+          1,
+          65,
+          16,
+          16
+        ],
+        [
+          1,
+          65,
+          8,
+          8
+        ],
+        [
+          1,
+          65,
+          4,
+          4
+        ]
+      ],
+      "detector_strides": [
+        8,
+        16,
+        32
+      ],
+      "bn_modules_reset_and_checked": 39,
+      "loss": 4.913143157958984,
+      "parameters_with_gradients": 401,
+      "parameter_gradient_max_abs": 0.22057482600212097,
+      "peak_allocated_mib": 186.01806640625
+    },
+    {
+      "case": "p4_full_d16",
+      "spec": {
+        "control": "full",
+        "placement": "p4",
+        "state_dim": 16
+      },
+      "status": "PASS",
+      "actual_rgsp_blocks": 1,
+      "controls": [
+        {
+          "name": "model.6",
+          "control": "full",
+          "options": {
+            "stats_kernel_size": 3,
+            "trend_kernel_size": 3
+          },
+          "lambda_s": 0.5,
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [],
+          "parameter_scalars": [
+            "lambda_s",
+            "alpha",
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "requires_grad": {
+            "lambda_s": true,
+            "alpha": true,
+            "beta_i": true,
+            "rho_i": true,
+            "eta_i": true
+          },
+          "lrc_enabled": true,
+          "trend_parameters_active": true,
+          "predictor_parameters_active": true,
+          "descriptor_mode": "trend_std",
+          "predictor_input_features": 256,
+          "fixed_importance": null,
+          "importance_factor_location": "scan_input",
+          "input_path": true,
+          "delta_path": true,
+          "min_retain": 0.5
+        }
+      ],
+      "forward_observations": [
+        {
+          "name": "model.6",
+          "shape": [
+            1,
+            128,
+            8,
+            8
+          ],
+          "device": "cuda:0",
+          "stride": 16
+        }
+      ],
+      "output_shapes": [
+        [
+          1,
+          65,
+          16,
+          16
+        ],
+        [
+          1,
+          65,
+          8,
+          8
+        ],
+        [
+          1,
+          65,
+          4,
+          4
+        ]
+      ],
+      "detector_strides": [
+        8,
+        16,
+        32
+      ],
+      "bn_modules_reset_and_checked": 39,
+      "loss": 4.9437761306762695,
+      "parameters_with_gradients": 401,
+      "parameter_gradient_max_abs": 0.2190406322479248,
+      "peak_allocated_mib": 186.30419921875
+    },
+    {
+      "case": "p3_full_d8",
+      "spec": {
+        "control": "full",
+        "placement": "p3",
+        "state_dim": 8
+      },
+      "status": "PASS",
+      "actual_rgsp_blocks": 1,
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "full",
+          "options": {
+            "stats_kernel_size": 3,
+            "trend_kernel_size": 3
+          },
+          "lambda_s": 0.5,
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [],
+          "parameter_scalars": [
+            "lambda_s",
+            "alpha",
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "requires_grad": {
+            "lambda_s": true,
+            "alpha": true,
+            "beta_i": true,
+            "rho_i": true,
+            "eta_i": true
+          },
+          "lrc_enabled": true,
+          "trend_parameters_active": true,
+          "predictor_parameters_active": true,
+          "descriptor_mode": "trend_std",
+          "predictor_input_features": 128,
+          "fixed_importance": null,
+          "importance_factor_location": "scan_input",
+          "input_path": true,
+          "delta_path": true,
+          "min_retain": 0.5
+        }
+      ],
+      "forward_observations": [
+        {
+          "name": "model.3",
+          "shape": [
+            1,
+            64,
+            16,
+            16
+          ],
+          "device": "cuda:0",
+          "stride": 8
+        }
+      ],
+      "output_shapes": [
+        [
+          1,
+          65,
+          16,
+          16
+        ],
+        [
+          1,
+          65,
+          8,
+          8
+        ],
+        [
+          1,
+          65,
+          4,
+          4
+        ]
+      ],
+      "detector_strides": [
+        8,
+        16,
+        32
+      ],
+      "bn_modules_reset_and_checked": 39,
+      "loss": 4.924699306488037,
+      "parameters_with_gradients": 401,
+      "parameter_gradient_max_abs": 0.21865415573120117,
+      "peak_allocated_mib": 185.98876953125
+    },
+    {
+      "case": "p3_full_d32",
+      "spec": {
+        "control": "full",
+        "placement": "p3",
+        "state_dim": 32
+      },
+      "status": "PASS",
+      "actual_rgsp_blocks": 1,
+      "controls": [
+        {
+          "name": "model.3",
+          "control": "full",
+          "options": {
+            "stats_kernel_size": 3,
+            "trend_kernel_size": 3
+          },
+          "lambda_s": 0.5,
+          "alpha": 0.5,
+          "beta_i": 1.0,
+          "rho_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "buffer_scalars": [],
+          "parameter_scalars": [
+            "lambda_s",
+            "alpha",
+            "beta_i",
+            "rho_i",
+            "eta_i"
+          ],
+          "requires_grad": {
+            "lambda_s": true,
+            "alpha": true,
+            "beta_i": true,
+            "rho_i": true,
+            "eta_i": true
+          },
+          "lrc_enabled": true,
+          "trend_parameters_active": true,
+          "predictor_parameters_active": true,
+          "descriptor_mode": "trend_std",
+          "predictor_input_features": 128,
+          "fixed_importance": null,
+          "importance_factor_location": "scan_input",
+          "input_path": true,
+          "delta_path": true,
+          "min_retain": 0.5
+        }
+      ],
+      "forward_observations": [
+        {
+          "name": "model.3",
+          "shape": [
+            1,
+            64,
+            16,
+            16
+          ],
+          "device": "cuda:0",
+          "stride": 8
+        }
+      ],
+      "output_shapes": [
+        [
+          1,
+          65,
+          16,
+          16
+        ],
+        [
+          1,
+          65,
+          8,
+          8
+        ],
+        [
+          1,
+          65,
+          4,
+          4
+        ]
+      ],
+      "detector_strides": [
+        8,
+        16,
+        32
+      ],
+      "bn_modules_reset_and_checked": 39,
+      "loss": 4.99608850479126,
+      "parameters_with_gradients": 401,
+      "parameter_gradient_max_abs": 0.22387997806072235,
+      "peak_allocated_mib": 186.07666015625
+    }
+  ],
+  "imgsz": 128,
+  "batch": 1,
+  "precision": "fp32",
+  "optimizer_steps": 0,
+  "dataset_access": false,
+  "formal_training_started": false,
+  "gradient_objective": "sum of mean squared raw detection outputs, synthetic structural check only",
+  "initialization_policy": "same seed scratch; BN reset; no cross-structure common-tensor alignment",
+  "probe_sha256": "c74b5588cca66dcf87b0ad83b01e1264f106d852782b73448922e31e28920c1d",
+  "manifest_sha256": "6acac34e277082b0d2a557eec4c3c9bc3b96d6fd4e8b7c8ec7ff4104a549402d",
+  "cuda_identity": {
+    "hostname": "powerleader-PT6620W",
+    "torch": "1.13.1+cu117",
+    "cuda_visible_devices": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+    "physical_gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+    "physical_gpu_index": 0,
+    "physical_gpu_name": "NVIDIA RTX A6000",
+    "reported_count_before": 0,
+    "cuda_runtime_count": 1,
+    "reported_count_after": 1,
+    "compatibility_applied": true,
+    "method": "process-local CUDA runtime device_count for known PyTorch 1.13 UUID parser bug",
+    "torch_installation_modified": false,
+    "gpu_mask_changed": false
+  },
+  "source_sha256": "05d1900840474e068aec65bc30ca81501fce55a464ca0dc3fbe60054885aade3",
+  "expanded_validation_sha256": "52fc7a06c5040131290b3f2d07f1b830e6a0f29e41e3529cfdf696de2c420509",
+  "status": "PASS",
+  "finished_utc": "2026-10-09T02:56:31.378491+00:00"
+}

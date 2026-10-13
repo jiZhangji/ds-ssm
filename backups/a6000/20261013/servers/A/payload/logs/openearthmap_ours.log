@@ -1,0 +1,213 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+OpenEarthMap-SAR ours epoch=1/150 loss=2.62079 score=0.14134
+OpenEarthMap-SAR ours epoch=2/150 loss=2.45109 score=0.12461
+OpenEarthMap-SAR ours epoch=3/150 loss=2.34052 score=0.14566
+OpenEarthMap-SAR ours epoch=4/150 loss=2.30812 score=0.15834
+OpenEarthMap-SAR ours epoch=5/150 loss=2.26399 score=0.16960
+OpenEarthMap-SAR ours epoch=6/150 loss=2.21490 score=0.17123
+OpenEarthMap-SAR ours epoch=7/150 loss=2.19650 score=0.19467
+OpenEarthMap-SAR ours epoch=8/150 loss=2.19817 score=0.19869
+OpenEarthMap-SAR ours epoch=9/150 loss=2.16399 score=0.18475
+OpenEarthMap-SAR ours epoch=10/150 loss=2.15269 score=0.18357
+OpenEarthMap-SAR ours epoch=11/150 loss=2.15401 score=0.20164
+OpenEarthMap-SAR ours epoch=12/150 loss=2.12176 score=0.19374
+OpenEarthMap-SAR ours epoch=13/150 loss=2.11078 score=0.19621
+OpenEarthMap-SAR ours epoch=14/150 loss=2.09271 score=0.18318
+OpenEarthMap-SAR ours epoch=15/150 loss=2.09643 score=0.20396
+OpenEarthMap-SAR ours epoch=16/150 loss=2.07645 score=0.19706
+OpenEarthMap-SAR ours epoch=17/150 loss=2.07774 score=0.20006
+OpenEarthMap-SAR ours epoch=18/150 loss=2.06105 score=0.19036
+OpenEarthMap-SAR ours epoch=19/150 loss=2.05552 score=0.19515
+OpenEarthMap-SAR ours epoch=20/150 loss=2.04378 score=0.20040
+OpenEarthMap-SAR ours epoch=21/150 loss=2.03159 score=0.21649
+OpenEarthMap-SAR ours epoch=22/150 loss=2.03457 score=0.20358
+OpenEarthMap-SAR ours epoch=23/150 loss=2.03059 score=0.20841
+OpenEarthMap-SAR ours epoch=24/150 loss=2.00947 score=0.20357
+OpenEarthMap-SAR ours epoch=25/150 loss=2.02919 score=0.19739
+OpenEarthMap-SAR ours epoch=26/150 loss=2.00872 score=0.21145
+OpenEarthMap-SAR ours epoch=27/150 loss=2.00309 score=0.20816
+OpenEarthMap-SAR ours epoch=28/150 loss=1.98801 score=0.20984
+OpenEarthMap-SAR ours epoch=29/150 loss=1.98221 score=0.20255
+OpenEarthMap-SAR ours epoch=30/150 loss=1.99123 score=0.21608
+OpenEarthMap-SAR ours epoch=31/150 loss=1.97823 score=0.20304
+OpenEarthMap-SAR ours epoch=32/150 loss=1.99461 score=0.20947
+OpenEarthMap-SAR ours epoch=33/150 loss=1.95729 score=0.22133
+OpenEarthMap-SAR ours epoch=34/150 loss=1.96366 score=0.20158
+OpenEarthMap-SAR ours epoch=35/150 loss=1.96262 score=0.20503
+OpenEarthMap-SAR ours epoch=36/150 loss=1.96587 score=0.22309
+OpenEarthMap-SAR ours epoch=37/150 loss=1.95612 score=0.21827
+OpenEarthMap-SAR ours epoch=38/150 loss=1.94598 score=0.22432
+OpenEarthMap-SAR ours epoch=39/150 loss=1.95834 score=0.21337
+OpenEarthMap-SAR ours epoch=40/150 loss=1.95322 score=0.21360
+OpenEarthMap-SAR ours epoch=41/150 loss=1.94234 score=0.22253
+OpenEarthMap-SAR ours epoch=42/150 loss=1.93397 score=0.21076
+OpenEarthMap-SAR ours epoch=43/150 loss=1.93685 score=0.22063
+OpenEarthMap-SAR ours epoch=44/150 loss=1.94374 score=0.21985
+OpenEarthMap-SAR ours epoch=45/150 loss=1.91677 score=0.20249
+OpenEarthMap-SAR ours epoch=46/150 loss=1.93409 score=0.22193
+OpenEarthMap-SAR ours epoch=47/150 loss=1.92215 score=0.21741
+OpenEarthMap-SAR ours epoch=48/150 loss=1.92520 score=0.21311
+OpenEarthMap-SAR ours epoch=49/150 loss=1.93301 score=0.21601
+OpenEarthMap-SAR ours epoch=50/150 loss=1.92690 score=0.22229
+OpenEarthMap-SAR ours epoch=51/150 loss=1.90985 score=0.20308
+OpenEarthMap-SAR ours epoch=52/150 loss=1.91158 score=0.22233
+OpenEarthMap-SAR ours epoch=53/150 loss=1.90225 score=0.22566
+OpenEarthMap-SAR ours epoch=54/150 loss=1.90317 score=0.21721
+OpenEarthMap-SAR ours epoch=55/150 loss=1.89809 score=0.22007
+OpenEarthMap-SAR ours epoch=56/150 loss=1.88781 score=0.22288
+OpenEarthMap-SAR ours epoch=57/150 loss=1.89257 score=0.22056
+OpenEarthMap-SAR ours epoch=58/150 loss=1.87879 score=0.23305
+OpenEarthMap-SAR ours epoch=59/150 loss=1.88956 score=0.21992
+OpenEarthMap-SAR ours epoch=60/150 loss=1.89327 score=0.21875
+OpenEarthMap-SAR ours epoch=61/150 loss=1.89298 score=0.22354
+OpenEarthMap-SAR ours epoch=62/150 loss=1.88068 score=0.22507
+OpenEarthMap-SAR ours epoch=63/150 loss=1.87717 score=0.23308
+OpenEarthMap-SAR ours epoch=64/150 loss=1.87713 score=0.22576
+OpenEarthMap-SAR ours epoch=65/150 loss=1.88051 score=0.22698
+OpenEarthMap-SAR ours epoch=66/150 loss=1.87745 score=0.22159
+OpenEarthMap-SAR ours epoch=67/150 loss=1.87510 score=0.22585
+OpenEarthMap-SAR ours epoch=68/150 loss=1.87193 score=0.22097
+OpenEarthMap-SAR ours epoch=69/150 loss=1.85589 score=0.21716
+OpenEarthMap-SAR ours epoch=70/150 loss=1.85112 score=0.22522
+OpenEarthMap-SAR ours epoch=71/150 loss=1.85043 score=0.21804
+OpenEarthMap-SAR ours epoch=72/150 loss=1.87339 score=0.21329
+OpenEarthMap-SAR ours epoch=73/150 loss=1.85861 score=0.23240
+OpenEarthMap-SAR ours epoch=74/150 loss=1.85338 score=0.21747
+OpenEarthMap-SAR ours epoch=75/150 loss=1.85604 score=0.23063
+OpenEarthMap-SAR ours epoch=76/150 loss=1.86882 score=0.22559
+OpenEarthMap-SAR ours epoch=77/150 loss=1.83475 score=0.22756
+OpenEarthMap-SAR ours epoch=78/150 loss=1.83173 score=0.22880
+OpenEarthMap-SAR ours epoch=79/150 loss=1.84810 score=0.21583
+OpenEarthMap-SAR ours epoch=80/150 loss=1.84154 score=0.23575
+OpenEarthMap-SAR ours epoch=81/150 loss=1.83288 score=0.23526
+OpenEarthMap-SAR ours epoch=82/150 loss=1.84748 score=0.23541
+OpenEarthMap-SAR ours epoch=83/150 loss=1.83539 score=0.23720
+OpenEarthMap-SAR ours epoch=84/150 loss=1.83590 score=0.23723
+OpenEarthMap-SAR ours epoch=85/150 loss=1.82352 score=0.21646
+OpenEarthMap-SAR ours epoch=86/150 loss=1.84674 score=0.23372
+OpenEarthMap-SAR ours epoch=87/150 loss=1.82366 score=0.23177
+OpenEarthMap-SAR ours epoch=88/150 loss=1.83366 score=0.20929
+OpenEarthMap-SAR ours epoch=89/150 loss=1.83219 score=0.21146
+OpenEarthMap-SAR ours epoch=90/150 loss=1.82424 score=0.24705
+OpenEarthMap-SAR ours epoch=91/150 loss=1.82706 score=0.23143
+OpenEarthMap-SAR ours epoch=92/150 loss=1.82168 score=0.23566
+OpenEarthMap-SAR ours epoch=93/150 loss=1.81553 score=0.22823
+OpenEarthMap-SAR ours epoch=94/150 loss=1.82567 score=0.22729
+OpenEarthMap-SAR ours epoch=95/150 loss=1.80578 score=0.22916
+OpenEarthMap-SAR ours epoch=96/150 loss=1.82710 score=0.23351
+OpenEarthMap-SAR ours epoch=97/150 loss=1.81336 score=0.22287
+OpenEarthMap-SAR ours epoch=98/150 loss=1.82812 score=0.23302
+OpenEarthMap-SAR ours epoch=99/150 loss=1.81604 score=0.22369
+OpenEarthMap-SAR ours epoch=100/150 loss=1.81138 score=0.23403
+OpenEarthMap-SAR ours epoch=101/150 loss=1.81011 score=0.24093
+OpenEarthMap-SAR ours epoch=102/150 loss=1.79746 score=0.24353
+OpenEarthMap-SAR ours epoch=103/150 loss=1.79244 score=0.22436
+OpenEarthMap-SAR ours epoch=104/150 loss=1.80245 score=0.23626
+OpenEarthMap-SAR ours epoch=105/150 loss=1.79247 score=0.22773
+OpenEarthMap-SAR ours epoch=106/150 loss=1.79610 score=0.24214
+OpenEarthMap-SAR ours epoch=107/150 loss=1.80086 score=0.23266
+OpenEarthMap-SAR ours epoch=108/150 loss=1.80071 score=0.23124
+OpenEarthMap-SAR ours epoch=109/150 loss=1.80131 score=0.23985
+OpenEarthMap-SAR ours epoch=110/150 loss=1.77586 score=0.24122
+OpenEarthMap-SAR ours epoch=111/150 loss=1.78873 score=0.23461
+OpenEarthMap-SAR ours epoch=112/150 loss=1.80409 score=0.22713
+OpenEarthMap-SAR ours epoch=113/150 loss=1.77928 score=0.23428
+OpenEarthMap-SAR ours epoch=114/150 loss=1.78035 score=0.23560
+OpenEarthMap-SAR ours epoch=115/150 loss=1.78553 score=0.23420
+OpenEarthMap-SAR ours epoch=116/150 loss=1.77305 score=0.23287
+OpenEarthMap-SAR ours epoch=117/150 loss=1.76919 score=0.23709
+OpenEarthMap-SAR ours epoch=118/150 loss=1.77473 score=0.24190
+OpenEarthMap-SAR ours epoch=119/150 loss=1.78496 score=0.24176
+OpenEarthMap-SAR ours epoch=120/150 loss=1.78491 score=0.23956
+EARLY STOP: 30 stale epochs
+{
+  "dataset": "OpenEarthMap-SAR",
+  "task": "segmentation",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "backbone_layout": "full_t",
+  "decoder": "upernet_lite",
+  "initialization": "scratch",
+  "protocol": "SAR-only; train on 4,333 released pseudo labels (P); select on 210 released real validation labels; evaluate once on 280 released real test labels",
+  "selection_policy": "best validation mIoU; test evaluated once after selection",
+  "class_names": [
+    "bareland",
+    "rangeland",
+    "developed_space",
+    "road",
+    "tree",
+    "water",
+    "agriculture_land",
+    "building"
+  ],
+  "split_sizes": {
+    "train": 4333,
+    "val": 210,
+    "test": 490
+  },
+  "imgsz": 512,
+  "batch": 8,
+  "eval_imgsz": 1024,
+  "eval_batch": 1,
+  "epochs_requested": 150,
+  "optimizer": "Adam",
+  "scheduler": "fixed",
+  "lr": 0.0001,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0,
+  "label_smoothing": 0.0,
+  "segmentation_loss": "weighted_cross_entropy_plus_dice",
+  "selection_metric": "miou_all",
+  "best_epoch": 90,
+  "threshold": null,
+  "metric": {
+    "miou_all": 0.287768660843419,
+    "miou_foreground": 0.32887846953533595,
+    "mpa": 0.44384191464306827,
+    "dice": 0.41686281050044727,
+    "oa": 0.45743092424422505,
+    "fwiou": 0.28978265074753035,
+    "per_class_iou": [
+      0.0,
+      0.19391829451153528,
+      0.15332851048099683,
+      0.1713409895400067,
+      0.36725016058606924,
+      0.5253721532665607,
+      0.5189651129882993,
+      0.3719740653738837
+    ],
+    "per_class_pa": [
+      0.0,
+      0.3146962943214269,
+      0.20314340335733927,
+      0.24065682634398478,
+      0.5173516850122332,
+      0.7414961607965082,
+      0.7730005114420623,
+      0.7603904358709914
+    ],
+    "per_class_dice": [
+      0.0,
+      0.3248434928972632,
+      0.26588870228665556,
+      0.29255526967820605,
+      0.5372098993627445,
+      0.6888445578890167,
+      0.683314065018025,
+      0.5422464968716667
+    ]
+  },
+  "params": 3718310,
+  "gflops": 37.2904576,
+  "latency_ms": 16.568624733311783,
+  "fps": 60.355039485532316,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/openearthmap_saronly_p_p3_d16_v1/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/openearthmap_sar/sar_only_p/manifest.json"
+}

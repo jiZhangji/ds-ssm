@@ -1,0 +1,137 @@
+{
+  "checked_utc": "2026-10-09T03:37:03.837034+00:00",
+  "cpu_load": [
+    1.13,
+    0.91,
+    0.53
+  ],
+  "disk_free_gib": 247.96,
+  "hostname": "powerleader-PT6620W",
+  "hosts": {
+    "a": {
+      "dispatch": {
+        "attempt_dir": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/a/attempt_2026-10-09T033014.593114_0000_324976ee",
+        "child": {
+          "argv": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/run_lane.py",
+            "--plan",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+            "--lane",
+            "a_seed0"
+          ],
+          "pid": 122932,
+          "ppid": 122931,
+          "session": 122931,
+          "start_ticks": 7354419,
+          "state": "R"
+        },
+        "child_log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/a/attempt_2026-10-09T033014.593114_0000_324976ee/seed0.log",
+        "completed_seeds": [],
+        "dependency_evidence": {
+          "verified": []
+        },
+        "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+        "host_key": "a",
+        "hostname": "powerleader-PT6620W",
+        "owner": {
+          "argv": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/campaign_dispatch.py",
+            "--plan",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/plan.json",
+            "--host-key",
+            "a",
+            "--inherited-lock-fd",
+            "3",
+            "--attempt-dir",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/dispatch/a/attempt_2026-10-09T033014.593114_0000_324976ee"
+          ],
+          "pid": 122931,
+          "ppid": 122928,
+          "session": 122931,
+          "start_ticks": 7354407,
+          "state": "R"
+        },
+        "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+        "schema": "rgsp-campaign-dispatch-v1",
+        "seed": 0,
+        "started_utc": "2026-10-09T03:30:14.648242+00:00",
+        "state": "running_seed0",
+        "updated_utc": "2026-10-09T03:30:14.722600+00:00"
+      },
+      "dispatcher_alive": true,
+      "gpu": {
+        "checked_utc": "2026-10-09T03:37:03.907573+00:00",
+        "compute_processes": [
+          [
+            "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+            " 122961",
+            " /home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python"
+          ]
+        ],
+        "memory_total_mib": 49140,
+        "memory_used_mib": 15184,
+        "name": "NVIDIA RTX A6000",
+        "utilization_percent": 100,
+        "uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964"
+      },
+      "lanes": {
+        "a_seed0": {
+          "assigned_count": 22,
+          "last_completed_epoch": 13,
+          "last_loss": [
+            1.9750494956970215,
+            1.5018258094787598,
+            1.9453867673873901
+          ],
+          "last_loss_finite": true,
+          "receipt_files_present": [
+            "sadd_matched_scale075_seed0",
+            "sadd_full_seed0",
+            "sadd_local_energy_seed0"
+          ],
+          "status": {
+            "completed": [
+              "sadd_matched_scale075_seed0",
+              "sadd_full_seed0",
+              "sadd_local_energy_seed0"
+            ],
+            "current": "sadd_matched_identity_seed0",
+            "gpu": {
+              "checked_utc": "2026-10-09T03:30:35.377894+00:00",
+              "compute_processes": [],
+              "memory_total_mib": 49140,
+              "memory_used_mib": 530,
+              "name": "NVIDIA RTX A6000",
+              "utilization_percent": 0,
+              "uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964"
+            },
+            "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+            "host": "powerleader-PT6620W",
+            "lane": "a_seed0",
+            "pid": 122932,
+            "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+            "schema": "rgsp-seedwise-v1",
+            "started_utc": "2026-10-09T03:30:14.772006+00:00",
+            "state": "running",
+            "updated_utc": "2026-10-09T03:30:35.398417+00:00"
+          }
+        },
+        "a_seed1": {
+          "assigned_count": 19,
+          "receipt_files_present": [],
+          "status": null
+        }
+      }
+    }
+  },
+  "plan_file_sha256": "37e1e2254643541118e4bab29d11cb93f1483847fc73aa69be8d63be4907cbe0",
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-live-snapshot-v1",
+  "warning": "Receipt presence and last epoch are progress only; verify_receipts is required for completion."
+}

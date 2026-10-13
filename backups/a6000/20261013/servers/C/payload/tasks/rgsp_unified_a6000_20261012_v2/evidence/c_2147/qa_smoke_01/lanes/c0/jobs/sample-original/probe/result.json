@@ -1,0 +1,21 @@
+{
+  "dataset": "SAMPLE",
+  "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+  "estimated_full_seconds": 647.1403363685064,
+  "method": "Original",
+  "params": 2853466,
+  "peak_gpu_allocated_bytes": 1238663168,
+  "protocol_sha256": "d6d808b96afcaa8ecabf8b978e30b1c68b6c8e51c5a20209974fbc435368f603",
+  "seed": 0,
+  "status": "PROBE_PASS",
+  "task": "classification",
+  "test_evaluated": false,
+  "timed_update_seconds": [
+    0.32273320300737396,
+    0.32445857097627595,
+    0.3238546809880063,
+    0.32310914201661944
+  ],
+  "updates_per_epoch": 11,
+  "validation_evaluated": false
+}

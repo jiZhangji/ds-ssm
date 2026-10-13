@@ -1,0 +1,71 @@
+{
+  "status": "PROBE_PASS",
+  "task": "change_detection",
+  "method": "ddnet",
+  "dataset": "Ottawa",
+  "seed": 0,
+  "device": "cuda:0",
+  "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+  "test_evaluated": false,
+  "ground_truth_read": false,
+  "validation_loader_created": false,
+  "test_loader_created": false,
+  "optimizer_updates": 6,
+  "warmup_probe_updates": 2,
+  "timed_updates": 4,
+  "update_seconds": [
+    0.8343490560073406,
+    0.031943312962539494,
+    0.028672733053099364,
+    0.02827708999393508,
+    0.028086443024221808,
+    0.028080651012714952
+  ],
+  "training_losses": [
+    12.186346054077148,
+    9.74430137872696,
+    6.911202251911163,
+    5.969151318073273,
+    9.441317558288574,
+    8.541663527488708
+  ],
+  "mean_timed_update_seconds": 0.0282792292709928,
+  "preprocessing_seconds": 6.70437910000328,
+  "estimated_full_seconds": 581.9321817012678,
+  "planned_max_updates": 18750,
+  "estimate_components": {
+    "train_seconds": 530.235548831115,
+    "unmeasured_pseudo_validation_seconds": 44.18629573592625,
+    "unmeasured_uncertain_inference_seconds": 0.8059580342232948
+  },
+  "estimate_caveat": "6-update extrapolation; pseudo-validation and uncertain inference use train-time/3 forward estimate, never sampled",
+  "protocol_sha256": "3bbe6c336ad93853fe6c0c676e3859ab434c014bda2862ddaeda1d590db51b24",
+  "source_audit": {
+    "method": "ddnet",
+    "repository": "https://github.com/summitgao/SAR_CD_DDNet",
+    "commit": "30c77afd08aa7f09790096470add465ec771a9c7",
+    "definitions": [
+      {
+        "source": "vendor/ddnet/DDNet_github.ipynb",
+        "source_sha256": "c1a463690b8d357396c92d56d1fa51d0b3cb5121ab137d89e1bfe26761189ab5",
+        "cell_source_sha256": {
+          "vendor/ddnet/DDNet_github.ipynb:cell5": "c6fb95227d1d75658ff020627ce6d083fc64a1b5f7c493859fc1ba3912ae95e2",
+          "vendor/ddnet/DDNet_github.ipynb:cell6": "7330db0717e37fff857e1924e7701a91f78ac680ba9ad135472cc5e16fbbc69a"
+        },
+        "definitions": [
+          "DCT",
+          "DDNet",
+          "MRC"
+        ],
+        "transformed_ast_sha256": "0cdd8a2d0dcf9fd9da359d5c63c8a6813daf48987c5bd24832fe901ef6bf6c65",
+        "precision_cast_rewrites": 0,
+        "hook_once_rewrites": 0
+      }
+    ],
+    "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+    "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+    "author_source_unmodified": true,
+    "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+  },
+  "timestamp": "2026-10-12T13:21:20.208918+00:00"
+}

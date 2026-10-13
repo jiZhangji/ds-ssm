@@ -1,0 +1,76 @@
+{
+  "annotation_policy": "retain every included original annotation; duplicated content stays in one split",
+  "counts_before_smoke_subsetting": {
+    "test": 232,
+    "train": 730,
+    "val": 186
+  },
+  "development_unique_content": 903,
+  "excluded_from_development": [
+    {
+      "image": "000006.jpg",
+      "reason": "identical to official test content",
+      "sha256": "df43f430436637a09dcfb0a0950e05fd7fb52bfa24d2abc45671fba6ec2a6861"
+    },
+    {
+      "image": "000033.jpg",
+      "reason": "identical to official test content",
+      "sha256": "2040ca248b9fb7c66c250f7e4a8259b0f7c2c5a12d6e74f3b6fed76c4372587d"
+    },
+    {
+      "image": "000093.jpg",
+      "reason": "identical to official test content",
+      "sha256": "bdd7802e05fa26cc8cfcbd18e3c07704a3f3b46dc200d4702320ff896bdb9b85"
+    },
+    {
+      "image": "000227.jpg",
+      "reason": "identical to official test content",
+      "sha256": "3192751b5f3960726c2c175c5adaf9535700c4a97433fe6efa51bca6c51afd19"
+    },
+    {
+      "image": "000237.jpg",
+      "reason": "identical to official test content",
+      "sha256": "08589e0242e022cc5e31fa9d9c214de80d9819f7ac4eec319208f9463b1bbb88"
+    },
+    {
+      "image": "000243.jpg",
+      "reason": "identical to official test content",
+      "sha256": "f3c6bd44f929c3c9060ed9854e9ef02589dc34dc5618f3e6567d55b0b50086b4"
+    },
+    {
+      "image": "000456.jpg",
+      "reason": "identical to official test content",
+      "sha256": "83c14ad209c517829cc2d72fdd94215cfd96f7e05d3fba9a7e117abeb5b3b15d"
+    },
+    {
+      "image": "000502.jpg",
+      "reason": "identical to official test content",
+      "sha256": "475b748f85b2aee282839a6bea50bd8c0e293a053151b148767222f610c8696d"
+    },
+    {
+      "image": "000634.jpg",
+      "reason": "identical to official test content",
+      "sha256": "08589e0242e022cc5e31fa9d9c214de80d9819f7ac4eec319208f9463b1bbb88"
+    },
+    {
+      "image": "000637.jpg",
+      "reason": "identical to official test content",
+      "sha256": "2040ca248b9fb7c66c250f7e4a8259b0f7c2c5a12d6e74f3b6fed76c4372587d"
+    },
+    {
+      "image": "001108.jpg",
+      "reason": "identical to official test content",
+      "sha256": "cdd301379135b6b5b72bf544b5465196c57261fa2550d4417c2d34b207df7f89"
+    },
+    {
+      "image": "001122.jpg",
+      "reason": "identical to official test content",
+      "sha256": "0083b7c73bd5986a043032578052c7a44b4294fdce849b5dd7a984df205f59f1"
+    }
+  ],
+  "limitations": "byte identity is not a near-duplicate or scene-disjoint audit",
+  "official_test": 232,
+  "official_train": 928,
+  "policy": "official-test-preserving byte-content-grouped development split v2",
+  "seed": 2
+}

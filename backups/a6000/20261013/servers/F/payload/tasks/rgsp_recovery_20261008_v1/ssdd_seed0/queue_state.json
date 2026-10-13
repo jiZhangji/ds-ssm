@@ -1,0 +1,50 @@
+{
+  "state": "running",
+  "pid": 122224,
+  "host": "powerleader-a6000-f",
+  "gpu_uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+  "pending": [
+    "matched_scale075",
+    "local_energy",
+    "local_energy_input",
+    "local_energy_delta",
+    "full",
+    "full_fixed_half",
+    "residual_scale075",
+    "energy_only",
+    "guidance_only",
+    "global"
+  ],
+  "completed": [
+    "original",
+    "matched_identity",
+    "matched_scale075"
+  ],
+  "predecessor_state": "/home/powerleader/codex_sar_agent_final_v1p1_20261008/results/final/study_v1_1/model_runs_dist/a6000_f_gpu0/frozen_queue_state.json",
+  "started_unix": 1791509051.5972583,
+  "updated_unix": 1791512478.9988256,
+  "current": "local_energy",
+  "gpu": {
+    "uuid": "GPU-9d27eec3-fd30-8534-8341-b983bea3832b",
+    "memory_mib": 370,
+    "utilization": 0,
+    "pids": []
+  },
+  "idle_seconds": 120.32722425399697,
+  "command": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/train_redirect.py",
+    "--code",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_controls_20261008_v3/code",
+    "--output",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/ssdd_seed0",
+    "--variant",
+    "local_energy",
+    "--seed",
+    "0",
+    "--epochs",
+    "150",
+    "--patience",
+    "30"
+  ]
+}

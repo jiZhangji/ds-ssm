@@ -1,0 +1,1306 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,array,multirow}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{xeCJK}
+\usepackage{newunicodechar}
+\usepackage{placeins}
+\setcounter{dbltopnumber}{3}
+\renewcommand{\dbltopfraction}{0.90}
+\renewcommand{\textfraction}{0.05}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@dblfptop}{0pt}
+\setlength{\@fpsep}{14pt plus 2pt minus 2pt}
+\setlength{\@dblfpsep}{14pt plus 2pt minus 2pt}
+\makeatother
+\setmainfont{TeX Gyre Termes}
+\renewcommand{\rmdefault}{TeXGyreTermes(0)}
+\newunicodechar{①}{\textcircled{1}}
+\newunicodechar{②}{\textcircled{2}}
+\newunicodechar{③}{\textcircled{3}}
+\setCJKmainfont[AutoFakeBold,AutoFakeSlant]{FandolSong-Regular}
+\setCJKsansfont[AutoFakeBold,AutoFakeSlant]{FandolHei-Regular}
+\setCJKmonofont{FandolFang-Regular}
+\emergencystretch=1em
+\newcommand{\pp}{\,\mathrm{pp}}
+\renewcommand{\IEEEkeywordsname}{关键词}
+\title{\LARGE 面向 SAR 图像的可靠性引导 Mamba 状态传播方法\\[0.5em]
+{\large Reliability-Guided Selective State Propagation in Mamba for SAR Imagery}}
+\author{}
+\IEEEaftertitletext{\begin{center}\footnotesize 完整实验修订稿：2026 年 10 月 9 日\end{center}}
+\begin{document}
+\raggedbottom
+\maketitle
+\begin{abstract}
+视觉状态空间模型通过输入依赖的选择性更新实现近线性复杂度的长程建模，但其内容选择并不等于经过验证的 SAR 局部结构可靠性判断。本文提出可靠性引导选择性状态传播方法（Reliability-Guided Selective State Propagation, RGSP）：局部响应修正（Local Response Correction, LRC）依据趋势残差调整扫描前特征；局部结构引导模块（Local Structure Guidance Module, LSGM）融合趋势与二维邻域变化，调节扫描输入和离散化步长。本文完整报告检测、分类、变化检测及分割的既有结果，并重点分析 SSDD 的 15 次历史消融与 SADD 的 12 次新消融。历史 SSDD 中，局部修正与能量组合的 AP$_{50:95}$ 均值为 $43.98\%$，高于原始网络的 $42.03\%$，但存在结构不匹配、关闭参数漂移和内容重叠等归因限制。在固定阳性子集 SADD 上，Full 的 AP$_{50:95}$ 为 $51.98\pm2.59\%$，原始网络为 $53.35\pm0.88\%$，仅一个种子得到正向配对差。本文进一步给出结构匹配、残差与能量、输入与步长两类四格控制及引导粒度的完整消融定义，区分已完成的数值观察与尚未验收的机制验证。现有证据说明收益依赖数据与配置，不支持组合必然更优或跨任务普遍提升。
+\end{abstract}
+\begin{IEEEkeywords}合成孔径雷达；视觉状态空间模型；Mamba；选择性状态更新；局部响应修正；目标检测
+\end{IEEEkeywords}
+
+\section{引言}\label{sec:intro}
+
+合成孔径雷达（Synthetic Aperture Radar, SAR）具有全天时、全天候成像能力以及较强的环境适应性，已广泛应用于海面舰船监测、机场目标识别、地表观测和灾害变化分析等场景。与自然光学图像不同，SAR 图像由目标散射特性、成像几何和相干成像过程共同决定，其局部响应通常伴随明显的散斑、背景杂波以及离散强散射现象。在复杂场景中，较强的局部响应既可能来自具有判别意义的目标散射中心，也可能由背景杂波或孤立强散射点产生；与此同时，部分响应较弱的区域仍可能包含目标边缘或细粒度结构信息。因此，SAR 局部响应的强弱并不能直接反映其所包含的任务相关结构信息。进一步地，这些具有不同散射结构意义的局部响应经过特征编码后，仍可能表现为结构意义不同的局部激活，使仅依赖当前特征内容的建模难以充分刻画其与周围结构之间的关系。相比仅依据单个位置的响应进行特征建模，结合邻域关系和局部结构判断当前信息在目标表征中的作用，对于 SAR 视觉建模尤为重要。
+
+另一方面，SAR 目标的判别信息通常并非集中于单一空间位置，而是由多个空间分布的散射中心、边缘以及几何结构共同构成。因此，模型不仅需要辨别局部信息的结构意义，还需要在更大的空间范围内建立不同区域之间的联系，以形成更加完整的目标表征。卷积神经网络（Convolutional Neural Network, CNN）通过层级结构逐步聚合局部特征并扩大有效感受野\cite{resnet2015}；视觉 Transformer 则利用自注意力直接建立不同图像区域之间的长距离依赖\cite{vit2020}，但全局成对交互在高分辨率特征上通常伴随较高的计算和存储开销。近年来，Mamba 及其选择性状态空间模型（Selective State Space Model, SSM）通过输入依赖的状态更新机制，以随序列长度近线性增长的计算复杂度实现长距离信息建模\cite{mamba2023}。Vision Mamba（Vim）将状态空间建模扩展到视觉序列\cite{vim2024}，VMamba 进一步通过二维选择性扫描（SS2D）建立空间依赖\cite{vmamba2024}，Mamba YOLO 等工作则将状态空间建模引入层级目标检测框架\cite{mambayolo2024}。这些研究表明，Mamba 为视觉特征的长距离传播与高效空间建模提供了一条区别于卷积和全局自注意力的新路径。
+
+随着视觉状态空间模型的发展，相关研究进一步从空间序列组织和特征交互等方面增强 Mamba 的视觉建模能力。RS-Mamba 面向大幅面遥感图像研究状态空间模型在密集预测中的应用\cite{rsmamba2024}，RSMTMamba 探索跨任务遥感特征学习\cite{rstmtmamba2025}，MaDiNet 等方法则将 Mamba 引入 SAR 目标检测框架\cite{madinet2025}；此外，部分工作还从成像统计建模与输入特征构造等层面注入 SAR 领域先验\cite{mambadip,rssnet}。总体而言，现有视觉与遥感 Mamba 方法主要围绕二维或多方向扫描、多尺度特征交互以及卷积与状态空间模型融合等方面展开，重点改善空间序列如何组织、长距离依赖如何建立以及不同层级特征如何聚合。这些研究推动了 Mamba 在遥感视觉中的应用，也为 SAR 图像的长程结构建模提供了良好基础。
+
+在这一背景下，尽管 Mamba 具有输入依赖的选择性状态更新机制，将其直接应用于 SAR 图像仍存在一个值得进一步研究的问题。Mamba 的部分状态更新参数由输入特征动态生成，使模型能够根据当前内容调节信息写入与状态演化；然而，SAR 图像中的局部响应容易受到散斑、背景杂波和孤立强散射等因素影响，使具有不同结构意义的响应在局部特征上呈现出较强歧义。例如，显著响应既可能对应稳定的目标散射结构，也可能表现为缺少邻域结构支持的孤立响应，而部分相对较弱的位置仍可能包含连续边缘或细粒度结构。在这种情况下，内容相关的选择性更新可能受到局部响应歧义的影响，而现有 Mamba 并未显式利用 SAR 局部结构关系来调节不同响应进入状态更新的方式与强度。更重要的是，一旦某些局部信息参与当前状态更新，其影响便会进入递推状态，并沿扫描过程影响后续位置的特征表示。因此，对于局部散射结构复杂的 SAR 图像，一个关键问题在于：\emph{如何在信息进入递推状态之前利用局部结构改善其表示，并在后续状态更新中进一步依据结构差异调节不同局部信息的传播？}
+
+基于这一观察，本文进一步关注选择性状态传播中的\emph{传播内容与状态更新}。对于 SAR 图像而言，局部响应是否值得参与传播，不应仅由其当前特征的显著程度决定，还应结合其与周围位置之间的局部趋势和邻域变化进行判断。为此，一方面，可以利用当前位置与局部趋势之间的关系调整进入状态传播的特征表示，使结构关系不同的局部响应在进入递推过程之前得到差异化处理；另一方面，还需要将局部结构信息进一步引入状态更新，使不同空间位置在当前信息写入和历史状态演化过程中产生差异化作用。本文将局部响应在多大程度上反映稳定、任务相关的结构（而非瞬时的散斑起伏或孤立强散射响应）概括为\textbf{局部结构可靠性}。该性质难以从单个位置的响应强度直接判断，但可以从局部趋势与邻域变化等结构关系中获取线索；本文以这些线索为出发点，研究 Mamba 的选择性状态传播。可靠性在本文中是设计目标；学习到的引导值尚未经过独立可靠性标注或校准检验，不能直接称为目标概率。
+
+基于上述分析，我们提出一种面向 SAR 图像的\textbf{可靠性引导选择性状态传播方法（Reliability-Guided Selective State Propagation, RGSP）}（图\ref{fig:motivation}）。RGSP 显式利用局部趋势和邻域变化刻画当前响应与周围结构之间的关系，并从特征进入扫描与状态更新两个层面将这些结构信息引入选择性递推过程。具体而言，RGSP 首先根据局部趋势及当前响应相对于该趋势的偏差，对进入选择性扫描的中间特征进行可学习的调整，使不同局部结构关系能够反映在待传播的特征表示中；随后进一步融合局部趋势与二维邻域变化生成位置相关的结构引导信息，并利用该信息调节选择性状态更新中的输入写入和状态演化。由此，RGSP 并非对局部响应进行简单的噪声/有效特征二分类，而是利用显式局部结构信息进一步区分不同响应的传播作用，使 Mamba 的状态传播由单纯的内容相关选择进一步扩展为局部结构引导的选择性传播。
+
+具体而言，RGSP 首先设计\textbf{局部响应修正（Local Response Correction, LRC）}。LRC 在网络中间特征上沿扫描序列学习局部趋势，并利用当前响应相对于局部趋势的偏差构造特征残差，对进入选择性扫描之前的特征进行可学习的调整。该过程并不以恢复平滑的 SAR 图像为目标，而是利用局部关系重新组织进入状态空间建模的特征表示，使当前响应的建模不再完全依赖单个位置本身的响应强弱。
+
+在此基础上，本文进一步设计\textbf{局部结构引导模块（Local Structure Guidance Module, LSGM）}。LSGM 融合局部趋势信息与二维邻域变化，生成位置相关的结构引导信息，用于刻画不同空间位置在当前任务中的相对结构作用。该引导信息进一步被引入选择性状态更新过程，并分别作用于输入驱动和离散化步长：输入驱动调节当前特征参与状态写入的强度，动态步长进一步参与历史状态演化与当前信息写入。由此，RGSP 分别从“进入状态传播的信息”和“信息参与状态更新的程度”两个层面对 Mamba 的选择性递推进行调节，使不同空间位置能够根据其局部结构特征以差异化方式参与后续状态传播。
+
+通过上述两个层面的设计，RGSP 将 SAR 局部结构线索从特征表示进一步引入选择性状态更新参数的形成过程，使局部结构分析直接影响信息写入与状态演化。
+
+为评估 RGSP 的效果与边界，本文保留目标检测、图像分类、语义分割和变化检测的完整历史结果，并补充 SSDD 与 SADD 的逐种子消融及配对分析。不同协议的外部文献记录仅作背景参考；结构匹配控制、运行时关闭条件和统一效率评估的完成范围分别说明，不把设计可实现性等同于性能或机制已经得到验证。
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig1_motivation_20261009.pdf}
+\caption{\textbf{研究动机与设计区别。}（a）SSDD 训练图像及同灰度映射裁块，区域 1 为官方标注舰船，区域 2 为语义未核验的人工选取高亮区域。（b）内容特征已生成输入依赖参数，并直接参与状态更新。（c）RGSP 保留内容依赖路径，增加扫描前 LRC 和局部结构引导；橙色虚线仅调节扫描输入与步长，不作用于 $B_t$。右侧为特征空间设计示意，不代表实测噪声传播或抑制效果。读出部分为简洁起见未画出。}
+\label{fig:motivation}
+\end{figure*}
+
+本文的主要贡献如下：
+
+\begin{enumerate}
+
+\item 我们提出了一种面向 SAR 图像的可靠性引导选择性状态传播方法 RGSP。针对 SAR 局部响应具有较强歧义，而 Mamba 的选择性状态更新缺少针对局部结构关系的显式传播调节这一问题，RGSP 将局部结构信息引入递推状态建模，使不同响应能够依据其结构关系以差异化方式参与状态传播。
+
+\item 我们设计了局部响应修正（Local Response Correction, LRC）和局部结构引导模块（Local Structure Guidance Module, LSGM）。LRC 利用局部趋势及其与当前响应之间的偏差调整待传播特征，LSGM 进一步融合局部趋势与二维邻域变化生成位置相关的结构引导信息，并据此调节选择性状态更新中的输入写入和状态演化，从而建立局部结构分析与状态传播之间的直接联系。
+
+\item 我们报告 SSDD 历史 15-run 与 SADD 新 12-run 的全部种子、均值与样本标准差，并结合结构匹配控制设计、引导粒度及历史计算量记录分析可归因的范围；完整保留多任务比较与负结果，明确旧参数冻结失效、小测试集及未完成验证的限制。
+
+\end{enumerate}
+
+
+\section{相关工作}\label{sec:related_work}
+
+\subsection{SAR 图像分析}
+
+随着深度学习的发展，SAR 图像分析已经从传统的统计建模逐步转向基于 CNN、Transformer 等深度网络的特征学习，并广泛应用于目标识别、目标检测和语义分割等任务。在 SAR 目标识别中，已有方法主要围绕判别性特征学习、局部与全局信息融合以及有限样本条件下的鲁棒表示展开。例如，基于 ViT 的方法利用全局自注意力建模目标不同区域之间的关系，并结合对比学习缓解标注样本不足的问题；其他研究则通过多层特征约束、局部--全局交互等方式提高不同观测条件下的目标判别能力。对于 SAR 目标检测，研究重点更多集中于复杂背景、小目标和多尺度目标的表征。Speckle-Free SAR Ship Detection 探讨了散斑处理与检测性能之间的关系\cite{specklefree}；SAR-NanoShipNet 通过尺度自适应和特征增强改善小尺度舰船检测\cite{sarnano}；SFD-Net 则通过特征分离和多尺度融合提高目标与背景干扰之间的可分性\cite{sfdnet}。在语义分割等密集预测任务中，局部连续性、边界结构和多尺度上下文同样被广泛用于提高复杂 SAR 场景的区域解析能力\cite{fusar}。
+
+尽管上述方法面向的任务不同，其核心问题具有一定共性。由于 SAR 图像中的目标通常表现为离散散射响应及其空间组合，单个位置的响应强度难以完整描述其结构意义，因此现有方法普遍通过邻域上下文、多尺度关系、目标边界或局部--全局交互增强特征表达。尤其在复杂背景下，如何区分具有稳定结构意义的目标响应与孤立散射、杂波响应，是目标识别、检测和分割等任务共同面对的问题。这些研究说明，结合局部空间关系理解 SAR 响应是提升下游任务性能的重要途径，也为进一步研究局部结构信息与长距离特征建模之间的关系提供了基础。
+
+
+\subsection{遥感图像中的视觉状态空间模型}
+
+近年来，Mamba 及视觉状态空间模型因其线性复杂度和长距离建模能力受到广泛关注。早期视觉 SSM 主要围绕如何将二维图像转换为适合状态空间递归的序列展开，随后研究逐渐扩展到多方向扫描、空间结构建模和自适应信息选择。Spatial-Mamba 不再仅依赖扫描路径建立二维联系，而是在状态空间中显式构造邻域连接，并通过结构感知状态融合增强空间依赖\cite{spatialmamba2025}；DAMamba 则利用动态自适应扫描，根据输入内容调整采样区域和扫描顺序，以提高状态空间模型对复杂空间结构的适应能力\cite{damamba2025}。这些工作表明，除长距离递归能力之外，二维空间关系以及信息进入状态空间的组织方式同样是视觉 SSM 的关键设计因素。
+
+在遥感领域，已有研究进一步结合遥感图像的空间分布特点对 Mamba 进行适配。RS-Mamba 针对大幅面遥感影像提出全向选择性扫描，通过多个空间方向聚合全局上下文，并在语义分割和变化检测任务上验证了其有效性\cite{rsmamba2024}。RSMTMamba 则利用 Mamba 建模不同遥感任务之间的特征关系，在统一框架中实现语义分割、高度估计和边界检测\cite{rstmtmamba2025}。这些工作主要从扫描方向、全局上下文以及跨任务特征交互等角度拓展状态空间模型在遥感场景中的应用。
+
+针对 SAR 图像，也已经出现了一系列领域化的 Mamba 方法。MaDiNet 面向 SAR 目标检测，利用 Gamma 分布描述 SAR 图像统计特性，并设计 MambaSAR 建模目标的空间结构信息\cite{madinet2025}；MCMN 在 PolSAR 舰船检测中构造融合 Doppler 与散射特性的输入表示，并采用 Mamba--CNN 双分支结构联合提取局部细节和长距离上下文\cite{mcmn}。此外，RSS-Net 将二维选择性状态空间模型与 CNN 局部特征结合用于 SAR 去斑\cite{rssnet}，MambaDIP 则将 Mamba 与深度图像先验和 SAR 统计模型结合，用于散斑抑制与图像增强\cite{mambadip}。总体来看，现有遥感及 SAR Mamba 方法已经从扫描组织、空间状态交互、局部--全局融合以及领域先验注入等多个角度改善状态空间建模。
+
+然而，现有方法对 SAR 结构信息的利用主要集中于输入特征构造、网络分支设计、扫描组织或状态间的空间交互。对于选择性状态空间模型而言，如何从当前响应与其局部邻域的关系中显式提取结构线索，并进一步利用这些线索条件化递归状态更新，仍有进一步研究空间。本文关注这一更具体的问题，即将 SAR 局部结构描述直接引入选择性状态更新过程，以调节当前特征对递归状态的贡献和状态演化。
+
+\section{方法}
+\label{sec:method}
+
+\subsection{总体网络架构}
+\label{sec:overall_architecture}
+
+本文提出可靠性引导选择性状态传播机制
+（Reliability-Guided Selective State Propagation，RGSP），
+利用局部趋势与邻域变化调节视觉状态空间模型的递归更新。
+如图~\ref{fig:overview}(a) 所示，
+整体任务网络由输入嵌入、分层骨干、特征聚合或解码模块以及任务头组成。
+SAR 图像首先经过输入嵌入转换为特征表示，
+随后由分层骨干提取不同空间尺度的特征，
+再通过任务对应的特征聚合或解码模块与预测头生成输出。
+
+RGSP 集成于骨干网络的状态空间块中，
+用于调整中间特征进入选择性扫描及参与状态更新的方式。
+在本文的检测配置中，
+RGSP 块替换第二个骨干阶段中 P3/8 特征层的状态空间块，
+其输出继续传入后续骨干阶段和检测结构。
+该替换保持所属特征层的空间尺寸与通道数，
+使其能够与后续网络层衔接。
+
+RGSP 的状态建模过程与任务头解耦。
+分类、检测和分割分别采用各自的网络配置、预测头与训练目标，
+图中的任务标签表示独立的任务配置。
+不同任务的具体接入方式在实验部分说明。
+以下以骨干内部的 RGSP 替换块为对象，
+介绍其整体结构及内部计算过程。
+
+\begin{figure*}[!t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/fig2_architecture_20261009.pdf}
+    \caption{
+    整体网络架构与 RGSP 模块。
+    （a）以检测网络为例，展示 RGSP 在 P3/8 特征层中的插入位置；
+    不同任务对应独立的网络配置与任务头。
+    （b）完整替换块，包含两次归一化、残差融合和前馈分支；
+    （c）放大状态建模分支 $\mathcal{R}$，
+    依次展示局部响应修正、局部结构引导及结构条件化状态更新。
+    深色实线表示特征流，橙色虚线表示结构引导路径。
+    扫描后的旁路融合、门控和输出投影在图中合并展示。
+    }
+    \label{fig:overview}
+\end{figure*}
+
+
+\subsection{RGSP 模块}
+\label{sec:rgsp}
+
+给定中间特征
+$F\in\mathbb{R}^{b\times H\times W\times C}$，
+其中 $b$、$H$、$W$ 和 $C$
+分别表示批大小、空间高度、空间宽度和通道数，
+首先按行优先顺序展平空间维，
+得到长度为 $N=HW$ 的序列
+$X\in\mathbb{R}^{b\times N\times C}$。
+RGSP 块由状态建模分支与前馈分支组成，
+两者依次通过残差连接更新特征：
+\begin{equation}
+\begin{aligned}
+U
+&=
+X+a_1\odot
+\mathcal{R}\left(\operatorname{LN}_1(X)\right),
+\\
+X_{\mathrm{out}}
+&=
+U+a_2\odot
+\operatorname{FFN}\left(\operatorname{LN}_2(U)\right),
+\end{aligned}
+\label{eq:rgsp_block}
+\end{equation}
+其中，$\mathcal{R}$ 表示结构条件化状态建模分支，
+$\operatorname{FFN}$ 为带 GELU 激活的两层前馈网络，
+$a_1,a_2\in\mathbb{R}^{C}$
+为可学习的逐通道缩放参数。
+最终将 $X_{\mathrm{out}}$ 恢复为空间特征图，
+作为该块的输出。
+
+如图~\ref{fig:overview}(c) 所示，
+状态建模分支 $\mathcal{R}$ 包含三个相互衔接的组成部分。
+局部响应修正
+（Local Response Correction，LRC）
+利用序列邻域关系调整扫描前的特征；
+局部结构引导模块
+（Local Structure Guidance Module，LSGM）
+融合趋势与二维邻域变化，生成逐位置结构引导信号；
+结构条件化选择性状态更新将该信号分别用于扫描输入调制与离散化步长生成，
+完成递归建模和输出映射。
+
+这一流程包含内容与结构两条相互联系的路径：
+修正特征提供待扫描的内容，
+局部结构描述提供调节扫描过程的条件。
+其中，可靠性是采用局部结构线索的设计动机，
+实际生成的引导信号通过下游任务损失联合学习，
+用于控制不同位置参与状态更新的方式。
+以下记
+$x=\operatorname{LN}_1(X)$，
+依次介绍三个组成部分。
+
+
+\subsubsection{局部响应修正}
+\label{sec:lrc}
+
+SAR 局部响应的结构意义依赖其与周围位置之间的关系。
+为在扫描前建模这种关系，
+LRC 首先沿序列维估计短程趋势，
+再利用当前位置相对于趋势的偏离调整输入特征。
+
+具体而言，
+采用核宽为 $3$ 的逐通道一维卷积估计局部趋势：
+\begin{equation}
+\bar{x}
+=
+\mathcal{L}(x)
+=
+\operatorname{DWConv1D}_{k=3}(x).
+\label{eq:local_trend}
+\end{equation}
+该算子在各通道内独立聚合相邻 token，
+卷积参数与任务网络联合优化。
+随后定义趋势残差与修正特征：
+\begin{equation}
+r=x-\bar{x},
+\qquad
+\tilde{x}=x-\lambda_s r,
+\label{eq:residual}
+\end{equation}
+其中 $\lambda_s$ 为块级可学习标量。
+残差 $r$ 描述当前位置相对于短程趋势的偏离，
+$\lambda_s$ 控制这一偏离在修正过程中的作用。
+通过联合学习趋势卷积与修正系数，
+LRC 利用邻域关系调整后续扫描所使用的特征表示。
+
+LRC 同时输出 $\bar{x}$ 与 $\tilde{x}$。
+局部趋势 $\bar{x}$ 用于生成结构描述和趋势能量，
+修正特征 $\tilde{x}$ 则进入二维邻域统计及内容投影。
+由于趋势卷积沿行优先展平序列执行，
+图像行末与下一行行首会成为相邻 token。
+因此，该算子刻画与扫描顺序一致的一维短程关系，
+二维空间变化由后续 LSGM 补充。
+
+
+\subsubsection{局部结构引导}
+\label{sec:lsgm}
+
+局部趋势描述沿扫描序列的短程关系，
+二维邻域统计补充空间响应的变化信息。
+LSGM 联合编码这两类描述，
+构建用于条件化状态更新的逐位置结构引导信号。
+
+首先将修正特征 $\tilde{x}$ 恢复为空间布局，
+记为 $\widetilde{F}$，
+并逐通道计算 $3\times3$ 邻域标准差：
+\begin{equation}
+S=
+\sqrt{
+\max\left(
+\mathcal{P}(\widetilde{F}^{\,2})
+-
+\mathcal{P}(\widetilde{F})^{2},
+\,0
+\right)
++\epsilon
+}.
+\label{eq:local_std}
+\end{equation}
+其中，平方运算逐元素执行，
+$\mathcal{P}$ 表示局部均值池化，
+$\epsilon$ 为数值稳定常数。
+图像边界处的统计量仅由有效邻域位置计算。
+将 $S$ 按相同空间顺序展平为 $s$，
+并与趋势特征进行通道拼接：
+\begin{equation}
+v=[\bar{x},s]
+\in\mathbb{R}^{b\times N\times2C}.
+\label{eq:structural_descriptor}
+\end{equation}
+
+结构描述 $v$ 经过通道归一化与两层感知机，
+生成引导信号：
+\begin{equation}
+\begin{aligned}
+I&=\sigma\left(
+W_2\operatorname{GELU}
+\left(W_1\operatorname{LN}(v)+b_1\right)+b_2
+\right),\\
+&\qquad I\in(0,1)^{b\times N\times1}.
+\end{aligned}
+\label{eq:importance}
+\end{equation}
+其中，$\sigma$ 为 Sigmoid 函数，
+$W_1,W_2,b_1,b_2$ 为可学习参数。
+隐藏层宽度为
+$\max(\lfloor C/4\rfloor,16)$。
+LSGM 为每个空间位置输出一个标量，
+并在后续运算中沿通道维广播。
+
+局部变化既可能来自目标边缘，也可能来自背景起伏，
+因此 LSGM 通过任务训练联合解释趋势与邻域变化，
+不预设局部标准差与信息价值之间的单调关系。
+本文将 $I$ 作为结构条件信号，
+而非目标概率或校准置信度。
+如图中的两条橙色虚线所示，
+$I$ 分别用于扫描输入调制与离散化步长条件化。
+
+
+\subsubsection{结构条件化选择性状态更新}
+\label{sec:structure_conditioned_ssm}
+
+获得修正特征 $\tilde{x}$ 与结构引导信号 $I$ 后，
+RGSP 将二者分别用于内容构造和递推调节。
+以下省略批维，
+以 $t$ 表示序列位置，
+以 $d_s$ 表示每个通道的状态维数。
+
+\paragraph{内容投影。}
+首先将修正特征映射为内容分支与输出门控分支：
+\begin{equation}
+[u_t,z_t]
+=
+W_{\mathrm{in}}\tilde{x}_t,
+\qquad
+u_t,z_t\in\mathbb{R}^{C}.
+\label{eq:input_projection}
+\end{equation}
+内容分支进一步生成状态写入与读出参数：
+\begin{equation}
+B_t=W_Bu_t,
+\qquad
+C_t=W_Cu_t,
+\qquad
+B_t,C_t\in\mathbb{R}^{d_s}.
+\label{eq:ssm_parameters}
+\end{equation}
+$B_t$ 与 $C_t$ 均由调制前的内容特征 $u_t$ 生成，
+结构引导信号则通过下述两条路径参与扫描输入和步长的构造。
+
+\paragraph{扫描输入调制。}
+首先由局部趋势计算逐位置的趋势能量：
+\begin{equation}
+E_t
+=
+\frac{\|\bar{x}_t\|_2}{\sqrt{C}}.
+\label{eq:trend_energy}
+\end{equation}
+随后结合趋势能量与结构引导，
+构造扫描输入的两个缩放因子：
+\begin{align}
+\gamma_t
+&=
+g_{\min}
++
+(1-g_{\min})
+\sigma\left(
+-\alpha s_nE_t+\beta(I_t-0.5)
+\right),
+\label{eq:energy_modulation}\\
+g_{w,t}
+&=
+\max\left(
+0.1,\,
+1+\tanh(\rho)(I_t-0.5)
+\right),
+\label{eq:write_modulation}\\
+u_{\mathrm{scan},t}
+&=
+\gamma_tg_{w,t}u_t.
+\label{eq:modulation}
+\end{align}
+其中，$\alpha,\beta,\rho$ 为可学习标量，
+$s_n$ 为固定能量缩放系数，
+$g_{\min}$ 为 $\gamma_t$ 的下界。
+$\gamma_t$ 综合趋势能量与结构引导，
+$g_{w,t}$ 提供以 $I_t=0.5$ 为中心的输入缩放。
+两个因子共同作用于内容分支，
+形成实际送入扫描的输入驱动。
+
+\paragraph{离散化步长条件化。}
+除扫描输入外，
+结构引导信号还参与离散化步长的生成：
+\begin{equation}
+\Delta_t
+=
+\operatorname{softplus}
+\left(
+W_{\Delta}u_t+b_{\Delta}+\eta I_t
+\right),
+\qquad
+\Delta_t\in\mathbb{R}_{>0}^{C},
+\label{eq:delta_condition}
+\end{equation}
+其中 $\eta$ 为可学习标量，
+$I_t$ 沿通道维广播。
+该操作在内容相关的步长 logits 上加入结构条件项，
+使递推参数同时依赖当前位置内容与局部邻域描述。
+
+\paragraph{选择性递推与输出。}
+状态矩阵采用如下参数化：
+\begin{equation}
+A=-\exp(A_{\log})
+\in\mathbb{R}^{C\times d_s},
+\label{eq:state_matrix}
+\end{equation}
+其中指数运算逐元素执行。
+令 $h_{t,c,j}$ 表示位置 $t$、
+通道 $c$ 和状态维 $j$ 上的隐藏状态，
+则选择性递推为
+\begin{equation}
+\begin{aligned}
+h_{t,c,j}&=\exp\left(\Delta_{t,c}A_{c,j}\right)h_{t-1,c,j}
++\Delta_{t,c}B_{t,j}u_{\mathrm{scan},t,c},\\
+h_{0,c,j}&=0.
+\end{aligned}
+\label{eq:rgsp_state}
+\end{equation}
+对状态维进行读出，
+并加入修正特征的逐通道旁路：
+\begin{equation}
+y_{t,c}
+=
+\sum_{j=1}^{d_s}C_{t,j}h_{t,c,j}
++
+D_c\tilde{x}_{t,c},
+\label{eq:ssm_readout}
+\end{equation}
+其中 $D\in\mathbb{R}^{C}$ 为可学习参数。
+随后通过 SiLU 门控与输出投影得到
+\begin{equation}
+o_t
+=
+W_{\mathrm{out}}
+\left(
+y_t\odot\operatorname{SiLU}(z_t)
+\right).
+\label{eq:rgsp_output}
+\end{equation}
+上述旁路融合、门控和投影对应图中的
+``Skip + Gate + Projection''。
+
+在式~\eqref{eq:rgsp_state} 中，
+$u_{\mathrm{scan},t}$ 调节当前内容的输入驱动，
+$\Delta_t$ 同时影响历史状态衰减与当前输入写入。
+因此，同一结构引导信号通过两条路径参与状态更新：
+一条调整进入递推的内容幅度，
+另一条参与递推系数的生成。
+由于 $A$ 的元素为负，
+增大 $\Delta_t$ 会增强相应历史状态分量的衰减，
+同时改变当前输入项，
+其作用需结合两部分共同理解。
+
+将各位置输出 $o_t$ 组成序列，
+即得到式~\eqref{eq:rgsp_block} 中
+状态建模分支 $\mathcal{R}$ 的输出。
+该序列经块级残差融合与前馈分支形成最终特征，
+再传入后续网络层。
+由此，RGSP 将局部结构描述、
+扫描输入构造和选择性状态更新连接为完整的特征建模过程。
+\input{sections/experimental_settings}
+
+\subsection{定量比较}
+\label{sec:quantitative_comparison}
+
+定量比较按任务组织。
+外部方法的数值继承底稿收集的文献比较记录，
+本项目结果来自已有实验记录。
+原始文献的逐行数值复核尚未全部完成，
+故外部结果仍属带来源缺口的参考表，而非已完成的同协议复现。
+各表通过分组注明结果来源，
+文献与本项目之间的数据划分、初始化和训练预算
+尚未全部统一，因此不作跨组的严格性能排名。
+RGSP 的效果主要依据各任务内部
+原始网络与接入模块后的配对结果分析。
+
+% Requires booktabs,array,graphicx. Full candidate tables may be too long for a final two-column float; select protocol groups before submission.
+\subsection{图像分类}
+\label{sec:classification_results}
+
+在 SAR-ACD 和 SAMPLE 数据集上评估 RGSP 的图像分类表现，
+并汇总相关方法的文献报告结果。
+采用分类准确率（Accuracy）和宏平均 F1
+（Macro-F1）作为评价指标。
+对于文献中按正确分类样本数占测试样本总数计算的
+总体准确率（Overall Accuracy, OA），
+本文统一记为 Accuracy。
+各表按结果来源与实验设置分组；
+不同类别划分、训练数据比例和初始化设置的结果
+不进行统一排名。
+本项目结果均为单种子记录。
+
+\subsubsection{SAR-ACD}
+\label{sec:sar_acd_results}
+
+表~\ref{tab:sar_acd_comparison}
+列出了 RGSP 与相关方法在 SAR-ACD 上的分类结果，
+比较方法包括经典卷积网络、Transformer
+以及面向 SAR 图像的分类与表征学习方法。
+分类准确率统一记为 Accuracy，
+文献中定义相同的总体准确率 OA 使用相同记法。
+
+RGSP 采用 VMamba-Tiny 预训练权重初始化骨干，
+新增模块预热 50 轮后，
+Accuracy 和 Macro-F1 分别达到
+96.850\% 和 96.830\%。
+对应基线的两项指标分别为
+89.764\% 和 89.585\%。
+由于两种配置的模块预热日程不同，
+该差异反映 RGSP 与相应训练策略的组合表现。
+外部方法采用各自文献中的实验设置，
+其结果作为参考列示。
+
+\begin{table}[!tbp]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{SAR-ACD 分类结果（\%）。
+外部方法采用文献报告值，
+其数据划分与训练设置未全部统一。
+粗体仅标识本文方法，不表示跨协议最优。}
+\label{tab:sar_acd_comparison}
+
+\begin{tabular}{lrr}
+\toprule
+Method & Accuracy & Macro-F1 \\
+\midrule
+AlexNet$^{a}$            & 91.65 & -- \\
+GoogLeNet$^{a}$          & 93.61 & -- \\
+VGGNet$^{a}$             & 92.30 & -- \\
+ResNet$^{a}$             & 92.79 & -- \\
+ResNet-50$^{b}$          & 84.08 & -- \\
+ResNet-101$^{b}$         & 80.70 & -- \\
+A-ConvNet$^{a}$          & 90.12 & -- \\
+Lm-BN-CNN$^{a}$          & 87.34 & -- \\
+CBAM Net$^{a}$           & 92.66 & -- \\
+VIB Net$^{a}$            & 93.50 & -- \\
+Swin-T$^{b}$             & 85.74 & -- \\
+Swin-B$^{b}$             & 86.24 & -- \\
+ViT$^{b}$                & 93.20 & -- \\
+SUMMIT$^{b}$             & 94.86 & -- \\
+Bottom-Up Scattering Network$^{a}$
+                        & 95.43 & -- \\
+SARMAE (ViT-B)$^{c}$     & 95.06 & -- \\
+SARMAE (ViT-L)$^{c}$     & 95.63 & -- \\
+MDB-DPL$^{d}$           & $98.85 \pm 0.17$ & -- \\
+\midrule
+VMamba-Tiny baseline    & 89.764 & 89.585 \\
+\textbf{RGSP (Ours)}     & 96.850 & 96.830 \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{0.98\linewidth}
+\footnotesize
+注：
+$^{a}$结果取自 Bottom-Up 论文的 Table 7，
+保留原表中的网络名称，其中 ResNet 的具体版本未在表中注明；
+$^{b}$结果取自 SUMMIT 论文的 Table 5，
+采用其完整训练集设置；
+$^{c}$采用 30\% 标注训练数据；
+$^{d}$采用六类、8:2 划分，报告五次实验的均值与标准差。
+本文采用五类设置，报告单种子结果；
+RGSP 使用额外 50 轮模块预热，基线无该额外日程。
+``--'' 表示未收集到对应的 Macro-F1。
+\end{minipage}
+\end{table}
+\subsubsection{SAMPLE}
+\label{sec:sample_results}
+
+表~\ref{tab:sample_comparison}
+汇总 SAMPLE 上的分类结果。
+外部方法包括 ResNet-50、A-ConvNet、
+CORAL、DANN、ERM、VREx、HDANet、SSR 和 MLDA。
+这些结果统一取自 MLDA 论文的比较实验，
+采用合成数据训练、实测数据测试的设置。
+其数值表示该论文报告的结果，
+并非本文对上述方法的重新实现。
+
+本项目采用当前闭集分类划分和从头训练设置。
+RGSP 的 Accuracy 和 Macro-F1
+分别为 97.037\% 和 96.441\%，
+对应基线分别为 98.519\% 和 98.454\%。
+因此，在该设置下，
+RGSP 的两项指标分别下降
+1.482 和 2.013 个百分点，
+尚未表现出分类性能增益。
+由于当前项目划分尚未与文献中的
+合成训练、实测测试协议对齐，
+两组结果分别列示，不计算跨组性能增益。
+
+\begin{table}[!tbp]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{SAMPLE 分类结果（\%）。
+外部结果来自 MLDA 论文
+（Remote Sensing, 2025）的 Table 2，
+采用合成数据训练、实测数据测试。
+本项目结果采用当前闭集划分，为单种子记录。
+粗体仅标识本文方法。}
+\label{tab:sample_comparison}
+\begin{tabular}{lrr}
+\toprule
+Method & Accuracy & Macro-F1 \\
+\midrule
+\multicolumn{3}{l}{
+\textit{Literature results: synthetic-to-measured}} \\
+ResNet-50
+& $48.37 \pm 3.73$ & $45.54 \pm 3.75$ \\
+A-ConvNet
+& $52.36 \pm 3.97$ & $48.47 \pm 3.66$ \\
+CORAL
+& $87.76 \pm 2.58$ & $86.92 \pm 2.67$ \\
+DANN
+& $90.42 \pm 2.06$ & $89.87 \pm 2.14$ \\
+ERM
+& $91.78 \pm 1.86$ & $90.97 \pm 1.72$ \\
+VREx
+& $92.64 \pm 2.09$ & $92.67 \pm 1.89$ \\
+HDANet
+& $86.21 \pm 2.61$ & $85.79 \pm 2.47$ \\
+SSR
+& $94.69 \pm 1.19$ & $94.65 \pm 1.21$ \\
+MLDA
+& $96.76 \pm 1.34$ & $96.70 \pm 1.29$ \\
+
+\midrule
+\multicolumn{3}{l}{
+\textit{Our experiments: current closed-set split}} \\
+Classification baseline
+& 98.519 & 98.454 \\
+\textbf{RGSP (Ours)}
+& 97.037 & 96.441 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\subsection{目标检测}
+\label{sec:detection_results}
+
+本小节保留 SSDD、SAR-ShipDataset、SADD 和 AIR-SARShip-2.0
+四个数据集的历史检测记录，
+并分别列示通用检测器及 SAR 专用方法的文献参考值。
+新的 SADD 三种子消融见第~\ref{sec:sadd_ablation} 节，
+不与本小节的旧 SADD 单次结果混算。
+评价指标包括 AP$_{50}$、AP$_{75}$ 和 AP$_{50:95}$。
+外部方法采用文献报告结果，
+本文方法采用已有实验记录；
+不同数据划分、初始化方式和训练预算的差异在表下注明。
+所有结果均以百分数表示，
+``--'' 表示未报告或尚未确认的指标。
+
+\subsubsection{SSDD}
+\label{sec:ssdd_results}
+
+表~\ref{tab:ssdd_comparison}
+汇总 SSDD 上的检测结果。
+RGSP 在已有的 300 轮训练配置下，
+AP$_{50}$、AP$_{75}$ 和 AP$_{50:95}$
+分别达到 $98.549\%$、$85.552\%$ 和 $72.261\%$。
+该结果来自官方测试集评估，
+与后文采用从头训练设置的三种子消融实验分别报告。
+
+\begin{table}[!tbp]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{SSDD 目标检测结果（\%）。
+外部方法为文献报告值；
+本文列示已有官方测试集结果。
+粗体方法名仅标识本文方法。}
+\label{tab:ssdd_comparison}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrr}
+\toprule
+Method & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+SAR-ShipNet       & 89.10 & --    & --    \\
+DCTC              & 93.90 & --    & --    \\
+GEFCSI-Net        & 97.10 & --    & --    \\
+SARNas            & 98.50 & --    & --    \\
+MGA-Net           & 98.60 & --    & --    \\
+Faster R-CNN      & 96.40 & 86.10 & 71.30 \\
+Cascade R-CNN     & 96.40 & 87.40 & 72.70 \\
+RetinaNet         & 95.00 & --    & --    \\
+CenterNet         & 95.10 & --    & --    \\
+FCOS              & 95.30 & --    & --    \\
+ConsistencyDet    & 95.60 & --    & --    \\
+YOLOv3            & 96.20 & --    & --    \\
+YOLOX             & 96.20 & --    & --    \\
+DiffusionDet      & 96.30 & --    & --    \\
+YOLOv5n           & 98.00 & --    & --    \\
+YOLOv5s           & 98.30 & --    & --    \\
+YOLOv8n           & 97.10 & 91.40 & 74.00 \\
+YOLOv9-tiny       & 97.30 & 88.90 & 72.20 \\
+YOLOv10n          & 97.30 & 88.50 & 72.80 \\
+DiffDet4SAR       & 96.90 & --    & --    \\
+YOLO-SRBD         & 98.30 & --    & 74.50 \\
+LRTransDet        & 97.80 & --    & --    \\
+SFS-CNet          & 99.60 & --    & --    \\
+MaDiNet           & 99.00 & --    & --    \\
+CCAI-YOLO         & 98.80 & --    & 74.90 \\
+ARGO-Net          & 99.50 & --    & 79.30 \\
+\midrule
+Mamba-YOLO-T      & 98.605 & 83.613 & 70.348 \\
+\textbf{RGSP (Ours)}
+                  & 98.549 & 85.552 & 72.261 \\
+\bottomrule
+\end{tabular*}
+
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+外部结果来自不同文献的比较记录。
+对于存在多个报告值的方法，
+本表保留原资料中同时提供更多 AP 指标的条目，
+不将不同来源的指标拼接为同一行。
+Mamba-YOLO-T 为历史官方测试集记录，
+RGSP 为 300 轮训练配置；
+二者的训练预算与初始化尚未完全对齐，
+因此不据此计算受控模块增益。
+\end{minipage}
+\end{table}
+
+
+\subsubsection{SAR-ShipDataset}
+\label{sec:sar_ship_results}
+
+表~\ref{tab:sar_ship_comparison}
+列出 SAR-ShipDataset 上的检测结果。
+已有 RGSP 配置的 AP$_{50:95}$ 为 $57.818\%$。
+采用较大模型规模时，
+RGSP-S 的 AP$_{50}$ 为 $95.609\%$，
+但其 AP$_{50:95}$ 为 $53.177\%$。
+两组结果分别保留完整指标，
+不将不同配置的最优指标合并为同一结果。
+
+\begin{table}[!tbp]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{SAR-ShipDataset 目标检测结果（\%）。
+本文同时列出 RGSP 与 RGSP-S 的已有结果，
+各行对应一个独立配置。}
+\label{tab:sar_ship_comparison}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrr}
+\toprule
+Method & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+OE-YOLO           & 86.00 & -- & --    \\
+SAR-ShipNet       & 90.20 & -- & --    \\
+ShipDetector      & 91.20 & -- & --    \\
+Improved FCOS     & 94.10 & -- & --    \\
+GEFCSI-Net        & 94.30 & -- & --    \\
+CMFT              & 94.50 & -- & --    \\
+YOLOv4            & 77.90 & -- & --    \\
+YOLOv7            & 86.10 & -- & --    \\
+YOLOv3            & 88.80 & -- & --    \\
+YOLOv5n           & 89.30 & -- & --    \\
+CenterNet         & 92.10 & -- & --    \\
+FCOS              & 92.80 & -- & --    \\
+Cascade R-CNN     & 92.70 & -- & --    \\
+Faster R-CNN      & 93.10 & -- & --    \\
+RetinaNet         & 93.40 & -- & --    \\
+ConsistencyDet    & 94.20 & -- & --    \\
+DiffusionDet      & 95.00 & -- & --    \\
+LRTransDet        & 95.10 & -- & --    \\
+SRDet             & 95.10 & -- & 65.90 \\
+DiffDet4SAR       & 95.10 & -- & --    \\
+YOLOSAR-Lite      & 96.06 & -- & --    \\
+MaDiNet           & 97.50 & -- & --    \\
+\midrule
+Mamba-YOLO-T      & 94.616 & -- & 49.568 \\
+\textbf{RGSP (Ours)}
+                  & 94.844 & -- & 57.818 \\
+\textbf{RGSP-S (Ours)}
+                  & 95.609 & -- & 53.177 \\
+\bottomrule
+\end{tabular*}
+
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+本文结果为历史单次实验记录，
+初始化、模型规模及训练预算未全部统一。
+RGSP-S 采用标准推理，不包含测试时增强。
+上述结果用于展示已有配置的性能，
+不作为严格受控消融结论，
+也不跨协议标注最优值。
+\end{minipage}
+\end{table}
+
+
+\subsubsection{SADD}
+\label{sec:sadd_results}
+
+表~\ref{tab:sadd_comparison}
+汇总 SADD 上的检测结果。
+在底稿保留的历史单次从头训练实验中，
+RGSP 的 AP$_{50:95}$ 为 $54.597\%$，
+低于对应基线的 $55.018\%$，
+当前结果未显示该设置下的性能增益。
+此外，表中保留部分权重迁移配置的历史结果，
+用于区分初始化方式带来的实验差异。
+
+\begin{table}[!tbp]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{SADD 目标检测结果（\%）。
+本文从头训练与部分权重迁移配置分别列示。}
+\label{tab:sadd_comparison}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrr}
+\toprule
+Method & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+YOLOv4            & 87.80 & --    & 54.00 \\
+YOLOR-P6          & 89.20 & --    & 53.50 \\
+YOLOv7            & 89.80 & --    & 55.20 \\
+ResNet50-CSP      & 91.50 & --    & 55.90 \\
+ResNeXt50-CSP     & 91.30 & --    & 55.40 \\
+YOLO-SAD          & 91.90 & --    & 57.10 \\
+ViTDet            & 93.00 & 51.00 & 50.20 \\
+SARATR-X          & 94.30 & 50.70 & 50.40 \\
+SARDet-MIM        & 95.90 & 59.60 & 55.30 \\
+\midrule
+Mamba-YOLO-T (scratch)
+                  & 98.335 & 57.030 & 55.018 \\
+\textbf{RGSP (scratch)}
+                  & 97.760 & 56.985 & 54.597 \\
+\textbf{RGSP (partial transfer)}$^{\dagger}$
+                  & 98.297 & 82.999 & 72.113 \\
+\bottomrule
+\end{tabular*}
+
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+Scratch 表示从头训练。
+$^{\dagger}$部分权重迁移结果来自历史 300 轮记录，
+其权重来源与训练协议仍需完成审计，
+暂作为候选结果保留，
+不用于宣称相对外部方法的性能优势。
+外部方法的预训练与数据划分设置并不完全一致。
+\end{minipage}
+\end{table}
+
+
+\subsubsection{AIR-SARShip-2.0}
+\label{sec:air_sarship_results}
+
+表~\ref{tab:air_sarship_comparison}
+列出 AIR-SARShip-2.0 上的已有检测结果。
+除文献报告值外，
+本文分别保留两组已经完成的实验：
+第一组采用 640 输入的历史切片配置；
+第二组采用 416 输入和 240 轮训练配置。
+两组实验中的 RGSP 表现方向不同，
+说明当前结论需要结合具体训练协议理解。
+
+\begin{table}[!tbp]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{AIR-SARShip-2.0 目标检测结果（\%）。
+本文两组已完成实验通过上标区分，
+新增 640 输入、300 轮实验的结果尚未纳入。}
+\label{tab:air_sarship_comparison}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrr}
+\toprule
+Method & AP$_{50}$ & AP$_{75}$ & AP$_{50:95}$ \\
+\midrule
+ImageNet-SSD      & 83.00 & 46.22 & 46.49 \\
+OSD-SSD           & 84.70 & 56.09 & 50.96 \\
+OSM-SSD           & 84.49 & 55.09 & 51.14 \\
+WBF-DM            & 85.43 & 61.56 & 54.78 \\
+FMP-Net           & 83.00 & 51.90 & 48.50 \\
+\midrule
+Mamba-YOLO-T$^{a}$
+                  & 47.590 & 7.463  & 17.375 \\
+\textbf{RGSP (Ours)}$^{a}$
+                  & 51.559 & 9.087  & 19.291 \\
+Mamba-YOLO-T$^{b}$
+                  & 47.156 & 19.403 & 22.947 \\
+\textbf{RGSP (Ours)}$^{b}$
+                  & 36.423 & 15.284 & 18.172 \\
+\bottomrule
+\end{tabular*}
+
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+$^{a}$历史 640 输入配置：
+原图按 210/45/45 划分训练、验证与测试集，
+采用 640 像素切片、512 像素步长，
+从头训练并依据验证集选择权重。
+$^{b}$416 输入配置：
+原图按 210/90 划分训练与测试集，
+采用 512 像素切片、256 像素步长，
+从头训练 240 轮，
+使用最后一轮权重进行测试。
+两组配置均保留空背景切片。
+外部文献与本文的完整协议尚未对齐，
+不进行跨协议最优值标注。
+\end{minipage}
+\end{table}
+
+在配置 $a$ 中，
+RGSP 相对对应基线的 AP$_{50:95}$
+提高 $1.916$ 个百分点；
+在配置 $b$ 中则降低 $4.775$ 个百分点。
+因此，已有实验尚不支持
+RGSP 在该数据集上具有稳定的性能增益。
+\subsection{语义分割}
+\label{sec:segmentation_results}
+
+在 OpenEarthMap-SAR 数据集上评估 RGSP 的语义分割性能。
+本文以 VMamba-Tiny 为骨干网络，
+采用 UPerNet-lite 解码器，
+比较原始网络与接入 RGSP 后的分割结果。
+评价指标包括平均交并比（mIoU）、
+频率加权交并比（FWIoU）
+和总体准确率（OA）。
+
+表~\ref{tab:openearthmap_sar_comparison}
+汇总外部方法及本文配置的结果。
+外部比较包括 VMamba、U-Net + EfficientNet-B4
+和 SegFormer，
+其数值采用 OpenEarthMap-SAR 基准论文报告的
+SAR 单模态、P+R5 设置，
+即使用伪标签并加入每个区域 5 张真实标注图像。
+本文分别列出早期批次和有效批量为 64 的配对实验，
+各批次均保留对应的基础网络结果。
+
+\begin{table*}[tp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{OpenEarthMap-SAR 语义分割结果（\%）。
+方法后注明原方法的发表出处与年份；
+外部数值来自 OpenEarthMap-SAR 基准论文。
+粗体仅标识本文方法，不表示最优结果。}
+\label{tab:openearthmap_sar_comparison}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrr}
+\toprule
+Method & Setting & mIoU & FWIoU & OA \\
+\midrule
+VMamba (NeurIPS 2024)
+& SAR, P+R5
+& 35.08 & -- & -- \\
+
+U-Net + EfficientNet-B4 (Benchmark 2025)
+& SAR, P+R5
+& 36.84 & -- & -- \\
+
+SegFormer (NeurIPS 2021)
+& SAR, P+R5
+& 37.23 & -- & -- \\
+
+\midrule
+VMamba-Tiny + UPerNet-lite
+& Configuration A
+& 36.401 & 37.075 & 53.553 \\
+
+\textbf{VMamba-Tiny + UPerNet-lite + RGSP}
+& Configuration A
+& 36.532 & 36.470 & 52.683 \\
+
+VMamba-Tiny + UPerNet-lite
+& Configuration B
+& 36.551 & 36.120 & 52.316 \\
+
+\textbf{VMamba-Tiny + UPerNet-lite + RGSP}
+& Configuration B
+& 35.898 & 35.220 & 51.764 \\
+\bottomrule
+\end{tabular*}
+
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+Configuration A 为已有早期配对实验，
+RGSP 未采用额外模块预热，
+并依据验证集 mIoU 选择权重。
+Configuration B 为有效批量 64 的配对实验，
+采用单次批量 32、梯度累积 2 次，
+同样不采用额外模块预热。
+本文结果为单种子记录。
+外部方法与本文配置的标注设置及数据划分
+尚未完成逐项对齐，因此不进行跨协议最优值标注。
+``--'' 表示未报告。
+\end{minipage}
+\end{table*}
+
+在配置 A 中，
+RGSP 的 mIoU 从 $36.401\%$ 提高至 $36.532\%$，
+增加 $0.131$ 个百分点，
+但 FWIoU 和 OA 分别下降
+$0.605$ 和 $0.870$ 个百分点。
+在配置 B 中，
+RGSP 的 mIoU 为 $35.898\%$，
+相较对应基线下降 $0.653$ 个百分点，
+FWIoU 和 OA 也有所下降。
+因此，现有分割实验仅在早期配置的 mIoU 指标上
+观察到小幅改善，
+尚未显示跨配置一致的性能增益。
+\subsection{变化检测}
+\label{sec:change_detection_results}
+
+在 Ottawa 和 Yellow River 数据集上评估 RGSP
+在 SAR 图像变化检测中的表现。
+比较方法包括 DDNet、LANTNet、CAMixer、
+WBANet、MDDNet 和 SARCDNet。
+外部方法的 F1 数值继承底稿中标为 SARCDNet 比较表的记录\cite{sarcdnet2026}，
+本版仅沿用已核对的书目信息，尚未独立复核该比较表的全部数值；
+方法名称后标注其发表来源和年份。
+本文实验报告 F1、IoU、总体准确率（OA）、
+Precision 和 Recall。
+
+为考察不同配置下的表现，
+分别列出批大小对照和早期状态维数对照。
+同一重跑批次内，RGSP 与对应批大小的基线进行比较；
+早期归档结果单独标注。
+外部方法与本文实验的训练和评估协议尚未完全对齐，
+因此文献结果用于参考，不据此作同协议性能排名。
+
+\subsubsection{Ottawa}
+\label{sec:ottawa_results}
+
+表~\ref{tab:ottawa_comparison}
+列出 Ottawa 上的变化检测结果。
+在批大小分别为 16、32、64 和 96 的重跑实验中，
+RGSP 的 F1 分别为
+92.249\%、91.827\%、91.981\% 和 92.039\%，
+相较各自基线分别提高
+0.158、0.713、0.897 和 0.630 个百分点。
+其中，BS16 配置的 Recall
+由 94.000\% 提高至 96.003\%，
+Precision 则由 90.259\% 降至 88.777\%。
+
+早期归档批次呈现不同趋势：
+状态维数为 32 和 16 的 RGSP 配置
+均低于该批次基线。
+因此，现有结果表明 RGSP 在重跑批次中获得小幅改善，
+但这一趋势尚未在所有配置中保持一致。
+
+\begin{table*}[tp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.12}
+\caption{Ottawa 变化检测结果（\%）。
+所有指标均为越高越好。
+粗体仅标识本文方法，不表示最优结果。}
+\label{tab:ottawa_comparison}
+\begin{tabularx}{\linewidth}{@{}Xlrrrrr@{}}
+\toprule
+Method & Setting & F1 & IoU & OA & Precision & Recall \\
+\midrule
+DDNet (GRSL, 2021 online)
+& Literature & 94.1 & -- & -- & -- & -- \\
+LANTNet (GRSL, 2022)
+& Literature & 94.5 & -- & -- & -- & -- \\
+CAMixer (GRSL, 2023)
+& Literature & 93.9 & -- & -- & -- & -- \\
+WBANet (GRSL, 2024)
+& Literature & 94.2 & -- & -- & -- & -- \\
+MDDNet (ICASSP, 2025)
+& Literature & 94.5 & -- & -- & -- & -- \\
+SARCDNet (Scientific Reports, 2026)
+& Literature & 94.9 & -- & -- & -- & -- \\
+\midrule
+Baseline
+& A: BS16, d32
+& 92.758 & 86.495 & 98.491 & 90.990 & 94.597 \\
+\textbf{Baseline + RGSP}
+& A: BS16, d32
+& 92.110 & 85.374 & 98.350 & 90.061 & 94.254 \\
+\textbf{Baseline + RGSP}
+& A: BS16, d16
+& 92.173 & 85.483 & 98.346 & 89.238 & 95.308 \\
+\midrule
+Baseline
+& B: BS16
+& 92.091 & 85.342 & 98.351 & 90.259 & 94.000 \\
+\textbf{Baseline + RGSP}
+& B: BS16, d16
+& 92.249 & 85.612 & 98.352 & 88.777 & 96.003 \\
+Baseline
+& B: BS32
+& 91.114 & 83.678 & 98.102 & 87.319 & 95.254 \\
+\textbf{Baseline + RGSP}
+& B: BS32, d16
+& 91.827 & 84.889 & 98.272 & 88.818 & 95.047 \\
+Baseline
+& B: BS64
+& 91.084 & 83.628 & 98.096 & 87.323 & 95.184 \\
+\textbf{Baseline + RGSP}
+& B: BS64, d16
+& 91.981 & 85.152 & 98.320 & 89.764 & 94.310 \\
+Baseline
+& B: BS96
+& 91.409 & 84.177 & 98.173 & 87.953 & 95.147 \\
+\textbf{Baseline + RGSP}
+& B: BS96, d16
+& 92.039 & 85.251 & 98.333 & 89.841 & 94.346 \\
+\bottomrule
+\end{tabularx}
+
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+A 表示早期归档批次，B 表示批大小重跑批次；
+BS 为 batch size，d 为状态维数。
+重跑批次结果为 seed 0 的单次记录。
+GRSL 指 IEEE Geoscience and Remote Sensing Letters。
+外部 F1 数值来自 SARCDNet 的 Table 2；
+``--'' 表示当前汇总中未收录该指标。
+不同批次分别比较，不跨批次计算模块增益。
+\end{minipage}
+\end{table*}
+
+\subsubsection{Yellow River}
+\label{sec:yellow_river_results}
+
+表~\ref{tab:yellow_river_comparison}
+列出 Yellow River 上的变化检测结果。
+早期归档批次中，
+状态维数为 32 的 RGSP 配置取得
+87.689\% 的 F1，
+对应基线为 88.079\%，
+下降 0.390 个百分点；
+状态维数为 16 时，F1 为 86.308\%。
+
+在 BS16、BS32、BS64 和 BS96 的重跑实验中，
+RGSP 的 F1 相较对应基线分别下降
+1.477、2.719、3.642 和 3.543 个百分点。
+Precision 仅在 BS16 和 BS96 上升；
+BS32 从 $91.293\%$ 降至 $90.000\%$，
+BS64 从 $91.834\%$ 降至 $91.671\%$。
+四组 Recall 均有所下降，
+最终 F1 未获得改善。
+因此，当前实验未显示 RGSP 在
+Yellow River 上的性能增益。
+
+\begin{table*}[tp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.12}
+\caption{Yellow River 变化检测结果（\%）。
+所有指标均为越高越好。
+粗体仅标识本文方法，不表示最优结果。}
+\label{tab:yellow_river_comparison}
+\begin{tabularx}{\linewidth}{@{}Xlrrrrr@{}}
+\toprule
+Method & Setting & F1 & IoU & OA & Precision & Recall \\
+\midrule
+DDNet (GRSL, 2021 online)
+& Literature & 87.3 & -- & -- & -- & -- \\
+LANTNet (GRSL, 2022)
+& Literature & 85.8 & -- & -- & -- & -- \\
+CAMixer (GRSL, 2023)
+& Literature & 85.2 & -- & -- & -- & -- \\
+WBANet (GRSL, 2024)
+& Literature & 87.6 & -- & -- & -- & -- \\
+MDDNet (ICASSP, 2025)
+& Literature & 85.8 & -- & -- & -- & -- \\
+SARCDNet (Scientific Reports, 2026)
+& Literature & 90.0 & -- & -- & -- & -- \\
+\midrule
+Baseline
+& A: BS16, d32
+& 88.079 & 78.697 & 97.758 & 90.666 & 85.635 \\
+\textbf{Baseline + RGSP}
+& A: BS16, d32
+& 87.689 & 78.077 & 97.683 & 90.227 & 85.290 \\
+\textbf{Baseline + RGSP}
+& A: BS16, d16
+& 86.308 & 75.914 & 97.478 & 90.885 & 82.170 \\
+\midrule
+Baseline
+& B: BS16
+& 88.368 & 79.160 & 97.817 & 91.205 & 85.702 \\
+\textbf{Baseline + RGSP}
+& B: BS16, d16
+& 86.891 & 76.820 & 97.584 & 91.422 & 82.787 \\
+Baseline
+& B: BS32
+& 86.273 & 75.859 & 97.483 & 91.293 & 81.776 \\
+\textbf{Baseline + RGSP}
+& B: BS32, d16
+& 83.554 & 71.753 & 97.031 & 90.000 & 77.971 \\
+Baseline
+& B: BS64
+& 86.968 & 76.941 & 97.606 & 91.834 & 82.591 \\
+\textbf{Baseline + RGSP}
+& B: BS64, d16
+& 83.326 & 71.419 & 97.043 & 91.671 & 76.374 \\
+Baseline
+& B: BS96
+& 83.484 & 71.650 & 97.002 & 89.377 & 78.320 \\
+\textbf{Baseline + RGSP}
+& B: BS96, d16
+& 79.941 & 66.585 & 96.546 & 91.218 & 71.146 \\
+\bottomrule
+\end{tabularx}
+
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+A 表示早期归档批次，B 表示批大小重跑批次；
+BS 为 batch size，d 为状态维数。
+重跑批次结果为 seed 0 的单次记录。
+外部 F1 数值来自 SARCDNet 的 Table 2；
+``--'' 表示当前汇总中未收录该指标。
+文献结果与本文实验的协议尚未完全对齐，
+不据此作同协议性能排名。
+\end{minipage}
+\end{table*}
+\input{sections/ablation}
+\input{sections/limitations}
+
+\section{结论}\label{sec:conclusion}
+本文提出面向 SAR 视觉状态空间建模的 RGSP，通过局部响应修正构造扫描特征，再由局部结构引导调节扫描输入与离散化步长。该设计建立局部描述与选择性递推之间的显式联系，但学习引导尚不能解释为校准可靠性。
+
+完整实验表明，结构设计与实际收益必须分开判断。SSDD 历史 LocalEnergy 的 AP$_{50:95}$ 均值为 $43.98\%$，Full 为 $42.91\%$，全局引导为 $43.77\%$；这些结果保留全部种子，同时受到旧冻结失效和结构、数据协议的限制。固定阳性 SADD 上 Full 相对 Original 的 AP$_{50:95}$ 配对均差为 $-1.3674$ 个百分点，不能声称稳定改善。分类、变化检测与分割的正负结果进一步说明，接入同一机制并不自动带来跨任务增益。
+
+本文以结构匹配锚点、两类四格交互和固定/全局引导控制明确后续可检验的问题。尚未验收的控制实验、统一效率测量与真实预测诊断不以历史数字替代；后续研究应依据这些结果决定方法取舍，而非预先假定完整组合必然更优。
+
+\begin{thebibliography}{99}
+\interlinepenalty=10000
+\bibitem{resnet2015}
+K. He, X. Zhang, S. Ren, and J. Sun, ``Deep Residual Learning for Image Recognition,'' in \emph{Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)}, 2016, pp. 770--778. arXiv:1512.03385, 2015.
+
+\bibitem{vit2020}
+A. Dosovitskiy et al., ``An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale,'' in \emph{Proc. Int. Conf. Learning Representations (ICLR)}, 2021. arXiv:2010.11929, 2020.
+
+\bibitem{mamba2023}
+A. Gu and T. Dao, ``Mamba: Linear-Time Sequence Modeling with Selective State Spaces,'' arXiv:2312.00752, 2023. \url{https://arxiv.org/abs/2312.00752}.
+
+\bibitem{vim2024}
+L. Zhu et al., ``Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model,'' arXiv:2401.09417, 2024. \url{https://arxiv.org/abs/2401.09417}.
+
+\bibitem{vmamba2024}
+Y. Liu, Y. Tian, Y. Zhao, H. Yu, L. Xie, Y. Wang, Q. Ye, and Y. Liu, ``VMamba: Visual State Space Model,'' in \emph{Advances in Neural Information Processing Systems (NeurIPS)}, 2024. arXiv:2401.10166.
+
+\bibitem{mambayolo2024}
+Z. Wang et al., ``Mamba YOLO: A Simple Baseline for Object Detection with State Space Model,'' arXiv:2406.05835, 2024. \url{https://arxiv.org/abs/2406.05835}.
+
+\bibitem{rsmamba2024}
+Y. Zhao et al., ``RS-Mamba for Large Remote Sensing Image Dense Prediction,'' \emph{IEEE Transactions on Geoscience and Remote Sensing}, 2024. doi:10.1109/TGRS.2024.3425540.
+
+\bibitem{rstmtmamba2025}
+Y. Shen et al., ``Learning Cross-Task Features With Mamba for Remote Sensing Image Multitask Prediction,'' \emph{IEEE Transactions on Geoscience and Remote Sensing}, 2025. doi:10.1109/TGRS.2025.3540573.
+
+\bibitem{madinet2025}
+J. Zhou et al., ``MaDiNet: Mamba Diffusion Network for SAR Target Detection,'' \emph{IEEE Transactions on Circuits and Systems for Video Technology}, vol. 35, no. 11, pp. 10787--10800, 2025. doi:10.1109/TCSVT.2025.3574657.
+
+\bibitem{mambadip}
+Chinchu A. et al., ``MambaDIP: Mamba-Based Deep Image Prior Framework for Despeckling and Enhancement of SAR Images,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 19, pp. 21255--21271, 2026. doi:10.1109/JSTARS.2026.3702550.
+
+\bibitem{rssnet}
+M. Huang, Y. Yang, and Q. Sun, ``RSS-Net: A Mamba-Based Network for SAR Image Denoizing,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 19, pp. 3539--3551, 2026. doi:10.1109/JSTARS.2025.3647971.
+
+\bibitem{specklefree}
+S.-W. Chen, X.-C. Cui, X.-S. Wang, and S.-P. Xiao, ``Speckle-Free SAR Image Ship Detection,'' \emph{IEEE Transactions on Image Processing}, vol. 30, pp. 5969--5983, 2021. doi:10.1109/TIP.2021.3089936.
+
+\bibitem{sarnano}
+Y. Zhang et al., ``SAR-NanoShipNet: A Scale-Adaptive Network for Robust Small Ship Detection in SAR Imagery,'' \emph{ISPRS Journal of Photogrammetry and Remote Sensing}, vol. 232, pp. 262--279, 2026. doi:10.1016/j.isprsjprs.2025.12.006.
+
+\bibitem{sfdnet}
+B. Wu et al., ``A Novel Star Feature Decoupling Network for Multiscale SAR Image Ship Detection,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, vol. 19, pp. 18294--18305, 2026. doi:10.1109/JSTARS.2026.3688771.
+
+\bibitem{fusar}
+X. Shi et al., ``Object-Level Semantic Segmentation on the High-Resolution Gaofen-3 FUSAR-Map Dataset,'' \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, 2021. doi:10.1109/JSTARS.2021.3063797.
+
+\bibitem{spatialmamba2025}
+C. Xiao, M. Li, Z. Zhang, D. Meng, and L. Zhang, Spatial-Mamba: Effective Visual State Space Models via Structure-Aware State Fusion, in \emph{Proc. Int. Conf. Learning Representations (ICLR)}, 2025. arXiv:2410.15091.
+
+\bibitem{damamba2025}
+T. Li, C. Li, J. Lyu, H. Pei, B. Zhang, T. Jin, and R. Ji, DAMamba: Vision State Space Model with Dynamic Adaptive Scan, in \emph{Advances in Neural Information Processing Systems (NeurIPS)}, vol. 38, 2025. doi:10.52202/085713-1326.
+
+\bibitem{mcmn}
+G. Gao, C. Li, X. Zhang, B. Yao, and Z. Chen, ``Mamba-CNN hybrid Multi-scale ship detection Network driven by a Dual-perception feature of Doppler and Scattering,'' \emph{ISPRS Journal of Photogrammetry and Remote Sensing}, vol. 232, pp. 656--674, 2026. doi:10.1016/j.isprsjprs.2026.01.004.
+
+\bibitem{madinet_preprint}
+J. Zhou et al., ``MaDiNet: Mamba Diffusion Network for SAR Target Detection,'' arXiv:2411.07500v1, 2024, Tables 3--5.
+
+\bibitem{ssdd2017}
+J. Li, C. Qu, and J. Shao, ``Ship Detection in SAR Images Based on an Improved Faster R-CNN,'' in \emph{Proc. SAR in Big Data Era}, 2017.
+
+\bibitem{ssdd2021}
+T. Zhang et al., ``SAR Ship Detection Dataset (SSDD): Official Release and Comprehensive Data Analysis,'' \emph{Remote Sensing}, vol. 13, no. 18, art. 3690, 2021. doi:10.3390/rs13183690.
+
+\bibitem{sardataset}
+Y. Wang et al., ``A SAR Dataset of Ship Detection for Deep Learning under Complex Backgrounds,'' \emph{Remote Sensing}, vol. 11, no. 7, art. 765, 2019. doi:10.3390/rs11070765.
+
+\bibitem{saraircraft}
+Z. Wang et al., ``SAR-AIRcraft-1.0: High-Resolution SAR Aircraft Detection and Recognition Dataset,'' \emph{Journal of Radars}, vol. 12, no. 4, pp. 906--922, 2023. doi:10.12000/JR23043.
+\bibitem{sarcdnet2026}
+V. D. Kevala, V. Mukundan, S. Nedungatt, S. Suresh, and S. Lal, SARCDNet-an enhanced deep learning network for change detection from bi-temporal SAR images, \emph{Scientific Reports}, vol. 16, art. 1826, 2026 (online Dec. 31, 2025). doi:10.1038/s41598-025-31488-y.
+\end{thebibliography}
+\end{document}

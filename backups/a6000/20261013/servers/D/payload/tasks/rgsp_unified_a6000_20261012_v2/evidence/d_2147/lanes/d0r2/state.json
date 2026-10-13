@@ -1,0 +1,537 @@
+{
+  "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+  "jobs": {
+    "ottawa-author-camixer": {
+      "estimated_seconds": 257.9610710289271,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "camixer",
+          "--image1",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+          "--image2",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+          "--ground-truth",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+          "--cuda-compat",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-camixer/probe",
+          "--gpu-uuid",
+          "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.036474899970926,
+        "ended_at": 1791811210.0761566,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-camixer/probe",
+        "payload": {
+          "dataset": "Ottawa",
+          "device": "cuda:0",
+          "estimate_caveat": "6-update extrapolation; pseudo-validation and uncertain inference use train-time/3 forward estimate, never sampled",
+          "estimate_components": {
+            "train_seconds": 231.5415660632425,
+            "unmeasured_pseudo_validation_seconds": 19.29513050527021,
+            "unmeasured_uncertain_inference_seconds": 0.3519431804161286
+          },
+          "estimated_full_seconds": 257.9610710289271,
+          "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "ground_truth_read": false,
+          "mean_timed_update_seconds": 0.012348883523372933,
+          "method": "camixer",
+          "optimizer_updates": 6,
+          "planned_max_updates": 18750,
+          "preprocessing_seconds": 6.772431279998273,
+          "protocol_sha256": "59003725bd4653328901a7798111914fc49f6371474dd82e22a7d0b15b1d4196",
+          "seed": 0,
+          "source_audit": {
+            "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+            "author_source_unmodified": true,
+            "commit": "10d0ce340a64075da929b9867cd9e45dc51d5e04",
+            "definitions": [
+              {
+                "cell_source_sha256": {
+                  "vendor/camixer/CAMixer.ipynb:cell7": "53de8f3b1b68612257ff4a1e1eaf9b97147de32e8bc8981f2e3b0c29586a0375",
+                  "vendor/camixer/CAMixer.ipynb:cell8": "936431357e5dc4510682983de8bc1bd291402cbe20f958638c5db4e0f45fadc2"
+                },
+                "definitions": [
+                  "Attention",
+                  "CAMixer",
+                  "CSC",
+                  "SGU",
+                  "ViT",
+                  "pair",
+                  "shift"
+                ],
+                "hook_once_rewrites": 0,
+                "precision_cast_rewrites": 0,
+                "source": "vendor/camixer/CAMixer.ipynb",
+                "source_sha256": "49e326c1262352c399e08cbb206f85fe01619014cfd7455174963bd6565b881b",
+                "transformed_ast_sha256": "861b998266c9f3e4f9abbd5dae284f9e33ed97bfe860344a7fa57e18186793cd"
+              }
+            ],
+            "method": "camixer",
+            "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+            "repository": "https://github.com/summitgao/CAMixer",
+            "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+          },
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "test_loader_created": false,
+          "timed_updates": 4,
+          "timestamp": "2026-10-12T13:20:08.990517+00:00",
+          "training_losses": [
+            0.9093101620674133,
+            0.9486071020364761,
+            0.9296230375766754,
+            0.8903653770685196,
+            0.8429795950651169,
+            0.8457641899585724
+          ],
+          "update_seconds": [
+            0.8052254639915191,
+            0.011689401988405734,
+            0.01305811305064708,
+            0.012707545014563948,
+            0.011937103001400828,
+            0.011692773026879877
+          ],
+          "validation_loader_created": false,
+          "warmup_probe_updates": 2
+        },
+        "pid": 385144,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791811200.0136602,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "59003725bd4653328901a7798111914fc49f6371474dd82e22a7d0b15b1d4196",
+      "reason": "process exit code 1",
+      "runs": {
+        "0": {
+          "command": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+            "--dataset",
+            "Ottawa",
+            "--method",
+            "camixer",
+            "--image1",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+            "--image2",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+            "--ground-truth",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+            "--cuda-compat",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+            "--seed",
+            "0",
+            "--output",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-camixer/run0",
+            "--gpu-uuid",
+            "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+            "--mode",
+            "train"
+          ],
+          "elapsed_seconds": 90.09825425501913,
+          "ended_at": 1791811613.8772142,
+          "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-camixer/run0",
+          "pid": 385801,
+          "reason": "process exit code 1",
+          "returncode": 1,
+          "started_at": 1791811523.7516158,
+          "status": "BLOCKED"
+        },
+        "1": {
+          "reason": "job_blocked_no_automatic_retry",
+          "status": "SKIPPED"
+        },
+        "2": {
+          "reason": "job_blocked_no_automatic_retry",
+          "status": "SKIPPED"
+        }
+      },
+      "seed_limit": 3,
+      "status": "BLOCKED"
+    },
+    "ottawa-author-ddnet": {
+      "estimated_seconds": 581.9321817012678,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "ddnet",
+          "--image1",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+          "--image2",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+          "--ground-truth",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+          "--cuda-compat",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-ddnet/probe",
+          "--gpu-uuid",
+          "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.033722791995388,
+        "ended_at": 1791811281.2761252,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-ddnet/probe",
+        "payload": {
+          "dataset": "Ottawa",
+          "device": "cuda:0",
+          "estimate_caveat": "6-update extrapolation; pseudo-validation and uncertain inference use train-time/3 forward estimate, never sampled",
+          "estimate_components": {
+            "train_seconds": 530.235548831115,
+            "unmeasured_pseudo_validation_seconds": 44.18629573592625,
+            "unmeasured_uncertain_inference_seconds": 0.8059580342232948
+          },
+          "estimated_full_seconds": 581.9321817012678,
+          "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "ground_truth_read": false,
+          "mean_timed_update_seconds": 0.0282792292709928,
+          "method": "ddnet",
+          "optimizer_updates": 6,
+          "planned_max_updates": 18750,
+          "preprocessing_seconds": 6.70437910000328,
+          "protocol_sha256": "3bbe6c336ad93853fe6c0c676e3859ab434c014bda2862ddaeda1d590db51b24",
+          "seed": 0,
+          "source_audit": {
+            "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+            "author_source_unmodified": true,
+            "commit": "30c77afd08aa7f09790096470add465ec771a9c7",
+            "definitions": [
+              {
+                "cell_source_sha256": {
+                  "vendor/ddnet/DDNet_github.ipynb:cell5": "c6fb95227d1d75658ff020627ce6d083fc64a1b5f7c493859fc1ba3912ae95e2",
+                  "vendor/ddnet/DDNet_github.ipynb:cell6": "7330db0717e37fff857e1924e7701a91f78ac680ba9ad135472cc5e16fbbc69a"
+                },
+                "definitions": [
+                  "DCT",
+                  "DDNet",
+                  "MRC"
+                ],
+                "hook_once_rewrites": 0,
+                "precision_cast_rewrites": 0,
+                "source": "vendor/ddnet/DDNet_github.ipynb",
+                "source_sha256": "c1a463690b8d357396c92d56d1fa51d0b3cb5121ab137d89e1bfe26761189ab5",
+                "transformed_ast_sha256": "0cdd8a2d0dcf9fd9da359d5c63c8a6813daf48987c5bd24832fe901ef6bf6c65"
+              }
+            ],
+            "method": "ddnet",
+            "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+            "repository": "https://github.com/summitgao/SAR_CD_DDNet",
+            "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+          },
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "test_loader_created": false,
+          "timed_updates": 4,
+          "timestamp": "2026-10-12T13:21:20.208918+00:00",
+          "training_losses": [
+            12.186346054077148,
+            9.74430137872696,
+            6.911202251911163,
+            5.969151318073273,
+            9.441317558288574,
+            8.541663527488708
+          ],
+          "update_seconds": [
+            0.8343490560073406,
+            0.031943312962539494,
+            0.028672733053099364,
+            0.02827708999393508,
+            0.028086443024221808,
+            0.028080651012714952
+          ],
+          "validation_loader_created": false,
+          "warmup_probe_updates": 2
+        },
+        "pid": 385430,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791811271.2153485,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "3bbe6c336ad93853fe6c0c676e3859ab434c014bda2862ddaeda1d590db51b24",
+      "reason": "process exit code 1",
+      "runs": {
+        "0": {
+          "command": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+            "--dataset",
+            "Ottawa",
+            "--method",
+            "ddnet",
+            "--image1",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+            "--image2",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+            "--ground-truth",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+            "--cuda-compat",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+            "--seed",
+            "0",
+            "--output",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-ddnet/run0",
+            "--gpu-uuid",
+            "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+            "--mode",
+            "train"
+          ],
+          "elapsed_seconds": 235.21330340398708,
+          "ended_at": 1791811910.350451,
+          "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-ddnet/run0",
+          "pid": 385995,
+          "reason": "process exit code 1",
+          "returncode": 1,
+          "started_at": 1791811675.1091967,
+          "status": "BLOCKED"
+        },
+        "1": {
+          "reason": "job_blocked_no_automatic_retry",
+          "status": "SKIPPED"
+        },
+        "2": {
+          "reason": "job_blocked_no_automatic_retry",
+          "status": "SKIPPED"
+        }
+      },
+      "seed_limit": 3,
+      "status": "BLOCKED"
+    },
+    "ottawa-author-lantnet": {
+      "estimated_seconds": 246.2614640652464,
+      "probe": {
+        "command": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+          "--dataset",
+          "Ottawa",
+          "--method",
+          "lantnet",
+          "--image1",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+          "--image2",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+          "--ground-truth",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+          "--cuda-compat",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+          "--seed",
+          "0",
+          "--output",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-lantnet/probe",
+          "--gpu-uuid",
+          "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "--mode",
+          "probe"
+        ],
+        "elapsed_seconds": 10.03842966502998,
+        "ended_at": 1791811138.9597263,
+        "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-lantnet/probe",
+        "payload": {
+          "dataset": "Ottawa",
+          "device": "cuda:0",
+          "estimate_caveat": "6-update extrapolation; pseudo-validation and uncertain inference use train-time/3 forward estimate, never sampled",
+          "estimate_components": {
+            "train_seconds": 220.73857122450136,
+            "unmeasured_pseudo_validation_seconds": 18.394880935375113,
+            "unmeasured_uncertain_inference_seconds": 0.4194032853265526
+          },
+          "estimated_full_seconds": 246.2614640652464,
+          "gpu_uuid": "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+          "ground_truth_read": false,
+          "mean_timed_update_seconds": 0.01471590474830009,
+          "method": "lantnet",
+          "optimizer_updates": 6,
+          "planned_max_updates": 15000,
+          "preprocessing_seconds": 6.708608620043378,
+          "protocol_sha256": "dfa36d170d7c59a65131705b0b9e2f214e9c48077d9895636623cea70190706b",
+          "seed": 0,
+          "source_audit": {
+            "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+            "author_source_unmodified": true,
+            "commit": "3d22af4a989f96a6b07b4f15e86c73cffd1841a2",
+            "definitions": [
+              {
+                "cell_source_sha256": {
+                  "vendor/lantnet/LANTNet.ipynb:cell5": "8ddd8f2c9bd552073d539beb92b6cb727e05b2ee5e61e94313cbbf341d60019e",
+                  "vendor/lantnet/LANTNet.ipynb:cell7": "843d02f3114b413956586baec8101b6c4f8406f6cb5210f341217842a1c9c936"
+                },
+                "definitions": [
+                  "LANTNet",
+                  "LayerAttention"
+                ],
+                "hook_once_rewrites": 1,
+                "precision_cast_rewrites": 0,
+                "source": "vendor/lantnet/LANTNet.ipynb",
+                "source_sha256": "0533acc070502570556ecf68f94d835f92b72ec6ca8d7bbd543a4713e51bf5e9",
+                "transformed_ast_sha256": "05624c253cb6d386a8a7c415e46b0c78923024758715564b462557524096632a"
+              }
+            ],
+            "method": "lantnet",
+            "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+            "repository": "https://github.com/summitgao/LANTNet",
+            "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+          },
+          "status": "PROBE_PASS",
+          "task": "change_detection",
+          "test_evaluated": false,
+          "test_loader_created": false,
+          "timed_updates": 4,
+          "timestamp": "2026-10-12T13:18:57.922363+00:00",
+          "training_losses": [
+            0.8596059679985046,
+            0.8410363048315048,
+            0.8617988079786301,
+            0.8769652843475342,
+            0.8612998872995377,
+            0.8411202430725098
+          ],
+          "update_seconds": [
+            0.020385771989822388,
+            0.014815529983025044,
+            0.014649726042989641,
+            0.014754256000742316,
+            0.014732012990862131,
+            0.014727623958606273
+          ],
+          "validation_loader_created": false,
+          "warmup_probe_updates": 2
+        },
+        "pid": 384923,
+        "recovered": false,
+        "returncode": 0,
+        "started_at": 1791811128.8882892,
+        "status": "COMPLETE"
+      },
+      "protocol_sha256": "dfa36d170d7c59a65131705b0b9e2f214e9c48077d9895636623cea70190706b",
+      "reason": "process exit code 1",
+      "runs": {
+        "0": {
+          "command": [
+            "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+            "-B",
+            "-u",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/run_cd_author.py",
+            "--dataset",
+            "Ottawa",
+            "--method",
+            "lantnet",
+            "--image1",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/22/22f3c0896e0e460eaebf2ebbec7dd0b43a1166b02fc520a76cab2ab91cf24fa9.bmp",
+            "--image2",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/2e/2e8af10b8f25f18e7460fb279cc1f4d30b6ee42b9b64537a220824bceda80880.bmp",
+            "--ground-truth",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/taskdata/Ottawa/files/37/37bf576f88daa6cd9d506f9154842be33a56aa2fa62c33fe0ed60e7f75e13131.bmp",
+            "--cuda-compat",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/cuda_uuid_compat.py",
+            "--seed",
+            "0",
+            "--output",
+            "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-lantnet/run0",
+            "--gpu-uuid",
+            "GPU-f1b51ae3-c020-9901-c608-cca67f6ab8f1",
+            "--mode",
+            "train"
+          ],
+          "elapsed_seconds": 120.12231786898337,
+          "ended_at": 1791811462.6261394,
+          "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/lanes/d0r2/jobs/ottawa-author-lantnet/run0",
+          "pid": 385596,
+          "reason": "process exit code 1",
+          "returncode": 1,
+          "started_at": 1791811342.4751759,
+          "status": "BLOCKED"
+        },
+        "1": {
+          "reason": "job_blocked_no_automatic_retry",
+          "status": "SKIPPED"
+        },
+        "2": {
+          "reason": "job_blocked_no_automatic_retry",
+          "status": "SKIPPED"
+        }
+      },
+      "seed_limit": 3,
+      "status": "BLOCKED"
+    },
+    "ottawa-author-wasnet": {
+      "estimated_seconds": 900.0,
+      "probe": {
+        "status": "PENDING"
+      },
+      "protocol_sha256": null,
+      "reason": "Preflight failure preserved: process exit code 1",
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": null,
+      "status": "BLOCKED"
+    },
+    "ottawa-author-wbanet": {
+      "estimated_seconds": 900.0,
+      "probe": {
+        "status": "PENDING"
+      },
+      "protocol_sha256": null,
+      "reason": "Preflight failure preserved: process exit code 1",
+      "runs": {
+        "0": {
+          "status": "PENDING"
+        },
+        "1": {
+          "status": "PENDING"
+        },
+        "2": {
+          "status": "PENDING"
+        }
+      },
+      "seed_limit": null,
+      "status": "BLOCKED"
+    }
+  },
+  "lane": "d0r2",
+  "plan_sha256": "b9af3c63bd5aa6b260106efeee83605d32dd23f3675645b942a9875f9f4d8aba",
+  "revision": 38,
+  "root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2",
+  "status": "COMPLETE_WITH_BLOCKERS",
+  "updated_at": 1791811910.4143682,
+  "version": 1
+}

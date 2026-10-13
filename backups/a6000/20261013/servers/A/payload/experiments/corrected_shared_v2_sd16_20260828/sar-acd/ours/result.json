@@ -1,0 +1,31 @@
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "initialization": "scratch",
+  "protocol": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 64,
+  "epochs_requested": 200,
+  "best_epoch": 62,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.8937007874015748,
+    "macro_precision": 0.8929147145210976,
+    "macro_recall": 0.8922628249026813,
+    "macro_f1": 0.8918104404594516
+  },
+  "params": 1767463,
+  "gflops": 0.24504121,
+  "latency_ms": 300.90587113324244,
+  "fps": 3.323298399708511,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/sar-acd/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}

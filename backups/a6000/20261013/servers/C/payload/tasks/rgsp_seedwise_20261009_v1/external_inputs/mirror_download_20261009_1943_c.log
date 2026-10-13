@@ -1,0 +1,14 @@
+{"expected_bytes": 426990175, "expected_sha256": "6a185fbf2f51408d19ca941745581a8e1aabbacd33db6494985621086495481e", "hostname": "a6000-c", "status": "starting", "target": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/raw_archives/ship_dataset_v0.zip.mirror_20261009_1943_c"}
+{"bytes": 33554432, "elapsed_seconds": 12.453263289993629, "status": "downloading"}
+{"bytes": 67108864, "elapsed_seconds": 19.366226558980998, "status": "downloading"}
+{"bytes": 100663296, "elapsed_seconds": 26.73020373500185, "status": "downloading"}
+{"bytes": 134217728, "elapsed_seconds": 34.25652749897563, "status": "downloading"}
+{"bytes": 167772160, "elapsed_seconds": 41.85727074398892, "status": "downloading"}
+{"bytes": 201326592, "elapsed_seconds": 49.29810467798961, "status": "downloading"}
+{"bytes": 234881024, "elapsed_seconds": 56.61605104600312, "status": "downloading"}
+{"bytes": 268435456, "elapsed_seconds": 64.48351196397562, "status": "downloading"}
+{"bytes": 301989888, "elapsed_seconds": 71.41047444500146, "status": "downloading"}
+{"bytes": 335544320, "elapsed_seconds": 78.5489813729946, "status": "downloading"}
+{"bytes": 369098752, "elapsed_seconds": 85.53744577598991, "status": "downloading"}
+{"bytes": 402653184, "elapsed_seconds": 93.37029527500272, "status": "downloading"}
+{"bytes": 426990175, "completed_utc": "2026-10-09T11:44:20.205732+00:00", "elapsed_seconds": 98.98601359699387, "hostname": "a6000-c", "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/external_inputs/raw_archives/ship_dataset_v0.zip.mirror_20261009_1943_c", "readiness_published": false, "sha256": "6a185fbf2f51408d19ca941745581a8e1aabbacd33db6494985621086495481e", "source": "https://hf-mirror.com/datasets/shimiandeshu/sar-m/resolve/main/ship_dataset_v0.zip", "status": "verified_download"}

@@ -1,0 +1,496 @@
+{
+  "schema": "rgsp-visualization-input-manifest-v1",
+  "source_snapshot": "2026-10-10 10:07:54-10:07:57 Asia/Shanghai",
+  "staging_kind": "verbatim copies and ZIP member extraction only; no model execution",
+  "project_root": "D:\\A-主机文件\\Codex\\Mamba-YOLO-ds-ssm",
+  "entries": [
+    {
+      "kind": "verbatim_copy",
+      "source": "experiments/rgsp_seedwise_20261009_v1/evidence/results_review_20261010/detection/results_seed0.json",
+      "staged": "inputs/latest_seed0.json",
+      "sha256": "61fb0ab3c75d1b8b51a1c8328d82a29ebcaa9c8df4184cb67caac089ecf20f1a"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "dsh_experiment_results/results_individual.csv",
+      "staged": "inputs/ssdd_legacy_individual.csv",
+      "sha256": "4632e57fdc9ff5e1a3abb771471d05bef82504d4e0c6e5a183e64c5735975036"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "dsh_experiment_results/results.csv",
+      "staged": "inputs/ssdd_legacy_summary.csv",
+      "sha256": "64d4b908455dba4b5fe3f17279cd11c032e10b5586f9361122816ad418b223b3"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "dsh_experiment_results/BASELINE_PROTOCOL.md",
+      "staged": "inputs/ssdd_legacy_protocol.md",
+      "sha256": "b82e24a51cbe230b016783197bdce731da6b12e06462cf5b885834365890bcb8"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "paper_draft/rgsp_ieee2col_revision_20261009/supplementary/sadd_results_individual.csv",
+      "staged": "inputs/sadd_3seed.csv",
+      "sha256": "33e118f5e4f321c8b38726cc0a68b41abc68e9a03494dc5d55a29a4d63729ea7"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "reports/RGSP_SEED0_RESULTS_REVIEW_20261010.md",
+      "staged": "inputs/seed0_review.md",
+      "sha256": "6129b5556e3cf75b4597def0c17c6a7961ad06a28c4ec9c1e1720582ae54c6e2"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "docs/project-memory/PROJECT_STATE.md",
+      "staged": "inputs/project_state_snapshot.md",
+      "sha256": "e52bddbad36c7e781e0c5b3164a06413bf61437317b095135c4a63ac9f591839"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/motivation_summary.csv",
+      "staged": "inputs/historical_maps_summary.csv",
+      "sha256": "098499630ed4980d50de96ff502db32a88dab021a62f5553973fb573404d634b"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/manifest.json",
+      "staged": "inputs/historical_maps_manifest.json",
+      "sha256": "9d99fa4ccb2c47552f6575d60d515b19a7c26532e2602a08b017b44ac4f11bf1"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "source_code/work_train_single/tools/visualize_dsssm_motivation.py",
+      "staged": "inputs/historical_capture_source.py",
+      "sha256": "dbb9a5f7faa40dabfa9d9bf59bf63d6e3066f0fa815ab246e55cb637682a857b"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "experiments/rgsp_seedwise_20261009_v1/transfer/final_patch_v1/code/ultralytics/nn/modules/mamba_yolo.py",
+      "staged": "inputs/frozen_mamba_yolo.py",
+      "sha256": "05d1900840474e068aec65bc30ca81501fce55a464ca0dc3fbe60054885aade3"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "experiments/rgsp_seedwise_20261009_v1/manifest.py",
+      "staged": "inputs/frozen_campaign_manifest.py",
+      "sha256": "ff1f6708e735d5bd91d9c341edfcfdcc714829c5ab5ee0c6110df263d5b6fed7"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "paper_draft/rgsp_cn_full_experiments_20261009/main.tex",
+      "staged": "inputs/method_manuscript_snapshot.tex",
+      "sha256": "b6dd4049cb72236156731c99af25e86e377fc3dbb7be5f672c924d1da000ce1c"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "paper_draft/rgsp_cn_full_experiments_20261009/sections/ablation.tex",
+      "staged": "inputs/ablation_manuscript_snapshot.tex",
+      "sha256": "f2b821cddca6af8e45524c64d323817bffd47051eb0499517169b8b0f71cf403"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "experiments/server_current_3090x2__ssdd__ddp_PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_80bsx2-ex27-codex3/train/results.csv",
+      "staged": "inputs/historical_training.csv",
+      "sha256": "ddb218073bc79567df8224d6012484b57c0008250c9e7dad314ef83695e52d08"
+    },
+    {
+      "kind": "verbatim_copy",
+      "source": "experiments/server_current_3090x2__ssdd__ddp_PFIM_mambayolo_t_ssdd_backbone_ds-ssm_300e_80bsx2-ex27-codex3/train/args.yaml",
+      "staged": "inputs/historical_training_args.yaml",
+      "sha256": "ddeaf739a34f98151e26b596c5238634dfa935e2e20fcdcbeab75e2d403e1c33"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000099_dsssm_maps.npz",
+      "source_sha256": "9f34a241136b25097af415e28b51e47ca6ead98c5cccefffa24f5356f6b991c0",
+      "member": "raw_importance.npy",
+      "staged": "inputs/arrays/000099/raw_importance.npy",
+      "sha256": "b4e7b014133dbf3e84347884fbfb92808fbbe1d7c803075cb36b83f8a5155acc"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000099_dsssm_maps.npz",
+      "source_sha256": "9f34a241136b25097af415e28b51e47ca6ead98c5cccefffa24f5356f6b991c0",
+      "member": "raw_input_energy.npy",
+      "staged": "inputs/arrays/000099/raw_input_energy.npy",
+      "sha256": "d0d3c1ac746f7160b228ff4c7adbaf18b80228c090be2e5d412918dd4b91784c"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000099_dsssm_maps.npz",
+      "source_sha256": "9f34a241136b25097af415e28b51e47ca6ead98c5cccefffa24f5356f6b991c0",
+      "member": "raw_corrected_energy.npy",
+      "staged": "inputs/arrays/000099/raw_corrected_energy.npy",
+      "sha256": "082dbc3e433325a858cb49f429f6494b3cff3a15e02602256a680c04e373bf4b"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000099_dsssm_maps.npz",
+      "source_sha256": "9f34a241136b25097af415e28b51e47ca6ead98c5cccefffa24f5356f6b991c0",
+      "member": "raw_residual.npy",
+      "staged": "inputs/arrays/000099/raw_residual.npy",
+      "sha256": "5b316270efa8700b9b12548bef34317568dd4052cf02b8d8f697e3ebc7f17777"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000099_dsssm_maps.npz",
+      "source_sha256": "9f34a241136b25097af415e28b51e47ca6ead98c5cccefffa24f5356f6b991c0",
+      "member": "raw_correction.npy",
+      "staged": "inputs/arrays/000099/raw_correction.npy",
+      "sha256": "06c086708e3268fcbd28ddb50b15c3f0926f535a4567003d8c5e275c0e581929"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000099_dsssm_maps.npz",
+      "source_sha256": "9f34a241136b25097af415e28b51e47ca6ead98c5cccefffa24f5356f6b991c0",
+      "member": "raw_drive_gate.npy",
+      "staged": "inputs/arrays/000099/raw_drive_gate.npy",
+      "sha256": "8f983af320fda9e660848ae8ea7a4fdcb0d41f1486e9f8f56336489b4fe6e082"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000099_dsssm_maps.npz",
+      "source_sha256": "9f34a241136b25097af415e28b51e47ca6ead98c5cccefffa24f5356f6b991c0",
+      "member": "raw_delta_bias.npy",
+      "staged": "inputs/arrays/000099/raw_delta_bias.npy",
+      "sha256": "602c74d136d90999983a167d5502273ec4bb31b61483941b4987d2893000d02c"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000531_dsssm_maps.npz",
+      "source_sha256": "1299ba0d8f6155bd921a4af0b23d14a7530dc93aa22c836d10cf77c7ad036885",
+      "member": "raw_importance.npy",
+      "staged": "inputs/arrays/000531/raw_importance.npy",
+      "sha256": "9780e2510531aa22bb66cb25ef720dc0194df4d1c1d1b87e8aab07e0b398bc7a"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000531_dsssm_maps.npz",
+      "source_sha256": "1299ba0d8f6155bd921a4af0b23d14a7530dc93aa22c836d10cf77c7ad036885",
+      "member": "raw_input_energy.npy",
+      "staged": "inputs/arrays/000531/raw_input_energy.npy",
+      "sha256": "3ec0712765ce227efb6368c81aa1f69e8df39a507c9749dc058aa6ec849bbd6e"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000531_dsssm_maps.npz",
+      "source_sha256": "1299ba0d8f6155bd921a4af0b23d14a7530dc93aa22c836d10cf77c7ad036885",
+      "member": "raw_corrected_energy.npy",
+      "staged": "inputs/arrays/000531/raw_corrected_energy.npy",
+      "sha256": "5cd1b112b349bb44b0a38ecf63fbeb185f2712657c4fdeabf0848d6de4a73e73"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000531_dsssm_maps.npz",
+      "source_sha256": "1299ba0d8f6155bd921a4af0b23d14a7530dc93aa22c836d10cf77c7ad036885",
+      "member": "raw_residual.npy",
+      "staged": "inputs/arrays/000531/raw_residual.npy",
+      "sha256": "da9e14423c6736f4697aa4752fdf4efae46fea7916950e793a3e001506f691cb"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000531_dsssm_maps.npz",
+      "source_sha256": "1299ba0d8f6155bd921a4af0b23d14a7530dc93aa22c836d10cf77c7ad036885",
+      "member": "raw_correction.npy",
+      "staged": "inputs/arrays/000531/raw_correction.npy",
+      "sha256": "a037ff5997caafc5eb220fe4a8f969635a50fa7efbe9f507f85e477288b21f00"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000531_dsssm_maps.npz",
+      "source_sha256": "1299ba0d8f6155bd921a4af0b23d14a7530dc93aa22c836d10cf77c7ad036885",
+      "member": "raw_drive_gate.npy",
+      "staged": "inputs/arrays/000531/raw_drive_gate.npy",
+      "sha256": "35c113fc4da4e86a1c2590c31bbb12ce07d83a26973da1129f526a1eb9119de3"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000531_dsssm_maps.npz",
+      "source_sha256": "1299ba0d8f6155bd921a4af0b23d14a7530dc93aa22c836d10cf77c7ad036885",
+      "member": "raw_delta_bias.npy",
+      "staged": "inputs/arrays/000531/raw_delta_bias.npy",
+      "sha256": "d8842aa530f358f7745c5a843381899118bb7ed46633391f1372660710e9b129"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000929_dsssm_maps.npz",
+      "source_sha256": "a650c4fbb35346e0dfa08b54576af22a520884dbb059eb283c13598d1944bdfc",
+      "member": "raw_importance.npy",
+      "staged": "inputs/arrays/000929/raw_importance.npy",
+      "sha256": "320a35dc6871ac6b69d876aefe86a7dbd8041c351d4ba708951d19ba0df97e11"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000929_dsssm_maps.npz",
+      "source_sha256": "a650c4fbb35346e0dfa08b54576af22a520884dbb059eb283c13598d1944bdfc",
+      "member": "raw_input_energy.npy",
+      "staged": "inputs/arrays/000929/raw_input_energy.npy",
+      "sha256": "17cb7aa76d812ae0cd411fb8e34a7bf2fc296559ddf5830e345d11da1306346d"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000929_dsssm_maps.npz",
+      "source_sha256": "a650c4fbb35346e0dfa08b54576af22a520884dbb059eb283c13598d1944bdfc",
+      "member": "raw_corrected_energy.npy",
+      "staged": "inputs/arrays/000929/raw_corrected_energy.npy",
+      "sha256": "015e7fdab50712648045e704af71f9d859f460cdd594e6410757d299965d0184"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000929_dsssm_maps.npz",
+      "source_sha256": "a650c4fbb35346e0dfa08b54576af22a520884dbb059eb283c13598d1944bdfc",
+      "member": "raw_residual.npy",
+      "staged": "inputs/arrays/000929/raw_residual.npy",
+      "sha256": "6f3fda97f621ae64e4da2d9f4b5da8b58fdbca0e02cc3078b5c053a84f483e78"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000929_dsssm_maps.npz",
+      "source_sha256": "a650c4fbb35346e0dfa08b54576af22a520884dbb059eb283c13598d1944bdfc",
+      "member": "raw_correction.npy",
+      "staged": "inputs/arrays/000929/raw_correction.npy",
+      "sha256": "08025d24da1a468e19318699593dd466471995b4f868cec1d0ac13d7e5d91642"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000929_dsssm_maps.npz",
+      "source_sha256": "a650c4fbb35346e0dfa08b54576af22a520884dbb059eb283c13598d1944bdfc",
+      "member": "raw_drive_gate.npy",
+      "staged": "inputs/arrays/000929/raw_drive_gate.npy",
+      "sha256": "a0014f006a15849a25e2e302c78d643909ef857e549d120585f5bba49d5ad50b"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/000929_dsssm_maps.npz",
+      "source_sha256": "a650c4fbb35346e0dfa08b54576af22a520884dbb059eb283c13598d1944bdfc",
+      "member": "raw_delta_bias.npy",
+      "staged": "inputs/arrays/000929/raw_delta_bias.npy",
+      "sha256": "49c3f37e5a8228c7112e5ed9d8ad6d39c4d2a1d18962c2348d1910f4084282e3"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001081_dsssm_maps.npz",
+      "source_sha256": "b434522fd09fc6297e31cb6c53b08f8c4d2a967a2bef7c939a1bc6a779b74d2f",
+      "member": "raw_importance.npy",
+      "staged": "inputs/arrays/001081/raw_importance.npy",
+      "sha256": "8fb179665eabb1b8cb90837b825e73a9207b35bfce8eacdfcf3198597ee6c983"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001081_dsssm_maps.npz",
+      "source_sha256": "b434522fd09fc6297e31cb6c53b08f8c4d2a967a2bef7c939a1bc6a779b74d2f",
+      "member": "raw_input_energy.npy",
+      "staged": "inputs/arrays/001081/raw_input_energy.npy",
+      "sha256": "8e6fd4830a8a70555190dee21a070cd73f4bf563dd5504e6c184865b07879433"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001081_dsssm_maps.npz",
+      "source_sha256": "b434522fd09fc6297e31cb6c53b08f8c4d2a967a2bef7c939a1bc6a779b74d2f",
+      "member": "raw_corrected_energy.npy",
+      "staged": "inputs/arrays/001081/raw_corrected_energy.npy",
+      "sha256": "25a188fc35c11a6b638dc9b690cd65ae52076d4ab9066c9ed96b7037e77de0c8"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001081_dsssm_maps.npz",
+      "source_sha256": "b434522fd09fc6297e31cb6c53b08f8c4d2a967a2bef7c939a1bc6a779b74d2f",
+      "member": "raw_residual.npy",
+      "staged": "inputs/arrays/001081/raw_residual.npy",
+      "sha256": "0b32621c613fa7ed93e01b8d4d027a2d6ce9936533cd2ef56a311123b8e2090a"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001081_dsssm_maps.npz",
+      "source_sha256": "b434522fd09fc6297e31cb6c53b08f8c4d2a967a2bef7c939a1bc6a779b74d2f",
+      "member": "raw_correction.npy",
+      "staged": "inputs/arrays/001081/raw_correction.npy",
+      "sha256": "2a2533a30955ece7739ae5784d971b30b9795939856d0bb2913fd643353b97be"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001081_dsssm_maps.npz",
+      "source_sha256": "b434522fd09fc6297e31cb6c53b08f8c4d2a967a2bef7c939a1bc6a779b74d2f",
+      "member": "raw_drive_gate.npy",
+      "staged": "inputs/arrays/001081/raw_drive_gate.npy",
+      "sha256": "952950a2032a515387481b578045949caaebdec7463b6ab472d9f2cb1acb8511"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001081_dsssm_maps.npz",
+      "source_sha256": "b434522fd09fc6297e31cb6c53b08f8c4d2a967a2bef7c939a1bc6a779b74d2f",
+      "member": "raw_delta_bias.npy",
+      "staged": "inputs/arrays/001081/raw_delta_bias.npy",
+      "sha256": "4c6387ffdcb68b04a0f5a429dbefcf58d0147f17ea9586623e9f1d24633a6cb3"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001131_dsssm_maps.npz",
+      "source_sha256": "3fed7b4197cd7382e86b58255300d7ebd2fcb3449f71adf080e044cd0c6b4790",
+      "member": "raw_importance.npy",
+      "staged": "inputs/arrays/001131/raw_importance.npy",
+      "sha256": "34bf162642ca34b979c3f71c5b3fdbce6b67a4c11579c391f96274bf2eeedcfd"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001131_dsssm_maps.npz",
+      "source_sha256": "3fed7b4197cd7382e86b58255300d7ebd2fcb3449f71adf080e044cd0c6b4790",
+      "member": "raw_input_energy.npy",
+      "staged": "inputs/arrays/001131/raw_input_energy.npy",
+      "sha256": "166f5811a51b453d0fae4c37f8402a2c415c487b19e5cf309d82df012da19953"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001131_dsssm_maps.npz",
+      "source_sha256": "3fed7b4197cd7382e86b58255300d7ebd2fcb3449f71adf080e044cd0c6b4790",
+      "member": "raw_corrected_energy.npy",
+      "staged": "inputs/arrays/001131/raw_corrected_energy.npy",
+      "sha256": "798094ec6a970d07a0af97953cf09597049e2bc24a1688dd1069d16aed6143f8"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001131_dsssm_maps.npz",
+      "source_sha256": "3fed7b4197cd7382e86b58255300d7ebd2fcb3449f71adf080e044cd0c6b4790",
+      "member": "raw_residual.npy",
+      "staged": "inputs/arrays/001131/raw_residual.npy",
+      "sha256": "879303134ea538db066b29bad4affde542d411114f7e949727369c941e0686ef"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001131_dsssm_maps.npz",
+      "source_sha256": "3fed7b4197cd7382e86b58255300d7ebd2fcb3449f71adf080e044cd0c6b4790",
+      "member": "raw_correction.npy",
+      "staged": "inputs/arrays/001131/raw_correction.npy",
+      "sha256": "f2008ec5ca493ce147b4c236780cbf84a6f3a939da70f59b4c5fd6f71e54a011"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001131_dsssm_maps.npz",
+      "source_sha256": "3fed7b4197cd7382e86b58255300d7ebd2fcb3449f71adf080e044cd0c6b4790",
+      "member": "raw_drive_gate.npy",
+      "staged": "inputs/arrays/001131/raw_drive_gate.npy",
+      "sha256": "1291e739f59ed19c45e93a7c32baf949887357c489edb861cd2a45217d4b6507"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001131_dsssm_maps.npz",
+      "source_sha256": "3fed7b4197cd7382e86b58255300d7ebd2fcb3449f71adf080e044cd0c6b4790",
+      "member": "raw_delta_bias.npy",
+      "staged": "inputs/arrays/001131/raw_delta_bias.npy",
+      "sha256": "c6029a9e319c29ddf395089fa610d98b037ec22be0f84c9f207004a1d05749a5"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001111_dsssm_maps.npz",
+      "source_sha256": "5a89ae70d28de1c3ef5722a78c13c317261f12415a93072c7bae1ea41c529d0b",
+      "member": "raw_importance.npy",
+      "staged": "inputs/arrays/001111/raw_importance.npy",
+      "sha256": "166eac037b804445de2c46a470c517bb2b18caedae2b5efbf0f36eeb480f4f7a"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001111_dsssm_maps.npz",
+      "source_sha256": "5a89ae70d28de1c3ef5722a78c13c317261f12415a93072c7bae1ea41c529d0b",
+      "member": "raw_input_energy.npy",
+      "staged": "inputs/arrays/001111/raw_input_energy.npy",
+      "sha256": "c92a7e00fe8452388058a6c0f027edad7470c493062a4559079bd06049b1b05c"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001111_dsssm_maps.npz",
+      "source_sha256": "5a89ae70d28de1c3ef5722a78c13c317261f12415a93072c7bae1ea41c529d0b",
+      "member": "raw_corrected_energy.npy",
+      "staged": "inputs/arrays/001111/raw_corrected_energy.npy",
+      "sha256": "9c615bde5f0e6c518c4b8fd55b4911ae6caf8075cf0f2893d203b7f676e617b9"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001111_dsssm_maps.npz",
+      "source_sha256": "5a89ae70d28de1c3ef5722a78c13c317261f12415a93072c7bae1ea41c529d0b",
+      "member": "raw_residual.npy",
+      "staged": "inputs/arrays/001111/raw_residual.npy",
+      "sha256": "0b68f7a67dbfc9770ba25b2639dc76a4bb6f60bd05c8802292777bd915f5ef23"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001111_dsssm_maps.npz",
+      "source_sha256": "5a89ae70d28de1c3ef5722a78c13c317261f12415a93072c7bae1ea41c529d0b",
+      "member": "raw_correction.npy",
+      "staged": "inputs/arrays/001111/raw_correction.npy",
+      "sha256": "ca5f0c706ee0805a4d1827a9542b36715a92638768f7d818ef1bf86fc1412829"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001111_dsssm_maps.npz",
+      "source_sha256": "5a89ae70d28de1c3ef5722a78c13c317261f12415a93072c7bae1ea41c529d0b",
+      "member": "raw_drive_gate.npy",
+      "staged": "inputs/arrays/001111/raw_drive_gate.npy",
+      "sha256": "ae402c3c3bf50f179e8d8d4d56c733e08b67ee10a2914224e6b30823efe4a756"
+    },
+    {
+      "kind": "npz_member_extraction",
+      "source": "artifacts/dsssm_motivation_ex27_exact_v2_20260823/001111_dsssm_maps.npz",
+      "source_sha256": "5a89ae70d28de1c3ef5722a78c13c317261f12415a93072c7bae1ea41c529d0b",
+      "member": "raw_delta_bias.npy",
+      "staged": "inputs/arrays/001111/raw_delta_bias.npy",
+      "sha256": "81af481ff4e5f3a35fa30e22496e5d418b5e6ae5218f9a75f54994e5797b37f3"
+    },
+    {
+      "kind": "zip_member_extraction",
+      "source": "D:\\BaiduNetdiskDownload\\SAR-Data\\SARATR-X\\detection\\dataset\\SSDD.zip",
+      "member": "SSDD/images/test/000099.jpg",
+      "staged": "inputs/images/000099.jpg",
+      "sha256": "94dea1bfb9ff265d3874d26ed0496bcefa7828c1afb8ea8a1c4faa00b9fc8c8b",
+      "matches_historical_capture": true
+    },
+    {
+      "kind": "zip_member_extraction",
+      "source": "D:\\BaiduNetdiskDownload\\SAR-Data\\SARATR-X\\detection\\dataset\\SSDD.zip",
+      "member": "SSDD/images/test/000531.jpg",
+      "staged": "inputs/images/000531.jpg",
+      "sha256": "43f18920a8ac6b92791182ed0a37dc2496eb74877c60d2a9529f2b28184b8c9a",
+      "matches_historical_capture": true
+    },
+    {
+      "kind": "zip_member_extraction",
+      "source": "D:\\BaiduNetdiskDownload\\SAR-Data\\SARATR-X\\detection\\dataset\\SSDD.zip",
+      "member": "SSDD/images/test/000929.jpg",
+      "staged": "inputs/images/000929.jpg",
+      "sha256": "72a5f13049d9ba48abee2ad7167254f1539f1fb48bf65494ad32f6bab048dc25",
+      "matches_historical_capture": true
+    },
+    {
+      "kind": "zip_member_extraction",
+      "source": "D:\\BaiduNetdiskDownload\\SAR-Data\\SARATR-X\\detection\\dataset\\SSDD.zip",
+      "member": "SSDD/images/test/001081.jpg",
+      "staged": "inputs/images/001081.jpg",
+      "sha256": "68090f86990afb3d1b6e41ab69bfd7c0889706951ed3de9383074534cef2dbd5",
+      "matches_historical_capture": true
+    },
+    {
+      "kind": "zip_member_extraction",
+      "source": "D:\\BaiduNetdiskDownload\\SAR-Data\\SARATR-X\\detection\\dataset\\SSDD.zip",
+      "member": "SSDD/images/test/001131.jpg",
+      "staged": "inputs/images/001131.jpg",
+      "sha256": "b4aa358d6fec34ed3f1ba41ca4f3ed0b6a5a855a2e84a8120aae832051da80fb",
+      "matches_historical_capture": true
+    },
+    {
+      "kind": "zip_member_extraction",
+      "source": "D:\\BaiduNetdiskDownload\\SAR-Data\\SARATR-X\\detection\\dataset\\SSDD.zip",
+      "member": "SSDD/images/test/001111.jpg",
+      "staged": "inputs/images/001111.jpg",
+      "sha256": "79b41940970c9ea12c7a966f995b27fd28db8545b69f40da9824c51eeecf2383",
+      "matches_historical_capture": true
+    },
+    {
+      "kind": "zip_member_extraction",
+      "source": "D:\\BaiduNetdiskDownload\\SAR-Data\\SARATR-X\\detection\\dataset\\SSDD.zip",
+      "member": "SSDD/annotations/test.json",
+      "staged": "inputs/ssdd_test_coco.json",
+      "sha256": "021d52858ffa3fda9a2d28ee21f1ca114800554edf08007704f6d06a412d50bf",
+      "limitation": "Official COCO boxes used for the new redraw; historical capture did not hash labels."
+    }
+  ]
+}

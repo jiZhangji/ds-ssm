@@ -1,0 +1,18 @@
+
+{"time": 1791483133.1482875, "command": ["/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python", "/home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/code/tools/evaluate_sarmix.py", "--weights", "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed2/runs/matched_scale075/weights/best.pt", "--data", "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed2/manifest/data.yaml", "--experiment", "rgsp_recovery_SADD_seed2_matched_scale075", "--placement", "p3", "--variant", "matched_scale075", "--state-dim", "16", "--seed", "2", "--subset", "SADD", "--split", "test", "--output-json", "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed2/runs/matched_scale075/eval_test.json", "--imgsz", "640", "--batch", "16", "--device", "0", "--workers", "0", "--conf", "0.001", "--iou", "0.6", "--project", "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed2/evaluations", "--name", "matched_scale075"]}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Ultralytics YOLOv8.2.29 🚀 Python-3.10.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA RTX A6000, 48674MiB)
+matched_scale075 summary: 380 layers, 5916563 parameters, 0 gradients, 13.1 GFLOPs
+[34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed2/data/labels/test.cache... 44 images, 0 backgrounds, 0 corrupt: 100%|██████████| 44/44 [00:00<?, ?it/s][34m[1mval: [0mScanning /home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed2/data/labels/test.cache... 44 images, 0 backgrounds, 0 corrupt: 100%|██████████| 44/44 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/3 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  33%|███▎      | 1/3 [00:00<00:00,  5.57it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  67%|██████▋   | 2/3 [00:00<00:00,  5.86it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 3/3 [00:00<00:00,  6.77it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 3/3 [00:00<00:00,  6.46it/s]
+                   all         44        408      0.915      0.946       0.96      0.513
+Speed: 0.1ms preprocess, 8.0ms inference, 0.0ms loss, 0.2ms postprocess per image
+experiment: rgsp_recovery_SADD_seed2_matched_scale075
+subset:     SADD
+P/R:        0.915080/0.946078
+AP50:       0.960201
+AP75:       0.508144
+AP50-95:    0.513444
+JSON:       /home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed2/runs/matched_scale075/eval_test.json

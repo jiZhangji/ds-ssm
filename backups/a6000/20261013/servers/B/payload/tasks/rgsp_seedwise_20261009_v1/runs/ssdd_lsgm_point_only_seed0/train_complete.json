@@ -1,0 +1,53 @@
+{
+  "best_sha256": "4e0c449b9b7feac9514b9a363b23fccbfec78030bbdf92c492ea3358c43a9a4a",
+  "finished_utc": "2026-10-10T01:54:43.558579+00:00",
+  "last_epoch_observed": 150,
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "raw_fp32_last_sha256": "8b8a15959ca68871eee12a11935b69adb7a789a43986e8a5e720b68c9d411a6e",
+  "reloaded_class_audit": null,
+  "reloaded_controls": [
+    {
+      "alpha": 0.48583984375,
+      "beta_i": 1.01171875,
+      "buffer_scalars": [],
+      "control": "lsgm_point_only",
+      "delta_path": true,
+      "descriptor_mode": "point_only",
+      "eta_i": 0.11212158203125,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "lambda_s": 0.529296875,
+      "lrc_enabled": true,
+      "min_retain": 0.5,
+      "name": "model.3",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "predictor_input_features": 128,
+      "predictor_parameters_active": true,
+      "requires_grad": {
+        "alpha": false,
+        "beta_i": false,
+        "eta_i": false,
+        "lambda_s": false,
+        "rho_i": false
+      },
+      "rho_i": 1.01171875,
+      "state_dim": 16,
+      "trend_parameters_active": true
+    }
+  ],
+  "resumed": false,
+  "schema": "rgsp-seedwise-v1",
+  "smoke_only": false,
+  "trial_sha256": "2ec3d16ffa6c24291b4596a0533e8e6425fbc38d67d1439b315f4913d3cdc931"
+}

@@ -1,0 +1,55 @@
+{
+  "amp": false,
+  "augmentation": {
+    "close_mosaic": 15,
+    "degrees": 180.0,
+    "fliplr": 0.5,
+    "flipud": 0.5,
+    "hsv_h": 0.0,
+    "hsv_s": 0.0,
+    "hsv_v": 0.1,
+    "mosaic": 0.3,
+    "scale": 0.3,
+    "translate": 0.1
+  },
+  "batch": 16,
+  "code": {
+    "mbyolo_train_sarair.py": "b8fb8dd8724622e3af697cf2ff4eb90cbdc33387672cdc8a7ae23e318733d673",
+    "tools/evaluate_sarmix.py": "b618852403eeda8737cadd847ac5193848325141eb6666dac10fa8185d67c50d",
+    "tools/run_sar4_full_suite.py": "d7a27fc4c3f725b58691a6b54a81147ba5d5b050bec4c45ad9d84c93b2562478",
+    "ultralytics/nn/modules/mamba_yolo.py": "48e6ba384c1a4fccaa98894a664375a276605e2f14830b6b89aa92e4250567e5"
+  },
+  "configs": {
+    "SSDD:baseline": "74dcda6fcbd55daea5dbb87026787d41886d0104c58b2bf5c805dca0077d5f44",
+    "SSDD:ds_only_p3": "2c5802908162ad3a617fee37d9edb8de1ab269b5553370800f6438434ba0b35b",
+    "SSDD:full_p3": "ec287ccce00023599bda0a916fcad804e20e07a12e0b4b5aec57d2bfbc4ebc79",
+    "SSDD:global_p3": "0dbfa8548ecd90b5d503098feaf0c687d8b3a4fb411cdf6311c46f164c878051",
+    "SSDD:pfim_only_p3": "fa69d7aa98463dea0b2710044155c60227994f93e9b36ffa055462f194ff688a"
+  },
+  "cos_lr": false,
+  "datasets": {
+    "SSDD": {
+      "path": "/home/powerleader/ig-ds-ssm/experiments/ssdd_paper_v1/seed2-manifest/datasets/SSDD.yaml",
+      "sha256": "487d98b6b838b1e91a6e7073c5876ea58b22c51bfa66a0dec6fc0591a5148a5a"
+    }
+  },
+  "epochs": 150,
+  "eval_batch": 16,
+  "eval_device": "1",
+  "experiment_id": "seed2",
+  "imgsz": 640,
+  "lr0": 0.0002,
+  "lrf": 0.01,
+  "module_warmup_epochs": 0,
+  "nbs": 64,
+  "optimizer": "AdamW",
+  "optimizer_warmup_epochs": 3.0,
+  "patience": 30,
+  "seed": 2,
+  "ssdd_full_train": false,
+  "state_dim": 16,
+  "train_device": "1",
+  "warmup_bias_lr": 0.1,
+  "weight_decay": 0.0005,
+  "weights": "none"
+}

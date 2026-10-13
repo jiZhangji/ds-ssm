@@ -1,0 +1,2 @@
+dataset,experiment,variant,placement,state_dim,precision,recall,ap50,ap75,ap50_95,inference_ms,weights
+SSDD,det_histcfg_p3_d16_fp32_v1_ssdd_full_p3,full,p3,16,0.9730181885032014,0.9542124542124543,0.9854859585551101,0.8555155066678402,0.7226077921400423,7.099180385984224,/home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_v1_ssdd_full_p3/weights/best.pt

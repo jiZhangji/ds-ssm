@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+    "-B",
+    "-u",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/worker.py",
+    "--root",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/qa_smoke_01",
+    "--plan",
+    "/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/plans/c0.json",
+    "--lane",
+    "c0",
+    "--probe-only"
+  ],
+  "lane": "c0",
+  "pid": 3770442,
+  "plan_sha256": "248e5378b9692ef9fdd7863045e8926455671dbeb49c38cbb578445a7c98b43a",
+  "start_ticks": "45798178"
+}

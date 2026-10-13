@@ -1,0 +1,104 @@
+{
+  "dataset": "SAR-ACD",
+  "task": "classification",
+  "variant": "baseline",
+  "placement": "baseline",
+  "state_dim": 0,
+  "backbone_layout": "vmamba_tiny",
+  "decoder": "multiscale",
+  "initialization": "official_vmamba_tiny_backbone_plus_random_new_modules",
+  "pretrained": {
+    "path": "/home/powerleader/ig-ds-ssm/weights/vssm1_tiny_0230s_ckpt_epoch_264.pth",
+    "loaded_tensors": 272,
+    "model_tensors": 280,
+    "coverage": 0.9714285714285714,
+    "missing_tensors": 8,
+    "unexpected_tensors": 4
+  },
+  "protocol": null,
+  "selection_policy": "best-validation-score",
+  "class_names": null,
+  "split_sizes": {
+    "train": 2017,
+    "val": 251,
+    "test": 254
+  },
+  "imgsz": 224,
+  "batch": 128,
+  "devices": "cuda:0",
+  "num_devices": 1,
+  "eval_imgsz": 224,
+  "eval_batch": 128,
+  "epochs_requested": 200,
+  "module_warmup_epochs": 0,
+  "fine_tune_epochs": 200,
+  "optimizer": "AdamW",
+  "scheduler": "cosine",
+  "lr": 0.0002,
+  "lr_milestones": [],
+  "lr_step_size": 2,
+  "lr_gamma": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.1,
+  "segmentation_loss": null,
+  "selection_metric": null,
+  "best_epoch": 79,
+  "threshold": null,
+  "metric": {
+    "accuracy": 0.984251968503937,
+    "macro_precision": 0.9841279586905015,
+    "macro_recall": 0.9841279586905015,
+    "macro_f1": 0.9840920197866382,
+    "per_class_recall": [
+      0.9787234042553191,
+      0.9803921568627451,
+      1.0,
+      0.9811320754716981,
+      0.9803921568627451
+    ],
+    "confusion_matrix": [
+      [
+        46,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        52,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        52,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        50
+      ]
+    ]
+  },
+  "params": 29486789,
+  "gflops": 0.5507136,
+  "latency_ms": 8.435734900801132,
+  "fps": 118.54331741802736,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/recheck_sar_acd_bs_warmup_20260904/baseline_bs128/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/classification/SAR_ACD/manifest.json"
+}

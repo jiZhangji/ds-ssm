@@ -1,0 +1,35 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_matched_scale075_seed0/config.json",
+      "sha256": "e83cfebf456aa0f90cbffc663a72b5c781977c6f2bc1434b984e442d6b00b4d0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_matched_scale075_seed0/initialization.json",
+      "sha256": "05559e8cadd3a3f7a8b567abdd74e2a933fb4393d30cae0240af70aab1a7f9eb"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_matched_scale075_seed0/metrics.jsonl",
+      "sha256": "0219f758b51d22cfe78f41969c52503af4cc8a2aba3b43d0eb56d8ff9519c32c"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_matched_scale075_seed0/test_evaluation.json",
+      "sha256": "b8e864b7ac8e3e7404e8339a668d224aba78f44aaea223d7641df909f916adb6"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_matched_scale075_seed0/result.json",
+      "sha256": "e26959ccf664fdde4598443546b101f4495eebb53da03d36c2b365776892ffd4"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_matched_scale075_seed0/best.pt",
+      "sha256": "1d3054243c4f8134e22a520399bfecb1c96a52b548732b41b02aa18e912fa855"
+    }
+  ],
+  "finished_utc": "2026-10-09T13:14:03.935657+00:00",
+  "identity_sha256": "e7cde6a8e8fce6a17a98495be283e3139ae9ad73f66fa691325678987f548da0",
+  "protocol_sha256": "65e6c9f98f6084b2d5c3c94ef662510777176ce306a3205a0f02df59d2db57e0",
+  "schema": "rgsp-cross-trial-v1",
+  "seed": 0,
+  "status": "complete",
+  "variant": "matched_scale075"
+}

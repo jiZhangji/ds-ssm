@@ -1,0 +1,13 @@
+Experiment: ssdd_scratch_p3_sd16_b32_v1
+Runs:       1
+Scratch:    True
+Placement:  P3 for Full; original Mamba-YOLO for Baseline
+Eval split: test
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_sar4_full_suite.py", line 528, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_sar4_full_suite.py", line 508, in main
+    run_one(
+  File "/home/powerleader/ig-ds-ssm/work_train_single/tools/run_sar4_full_suite.py", line 307, in run_one
+    raise RuntimeError(f"Refusing to overwrite incomplete run without last.pt: {run_dir}")
+RuntimeError: Refusing to overwrite incomplete run without last.pt: /home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_v1_ssdd_baseline

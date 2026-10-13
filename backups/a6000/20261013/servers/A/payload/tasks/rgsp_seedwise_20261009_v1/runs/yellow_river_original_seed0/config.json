@@ -1,0 +1,60 @@
+{
+  "data": {
+    "annotation_policy": "fail",
+    "audit_sha256": "e9d4f235c47f3f2c3add54ff364dded861f780eb2b1f76df4e02935d8bc37679",
+    "counts": {
+      "test": 16,
+      "train": 100,
+      "val": 16
+    },
+    "files_sha256": "44ddd56e277fa71e0795de6a6cf9ed9c220798aad27ab770e967211c241eec2a",
+    "logical_manifest_sha256": "06671e955b4c1fecfd0ffb7c56c661231d5e4a6832e288b2527811b4d8ea2241",
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/Yellow_River/manifest.json",
+    "manifest_sha256": "a7aa8b3d0e78ff7a8364545409cf73732e264d2946ff2e9fcfee98bdce77d224"
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "protocol": {
+    "annotation_policy": "fail",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "batch": 16,
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "classification_label_smoothing": 0.1,
+    "dataset": "Yellow_River",
+    "epochs": 150,
+    "eval_batch": 16,
+    "grad_accum": 1,
+    "gradient_clip_l2": 5.0,
+    "historical_results_comparable": false,
+    "imgsz": 192,
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "logical_data_sha256": "06671e955b4c1fecfd0ffb7c56c661231d5e4a6832e288b2527811b4d8ea2241",
+    "lr": 0.0002,
+    "module_warmup_epochs": 0,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "optimizer": "AdamW",
+    "patience": 25,
+    "precision": "FP32 (AMP/TF32 off)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "scheduler": "cosine to 1% initial lr",
+    "schema": "rgsp-cross-trial-v1",
+    "selection_metric": "f1",
+    "split_counts": {
+      "test": 16,
+      "train": 100,
+      "val": 16
+    },
+    "task": "change_detection",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "weight_decay": 0.0005
+  },
+  "protocol_sha256": "7e20b559cfe9b6364bd0aeeceb9d024ed8f4d0a0f648bc4da3fd416e74620c0f",
+  "seed": 0,
+  "source_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+  "trial_id": "yellow_river_original_seed0",
+  "validate_only": false,
+  "variant": "original"
+}

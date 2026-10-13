@@ -1,0 +1,48 @@
+{
+  "experiment_id": "formal_fusar_paper_protocol_p3_d16_v2",
+  "selection_policy": "fixed-last-epoch; test evaluated once after training",
+  "state_dim": 16,
+  "seed": 0,
+  "protocols": {
+    "MSTAR-SOC": {
+      "key": "MSTAR-SOC",
+      "task_dir": "classification",
+      "folder": "MSTAR_SOC",
+      "imgsz": 88,
+      "batch": 100,
+      "epochs": 100,
+      "patience": 100,
+      "optimizer": "SGD",
+      "lr": 0.001,
+      "weight_decay": 0.004,
+      "momentum": 0.9,
+      "scheduler": "multistep",
+      "lr_milestones": [
+        50
+      ],
+      "lr_step_size": 2,
+      "lr_gamma": 0.1,
+      "label_smoothing": 0.0,
+      "evidence": "A-ConvNet SOC public implementation: official 17/15 split, 88 crop, batch 100, SGD 100e, lr 1e-3, milestone 50, momentum .9, weight decay .004"
+    },
+    "FUSAR-Map": {
+      "key": "FUSAR-Map",
+      "task_dir": "segmentation",
+      "folder": "FUSAR_Map_Paper_Code",
+      "imgsz": 256,
+      "batch": 10,
+      "epochs": 150,
+      "patience": 150,
+      "optimizer": "Adam",
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "momentum": 0.9,
+      "scheduler": "step",
+      "lr_milestones": [],
+      "lr_step_size": 2,
+      "lr_gamma": 0.93,
+      "label_smoothing": 0.0,
+      "evidence": "FUSAR-Map paper and released code: WuHan_03_02 test scene, 4 classes with unknown merged into vegetation, 17560/4390 train/val patches plus 1280 test patches, 256 input, batch 10, Adam 1e-3, lr x0.93 every 2e, weighted categorical CE, 150e"
+    }
+  }
+}

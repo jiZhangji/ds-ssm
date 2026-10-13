@@ -1,0 +1,95 @@
+{
+  "key": "a",
+  "host": "powerleader-PT6620W",
+  "dataset": "SADD",
+  "seed": 0,
+  "gpu_index": 0,
+  "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "source_lane": "/home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/seed0",
+  "code": "/home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/code",
+  "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_recovery_20261008_v1/sadd_seed0",
+  "predecessor_state": "/home/powerleader/codex_sar_agent_final_v1p1_20261008/results/final/study_v1_1/model_runs_dist/a6000_a/frozen_queue_state.json",
+  "variants": [
+    "original",
+    "matched_scale075",
+    "local_energy",
+    "full"
+  ],
+  "epochs": 200,
+  "patience": 40,
+  "predecessor_signature": "713875a920e6011adbeb07cce57be0f9f528dc1787115800c66d5b3c4904fe7e",
+  "pending": [
+    "original",
+    "matched_scale075",
+    "local_energy",
+    "full"
+  ],
+  "source_completed": [],
+  "checkpoint": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/seed0/runs/original/weights/last.pt",
+    "sha256": "aa8e7a28de2a743891dc4ba5a2b8165a5c94efb74f8c6f718792de47426d6f11",
+    "completed_epoch": 94,
+    "optimizer_present": true,
+    "controls": [],
+    "zip_crc": "PASS",
+    "resume_semantics": "legacy EMA/FP16 optimizer; no bitwise/RNG replay guarantee",
+    "variant": "original",
+    "best": {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_sadd_controls_20261008_v1/seed0/runs/original/weights/best.pt",
+      "sha256": "d70d6a882dd56c8e12bbb4264c49a550e03b179f32a6ef27d6161d1be93be609",
+      "completed_epoch": 86,
+      "optimizer_present": true,
+      "controls": [],
+      "zip_crc": "PASS",
+      "resume_semantics": "legacy EMA/FP16 optimizer; no bitwise/RNG replay guarantee"
+    }
+  },
+  "record_cleanup": [
+    {
+      "file": "controls_by_epoch.jsonl",
+      "source_sha256": "b2cd08ef9fe5503bdbee603999fa1fe2cdf4d3abc9d92f9e1a811e6cf1187f11",
+      "derived_sha256": "ea678e9f02ffdc206076bcfc9b5589bf12e076db2b380ac4b6f37fa17cce75cf",
+      "trailing_nul_bytes": 100,
+      "retained_through_epoch": 94
+    },
+    {
+      "file": "results.csv",
+      "source_sha256": "23ca4e362f832cd5a26dc6f8af1a9be271ccd95f3998d136a611058987e7036e",
+      "derived_sha256": "da374c6473c2154a6b5191c949e42fd5dd877f660b892bae0b98781e255918a5",
+      "trailing_nul_bytes": 336,
+      "retained_through_epoch": 94
+    }
+  ],
+  "protocol_sha256": "c424258c5da990f6e50f255c49eb160a8d9f39cdbf1b34466dc499e89ab05c95",
+  "prepared_unix": 1791461057.314344,
+  "original_artifacts": {
+    "runs/original/args.yaml": "dd8a03f3c08614b32c75fc76092a4381f3cf216fcd74ce5495933bb2477b1a3a",
+    "runs/original/results.csv": "23ca4e362f832cd5a26dc6f8af1a9be271ccd95f3998d136a611058987e7036e",
+    "runs/original/controls_by_epoch.jsonl": "b2cd08ef9fe5503bdbee603999fa1fe2cdf4d3abc9d92f9e1a811e6cf1187f11",
+    "runs/original/runtime_audit.json": "0baf985eb55b8c178e0f46c5abf887a62aba6aa4e998a3e6de9abad458f004ab",
+    "runs/original/weights/best.pt": "d70d6a882dd56c8e12bbb4264c49a550e03b179f32a6ef27d6161d1be93be609",
+    "runs/original/weights/last.pt": "aa8e7a28de2a743891dc4ba5a2b8165a5c94efb74f8c6f718792de47426d6f11"
+  },
+  "runner_sha256": "e20d0205b7803525e147dccccdb476a34f7b0bf54740804c21524ab46bce8ec1",
+  "redirect_sha256": "363f232c8f2b340b2d3ad436056cbe11ec874210fe7033564a0f926b64f12f96",
+  "csv_reconstruction": {
+    "status": "PASS",
+    "key": "a",
+    "checked_unix": 1791461195.9297466,
+    "original_artifacts_unchanged": 6,
+    "frozen_code_files_verified": 251,
+    "optimizer_tensors_finite": 1212,
+    "checkpoint_epoch": 94,
+    "csv_source": "checkpoint.train_results",
+    "previous_csv_rows": 93,
+    "restored_csv_rows": 94,
+    "csv_before_sha256": "da374c6473c2154a6b5191c949e42fd5dd877f660b892bae0b98781e255918a5",
+    "csv_after_sha256": "e07f3f7a782731c8da05ec3595b98533e940560132ceb9846c052a8a4a5fd742",
+    "missing_historical_control_epochs": [
+      94
+    ],
+    "missing_audit_policy": "No synthetic values; retain explicit gap, continue future real audits",
+    "gpu_training_executed": false,
+    "verifier_sha256": "ed0cb71e71818dfb0d61610d9f944a8d875370cc9e1d53f28d15abcef37191c8"
+  }
+}

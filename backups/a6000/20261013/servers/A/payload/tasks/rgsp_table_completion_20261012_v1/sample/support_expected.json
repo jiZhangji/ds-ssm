@@ -1,0 +1,26 @@
+[
+  {
+    "path": "train_sample.py",
+    "sha256": "dbafb9daa68aade5ad3917e20a138bfedd335607335b082a4ece78acc01ef43c"
+  },
+  {
+    "path": "protocol.json",
+    "sha256": "483534ba2242019c79aec5d48b75f049d4873b734650dc352a581a0364afefd8"
+  },
+  {
+    "path": "model_factory.py",
+    "sha256": "e348f28b38c41a271fed5776510e2b44b241c20f8399eb86ee8aca5fad7d5e5f"
+  },
+  {
+    "path": "manifest.py",
+    "sha256": "ff1f6708e735d5bd91d9c341edfcfdcc714829c5ab5ee0c6110df263d5b6fed7"
+  },
+  {
+    "path": "cross_data.py",
+    "sha256": "04c4698597a6e0bce6e0499227a3ebb6652da45acf44c69f3c6127dba6ee30f9"
+  },
+  {
+    "path": "cuda_uuid_compat.py",
+    "sha256": "3faa16696535c447d50a405799040e17ef7780bb9444c3f5b0c9d5310061b04d"
+  }
+]

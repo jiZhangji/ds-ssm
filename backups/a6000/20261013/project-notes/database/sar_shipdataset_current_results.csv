@@ -1,0 +1,6 @@
+method,scale,tta,split,precision,recall,f1,map50,map50_95,status,run
+IG-DS-SSM/PFIM,T,false,test,0.907854,0.889908,0.898790,0.948440,0.578182,completed evaluation,dsssm_pfim_2xh200_bs384_20260717_154755
+IG-DS-SSM/PFIM,S,false,test,0.922367,0.915870,0.919107,0.956093,0.531767,completed evaluation,ship_dsssm_s_from_epoch20_nowarmup_2xh200_bs256_20260718_191329
+IG-DS-SSM/PFIM,S,true,test,0.915556,0.905808,0.910650,0.952300,0.535373,completed evaluation,ship_dsssm_s_from_epoch20_nowarmup_2xh200_bs256_20260718_191329
+Mamba-YOLO,T,false,test,0.914006,0.890045,0.901866,0.946158,0.495684,batch changed during 300 epochs,ship_original_mambayolo_t_2xh200_bs256_20260719_172747
+Mamba-YOLO,B,false,test,0.921204,0.912820,0.916993,0.953700,0.515411,interim checkpoint around epoch 159,ship_original_mambayolo_s_matched_b_2xh200_bs256_20260719_172747

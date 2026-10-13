@@ -1,0 +1,194 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code/ultralytics/nn/modules/vmamba_official/csm_triton.py:11: UserWarning: Triton not installed, fall back to pytorch implements.
+  warnings.warn("Triton not installed, fall back to pytorch implements.")
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py:197: UserWarning: upsample_bilinear2d_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/autograd/__init__.py:197: UserWarning: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:82.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Farmland matched_scale075 seed0 epoch=1/150 loss=1.994226 val=0.122709
+Farmland matched_scale075 seed0 epoch=2/150 loss=1.651053 val=0.693790
+Farmland matched_scale075 seed0 epoch=3/150 loss=1.482981 val=0.892828
+Farmland matched_scale075 seed0 epoch=4/150 loss=1.390566 val=0.855394
+Farmland matched_scale075 seed0 epoch=5/150 loss=1.287467 val=0.773936
+Farmland matched_scale075 seed0 epoch=6/150 loss=1.256264 val=0.798630
+Farmland matched_scale075 seed0 epoch=7/150 loss=1.212160 val=0.841490
+Farmland matched_scale075 seed0 epoch=8/150 loss=1.134734 val=0.840580
+Farmland matched_scale075 seed0 epoch=9/150 loss=1.168411 val=0.919008
+Farmland matched_scale075 seed0 epoch=10/150 loss=1.192290 val=0.889419
+Farmland matched_scale075 seed0 epoch=11/150 loss=1.175180 val=0.879878
+Farmland matched_scale075 seed0 epoch=12/150 loss=1.052284 val=0.918567
+Farmland matched_scale075 seed0 epoch=13/150 loss=1.016179 val=0.897476
+Farmland matched_scale075 seed0 epoch=14/150 loss=1.012080 val=0.901099
+Farmland matched_scale075 seed0 epoch=15/150 loss=1.048194 val=0.873112
+Farmland matched_scale075 seed0 epoch=16/150 loss=1.034410 val=0.893651
+Farmland matched_scale075 seed0 epoch=17/150 loss=0.983389 val=0.900158
+Farmland matched_scale075 seed0 epoch=18/150 loss=1.028011 val=0.881770
+Farmland matched_scale075 seed0 epoch=19/150 loss=0.996473 val=0.904000
+Farmland matched_scale075 seed0 epoch=20/150 loss=0.937127 val=0.885649
+Farmland matched_scale075 seed0 epoch=21/150 loss=0.928329 val=0.918831
+Farmland matched_scale075 seed0 epoch=22/150 loss=0.895790 val=0.875190
+Farmland matched_scale075 seed0 epoch=23/150 loss=0.987012 val=0.906051
+Farmland matched_scale075 seed0 epoch=24/150 loss=0.838290 val=0.935565
+Farmland matched_scale075 seed0 epoch=25/150 loss=0.829445 val=0.889758
+Farmland matched_scale075 seed0 epoch=26/150 loss=0.946519 val=0.912168
+Farmland matched_scale075 seed0 epoch=27/150 loss=0.850242 val=0.923701
+Farmland matched_scale075 seed0 epoch=28/150 loss=0.860881 val=0.917342
+Farmland matched_scale075 seed0 epoch=29/150 loss=0.782762 val=0.914146
+Farmland matched_scale075 seed0 epoch=30/150 loss=0.805510 val=0.927242
+Farmland matched_scale075 seed0 epoch=31/150 loss=0.769174 val=0.923736
+Farmland matched_scale075 seed0 epoch=32/150 loss=0.866761 val=0.924342
+Farmland matched_scale075 seed0 epoch=33/150 loss=0.803082 val=0.925801
+Farmland matched_scale075 seed0 epoch=34/150 loss=0.764316 val=0.902655
+Farmland matched_scale075 seed0 epoch=35/150 loss=0.729615 val=0.897538
+Farmland matched_scale075 seed0 epoch=36/150 loss=0.815142 val=0.928511
+Farmland matched_scale075 seed0 epoch=37/150 loss=0.739541 val=0.911765
+Farmland matched_scale075 seed0 epoch=38/150 loss=0.791513 val=0.919635
+Farmland matched_scale075 seed0 epoch=39/150 loss=0.703223 val=0.884706
+Farmland matched_scale075 seed0 epoch=40/150 loss=0.689575 val=0.921824
+Farmland matched_scale075 seed0 epoch=41/150 loss=0.700455 val=0.912450
+Farmland matched_scale075 seed0 epoch=42/150 loss=0.667891 val=0.904153
+Farmland matched_scale075 seed0 epoch=43/150 loss=0.654973 val=0.915527
+Farmland matched_scale075 seed0 epoch=44/150 loss=0.773143 val=0.941790
+Farmland matched_scale075 seed0 epoch=45/150 loss=0.634891 val=0.882995
+Farmland matched_scale075 seed0 epoch=46/150 loss=0.663976 val=0.933558
+Farmland matched_scale075 seed0 epoch=47/150 loss=0.651336 val=0.896443
+Farmland matched_scale075 seed0 epoch=48/150 loss=0.628925 val=0.897476
+Farmland matched_scale075 seed0 epoch=49/150 loss=0.663764 val=0.915858
+Farmland matched_scale075 seed0 epoch=50/150 loss=0.635562 val=0.916055
+Farmland matched_scale075 seed0 epoch=51/150 loss=0.579453 val=0.936752
+Farmland matched_scale075 seed0 epoch=52/150 loss=0.555359 val=0.938500
+Farmland matched_scale075 seed0 epoch=53/150 loss=0.601828 val=0.945763
+Farmland matched_scale075 seed0 epoch=54/150 loss=0.579996 val=0.952709
+Farmland matched_scale075 seed0 epoch=55/150 loss=0.610209 val=0.928395
+Farmland matched_scale075 seed0 epoch=56/150 loss=0.549644 val=0.945736
+Farmland matched_scale075 seed0 epoch=57/150 loss=0.538375 val=0.944587
+Farmland matched_scale075 seed0 epoch=58/150 loss=0.632856 val=0.935323
+Farmland matched_scale075 seed0 epoch=59/150 loss=0.621572 val=0.934979
+Farmland matched_scale075 seed0 epoch=60/150 loss=0.560864 val=0.921951
+Farmland matched_scale075 seed0 epoch=61/150 loss=0.491470 val=0.926869
+Farmland matched_scale075 seed0 epoch=62/150 loss=0.477728 val=0.943268
+Farmland matched_scale075 seed0 epoch=63/150 loss=0.485183 val=0.944120
+Farmland matched_scale075 seed0 epoch=64/150 loss=0.570372 val=0.935193
+Farmland matched_scale075 seed0 epoch=65/150 loss=0.461914 val=0.949914
+Farmland matched_scale075 seed0 epoch=66/150 loss=0.541244 val=0.913738
+Farmland matched_scale075 seed0 epoch=67/150 loss=0.437891 val=0.950649
+Farmland matched_scale075 seed0 epoch=68/150 loss=0.561776 val=0.912560
+Farmland matched_scale075 seed0 epoch=69/150 loss=0.468688 val=0.950764
+Farmland matched_scale075 seed0 epoch=70/150 loss=0.469041 val=0.918963
+Farmland matched_scale075 seed0 epoch=71/150 loss=0.568577 val=0.947459
+Farmland matched_scale075 seed0 epoch=72/150 loss=0.427670 val=0.942664
+Farmland matched_scale075 seed0 epoch=73/150 loss=0.470707 val=0.944068
+Farmland matched_scale075 seed0 epoch=74/150 loss=0.460781 val=0.950257
+Farmland matched_scale075 seed0 epoch=75/150 loss=0.507207 val=0.938879
+Farmland matched_scale075 seed0 epoch=76/150 loss=0.399068 val=0.934690
+Farmland matched_scale075 seed0 epoch=77/150 loss=0.377972 val=0.942708
+Farmland matched_scale075 seed0 epoch=78/150 loss=0.387686 val=0.936279
+Farmland matched_scale075 seed0 epoch=79/150 loss=0.509999 val=0.945111
+{
+  "schema": "rgsp-cross-trial-v1",
+  "dataset": "Farmland",
+  "task": "change_detection",
+  "variant": "matched_scale075",
+  "seed": 0,
+  "protocol": {
+    "schema": "rgsp-cross-trial-v1",
+    "dataset": "Farmland",
+    "task": "change_detection",
+    "logical_data_sha256": "0e007ca873ae423733593f721beb54ae156eea45b68188e0fded5b69ddd51fb8",
+    "split_counts": {
+      "test": 16,
+      "train": 112,
+      "val": 16
+    },
+    "annotation_policy": "fail",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "epochs": 150,
+    "patience": 25,
+    "imgsz": 192,
+    "batch": 16,
+    "eval_batch": 16,
+    "optimizer": "AdamW",
+    "lr": 0.0002,
+    "weight_decay": 0.0005,
+    "scheduler": "cosine to 1% initial lr",
+    "module_warmup_epochs": 0,
+    "precision": "FP32 (AMP/TF32 off)",
+    "gradient_clip_l2": 5.0,
+    "grad_accum": 1,
+    "classification_label_smoothing": 0.1,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "selection_metric": "f1",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "historical_results_comparable": false
+  },
+  "protocol_sha256": "0a35cf65390feca192d2d8e7df423b46cea401b091ede0f8ab9690eac6bf7838",
+  "data": {
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/Farmland/manifest.json",
+    "manifest_sha256": "5c5e7521398ab6575e98eb986afdfb4dbb8c595726351b0d111d1ee333f7ba2b",
+    "logical_manifest_sha256": "0e007ca873ae423733593f721beb54ae156eea45b68188e0fded5b69ddd51fb8",
+    "counts": {
+      "test": 16,
+      "train": 112,
+      "val": 16
+    },
+    "audit_sha256": "6e30aa25bbf59ce5799dacdc93bf836f60bc03fb1438ed90b4681b7bafb2ec7b",
+    "files_sha256": "cfb05ae7d9b736534cc4a5bd95831fa14f73025e63dd4aeea704913e7f3af2d6",
+    "annotation_policy": "fail"
+  },
+  "initialization_common_tensor_sha256": "d258a21c11bddf3824e3377acf6401654d52d5ccbadee72d7ec597e3fa046067",
+  "checkpoint": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_matched_scale075_seed0/best.pt",
+  "best_sha256": "0b816490b35d6d8d958f5b8eac19d8ed91b9e42d07f6b2fccde45058b14ae40a",
+  "best_epoch": 54,
+  "threshold": 0.85,
+  "metric": {
+    "precision": 1.0,
+    "recall": 0.2602739726027397,
+    "f1": 0.41304347826086957,
+    "iou": 0.2602739726027397,
+    "oa": 0.970703125,
+    "kappa": 0.4032820065179696,
+    "tp": 95,
+    "fp": 0,
+    "fn": 270,
+    "tn": 8851,
+    "evaluated_native_unique_pixels": 9216,
+    "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities"
+  },
+  "reloaded_controls": {
+    "variant": "matched_scale075",
+    "controlled_blocks": 1,
+    "placement": "internal P3/8, 64 channels",
+    "scalars": {
+      "lambda_s": 0.0,
+      "alpha": 0.0,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612
+    },
+    "buffer_scalars": [
+      "lambda_s",
+      "alpha",
+      "beta_i",
+      "rho_i",
+      "eta_i"
+    ],
+    "min_retain": 0.5,
+    "use_pfim": false
+  },
+  "parameters": 3715097,
+  "trainable_parameters": 3715097,
+  "buffers": 7964,
+  "efficiency_status": "Params only here; matched-hardware latency and scan-aware FLOPs require the separate efficiency lane. No undercounted THOP GFLOPs claimed.",
+  "historical_negative_results_preserved": true,
+  "finished_utc": "2026-10-09T13:21:44.717457+00:00"
+}
+{"compatibility_launcher": "PASS", "output": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_20261009_1908/trials/farmland_matched_scale075_seed0/cuda_compatibility.json"}

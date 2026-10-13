@@ -1,0 +1,17 @@
+{
+  "dataset": "Farmland",
+  "task": "change_detection",
+  "variant": "ours",
+  "state_dim": 16,
+  "metric": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "iou": 0.0,
+    "oa": 0.9473876953124855
+  },
+  "latency_ms": 145.33080300316215,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/cross_task/change_detection/Farmland/ours/best.pt",
+  "epochs": 100,
+  "params": 1839523
+}

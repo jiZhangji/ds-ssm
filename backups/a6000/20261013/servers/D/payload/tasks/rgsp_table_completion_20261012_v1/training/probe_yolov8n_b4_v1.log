@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/probe_training.py", line 251, in <module>
+    main()
+  File "/home/powerleader/ig-ds-ssm/tasks/rgsp_table_completion_20261012_v1/training/probe_training.py", line 79, in main
+    raise RuntimeError('Frozen source differs: ' + repr(mismatches[:12]))
+RuntimeError: Frozen source differs: ['tools/validate_rgsp_expanded.py']

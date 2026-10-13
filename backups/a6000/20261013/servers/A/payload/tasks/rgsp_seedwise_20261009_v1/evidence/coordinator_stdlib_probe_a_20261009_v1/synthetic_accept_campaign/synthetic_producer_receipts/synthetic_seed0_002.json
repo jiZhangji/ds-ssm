@@ -1,0 +1,38 @@
+{
+  "artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_accept_campaign/synthetic_origin/train_complete.json",
+      "sha256": "87bbc97cd45051a741450daee23404076cdcda256d7e1f2afecbfaf46d9f2486"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_accept_campaign/synthetic_origin/eval_test.json",
+      "sha256": "65ff4efa25760e6d410eda4ba510ce2c6fbec54fd5fe9f34271454254dafa4f0"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_accept_campaign/synthetic_origin/evaluation_complete.json",
+      "sha256": "0c339bd7c842ce92883c14c56814ca38b4ae4ba622b552bf5decbd45d16e96a7"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_accept_campaign/synthetic_origin/best.json",
+      "sha256": "86083dfbb748163c28b8c05200f066aac00202be5d6c6cda6974eba4dc25f427"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_accept_campaign/synthetic_origin/protocol.json",
+      "sha256": "5bae3a2ec29881faefee18c14a9e2fa5301caed96d0dfbfa2e57707c60ca36bc"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/coordinator_stdlib_probe_a_20261009_v1/synthetic_accept_campaign/synthetic_origin/audit.json",
+      "sha256": "0299ccc119c3a3a811a06c6e49dc3ed713a0920d8db8b823cc0c67cfedac05e6"
+    }
+  ],
+  "details": {
+    "synthetic_fixture_only": true
+  },
+  "finished_utc": "2026-10-09T00:00:00+00:00",
+  "plan_sha256": "d29c008c1183027fc7c4363b87b6fde8318276ab8cf279d4f420bddf218ea9c8",
+  "schema": "rgsp-seedwise-v1",
+  "seed": 0,
+  "status": "complete",
+  "trial_id": "synthetic_seed0_002",
+  "trial_sha256": "59761725a37aa86d83fcebe36f7db69ee76c0deab500849318c7773447b32b70"
+}

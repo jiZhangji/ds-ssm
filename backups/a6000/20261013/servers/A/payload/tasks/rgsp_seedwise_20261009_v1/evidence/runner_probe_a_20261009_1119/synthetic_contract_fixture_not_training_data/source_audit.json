@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "test": 1,
+    "train": 1,
+    "val": 1
+  },
+  "dataset_identity": "SAR-ShipDataset",
+  "manifest_sha256": "3cad2563bcdde552cfdcb9e7c760312428f85915d7df55e53a7038fa34f144d7",
+  "names": [
+    "ship"
+  ],
+  "nc": 1,
+  "status": "verified",
+  "synthetic_contract_fixture_only": true
+}

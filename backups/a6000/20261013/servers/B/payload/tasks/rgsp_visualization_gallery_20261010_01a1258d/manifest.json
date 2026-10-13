@@ -1,0 +1,1354 @@
+{
+  "schema": "rgsp-figure-gallery-v1",
+  "snapshot": "2026-10-10 10:07:54-10:07:57 Asia/Shanghai",
+  "figure_count": 50,
+  "image_format": "300-dpi PNG; editable-text SVG; embedded-font PDF",
+  "categories": {
+    "current": "最新seed0检测消融",
+    "multiseed": "独立历史三seed对照",
+    "efficiency": "历史成本账本",
+    "training": "历史训练曲线",
+    "qualitative": "真实样本与历史特征",
+    "mechanism": "方法结构示意",
+    "protocol": "协议与证据覆盖"
+  },
+  "evidence_labels": {
+    "recorded_single_seed": "真实记录 · 单seed",
+    "sadd_multi_seed": "SADD独立三seed",
+    "historical_multi_seed": "旧SSDD三seed",
+    "historical_ledger": "历史账本 · 非新测速",
+    "historical_training": "历史训练 · 非本轮",
+    "historical_activations": "历史权重真实特征",
+    "historical_diagnostic": "历史诊断 · 非机制证明",
+    "real_images": "真实SAR与GT",
+    "schematic": "结构/流程示意",
+    "protocol_metadata": "协议元数据",
+    "snapshot_metadata": "固定时点快照"
+  },
+  "figures": [
+    {
+      "id": "C01",
+      "title_cn": "SSDD全部已回收配置的主指标排序",
+      "title_en": "SSDD: all available seed-0 configurations",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "SSDD完整可用配置的点图；虚线为Original。排序为多配置单seed的描述性排序，不据此事后选定最终方法。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C01.png",
+        "svg": "svg/C01.svg",
+        "pdf": "pdf/C01.pdf"
+      },
+      "sha256": {
+        "png": "2f5b2318d9eaacabd31aca91b92f6a8f4ab9622b92692c2e50941853229854c4",
+        "svg": "b2ff1a6db0923ff426a365ddc54b9f585bbac91cfe5f26aae2094d3e5b367eb8",
+        "pdf": "013122e82c25c892552c42fcc7b3bbfdf889dc7bcff1e671f9201e310a48cb7c"
+      }
+    },
+    {
+      "id": "C02",
+      "title_cn": "SADD全部已回收配置的主指标排序",
+      "title_en": "SADD: all available seed-0 configurations",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "SADD完整可用配置的点图；虚线为Original。排序为多配置单seed的描述性排序，不据此事后选定最终方法。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C02.png",
+        "svg": "svg/C02.svg",
+        "pdf": "pdf/C02.pdf"
+      },
+      "sha256": {
+        "png": "3fab7cd45899327e85e920f62f66c6bb1468680690720b92417e1aa7d5a20af7",
+        "svg": "c429892129bad160f41363da3439a238eea62d6effc2d54c59a3ee873dacdd3b",
+        "pdf": "e33047970d0e32026d0e927ff2f887d827289f2735c05be3a674233afdc4ce90"
+      }
+    },
+    {
+      "id": "C03",
+      "title_cn": "SSDD三种AP指标完整热力图",
+      "title_en": "SSDD: localization-sensitive metrics",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "所有单元保留百分数原口径，统一0-100色标；不做逐列归一化或显著性标记。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C03.png",
+        "svg": "svg/C03.svg",
+        "pdf": "pdf/C03.pdf"
+      },
+      "sha256": {
+        "png": "dff96a52b79d857292c7b56236f47b113272580cce2c74886020dade1f892606",
+        "svg": "e40e22fb4663983642b13e216d9d5458df1e733b1a0db331eb79f526fa636bb0",
+        "pdf": "283c85bfd93ab1dd99e97d7852ffdc7ffadb8b11b57f89404fed68555f4651ca"
+      }
+    },
+    {
+      "id": "C04",
+      "title_cn": "SADD三种AP指标完整热力图",
+      "title_en": "SADD: localization-sensitive metrics",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "所有单元保留百分数原口径，统一0-100色标；不做逐列归一化或显著性标记。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C04.png",
+        "svg": "svg/C04.svg",
+        "pdf": "pdf/C04.pdf"
+      },
+      "sha256": {
+        "png": "afdc54116cf18c3d96ef12d647227742a770d06efeb76028ca6d785afb3749c6",
+        "svg": "6218e087cc236875d4214b46f60df4093aa80a43e76ec12042dd319ba43c090c",
+        "pdf": "239d239a0fad0ead5737c454aa22c989ec93b210db4072187e9d5c02b7aeb612"
+      }
+    },
+    {
+      "id": "C05",
+      "title_cn": "核心五配置分组柱状对照",
+      "title_en": "Core comparisons under each dataset protocol",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "两数据集各自协议内比较，柱轴从0开始；不跨数据集计算综合分数。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C05.png",
+        "svg": "svg/C05.svg",
+        "pdf": "pdf/C05.pdf"
+      },
+      "sha256": {
+        "png": "1823dcf2467accb9f2f74faadc2f66ce51d9d5c7d36f6be2bcef9254013fc509",
+        "svg": "7ea670a6a6f987132c14589460cffb56f0d7be3fe8a68e39408b2936d1452ef8",
+        "pdf": "ae03b40147486e2b8295cf01eea659d836e15b422acf1edf9378aaa4962de846"
+      }
+    },
+    {
+      "id": "C06",
+      "title_cn": "相对Original的正负差值",
+      "title_en": "Positive and negative differences from Original",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "保留正负差值；点和短线只是已记录测试分数的差，不是置信区间。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C06.png",
+        "svg": "svg/C06.svg",
+        "pdf": "pdf/C06.pdf"
+      },
+      "sha256": {
+        "png": "956f2923222dc5e59ba3bd3c577b59554dcbcb2eb22292c168684700bc331b04",
+        "svg": "8c46e87233227c4db0f60da4216f14eca03200c5ca413ab5a29dd557322c8351",
+        "pdf": "c2dde48850fced8a59017d5b701315eebe2a3b0dea5dd430216df52ffe6cf335"
+      }
+    },
+    {
+      "id": "C07",
+      "title_cn": "相对同壳层Matched075的差值",
+      "title_en": "Positive and negative differences from Matched075",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "保留正负差值；点和短线只是已记录测试分数的差，不是置信区间。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C07.png",
+        "svg": "svg/C07.svg",
+        "pdf": "pdf/C07.pdf"
+      },
+      "sha256": {
+        "png": "11c44ad30f31f8273573e7a5731da5f213c82525c14a2f1ab0a04b1a68d52616",
+        "svg": "eb7ebab91ad87af1f80761b2578720abd82b9dc7b378cb6ff118277d2f146c81",
+        "pdf": "655094bf77c89ad1e1380588fc0d62b5bc050cc722a45ee0fa9532e5bc1a9458"
+      }
+    },
+    {
+      "id": "C08",
+      "title_cn": "Precision–Recall工作点对比（不是PR曲线）",
+      "title_en": "Precision and recall: recorded operating points",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "只显示预定义五个核心配置的P/R工作点，无逐阈值数据，不将其连成PR曲线。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C08.png",
+        "svg": "svg/C08.svg",
+        "pdf": "pdf/C08.pdf"
+      },
+      "sha256": {
+        "png": "e7ea27f07d78f2a03494c3baf7f9c0c862fa1a625301f6ead8e02116a9525dee",
+        "svg": "7f3b24805fdb2120c16ae1d3af9c329487b865443275c18ffc1e359c2304ffc9",
+        "pdf": "debb3724441b3e191cb49c23986b4e0aafcd61340c879015676fa7de5c95e363"
+      }
+    },
+    {
+      "id": "C09",
+      "title_cn": "AP50与AP50:95的二维关系",
+      "title_en": "AP50 does not determine AP50:95",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "显示全部已回收配置的两种AP；无回归线、无拟合或因果解释。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C09.png",
+        "svg": "svg/C09.svg",
+        "pdf": "pdf/C09.pdf"
+      },
+      "sha256": {
+        "png": "479525032c812e26b4ebae3c0077c7f0b45db57c8371b9c6b630b8e8707fa821",
+        "svg": "c88839f9e859df9a91fee3ca3d0de9f430fd04d10981ac458a92f25e745ba967",
+        "pdf": "583edcd91e56698d7597e28c9b03afc364089e9b75a86bc9cce3bfc5c32a4671"
+      }
+    },
+    {
+      "id": "C10",
+      "title_cn": "三组严格定义的四格消融热力图",
+      "title_en": "Three different factorial comparisons",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "分别使用正确锚点计算组合级、R×E及固定R+E下U×Δ。不能用Full−DS替代因素交互，也不声称统计显著或内部物理机制。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C10.png",
+        "svg": "svg/C10.svg",
+        "pdf": "pdf/C10.pdf"
+      },
+      "sha256": {
+        "png": "263c1c0a290222a15b4684668e3590d4656f58d9350992910c33fe6b361e878c",
+        "svg": "708902254b60fb49d7fbc105ecb7eb6d28b017d3c1deba46be72f2e00726a3e9",
+        "pdf": "adfec5064234ae4e72647f628ecfa4d3515303fbb05769298a5c7edac0147e2e"
+      }
+    },
+    {
+      "id": "C11",
+      "title_cn": "因素交互的正负效应条形图",
+      "title_en": "Non-additivity depends on the factorial question",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "数值由四格原值重新计算并与源JSON核对；无误差条是因为只有一个seed，不是因为误差为零。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C11.png",
+        "svg": "svg/C11.svg",
+        "pdf": "pdf/C11.pdf"
+      },
+      "sha256": {
+        "png": "b4a8c49b288912ed4dcc16160fe3826cc4ac0957c563b832cf8f50d665af442c",
+        "svg": "8c5df9bd300dc3339ff7ea12efd7d67b61dd1dd4333dd99b19e7807a06b3a85e",
+        "pdf": "a30772f626eff1c0095b67fa030cd663202df6559663ffa1f95c4311319cb696"
+      }
+    },
+    {
+      "id": "C12",
+      "title_cn": "扫描输入、步长与输出门控消融",
+      "title_en": "Where the guidance is applied",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "Post-gate关闭I→Δ且将相对倍率移至scan输出；因此Full vs Post-gate不是纯位置单因素对照。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C12.png",
+        "svg": "svg/C12.svg",
+        "pdf": "pdf/C12.pdf"
+      },
+      "sha256": {
+        "png": "0964a53d89cc03f6c564f4ee97e6e7e4b407c1d35aecc440e57803299fa65bff",
+        "svg": "31f96933a4d328faf1274aae7c2217c1f5c1b6511990635f27600f3ade264a5b",
+        "pdf": "c456fb92d3d0258fada074c834660a5a891b8a4db710fa5c67b6c84c4dea558c"
+      }
+    },
+    {
+      "id": "C13",
+      "title_cn": "LSGM局部统计组成对比",
+      "title_en": "Local-statistics guidance alternatives",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "完整局部统计、全局及三个单分量均展示；不把当前std-only表现推广为普遍规律。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C13.png",
+        "svg": "svg/C13.svg",
+        "pdf": "pdf/C13.pdf"
+      },
+      "sha256": {
+        "png": "b9f58af8bd4deb6800d518238304c0f0ec3024a8fab55dc0132427f622e11589",
+        "svg": "9d9e9905c208d9bc2ae2f4201f31d126dc0a9fca4a0f41705715a5f1b09ac2d1",
+        "pdf": "a70386ba458248aa13a5e3d5c767dcaa23e37858302021212e070901f0addd24"
+      }
+    },
+    {
+      "id": "C14",
+      "title_cn": "模块插入层级P2/P3/P4敏感性",
+      "title_en": "Backbone placement: P2, P3 and P4",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "P3是当前设计位置，不是本轮单seed最高分；跨层通道和初始化可能不同，P2观测到105轮、其余150轮。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C14.png",
+        "svg": "svg/C14.svg",
+        "pdf": "pdf/C14.pdf"
+      },
+      "sha256": {
+        "png": "aa3d8f76ed408a0cc48aaa4b34864d60063f6f49008d444e94d3fbda8e212b84",
+        "svg": "e76486545a417cb638df6768b6e9be4be79ed4633fdf88035ade1a0df7b40dd2",
+        "pdf": "f8e63fd63b97da3e797e80703648a7d0eddcce3b4bd8e9165daf503159927d6c"
+      }
+    },
+    {
+      "id": "C15",
+      "title_cn": "Full与no-LRC的五指标哑铃对照",
+      "title_en": "Full and no-LRC across five metrics",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "no-LRC跳过trend卷积并改变后续输入，不作单个残差标量的机制归因。连接线只帮助辨识两点，不代表置信区间。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C15.png",
+        "svg": "svg/C15.svg",
+        "pdf": "pdf/C15.pdf"
+      },
+      "sha256": {
+        "png": "6d15f1cff8ec2607bf5cbc89c1fdff5c1042082474284187aab3aa40a409a093",
+        "svg": "1f1767cc15d9481654392fdcd711d9b241e2945c442aaba74cd9e7a578cf31d5",
+        "pdf": "99dd10d634bd42e0f2842f4571fced1db53dd17381a43e4254620de3698eb980"
+      }
+    },
+    {
+      "id": "C16",
+      "title_cn": "29项检测结果的完整数据表格图",
+      "title_en": "All 29 recorded detection results",
+      "category": "current",
+      "evidence": "recorded_single_seed",
+      "caption_cn": "用于逐行挑选或附录核数；保留所有已回收结果，缺失配置未用0补齐。固定2026-10-10 10:07回收快照；仅seed0，不能作显著性或稳定性结论。SSDD为730/186/232清理后划分；SADD为795/44/44阳性图像划分。复用与历史采纳条目的恢复和审计限制保留。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_current.py",
+      "files": {
+        "png": "png/C16.png",
+        "svg": "svg/C16.svg",
+        "pdf": "pdf/C16.pdf"
+      },
+      "sha256": {
+        "png": "d45f1a7cf7b4a29056c900225610b3e357e51885d5e3c65946d151a3b459a333",
+        "svg": "d809f492a3a9f6971db3fcd5e343fddf8f4b05c16fa89062a213caca9f210c97",
+        "pdf": "0b7eb2438f8380fd2f4b068a4d4638f69caea3c0ef9b8ceb79d215c6650fadd5"
+      }
+    },
+    {
+      "id": "H01",
+      "title_cn": "SADD三seed原值与均值标准差",
+      "title_en": "SADD: individual seeds and mean +/- sample SD",
+      "category": "multiseed",
+      "evidence": "sadd_multi_seed",
+      "caption_cn": "独立历史协议，保留全部3个seed。误差条是样本标准差(ddof=1)，不是置信区间或统计显著性。SADD为阳性test44；恢复轨道非逐位等价；Original seed0是该12run中的53.7117，不能替换为当前seed0矩阵的54.0872。",
+      "sources": [
+        "inputs/sadd_3seed.csv"
+      ],
+      "code": "code/plot_historical.py",
+      "files": {
+        "png": "png/H01.png",
+        "svg": "svg/H01.svg",
+        "pdf": "pdf/H01.pdf"
+      },
+      "sha256": {
+        "png": "7784cc71786930540d5e73d215ac7b950677f5e5805a3d218d74552165b0f061",
+        "svg": "a6344e05b6f969821e3051a540f54403af62d26169382b780cb2a5574a8322a9",
+        "pdf": "3f3c02220c822a8c54fc6e0a367304dcd27c3db1e72281362d69bc548666e572"
+      }
+    },
+    {
+      "id": "H02",
+      "title_cn": "SADD逐seed配对差值与负结果",
+      "title_en": "SADD: paired seed differences",
+      "category": "multiseed",
+      "evidence": "sadd_multi_seed",
+      "caption_cn": "独立历史协议，保留全部3个seed。误差条是样本标准差(ddof=1)，不是置信区间或统计显著性。SADD为阳性test44；恢复轨道非逐位等价；Original seed0是该12run中的53.7117，不能替换为当前seed0矩阵的54.0872。配对按同seed索引，架构变化时不承诺逐张量同初始化。",
+      "sources": [
+        "inputs/sadd_3seed.csv"
+      ],
+      "code": "code/plot_historical.py",
+      "files": {
+        "png": "png/H02.png",
+        "svg": "svg/H02.svg",
+        "pdf": "pdf/H02.pdf"
+      },
+      "sha256": {
+        "png": "a80f3751ea41a6ae79e2502c8914cacd465014a8ea448017a76e76c4ac50533b",
+        "svg": "ac63da53aea85170329b121277b413cccb747540d513ec6f40795e92035bb098",
+        "pdf": "13e176d0063d536bec17d7cfb69b2663d639449b605ba2993399805a21e02c48"
+      }
+    },
+    {
+      "id": "H03",
+      "title_cn": "SADD五指标均值及标准差热力图",
+      "title_en": "SADD: five metrics across all seeds",
+      "category": "multiseed",
+      "evidence": "sadd_multi_seed",
+      "caption_cn": "独立历史协议，保留全部3个seed。误差条是样本标准差(ddof=1)，不是置信区间或统计显著性。SADD为阳性test44；恢复轨道非逐位等价；Original seed0是该12run中的53.7117，不能替换为当前seed0矩阵的54.0872。各格上行为均值，下行为样本标准差，单位均为百分数。",
+      "sources": [
+        "inputs/sadd_3seed.csv"
+      ],
+      "code": "code/plot_historical.py",
+      "files": {
+        "png": "png/H03.png",
+        "svg": "svg/H03.svg",
+        "pdf": "pdf/H03.pdf"
+      },
+      "sha256": {
+        "png": "6b8acb0cca7fbf2bac0f33b10aa42602c4ab6e0e15b644cafc1a9918a8f0fa6b",
+        "svg": "209b36a8411058132c3a6346401761c59426da783c94406d83aa1791056fe34a",
+        "pdf": "7f5c71fe26ac87f22953844fdb451c459a60d0ddb864977bf5ee0b312f0c4a02"
+      }
+    },
+    {
+      "id": "H04",
+      "title_cn": "SADD逐seed配置折线剖面",
+      "title_en": "SADD: seed-to-seed changes across configurations",
+      "category": "multiseed",
+      "evidence": "sadd_multi_seed",
+      "caption_cn": "独立历史协议，保留全部3个seed。误差条是样本标准差(ddof=1)，不是置信区间或统计显著性。SADD为阳性test44；恢复轨道非逐位等价；Original seed0是该12run中的53.7117，不能替换为当前seed0矩阵的54.0872。横轴是配置类别而非训练时间；连线不代表连续函数。",
+      "sources": [
+        "inputs/sadd_3seed.csv"
+      ],
+      "code": "code/plot_historical.py",
+      "files": {
+        "png": "png/H04.png",
+        "svg": "svg/H04.svg",
+        "pdf": "pdf/H04.pdf"
+      },
+      "sha256": {
+        "png": "bb4917e694dc3eba403361472dc17284d4b257f7c1969a261a7379666ce38238",
+        "svg": "fff7487f883f54fce2621e455cd9ab4b8d442a106d351e5fd2e872ec00b92ea5",
+        "pdf": "88b890903d8ffb75f22a2698bade79402fad2c5423a1796bacdd26a210594ae2"
+      }
+    },
+    {
+      "id": "H05",
+      "title_cn": "SSDD三seed原值与均值标准差",
+      "title_en": "SSDD: individual seeds and mean +/- sample SD",
+      "category": "multiseed",
+      "evidence": "historical_multi_seed",
+      "caption_cn": "独立历史协议，保留全部3个seed。误差条是样本标准差(ddof=1)，不是置信区间或统计显著性。旧SSDD每个seed同时改变数据划分和训练随机性，同seed内配对；样本SD包含两种来源的变异。旧SSDD742/186/232已发现内容重叠；旧PFIM-only关闭参数漂移，不能作严格PFIM独立贡献；禁止与新清理划分混算。",
+      "sources": [
+        "inputs/ssdd_legacy_individual.csv"
+      ],
+      "code": "code/plot_historical.py",
+      "files": {
+        "png": "png/H05.png",
+        "svg": "svg/H05.svg",
+        "pdf": "pdf/H05.pdf"
+      },
+      "sha256": {
+        "png": "a1ba342ff475943e023acd844df985351dd91931f25f2c4b9f56f05420c0bc02",
+        "svg": "799936ad00061c969017700469a621aba0bfd5bb5f21d15497d2d811cc8a45c3",
+        "pdf": "2502a44dd8888809ee14fa7af7d0fef08fd6ba347a3ec32d6c5177a4dd761494"
+      }
+    },
+    {
+      "id": "H06",
+      "title_cn": "SSDD逐seed配对差值与负结果",
+      "title_en": "SSDD: paired seed differences",
+      "category": "multiseed",
+      "evidence": "historical_multi_seed",
+      "caption_cn": "独立历史协议，保留全部3个seed。误差条是样本标准差(ddof=1)，不是置信区间或统计显著性。旧SSDD每个seed同时改变数据划分和训练随机性，同seed内配对；样本SD包含两种来源的变异。旧SSDD742/186/232已发现内容重叠；旧PFIM-only关闭参数漂移，不能作严格PFIM独立贡献；禁止与新清理划分混算。配对按同seed索引，架构变化时不承诺逐张量同初始化。",
+      "sources": [
+        "inputs/ssdd_legacy_individual.csv"
+      ],
+      "code": "code/plot_historical.py",
+      "files": {
+        "png": "png/H06.png",
+        "svg": "svg/H06.svg",
+        "pdf": "pdf/H06.pdf"
+      },
+      "sha256": {
+        "png": "be7a2f2f707925cbf31f5878aa98a97e3214d7645bdd791b179f4f336d50f896",
+        "svg": "b5dba9d2dbc0445e141ddb596e8e0c9401cd24aa9f040cf65ede478f5a9f2323",
+        "pdf": "078f892870a11d32f88056783b562f0e882be87f1b1e00a1d2f9e54e58cf2b5c"
+      }
+    },
+    {
+      "id": "H07",
+      "title_cn": "SSDD五指标均值及标准差热力图",
+      "title_en": "SSDD: five metrics across all seeds",
+      "category": "multiseed",
+      "evidence": "historical_multi_seed",
+      "caption_cn": "独立历史协议，保留全部3个seed。误差条是样本标准差(ddof=1)，不是置信区间或统计显著性。旧SSDD每个seed同时改变数据划分和训练随机性，同seed内配对；样本SD包含两种来源的变异。旧SSDD742/186/232已发现内容重叠；旧PFIM-only关闭参数漂移，不能作严格PFIM独立贡献；禁止与新清理划分混算。各格上行为均值，下行为样本标准差，单位均为百分数。",
+      "sources": [
+        "inputs/ssdd_legacy_individual.csv"
+      ],
+      "code": "code/plot_historical.py",
+      "files": {
+        "png": "png/H07.png",
+        "svg": "svg/H07.svg",
+        "pdf": "pdf/H07.pdf"
+      },
+      "sha256": {
+        "png": "f49fcf0de9ea9995040446afb5263384cd1d06084a42247744cc7284a61a8397",
+        "svg": "d9cdc0871fc702cd8d10a9e0104eb4398094463003e5fe48a0f179b90e68a824",
+        "pdf": "b34a08ad265b69f3bf7a02a9e587a8f7b06470d8461392840fe06690005c7507"
+      }
+    },
+    {
+      "id": "H08",
+      "title_cn": "SSDD逐seed配置折线剖面",
+      "title_en": "SSDD: seed-to-seed changes across configurations",
+      "category": "multiseed",
+      "evidence": "historical_multi_seed",
+      "caption_cn": "独立历史协议，保留全部3个seed。误差条是样本标准差(ddof=1)，不是置信区间或统计显著性。旧SSDD每个seed同时改变数据划分和训练随机性，同seed内配对；样本SD包含两种来源的变异。旧SSDD742/186/232已发现内容重叠；旧PFIM-only关闭参数漂移，不能作严格PFIM独立贡献；禁止与新清理划分混算。横轴是配置类别而非训练时间；连线不代表连续函数。",
+      "sources": [
+        "inputs/ssdd_legacy_individual.csv"
+      ],
+      "code": "code/plot_historical.py",
+      "files": {
+        "png": "png/H08.png",
+        "svg": "svg/H08.svg",
+        "pdf": "pdf/H08.pdf"
+      },
+      "sha256": {
+        "png": "4a087013bb49a3226aaee80dfe00f6bdbce65bbaf5459a90e35047d7be2e3ba6",
+        "svg": "0cc37b5a09fda0c0a5d5a33a0295953290991267d5bcb5e33aa42a64c86ed81e",
+        "pdf": "2eddc74cf6612900eb6d5cc7220cd659c88f04cfdccfca160ffabde01d13850b"
+      }
+    },
+    {
+      "id": "H09",
+      "title_cn": "历史模型参数量和计算量账本",
+      "title_en": "Historical model-size and profiler ledger",
+      "category": "efficiency",
+      "evidence": "historical_ledger",
+      "caption_cn": "从旧协议表直接提取；未运行profiler。计算量可能受自定义算子计数覆盖限制。不能把壳层及MLP变化引起的成本差异归为纯SSM机制，也不能外推当前冻结配置。",
+      "sources": [
+        "inputs/ssdd_legacy_protocol.md"
+      ],
+      "code": "code/plot_historical.py",
+      "files": {
+        "png": "png/H09.png",
+        "svg": "svg/H09.svg",
+        "pdf": "pdf/H09.pdf"
+      },
+      "sha256": {
+        "png": "9a2e0e1fb4ec81ad703db8e04c5940ff5f558178db4bb48ef4ea66aace512916",
+        "svg": "9e049830a3cb5875636118078e4bbc61804c5267decc8df35c4ebf511022242f",
+        "pdf": "6bc11839b9038eb82466f1300472c31cd60c603baddd5b77d7f85b023c14eb76"
+      }
+    },
+    {
+      "id": "H10",
+      "title_cn": "历史精度与计算量权衡散点图",
+      "title_en": "Historical accuracy and compute trade-off",
+      "category": "efficiency",
+      "evidence": "historical_ledger",
+      "caption_cn": "精度误差条为3个split/training seed的样本标准差，同时包含数据划分和训练随机性的变异；横轴为旧profiler GFLOPs而非时间或新测速。相同计算量点重叠是数据事实，不人为抖动成本坐标。",
+      "sources": [
+        "inputs/ssdd_legacy_protocol.md",
+        "inputs/ssdd_legacy_individual.csv"
+      ],
+      "code": "code/plot_historical.py",
+      "files": {
+        "png": "png/H10.png",
+        "svg": "svg/H10.svg",
+        "pdf": "pdf/H10.pdf"
+      },
+      "sha256": {
+        "png": "ca143366f127ebaa67bf3fea21aafaeaa8debc492de3006b30b41cde2acbf066",
+        "svg": "4d7d45e9122506a846cba0fc4ff65bd496563b8acf718e6e244905a52d7a906f",
+        "pdf": "95ea17c7bfb345f10783cf81bd74005fde8d0268ffaab3ad01955b262b09988d"
+      }
+    },
+    {
+      "id": "H11",
+      "title_cn": "历史300轮训练的验证集AP曲线",
+      "title_en": "Historical DDP-ex27 validation curves",
+      "category": "training",
+      "evidence": "historical_training",
+      "caption_cn": "旧DDP-ex27单次运行的逐轮原值，不是当前清理后SSDD/SADD的收敛曲线，不能据此比较新方法。验证集曲线不是test表现。",
+      "sources": [
+        "inputs/historical_training.csv"
+      ],
+      "code": "code/plot_historical.py",
+      "files": {
+        "png": "png/H11.png",
+        "svg": "svg/H11.svg",
+        "pdf": "pdf/H11.pdf"
+      },
+      "sha256": {
+        "png": "27e599f3ce0cb0bbac475aa7392faf0e7a38ab4362e1fbafdce10270d8fb127c",
+        "svg": "c0856538e0819e7688b6d6c1c438c5ce67fe496ce8084298a1d892ce22e4551f",
+        "pdf": "4431b6f7e44014a23d810c38d92a6c6c7d97dfc5a896c30f14137b4ad92ede54"
+      }
+    },
+    {
+      "id": "H12",
+      "title_cn": "历史训练与验证损失的分面曲线",
+      "title_en": "Historical optimization diagnostics",
+      "category": "training",
+      "evidence": "historical_training",
+      "caption_cn": "展示原始逐轮训练/验证box、cls、DFL损失，不补点、不平滑、不剔除异常轮。不同损失的纵轴尺度各自标注。",
+      "sources": [
+        "inputs/historical_training.csv"
+      ],
+      "code": "code/plot_historical.py",
+      "files": {
+        "png": "png/H12.png",
+        "svg": "svg/H12.svg",
+        "pdf": "pdf/H12.pdf"
+      },
+      "sha256": {
+        "png": "7c2e08361d09c64d002995176fcdc568e07f395feb61ee14d22fb1ce3cb82ab2",
+        "svg": "dc4e45cb931fd9d596e3052ceabe2e8c093d58e0a114cd5f6dce45c9cb47b880",
+        "pdf": "bfc82ae17b4a04a47f789f20e65587c3b4015bdedb42ebd9975fa0d5b9dcce8e"
+      }
+    },
+    {
+      "id": "Q01",
+      "title_cn": "真实历史特征八面板：样本000099",
+      "title_en": "Saved feature maps: SSDD 000099",
+      "category": "qualitative",
+      "evidence": "historical_activations",
+      "caption_cn": "复用2026-08-23 exact_v2历史权重的block0已保存特征，不是当前P3模型推理。6图与历史manifest SHA相同，实际对应官方test；全部固定样本保留。原生网格按原脚本裁letterbox，不做双三次插值；跨图每种量使用同一色标，输入/修正能量共用色标。GT是从官方COCO框重新绘制；旧捕获未哈希标签，框并集不是像素分割真值。热图不是可靠性概率、因果证明或噪声标签，原始灰度不用于识别噪声。",
+      "sources": [
+        "inputs/historical_maps_manifest.json",
+        "inputs/historical_capture_source.py",
+        "inputs/ssdd_test_coco.json",
+        "inputs/images/000099.jpg",
+        "inputs/arrays/000099/raw_input_energy.npy",
+        "inputs/arrays/000099/raw_residual.npy",
+        "inputs/arrays/000099/raw_corrected_energy.npy",
+        "inputs/arrays/000099/raw_importance.npy",
+        "inputs/arrays/000099/raw_drive_gate.npy",
+        "inputs/arrays/000099/raw_delta_bias.npy",
+        "inputs/arrays/000099/raw_correction.npy"
+      ],
+      "code": "code/plot_qualitative.py",
+      "files": {
+        "png": "png/Q01.png",
+        "svg": "svg/Q01.svg",
+        "pdf": "pdf/Q01.pdf"
+      },
+      "sha256": {
+        "png": "645ae088155a33be3b57da08b1982d73efc707ffb62d6edf24e32113c9f3be1b",
+        "svg": "20e37b9ef36816276d0b9f817d9a2381f8403bb5270a4d7eca89c26a24ac4c71",
+        "pdf": "5e260cedcd76a88e05825451f212f699fb4abcfa57ef5850c1db000df9029c09"
+      }
+    },
+    {
+      "id": "Q02",
+      "title_cn": "真实历史特征八面板：样本000531",
+      "title_en": "Saved feature maps: SSDD 000531",
+      "category": "qualitative",
+      "evidence": "historical_activations",
+      "caption_cn": "复用2026-08-23 exact_v2历史权重的block0已保存特征，不是当前P3模型推理。6图与历史manifest SHA相同，实际对应官方test；全部固定样本保留。原生网格按原脚本裁letterbox，不做双三次插值；跨图每种量使用同一色标，输入/修正能量共用色标。GT是从官方COCO框重新绘制；旧捕获未哈希标签，框并集不是像素分割真值。热图不是可靠性概率、因果证明或噪声标签，原始灰度不用于识别噪声。",
+      "sources": [
+        "inputs/historical_maps_manifest.json",
+        "inputs/historical_capture_source.py",
+        "inputs/ssdd_test_coco.json",
+        "inputs/images/000531.jpg",
+        "inputs/arrays/000531/raw_input_energy.npy",
+        "inputs/arrays/000531/raw_residual.npy",
+        "inputs/arrays/000531/raw_corrected_energy.npy",
+        "inputs/arrays/000531/raw_importance.npy",
+        "inputs/arrays/000531/raw_drive_gate.npy",
+        "inputs/arrays/000531/raw_delta_bias.npy",
+        "inputs/arrays/000531/raw_correction.npy"
+      ],
+      "code": "code/plot_qualitative.py",
+      "files": {
+        "png": "png/Q02.png",
+        "svg": "svg/Q02.svg",
+        "pdf": "pdf/Q02.pdf"
+      },
+      "sha256": {
+        "png": "90751a70a63f71eb8882931b845b91c5f928be2a93c83ad513f587891c5e6d06",
+        "svg": "62337ee4ca16f698243a6bb6a84680bb513a533a52021ecdb7b2043122b3c736",
+        "pdf": "1a35ff2884faccdd8521bf1c7542f254daf35d52cf6071bea22ee99f0c90e11b"
+      }
+    },
+    {
+      "id": "Q03",
+      "title_cn": "真实历史特征八面板：样本000929",
+      "title_en": "Saved feature maps: SSDD 000929",
+      "category": "qualitative",
+      "evidence": "historical_activations",
+      "caption_cn": "复用2026-08-23 exact_v2历史权重的block0已保存特征，不是当前P3模型推理。6图与历史manifest SHA相同，实际对应官方test；全部固定样本保留。原生网格按原脚本裁letterbox，不做双三次插值；跨图每种量使用同一色标，输入/修正能量共用色标。GT是从官方COCO框重新绘制；旧捕获未哈希标签，框并集不是像素分割真值。热图不是可靠性概率、因果证明或噪声标签，原始灰度不用于识别噪声。",
+      "sources": [
+        "inputs/historical_maps_manifest.json",
+        "inputs/historical_capture_source.py",
+        "inputs/ssdd_test_coco.json",
+        "inputs/images/000929.jpg",
+        "inputs/arrays/000929/raw_input_energy.npy",
+        "inputs/arrays/000929/raw_residual.npy",
+        "inputs/arrays/000929/raw_corrected_energy.npy",
+        "inputs/arrays/000929/raw_importance.npy",
+        "inputs/arrays/000929/raw_drive_gate.npy",
+        "inputs/arrays/000929/raw_delta_bias.npy",
+        "inputs/arrays/000929/raw_correction.npy"
+      ],
+      "code": "code/plot_qualitative.py",
+      "files": {
+        "png": "png/Q03.png",
+        "svg": "svg/Q03.svg",
+        "pdf": "pdf/Q03.pdf"
+      },
+      "sha256": {
+        "png": "9ff37e84c1807730ad67fb50315895b860ba4e2281d690e5bea3b7cfb2d7ce31",
+        "svg": "a1e25e69a7adf0b36cfea0a8a547b67ae8e22f8c9edb3c3840eb77a32dcbdd13",
+        "pdf": "2ba77ddcb61e52694a82c037664368f2b79a848a7f6878d97ac42f9dce749541"
+      }
+    },
+    {
+      "id": "Q04",
+      "title_cn": "真实历史特征八面板：样本001081",
+      "title_en": "Saved feature maps: SSDD 001081",
+      "category": "qualitative",
+      "evidence": "historical_activations",
+      "caption_cn": "复用2026-08-23 exact_v2历史权重的block0已保存特征，不是当前P3模型推理。6图与历史manifest SHA相同，实际对应官方test；全部固定样本保留。原生网格按原脚本裁letterbox，不做双三次插值；跨图每种量使用同一色标，输入/修正能量共用色标。GT是从官方COCO框重新绘制；旧捕获未哈希标签，框并集不是像素分割真值。热图不是可靠性概率、因果证明或噪声标签，原始灰度不用于识别噪声。",
+      "sources": [
+        "inputs/historical_maps_manifest.json",
+        "inputs/historical_capture_source.py",
+        "inputs/ssdd_test_coco.json",
+        "inputs/images/001081.jpg",
+        "inputs/arrays/001081/raw_input_energy.npy",
+        "inputs/arrays/001081/raw_residual.npy",
+        "inputs/arrays/001081/raw_corrected_energy.npy",
+        "inputs/arrays/001081/raw_importance.npy",
+        "inputs/arrays/001081/raw_drive_gate.npy",
+        "inputs/arrays/001081/raw_delta_bias.npy",
+        "inputs/arrays/001081/raw_correction.npy"
+      ],
+      "code": "code/plot_qualitative.py",
+      "files": {
+        "png": "png/Q04.png",
+        "svg": "svg/Q04.svg",
+        "pdf": "pdf/Q04.pdf"
+      },
+      "sha256": {
+        "png": "e3ebb9f963a2f5064a1d5f278ca89d2dbcf75a824f588c13772d4ac535b0e238",
+        "svg": "2eb5fb7773d719d65e61db2985c3bf3604f1f4c88fab59f870a535cb797bfcee",
+        "pdf": "89afa1f75962f532942263365d7fed2d88ba747c781e47a9ac0b0fba8124984e"
+      }
+    },
+    {
+      "id": "Q05",
+      "title_cn": "真实历史特征八面板：样本001131",
+      "title_en": "Saved feature maps: SSDD 001131",
+      "category": "qualitative",
+      "evidence": "historical_activations",
+      "caption_cn": "复用2026-08-23 exact_v2历史权重的block0已保存特征，不是当前P3模型推理。6图与历史manifest SHA相同，实际对应官方test；全部固定样本保留。原生网格按原脚本裁letterbox，不做双三次插值；跨图每种量使用同一色标，输入/修正能量共用色标。GT是从官方COCO框重新绘制；旧捕获未哈希标签，框并集不是像素分割真值。热图不是可靠性概率、因果证明或噪声标签，原始灰度不用于识别噪声。",
+      "sources": [
+        "inputs/historical_maps_manifest.json",
+        "inputs/historical_capture_source.py",
+        "inputs/ssdd_test_coco.json",
+        "inputs/images/001131.jpg",
+        "inputs/arrays/001131/raw_input_energy.npy",
+        "inputs/arrays/001131/raw_residual.npy",
+        "inputs/arrays/001131/raw_corrected_energy.npy",
+        "inputs/arrays/001131/raw_importance.npy",
+        "inputs/arrays/001131/raw_drive_gate.npy",
+        "inputs/arrays/001131/raw_delta_bias.npy",
+        "inputs/arrays/001131/raw_correction.npy"
+      ],
+      "code": "code/plot_qualitative.py",
+      "files": {
+        "png": "png/Q05.png",
+        "svg": "svg/Q05.svg",
+        "pdf": "pdf/Q05.pdf"
+      },
+      "sha256": {
+        "png": "47b5e4689388415fd3274cbd5d0951e2c6109cd324773a7b211141c66e749010",
+        "svg": "6312379005921fa4337dcb562147efa971cb87543d36bbcd4f40d478d75999de",
+        "pdf": "aee191d88ea45d336f00f036e381536c1d6f9a2787602fc4bd6e0f82d0d14400"
+      }
+    },
+    {
+      "id": "Q06",
+      "title_cn": "真实历史特征八面板：样本001111",
+      "title_en": "Saved feature maps: SSDD 001111",
+      "category": "qualitative",
+      "evidence": "historical_activations",
+      "caption_cn": "复用2026-08-23 exact_v2历史权重的block0已保存特征，不是当前P3模型推理。6图与历史manifest SHA相同，实际对应官方test；全部固定样本保留。原生网格按原脚本裁letterbox，不做双三次插值；跨图每种量使用同一色标，输入/修正能量共用色标。GT是从官方COCO框重新绘制；旧捕获未哈希标签，框并集不是像素分割真值。热图不是可靠性概率、因果证明或噪声标签，原始灰度不用于识别噪声。",
+      "sources": [
+        "inputs/historical_maps_manifest.json",
+        "inputs/historical_capture_source.py",
+        "inputs/ssdd_test_coco.json",
+        "inputs/images/001111.jpg",
+        "inputs/arrays/001111/raw_input_energy.npy",
+        "inputs/arrays/001111/raw_residual.npy",
+        "inputs/arrays/001111/raw_corrected_energy.npy",
+        "inputs/arrays/001111/raw_importance.npy",
+        "inputs/arrays/001111/raw_drive_gate.npy",
+        "inputs/arrays/001111/raw_delta_bias.npy",
+        "inputs/arrays/001111/raw_correction.npy"
+      ],
+      "code": "code/plot_qualitative.py",
+      "files": {
+        "png": "png/Q06.png",
+        "svg": "svg/Q06.svg",
+        "pdf": "pdf/Q06.pdf"
+      },
+      "sha256": {
+        "png": "b2a50fae4f8a7d730832711b3e01a073980f5b2dc955de87d550bbbe0fe95b20",
+        "svg": "26722ec22fb441108813e09e77cbebf7fa694fae30bfa81a1d32c63401c632f5",
+        "pdf": "b8144682816cf39b86f8fac628b6fed93b32951a8b45c5078f82bb69347a8887"
+      }
+    },
+    {
+      "id": "Q07",
+      "title_cn": "六张样本的统一色标重要性叠图",
+      "title_en": "Historical importance overlays: every saved sample",
+      "category": "qualitative",
+      "evidence": "historical_activations",
+      "caption_cn": "复用2026-08-23 exact_v2历史权重的block0已保存特征，不是当前P3模型推理。6图与历史manifest SHA相同，实际对应官方test；全部固定样本保留。原生网格按原脚本裁letterbox，不做双三次插值；跨图每种量使用同一色标，输入/修正能量共用色标。GT是从官方COCO框重新绘制；旧捕获未哈希标签，框并集不是像素分割真值。热图不是可靠性概率、因果证明或噪声标签，原始灰度不用于识别噪声。叠加仅用于空间观察，灰度统一0–255且alpha固定0.56。",
+      "sources": [
+        "inputs/historical_maps_manifest.json",
+        "inputs/historical_capture_source.py",
+        "inputs/ssdd_test_coco.json",
+        "inputs/arrays/000099/raw_importance.npy",
+        "inputs/arrays/000531/raw_importance.npy",
+        "inputs/arrays/000929/raw_importance.npy",
+        "inputs/arrays/001081/raw_importance.npy",
+        "inputs/arrays/001131/raw_importance.npy",
+        "inputs/arrays/001111/raw_importance.npy",
+        "inputs/images/000099.jpg",
+        "inputs/images/000531.jpg",
+        "inputs/images/000929.jpg",
+        "inputs/images/001081.jpg",
+        "inputs/images/001131.jpg",
+        "inputs/images/001111.jpg"
+      ],
+      "code": "code/plot_qualitative.py",
+      "files": {
+        "png": "png/Q07.png",
+        "svg": "svg/Q07.svg",
+        "pdf": "pdf/Q07.pdf"
+      },
+      "sha256": {
+        "png": "af50c30eb75c7c64899793ff2822a6b2b7775b15015f8f57d2a41b1fb3d0185d",
+        "svg": "1bf2334f650fed6fa4a645f5ef463de54ef3c2748a1c14e755f3137b9af874f2",
+        "pdf": "7fbc5f05041372018584a350455be0ad5ed463a3ce666358bdc8fc484a0852c3"
+      }
+    },
+    {
+      "id": "Q08",
+      "title_cn": "前景与背景重要性：保留反例",
+      "title_en": "Importance is not consistently higher inside target boxes",
+      "category": "qualitative",
+      "evidence": "historical_diagnostic",
+      "caption_cn": "直接读取原aligned-map统计CSV，不将像素总体std当成实验误差条。4/6样本前景均值低于背景是这6图的描述，不外推总体。与新绘native-grid图存在采样/插值口径差异。复用2026-08-23 exact_v2历史权重block0的已存aligned-map统计，不是当前P3模型推理。6图与历史manifest SHA相同，实际对应官方test；全部固定样本保留。历史aligned映射先裁letterbox再双三次插值，本轮直接引用保存的统计而不重算。分区来自原捕获使用的GT框并集，不是本次官方COCO框重算；旧捕获未哈希标签，框并集不是像素分割真值。这些特征统计不是可靠性概率、因果证明或噪声标签。",
+      "sources": [
+        "inputs/historical_maps_summary.csv",
+        "inputs/historical_maps_manifest.json"
+      ],
+      "code": "code/plot_qualitative.py",
+      "files": {
+        "png": "png/Q08.png",
+        "svg": "svg/Q08.svg",
+        "pdf": "pdf/Q08.pdf"
+      },
+      "sha256": {
+        "png": "011070d6eeb54f5d95ca5ef1f58e8656221b43a2484f3b4589f734a8d514d30e",
+        "svg": "b68461e7019c54047f4fbf875b59b5a64fca8d9b72286d4eb6c834c2df3cc3ff",
+        "pdf": "c3bcfe5701f2d2419c7aa94ca0aa204c29c682b5e54f8f4395e49f3ba88a1e03"
+      }
+    },
+    {
+      "id": "Q09",
+      "title_cn": "前景和背景修正前后的能量对照",
+      "title_en": "Energy changes within the historical feature pipeline",
+      "category": "qualitative",
+      "evidence": "historical_diagnostic",
+      "caption_cn": "直接比较同一历史模块输入与修正后的特征RMS；不把能量降低等同于去噪成功，更不把特征RMS称为物理SAR强度。复用2026-08-23 exact_v2历史权重block0的已存aligned-map统计，不是当前P3模型推理。6图与历史manifest SHA相同，实际对应官方test；全部固定样本保留。历史aligned映射先裁letterbox再双三次插值，本轮直接引用保存的统计而不重算。分区来自原捕获使用的GT框并集，不是本次官方COCO框重算；旧捕获未哈希标签，框并集不是像素分割真值。这些特征统计不是可靠性概率、因果证明或噪声标签。",
+      "sources": [
+        "inputs/historical_maps_summary.csv",
+        "inputs/historical_maps_manifest.json"
+      ],
+      "code": "code/plot_qualitative.py",
+      "files": {
+        "png": "png/Q09.png",
+        "svg": "svg/Q09.svg",
+        "pdf": "pdf/Q09.pdf"
+      },
+      "sha256": {
+        "png": "58608b6aaa59d42f689640ec89608b3e784223fdc43e674e52d6a475788e9c74",
+        "svg": "4b04d6837447ceab26450a2ea5f1126c5a6ff239b718421f51164a1a95435421",
+        "pdf": "337d11b1a24f9ff84ae3111ebb4d0e34186796086b2e168c20977c179e3700d9"
+      }
+    },
+    {
+      "id": "Q10",
+      "title_cn": "六图原生token重要性累积分布",
+      "title_en": "Importance distributions across the six saved samples",
+      "category": "qualitative",
+      "evidence": "historical_diagnostic",
+      "caption_cn": "复用2026-08-23 exact_v2历史权重的block0已保存特征，不是当前P3模型推理。6图与历史manifest SHA相同，实际对应官方test；全部固定样本保留。原生网格按原脚本裁letterbox，不做双三次插值；跨图每种量使用同一色标，输入/修正能量共用色标。GT是从官方COCO框重新绘制；旧捕获未哈希标签，框并集不是像素分割真值。热图不是可靠性概率、因果证明或噪声标签，原始灰度不用于识别噪声。每图ECDF独立归一为1，展示至多900个确定性秩点，不拟合密度、不做token级显著性检验。",
+      "sources": [
+        "inputs/historical_maps_manifest.json",
+        "inputs/historical_capture_source.py",
+        "inputs/ssdd_test_coco.json",
+        "inputs/arrays/000099/raw_importance.npy",
+        "inputs/arrays/000531/raw_importance.npy",
+        "inputs/arrays/000929/raw_importance.npy",
+        "inputs/arrays/001081/raw_importance.npy",
+        "inputs/arrays/001131/raw_importance.npy",
+        "inputs/arrays/001111/raw_importance.npy"
+      ],
+      "code": "code/plot_qualitative.py",
+      "files": {
+        "png": "png/Q10.png",
+        "svg": "svg/Q10.svg",
+        "pdf": "pdf/Q10.pdf"
+      },
+      "sha256": {
+        "png": "51a3301563d716fc615188f181a2be0901478e2b82da270c7fac6728e3382452",
+        "svg": "8e8c461eba99ab43c3a8942226a0963533b86315a35da6c3f6fb0db3ee7087fa",
+        "pdf": "68680490f09e00609fb0af7603183416c99bc2af520726f4331c0f0f54f8c94b"
+      }
+    },
+    {
+      "id": "Q11",
+      "title_cn": "特征能量变化的原生token累积分布",
+      "title_en": "Distribution of recorded feature-energy changes",
+      "category": "qualitative",
+      "evidence": "historical_diagnostic",
+      "caption_cn": "复用2026-08-23 exact_v2历史权重的block0已保存特征，不是当前P3模型推理。6图与历史manifest SHA相同，实际对应官方test；全部固定样本保留。原生网格按原脚本裁letterbox，不做双三次插值；跨图每种量使用同一色标，输入/修正能量共用色标。GT是从官方COCO框重新绘制；旧捕获未哈希标签，框并集不是像素分割真值。热图不是可靠性概率、因果证明或噪声标签，原始灰度不用于识别噪声。逐token计算同一历史前向已保存的两张能量图之差；不是新模型计算，也不是人为噪声实验。",
+      "sources": [
+        "inputs/historical_maps_manifest.json",
+        "inputs/historical_capture_source.py",
+        "inputs/ssdd_test_coco.json",
+        "inputs/arrays/000099/raw_input_energy.npy",
+        "inputs/arrays/000099/raw_corrected_energy.npy",
+        "inputs/arrays/000531/raw_input_energy.npy",
+        "inputs/arrays/000531/raw_corrected_energy.npy",
+        "inputs/arrays/000929/raw_input_energy.npy",
+        "inputs/arrays/000929/raw_corrected_energy.npy",
+        "inputs/arrays/001081/raw_input_energy.npy",
+        "inputs/arrays/001081/raw_corrected_energy.npy",
+        "inputs/arrays/001131/raw_input_energy.npy",
+        "inputs/arrays/001131/raw_corrected_energy.npy",
+        "inputs/arrays/001111/raw_input_energy.npy",
+        "inputs/arrays/001111/raw_corrected_energy.npy"
+      ],
+      "code": "code/plot_qualitative.py",
+      "files": {
+        "png": "png/Q11.png",
+        "svg": "svg/Q11.svg",
+        "pdf": "pdf/Q11.pdf"
+      },
+      "sha256": {
+        "png": "950bbfe0cc703cba104a54ae4bc702a95e3c4a1f8ec943c55f3f934fc075aa7a",
+        "svg": "52e1732171bcd740536aae2ef1ba08c30a3877ff1dd05dcda206dc400ec12d63",
+        "pdf": "3dbe41d2dfe926110ba9a99580e95cd694d10a76fa3a3d1133573cc988bf1a92"
+      }
+    },
+    {
+      "id": "Q12",
+      "title_cn": "真实SAR场景与官方GT框样本墙",
+      "title_en": "SAR scenes and official ground-truth boxes",
+      "category": "qualitative",
+      "evidence": "real_images",
+      "caption_cn": "六个样本全部展示，不按本轮结果挑选。仅解释场景和标注，不从高亮区域推出噪声、杂波或Mamba错误写入。图像与历史capture哈希相同，官方COCO框重新绘制。",
+      "sources": [
+        "inputs/ssdd_test_coco.json",
+        "inputs/historical_maps_manifest.json",
+        "inputs/images/000099.jpg",
+        "inputs/images/000531.jpg",
+        "inputs/images/000929.jpg",
+        "inputs/images/001081.jpg",
+        "inputs/images/001131.jpg",
+        "inputs/images/001111.jpg"
+      ],
+      "code": "code/plot_qualitative.py",
+      "files": {
+        "png": "png/Q12.png",
+        "svg": "svg/Q12.svg",
+        "pdf": "pdf/Q12.pdf"
+      },
+      "sha256": {
+        "png": "c675e47ff4fc695557286ae47cfcd1cc27beed1a5ab4df1a83d6a09377ae3ca1",
+        "svg": "602eb132c5f619915125790ad259d19510b00db68a7b83e88238b413e8ff6382",
+        "pdf": "412cfc3922bf367c19bdf13ac9d9c8af7eb236d5c5197fc1363db94f5da1285c"
+      }
+    },
+    {
+      "id": "M01",
+      "title_cn": "检测网络与单块插入位置",
+      "title_en": "RGSP in the detection network",
+      "category": "mechanism",
+      "evidence": "schematic",
+      "caption_cn": "检测网络结构示意：主配置在骨干P3/8替换一个实际RGSP块，P3/8、P4/16、P5/32特征经多尺度颈部进入检测头。P2/P3/P4仅为相互独立的单位置对照，不是检测头尺度，也不是同时替换。颈部内部作抽象展示；本图不证明P3为最优位置或产生性能提升。",
+      "sources": [
+        "experiments/rgsp_seedwise_20261009_v1/transfer/final_patch_v1/code/ultralytics/nn/modules/mamba_yolo.py",
+        "experiments/rgsp_seedwise_20261009_v1/manifest.py",
+        "paper_draft/rgsp_cn_full_experiments_20261009/main.tex"
+      ],
+      "code": "code/method_diagrams.py",
+      "files": {
+        "png": "png/M01.png",
+        "svg": "svg/M01.svg",
+        "pdf": "pdf/M01.pdf"
+      },
+      "sha256": {
+        "png": "2ab4bf1f1a317351203a18cc96b67fadd4fd4df907f47bd8588a83aa86c57716",
+        "svg": "7e4001a0a808cf329a38150811ccf1bc5eebe9d76c731898418122b768bbee0f",
+        "pdf": "0b5bd10ebd253eedb926cdde4fb5dc1f76376f8f1f6e409ed987e2f7014fea1c"
+      }
+    },
+    {
+      "id": "M02",
+      "title_cn": "完整RGSP块的双残差与FFN",
+      "title_en": "The complete RGSP residual block",
+      "category": "mechanism",
+      "evidence": "schematic",
+      "caption_cn": "完整替换块示意：输入由B×C×H×W按行优先展平为B×N×C，先执行LN1、状态建模分支和逐通道LayerScale残差融合，再执行LN2、C→2C→C的GELU前馈分支和第二次残差融合，最后恢复空间布局。a1/a2初始化为0.01，不能与扫描输入调制gamma混淆。图中省略默认值为0的Dropout；这是冻结实现的结构说明，不是效果证据。",
+      "sources": [
+        "experiments/rgsp_seedwise_20261009_v1/transfer/final_patch_v1/code/ultralytics/nn/modules/mamba_yolo.py",
+        "paper_draft/rgsp_cn_full_experiments_20261009/main.tex"
+      ],
+      "code": "code/method_diagrams.py",
+      "files": {
+        "png": "png/M02.png",
+        "svg": "svg/M02.svg",
+        "pdf": "pdf/M02.pdf"
+      },
+      "sha256": {
+        "png": "2fa3f90b58075d3d04bd732bcbb73349eb86c93f1bb7146c4a96e40da98cb632",
+        "svg": "183fd159352a38a56fe94087b46eab19c444a0116a509e8b4e2540d06434e7f7",
+        "pdf": "54695373dfd8692d6699983cad010809c49324674ab02cc51c1c325fba7776c1"
+      }
+    },
+    {
+      "id": "M03",
+      "title_cn": "LRC局部趋势与残差修正路径",
+      "title_en": "Local response correction (LRC)",
+      "category": "mechanism",
+      "evidence": "schematic",
+      "caption_cn": "LRC以逐通道一维卷积得到局部趋势xbar，再形成r=x−xbar以及xtilde=x−lambda_s·r。趋势送入LSGM及特征RMS能量，修正特征送入内容投影与二维统计。k=3卷积以1/3初始化但后续可学习；lambda_s未被约束为正或小于1，因此不把该算子画成必然平滑、去噪或图像复原。行优先序列存在跨行首尾邻接，二维统计在LSGM中另行补充。",
+      "sources": [
+        "experiments/rgsp_seedwise_20261009_v1/transfer/final_patch_v1/code/ultralytics/nn/modules/mamba_yolo.py",
+        "paper_draft/rgsp_cn_full_experiments_20261009/main.tex"
+      ],
+      "code": "code/method_diagrams.py",
+      "files": {
+        "png": "png/M03.png",
+        "svg": "svg/M03.svg",
+        "pdf": "pdf/M03.pdf"
+      },
+      "sha256": {
+        "png": "c4e42233cf6e21e5ca65362861e24eea4059a7725f53899de4709a9cb154ad6a",
+        "svg": "3f8513c65467f683f9fc4ffea61626fce918a39e56d70761c1dcb460132354cc",
+        "pdf": "6228079fadafa6fad42ae69302d4959e2f7985485a4b85f6d89148aaa602ba3b"
+      }
+    },
+    {
+      "id": "M04",
+      "title_cn": "LSGM描述子与trend/std/point对照",
+      "title_en": "Local structure guidance (LSGM)",
+      "category": "mechanism",
+      "evidence": "schematic",
+      "caption_cn": "LSGM主路径使用[xbar,s]描述子，其中s来自修正特征xtilde恢复二维布局后的3×3局部标准差，边界均值池化不计补零。LayerNorm及两层MLP输出经Sigmoid得到每位置一个标量I，并广播至通道。冻结扩展实现中的Trend-only、Std-only、Point-only分别使用[xbar,0]、[0,s]、[xtilde,0]，并保留2C输入宽度。最后一层零初始化使初始I=0.5。I为任务学习的结构控制量，不是目标概率、亮度可靠性或校准置信度；图中不给出对照性能。",
+      "sources": [
+        "experiments/rgsp_seedwise_20261009_v1/transfer/final_patch_v1/code/ultralytics/nn/modules/mamba_yolo.py",
+        "paper_draft/rgsp_cn_full_experiments_20261009/main.tex"
+      ],
+      "code": "code/method_diagrams.py",
+      "files": {
+        "png": "png/M04.png",
+        "svg": "svg/M04.svg",
+        "pdf": "pdf/M04.pdf"
+      },
+      "sha256": {
+        "png": "0a329911bbea742833c0a4a5c95bee9f19b6c488b222f1f117b77d207e55583e",
+        "svg": "5624a05bdb559ceeadf48e224c42ac2796fe300a80abef613e156dcf87debc77",
+        "pdf": "3d6b3aba64516c450d5825d9051a08b1a24de3c94ef3f2a25d7d8a71713404d6"
+      }
+    },
+    {
+      "id": "M05",
+      "title_cn": "Selective scan两处调制与输出旁路",
+      "title_en": "Two conditioned locations in selective scan",
+      "category": "mechanism",
+      "evidence": "schematic",
+      "caption_cn": "冻结Full实现的精确机制图：xtilde经in_proj分成u与z，B_t和C_t均由调制前u生成；趋势RMS与I共同生成gamma，I另生成write因子，两者相乘后作用于同一u_scan，而非两个独立的状态位置。第二处干预是Delta logits中的eta·I；Delta同时参与历史状态衰减exp(Delta·A)与当前写入Delta·B·u_scan。扫描读出后加入D·xtilde，再乘SiLU(z)并输出投影。默认g_min=0.5、s_n=0.1。重复变量表示同一来源，图中不向B/C增加I边；这不是状态传播或抑制效果的实测证据。",
+      "sources": [
+        "experiments/rgsp_seedwise_20261009_v1/transfer/final_patch_v1/code/ultralytics/nn/modules/mamba_yolo.py",
+        "paper_draft/rgsp_cn_full_experiments_20261009/main.tex"
+      ],
+      "code": "code/method_diagrams.py",
+      "files": {
+        "png": "png/M05.png",
+        "svg": "svg/M05.svg",
+        "pdf": "pdf/M05.pdf"
+      },
+      "sha256": {
+        "png": "36d259c57e40c56a997ad53243aa1f157aa5b244b570b5e5911e671341270166",
+        "svg": "8c62cf4fdce63303e5d5219fb5686486a6d5c67609d493222ba47a5f8fabc33d",
+        "pdf": "4ea6991748eaafdea5340c9ca45eb075788000e3c09d89a1c908548be9434699"
+      }
+    },
+    {
+      "id": "M06",
+      "title_cn": "结构匹配锚点与两套四格归因设计",
+      "title_en": "Matched controls and two factorial comparisons",
+      "category": "mechanism",
+      "evidence": "schematic",
+      "caption_cn": "上方区分原始四向SS2D、同壳层MatchedIdentity及扫描输入倍率0.75的Matched075。左侧四格为Matched075、Residual075、EnergyOnly、LocalEnergy，在I路径关闭下控制残差R与趋势能量E；右侧在R=E=1时控制输入引导U与步长引导Delta，四格为LocalEnergy、+Input、+Delta与Full。两类交互均应同种子同协议计算M11−M10−M01+M00后再汇总，不能以Full−LocalEnergy代替。R关闭只固定lambda_s=0，并不等于Full-no-LRC删除趋势路径；U包含gamma与write的I项。关闭参数用buffer保持，图中没有填入成绩、预期优劣或宣称矩阵已完成。",
+      "sources": [
+        "experiments/rgsp_seedwise_20261009_v1/transfer/final_patch_v1/code/ultralytics/nn/modules/mamba_yolo.py",
+        "experiments/rgsp_seedwise_20261009_v1/manifest.py",
+        "paper_draft/rgsp_cn_full_experiments_20261009/sections/ablation.tex"
+      ],
+      "code": "code/method_diagrams.py",
+      "files": {
+        "png": "png/M06.png",
+        "svg": "svg/M06.svg",
+        "pdf": "pdf/M06.pdf"
+      },
+      "sha256": {
+        "png": "a08724e832ae33d6d50da61ccf0911f39b80154ae1fc6d26ec350848d1f64537",
+        "svg": "2074992dab55d1872e054866cceb84994fdc992952aeca4e18c78722f695def0",
+        "pdf": "634db985d614e82357d56960f9420b9cb4839bef5934f9c0e7870174f60c82af"
+      }
+    },
+    {
+      "id": "P01",
+      "title_cn": "数据划分规模与协议边界",
+      "title_en": "Dataset splits must stay separate",
+      "category": "protocol",
+      "evidence": "protocol_metadata",
+      "caption_cn": "四个已记录协议分别显示数量及比例，不把Ship未完成成绩补为0；新旧SSDD不混算，SADD仅阳性test44的限制保留。",
+      "sources": [
+        "inputs/project_state_snapshot.md",
+        "inputs/seed0_review.md"
+      ],
+      "code": "code/plot_protocol.py",
+      "files": {
+        "png": "png/P01.png",
+        "svg": "svg/P01.svg",
+        "pdf": "pdf/P01.pdf"
+      },
+      "sha256": {
+        "png": "ad5f58976fe68a894bc3eda11de4e88f3281fec901cfcfbd629eb64588ab7489",
+        "svg": "73c49552e76f1d668c24426ba01f664e71f18292661f2b6a8c2082346758be89",
+        "pdf": "7ed96658393c84ec5c70e67f345a5e61957e24dc12425c7184056b516490e3b2"
+      }
+    },
+    {
+      "id": "P02",
+      "title_cn": "完成回执与可用数值的覆盖图",
+      "title_en": "Completion receipts and metric availability are different",
+      "category": "protocol",
+      "evidence": "snapshot_metadata",
+      "caption_cn": "只反映固定时点的回执与本地数值覆盖，不代表实时进度。14项跨任务没有数值不等于训练失败；AIR三项有数据协议冲突。",
+      "sources": [
+        "inputs/latest_seed0.json",
+        "inputs/seed0_review.md"
+      ],
+      "code": "code/plot_protocol.py",
+      "files": {
+        "png": "png/P02.png",
+        "svg": "svg/P02.svg",
+        "pdf": "pdf/P02.pdf"
+      },
+      "sha256": {
+        "png": "d0c40e26b142d4bc61d76caacd6df284e75484c9b8c552beb9905d1c8b1f9104",
+        "svg": "1a56426458022af1ad561b72bff8367c3ffe60ed239ff2fc83eacfd5dfc7613f",
+        "pdf": "0e4917f1c49de57d8cb2d469808f201a54e6476995f2435f8d5f96204abcb919"
+      }
+    },
+    {
+      "id": "P03",
+      "title_cn": "最新检测结果的来源构成",
+      "title_en": "Where the 29 recorded results came from",
+      "category": "protocol",
+      "evidence": "snapshot_metadata",
+      "caption_cn": "直接统计receipt_kind，分清新campaign、复用及历史采纳。没有将EMA恢复及旧审计缺口因重新整理而消除。",
+      "sources": [
+        "inputs/latest_seed0.json"
+      ],
+      "code": "code/plot_protocol.py",
+      "files": {
+        "png": "png/P03.png",
+        "svg": "svg/P03.svg",
+        "pdf": "pdf/P03.pdf"
+      },
+      "sha256": {
+        "png": "b0333f5e25e2cd740c3a10bd8620545cb06892b10968ad24554a16f98972bd3b",
+        "svg": "2fb293e2efab33763110ab3949d92435754d60fb962b5c9b54a7a5e39151bee6",
+        "pdf": "b87d80d11da02a9fadd45762addb54bb60264154921d39fb0367a0ec069543eb"
+      }
+    },
+    {
+      "id": "P04",
+      "title_cn": "新旧协议隔离与可复现作图流程",
+      "title_en": "An evidence-first comparison workflow",
+      "category": "protocol",
+      "evidence": "schematic",
+      "caption_cn": "体现新旧证据轨道的报告边界。此图是工作流示意，不是模型结果；历史raw可追溯，当前数值缺口明确。",
+      "sources": [
+        "inputs/latest_seed0.json",
+        "inputs/ssdd_legacy_protocol.md",
+        "inputs/seed0_review.md"
+      ],
+      "code": "code/plot_protocol.py",
+      "files": {
+        "png": "png/P04.png",
+        "svg": "svg/P04.svg",
+        "pdf": "pdf/P04.pdf"
+      },
+      "sha256": {
+        "png": "ab78b5202abcf3e87384c82b9477b938108083124d8e7ed4518607a19aba082f",
+        "svg": "e16bbb2e379a9864974ea9099087e2c196efea01f733d3ba13e20f0b701f79c9",
+        "pdf": "38aece6a3d929da586e91e4309985cb883024b0d40540261156f771610ad53dc"
+      }
+    }
+  ],
+  "contact_sheets": [
+    "contact_sheets/START_HERE.png",
+    "contact_sheets/current.png",
+    "contact_sheets/multiseed.png",
+    "contact_sheets/efficiency.png",
+    "contact_sheets/training.png",
+    "contact_sheets/qualitative.png",
+    "contact_sheets/mechanism.png",
+    "contact_sheets/protocol.png"
+  ],
+  "contact_sheet_sha256": {
+    "contact_sheets/START_HERE.png": "0c61a69c99102b38c4fe3a89001af56aefcbb91647a16f7c92514589c4a0a029",
+    "contact_sheets/current.png": "c131fce24c32c1723e7f4e19fab97efa7a61eb17f5c780b6dc806c9bcd5b32eb",
+    "contact_sheets/multiseed.png": "508c4c9d1fbed3030bc6b77b8615e47ab8a0c95176226786f5e5ea2f381dd100",
+    "contact_sheets/efficiency.png": "9fffe321179a3db0f7414fa849dc6e5da3c1f0801df72a5fcfbd5bca746aba02",
+    "contact_sheets/training.png": "ac96639b290cd25c28118a21d12ffaad3d8a497eafb0c2a14511867f22c0eaab",
+    "contact_sheets/qualitative.png": "50a06f426bab9c0a41732bf2b9dbd69d778e295c70246eeaa798ebd2b605c21b",
+    "contact_sheets/mechanism.png": "eb6555a897d1a86d8a6ad82b436f74f2b0bc56996e25f0ad031f25f0abdfccef",
+    "contact_sheets/protocol.png": "72d6e60fef23542d37fb3742c85ce5188ce7549d5870f7a7ba9e61b332720f77"
+  },
+  "generation": {
+    "schema": "rgsp-gallery-generation-v1",
+    "input_bindings": {
+      "inputs/source_manifest.json": "4013658531193d773d33d475530123889fa39c211ea278e309f186385c297f89",
+      "inputs/latest_seed0.json": "61fb0ab3c75d1b8b51a1c8328d82a29ebcaa9c8df4184cb67caac089ecf20f1a",
+      "inputs/ssdd_legacy_individual.csv": "4632e57fdc9ff5e1a3abb771471d05bef82504d4e0c6e5a183e64c5735975036",
+      "inputs/ssdd_legacy_summary.csv": "64d4b908455dba4b5fe3f17279cd11c032e10b5586f9361122816ad418b223b3",
+      "inputs/ssdd_legacy_protocol.md": "b82e24a51cbe230b016783197bdce731da6b12e06462cf5b885834365890bcb8",
+      "inputs/sadd_3seed.csv": "33e118f5e4f321c8b38726cc0a68b41abc68e9a03494dc5d55a29a4d63729ea7",
+      "inputs/seed0_review.md": "6129b5556e3cf75b4597def0c17c6a7961ad06a28c4ec9c1e1720582ae54c6e2",
+      "inputs/project_state_snapshot.md": "e52bddbad36c7e781e0c5b3164a06413bf61437317b095135c4a63ac9f591839",
+      "inputs/historical_maps_summary.csv": "098499630ed4980d50de96ff502db32a88dab021a62f5553973fb573404d634b",
+      "inputs/historical_maps_manifest.json": "9d99fa4ccb2c47552f6575d60d515b19a7c26532e2602a08b017b44ac4f11bf1",
+      "inputs/historical_capture_source.py": "dbb9a5f7faa40dabfa9d9bf59bf63d6e3066f0fa815ab246e55cb637682a857b",
+      "inputs/frozen_mamba_yolo.py": "05d1900840474e068aec65bc30ca81501fce55a464ca0dc3fbe60054885aade3",
+      "inputs/frozen_campaign_manifest.py": "ff1f6708e735d5bd91d9c341edfcfdcc714829c5ab5ee0c6110df263d5b6fed7",
+      "inputs/method_manuscript_snapshot.tex": "b6dd4049cb72236156731c99af25e86e377fc3dbb7be5f672c924d1da000ce1c",
+      "inputs/ablation_manuscript_snapshot.tex": "f2b821cddca6af8e45524c64d323817bffd47051eb0499517169b8b0f71cf403",
+      "inputs/historical_training.csv": "ddb218073bc79567df8224d6012484b57c0008250c9e7dad314ef83695e52d08",
+      "inputs/historical_training_args.yaml": "ddeaf739a34f98151e26b596c5238634dfa935e2e20fcdcbeab75e2d403e1c33",
+      "inputs/arrays/000099/raw_importance.npy": "b4e7b014133dbf3e84347884fbfb92808fbbe1d7c803075cb36b83f8a5155acc",
+      "inputs/arrays/000099/raw_input_energy.npy": "d0d3c1ac746f7160b228ff4c7adbaf18b80228c090be2e5d412918dd4b91784c",
+      "inputs/arrays/000099/raw_corrected_energy.npy": "082dbc3e433325a858cb49f429f6494b3cff3a15e02602256a680c04e373bf4b",
+      "inputs/arrays/000099/raw_residual.npy": "5b316270efa8700b9b12548bef34317568dd4052cf02b8d8f697e3ebc7f17777",
+      "inputs/arrays/000099/raw_correction.npy": "06c086708e3268fcbd28ddb50b15c3f0926f535a4567003d8c5e275c0e581929",
+      "inputs/arrays/000099/raw_drive_gate.npy": "8f983af320fda9e660848ae8ea7a4fdcb0d41f1486e9f8f56336489b4fe6e082",
+      "inputs/arrays/000099/raw_delta_bias.npy": "602c74d136d90999983a167d5502273ec4bb31b61483941b4987d2893000d02c",
+      "inputs/arrays/000531/raw_importance.npy": "9780e2510531aa22bb66cb25ef720dc0194df4d1c1d1b87e8aab07e0b398bc7a",
+      "inputs/arrays/000531/raw_input_energy.npy": "3ec0712765ce227efb6368c81aa1f69e8df39a507c9749dc058aa6ec849bbd6e",
+      "inputs/arrays/000531/raw_corrected_energy.npy": "5cd1b112b349bb44b0a38ecf63fbeb185f2712657c4fdeabf0848d6de4a73e73",
+      "inputs/arrays/000531/raw_residual.npy": "da9e14423c6736f4697aa4752fdf4efae46fea7916950e793a3e001506f691cb",
+      "inputs/arrays/000531/raw_correction.npy": "a037ff5997caafc5eb220fe4a8f969635a50fa7efbe9f507f85e477288b21f00",
+      "inputs/arrays/000531/raw_drive_gate.npy": "35c113fc4da4e86a1c2590c31bbb12ce07d83a26973da1129f526a1eb9119de3",
+      "inputs/arrays/000531/raw_delta_bias.npy": "d8842aa530f358f7745c5a843381899118bb7ed46633391f1372660710e9b129",
+      "inputs/arrays/000929/raw_importance.npy": "320a35dc6871ac6b69d876aefe86a7dbd8041c351d4ba708951d19ba0df97e11",
+      "inputs/arrays/000929/raw_input_energy.npy": "17cb7aa76d812ae0cd411fb8e34a7bf2fc296559ddf5830e345d11da1306346d",
+      "inputs/arrays/000929/raw_corrected_energy.npy": "015e7fdab50712648045e704af71f9d859f460cdd594e6410757d299965d0184",
+      "inputs/arrays/000929/raw_residual.npy": "6f3fda97f621ae64e4da2d9f4b5da8b58fdbca0e02cc3078b5c053a84f483e78",
+      "inputs/arrays/000929/raw_correction.npy": "08025d24da1a468e19318699593dd466471995b4f868cec1d0ac13d7e5d91642",
+      "inputs/arrays/000929/raw_drive_gate.npy": "a0014f006a15849a25e2e302c78d643909ef857e549d120585f5bba49d5ad50b",
+      "inputs/arrays/000929/raw_delta_bias.npy": "49c3f37e5a8228c7112e5ed9d8ad6d39c4d2a1d18962c2348d1910f4084282e3",
+      "inputs/arrays/001081/raw_importance.npy": "8fb179665eabb1b8cb90837b825e73a9207b35bfce8eacdfcf3198597ee6c983",
+      "inputs/arrays/001081/raw_input_energy.npy": "8e6fd4830a8a70555190dee21a070cd73f4bf563dd5504e6c184865b07879433",
+      "inputs/arrays/001081/raw_corrected_energy.npy": "25a188fc35c11a6b638dc9b690cd65ae52076d4ab9066c9ed96b7037e77de0c8",
+      "inputs/arrays/001081/raw_residual.npy": "0b32621c613fa7ed93e01b8d4d027a2d6ce9936533cd2ef56a311123b8e2090a",
+      "inputs/arrays/001081/raw_correction.npy": "2a2533a30955ece7739ae5784d971b30b9795939856d0bb2913fd643353b97be",
+      "inputs/arrays/001081/raw_drive_gate.npy": "952950a2032a515387481b578045949caaebdec7463b6ab472d9f2cb1acb8511",
+      "inputs/arrays/001081/raw_delta_bias.npy": "4c6387ffdcb68b04a0f5a429dbefcf58d0147f17ea9586623e9f1d24633a6cb3",
+      "inputs/arrays/001131/raw_importance.npy": "34bf162642ca34b979c3f71c5b3fdbce6b67a4c11579c391f96274bf2eeedcfd",
+      "inputs/arrays/001131/raw_input_energy.npy": "166f5811a51b453d0fae4c37f8402a2c415c487b19e5cf309d82df012da19953",
+      "inputs/arrays/001131/raw_corrected_energy.npy": "798094ec6a970d07a0af97953cf09597049e2bc24a1688dd1069d16aed6143f8",
+      "inputs/arrays/001131/raw_residual.npy": "879303134ea538db066b29bad4affde542d411114f7e949727369c941e0686ef",
+      "inputs/arrays/001131/raw_correction.npy": "f2008ec5ca493ce147b4c236780cbf84a6f3a939da70f59b4c5fd6f71e54a011",
+      "inputs/arrays/001131/raw_drive_gate.npy": "1291e739f59ed19c45e93a7c32baf949887357c489edb861cd2a45217d4b6507",
+      "inputs/arrays/001131/raw_delta_bias.npy": "c6029a9e319c29ddf395089fa610d98b037ec22be0f84c9f207004a1d05749a5",
+      "inputs/arrays/001111/raw_importance.npy": "166eac037b804445de2c46a470c517bb2b18caedae2b5efbf0f36eeb480f4f7a",
+      "inputs/arrays/001111/raw_input_energy.npy": "c92a7e00fe8452388058a6c0f027edad7470c493062a4559079bd06049b1b05c",
+      "inputs/arrays/001111/raw_corrected_energy.npy": "9c615bde5f0e6c518c4b8fd55b4911ae6caf8075cf0f2893d203b7f676e617b9",
+      "inputs/arrays/001111/raw_residual.npy": "0b68f7a67dbfc9770ba25b2639dc76a4bb6f60bd05c8802292777bd915f5ef23",
+      "inputs/arrays/001111/raw_correction.npy": "ca5f0c706ee0805a4d1827a9542b36715a92638768f7d818ef1bf86fc1412829",
+      "inputs/arrays/001111/raw_drive_gate.npy": "ae402c3c3bf50f179e8d8d4d56c733e08b67ee10a2914224e6b30823efe4a756",
+      "inputs/arrays/001111/raw_delta_bias.npy": "81af481ff4e5f3a35fa30e22496e5d418b5e6ae5218f9a75f54994e5797b37f3",
+      "inputs/images/000099.jpg": "94dea1bfb9ff265d3874d26ed0496bcefa7828c1afb8ea8a1c4faa00b9fc8c8b",
+      "inputs/images/000531.jpg": "43f18920a8ac6b92791182ed0a37dc2496eb74877c60d2a9529f2b28184b8c9a",
+      "inputs/images/000929.jpg": "72a5f13049d9ba48abee2ad7167254f1539f1fb48bf65494ad32f6bab048dc25",
+      "inputs/images/001081.jpg": "68090f86990afb3d1b6e41ab69bfd7c0889706951ed3de9383074534cef2dbd5",
+      "inputs/images/001131.jpg": "b4aa358d6fec34ed3f1ba41ca4f3ed0b6a5a855a2e84a8120aae832051da80fb",
+      "inputs/images/001111.jpg": "79b41940970c9ea12c7a966f995b27fd28db8545b69f40da9824c51eeecf2383",
+      "inputs/ssdd_test_coco.json": "021d52858ffa3fda9a2d28ee21f1ca114800554edf08007704f6d06a412d50bf"
+    },
+    "code_bindings": {
+      "code/build_gallery.py": "71606ad86c5066829d35f80a538bd20683cb0994269d7f5c2d5e2bb274a0b023",
+      "code/common.py": "aaf80656d42f48b86305ef83698c2ba2212072eb2d216fb6fe02fd87ec0d4b21",
+      "code/method_diagrams.py": "369f30497bdf0683b6a15c4e4bef8cb0ad51e37508a9947e6661ed83f6578193",
+      "code/plot_current.py": "383ac65e16aa1867c7da2004dd69b912e852151dc77dedc77a560951c5e44a02",
+      "code/plot_historical.py": "f586196f971d011461f3bb461f8e9ef26ada5469013af62b864a73c219d12695",
+      "code/plot_protocol.py": "fd1d5c1f52c85e67c173bd30c313a085b56ffe7e23e2bf25d96903444abdf922",
+      "code/plot_qualitative.py": "b27d9334fdd46dc4d38cf790dde7958cee281fe3328434bfebe9a06c7ce6d272"
+    }
+  },
+  "booklet": {
+    "file": "gallery_booklet.pdf",
+    "sha256": "c7d3a83e5623e8414d17ab1abce7134da204cbce7b16905563d85f73e0bc09c1"
+  },
+  "research_runs_started": 0,
+  "new_inference_runs": 0
+}

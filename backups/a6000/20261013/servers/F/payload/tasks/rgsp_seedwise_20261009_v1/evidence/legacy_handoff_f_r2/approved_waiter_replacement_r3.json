@@ -1,0 +1,164 @@
+{
+  "approved_changes": [
+    "Explicit PCI_BUS_ID before legacy evaluation",
+    "15-second continuous post-training idle gate"
+  ],
+  "new_script_sha256": "c1e4b59aa43cf71e0a6b387927663b7931be40d58eecbdeb871c7f6bbe372b9c",
+  "old_script_sha256": "e6dec3a6795748d53dc76bd886a8427c3b2c7adea3736cb42d4ce2ff43db0938",
+  "old_waiters": {
+    "f0": {
+      "launch": {
+        "actual_argv": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_legacy_pidfd_r2.py",
+          "finalize",
+          "--spec",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_spec_f_20261009_r2.json",
+          "--lane",
+          "f0",
+          "--confirm-evaluate-and-retire",
+          "--wait-seconds",
+          "172800"
+        ],
+        "argv": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_legacy_pidfd_r2.py",
+          "finalize",
+          "--spec",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_spec_f_20261009_r2.json",
+          "--lane",
+          "f0",
+          "--confirm-evaluate-and-retire",
+          "--wait-seconds",
+          "172800"
+        ],
+        "detached_session": true,
+        "lane": "f0",
+        "launched_utc": "2026-10-09T02:55:43.765174+00:00",
+        "log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f0.finalizer.log",
+        "pid": 126415,
+        "poll_returncode": null,
+        "scope": "existing child completion -> copied independent test -> parent-only retirement; no new training",
+        "script_sha256": "e6dec3a6795748d53dc76bd886a8427c3b2c7adea3736cb42d4ce2ff43db0938",
+        "session": 126415,
+        "spec_sha256": "d1f589aa41f341171ea6e15378565a2c594af5281eb96974f343d78e3c45c1ca",
+        "start_ticks": 7166126,
+        "state": "S"
+      },
+      "observed": {
+        "argv": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_legacy_pidfd_r2.py",
+          "finalize",
+          "--spec",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_spec_f_20261009_r2.json",
+          "--lane",
+          "f0",
+          "--confirm-evaluate-and-retire",
+          "--wait-seconds",
+          "172800"
+        ],
+        "exit_code": 0,
+        "pid": 126415,
+        "ppid": 1,
+        "process_group": 126415,
+        "session": 126415,
+        "signal_metadata": {
+          "ShdPnd": "0000000000000000",
+          "SigBlk": "0000000000000000",
+          "SigCgt": "0000000180000002",
+          "SigIgn": "0000000001001000",
+          "SigPnd": "0000000000000000",
+          "Threads": "1",
+          "Uid": "1000\t1000\t1000\t1000"
+        },
+        "start_ticks": 7166126,
+        "state": "S"
+      }
+    },
+    "f1": {
+      "launch": {
+        "actual_argv": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_legacy_pidfd_r2.py",
+          "finalize",
+          "--spec",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_spec_f_20261009_r2.json",
+          "--lane",
+          "f1",
+          "--confirm-evaluate-and-retire",
+          "--wait-seconds",
+          "172800"
+        ],
+        "argv": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_legacy_pidfd_r2.py",
+          "finalize",
+          "--spec",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_spec_f_20261009_r2.json",
+          "--lane",
+          "f1",
+          "--confirm-evaluate-and-retire",
+          "--wait-seconds",
+          "172800"
+        ],
+        "detached_session": true,
+        "lane": "f1",
+        "launched_utc": "2026-10-09T02:55:44.782621+00:00",
+        "log": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/evidence/legacy_handoff_f_r2/f1.finalizer.log",
+        "pid": 126416,
+        "poll_returncode": null,
+        "scope": "existing child completion -> copied independent test -> parent-only retirement; no new training",
+        "script_sha256": "e6dec3a6795748d53dc76bd886a8427c3b2c7adea3736cb42d4ce2ff43db0938",
+        "session": 126416,
+        "spec_sha256": "d1f589aa41f341171ea6e15378565a2c594af5281eb96974f343d78e3c45c1ca",
+        "start_ticks": 7166228,
+        "state": "S"
+      },
+      "observed": {
+        "argv": [
+          "/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/bin/python",
+          "-B",
+          "-u",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_legacy_pidfd_r2.py",
+          "finalize",
+          "--spec",
+          "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/handoff_spec_f_20261009_r2.json",
+          "--lane",
+          "f1",
+          "--confirm-evaluate-and-retire",
+          "--wait-seconds",
+          "172800"
+        ],
+        "exit_code": 0,
+        "pid": 126416,
+        "ppid": 1,
+        "process_group": 126416,
+        "session": 126416,
+        "signal_metadata": {
+          "ShdPnd": "0000000000000000",
+          "SigBlk": "0000000000000000",
+          "SigCgt": "0000000180000002",
+          "SigIgn": "0000000001001000",
+          "SigPnd": "0000000000000000",
+          "Threads": "1",
+          "Uid": "1000\t1000\t1000\t1000"
+        },
+        "start_ticks": 7166228,
+        "state": "S"
+      }
+    }
+  },
+  "scope": "Root explicitly approved replacing only these owned CPU waiters; original scheduler parents stay stopped, training children untouched",
+  "spec_sha256": "d1f589aa41f341171ea6e15378565a2c594af5281eb96974f343d78e3c45c1ca"
+}

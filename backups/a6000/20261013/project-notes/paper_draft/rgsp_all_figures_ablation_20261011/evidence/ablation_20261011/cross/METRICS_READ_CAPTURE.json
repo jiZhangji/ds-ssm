@@ -1,0 +1,1914 @@
+{
+  "schema": "cross-metrics-readonly-capture-v1",
+  "hostname": "powerleader-PT6620W",
+  "captured_utc": "2026-10-11T03:13:51.812104+00:00",
+  "rows": [
+    {
+      "trial_id": "sar_acd_original_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_original_seed0/result.json",
+      "result_sha256": "78295008b867e71e47d6b221983c9b16842169e4277e2e4ac06e1b2cee329bbf",
+      "metric": {
+        "accuracy": 0.9488188976377953,
+        "confusion_matrix": [
+          [
+            43,
+            1,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            50,
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            50,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            49,
+            1
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            49
+          ]
+        ],
+        "macro_f1": 0.9481534823748297,
+        "macro_precision": 0.9482380688124307,
+        "macro_recall": 0.9484273702069533,
+        "per_class_recall": [
+          0.9148936170212766,
+          0.9803921568627451,
+          0.9615384615384616,
+          0.9245283018867925,
+          0.9607843137254902
+        ]
+      },
+      "best_epoch": 164,
+      "best_sha256": "a83dcfad43a2a99e84638c877e2e897580f6d96edfa94cdabd7dbca9fda9f121",
+      "parameters": 2852181,
+      "counts": {
+        "test": 254,
+        "train": 2003,
+        "val": 251
+      },
+      "protocol_sha256": "b36c263075758abc1ee3ad0ad6954b28e5ce2dc368e7371a9fd944909bb18f6d",
+      "test_sha256": "f766b288ed5390681b9c46bf61d64c6902fefd853d38bf2c2284c7c9d9cc8827",
+      "test": {
+        "best_sha256": "a83dcfad43a2a99e84638c877e2e897580f6d96edfa94cdabd7dbca9fda9f121",
+        "checkpoint_epoch": 164,
+        "identity_sha256": "babf3026fa6527e134568585df33399a2da191541f81c94c1ad22d7e25fd0ccb",
+        "metric": {
+          "accuracy": 0.9488188976377953,
+          "confusion_matrix": [
+            [
+              43,
+              1,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              50,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              50,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              49,
+              1
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              49
+            ]
+          ],
+          "macro_f1": 0.9481534823748297,
+          "macro_precision": 0.9482380688124307,
+          "macro_recall": 0.9484273702069533,
+          "per_class_recall": [
+            0.9148936170212766,
+            0.9803921568627451,
+            0.9615384615384616,
+            0.9245283018867925,
+            0.9607843137254902
+          ]
+        },
+        "threshold": null
+      },
+      "protocol": {
+        "annotation_policy": "preserve-heldout-exclude-ambiguous-training",
+        "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+        "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+        "batch": 64,
+        "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+        "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+        "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+        "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+        "classification_label_smoothing": 0.1,
+        "dataset": "SAR-ACD",
+        "epochs": 200,
+        "eval_batch": 64,
+        "grad_accum": 1,
+        "gradient_clip_l2": 5,
+        "historical_results_comparable": false,
+        "imgsz": 224,
+        "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+        "logical_data_sha256": "d93e468ba4ae5172cc74a9689a276ddafd2d3a2f9ad0e67d91ec83b942aacb8c",
+        "lr": 0.0002,
+        "module_warmup_epochs": 0,
+        "normalization": "fixed (RGB/255 - 0.5)/0.5",
+        "optimizer": "AdamW",
+        "patience": 40,
+        "precision": "FP32 (AMP/TF32 off)",
+        "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+        "scheduler": "cosine to 1% initial lr",
+        "schema": "rgsp-cross-trial-v1",
+        "selection_metric": "macro_f1",
+        "split_counts": {
+          "test": 254,
+          "train": 2003,
+          "val": 251
+        },
+        "task": "classification",
+        "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+        "weight_decay": 0.0005
+      }
+    },
+    {
+      "trial_id": "sar_acd_matched_scale075_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_matched_scale075_seed0/result.json",
+      "result_sha256": "5976e8287de1f068e24b56a96a3322df02c228791eece1ddf0cd198895aaaca7",
+      "metric": {
+        "accuracy": 0.9212598425196851,
+        "confusion_matrix": [
+          [
+            42,
+            1,
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            51,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            0,
+            46,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            2,
+            47,
+            1
+          ],
+          [
+            0,
+            3,
+            0,
+            0,
+            48
+          ]
+        ],
+        "macro_f1": 0.920511182242372,
+        "macro_precision": 0.92199376114082,
+        "macro_recall": 0.9212402658620809,
+        "per_class_recall": [
+          0.8936170212765957,
+          1,
+          0.8846153846153846,
+          0.8867924528301887,
+          0.9411764705882353
+        ]
+      },
+      "best_epoch": 133,
+      "best_sha256": "2c1ac6842121045b1519c312ff8a83dc8da143be74ac893878ede6b4de094963",
+      "parameters": 2784541,
+      "counts": {
+        "test": 254,
+        "train": 2003,
+        "val": 251
+      },
+      "protocol_sha256": "b36c263075758abc1ee3ad0ad6954b28e5ce2dc368e7371a9fd944909bb18f6d",
+      "test_sha256": "9e1a91b76e82d48477d1ff497f75ca99b32f33472006fd5c1895612d0c99456d",
+      "test": {
+        "best_sha256": "2c1ac6842121045b1519c312ff8a83dc8da143be74ac893878ede6b4de094963",
+        "checkpoint_epoch": 133,
+        "identity_sha256": "6d63fc670a28bb8c3946c72bf8603a162c167a2946f1688861110de8f4543f63",
+        "metric": {
+          "accuracy": 0.9212598425196851,
+          "confusion_matrix": [
+            [
+              42,
+              1,
+              2,
+              1,
+              1
+            ],
+            [
+              0,
+              51,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              0,
+              46,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              2,
+              47,
+              1
+            ],
+            [
+              0,
+              3,
+              0,
+              0,
+              48
+            ]
+          ],
+          "macro_f1": 0.920511182242372,
+          "macro_precision": 0.92199376114082,
+          "macro_recall": 0.9212402658620809,
+          "per_class_recall": [
+            0.8936170212765957,
+            1,
+            0.8846153846153846,
+            0.8867924528301887,
+            0.9411764705882353
+          ]
+        },
+        "threshold": null
+      },
+      "protocol": null
+    },
+    {
+      "trial_id": "sar_acd_full_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sar_acd_full_seed0/result.json",
+      "result_sha256": "052e28a6358b7aa9ed53a7c611e1df856f61eb60c95af2a27292c929246eb124",
+      "metric": {
+        "accuracy": 0.9291338582677166,
+        "confusion_matrix": [
+          [
+            45,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            50,
+            0,
+            0,
+            1
+          ],
+          [
+            6,
+            0,
+            46,
+            0,
+            0
+          ],
+          [
+            8,
+            0,
+            1,
+            44,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            51
+          ]
+        ],
+        "macro_f1": 0.9294812118967932,
+        "macro_precision": 0.9359184412574242,
+        "macro_recall": 0.9305286058468102,
+        "per_class_recall": [
+          0.9574468085106383,
+          0.9803921568627451,
+          0.8846153846153846,
+          0.8301886792452831,
+          1
+        ]
+      },
+      "best_epoch": 86,
+      "best_sha256": "3c73a8c0b741e95349490813f9ce3d923c708fcf83f78e93d187500f469820b9",
+      "parameters": 2787075,
+      "counts": {
+        "test": 254,
+        "train": 2003,
+        "val": 251
+      },
+      "protocol_sha256": "b36c263075758abc1ee3ad0ad6954b28e5ce2dc368e7371a9fd944909bb18f6d",
+      "test_sha256": "b6ce184aa021552c32534ca6ac8648ce51c3a78f0e0d25001e4a7c4656ad4b20",
+      "test": {
+        "best_sha256": "3c73a8c0b741e95349490813f9ce3d923c708fcf83f78e93d187500f469820b9",
+        "checkpoint_epoch": 86,
+        "identity_sha256": "492bc486f90bf7ac1fad74e13d83598b7a5c9960c6179f7fc301b53ed1fbfbb0",
+        "metric": {
+          "accuracy": 0.9291338582677166,
+          "confusion_matrix": [
+            [
+              45,
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              50,
+              0,
+              0,
+              1
+            ],
+            [
+              6,
+              0,
+              46,
+              0,
+              0
+            ],
+            [
+              8,
+              0,
+              1,
+              44,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              51
+            ]
+          ],
+          "macro_f1": 0.9294812118967932,
+          "macro_precision": 0.9359184412574242,
+          "macro_recall": 0.9305286058468102,
+          "per_class_recall": [
+            0.9574468085106383,
+            0.9803921568627451,
+            0.8846153846153846,
+            0.8301886792452831,
+            1
+          ]
+        },
+        "threshold": null
+      },
+      "protocol": null
+    },
+    {
+      "trial_id": "sample_original_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_original_seed0/result.json",
+      "result_sha256": "161f3fc0dd2f035beb5e04518a400f6ab7bb3b77706d8e72705e12a88069bdb3",
+      "metric": {
+        "accuracy": 0.9703703703703703,
+        "confusion_matrix": [
+          [
+            18,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            11,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            16,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            18
+          ]
+        ],
+        "macro_f1": 0.9681282779108866,
+        "macro_precision": 0.97165991902834,
+        "macro_recall": 0.9696421225832991,
+        "per_class_recall": [
+          1,
+          1,
+          1,
+          1,
+          0.8461538461538461,
+          1,
+          1,
+          0.9411764705882353,
+          0.9090909090909091,
+          1
+        ]
+      },
+      "best_epoch": 86,
+      "best_sha256": "46a101e3179eef1aedd76992bb67feca3138929b48a3216cab783e3479701faf",
+      "parameters": 2853466,
+      "counts": {
+        "test": 135,
+        "train": 1075,
+        "val": 135
+      },
+      "protocol_sha256": "251231b6f6ae9700aaf0240a56921b8b98fa7e556094016f53e3b7fae1cd1bb5",
+      "test_sha256": "955e5603ff37ec76aef2f4d7a17b6f531bf3856781e25334a2b852d7a58c8b98",
+      "test": {
+        "best_sha256": "46a101e3179eef1aedd76992bb67feca3138929b48a3216cab783e3479701faf",
+        "checkpoint_epoch": 86,
+        "identity_sha256": "48eaa5f2c6d4adaac900c5c0c935ed6f692097c383cf2c9e092e17f82f57730f",
+        "metric": {
+          "accuracy": 0.9703703703703703,
+          "confusion_matrix": [
+            [
+              18,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              9,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              13,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              13,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              13,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              16,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              18
+            ]
+          ],
+          "macro_f1": 0.9681282779108866,
+          "macro_precision": 0.97165991902834,
+          "macro_recall": 0.9696421225832991,
+          "per_class_recall": [
+            1,
+            1,
+            1,
+            1,
+            0.8461538461538461,
+            1,
+            1,
+            0.9411764705882353,
+            0.9090909090909091,
+            1
+          ]
+        },
+        "threshold": null
+      },
+      "protocol": {
+        "annotation_policy": "fail",
+        "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+        "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+        "batch": 64,
+        "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+        "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+        "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+        "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+        "classification_label_smoothing": 0.1,
+        "dataset": "SAMPLE",
+        "epochs": 200,
+        "eval_batch": 64,
+        "grad_accum": 1,
+        "gradient_clip_l2": 5,
+        "historical_results_comparable": false,
+        "imgsz": 224,
+        "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+        "logical_data_sha256": "720071fa7393deda234e06ec6fe12377e80e95ba89bb62f1902d4eeb2f810f12",
+        "lr": 0.0002,
+        "module_warmup_epochs": 0,
+        "normalization": "fixed (RGB/255 - 0.5)/0.5",
+        "optimizer": "AdamW",
+        "patience": 40,
+        "precision": "FP32 (AMP/TF32 off)",
+        "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+        "scheduler": "cosine to 1% initial lr",
+        "schema": "rgsp-cross-trial-v1",
+        "selection_metric": "macro_f1",
+        "split_counts": {
+          "test": 135,
+          "train": 1075,
+          "val": 135
+        },
+        "task": "classification",
+        "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+        "weight_decay": 0.0005
+      }
+    },
+    {
+      "trial_id": "sample_matched_scale075_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_matched_scale075_seed0/result.json",
+      "result_sha256": "9ba38eb5ea9929b87a4a19ac6165b3bdb012a38f2aa1e166756bf28388e4a47f",
+      "metric": {
+        "accuracy": 0.9851851851851852,
+        "confusion_matrix": [
+          [
+            18,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            12,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            12,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            17,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            11,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            18
+          ]
+        ],
+        "macro_f1": 0.9835457875457877,
+        "macro_precision": 0.9832167832167833,
+        "macro_recall": 0.9846153846153847,
+        "per_class_recall": [
+          1,
+          1,
+          1,
+          0.9230769230769231,
+          0.9230769230769231,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "best_epoch": 137,
+      "best_sha256": "8df22701ce24971d6eb0e2a8a3a58306056634cf6714f56993523a00b987101f",
+      "parameters": 2785826,
+      "counts": {
+        "test": 135,
+        "train": 1075,
+        "val": 135
+      },
+      "protocol_sha256": "251231b6f6ae9700aaf0240a56921b8b98fa7e556094016f53e3b7fae1cd1bb5",
+      "test_sha256": "4a4cbca2087170d11041b0d64ba82ef4fc56327ee4f32c1b54263b1658b2188e",
+      "test": {
+        "best_sha256": "8df22701ce24971d6eb0e2a8a3a58306056634cf6714f56993523a00b987101f",
+        "checkpoint_epoch": 137,
+        "identity_sha256": "aca9f55ccf10a1d2343e751506c67ed822fd9da73c6b516f09ce157254c6f7fc",
+        "metric": {
+          "accuracy": 0.9851851851851852,
+          "confusion_matrix": [
+            [
+              18,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              9,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              12,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              12,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              13,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              13,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              17,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              11,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              18
+            ]
+          ],
+          "macro_f1": 0.9835457875457877,
+          "macro_precision": 0.9832167832167833,
+          "macro_recall": 0.9846153846153847,
+          "per_class_recall": [
+            1,
+            1,
+            1,
+            0.9230769230769231,
+            0.9230769230769231,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "threshold": null
+      },
+      "protocol": null
+    },
+    {
+      "trial_id": "sample_full_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/sample_full_seed0/result.json",
+      "result_sha256": "1ca580d9b452068922fdb299ecd8c71f2ea5b5c3f7e521ed4378f6746ffbd7c8",
+      "metric": {
+        "accuracy": 0.9777777777777777,
+        "confusion_matrix": [
+          [
+            18,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            12,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            16,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            18
+          ]
+        ],
+        "macro_f1": 0.977039481039481,
+        "macro_precision": 0.9785030758714969,
+        "macro_recall": 0.9773344302756067,
+        "per_class_recall": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0.9230769230769231,
+          0.9411764705882353,
+          0.9090909090909091,
+          1
+        ]
+      },
+      "best_epoch": 81,
+      "best_sha256": "92407b44ce5c41f2d86e868bce5be60a937f2b3b9a6a07be0790b49598804250",
+      "parameters": 2788360,
+      "counts": {
+        "test": 135,
+        "train": 1075,
+        "val": 135
+      },
+      "protocol_sha256": "251231b6f6ae9700aaf0240a56921b8b98fa7e556094016f53e3b7fae1cd1bb5",
+      "test_sha256": "59cc7010208d29f1df061d38989d7a2522a32e4612ebfd618deaee2f18ee41ea",
+      "test": {
+        "best_sha256": "92407b44ce5c41f2d86e868bce5be60a937f2b3b9a6a07be0790b49598804250",
+        "checkpoint_epoch": 81,
+        "identity_sha256": "b64b2a376f1f54297b8f18881148ec6b44145e063b1fd8c7d1afec06d10aa15e",
+        "metric": {
+          "accuracy": 0.9777777777777777,
+          "confusion_matrix": [
+            [
+              18,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              9,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              13,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              13,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              13,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              12,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              16,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              10,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              18
+            ]
+          ],
+          "macro_f1": 0.977039481039481,
+          "macro_precision": 0.9785030758714969,
+          "macro_recall": 0.9773344302756067,
+          "per_class_recall": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0.9230769230769231,
+            0.9411764705882353,
+            0.9090909090909091,
+            1
+          ]
+        },
+        "threshold": null
+      },
+      "protocol": null
+    },
+    {
+      "trial_id": "ottawa_original_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_original_seed0/result.json",
+      "result_sha256": "fae6c86e7bc215bf8e42200bfd2c9a427d19934cfbedb4167aec4af5502d9040",
+      "metric": {
+        "evaluated_native_unique_pixels": 18432,
+        "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+        "f1": 0.9642218246869411,
+        "fn": 93,
+        "fp": 107,
+        "iou": 0.9309153713298791,
+        "kappa": 0.9578267833971515,
+        "oa": 0.9891493055555556,
+        "precision": 0.9618129907209136,
+        "recall": 0.9666427546628408,
+        "tn": 15537,
+        "tp": 2695
+      },
+      "best_epoch": 51,
+      "best_sha256": "256baf0a4ecdf99e8d9b6e7e7aab9eeb1f3d297cc5054c43b6783c8fd7dfa45a",
+      "parameters": 3782737,
+      "counts": {
+        "test": 32,
+        "train": 112,
+        "val": 24
+      },
+      "protocol_sha256": "65e6c9f98f6084b2d5c3c94ef662510777176ce306a3205a0f02df59d2db57e0",
+      "test_sha256": "e15feffda8018062199a8b7b1e549dd0d72b34cf03e801fef608845c18a5b481",
+      "test": {
+        "best_sha256": "256baf0a4ecdf99e8d9b6e7e7aab9eeb1f3d297cc5054c43b6783c8fd7dfa45a",
+        "checkpoint_epoch": 51,
+        "identity_sha256": "58c87976cb7b7825fecad6d26a587cfa3ce1c80fcfaa72a4f55473e421538cae",
+        "metric": {
+          "evaluated_native_unique_pixels": 18432,
+          "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+          "f1": 0.9642218246869411,
+          "fn": 93,
+          "fp": 107,
+          "iou": 0.9309153713298791,
+          "kappa": 0.9578267833971515,
+          "oa": 0.9891493055555556,
+          "precision": 0.9618129907209136,
+          "recall": 0.9666427546628408,
+          "tn": 15537,
+          "tp": 2695
+        },
+        "threshold": 0.8
+      },
+      "protocol": {
+        "annotation_policy": "fail",
+        "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+        "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+        "batch": 16,
+        "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+        "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+        "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+        "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+        "classification_label_smoothing": 0.1,
+        "dataset": "Ottawa",
+        "epochs": 150,
+        "eval_batch": 16,
+        "grad_accum": 1,
+        "gradient_clip_l2": 5,
+        "historical_results_comparable": false,
+        "imgsz": 192,
+        "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+        "logical_data_sha256": "af42e4de932e50b34e768e0a4d1f0bb690edc62390ce939d4285fb347075ec33",
+        "lr": 0.0002,
+        "module_warmup_epochs": 0,
+        "normalization": "fixed (RGB/255 - 0.5)/0.5",
+        "optimizer": "AdamW",
+        "patience": 25,
+        "precision": "FP32 (AMP/TF32 off)",
+        "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+        "scheduler": "cosine to 1% initial lr",
+        "schema": "rgsp-cross-trial-v1",
+        "selection_metric": "f1",
+        "split_counts": {
+          "test": 32,
+          "train": 112,
+          "val": 24
+        },
+        "task": "change_detection",
+        "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+        "weight_decay": 0.0005
+      }
+    },
+    {
+      "trial_id": "ottawa_matched_scale075_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_matched_scale075_seed0/result.json",
+      "result_sha256": "e26959ccf664fdde4598443546b101f4495eebb53da03d36c2b365776892ffd4",
+      "metric": {
+        "evaluated_native_unique_pixels": 18432,
+        "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+        "f1": 0.9630692004302617,
+        "fn": 102,
+        "fp": 104,
+        "iou": 0.9287690179806363,
+        "kappa": 0.9564847866734658,
+        "oa": 0.9888237847222222,
+        "precision": 0.9627240143369176,
+        "recall": 0.9634146341463414,
+        "tn": 15540,
+        "tp": 2686
+      },
+      "best_epoch": 77,
+      "best_sha256": "1d3054243c4f8134e22a520399bfecb1c96a52b548732b41b02aa18e912fa855",
+      "parameters": 3715097,
+      "counts": {
+        "test": 32,
+        "train": 112,
+        "val": 24
+      },
+      "protocol_sha256": "65e6c9f98f6084b2d5c3c94ef662510777176ce306a3205a0f02df59d2db57e0",
+      "test_sha256": "b8e864b7ac8e3e7404e8339a668d224aba78f44aaea223d7641df909f916adb6",
+      "test": {
+        "best_sha256": "1d3054243c4f8134e22a520399bfecb1c96a52b548732b41b02aa18e912fa855",
+        "checkpoint_epoch": 77,
+        "identity_sha256": "e7cde6a8e8fce6a17a98495be283e3139ae9ad73f66fa691325678987f548da0",
+        "metric": {
+          "evaluated_native_unique_pixels": 18432,
+          "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+          "f1": 0.9630692004302617,
+          "fn": 102,
+          "fp": 104,
+          "iou": 0.9287690179806363,
+          "kappa": 0.9564847866734658,
+          "oa": 0.9888237847222222,
+          "precision": 0.9627240143369176,
+          "recall": 0.9634146341463414,
+          "tn": 15540,
+          "tp": 2686
+        },
+        "threshold": 0.65
+      },
+      "protocol": null
+    },
+    {
+      "trial_id": "ottawa_full_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/ottawa_full_seed0/result.json",
+      "result_sha256": "1623006678b4861d8e34e052e8b4bcc973bc200e5a56c5082ea730842fe81f23",
+      "metric": {
+        "evaluated_native_unique_pixels": 18432,
+        "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+        "f1": 0.9672779575692196,
+        "fn": 98,
+        "fp": 84,
+        "iou": 0.9366295264623955,
+        "kappa": 0.9614636759893287,
+        "oa": 0.9901258680555556,
+        "precision": 0.969718817591925,
+        "recall": 0.9648493543758967,
+        "tn": 15560,
+        "tp": 2690
+      },
+      "best_epoch": 94,
+      "best_sha256": "a554357025b5b96f45b024ea56cc401051ae1928828b2ff130a0ce063475637b",
+      "parameters": 3717631,
+      "counts": {
+        "test": 32,
+        "train": 112,
+        "val": 24
+      },
+      "protocol_sha256": "65e6c9f98f6084b2d5c3c94ef662510777176ce306a3205a0f02df59d2db57e0",
+      "test_sha256": "cf786d512f01c4a8719254338373b7e580ac37cc2c48ae93b14398677b9250d7",
+      "test": {
+        "best_sha256": "a554357025b5b96f45b024ea56cc401051ae1928828b2ff130a0ce063475637b",
+        "checkpoint_epoch": 94,
+        "identity_sha256": "3df847c95f5de3d0cb9ffde1c5d5c97d37fb2cc01cff8c9309da8f8fab33400e",
+        "metric": {
+          "evaluated_native_unique_pixels": 18432,
+          "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+          "f1": 0.9672779575692196,
+          "fn": 98,
+          "fp": 84,
+          "iou": 0.9366295264623955,
+          "kappa": 0.9614636759893287,
+          "oa": 0.9901258680555556,
+          "precision": 0.969718817591925,
+          "recall": 0.9648493543758967,
+          "tn": 15560,
+          "tp": 2690
+        },
+        "threshold": 0.65
+      },
+      "protocol": null
+    },
+    {
+      "trial_id": "farmland_original_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_original_seed0/result.json",
+      "result_sha256": "7a1ba14ec1945016b98f4f280855907246aa88caca12d9131bcf1e1d411717a7",
+      "metric": {
+        "evaluated_native_unique_pixels": 9216,
+        "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+        "f1": 0,
+        "fn": 365,
+        "fp": 0,
+        "iou": 0,
+        "kappa": 0,
+        "oa": 0.9603949652777778,
+        "precision": 0,
+        "recall": 0,
+        "tn": 8851,
+        "tp": 0
+      },
+      "best_epoch": 54,
+      "best_sha256": "e83ebeef789f7cebd2454bc1e1c439bf9bdaa79c559df91a49dfd8cde98870f5",
+      "parameters": 3782737,
+      "counts": {
+        "test": 16,
+        "train": 112,
+        "val": 16
+      },
+      "protocol_sha256": "0a35cf65390feca192d2d8e7df423b46cea401b091ede0f8ab9690eac6bf7838",
+      "test_sha256": "62a50b04d07a9d1dad77581bef8f7e2b3bd040d1e631b5609f8d098b23bc7c2c",
+      "test": {
+        "best_sha256": "e83ebeef789f7cebd2454bc1e1c439bf9bdaa79c559df91a49dfd8cde98870f5",
+        "checkpoint_epoch": 54,
+        "identity_sha256": "02b7bb23541ca3363dcd425d3bef62cc7e3e00e79a0a8b7076361ecd31e3b242",
+        "metric": {
+          "evaluated_native_unique_pixels": 9216,
+          "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+          "f1": 0,
+          "fn": 365,
+          "fp": 0,
+          "iou": 0,
+          "kappa": 0,
+          "oa": 0.9603949652777778,
+          "precision": 0,
+          "recall": 0,
+          "tn": 8851,
+          "tp": 0
+        },
+        "threshold": 0.9
+      },
+      "protocol": {
+        "annotation_policy": "fail",
+        "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+        "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+        "batch": 16,
+        "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+        "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+        "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+        "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+        "classification_label_smoothing": 0.1,
+        "dataset": "Farmland",
+        "epochs": 150,
+        "eval_batch": 16,
+        "grad_accum": 1,
+        "gradient_clip_l2": 5,
+        "historical_results_comparable": false,
+        "imgsz": 192,
+        "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+        "logical_data_sha256": "0e007ca873ae423733593f721beb54ae156eea45b68188e0fded5b69ddd51fb8",
+        "lr": 0.0002,
+        "module_warmup_epochs": 0,
+        "normalization": "fixed (RGB/255 - 0.5)/0.5",
+        "optimizer": "AdamW",
+        "patience": 25,
+        "precision": "FP32 (AMP/TF32 off)",
+        "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+        "scheduler": "cosine to 1% initial lr",
+        "schema": "rgsp-cross-trial-v1",
+        "selection_metric": "f1",
+        "split_counts": {
+          "test": 16,
+          "train": 112,
+          "val": 16
+        },
+        "task": "change_detection",
+        "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+        "weight_decay": 0.0005
+      }
+    },
+    {
+      "trial_id": "farmland_matched_scale075_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_matched_scale075_seed0/result.json",
+      "result_sha256": "857bff76ac898a7b84cc85b52e2666410e68221676fc8fb4f17153c017889ace",
+      "metric": {
+        "evaluated_native_unique_pixels": 9216,
+        "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+        "f1": 0.41304347826086957,
+        "fn": 270,
+        "fp": 0,
+        "iou": 0.2602739726027397,
+        "kappa": 0.4032820065179696,
+        "oa": 0.970703125,
+        "precision": 1,
+        "recall": 0.2602739726027397,
+        "tn": 8851,
+        "tp": 95
+      },
+      "best_epoch": 54,
+      "best_sha256": "0b816490b35d6d8d958f5b8eac19d8ed91b9e42d07f6b2fccde45058b14ae40a",
+      "parameters": 3715097,
+      "counts": {
+        "test": 16,
+        "train": 112,
+        "val": 16
+      },
+      "protocol_sha256": "0a35cf65390feca192d2d8e7df423b46cea401b091ede0f8ab9690eac6bf7838",
+      "test_sha256": "93a3bd85a8b99c5d6273613110ca3fa26e09447393b5210383cc566e0e5ec64e",
+      "test": {
+        "best_sha256": "0b816490b35d6d8d958f5b8eac19d8ed91b9e42d07f6b2fccde45058b14ae40a",
+        "checkpoint_epoch": 54,
+        "identity_sha256": "e352a68534c8c0da50880d9afb0ca8141540c2c7ce88ba9fa9eb49876644dd76",
+        "metric": {
+          "evaluated_native_unique_pixels": 9216,
+          "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+          "f1": 0.41304347826086957,
+          "fn": 270,
+          "fp": 0,
+          "iou": 0.2602739726027397,
+          "kappa": 0.4032820065179696,
+          "oa": 0.970703125,
+          "precision": 1,
+          "recall": 0.2602739726027397,
+          "tn": 8851,
+          "tp": 95
+        },
+        "threshold": 0.85
+      },
+      "protocol": null
+    },
+    {
+      "trial_id": "farmland_full_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_full_seed0/result.json",
+      "result_sha256": "5e38bb395379772645c1429abe994561f978d8afe4d7d49aeaacf9ff1d139198",
+      "metric": {
+        "evaluated_native_unique_pixels": 9216,
+        "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+        "f1": 0.42332613390928725,
+        "fn": 267,
+        "fp": 0,
+        "iou": 0.2684931506849315,
+        "kappa": 0.413492845136705,
+        "oa": 0.9710286458333334,
+        "precision": 1,
+        "recall": 0.2684931506849315,
+        "tn": 8851,
+        "tp": 98
+      },
+      "best_epoch": 26,
+      "best_sha256": "ad09b0afc37f88015d9063f25a0b8688accdec03fdedf83697f2192939db999f",
+      "parameters": 3717631,
+      "counts": {
+        "test": 16,
+        "train": 112,
+        "val": 16
+      },
+      "protocol_sha256": "0a35cf65390feca192d2d8e7df423b46cea401b091ede0f8ab9690eac6bf7838",
+      "test_sha256": "edae6832c601e476c12e18db1b68b6403b336b523d52150fb99869648d9bd0fe",
+      "test": {
+        "best_sha256": "ad09b0afc37f88015d9063f25a0b8688accdec03fdedf83697f2192939db999f",
+        "checkpoint_epoch": 26,
+        "identity_sha256": "66b705e2a16a20b466e23136ec78fc733bd10b51f374d15dba32c2eada8148dc",
+        "metric": {
+          "evaluated_native_unique_pixels": 9216,
+          "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+          "f1": 0.42332613390928725,
+          "fn": 267,
+          "fp": 0,
+          "iou": 0.2684931506849315,
+          "kappa": 0.413492845136705,
+          "oa": 0.9710286458333334,
+          "precision": 1,
+          "recall": 0.2684931506849315,
+          "tn": 8851,
+          "tp": 98
+        },
+        "threshold": 0.9
+      },
+      "protocol": null
+    },
+    {
+      "trial_id": "yellow_river_original_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_original_seed0/result.json",
+      "result_sha256": "1ee1043eb3d0f5bc685c11e2cfa6fb43501ba00d6a4b7efbd9d6880916cfb1f5",
+      "metric": {
+        "evaluated_native_unique_pixels": 9216,
+        "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+        "f1": 0.7897280966767373,
+        "fn": 19,
+        "fp": 677,
+        "iou": 0.6525212181727409,
+        "kappa": 0.7459003924670661,
+        "oa": 0.9244791666666666,
+        "precision": 0.6587701612903226,
+        "recall": 0.9856711915535445,
+        "tn": 7213,
+        "tp": 1307
+      },
+      "best_epoch": 32,
+      "best_sha256": "dae57b65d6a0622a3216666d0a710fb33593bb61bcd2241812519df9424d65a5",
+      "parameters": 3782737,
+      "counts": {
+        "test": 16,
+        "train": 100,
+        "val": 16
+      },
+      "protocol_sha256": "7e20b559cfe9b6364bd0aeeceb9d024ed8f4d0a0f648bc4da3fd416e74620c0f",
+      "test_sha256": "d3d644f663c4015a5c13f8f902937ebbc7c00b4507b45745f8e3eed47c50e2d3",
+      "test": {
+        "best_sha256": "dae57b65d6a0622a3216666d0a710fb33593bb61bcd2241812519df9424d65a5",
+        "checkpoint_epoch": 32,
+        "identity_sha256": "3cca6447e7213cc335a20d8382be6b3366f6678b39949ce6c33fb37e8b275f50",
+        "metric": {
+          "evaluated_native_unique_pixels": 9216,
+          "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+          "f1": 0.7897280966767373,
+          "fn": 19,
+          "fp": 677,
+          "iou": 0.6525212181727409,
+          "kappa": 0.7459003924670661,
+          "oa": 0.9244791666666666,
+          "precision": 0.6587701612903226,
+          "recall": 0.9856711915535445,
+          "tn": 7213,
+          "tp": 1307
+        },
+        "threshold": 0.15
+      },
+      "protocol": {
+        "annotation_policy": "fail",
+        "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+        "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+        "batch": 16,
+        "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+        "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+        "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+        "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+        "classification_label_smoothing": 0.1,
+        "dataset": "Yellow_River",
+        "epochs": 150,
+        "eval_batch": 16,
+        "grad_accum": 1,
+        "gradient_clip_l2": 5,
+        "historical_results_comparable": false,
+        "imgsz": 192,
+        "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+        "logical_data_sha256": "06671e955b4c1fecfd0ffb7c56c661231d5e4a6832e288b2527811b4d8ea2241",
+        "lr": 0.0002,
+        "module_warmup_epochs": 0,
+        "normalization": "fixed (RGB/255 - 0.5)/0.5",
+        "optimizer": "AdamW",
+        "patience": 25,
+        "precision": "FP32 (AMP/TF32 off)",
+        "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+        "scheduler": "cosine to 1% initial lr",
+        "schema": "rgsp-cross-trial-v1",
+        "selection_metric": "f1",
+        "split_counts": {
+          "test": 16,
+          "train": 100,
+          "val": 16
+        },
+        "task": "change_detection",
+        "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+        "weight_decay": 0.0005
+      }
+    },
+    {
+      "trial_id": "yellow_river_matched_scale075_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_matched_scale075_seed0/result.json",
+      "result_sha256": "8d4e6128bf6891771338df6e03ee3c6859058b8c55f7e71e77ecdf6e00ecd564",
+      "metric": {
+        "evaluated_native_unique_pixels": 9216,
+        "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+        "f1": 0.6919291338582677,
+        "fn": 623,
+        "fp": 3,
+        "iou": 0.5289691497366441,
+        "kappa": 0.657706738813143,
+        "oa": 0.9320746527777778,
+        "precision": 0.9957507082152974,
+        "recall": 0.5301659125188537,
+        "tn": 7887,
+        "tp": 703
+      },
+      "best_epoch": 37,
+      "best_sha256": "649f1e46dc1e4473bbe7339f8e962a65d8c947be5f784abb5ba3b551a0a5f687",
+      "parameters": 3715097,
+      "counts": {
+        "test": 16,
+        "train": 100,
+        "val": 16
+      },
+      "protocol_sha256": "7e20b559cfe9b6364bd0aeeceb9d024ed8f4d0a0f648bc4da3fd416e74620c0f",
+      "test_sha256": "f437a20b7b14ee58984106a3908b96f57d84100368bc40c6956848e87c4386d5",
+      "test": {
+        "best_sha256": "649f1e46dc1e4473bbe7339f8e962a65d8c947be5f784abb5ba3b551a0a5f687",
+        "checkpoint_epoch": 37,
+        "identity_sha256": "a093b3c5c1e1d5ab4baf3af7cd30391c81986c68be992fef0a8fff59ca3057b4",
+        "metric": {
+          "evaluated_native_unique_pixels": 9216,
+          "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+          "f1": 0.6919291338582677,
+          "fn": 623,
+          "fp": 3,
+          "iou": 0.5289691497366441,
+          "kappa": 0.657706738813143,
+          "oa": 0.9320746527777778,
+          "precision": 0.9957507082152974,
+          "recall": 0.5301659125188537,
+          "tn": 7887,
+          "tp": 703
+        },
+        "threshold": 0.6
+      },
+      "protocol": null
+    },
+    {
+      "trial_id": "yellow_river_full_seed0",
+      "result_path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/yellow_river_full_seed0/result.json",
+      "result_sha256": "f8623f0da087daaded6ccd326bb4fe1a35aa2785b0a22d22036452efdb29d79d",
+      "metric": {
+        "evaluated_native_unique_pixels": 9216,
+        "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+        "f1": 0.8126901347240331,
+        "fn": 391,
+        "fp": 40,
+        "iou": 0.6844802342606149,
+        "kappa": 0.7866794527010175,
+        "oa": 0.9532335069444444,
+        "precision": 0.958974358974359,
+        "recall": 0.7051282051282052,
+        "tn": 7850,
+        "tp": 935
+      },
+      "best_epoch": 71,
+      "best_sha256": "fba06e76f7232158150b8e68bc3132aaaef33836a844cb46ef12a1b1a2f30ec2",
+      "parameters": 3717631,
+      "counts": {
+        "test": 16,
+        "train": 100,
+        "val": 16
+      },
+      "protocol_sha256": "7e20b559cfe9b6364bd0aeeceb9d024ed8f4d0a0f648bc4da3fd416e74620c0f",
+      "test_sha256": "cc076d0252e41c19be8de898a1118eab73a7f5141c96c47ba3621442a5e8571c",
+      "test": {
+        "best_sha256": "fba06e76f7232158150b8e68bc3132aaaef33836a844cb46ef12a1b1a2f30ec2",
+        "checkpoint_epoch": 71,
+        "identity_sha256": "0c207c6c63c47d3e1f3094a4de97a3c678e9b57a0f5a8056f4f7b7f7ebcdf26f",
+        "metric": {
+          "evaluated_native_unique_pixels": 9216,
+          "evaluation_unit": "native_unique_pixel_mean_overlapping_probabilities",
+          "f1": 0.8126901347240331,
+          "fn": 391,
+          "fp": 40,
+          "iou": 0.6844802342606149,
+          "kappa": 0.7866794527010175,
+          "oa": 0.9532335069444444,
+          "precision": 0.958974358974359,
+          "recall": 0.7051282051282052,
+          "tn": 7850,
+          "tp": 935
+        },
+        "threshold": 0.25
+      },
+      "protocol": null
+    }
+  ]
+}

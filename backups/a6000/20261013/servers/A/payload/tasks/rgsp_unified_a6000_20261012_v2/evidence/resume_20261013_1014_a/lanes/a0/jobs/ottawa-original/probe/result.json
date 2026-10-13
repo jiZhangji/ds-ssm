@@ -1,0 +1,21 @@
+{
+  "dataset": "Ottawa",
+  "estimate_basis": "4 timed optimizer updates after 2 warmup updates; full150epoch estimate plus size-only evaluation allowance",
+  "estimated_full_seconds": 215.24278922347418,
+  "method": "Original",
+  "params": 3782737,
+  "peak_gpu_allocated_bytes": 2104282112,
+  "protocol_sha256": "7810f673af85c974e78e5c340a956cb6958f516ffa467e29f04ba091eb8d775f",
+  "seed": 0,
+  "status": "PROBE_PASS",
+  "task": "change_detection",
+  "test_evaluated": false,
+  "timed_update_seconds": [
+    0.5444374639773741,
+    0.41131394100375473,
+    0.5406617419794202,
+    0.4100772470119409
+  ],
+  "updates_per_epoch": 2,
+  "validation_evaluated": false
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "method": "FCOS-R50-FPN",
+    "params": 32113227,
+    "flops_g": 157.1584768,
+    "unsupported": {
+      "aten::max_pool2d": 1,
+      "aten::add_": 16,
+      "aten::add": 2,
+      "aten::mul": 5,
+      "aten::exp": 5
+    },
+    "config": "fcos/fcos_r50-caffe_fpn_gn-head_1x_coco.py",
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ]
+  },
+  {
+    "method": "Cascade-RCNN-R50-FPN",
+    "params": 69151841,
+    "flops_g": 237.3948928,
+    "unsupported": {
+      "aten::max_pool2d": 2,
+      "aten::add_": 22,
+      "aten::add": 34,
+      "aten::mul": 38,
+      "aten::repeat": 13,
+      "aten::sigmoid": 5,
+      "aten::sort": 4,
+      "aten::sub": 12,
+      "aten::exp": 3,
+      "prim::PythonOp.NMSop": 1,
+      "aten::sqrt": 3,
+      "aten::div": 4,
+      "aten::log2": 3,
+      "prim::PythonOp.RoIAlignFunction": 6,
+      "aten::sum": 6
+    },
+    "config": "cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py",
+    "classes": 1,
+    "input": [
+      1,
+      3,
+      640,
+      640
+    ]
+  }
+]

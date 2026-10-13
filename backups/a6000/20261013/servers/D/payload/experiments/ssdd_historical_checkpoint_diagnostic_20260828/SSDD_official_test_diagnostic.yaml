@@ -1,0 +1,6 @@
+path: /home/powerleader/ig-ds-ssm/data/sar4_prepared/SSDD
+train: images/train
+val: images/test
+test: images/test
+names:
+  0: ship

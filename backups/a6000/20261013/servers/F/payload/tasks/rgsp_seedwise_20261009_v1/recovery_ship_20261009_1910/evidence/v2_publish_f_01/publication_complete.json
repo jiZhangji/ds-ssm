@@ -1,0 +1,34 @@
+{
+  "candidate": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/v2_publish_f_01/readiness.candidate.json",
+    "sha256": "18fee34bcdb8e790114bfedffb79ac18619116a2f2f41e6168b65a72ce5e8c31",
+    "size": 1047
+  },
+  "candidate_validation": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/recovery_ship_20261009_1910/evidence/v2_publish_f_01/candidate_validation.json",
+    "sha256": "25f5a7425636d8deafbbd4ea10b4a93e8de53a25817fb71de10aad902b0adc35",
+    "size": 1878
+  },
+  "existing_files_overwritten": false,
+  "hostname": "powerleader-a6000-f",
+  "manifest": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/data_content.json",
+    "sha256": "2b30f37c7eaa9d5118354736959e64035841a3219ea3fd44963ae52ee6fbda78",
+    "size": 20455551
+  },
+  "publication": "atomic_no_clobber_hard_link",
+  "published_utc": "2026-10-09T12:16:21.415907+00:00",
+  "readiness": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/readiness.json",
+    "sha256": "18fee34bcdb8e790114bfedffb79ac18619116a2f2f41e6168b65a72ce5e8c31",
+    "size": 1047
+  },
+  "readiness_written": true,
+  "schema": "rgsp-ship-publication-gate-v2",
+  "stage_complete": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/data/sar_shipdataset/stage_complete.json",
+    "sha256": "a4e689cc4e5f7c18f9863d431fd4a87ce841cb51276cc140de71d3021fde1512",
+    "size": 490
+  },
+  "status": "published"
+}

@@ -1,0 +1,30 @@
+{
+  "completed": [
+    "sadd_matched_scale075_seed0",
+    "sadd_full_seed0",
+    "sadd_local_energy_seed0",
+    "sadd_matched_identity_seed0",
+    "sadd_cnn_yolov8n_seed0"
+  ],
+  "current": "sar_acd_original_seed0",
+  "error": "RuntimeError('Trial failed with exit 1; stopped lane; see /home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/lanes/a_seed0/logs/sar_acd_original_seed0.log')",
+  "failed_utc": "2026-10-09T05:11:25.387826+00:00",
+  "gpu": {
+    "checked_utc": "2026-10-09T05:11:22.259386+00:00",
+    "compute_processes": [],
+    "memory_total_mib": 49140,
+    "memory_used_mib": 530,
+    "name": "NVIDIA RTX A6000",
+    "utilization_percent": 1,
+    "uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964"
+  },
+  "gpu_uuid": "GPU-12cf4841-46b9-94d1-2715-9932134cf964",
+  "host": "powerleader-PT6620W",
+  "lane": "a_seed0",
+  "pid": 122932,
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "schema": "rgsp-seedwise-v1",
+  "started_utc": "2026-10-09T03:30:14.772006+00:00",
+  "state": "failed",
+  "updated_utc": "2026-10-09T05:11:25.387831+00:00"
+}

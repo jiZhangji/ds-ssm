@@ -1,0 +1,3 @@
+dataset,experiment,variant,placement,state_dim,precision,recall,ap50,ap75,ap50_95,inference_ms,weights
+SSDD,ssdd_scratch_p3_sd16_b32_seed2_a6000c_v1_ssdd_baseline,baseline,baseline,0,0.9106716726417574,0.7454212454212454,0.8548775236112272,0.34139369725039564,0.4237574006031988,6.994817791313961,/home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed2_a6000c_v1_ssdd_baseline/weights/best.pt
+SSDD,ssdd_scratch_p3_sd16_b32_seed2_a6000c_v1_ssdd_full_p3,full,p3,16,0.8975946605278883,0.7875457875457875,0.8514641940831853,0.2673244458055307,0.39206704767201483,6.455891091248085,/home/powerleader/ig-ds-ssm/experiments/ssdd_bs32/ssdd_scratch_p3_sd16_b32_seed2_a6000c_v1_ssdd_full_p3/weights/best.pt

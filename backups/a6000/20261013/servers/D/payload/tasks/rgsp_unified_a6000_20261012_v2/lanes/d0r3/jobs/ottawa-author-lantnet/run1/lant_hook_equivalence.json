@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "repetition": 0,
+      "max_output_difference": 0.0,
+      "max_gradient_difference": 0.0
+    },
+    {
+      "repetition": 1,
+      "max_output_difference": 0.0,
+      "max_gradient_difference": 0.0
+    }
+  ],
+  "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+  "source_audit": {
+    "method": "lantnet",
+    "repository": "https://github.com/summitgao/LANTNet",
+    "commit": "3d22af4a989f96a6b07b4f15e86c73cffd1841a2",
+    "definitions": [
+      {
+        "source": "vendor/lantnet/LANTNet.ipynb",
+        "source_sha256": "0533acc070502570556ecf68f94d835f92b72ec6ca8d7bbd543a4713e51bf5e9",
+        "cell_source_sha256": {
+          "vendor/lantnet/LANTNet.ipynb:cell5": "8ddd8f2c9bd552073d539beb92b6cb727e05b2ee5e61e94313cbbf341d60019e",
+          "vendor/lantnet/LANTNet.ipynb:cell7": "843d02f3114b413956586baec8101b6c4f8406f6cb5210f341217842a1c9c936"
+        },
+        "definitions": [
+          "LANTNet",
+          "LayerAttention"
+        ],
+        "transformed_ast_sha256": "05624c253cb6d386a8a7c415e46b0c78923024758715564b462557524096632a",
+        "precision_cast_rewrites": 0,
+        "hook_once_rewrites": 1
+      }
+    ],
+    "adapter_sha256": "b46c02d514a0c2a37b611a9b411916a773f8b6a5fffa4267bd60b554bded43ce",
+    "registry_sha256": "0cb73614fed59a698b250b6a83c9d1a7ae74bda95ce8d9bc2cd795b36982e81a",
+    "author_source_unmodified": true,
+    "runtime_equivalence": "PENDING_SERVER_VALIDATION"
+  },
+  "timestamp": "2026-10-12T14:15:11.008018+00:00"
+}

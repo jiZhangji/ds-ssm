@@ -1,0 +1,1552 @@
+{
+  "started_utc": "2026-10-09T02:52:33.408769+00:00",
+  "hostname": "powerleader-PT6620W",
+  "python": "3.10.16",
+  "torch": "1.13.1+cu117",
+  "cuda": "11.7",
+  "gpu": "NVIDIA RTX A6000",
+  "cuda_device": 0,
+  "backend": "ultralytics.nn.modules.mamba_yolo",
+  "source_sha256": "05d1900840474e068aec65bc30ca81501fce55a464ca0dc3fbe60054885aade3",
+  "validator_sha256": "9a812c5380f5ccc29368f819ec4bf61a9820f63e94b521950e3ed87a6d1c1bcf",
+  "control_cases": 22,
+  "controls": [
+    {
+      "name": "",
+      "control": "matched_identity",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.0,
+      "alpha": 0.0,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "parameter_scalars": [],
+      "requires_grad": {
+        "lambda_s": false,
+        "alpha": false,
+        "beta_i": false,
+        "rho_i": false,
+        "eta_i": false
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": false,
+      "predictor_parameters_active": false,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": false,
+      "delta_path": false,
+      "min_retain": 1.0,
+      "scalar_gradient_abs": {},
+      "case": "matched_identity",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 8.940696716308594e-08,
+      "gradient_max_abs": 4.76837158203125e-07,
+      "fallback_gradient_max_abs": 2.384185791015625e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 2416,
+      "buffer_elements": 662
+    },
+    {
+      "name": "",
+      "control": "matched_scale075",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.0,
+      "alpha": 0.0,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "parameter_scalars": [],
+      "requires_grad": {
+        "lambda_s": false,
+        "alpha": false,
+        "beta_i": false,
+        "rho_i": false,
+        "eta_i": false
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": false,
+      "predictor_parameters_active": false,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": false,
+      "delta_path": false,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {},
+      "case": "matched_scale075",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 5.960464477539063e-08,
+      "gradient_max_abs": 4.76837158203125e-07,
+      "fallback_gradient_max_abs": 1.1920928955078125e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 2416,
+      "buffer_elements": 662
+    },
+    {
+      "name": "",
+      "control": "residual_scale075",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.0,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "parameter_scalars": [
+        "lambda_s"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": false,
+        "beta_i": false,
+        "rho_i": false,
+        "eta_i": false
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": false,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": false,
+      "delta_path": false,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 4.562979221343994
+      },
+      "case": "residual_scale075",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 1.4901161193847656e-08,
+      "gradient_max_abs": 1.1920928955078125e-07,
+      "fallback_gradient_max_abs": 1.1920928955078125e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 2465,
+      "buffer_elements": 613
+    },
+    {
+      "name": "",
+      "control": "energy_only",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.0,
+      "alpha": 0.7099999785423279,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "lambda_s",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "parameter_scalars": [
+        "alpha"
+      ],
+      "requires_grad": {
+        "lambda_s": false,
+        "alpha": true,
+        "beta_i": false,
+        "rho_i": false,
+        "eta_i": false
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": false,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": false,
+      "delta_path": false,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "alpha": 0.003943413030356169
+      },
+      "case": "energy_only",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 5.960464477539063e-08,
+      "gradient_max_abs": 4.76837158203125e-07,
+      "fallback_gradient_max_abs": 1.7881393432617188e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 2465,
+      "buffer_elements": 613
+    },
+    {
+      "name": "",
+      "control": "local_energy",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": false,
+        "rho_i": false,
+        "eta_i": false
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": false,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": false,
+      "delta_path": false,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 5.779404640197754,
+        "alpha": 0.0007250169292092323
+      },
+      "case": "local_energy",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 2.9802322387695312e-08,
+      "gradient_max_abs": 2.384185791015625e-07,
+      "fallback_gradient_max_abs": 5.960464477539063e-08,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 2466,
+      "buffer_elements": 612
+    },
+    {
+      "name": "",
+      "control": "local_energy_input",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "eta_i"
+      ],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": false
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": false,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 2.358290433883667,
+        "alpha": 0.0049234479665756226,
+        "beta_i": 0.0016607180004939437,
+        "rho_i": 0.006923491135239601
+      },
+      "case": "local_energy_input",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 5.960464477539063e-08,
+      "gradient_max_abs": 2.384185791015625e-07,
+      "fallback_gradient_max_abs": 2.384185791015625e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3077,
+      "buffer_elements": 1
+    },
+    {
+      "name": "",
+      "control": "local_energy_delta",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [
+        "beta_i",
+        "rho_i"
+      ],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": false,
+        "rho_i": false,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": false,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 1.5463380813598633,
+        "alpha": 0.0002080700360238552,
+        "eta_i": 0.013232998549938202
+      },
+      "case": "local_energy_delta",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 1.4901161193847656e-08,
+      "gradient_max_abs": 4.76837158203125e-07,
+      "fallback_gradient_max_abs": 8.940696716308594e-08,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3076,
+      "buffer_elements": 2
+    },
+    {
+      "name": "",
+      "control": "full",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 1.1700220108032227,
+        "alpha": 0.0008694102871231735,
+        "beta_i": 0.000835245184134692,
+        "rho_i": 0.0035774926654994488,
+        "eta_i": 0.021301595494151115
+      },
+      "case": "full",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 1.4901161193847656e-08,
+      "gradient_max_abs": 1.1920928955078125e-07,
+      "fallback_gradient_max_abs": 1.7881393432617188e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3078,
+      "buffer_elements": 0
+    },
+    {
+      "name": "",
+      "control": "full_fixed_half",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": false,
+        "rho_i": false,
+        "eta_i": false
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": false,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": 0.5,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 3.8480913639068604,
+        "alpha": 0.001863455050624907
+      },
+      "case": "full_fixed_half",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 2.9802322387695312e-08,
+      "gradient_max_abs": 4.76837158203125e-07,
+      "fallback_gradient_max_abs": 8.940696716308594e-08,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 2466,
+      "buffer_elements": 612
+    },
+    {
+      "name": "",
+      "control": "guidance_only",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.0,
+      "alpha": 0.0,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [
+        "lambda_s",
+        "alpha"
+      ],
+      "parameter_scalars": [
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": false,
+        "alpha": false,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "beta_i": 0.0021669971756637096,
+        "rho_i": 0.00924039725214243,
+        "eta_i": 0.04691029340028763
+      },
+      "case": "guidance_only",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 2.9802322387695312e-08,
+      "gradient_max_abs": 4.76837158203125e-07,
+      "fallback_gradient_max_abs": 7.152557373046875e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3076,
+      "buffer_elements": 2
+    },
+    {
+      "name": "",
+      "control": "global",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 3.2038674354553223,
+        "alpha": 0.00014144062879495323,
+        "beta_i": 7.144776463974267e-05,
+        "rho_i": 0.00029460768564604223,
+        "eta_i": 0.019804496318101883
+      },
+      "case": "global",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 1.4901161193847656e-08,
+      "gradient_max_abs": 2.384185791015625e-07,
+      "fallback_gradient_max_abs": 2.384185791015625e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3078,
+      "buffer_elements": 0
+    },
+    {
+      "name": "",
+      "control": "full_no_lrc",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.0,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [
+        "lambda_s"
+      ],
+      "parameter_scalars": [
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": false,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": true
+      },
+      "lrc_enabled": false,
+      "trend_parameters_active": false,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "alpha": 0.0006326772272586823,
+        "beta_i": 0.0003270345041528344,
+        "rho_i": 0.0010030026314780116,
+        "eta_i": 0.04709427058696747
+      },
+      "case": "full_no_lrc",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 5.960464477539063e-08,
+      "gradient_max_abs": 4.76837158203125e-07,
+      "fallback_gradient_max_abs": 2.384185791015625e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3029,
+      "buffer_elements": 49
+    },
+    {
+      "name": "",
+      "control": "const_guidance",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 1.0,
+      "rho_i": 1.0,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [
+        "beta_i",
+        "rho_i"
+      ],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": false,
+        "rho_i": false,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": false,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": 0.5,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 2.952981948852539,
+        "alpha": 0.0018080046866089106,
+        "eta_i": 0.03864771127700806
+      },
+      "eta_trained_after_trainer_unfreeze": true,
+      "case": "const_guidance",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 1.4901161193847656e-08,
+      "gradient_max_abs": 2.384185791015625e-07,
+      "fallback_gradient_max_abs": 2.384185791015625e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 2467,
+      "buffer_elements": 611
+    },
+    {
+      "name": "",
+      "control": "post_gate",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.10000000149011612,
+      "buffer_scalars": [
+        "eta_i"
+      ],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": false
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_output_before_shortcut",
+      "input_path": false,
+      "delta_path": false,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 2.741549015045166,
+        "alpha": 0.0002676245348993689,
+        "beta_i": 0.00011093718785559759,
+        "rho_i": 0.0004516851622611284
+      },
+      "ungated_shortcut": "PASS",
+      "case": "post_gate",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 1.4901161193847656e-08,
+      "gradient_max_abs": 2.384185791015625e-07,
+      "fallback_gradient_max_abs": 1.1920928955078125e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3077,
+      "buffer_elements": 1
+    },
+    {
+      "name": "",
+      "control": "lsgm_trend_only",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_only",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 4.506537437438965,
+        "alpha": 0.0016199847450479865,
+        "beta_i": 0.0017260005697607994,
+        "rho_i": 0.006904078647494316,
+        "eta_i": 0.05501092970371246
+      },
+      "case": "lsgm_trend_only",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 1.4901161193847656e-08,
+      "gradient_max_abs": 2.384185791015625e-07,
+      "fallback_gradient_max_abs": 1.1920928955078125e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3078,
+      "buffer_elements": 0
+    },
+    {
+      "name": "",
+      "control": "lsgm_std_only",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "std_only",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 1.1636126041412354,
+        "alpha": 0.002177163492888212,
+        "beta_i": 5.0565533456392586e-05,
+        "rho_i": 0.00020399467030074447,
+        "eta_i": 0.057492632418870926
+      },
+      "case": "lsgm_std_only",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 2.9802322387695312e-08,
+      "gradient_max_abs": 2.384185791015625e-07,
+      "fallback_gradient_max_abs": 2.384185791015625e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3078,
+      "buffer_elements": 0
+    },
+    {
+      "name": "",
+      "control": "lsgm_point_only",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "point_only",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 2.511166572570801,
+        "alpha": 0.001044411095790565,
+        "beta_i": 0.0020693852566182613,
+        "rho_i": 0.008177129551768303,
+        "eta_i": 0.0012527182698249817
+      },
+      "case": "lsgm_point_only",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 2.9802322387695312e-08,
+      "gradient_max_abs": 2.384185791015625e-07,
+      "fallback_gradient_max_abs": 4.76837158203125e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3078,
+      "buffer_elements": 0
+    },
+    {
+      "name": "",
+      "control": "full",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 5
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 6.655575752258301,
+        "alpha": 0.0008019519154913723,
+        "beta_i": 0.0007139170193113387,
+        "rho_i": 0.0030441060662269592,
+        "eta_i": 0.04444457218050957
+      },
+      "case": "full_trend_k5",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 2.9802322387695312e-08,
+      "gradient_max_abs": 9.5367431640625e-07,
+      "fallback_gradient_max_abs": 1.7881393432617188e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3110,
+      "buffer_elements": 0
+    },
+    {
+      "name": "",
+      "control": "full",
+      "options": {
+        "stats_kernel_size": 3,
+        "trend_kernel_size": 7
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 1.2618060111999512,
+        "alpha": 0.00048559039714746177,
+        "beta_i": 9.084318298846483e-05,
+        "rho_i": 0.00041309959487989545,
+        "eta_i": 0.0011513391509652138
+      },
+      "case": "full_trend_k7",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 1.4901161193847656e-08,
+      "gradient_max_abs": 2.384185791015625e-07,
+      "fallback_gradient_max_abs": 2.384185791015625e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3142,
+      "buffer_elements": 0
+    },
+    {
+      "name": "",
+      "control": "full",
+      "options": {
+        "stats_kernel_size": 5,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 0.535117506980896,
+        "alpha": 1.8411782320981729e-06,
+        "beta_i": 0.0009472100646235049,
+        "rho_i": 0.003835042705759406,
+        "eta_i": 0.0001173829659819603
+      },
+      "case": "full_stats_k5",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 1.4901161193847656e-08,
+      "gradient_max_abs": 2.384185791015625e-07,
+      "fallback_gradient_max_abs": 8.940696716308594e-08,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3078,
+      "buffer_elements": 0
+    },
+    {
+      "name": "",
+      "control": "full",
+      "options": {
+        "stats_kernel_size": 7,
+        "trend_kernel_size": 3
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 5.309288501739502,
+        "alpha": 0.0007476687314920127,
+        "beta_i": 0.0003521846083458513,
+        "rho_i": 0.001421312685124576,
+        "eta_i": 0.04725033789873123
+      },
+      "case": "full_stats_k7",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 1.4901161193847656e-08,
+      "gradient_max_abs": 4.76837158203125e-07,
+      "fallback_gradient_max_abs": 1.1920928955078125e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3078,
+      "buffer_elements": 0
+    },
+    {
+      "name": "",
+      "control": "full",
+      "options": {
+        "stats_kernel_size": 7,
+        "trend_kernel_size": 5
+      },
+      "lambda_s": 0.3700000047683716,
+      "alpha": 0.7099999785423279,
+      "beta_i": 0.8299999833106995,
+      "rho_i": 0.6299999952316284,
+      "eta_i": 0.23000000417232513,
+      "buffer_scalars": [],
+      "parameter_scalars": [
+        "lambda_s",
+        "alpha",
+        "beta_i",
+        "rho_i",
+        "eta_i"
+      ],
+      "requires_grad": {
+        "lambda_s": true,
+        "alpha": true,
+        "beta_i": true,
+        "rho_i": true,
+        "eta_i": true
+      },
+      "lrc_enabled": true,
+      "trend_parameters_active": true,
+      "predictor_parameters_active": true,
+      "descriptor_mode": "trend_std",
+      "predictor_input_features": 32,
+      "fixed_importance": null,
+      "importance_factor_location": "scan_input",
+      "input_path": true,
+      "delta_path": true,
+      "min_retain": 0.5,
+      "scalar_gradient_abs": {
+        "lambda_s": 4.413802623748779,
+        "alpha": 4.208882091916166e-05,
+        "beta_i": 3.375302185304463e-05,
+        "rho_i": 0.00014678128354717046,
+        "eta_i": 0.0040151942521333694
+      },
+      "case": "full_independent_k5_k7",
+      "status": "PASS",
+      "common_initialization": "PASS",
+      "output_max_abs": 1.4901161193847656e-08,
+      "gradient_max_abs": 9.5367431640625e-07,
+      "fallback_gradient_max_abs": 1.1920928955078125e-07,
+      "inactive_buffers_after_optimizer": "PASS",
+      "serialized_reload": {
+        "full_module": "PASS",
+        "state_dict": "PASS",
+        "stripped_parameters_audit": "PASS"
+      },
+      "parameters": 3110,
+      "buffer_elements": 0
+    }
+  ],
+  "legacy_equivalence": {
+    "default_equals_full": "PASS",
+    "missing_new_attributes_reload": "PASS",
+    "old_source_comparison": "PASS",
+    "source_sha256": "c5248810985a825e32eeef4b276b821230ce1b999970e73ee9d87ecb8f5a7add",
+    "controls": [
+      {
+        "control": null,
+        "forward_bitwise_equal": true,
+        "gradient_max_abs": 1.862645149230957e-09,
+        "old_vs_old_gradient_max_abs": 1.862645149230957e-09,
+        "gradient_tolerance": {
+          "rtol": 1e-05,
+          "atol": 2e-07
+        }
+      },
+      {
+        "control": "matched_identity",
+        "forward_bitwise_equal": true,
+        "gradient_max_abs": 2.9802322387695312e-08,
+        "old_vs_old_gradient_max_abs": 7.450580596923828e-09,
+        "gradient_tolerance": {
+          "rtol": 1e-05,
+          "atol": 2e-07
+        }
+      },
+      {
+        "control": "matched_scale075",
+        "forward_bitwise_equal": true,
+        "gradient_max_abs": 3.725290298461914e-09,
+        "old_vs_old_gradient_max_abs": 3.725290298461914e-09,
+        "gradient_tolerance": {
+          "rtol": 1e-05,
+          "atol": 2e-07
+        }
+      },
+      {
+        "control": "residual_scale075",
+        "forward_bitwise_equal": true,
+        "gradient_max_abs": 3.725290298461914e-09,
+        "old_vs_old_gradient_max_abs": 3.725290298461914e-09,
+        "gradient_tolerance": {
+          "rtol": 1e-05,
+          "atol": 2e-07
+        }
+      },
+      {
+        "control": "energy_only",
+        "forward_bitwise_equal": true,
+        "gradient_max_abs": 7.450580596923828e-09,
+        "old_vs_old_gradient_max_abs": 7.450580596923828e-09,
+        "gradient_tolerance": {
+          "rtol": 1e-05,
+          "atol": 2e-07
+        }
+      },
+      {
+        "control": "local_energy",
+        "forward_bitwise_equal": true,
+        "gradient_max_abs": 7.450580596923828e-09,
+        "old_vs_old_gradient_max_abs": 3.725290298461914e-09,
+        "gradient_tolerance": {
+          "rtol": 1e-05,
+          "atol": 2e-07
+        }
+      },
+      {
+        "control": "local_energy_input",
+        "forward_bitwise_equal": true,
+        "gradient_max_abs": 3.725290298461914e-09,
+        "old_vs_old_gradient_max_abs": 3.725290298461914e-09,
+        "gradient_tolerance": {
+          "rtol": 1e-05,
+          "atol": 2e-07
+        }
+      },
+      {
+        "control": "local_energy_delta",
+        "forward_bitwise_equal": true,
+        "gradient_max_abs": 3.725290298461914e-09,
+        "old_vs_old_gradient_max_abs": 3.725290298461914e-09,
+        "gradient_tolerance": {
+          "rtol": 1e-05,
+          "atol": 2e-07
+        }
+      },
+      {
+        "control": "full",
+        "forward_bitwise_equal": true,
+        "gradient_max_abs": 3.725290298461914e-09,
+        "old_vs_old_gradient_max_abs": 3.725290298461914e-09,
+        "gradient_tolerance": {
+          "rtol": 1e-05,
+          "atol": 2e-07
+        }
+      },
+      {
+        "control": "full_fixed_half",
+        "forward_bitwise_equal": true,
+        "gradient_max_abs": 3.725290298461914e-09,
+        "old_vs_old_gradient_max_abs": 3.725290298461914e-09,
+        "gradient_tolerance": {
+          "rtol": 1e-05,
+          "atol": 2e-07
+        }
+      },
+      {
+        "control": "guidance_only",
+        "forward_bitwise_equal": true,
+        "gradient_max_abs": 3.725290298461914e-09,
+        "old_vs_old_gradient_max_abs": 2.9802322387695312e-08,
+        "gradient_tolerance": {
+          "rtol": 1e-05,
+          "atol": 2e-07
+        }
+      },
+      {
+        "control": "global",
+        "forward_bitwise_equal": true,
+        "gradient_max_abs": 3.725290298461914e-09,
+        "old_vs_old_gradient_max_abs": 1.862645149230957e-09,
+        "gradient_tolerance": {
+          "rtol": 1e-05,
+          "atol": 2e-07
+        }
+      }
+    ]
+  },
+  "parser": {
+    "cases": [
+      {
+        "case": "matched_identity",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "matched_scale075",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "residual_scale075",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "energy_only",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "local_energy",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "local_energy_input",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "local_energy_delta",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "full",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "full_fixed_half",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "guidance_only",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "global",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "full_no_lrc",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "const_guidance",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "post_gate",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "lsgm_trend_only",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "lsgm_std_only",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "lsgm_point_only",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "full_trend_k5",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "full_trend_k7",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "full_stats_k5",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "full_stats_k7",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      },
+      {
+        "case": "full_independent_k5_k7",
+        "parser": "PASS",
+        "downstream_initialization": "PASS"
+      }
+    ],
+    "invalid_options_rejected": [
+      {
+        "unknown": 3
+      },
+      {
+        "trend_kernel_size": 4
+      },
+      {
+        "stats_kernel_size": 0
+      },
+      {
+        "stats_kernel_size": true
+      },
+      {
+        "stats_kernel_size": "5"
+      },
+      []
+    ]
+  },
+  "status": "PASS",
+  "finished_utc": "2026-10-09T02:52:36.037426+00:00"
+}

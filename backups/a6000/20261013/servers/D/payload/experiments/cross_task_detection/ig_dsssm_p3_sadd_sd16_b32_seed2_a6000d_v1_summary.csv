@@ -1,0 +1,3 @@
+dataset,experiment,variant,placement,state_dim,precision,recall,ap50,ap75,ap50_95,inference_ms,weights
+SADD,ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline,baseline,baseline,0,0.9428439685029409,0.9527186761229315,0.9719067676561689,0.5450890719888817,0.5431676978856741,9.461354727696891,/home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_baseline/weights/best.pt
+SADD,ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3,full,p3,16,0.9569140088059119,0.9450811986818645,0.969248598011632,0.5359503052614727,0.5349446272028854,8.769704837991734,/home/powerleader/ig-ds-ssm/experiments/cross_task_detection/ig_dsssm_p3_sadd_sd16_b32_seed2_a6000d_v1_sadd_full_p3/weights/best.pt

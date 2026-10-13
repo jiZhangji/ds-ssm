@@ -1,0 +1,60 @@
+{
+  "data": {
+    "annotation_policy": "fail",
+    "audit_sha256": "a50fba37e9f4a148b5fd66884f261670e0526d882dde4febfb820da967ced87a",
+    "counts": {
+      "test": 135,
+      "train": 1075,
+      "val": 135
+    },
+    "files_sha256": "15350dd6b82931f37ac4f9409aa770f0d75a5541276932c654d01433b685dc3c",
+    "logical_manifest_sha256": "720071fa7393deda234e06ec6fe12377e80e95ba89bb62f1902d4eeb2f810f12",
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/SAMPLE/manifest.json",
+    "manifest_sha256": "3b34a6d7c88e6d80c71b429082fb8af6652c5231f716e63bd5c8bc1bdb88c939"
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "protocol": {
+    "annotation_policy": "fail",
+    "augmentation": "existing ManifestDataset transformations, independent seeded epoch/sample RNG",
+    "backbone": "Mamba-YOLO-T full_t (32,64,128,256)",
+    "batch": 64,
+    "cd_evaluation": "native_unique_pixel_mean_overlapping_probabilities",
+    "cd_threshold_grid": "0.10..0.90 inclusive by0.05, validation only, earliest tie",
+    "change_head": "Shared Siamese encoder; absolute P2-P5 differences; UPerNet-lite width96",
+    "classification_head": "P5 global mean -> LayerNorm256 -> Dropout0.2 -> Linear(classes)",
+    "classification_label_smoothing": 0.1,
+    "dataset": "SAMPLE",
+    "epochs": 200,
+    "eval_batch": 64,
+    "grad_accum": 1,
+    "gradient_clip_l2": 5.0,
+    "historical_results_comparable": false,
+    "imgsz": 224,
+    "initialization": "scratch; full baseline construction first; isolated replacement RNG; common tensor/hash matching",
+    "logical_data_sha256": "720071fa7393deda234e06ec6fe12377e80e95ba89bb62f1902d4eeb2f810f12",
+    "lr": 0.0002,
+    "module_warmup_epochs": 0,
+    "normalization": "fixed (RGB/255 - 0.5)/0.5",
+    "optimizer": "AdamW",
+    "patience": 40,
+    "precision": "FP32 (AMP/TF32 off)",
+    "replacement": "Exactly one internal 64-channel P3/8 VSSBlock replaced, state_dim=16; P4/P5 consume P3",
+    "scheduler": "cosine to 1% initial lr",
+    "schema": "rgsp-cross-trial-v1",
+    "selection_metric": "macro_f1",
+    "split_counts": {
+      "test": 135,
+      "train": 1075,
+      "val": 135
+    },
+    "task": "classification",
+    "test_policy": "Evaluate selected best checkpoint once; no test-driven control/epoch/threshold selection",
+    "weight_decay": 0.0005
+  },
+  "protocol_sha256": "251231b6f6ae9700aaf0240a56921b8b98fa7e556094016f53e3b7fae1cd1bb5",
+  "seed": 0,
+  "source_root": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/code",
+  "trial_id": "sample_original_seed0",
+  "validate_only": false,
+  "variant": "original"
+}

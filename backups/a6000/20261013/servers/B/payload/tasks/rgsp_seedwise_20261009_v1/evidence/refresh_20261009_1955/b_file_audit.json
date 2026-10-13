@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-10-09T11:58:13.843140+00:00",
+  "cross_deep_errors": [],
+  "cross_deep_reverification": [],
+  "host_key": "b",
+  "live_snapshot_checked_utc": "2026-10-09T11:58:13.212613+00:00",
+  "model_execution_performed": false,
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "receipt_snapshot_checked_utc": "2026-10-09T11:58:13.797327+00:00",
+  "schema": "rgsp-read-only-file-increment-v1",
+  "subprocess_exit_codes": {
+    "live": 0,
+    "receipts": 2
+  }
+}

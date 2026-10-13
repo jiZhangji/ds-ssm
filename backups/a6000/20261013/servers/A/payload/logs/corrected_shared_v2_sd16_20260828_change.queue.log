@@ -1,0 +1,447 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Ottawa ours epoch=1/150 loss=1.52671 score=0.85495
+Ottawa ours epoch=2/150 loss=1.01052 score=0.93865
+Ottawa ours epoch=3/150 loss=0.86218 score=0.94998
+Ottawa ours epoch=4/150 loss=0.84581 score=0.95271
+Ottawa ours epoch=5/150 loss=0.79317 score=0.95063
+Ottawa ours epoch=6/150 loss=0.73808 score=0.95642
+Ottawa ours epoch=7/150 loss=0.71508 score=0.95859
+Ottawa ours epoch=8/150 loss=0.71401 score=0.95835
+Ottawa ours epoch=9/150 loss=0.70129 score=0.95988
+Ottawa ours epoch=10/150 loss=0.67449 score=0.95990
+Ottawa ours epoch=11/150 loss=0.65617 score=0.96079
+Ottawa ours epoch=12/150 loss=0.65128 score=0.96054
+Ottawa ours epoch=13/150 loss=0.63106 score=0.96173
+Ottawa ours epoch=14/150 loss=0.59896 score=0.96072
+Ottawa ours epoch=15/150 loss=0.57510 score=0.96168
+Ottawa ours epoch=16/150 loss=0.59603 score=0.96442
+Ottawa ours epoch=17/150 loss=0.60749 score=0.96242
+Ottawa ours epoch=18/150 loss=0.53850 score=0.96451
+Ottawa ours epoch=19/150 loss=0.52819 score=0.96428
+Ottawa ours epoch=20/150 loss=0.52447 score=0.96486
+Ottawa ours epoch=21/150 loss=0.55442 score=0.96516
+Ottawa ours epoch=22/150 loss=0.50971 score=0.96643
+Ottawa ours epoch=23/150 loss=0.48591 score=0.96596
+Ottawa ours epoch=24/150 loss=0.49883 score=0.96557
+Ottawa ours epoch=25/150 loss=0.46047 score=0.96553
+Ottawa ours epoch=26/150 loss=0.48182 score=0.96559
+Ottawa ours epoch=27/150 loss=0.43260 score=0.96576
+Ottawa ours epoch=28/150 loss=0.44377 score=0.96628
+Ottawa ours epoch=29/150 loss=0.44238 score=0.96606
+Ottawa ours epoch=30/150 loss=0.44312 score=0.96609
+Ottawa ours epoch=31/150 loss=0.40257 score=0.96629
+Ottawa ours epoch=32/150 loss=0.41701 score=0.96687
+Ottawa ours epoch=33/150 loss=0.38883 score=0.96654
+Ottawa ours epoch=34/150 loss=0.36520 score=0.96690
+Ottawa ours epoch=35/150 loss=0.41025 score=0.96648
+Ottawa ours epoch=36/150 loss=0.36684 score=0.96677
+Ottawa ours epoch=37/150 loss=0.39745 score=0.96621
+Ottawa ours epoch=38/150 loss=0.36882 score=0.96690
+Ottawa ours epoch=39/150 loss=0.34387 score=0.96710
+Ottawa ours epoch=40/150 loss=0.34488 score=0.96670
+Ottawa ours epoch=41/150 loss=0.33465 score=0.96743
+Ottawa ours epoch=42/150 loss=0.36528 score=0.96657
+Ottawa ours epoch=43/150 loss=0.31384 score=0.96795
+Ottawa ours epoch=44/150 loss=0.35078 score=0.96683
+Ottawa ours epoch=45/150 loss=0.31383 score=0.96837
+Ottawa ours epoch=46/150 loss=0.32189 score=0.96821
+Ottawa ours epoch=47/150 loss=0.30884 score=0.96794
+Ottawa ours epoch=48/150 loss=0.32550 score=0.96778
+Ottawa ours epoch=49/150 loss=0.29597 score=0.96744
+Ottawa ours epoch=50/150 loss=0.28864 score=0.96763
+Ottawa ours epoch=51/150 loss=0.29452 score=0.96768
+Ottawa ours epoch=52/150 loss=0.30563 score=0.96739
+Ottawa ours epoch=53/150 loss=0.27864 score=0.96740
+Ottawa ours epoch=54/150 loss=0.28036 score=0.96823
+Ottawa ours epoch=55/150 loss=0.29303 score=0.96789
+Ottawa ours epoch=56/150 loss=0.26683 score=0.96721
+Ottawa ours epoch=57/150 loss=0.29545 score=0.96747
+Ottawa ours epoch=58/150 loss=0.29199 score=0.96797
+Ottawa ours epoch=59/150 loss=0.27386 score=0.96723
+Ottawa ours epoch=60/150 loss=0.27520 score=0.96720
+Ottawa ours epoch=61/150 loss=0.25802 score=0.96854
+Ottawa ours epoch=62/150 loss=0.28087 score=0.96790
+Ottawa ours epoch=63/150 loss=0.26346 score=0.96678
+Ottawa ours epoch=64/150 loss=0.25998 score=0.96760
+Ottawa ours epoch=65/150 loss=0.28895 score=0.96859
+Ottawa ours epoch=66/150 loss=0.23843 score=0.96788
+Ottawa ours epoch=67/150 loss=0.26212 score=0.96768
+Ottawa ours epoch=68/150 loss=0.24399 score=0.96749
+Ottawa ours epoch=69/150 loss=0.25415 score=0.96770
+Ottawa ours epoch=70/150 loss=0.25758 score=0.96811
+Ottawa ours epoch=71/150 loss=0.24364 score=0.96795
+Ottawa ours epoch=72/150 loss=0.24555 score=0.96843
+Ottawa ours epoch=73/150 loss=0.23004 score=0.96852
+Ottawa ours epoch=74/150 loss=0.21078 score=0.96863
+Ottawa ours epoch=75/150 loss=0.27386 score=0.96843
+Ottawa ours epoch=76/150 loss=0.20435 score=0.96849
+Ottawa ours epoch=77/150 loss=0.21897 score=0.96861
+Ottawa ours epoch=78/150 loss=0.22202 score=0.96792
+Ottawa ours epoch=79/150 loss=0.20333 score=0.96820
+Ottawa ours epoch=80/150 loss=0.22442 score=0.96828
+Ottawa ours epoch=81/150 loss=0.20617 score=0.96813
+Ottawa ours epoch=82/150 loss=0.19984 score=0.96810
+Ottawa ours epoch=83/150 loss=0.21255 score=0.96806
+Ottawa ours epoch=84/150 loss=0.21507 score=0.96842
+Ottawa ours epoch=85/150 loss=0.19432 score=0.96860
+Ottawa ours epoch=86/150 loss=0.21260 score=0.96871
+Ottawa ours epoch=87/150 loss=0.20285 score=0.96832
+Ottawa ours epoch=88/150 loss=0.22329 score=0.96833
+Ottawa ours epoch=89/150 loss=0.20973 score=0.96851
+Ottawa ours epoch=90/150 loss=0.22432 score=0.96869
+Ottawa ours epoch=91/150 loss=0.20822 score=0.96841
+Ottawa ours epoch=92/150 loss=0.19655 score=0.96858
+Ottawa ours epoch=93/150 loss=0.21108 score=0.96841
+Ottawa ours epoch=94/150 loss=0.19373 score=0.96813
+Ottawa ours epoch=95/150 loss=0.21989 score=0.96869
+Ottawa ours epoch=96/150 loss=0.19399 score=0.96814
+Ottawa ours epoch=97/150 loss=0.19511 score=0.96894
+Ottawa ours epoch=98/150 loss=0.21682 score=0.96894
+Ottawa ours epoch=99/150 loss=0.19206 score=0.96911
+Ottawa ours epoch=100/150 loss=0.22282 score=0.96926
+Ottawa ours epoch=101/150 loss=0.19652 score=0.96923
+Ottawa ours epoch=102/150 loss=0.17597 score=0.96893
+Ottawa ours epoch=103/150 loss=0.19254 score=0.96878
+Ottawa ours epoch=104/150 loss=0.17386 score=0.96887
+Ottawa ours epoch=105/150 loss=0.21230 score=0.96890
+Ottawa ours epoch=106/150 loss=0.19372 score=0.96861
+Ottawa ours epoch=107/150 loss=0.17801 score=0.96870
+Ottawa ours epoch=108/150 loss=0.18361 score=0.96892
+Ottawa ours epoch=109/150 loss=0.18604 score=0.96887
+Ottawa ours epoch=110/150 loss=0.16881 score=0.96888
+Ottawa ours epoch=111/150 loss=0.18904 score=0.96906
+Ottawa ours epoch=112/150 loss=0.18851 score=0.96929
+Ottawa ours epoch=113/150 loss=0.19132 score=0.96929
+Ottawa ours epoch=114/150 loss=0.16874 score=0.96913
+Ottawa ours epoch=115/150 loss=0.18632 score=0.96915
+Ottawa ours epoch=116/150 loss=0.18140 score=0.96909
+Ottawa ours epoch=117/150 loss=0.18616 score=0.96902
+Ottawa ours epoch=118/150 loss=0.17228 score=0.96896
+Ottawa ours epoch=119/150 loss=0.17041 score=0.96896
+Ottawa ours epoch=120/150 loss=0.16415 score=0.96890
+Ottawa ours epoch=121/150 loss=0.16682 score=0.96897
+Ottawa ours epoch=122/150 loss=0.19016 score=0.96899
+Ottawa ours epoch=123/150 loss=0.18193 score=0.96900
+Ottawa ours epoch=124/150 loss=0.17448 score=0.96903
+Ottawa ours epoch=125/150 loss=0.21183 score=0.96917
+Ottawa ours epoch=126/150 loss=0.20093 score=0.96927
+Ottawa ours epoch=127/150 loss=0.17229 score=0.96923
+Ottawa ours epoch=128/150 loss=0.16871 score=0.96916
+Ottawa ours epoch=129/150 loss=0.18230 score=0.96924
+Ottawa ours epoch=130/150 loss=0.16391 score=0.96915
+Ottawa ours epoch=131/150 loss=0.18371 score=0.96925
+Ottawa ours epoch=132/150 loss=0.17478 score=0.96914
+Ottawa ours epoch=133/150 loss=0.17571 score=0.96917
+Ottawa ours epoch=134/150 loss=0.18107 score=0.96913
+Ottawa ours epoch=135/150 loss=0.18786 score=0.96910
+Ottawa ours epoch=136/150 loss=0.17452 score=0.96904
+Ottawa ours epoch=137/150 loss=0.16502 score=0.96909
+Ottawa ours epoch=138/150 loss=0.17410 score=0.96921
+EARLY STOP: 25 stale epochs
+{
+  "dataset": "Ottawa",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "initialization": "scratch",
+  "protocol": "dense-spatial-macroblocks",
+  "split_sizes": {
+    "train": 112,
+    "val": 24,
+    "test": 32
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "epochs_requested": 150,
+  "best_epoch": 113,
+  "threshold": 0.5500000000000002,
+  "metric": {
+    "precision": 0.8923782145909409,
+    "recall": 0.9530835103558152,
+    "f1": 0.9217324313262873,
+    "iou": 0.8548271858533536,
+    "oa": 0.9834645589192709,
+    "kappa": 0.9124993883699456
+  },
+  "params": 2138147,
+  "gflops": 1.136191824,
+  "latency_ms": 439.96468029993895,
+  "fps": 2.2729097238402542,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/ottawa/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Ottawa/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Yellow River ours epoch=1/150 loss=1.69175 score=0.39103
+Yellow River ours epoch=2/150 loss=1.27248 score=0.86776
+Yellow River ours epoch=3/150 loss=1.13476 score=0.90541
+Yellow River ours epoch=4/150 loss=0.96821 score=0.91688
+Yellow River ours epoch=5/150 loss=0.91436 score=0.92037
+Yellow River ours epoch=6/150 loss=0.94871 score=0.92057
+Yellow River ours epoch=7/150 loss=0.95294 score=0.91702
+Yellow River ours epoch=8/150 loss=0.89173 score=0.92016
+Yellow River ours epoch=9/150 loss=0.91989 score=0.91659
+Yellow River ours epoch=10/150 loss=0.94258 score=0.91999
+Yellow River ours epoch=11/150 loss=0.79309 score=0.91900
+Yellow River ours epoch=12/150 loss=0.88563 score=0.92022
+Yellow River ours epoch=13/150 loss=0.81213 score=0.92339
+Yellow River ours epoch=14/150 loss=0.87439 score=0.92413
+Yellow River ours epoch=15/150 loss=0.72495 score=0.92423
+Yellow River ours epoch=16/150 loss=0.94991 score=0.91678
+Yellow River ours epoch=17/150 loss=0.90673 score=0.92223
+Yellow River ours epoch=18/150 loss=0.86283 score=0.91962
+Yellow River ours epoch=19/150 loss=0.70861 score=0.91812
+Yellow River ours epoch=20/150 loss=0.64316 score=0.92171
+Yellow River ours epoch=21/150 loss=0.72424 score=0.92583
+Yellow River ours epoch=22/150 loss=0.84328 score=0.92402
+Yellow River ours epoch=23/150 loss=0.68897 score=0.92217
+Yellow River ours epoch=24/150 loss=0.73268 score=0.92365
+Yellow River ours epoch=25/150 loss=0.61004 score=0.92727
+Yellow River ours epoch=26/150 loss=0.58607 score=0.92703
+Yellow River ours epoch=27/150 loss=0.69808 score=0.93001
+Yellow River ours epoch=28/150 loss=0.55836 score=0.93009
+Yellow River ours epoch=29/150 loss=0.57909 score=0.92933
+Yellow River ours epoch=30/150 loss=0.52271 score=0.93223
+Yellow River ours epoch=31/150 loss=0.81870 score=0.93452
+Yellow River ours epoch=32/150 loss=0.55159 score=0.92511
+Yellow River ours epoch=33/150 loss=0.55792 score=0.93056
+Yellow River ours epoch=34/150 loss=0.59586 score=0.93228
+Yellow River ours epoch=35/150 loss=0.67575 score=0.91909
+Yellow River ours epoch=36/150 loss=0.54884 score=0.91876
+Yellow River ours epoch=37/150 loss=0.67381 score=0.91808
+Yellow River ours epoch=38/150 loss=0.62692 score=0.93165
+Yellow River ours epoch=39/150 loss=0.68964 score=0.92999
+Yellow River ours epoch=40/150 loss=0.49776 score=0.92997
+Yellow River ours epoch=41/150 loss=0.55814 score=0.93298
+Yellow River ours epoch=42/150 loss=0.48767 score=0.94003
+Yellow River ours epoch=43/150 loss=0.67055 score=0.93094
+Yellow River ours epoch=44/150 loss=0.53620 score=0.93940
+Yellow River ours epoch=45/150 loss=0.44602 score=0.94115
+Yellow River ours epoch=46/150 loss=0.60920 score=0.93846
+Yellow River ours epoch=47/150 loss=0.41100 score=0.94041
+Yellow River ours epoch=48/150 loss=0.41275 score=0.93763
+Yellow River ours epoch=49/150 loss=0.67198 score=0.93615
+Yellow River ours epoch=50/150 loss=0.65491 score=0.94123
+Yellow River ours epoch=51/150 loss=0.58174 score=0.94019
+Yellow River ours epoch=52/150 loss=0.46802 score=0.93729
+Yellow River ours epoch=53/150 loss=0.52806 score=0.94211
+Yellow River ours epoch=54/150 loss=0.41394 score=0.94344
+Yellow River ours epoch=55/150 loss=0.45255 score=0.94156
+Yellow River ours epoch=56/150 loss=0.43981 score=0.94453
+Yellow River ours epoch=57/150 loss=0.36038 score=0.94079
+Yellow River ours epoch=58/150 loss=0.47485 score=0.94045
+Yellow River ours epoch=59/150 loss=0.37844 score=0.94327
+Yellow River ours epoch=60/150 loss=0.46115 score=0.94088
+Yellow River ours epoch=61/150 loss=0.41974 score=0.94211
+Yellow River ours epoch=62/150 loss=0.36812 score=0.94130
+Yellow River ours epoch=63/150 loss=0.42429 score=0.94172
+Yellow River ours epoch=64/150 loss=0.38056 score=0.94129
+Yellow River ours epoch=65/150 loss=0.38892 score=0.94044
+Yellow River ours epoch=66/150 loss=0.36210 score=0.93991
+Yellow River ours epoch=67/150 loss=0.40082 score=0.93983
+Yellow River ours epoch=68/150 loss=0.36410 score=0.94230
+Yellow River ours epoch=69/150 loss=0.55665 score=0.94175
+Yellow River ours epoch=70/150 loss=0.36717 score=0.94288
+Yellow River ours epoch=71/150 loss=0.34309 score=0.94177
+Yellow River ours epoch=72/150 loss=0.38380 score=0.94178
+Yellow River ours epoch=73/150 loss=0.45658 score=0.94346
+Yellow River ours epoch=74/150 loss=0.42112 score=0.94114
+Yellow River ours epoch=75/150 loss=0.42941 score=0.94253
+Yellow River ours epoch=76/150 loss=0.31781 score=0.94271
+Yellow River ours epoch=77/150 loss=0.31478 score=0.94259
+Yellow River ours epoch=78/150 loss=0.54755 score=0.94431
+Yellow River ours epoch=79/150 loss=0.45273 score=0.94350
+Yellow River ours epoch=80/150 loss=0.38515 score=0.94153
+Yellow River ours epoch=81/150 loss=0.45102 score=0.94171
+EARLY STOP: 25 stale epochs
+{
+  "dataset": "Yellow River",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "initialization": "scratch",
+  "protocol": "dense-spatial-macroblocks",
+  "split_sizes": {
+    "train": 100,
+    "val": 16,
+    "test": 16
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "epochs_requested": 150,
+  "best_epoch": 56,
+  "threshold": 0.40000000000000013,
+  "metric": {
+    "precision": 0.9088494717456626,
+    "recall": 0.8217014862591139,
+    "f1": 0.8630811572058431,
+    "iou": 0.7591405162084265,
+    "oa": 0.9747806125217013,
+    "kappa": 0.8492311436656784
+  },
+  "params": 2138147,
+  "gflops": 1.136191824,
+  "latency_ms": 437.4931912345346,
+  "fps": 2.2857498585935994,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/yellow_river/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Yellow_River/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Farmland ours epoch=1/150 loss=1.87195 score=0.07348
+Farmland ours epoch=2/150 loss=1.46686 score=0.70354
+Farmland ours epoch=3/150 loss=1.49277 score=0.80297
+Farmland ours epoch=4/150 loss=1.27678 score=0.80510
+Farmland ours epoch=5/150 loss=1.25235 score=0.84935
+Farmland ours epoch=6/150 loss=1.20287 score=0.88021
+Farmland ours epoch=7/150 loss=1.23621 score=0.87767
+Farmland ours epoch=8/150 loss=1.15590 score=0.88571
+Farmland ours epoch=9/150 loss=1.20001 score=0.89143
+Farmland ours epoch=10/150 loss=1.16067 score=0.88164
+Farmland ours epoch=11/150 loss=1.10160 score=0.88492
+Farmland ours epoch=12/150 loss=1.11610 score=0.89410
+Farmland ours epoch=13/150 loss=1.15872 score=0.90027
+Farmland ours epoch=14/150 loss=1.07070 score=0.89992
+Farmland ours epoch=15/150 loss=1.03021 score=0.90189
+Farmland ours epoch=16/150 loss=1.06908 score=0.89626
+Farmland ours epoch=17/150 loss=1.02112 score=0.90023
+Farmland ours epoch=18/150 loss=1.01589 score=0.90536
+Farmland ours epoch=19/150 loss=1.00500 score=0.90740
+Farmland ours epoch=20/150 loss=0.98390 score=0.91110
+Farmland ours epoch=21/150 loss=0.98093 score=0.90610
+Farmland ours epoch=22/150 loss=0.95790 score=0.89799
+Farmland ours epoch=23/150 loss=0.92128 score=0.90349
+Farmland ours epoch=24/150 loss=0.94135 score=0.90986
+Farmland ours epoch=25/150 loss=0.93632 score=0.91282
+Farmland ours epoch=26/150 loss=0.91748 score=0.91506
+Farmland ours epoch=27/150 loss=0.89078 score=0.91065
+Farmland ours epoch=28/150 loss=0.88332 score=0.91185
+Farmland ours epoch=29/150 loss=0.90889 score=0.91058
+Farmland ours epoch=30/150 loss=0.91526 score=0.88828
+Farmland ours epoch=31/150 loss=0.84395 score=0.90124
+Farmland ours epoch=32/150 loss=0.90054 score=0.89596
+Farmland ours epoch=33/150 loss=0.95782 score=0.90678
+Farmland ours epoch=34/150 loss=0.86102 score=0.89284
+Farmland ours epoch=35/150 loss=0.81708 score=0.90691
+Farmland ours epoch=36/150 loss=0.82115 score=0.89730
+Farmland ours epoch=37/150 loss=0.81290 score=0.90295
+Farmland ours epoch=38/150 loss=0.77956 score=0.90619
+Farmland ours epoch=39/150 loss=0.92934 score=0.90579
+Farmland ours epoch=40/150 loss=0.77062 score=0.91169
+Farmland ours epoch=41/150 loss=0.74513 score=0.91398
+Farmland ours epoch=42/150 loss=0.76680 score=0.90112
+Farmland ours epoch=43/150 loss=0.75176 score=0.90831
+Farmland ours epoch=44/150 loss=0.71049 score=0.90836
+Farmland ours epoch=45/150 loss=0.72925 score=0.91266
+Farmland ours epoch=46/150 loss=0.72012 score=0.91211
+Farmland ours epoch=47/150 loss=0.74862 score=0.90903
+Farmland ours epoch=48/150 loss=0.71763 score=0.90340
+Farmland ours epoch=49/150 loss=0.71313 score=0.90412
+Farmland ours epoch=50/150 loss=0.67078 score=0.91208
+Farmland ours epoch=51/150 loss=0.76461 score=0.90257
+EARLY STOP: 25 stale epochs
+{
+  "dataset": "Farmland",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "initialization": "scratch",
+  "protocol": "dense-spatial-macroblocks",
+  "split_sizes": {
+    "train": 112,
+    "val": 16,
+    "test": 16
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "epochs_requested": 150,
+  "best_epoch": 26,
+  "threshold": 0.7000000000000002,
+  "metric": {
+    "precision": 0.9079831932773109,
+    "recall": 0.4570642978003384,
+    "f1": 0.6080472706809229,
+    "iou": 0.4368304022639984,
+    "oa": 0.9527655707465278,
+    "kappa": 0.5858136418071059
+  },
+  "params": 2138147,
+  "gflops": 1.136191824,
+  "latency_ms": 440.0949681662799,
+  "fps": 2.2722368405315936,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/farmland/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Farmland/manifest.json"
+}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+Sulzberger ours epoch=1/150 loss=1.71695 score=0.68046
+Sulzberger ours epoch=2/150 loss=1.29063 score=0.67404
+Sulzberger ours epoch=3/150 loss=0.90035 score=0.97860
+Sulzberger ours epoch=4/150 loss=0.87231 score=0.97920
+Sulzberger ours epoch=5/150 loss=0.85094 score=0.97836
+Sulzberger ours epoch=6/150 loss=0.82076 score=0.97562
+Sulzberger ours epoch=7/150 loss=0.95758 score=0.96814
+Sulzberger ours epoch=8/150 loss=0.87566 score=0.97090
+Sulzberger ours epoch=9/150 loss=0.72240 score=0.97170
+Sulzberger ours epoch=10/150 loss=0.72975 score=0.97155
+Sulzberger ours epoch=11/150 loss=0.69295 score=0.97077
+Sulzberger ours epoch=12/150 loss=0.66755 score=0.97345
+Sulzberger ours epoch=13/150 loss=0.67905 score=0.97279
+Sulzberger ours epoch=14/150 loss=0.70452 score=0.97694
+Sulzberger ours epoch=15/150 loss=0.74789 score=0.97814
+Sulzberger ours epoch=16/150 loss=0.68591 score=0.97529
+Sulzberger ours epoch=17/150 loss=0.63464 score=0.97352
+Sulzberger ours epoch=18/150 loss=0.70162 score=0.97399
+Sulzberger ours epoch=19/150 loss=0.60450 score=0.97183
+Sulzberger ours epoch=20/150 loss=0.61728 score=0.97255
+Sulzberger ours epoch=21/150 loss=0.56919 score=0.97470
+Sulzberger ours epoch=22/150 loss=0.56322 score=0.97621
+Sulzberger ours epoch=23/150 loss=0.64638 score=0.97809
+Sulzberger ours epoch=24/150 loss=0.62514 score=0.97372
+Sulzberger ours epoch=25/150 loss=0.60510 score=0.97631
+Sulzberger ours epoch=26/150 loss=0.53842 score=0.97747
+Sulzberger ours epoch=27/150 loss=0.50293 score=0.97672
+Sulzberger ours epoch=28/150 loss=0.55637 score=0.97682
+Sulzberger ours epoch=29/150 loss=0.67373 score=0.97552
+EARLY STOP: 25 stale epochs
+{
+  "dataset": "Sulzberger",
+  "task": "change_detection",
+  "variant": "ours",
+  "placement": "P3",
+  "state_dim": 16,
+  "initialization": "scratch",
+  "protocol": "dense-spatial-macroblocks",
+  "split_sizes": {
+    "train": 76,
+    "val": 16,
+    "test": 8
+  },
+  "imgsz": 192,
+  "batch": 16,
+  "epochs_requested": 150,
+  "best_epoch": 4,
+  "threshold": 0.6500000000000001,
+  "metric": {
+    "precision": 0.516559482162683,
+    "recall": 0.9206615890083633,
+    "f1": 0.6618000295218797,
+    "iou": 0.49454494404556576,
+    "oa": 0.8290812174479166,
+    "kappa": 0.5592266206033882
+  },
+  "params": 2138147,
+  "gflops": 1.136191824,
+  "latency_ms": 435.7723011674049,
+  "fps": 2.2947764172276823,
+  "checkpoint": "/home/powerleader/ig-ds-ssm/experiments/corrected_shared_v2_sd16_20260828/sulzberger/ours/best.pt",
+  "manifest": "/home/powerleader/ig-ds-ssm/data/cross_task_prepared_v2/change_detection/Sulzberger/manifest.json"
+}

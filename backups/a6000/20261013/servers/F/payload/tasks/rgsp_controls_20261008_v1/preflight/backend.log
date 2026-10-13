@@ -1,0 +1,5 @@
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Info: mamba_ssm selective_scan_fn is not available. DS-SSM uses local selective_scan_cuda_core fast path.
+{'output_max_abs_diff': 2.47955322265625e-05, 'gradient_max_abs_diffs': [1.9073486328125e-05, 1.9073486328125e-05, 0.00244140625, 1.8358230590820312e-05, 4.1961669921875e-05, 2.86102294921875e-06, 4.673004150390625e-05]}
+selective_scan_backend_validation=PASS

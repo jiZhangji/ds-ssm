@@ -1,0 +1,134 @@
+{
+  "checks": [
+    {
+      "checkpoint_reload": true,
+      "controls": {
+        "controlled_blocks": 0,
+        "variant": "original"
+      },
+      "gradients": {
+        "disconnected_trainable_parameters": [],
+        "nonfinite_gradients": [],
+        "required_stage_gradient_l2": {
+          "backbone.p3": 7.801868651171945,
+          "backbone.p4": 11.998001392288366,
+          "backbone.p5": 8.084613800644467,
+          "decoder": 11.585557642348912
+        }
+      },
+      "logits_shape": [
+        2,
+        1,
+        192,
+        192
+      ],
+      "loss": 3.318159818649292,
+      "variant": "original"
+    },
+    {
+      "checkpoint_reload": true,
+      "controls": {
+        "buffer_scalars": [
+          "lambda_s",
+          "alpha",
+          "beta_i",
+          "rho_i",
+          "eta_i"
+        ],
+        "controlled_blocks": 1,
+        "min_retain": 0.5,
+        "placement": "internal P3/8, 64 channels",
+        "scalars": {
+          "alpha": 0.0,
+          "beta_i": 1.0,
+          "eta_i": 0.10000000149011612,
+          "lambda_s": 0.0,
+          "rho_i": 1.0
+        },
+        "use_pfim": false,
+        "variant": "matched_scale075"
+      },
+      "gradients": {
+        "disconnected_trainable_parameters": [],
+        "nonfinite_gradients": [],
+        "required_stage_gradient_l2": {
+          "backbone.p3": 0.1752231291361692,
+          "backbone.p4": 10.065749174368563,
+          "backbone.p5": 7.170717142915189,
+          "decoder": 11.1812796831686
+        }
+      },
+      "logits_shape": [
+        2,
+        1,
+        192,
+        192
+      ],
+      "loss": 3.3447461128234863,
+      "variant": "matched_scale075"
+    },
+    {
+      "checkpoint_reload": true,
+      "controls": {
+        "buffer_scalars": [],
+        "controlled_blocks": 1,
+        "min_retain": 0.5,
+        "placement": "internal P3/8, 64 channels",
+        "scalars": {
+          "alpha": 0.49980151653289795,
+          "beta_i": 0.9999998807907104,
+          "eta_i": 0.10019991546869278,
+          "lambda_s": 0.4997999370098114,
+          "rho_i": 0.9999998807907104
+        },
+        "use_pfim": true,
+        "variant": "full"
+      },
+      "gradients": {
+        "disconnected_trainable_parameters": [],
+        "nonfinite_gradients": [],
+        "required_stage_gradient_l2": {
+          "backbone.p3": 0.15098863164534823,
+          "backbone.p4": 10.041928839364626,
+          "backbone.p5": 7.152224320456724,
+          "decoder": 11.178712436466146
+        }
+      },
+      "logits_shape": [
+        2,
+        1,
+        192,
+        192
+      ],
+      "loss": 3.345498561859131,
+      "variant": "full"
+    }
+  ],
+  "common_tensor_sha256": {
+    "full": "d258a21c11bddf3824e3377acf6401654d52d5ccbadee72d7ec597e3fa046067",
+    "matched_scale075": "d258a21c11bddf3824e3377acf6401654d52d5ccbadee72d7ec597e3fa046067",
+    "original": "d258a21c11bddf3824e3377acf6401654d52d5ccbadee72d7ec597e3fa046067"
+  },
+  "data": {
+    "annotation_policy": "fail",
+    "audit_sha256": "5935f8221f4c420c908ee2b67be062ac706bfc881051f5ecdfe0081676d4a8cd",
+    "counts": {
+      "test": 32,
+      "train": 112,
+      "val": 24
+    },
+    "files_sha256": "f487199e1d2f4ee9fc7150a1614a670ecbf2fd1e31aa993f1e688dfba28086fc",
+    "logical_manifest_sha256": "af42e4de932e50b34e768e0a4d1f0bb690edc62390ce939d4285fb347075ec33",
+    "manifest": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/cross_data/Ottawa/manifest.json",
+    "manifest_sha256": "7cfc014e6c6e94a670b692382c1fe5328404035e3ceb29941f62aef4209721d7"
+  },
+  "dataset": "Ottawa",
+  "expected_control_tensor_differences": [
+    "backbone.p3.ds_ssm.lambda_s",
+    "backbone.p3.ds_ssm.alpha"
+  ],
+  "finished_utc": "2026-10-09T02:56:28.693368+00:00",
+  "schema": "rgsp-cross-trial-v1",
+  "status": "passed",
+  "validation_only": true
+}

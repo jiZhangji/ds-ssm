@@ -1,0 +1,45 @@
+{
+  "actual_epochs": 79,
+  "best_epoch": 54,
+  "best_sha256": "0b816490b35d6d8d958f5b8eac19d8ed91b9e42d07f6b2fccde45058b14ae40a",
+  "checked_utc": "2026-10-09T13:21:45.471955+00:00",
+  "finite_training_and_test": true,
+  "identity_sha256": "e352a68534c8c0da50880d9afb0ca8141540c2c7ce88ba9fa9eb49876644dd76",
+  "internal_artifacts": [
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_matched_scale075_seed0/config.json",
+      "sha256": "61de2f289f9ef67f6d9c656bc898d972de83956f85629a0ce3ccd132d86e9c3f"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_matched_scale075_seed0/initialization.json",
+      "sha256": "05559e8cadd3a3f7a8b567abdd74e2a933fb4393d30cae0240af70aab1a7f9eb"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_matched_scale075_seed0/metrics.jsonl",
+      "sha256": "6552ea9fd41ddfff25b1c17aadb139269768b3a4200009a67600b0056c4ce843"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_matched_scale075_seed0/test_evaluation.json",
+      "sha256": "93a3bd85a8b99c5d6273613110ca3fa26e09447393b5210383cc566e0e5ec64e"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_matched_scale075_seed0/result.json",
+      "sha256": "857bff76ac898a7b84cc85b52e2666410e68221676fc8fb4f17153c017889ace"
+    },
+    {
+      "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_matched_scale075_seed0/best.pt",
+      "sha256": "0b816490b35d6d8d958f5b8eac19d8ed91b9e42d07f6b2fccde45058b14ae40a"
+    }
+  ],
+  "last_checkpoint": {
+    "path": "/home/powerleader/ig-ds-ssm/tasks/rgsp_seedwise_20261009_v1/runs/farmland_matched_scale075_seed0/last.pt",
+    "sha256": "e3097e1aeb1fdf6aa739aad92a7db75409db425ffadf11729d6dcfeaa60a72a2",
+    "size": 44933283
+  },
+  "plan_sha256": "9c6b1afe025155c2209e56ecd745a7fccccd82dc96b4bd75987c66a709bfd7e4",
+  "protocol_sha256": "0a35cf65390feca192d2d8e7df423b46cea401b091ede0f8ab9690eac6bf7838",
+  "schema": "rgsp-operator-cross-recovery-v1",
+  "seed": 0,
+  "status": "deep_verified",
+  "trial_id": "farmland_matched_scale075_seed0"
+}

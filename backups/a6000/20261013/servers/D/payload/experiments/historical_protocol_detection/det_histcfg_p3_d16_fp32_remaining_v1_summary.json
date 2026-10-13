@@ -1,0 +1,19 @@
+{
+  "experiment_id": "det_histcfg_p3_d16_fp32_remaining_v1",
+  "records": [
+    {
+      "dataset": "SADD",
+      "experiment": "det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3",
+      "variant": "full",
+      "placement": "p3",
+      "state_dim": 16,
+      "precision": 0.9608210952554325,
+      "recall": 0.9803921568627451,
+      "ap50": 0.9829692059397895,
+      "ap75": 0.8299878009002767,
+      "ap50_95": 0.7211301577656648,
+      "inference_ms": 9.084056724201549,
+      "weights": "/home/powerleader/ig-ds-ssm/experiments/historical_protocol_detection/det_histcfg_p3_d16_fp32_remaining_v1_sadd_full_p3/weights/best.pt"
+    }
+  ]
+}

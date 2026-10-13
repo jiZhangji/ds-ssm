@@ -1,0 +1,14 @@
+/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/vendor/ddnet/DDNet_github.ipynb:47: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  ],
+{"method": "ddnet", "status": "PASS", "parameters": 6712, "covered_flops_g": 0.0002352, "error": null}
+{"method": "lantnet", "status": "PASS", "parameters": 24956, "covered_flops_g": 0.00228784, "error": null}
+{"method": "camixer", "status": "PASS", "parameters": 34214, "covered_flops_g": 0.000577862, "error": null}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/vendor/wbanet/wbanet.ipynb:46: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+{"method": "wbanet", "status": "PASS", "parameters": 7159, "covered_flops_g": 4.518e-05, "error": null}
+/home/powerleader/ig-ds-ssm/envs/ig-ds-ssm-env/lib/python3.10/site-packages/torch/nn/init.py:405: UserWarning: Initializing zero-element tensors is a no-op
+  warnings.warn("Initializing zero-element tensors is a no-op")
+/home/powerleader/ig-ds-ssm/tasks/rgsp_unified_a6000_20261012_v2/external/cd/vendor/wasnet/WASNet_MSE_KL_07_01_2026.ipynb:46: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  "metadata": {
+{"method": "wasnet", "status": "PASS", "parameters": 7360, "covered_flops_g": 5.2608e-05, "error": null}
